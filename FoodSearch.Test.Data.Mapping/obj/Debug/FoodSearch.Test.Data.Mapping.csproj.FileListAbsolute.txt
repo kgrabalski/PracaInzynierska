@@ -1,0 +1,5 @@
+D:\projekty\PracaInzynierska\FoodSearch\FoodSearch.Test.Data.Mapping\bin\Debug\FoodSearch.Test.Data.Mapping.dll
+D:\projekty\PracaInzynierska\FoodSearch\FoodSearch.Test.Data.Mapping\bin\Debug\FoodSearch.Test.Data.Mapping.pdb
+D:\projekty\PracaInzynierska\FoodSearch\FoodSearch.Test.Data.Mapping\obj\Debug\FoodSearch.Test.Data.Mapping.csprojResolveAssemblyReference.cache
+D:\projekty\PracaInzynierska\FoodSearch\FoodSearch.Test.Data.Mapping\obj\Debug\FoodSearch.Test.Data.Mapping.dll
+D:\projekty\PracaInzynierska\FoodSearch\FoodSearch.Test.Data.Mapping\obj\Debug\FoodSearch.Test.Data.Mapping.pdb

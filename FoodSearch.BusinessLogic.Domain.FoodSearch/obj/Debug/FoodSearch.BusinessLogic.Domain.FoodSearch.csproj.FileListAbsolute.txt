@@ -1,0 +1,11 @@
+D:\projekty\PracaInzynierska\FoodSearch\FoodSearch.BusinessLogic.Domain.FoodSearch\bin\Debug\FoodSearch.BusinessLogic.Domain.FoodSearch.dll
+D:\projekty\PracaInzynierska\FoodSearch\FoodSearch.BusinessLogic.Domain.FoodSearch\bin\Debug\FoodSearch.BusinessLogic.Domain.FoodSearch.pdb
+D:\projekty\PracaInzynierska\FoodSearch\FoodSearch.BusinessLogic.Domain.FoodSearch\bin\Debug\FoodSearch.BusinessLogic.Domain.Order.dll
+D:\projekty\PracaInzynierska\FoodSearch\FoodSearch.BusinessLogic.Domain.FoodSearch\bin\Debug\FoodSearch.BusinessLogic.Domain.User.dll
+D:\projekty\PracaInzynierska\FoodSearch\FoodSearch.BusinessLogic.Domain.FoodSearch\bin\Debug\Ninject.dll
+D:\projekty\PracaInzynierska\FoodSearch\FoodSearch.BusinessLogic.Domain.FoodSearch\bin\Debug\FoodSearch.BusinessLogic.Domain.Order.pdb
+D:\projekty\PracaInzynierska\FoodSearch\FoodSearch.BusinessLogic.Domain.FoodSearch\bin\Debug\FoodSearch.BusinessLogic.Domain.User.pdb
+D:\projekty\PracaInzynierska\FoodSearch\FoodSearch.BusinessLogic.Domain.FoodSearch\bin\Debug\Ninject.xml
+D:\projekty\PracaInzynierska\FoodSearch\FoodSearch.BusinessLogic.Domain.FoodSearch\obj\Debug\FoodSearch.BusinessLogic.Domain.FoodSearch.csprojResolveAssemblyReference.cache
+D:\projekty\PracaInzynierska\FoodSearch\FoodSearch.BusinessLogic.Domain.FoodSearch\obj\Debug\FoodSearch.BusinessLogic.Domain.FoodSearch.dll
+D:\projekty\PracaInzynierska\FoodSearch\FoodSearch.BusinessLogic.Domain.FoodSearch\obj\Debug\FoodSearch.BusinessLogic.Domain.FoodSearch.pdb

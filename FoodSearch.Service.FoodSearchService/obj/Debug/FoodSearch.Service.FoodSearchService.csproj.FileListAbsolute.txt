@@ -1,0 +1,8 @@
+D:\projekty\PracaInzynierska\FoodSearch\FoodSearch.Service.FoodSearchService\bin\Debug\FoodSearch.Service.FoodSearchService.dll.config
+D:\projekty\PracaInzynierska\FoodSearch\FoodSearch.Service.FoodSearchService\bin\Debug\FoodSearch.Service.FoodSearchService.dll
+D:\projekty\PracaInzynierska\FoodSearch\FoodSearch.Service.FoodSearchService\bin\Debug\FoodSearch.Service.FoodSearchService.pdb
+D:\projekty\PracaInzynierska\FoodSearch\FoodSearch.Service.FoodSearchService\bin\Debug\FoodSearch.Service.Contracts.dll
+D:\projekty\PracaInzynierska\FoodSearch\FoodSearch.Service.FoodSearchService\bin\Debug\FoodSearch.Service.Contracts.pdb
+D:\projekty\PracaInzynierska\FoodSearch\FoodSearch.Service.FoodSearchService\obj\Debug\FoodSearch.Service.FoodSearchService.csprojResolveAssemblyReference.cache
+D:\projekty\PracaInzynierska\FoodSearch\FoodSearch.Service.FoodSearchService\obj\Debug\FoodSearch.Service.FoodSearchService.dll
+D:\projekty\PracaInzynierska\FoodSearch\FoodSearch.Service.FoodSearchService\obj\Debug\FoodSearch.Service.FoodSearchService.pdb

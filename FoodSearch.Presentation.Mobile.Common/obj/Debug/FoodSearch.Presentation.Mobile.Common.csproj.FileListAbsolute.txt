@@ -1,0 +1,5 @@
+D:\projekty\PracaInzynierska\FoodSearch\FoodSearch.Presentation.Mobile.Common\bin\Debug\FoodSearch.Presentation.Mobile.Common.dll
+D:\projekty\PracaInzynierska\FoodSearch\FoodSearch.Presentation.Mobile.Common\bin\Debug\FoodSearch.Presentation.Mobile.Common.pdb
+D:\projekty\PracaInzynierska\FoodSearch\FoodSearch.Presentation.Mobile.Common\obj\Debug\FoodSearch.Presentation.Mobile.Common.csprojResolveAssemblyReference.cache
+D:\projekty\PracaInzynierska\FoodSearch\FoodSearch.Presentation.Mobile.Common\obj\Debug\FoodSearch.Presentation.Mobile.Common.dll
+D:\projekty\PracaInzynierska\FoodSearch\FoodSearch.Presentation.Mobile.Common\obj\Debug\FoodSearch.Presentation.Mobile.Common.pdb

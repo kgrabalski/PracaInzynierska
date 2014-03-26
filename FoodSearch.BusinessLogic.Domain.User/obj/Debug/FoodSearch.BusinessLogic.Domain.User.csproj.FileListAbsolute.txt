@@ -1,0 +1,5 @@
+D:\projekty\PracaInzynierska\FoodSearch\FoodSearch.BusinessLogic.Domain.User\bin\Debug\FoodSearch.BusinessLogic.Domain.User.dll
+D:\projekty\PracaInzynierska\FoodSearch\FoodSearch.BusinessLogic.Domain.User\bin\Debug\FoodSearch.BusinessLogic.Domain.User.pdb
+D:\projekty\PracaInzynierska\FoodSearch\FoodSearch.BusinessLogic.Domain.User\obj\Debug\FoodSearch.BusinessLogic.Domain.User.csprojResolveAssemblyReference.cache
+D:\projekty\PracaInzynierska\FoodSearch\FoodSearch.BusinessLogic.Domain.User\obj\Debug\FoodSearch.BusinessLogic.Domain.User.dll
+D:\projekty\PracaInzynierska\FoodSearch\FoodSearch.BusinessLogic.Domain.User\obj\Debug\FoodSearch.BusinessLogic.Domain.User.pdb
