@@ -3,3 +3,8 @@ D:\projekty\PracaInzynierska\FoodSearch\FoodSearch.BusinessLogic.Helpers\bin\Deb
 D:\projekty\PracaInzynierska\FoodSearch\FoodSearch.BusinessLogic.Helpers\obj\Debug\FoodSearch.BusinessLogic.Helpers.csprojResolveAssemblyReference.cache
 D:\projekty\PracaInzynierska\FoodSearch\FoodSearch.BusinessLogic.Helpers\obj\Debug\FoodSearch.BusinessLogic.Helpers.dll
 D:\projekty\PracaInzynierska\FoodSearch\FoodSearch.BusinessLogic.Helpers\obj\Debug\FoodSearch.BusinessLogic.Helpers.pdb
+C:\C#\Inzynierka\FoodSearch.BusinessLogic.Helpers\bin\Debug\FoodSearch.BusinessLogic.Helpers.dll
+C:\C#\Inzynierka\FoodSearch.BusinessLogic.Helpers\bin\Debug\FoodSearch.BusinessLogic.Helpers.pdb
+C:\C#\Inzynierka\FoodSearch.BusinessLogic.Helpers\obj\Debug\FoodSearch.BusinessLogic.Helpers.csprojResolveAssemblyReference.cache
+C:\C#\Inzynierka\FoodSearch.BusinessLogic.Helpers\obj\Debug\FoodSearch.BusinessLogic.Helpers.dll
+C:\C#\Inzynierka\FoodSearch.BusinessLogic.Helpers\obj\Debug\FoodSearch.BusinessLogic.Helpers.pdb

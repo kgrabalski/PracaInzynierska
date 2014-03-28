@@ -5,3 +5,10 @@ D:\projekty\PracaInzynierska\FoodSearch\FoodSearch.Service.Client\bin\Debug\Food
 D:\projekty\PracaInzynierska\FoodSearch\FoodSearch.Service.Client\obj\Debug\FoodSearch.Service.Client.csprojResolveAssemblyReference.cache
 D:\projekty\PracaInzynierska\FoodSearch\FoodSearch.Service.Client\obj\Debug\FoodSearch.Service.Client.dll
 D:\projekty\PracaInzynierska\FoodSearch\FoodSearch.Service.Client\obj\Debug\FoodSearch.Service.Client.pdb
+C:\C#\Inzynierka\FoodSearch.Service.Client\bin\Debug\FoodSearch.Service.Client.dll
+C:\C#\Inzynierka\FoodSearch.Service.Client\bin\Debug\FoodSearch.Service.Client.pdb
+C:\C#\Inzynierka\FoodSearch.Service.Client\bin\Debug\FoodSearch.Service.Contracts.dll
+C:\C#\Inzynierka\FoodSearch.Service.Client\bin\Debug\FoodSearch.Service.Contracts.pdb
+C:\C#\Inzynierka\FoodSearch.Service.Client\obj\Debug\FoodSearch.Service.Client.csprojResolveAssemblyReference.cache
+C:\C#\Inzynierka\FoodSearch.Service.Client\obj\Debug\FoodSearch.Service.Client.dll
+C:\C#\Inzynierka\FoodSearch.Service.Client\obj\Debug\FoodSearch.Service.Client.pdb

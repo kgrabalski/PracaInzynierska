@@ -9,3 +9,14 @@ D:\projekty\PracaInzynierska\FoodSearch\FoodSearch.Data.Mapping\bin\Debug\NHiber
 D:\projekty\PracaInzynierska\FoodSearch\FoodSearch.Data.Mapping\obj\Debug\FoodSearch.Data.Mapping.csprojResolveAssemblyReference.cache
 D:\projekty\PracaInzynierska\FoodSearch\FoodSearch.Data.Mapping\obj\Debug\FoodSearch.Data.Mapping.dll
 D:\projekty\PracaInzynierska\FoodSearch\FoodSearch.Data.Mapping\obj\Debug\FoodSearch.Data.Mapping.pdb
+C:\C#\Inzynierka\FoodSearch.Data.Mapping\bin\Debug\FoodSearch.Data.Mapping.dll
+C:\C#\Inzynierka\FoodSearch.Data.Mapping\bin\Debug\FoodSearch.Data.Mapping.pdb
+C:\C#\Inzynierka\FoodSearch.Data.Mapping\bin\Debug\FluentNHibernate.dll
+C:\C#\Inzynierka\FoodSearch.Data.Mapping\bin\Debug\Iesi.Collections.dll
+C:\C#\Inzynierka\FoodSearch.Data.Mapping\bin\Debug\NHibernate.dll
+C:\C#\Inzynierka\FoodSearch.Data.Mapping\bin\Debug\FluentNHibernate.xml
+C:\C#\Inzynierka\FoodSearch.Data.Mapping\bin\Debug\Iesi.Collections.xml
+C:\C#\Inzynierka\FoodSearch.Data.Mapping\bin\Debug\NHibernate.xml
+C:\C#\Inzynierka\FoodSearch.Data.Mapping\obj\Debug\FoodSearch.Data.Mapping.csprojResolveAssemblyReference.cache
+C:\C#\Inzynierka\FoodSearch.Data.Mapping\obj\Debug\FoodSearch.Data.Mapping.dll
+C:\C#\Inzynierka\FoodSearch.Data.Mapping\obj\Debug\FoodSearch.Data.Mapping.pdb

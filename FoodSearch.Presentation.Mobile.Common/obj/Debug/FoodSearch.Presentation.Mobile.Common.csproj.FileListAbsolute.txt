@@ -3,3 +3,14 @@ D:\projekty\PracaInzynierska\FoodSearch\FoodSearch.Presentation.Mobile.Common\bi
 D:\projekty\PracaInzynierska\FoodSearch\FoodSearch.Presentation.Mobile.Common\obj\Debug\FoodSearch.Presentation.Mobile.Common.csprojResolveAssemblyReference.cache
 D:\projekty\PracaInzynierska\FoodSearch\FoodSearch.Presentation.Mobile.Common\obj\Debug\FoodSearch.Presentation.Mobile.Common.dll
 D:\projekty\PracaInzynierska\FoodSearch\FoodSearch.Presentation.Mobile.Common\obj\Debug\FoodSearch.Presentation.Mobile.Common.pdb
+C:\C#\Inzynierka\FoodSearch.Presentation.Mobile.Common\bin\Debug\FoodSearch.Presentation.Mobile.Common.dll
+C:\C#\Inzynierka\FoodSearch.Presentation.Mobile.Common\bin\Debug\FoodSearch.Presentation.Mobile.Common.pdb
+C:\C#\Inzynierka\FoodSearch.Presentation.Mobile.Common\obj\Debug\FoodSearch.Presentation.Mobile.Common.csprojResolveAssemblyReference.cache
+C:\C#\Inzynierka\FoodSearch.Presentation.Mobile.Common\obj\Debug\FoodSearch.Presentation.Mobile.Common.dll
+C:\C#\Inzynierka\FoodSearch.Presentation.Mobile.Common\obj\Debug\FoodSearch.Presentation.Mobile.Common.pdb
+C:\C#\Inzynierka\FoodSearch.Presentation.Mobile.Common\bin\Debug\System.IO.dll
+C:\C#\Inzynierka\FoodSearch.Presentation.Mobile.Common\bin\Debug\System.Runtime.dll
+C:\C#\Inzynierka\FoodSearch.Presentation.Mobile.Common\bin\Debug\System.Threading.Tasks.dll
+C:\C#\Inzynierka\FoodSearch.Presentation.Mobile.Common\bin\Debug\System.IO.xml
+C:\C#\Inzynierka\FoodSearch.Presentation.Mobile.Common\bin\Debug\System.Runtime.xml
+C:\C#\Inzynierka\FoodSearch.Presentation.Mobile.Common\bin\Debug\System.Threading.Tasks.xml

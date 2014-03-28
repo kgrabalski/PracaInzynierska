@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -12,6 +12,8 @@
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
+    <ProductVersion>12.0.0</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -33,10 +35,6 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Ninject, Version=3.2.0.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Ninject.3.2.0.0\lib\net45-full\Ninject.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -44,6 +42,9 @@
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
+    <Reference Include="Ninject">
+      <HintPath>..\packages\Ninject.3.2.0.0\lib\net45-full\Ninject.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="FoodSearchDomain.cs" />
@@ -55,11 +56,11 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\FoodSearch.BusinessLogic.Domain.Order\FoodSearch.BusinessLogic.Domain.Order.csproj">
-      <Project>{c0879b51-2af2-4d83-a239-4b7f0bd1d039}</Project>
+      <Project>{C0879B51-2AF2-4D83-A239-4B7F0BD1D039}</Project>
       <Name>FoodSearch.BusinessLogic.Domain.Order</Name>
     </ProjectReference>
     <ProjectReference Include="..\FoodSearch.BusinessLogic.Domain.User\FoodSearch.BusinessLogic.Domain.User.csproj">
-      <Project>{c62d4eaf-4ee1-4f2e-96ea-0c630ffd59eb}</Project>
+      <Project>{C62D4EAF-4EE1-4F2E-96EA-0C630FFD59EB}</Project>
       <Name>FoodSearch.BusinessLogic.Domain.User</Name>
     </ProjectReference>
   </ItemGroup>
