@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android">
-	<uses-sdk android:minSdkVersion="19" android:targetSdkVersion="19" />
-	<application></application>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:installLocation="auto" package="com.FoodSearch" android:versionCode="1">
+	<uses-sdk />
+	<application android:icon="@drawable/Icon" android:label="FoodSearch"></application>
 </manifest>

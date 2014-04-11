@@ -1,5 +1,8 @@
-C:\C#\Inzynierka\FoodSearch.Presentation.Mobile.Android\bin\Debug\FoodSearch.Presentation.Mobile.Android.dll
-C:\C#\Inzynierka\FoodSearch.Presentation.Mobile.Common\bin\Debug\FoodSearch.Presentation.Mobile.Common.dll
+D:\projekty\PracaInzynierska\FoodSearch\FoodSearch.Presentation.Mobile.Android\bin\Debug\FoodSearch.Presentation.Mobile.Android.dll
+D:\projekty\PracaInzynierska\FoodSearch\FoodSearch.Service.Client\bin\Debug\FoodSearch.Service.Client.dll
+D:\projekty\PracaInzynierska\FoodSearch\FoodSearch.Service.Contracts\bin\Debug\FoodSearch.Service.Contracts.dll
+D:\projekty\PracaInzynierska\FoodSearch\packages\Microsoft.Net.Http.2.2.18\lib\portable-net45+win8\System.Net.Http.Extensions.dll
+D:\projekty\PracaInzynierska\FoodSearch\packages\Microsoft.Net.Http.2.2.18\lib\portable-net45+win8\System.Net.Http.Primitives.dll
 C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\MonoAndroid\v1.0\Facades\System.Collections.Concurrent.dll
 C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\MonoAndroid\v1.0\Facades\System.Collections.dll
 C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\MonoAndroid\v1.0\Facades\System.ComponentModel.Annotations.dll
@@ -42,3 +45,4 @@ C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\MonoAndroid\v1.0
 C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\MonoAndroid\v1.0\Facades\System.Xml.ReaderWriter.dll
 C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\MonoAndroid\v1.0\Facades\System.Xml.XDocument.dll
 C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\MonoAndroid\v1.0\Facades\System.Xml.XmlSerializer.dll
+D:\projekty\PracaInzynierska\FoodSearch\FoodSearch.Presentation.Mobile.Android\bin\Debug\Newtonsoft.Json.dll

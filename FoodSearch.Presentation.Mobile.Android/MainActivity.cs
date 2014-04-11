@@ -6,29 +6,44 @@ using Android.Views;
 using Android.Widget;
 using Android.OS;
 
+using FoodSearch.Service.Client;
+
 namespace FoodSearch.Presentation.Mobile.Android
 {
-	[Activity (Label = "FoodSearch.Presentation.Mobile.Android", MainLauncher = true)]
-	public class MainActivity : Activity
-	{
-		int count = 1;
+    [Activity(Label = "FoodSearch.Presentation.Mobile.Android", MainLauncher = true)]
+    public class MainActivity : Activity
+    {
+        protected override void OnCreate(Bundle bundle)
+        {
+            base.OnCreate(bundle);
 
-		protected override void OnCreate (Bundle bundle)
-		{
-			base.OnCreate (bundle);
+            // Set our view from the "main" layout resource
+            SetContentView(Resource.Layout.Main);
 
-			// Set our view from the "main" layout resource
-			SetContentView (Resource.Layout.Main);
+            FoodSearchServiceClient client = new FoodSearchServiceClient();
+            Button buttonGet = FindViewById<Button>(Resource.Id.buttonGet);
 
-			// Get our button from the layout resource,
-			// and attach an event to it
-			Button button = FindViewById<Button> (Resource.Id.myButton);
-			
-			button.Click += delegate {
-				button.Text = string.Format ("{0} clicks!", count++);
-			};
-		}
-	}
+            buttonGet.Click += async delegate
+            {
+                AlertDialog ad = (new AlertDialog.Builder(this)).Create();
+                string msg = "";
+                try
+                {
+                    var s = await client.GetStudent(1);
+                    msg = s.FirstName + " " + s.LastName;
+
+                }
+                catch (Exception ex)
+                {
+                    msg = ex.Message;
+                }
+                ad.SetMessage(msg);
+                ad.SetTitle("Student");
+                ad.SetButton("OK", (a, b) => ad.Hide());
+                ad.Show();
+            };
+        }
+    }
 }
 
 

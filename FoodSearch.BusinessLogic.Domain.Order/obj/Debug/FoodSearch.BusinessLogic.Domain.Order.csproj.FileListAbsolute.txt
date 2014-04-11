@@ -1,10 +1,10 @@
-D:\projekty\PracaInzynierska\FoodSearch\FoodSearch.BusinessLogic.Domain.Order\bin\Debug\FoodSearch.BusinessLogic.Domain.Order.dll
-D:\projekty\PracaInzynierska\FoodSearch\FoodSearch.BusinessLogic.Domain.Order\bin\Debug\FoodSearch.BusinessLogic.Domain.Order.pdb
-D:\projekty\PracaInzynierska\FoodSearch\FoodSearch.BusinessLogic.Domain.Order\obj\Debug\FoodSearch.BusinessLogic.Domain.Order.csprojResolveAssemblyReference.cache
-D:\projekty\PracaInzynierska\FoodSearch\FoodSearch.BusinessLogic.Domain.Order\obj\Debug\FoodSearch.BusinessLogic.Domain.Order.dll
-D:\projekty\PracaInzynierska\FoodSearch\FoodSearch.BusinessLogic.Domain.Order\obj\Debug\FoodSearch.BusinessLogic.Domain.Order.pdb
 C:\C#\Inzynierka\FoodSearch.BusinessLogic.Domain.Order\bin\Debug\FoodSearch.BusinessLogic.Domain.Order.dll
 C:\C#\Inzynierka\FoodSearch.BusinessLogic.Domain.Order\bin\Debug\FoodSearch.BusinessLogic.Domain.Order.pdb
 C:\C#\Inzynierka\FoodSearch.BusinessLogic.Domain.Order\obj\Debug\FoodSearch.BusinessLogic.Domain.Order.csprojResolveAssemblyReference.cache
 C:\C#\Inzynierka\FoodSearch.BusinessLogic.Domain.Order\obj\Debug\FoodSearch.BusinessLogic.Domain.Order.dll
 C:\C#\Inzynierka\FoodSearch.BusinessLogic.Domain.Order\obj\Debug\FoodSearch.BusinessLogic.Domain.Order.pdb
+D:\projekty\PracaInzynierska\FoodSearch\FoodSearch.BusinessLogic.Domain.Order\bin\Debug\FoodSearch.BusinessLogic.Domain.Order.dll
+D:\projekty\PracaInzynierska\FoodSearch\FoodSearch.BusinessLogic.Domain.Order\bin\Debug\FoodSearch.BusinessLogic.Domain.Order.pdb
+D:\projekty\PracaInzynierska\FoodSearch\FoodSearch.BusinessLogic.Domain.Order\obj\Debug\FoodSearch.BusinessLogic.Domain.Order.csprojResolveAssemblyReference.cache
+D:\projekty\PracaInzynierska\FoodSearch\FoodSearch.BusinessLogic.Domain.Order\obj\Debug\FoodSearch.BusinessLogic.Domain.Order.dll
+D:\projekty\PracaInzynierska\FoodSearch\FoodSearch.BusinessLogic.Domain.Order\obj\Debug\FoodSearch.BusinessLogic.Domain.Order.pdb

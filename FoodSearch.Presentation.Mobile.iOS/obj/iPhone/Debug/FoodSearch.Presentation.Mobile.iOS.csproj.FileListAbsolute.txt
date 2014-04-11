@@ -1,0 +1,6 @@
+D:\projekty\PracaInzynierska\FoodSearch\FoodSearch.Presentation.Mobile.iOS\bin\iPhone\Debug\FoodSearchPresentationMobileiOS.exe.config
+D:\projekty\PracaInzynierska\FoodSearch\FoodSearch.Presentation.Mobile.iOS\bin\iPhone\Debug\FoodSearchPresentationMobileiOS.exe
+D:\projekty\PracaInzynierska\FoodSearch\FoodSearch.Presentation.Mobile.iOS\bin\iPhone\Debug\FoodSearchPresentationMobileiOS.pdb
+D:\projekty\PracaInzynierska\FoodSearch\FoodSearch.Presentation.Mobile.iOS\obj\iPhone\Debug\FoodSearch.Presentation.Mobile.iOS.csprojResolveAssemblyReference.cache
+D:\projekty\PracaInzynierska\FoodSearch\FoodSearch.Presentation.Mobile.iOS\obj\iPhone\Debug\FoodSearchPresentationMobileiOS.exe
+D:\projekty\PracaInzynierska\FoodSearch\FoodSearch.Presentation.Mobile.iOS\obj\iPhone\Debug\FoodSearchPresentationMobileiOS.pdb

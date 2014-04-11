@@ -1,12 +1,13 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="FoodSearch.Presentation.Mobile.Common\TestClient.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="FoodSearch.Service.Client\RestServiceClientBase.cs">
     <Files>
-      <File FileName="FoodSearch.Presentation.Mobile.Common\TestClient.cs" Line="12" Column="30" />
+      <File FileName="FoodSearch.Service.Client\RestServiceClientBase.cs" Line="30" Column="10" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.Presentation.Mobile.FoodSearch.Presentation.Mobile.Android />
 </Properties>
