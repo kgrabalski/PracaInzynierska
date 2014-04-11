@@ -15,11 +15,13 @@ namespace warszawaTeryt
     public partial class Address
     {
         public int AddressId { get; set; }
+        public int DistrictId { get; set; }
         public int StreetId { get; set; }
         public string Number { get; set; }
-        public double Lat { get; set; }
-        public double Lon { get; set; }
+        public Nullable<double> Lat { get; set; }
+        public Nullable<double> Lon { get; set; }
     
+        public virtual District District { get; set; }
         public virtual Street Street { get; set; }
     }
 }

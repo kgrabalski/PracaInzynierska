@@ -5,10 +5,19 @@
       <EntityTypeMapping TypeName="FoodSearchModel.Address">
         <MappingFragment StoreEntitySet="Addresses">
           <ScalarProperty Name="AddressId" ColumnName="AddressId" />
+          <ScalarProperty Name="DistrictId" ColumnName="DistrictId" />
           <ScalarProperty Name="StreetId" ColumnName="StreetId" />
           <ScalarProperty Name="Number" ColumnName="Number" />
           <ScalarProperty Name="Lat" ColumnName="Lat" />
           <ScalarProperty Name="Lon" ColumnName="Lon" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Districts">
+      <EntityTypeMapping TypeName="FoodSearchModel.District">
+        <MappingFragment StoreEntitySet="Districts">
+          <ScalarProperty Name="DistrictId" ColumnName="DistrictId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

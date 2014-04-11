@@ -26,6 +26,7 @@ namespace warszawaTeryt
         }
     
         public virtual DbSet<Address> Addresses { get; set; }
+        public virtual DbSet<District> Districts { get; set; }
         public virtual DbSet<Street> Streets { get; set; }
     }
 }

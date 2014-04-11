@@ -13,3 +13,18 @@ D:\Moje dokumenty\Visual Studio 2013\Projects\warszawaTeryt\warszawaTeryt\bin\De
 D:\Moje dokumenty\Visual Studio 2013\Projects\warszawaTeryt\warszawaTeryt\bin\Debug\EntityFramework.SqlServer.dll
 D:\Moje dokumenty\Visual Studio 2013\Projects\warszawaTeryt\warszawaTeryt\bin\Debug\EntityFramework.xml
 D:\Moje dokumenty\Visual Studio 2013\Projects\warszawaTeryt\warszawaTeryt\bin\Debug\EntityFramework.SqlServer.xml
+C:\C#\Inzynierka\warszawaTeryt\warszawaTeryt\bin\Debug\warszawaTeryt.exe.config
+C:\C#\Inzynierka\warszawaTeryt\warszawaTeryt\obj\Debug\warszawaTeryt.exe
+C:\C#\Inzynierka\warszawaTeryt\warszawaTeryt\obj\Debug\warszawaTeryt.pdb
+C:\C#\Inzynierka\warszawaTeryt\warszawaTeryt\bin\Debug\warszawaTeryt.exe
+C:\C#\Inzynierka\warszawaTeryt\warszawaTeryt\bin\Debug\warszawaTeryt.pdb
+C:\C#\Inzynierka\warszawaTeryt\warszawaTeryt\bin\Debug\EntityFramework.dll
+C:\C#\Inzynierka\warszawaTeryt\warszawaTeryt\bin\Debug\EntityFramework.SqlServer.dll
+C:\C#\Inzynierka\warszawaTeryt\warszawaTeryt\bin\Debug\System.Net.Http.Extensions.dll
+C:\C#\Inzynierka\warszawaTeryt\warszawaTeryt\bin\Debug\System.Net.Http.Primitives.dll
+C:\C#\Inzynierka\warszawaTeryt\warszawaTeryt\bin\Debug\EntityFramework.xml
+C:\C#\Inzynierka\warszawaTeryt\warszawaTeryt\bin\Debug\EntityFramework.SqlServer.xml
+C:\C#\Inzynierka\warszawaTeryt\warszawaTeryt\bin\Debug\System.Net.Http.Extensions.xml
+C:\C#\Inzynierka\warszawaTeryt\warszawaTeryt\bin\Debug\System.Net.Http.Primitives.xml
+C:\C#\Inzynierka\warszawaTeryt\warszawaTeryt\obj\Debug\warszawaTeryt.csproj.App.config
+C:\C#\Inzynierka\warszawaTeryt\warszawaTeryt\obj\Debug\warszawaTeryt.csprojResolveAssemblyReference.cache

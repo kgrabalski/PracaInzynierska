@@ -5,10 +5,18 @@
       <PropertyRef Name="AddressId" />
     </Key>
     <Property Name="AddressId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DistrictId" Type="int" Nullable="false" />
     <Property Name="StreetId" Type="int" Nullable="false" />
     <Property Name="Number" Type="varchar" MaxLength="8" Nullable="false" />
-    <Property Name="Lat" Type="float" Nullable="false" />
-    <Property Name="Lon" Type="float" Nullable="false" />
+    <Property Name="Lat" Type="float" />
+    <Property Name="Lon" Type="float" />
+  </EntityType>
+  <EntityType Name="Districts">
+    <Key>
+      <PropertyRef Name="DistrictId" />
+    </Key>
+    <Property Name="DistrictId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="32" Nullable="false" />
   </EntityType>
   <EntityType Name="Streets">
     <Key>
@@ -17,6 +25,18 @@
     <Property Name="StreetId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="Name" Type="nvarchar" MaxLength="64" Nullable="false" />
   </EntityType>
+  <Association Name="FK_Addresses_Districts">
+    <End Role="Districts" Type="Self.Districts" Multiplicity="1" />
+    <End Role="Addresses" Type="Self.Addresses" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Districts">
+        <PropertyRef Name="DistrictId" />
+      </Principal>
+      <Dependent Role="Addresses">
+        <PropertyRef Name="DistrictId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <Association Name="FK_Addresses_Streets">
     <End Role="Streets" Type="Self.Streets" Multiplicity="1" />
     <End Role="Addresses" Type="Self.Addresses" Multiplicity="*" />
@@ -31,7 +51,12 @@
   </Association>
   <EntityContainer Name="FoodSearchModelStoreContainer">
     <EntitySet Name="Addresses" EntityType="Self.Addresses" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Districts" EntityType="Self.Districts" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Streets" EntityType="Self.Streets" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_Addresses_Districts" Association="Self.FK_Addresses_Districts">
+      <End Role="Districts" EntitySet="Districts" />
+      <End Role="Addresses" EntitySet="Addresses" />
+    </AssociationSet>
     <AssociationSet Name="FK_Addresses_Streets" Association="Self.FK_Addresses_Streets">
       <End Role="Streets" EntitySet="Streets" />
       <End Role="Addresses" EntitySet="Addresses" />
