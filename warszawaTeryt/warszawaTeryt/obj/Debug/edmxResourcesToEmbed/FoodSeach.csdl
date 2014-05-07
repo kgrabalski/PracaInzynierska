@@ -7,7 +7,7 @@
     <Property Name="AddressId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="DistrictId" Type="Int32" Nullable="false" />
     <Property Name="StreetId" Type="Int32" Nullable="false" />
-    <Property Name="Number" Type="String" MaxLength="8" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Number" Type="String" MaxLength="12" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="Lat" Type="Double" />
     <Property Name="Lon" Type="Double" />
     <NavigationProperty Name="District" Relationship="Self.FK_Addresses_Districts" FromRole="Addresses" ToRole="Districts" />

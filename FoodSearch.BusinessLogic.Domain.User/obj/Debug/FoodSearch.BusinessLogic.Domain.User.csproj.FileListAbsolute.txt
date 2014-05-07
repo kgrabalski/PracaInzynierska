@@ -5,6 +5,16 @@ C:\C#\Inzynierka\FoodSearch.BusinessLogic.Domain.User\obj\Debug\FoodSearch.Busin
 C:\C#\Inzynierka\FoodSearch.BusinessLogic.Domain.User\obj\Debug\FoodSearch.BusinessLogic.Domain.User.pdb
 D:\projekty\PracaInzynierska\FoodSearch\FoodSearch.BusinessLogic.Domain.User\bin\Debug\FoodSearch.BusinessLogic.Domain.User.dll
 D:\projekty\PracaInzynierska\FoodSearch\FoodSearch.BusinessLogic.Domain.User\bin\Debug\FoodSearch.BusinessLogic.Domain.User.pdb
-D:\projekty\PracaInzynierska\FoodSearch\FoodSearch.BusinessLogic.Domain.User\obj\Debug\FoodSearch.BusinessLogic.Domain.User.csprojResolveAssemblyReference.cache
 D:\projekty\PracaInzynierska\FoodSearch\FoodSearch.BusinessLogic.Domain.User\obj\Debug\FoodSearch.BusinessLogic.Domain.User.dll
 D:\projekty\PracaInzynierska\FoodSearch\FoodSearch.BusinessLogic.Domain.User\obj\Debug\FoodSearch.BusinessLogic.Domain.User.pdb
+D:\projekty\PracaInzynierska\FoodSearch\FoodSearch.BusinessLogic.Domain.User\bin\Debug\FoodSearch.Data.Mapping.dll
+D:\projekty\PracaInzynierska\FoodSearch\FoodSearch.BusinessLogic.Domain.User\bin\Debug\FluentNHibernate.dll
+D:\projekty\PracaInzynierska\FoodSearch\FoodSearch.BusinessLogic.Domain.User\bin\Debug\NHibernate.dll
+D:\projekty\PracaInzynierska\FoodSearch\FoodSearch.BusinessLogic.Domain.User\bin\Debug\Iesi.Collections.dll
+D:\projekty\PracaInzynierska\FoodSearch\FoodSearch.BusinessLogic.Domain.User\bin\Debug\FoodSearch.Data.Mapping.pdb
+D:\projekty\PracaInzynierska\FoodSearch\FoodSearch.BusinessLogic.Domain.User\bin\Debug\FluentNHibernate.xml
+D:\projekty\PracaInzynierska\FoodSearch\FoodSearch.BusinessLogic.Domain.User\bin\Debug\NHibernate.xml
+D:\projekty\PracaInzynierska\FoodSearch\FoodSearch.BusinessLogic.Domain.User\bin\Debug\Iesi.Collections.xml
+D:\projekty\PracaInzynierska\FoodSearch\FoodSearch.BusinessLogic.Domain.User\obj\Debug\FoodSearch.BusinessLogic.Domain.User.csprojResolveAssemblyReference.cache
+D:\projekty\PracaInzynierska\FoodSearch\FoodSearch.BusinessLogic.Domain.User\bin\Debug\Ninject.dll
+D:\projekty\PracaInzynierska\FoodSearch\FoodSearch.BusinessLogic.Domain.User\bin\Debug\Ninject.xml

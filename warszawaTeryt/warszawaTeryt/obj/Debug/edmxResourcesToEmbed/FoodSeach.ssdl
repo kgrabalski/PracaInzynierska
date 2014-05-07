@@ -7,7 +7,7 @@
     <Property Name="AddressId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="DistrictId" Type="int" Nullable="false" />
     <Property Name="StreetId" Type="int" Nullable="false" />
-    <Property Name="Number" Type="varchar" MaxLength="8" Nullable="false" />
+    <Property Name="Number" Type="varchar" MaxLength="12" Nullable="false" />
     <Property Name="Lat" Type="float" />
     <Property Name="Lon" Type="float" />
   </EntityType>

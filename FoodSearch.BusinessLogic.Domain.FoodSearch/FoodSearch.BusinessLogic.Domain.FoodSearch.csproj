@@ -55,6 +55,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\FoodSearch.BusinessLogic.Domain.Core\FoodSearch.BusinessLogic.Domain.Core.csproj">
+      <Project>{075008BC-66B0-436E-9BB2-897C2D1FB2D0}</Project>
+      <Name>FoodSearch.BusinessLogic.Domain.Core</Name>
+    </ProjectReference>
     <ProjectReference Include="..\FoodSearch.BusinessLogic.Domain.Order\FoodSearch.BusinessLogic.Domain.Order.csproj">
       <Project>{C0879B51-2AF2-4D83-A239-4B7F0BD1D039}</Project>
       <Name>FoodSearch.BusinessLogic.Domain.Order</Name>
@@ -62,6 +66,10 @@
     <ProjectReference Include="..\FoodSearch.BusinessLogic.Domain.User\FoodSearch.BusinessLogic.Domain.User.csproj">
       <Project>{C62D4EAF-4EE1-4F2E-96EA-0C630FFD59EB}</Project>
       <Name>FoodSearch.BusinessLogic.Domain.User</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FoodSearch.Data.Mapping\FoodSearch.Data.Mapping.csproj">
+      <Project>{3C7D76AD-3B68-4EB6-9A15-560D4773FB24}</Project>
+      <Name>FoodSearch.Data.Mapping</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

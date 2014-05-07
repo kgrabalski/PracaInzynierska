@@ -5,6 +5,5 @@ C:\C#\Inzynierka\FoodSearch.BusinessLogic.Helpers\obj\Debug\FoodSearch.BusinessL
 C:\C#\Inzynierka\FoodSearch.BusinessLogic.Helpers\obj\Debug\FoodSearch.BusinessLogic.Helpers.pdb
 D:\projekty\PracaInzynierska\FoodSearch\FoodSearch.BusinessLogic.Helpers\bin\Debug\FoodSearch.BusinessLogic.Helpers.dll
 D:\projekty\PracaInzynierska\FoodSearch\FoodSearch.BusinessLogic.Helpers\bin\Debug\FoodSearch.BusinessLogic.Helpers.pdb
-D:\projekty\PracaInzynierska\FoodSearch\FoodSearch.BusinessLogic.Helpers\obj\Debug\FoodSearch.BusinessLogic.Helpers.csprojResolveAssemblyReference.cache
 D:\projekty\PracaInzynierska\FoodSearch\FoodSearch.BusinessLogic.Helpers\obj\Debug\FoodSearch.BusinessLogic.Helpers.dll
 D:\projekty\PracaInzynierska\FoodSearch\FoodSearch.BusinessLogic.Helpers\obj\Debug\FoodSearch.BusinessLogic.Helpers.pdb

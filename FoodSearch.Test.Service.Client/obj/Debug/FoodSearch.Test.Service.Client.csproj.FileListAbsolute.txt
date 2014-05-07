@@ -1,2 +1,0 @@
-D:\projekty\PracaInzynierska\FoodSearch\FoodSearch.Test.Service.Client\obj\Debug\FoodSearch.Test.Service.Client.csproj.App.config
-D:\projekty\PracaInzynierska\FoodSearch\FoodSearch.Test.Service.Client\obj\Debug\FoodSearch.Test.Service.Client.csprojResolveAssemblyReference.cache

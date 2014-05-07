@@ -10,6 +10,7 @@ namespace FoodSearch.Presentation.Web.Site.Controllers
     {
         public ActionResult Index()
         {
+
             return View();
         }
 

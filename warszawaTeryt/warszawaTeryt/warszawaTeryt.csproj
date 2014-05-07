@@ -63,6 +63,7 @@
       <DependentUpon>FoodSeach.tt</DependentUpon>
     </Compile>
     <Compile Include="Adres.cs" />
+    <Compile Include="ApiKey.cs" />
     <Compile Include="District.cs">
       <DependentUpon>FoodSeach.tt</DependentUpon>
     </Compile>

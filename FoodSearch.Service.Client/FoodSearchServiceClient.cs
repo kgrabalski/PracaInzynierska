@@ -22,7 +22,7 @@ namespace FoodSearch.Service.Client
 
         public Task<int> AddStudent(string firstName, string lastName, DateTime birthDate, string group)
         {
-
+            return Task.Run(() => 0);
         }
     }
 }

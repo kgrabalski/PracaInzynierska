@@ -48,7 +48,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UserDomain.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\FoodSearch.Data.Mapping\FoodSearch.Data.Mapping.csproj">
+      <Project>{3C7D76AD-3B68-4EB6-9A15-560D4773FB24}</Project>
+      <Name>FoodSearch.Data.Mapping</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

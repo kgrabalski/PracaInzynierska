@@ -1,0 +1,15 @@
+D:\projekty\PracaInzynierska\FoodSearch\FoodSearch.Data.Mapping.Test\bin\Debug\FoodSearch.Data.Mapping.Test.dll
+D:\projekty\PracaInzynierska\FoodSearch\FoodSearch.Data.Mapping.Test\bin\Debug\FoodSearch.Data.Mapping.Test.pdb
+D:\projekty\PracaInzynierska\FoodSearch\FoodSearch.Data.Mapping.Test\bin\Debug\FluentNHibernate.dll
+D:\projekty\PracaInzynierska\FoodSearch\FoodSearch.Data.Mapping.Test\bin\Debug\FoodSearch.Data.Mapping.dll
+D:\projekty\PracaInzynierska\FoodSearch\FoodSearch.Data.Mapping.Test\bin\Debug\Iesi.Collections.dll
+D:\projekty\PracaInzynierska\FoodSearch\FoodSearch.Data.Mapping.Test\bin\Debug\NHibernate.dll
+D:\projekty\PracaInzynierska\FoodSearch\FoodSearch.Data.Mapping.Test\bin\Debug\FoodSearch.Data.Mapping.pdb
+D:\projekty\PracaInzynierska\FoodSearch\FoodSearch.Data.Mapping.Test\bin\Debug\FluentNHibernate.xml
+D:\projekty\PracaInzynierska\FoodSearch\FoodSearch.Data.Mapping.Test\bin\Debug\Iesi.Collections.xml
+D:\projekty\PracaInzynierska\FoodSearch\FoodSearch.Data.Mapping.Test\bin\Debug\NHibernate.xml
+D:\projekty\PracaInzynierska\FoodSearch\FoodSearch.Data.Mapping.Test\obj\Debug\FoodSearch.Data.Mapping.Test.csprojResolveAssemblyReference.cache
+D:\projekty\PracaInzynierska\FoodSearch\FoodSearch.Data.Mapping.Test\obj\Debug\FoodSearch.Data.Mapping.Test.dll
+D:\projekty\PracaInzynierska\FoodSearch\FoodSearch.Data.Mapping.Test\obj\Debug\FoodSearch.Data.Mapping.Test.pdb
+D:\projekty\PracaInzynierska\FoodSearch\FoodSearch.Data.Mapping.Test\bin\Debug\Ninject.dll
+D:\projekty\PracaInzynierska\FoodSearch\FoodSearch.Data.Mapping.Test\bin\Debug\Ninject.xml

@@ -20,3 +20,5 @@ D:\projekty\PracaInzynierska\FoodSearch\FoodSearch.Data.Mapping\bin\Debug\NHiber
 D:\projekty\PracaInzynierska\FoodSearch\FoodSearch.Data.Mapping\obj\Debug\FoodSearch.Data.Mapping.csprojResolveAssemblyReference.cache
 D:\projekty\PracaInzynierska\FoodSearch\FoodSearch.Data.Mapping\obj\Debug\FoodSearch.Data.Mapping.dll
 D:\projekty\PracaInzynierska\FoodSearch\FoodSearch.Data.Mapping\obj\Debug\FoodSearch.Data.Mapping.pdb
+D:\projekty\PracaInzynierska\FoodSearch\FoodSearch.Data.Mapping\bin\Debug\Ninject.dll
+D:\projekty\PracaInzynierska\FoodSearch\FoodSearch.Data.Mapping\bin\Debug\Ninject.xml
