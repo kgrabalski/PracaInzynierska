@@ -27,6 +27,5 @@ D:\projekty\PracaInzynierska\FoodSearch\FoodSearch.Presentation.Web.Site\bin\Sys
 D:\projekty\PracaInzynierska\FoodSearch\FoodSearch.Presentation.Web.Site\bin\System.Web.WebPages.xml
 D:\projekty\PracaInzynierska\FoodSearch\FoodSearch.Presentation.Web.Site\bin\System.Web.WebPages.Deployment.xml
 D:\projekty\PracaInzynierska\FoodSearch\FoodSearch.Presentation.Web.Site\bin\System.Web.WebPages.Razor.xml
-D:\projekty\PracaInzynierska\FoodSearch\FoodSearch.Presentation.Web.Site\obj\Debug\FoodSearch.Presentation.Web.Site.csprojResolveAssemblyReference.cache
 D:\projekty\PracaInzynierska\FoodSearch\FoodSearch.Presentation.Web.Site\obj\Debug\FoodSearch.Presentation.Web.Site.dll
 D:\projekty\PracaInzynierska\FoodSearch\FoodSearch.Presentation.Web.Site\obj\Debug\FoodSearch.Presentation.Web.Site.pdb

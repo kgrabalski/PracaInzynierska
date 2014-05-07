@@ -20,6 +20,8 @@ namespace FoodSearch.Data.Mapping.Entities.Mapping
             Map(x => x.ImageId).Column("ImageId").Not.Nullable();
             References(x => x.Image).Column("ImageId").LazyLoad().Not.Nullable();
             Map(x => x.Name).Column("Name").Not.Nullable();
+            Map(x => x.MinOrderAmount).Column("MinOrderAmount").Not.Nullable();
+            Map(x => x.IsOpen).Column("IsOpen").Not.Nullable();
         }
     }
 }

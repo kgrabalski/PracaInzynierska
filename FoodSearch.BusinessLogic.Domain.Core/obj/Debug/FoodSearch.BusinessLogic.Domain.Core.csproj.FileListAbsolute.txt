@@ -1,4 +1,3 @@
-D:\projekty\PracaInzynierska\FoodSearch\FoodSearch.BusinessLogic.Domain.Core\obj\Debug\FoodSearch.BusinessLogic.Domain.Core.csprojResolveAssemblyReference.cache
 D:\projekty\PracaInzynierska\FoodSearch\FoodSearch.BusinessLogic.Domain.Core\bin\Debug\FoodSearch.BusinessLogic.Domain.Core.dll
 D:\projekty\PracaInzynierska\FoodSearch\FoodSearch.BusinessLogic.Domain.Core\bin\Debug\FoodSearch.BusinessLogic.Domain.Core.pdb
 D:\projekty\PracaInzynierska\FoodSearch\FoodSearch.BusinessLogic.Domain.Core\bin\Debug\FoodSearch.Data.Mapping.dll
@@ -13,3 +12,4 @@ D:\projekty\PracaInzynierska\FoodSearch\FoodSearch.BusinessLogic.Domain.Core\obj
 D:\projekty\PracaInzynierska\FoodSearch\FoodSearch.BusinessLogic.Domain.Core\obj\Debug\FoodSearch.BusinessLogic.Domain.Core.pdb
 D:\projekty\PracaInzynierska\FoodSearch\FoodSearch.BusinessLogic.Domain.Core\bin\Debug\Ninject.dll
 D:\projekty\PracaInzynierska\FoodSearch\FoodSearch.BusinessLogic.Domain.Core\bin\Debug\Ninject.xml
+D:\projekty\PracaInzynierska\FoodSearch\FoodSearch.BusinessLogic.Domain.Core\obj\Debug\FoodSearch.BusinessLogic.Domain.Core.csprojResolveAssemblyReference.cache

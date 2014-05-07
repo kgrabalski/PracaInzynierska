@@ -12,7 +12,7 @@ namespace FoodSearch.Data.Mapping.Entities.Mapping
     {
         public PaymentHistoryMap()
         {
-            Table("PaymentHistory");
+            Table("PaymentsHistory");
             LazyLoad();
             Id(x => x.PaymentHistoryId).Column("PaymentHistoryId").GeneratedBy.Identity().Not.Nullable();
             Map(x => x.PaymentId).Column("PaymentId").Not.Nullable();

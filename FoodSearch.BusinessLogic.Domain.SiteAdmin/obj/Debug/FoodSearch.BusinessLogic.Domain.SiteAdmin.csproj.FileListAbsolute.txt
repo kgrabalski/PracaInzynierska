@@ -1,0 +1,15 @@
+D:\projekty\PracaInzynierska\FoodSearch\FoodSearch.BusinessLogic.Domain.SiteAdmin\bin\Debug\FoodSearch.BusinessLogic.Domain.SiteAdmin.dll
+D:\projekty\PracaInzynierska\FoodSearch\FoodSearch.BusinessLogic.Domain.SiteAdmin\bin\Debug\FoodSearch.BusinessLogic.Domain.SiteAdmin.pdb
+D:\projekty\PracaInzynierska\FoodSearch\FoodSearch.BusinessLogic.Domain.SiteAdmin\bin\Debug\FoodSearch.Data.Mapping.dll
+D:\projekty\PracaInzynierska\FoodSearch\FoodSearch.BusinessLogic.Domain.SiteAdmin\bin\Debug\FluentNHibernate.dll
+D:\projekty\PracaInzynierska\FoodSearch\FoodSearch.BusinessLogic.Domain.SiteAdmin\bin\Debug\NHibernate.dll
+D:\projekty\PracaInzynierska\FoodSearch\FoodSearch.BusinessLogic.Domain.SiteAdmin\bin\Debug\Ninject.dll
+D:\projekty\PracaInzynierska\FoodSearch\FoodSearch.BusinessLogic.Domain.SiteAdmin\bin\Debug\Iesi.Collections.dll
+D:\projekty\PracaInzynierska\FoodSearch\FoodSearch.BusinessLogic.Domain.SiteAdmin\bin\Debug\FoodSearch.Data.Mapping.pdb
+D:\projekty\PracaInzynierska\FoodSearch\FoodSearch.BusinessLogic.Domain.SiteAdmin\bin\Debug\FluentNHibernate.xml
+D:\projekty\PracaInzynierska\FoodSearch\FoodSearch.BusinessLogic.Domain.SiteAdmin\bin\Debug\NHibernate.xml
+D:\projekty\PracaInzynierska\FoodSearch\FoodSearch.BusinessLogic.Domain.SiteAdmin\bin\Debug\Ninject.xml
+D:\projekty\PracaInzynierska\FoodSearch\FoodSearch.BusinessLogic.Domain.SiteAdmin\bin\Debug\Iesi.Collections.xml
+D:\projekty\PracaInzynierska\FoodSearch\FoodSearch.BusinessLogic.Domain.SiteAdmin\obj\Debug\FoodSearch.BusinessLogic.Domain.SiteAdmin.csprojResolveAssemblyReference.cache
+D:\projekty\PracaInzynierska\FoodSearch\FoodSearch.BusinessLogic.Domain.SiteAdmin\obj\Debug\FoodSearch.BusinessLogic.Domain.SiteAdmin.dll
+D:\projekty\PracaInzynierska\FoodSearch\FoodSearch.BusinessLogic.Domain.SiteAdmin\obj\Debug\FoodSearch.BusinessLogic.Domain.SiteAdmin.pdb

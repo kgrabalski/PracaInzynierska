@@ -15,11 +15,11 @@ namespace FoodSearch.BusinessLogic.Domain.Order
 {
     public class OrderDomain : IOrderDomain
     {
-        private readonly IRepositoryHelper _helper;
+        private readonly IRepositoryProvider _provider;
 
-        public OrderDomain(IRepositoryHelper helper)
+        public OrderDomain(IRepositoryProvider provider)
         {
-            _helper = helper;
+            _provider = provider;
         }
     }
 }

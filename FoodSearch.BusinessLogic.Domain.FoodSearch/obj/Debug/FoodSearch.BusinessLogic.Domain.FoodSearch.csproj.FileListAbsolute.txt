@@ -30,3 +30,7 @@ D:\projekty\PracaInzynierska\FoodSearch\FoodSearch.BusinessLogic.Domain.FoodSear
 D:\projekty\PracaInzynierska\FoodSearch\FoodSearch.BusinessLogic.Domain.FoodSearch\bin\Debug\NHibernate.xml
 D:\projekty\PracaInzynierska\FoodSearch\FoodSearch.BusinessLogic.Domain.FoodSearch\bin\Debug\FluentNHibernate.xml
 D:\projekty\PracaInzynierska\FoodSearch\FoodSearch.BusinessLogic.Domain.FoodSearch\bin\Debug\Iesi.Collections.xml
+D:\projekty\PracaInzynierska\FoodSearch\FoodSearch.BusinessLogic.Domain.FoodSearch\bin\Debug\FoodSearch.BusinessLogic.Domain.RestraurantAdmin.dll
+D:\projekty\PracaInzynierska\FoodSearch\FoodSearch.BusinessLogic.Domain.FoodSearch\bin\Debug\FoodSearch.BusinessLogic.Domain.SiteAdmin.dll
+D:\projekty\PracaInzynierska\FoodSearch\FoodSearch.BusinessLogic.Domain.FoodSearch\bin\Debug\FoodSearch.BusinessLogic.Domain.RestraurantAdmin.pdb
+D:\projekty\PracaInzynierska\FoodSearch\FoodSearch.BusinessLogic.Domain.FoodSearch\bin\Debug\FoodSearch.BusinessLogic.Domain.SiteAdmin.pdb

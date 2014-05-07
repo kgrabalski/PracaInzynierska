@@ -17,16 +17,16 @@ namespace FoodSearch.BusinessLogic.Domain.Core
 {
     public class CoreDomain : ICoreDomain
     {
-        private readonly IRepositoryHelper _helper;
+        private readonly IRepositoryProvider _provider;
 
-        public CoreDomain(IRepositoryHelper helper)
+        public CoreDomain(IRepositoryProvider provider)
         {
-            _helper = helper;
+            _provider = provider;
         }
 
         public IEnumerable<District> GetDistricts()
         {
-            using (var rep = _helper.DistrictRepository)
+            using (var rep = _provider.GetRepository<District>())
             {
                 return rep.GetAll().List();
             }
@@ -34,7 +34,7 @@ namespace FoodSearch.BusinessLogic.Domain.Core
 
         public IEnumerable<Street> GetStreets(string query)
         {
-            using (var rep = _helper.StreetRepository)
+            using (var rep = _provider.GetRepository<Street>())
             {
                 return rep.GetAll()
                     .WhereRestrictionOn(x => x.Name)
@@ -45,8 +45,8 @@ namespace FoodSearch.BusinessLogic.Domain.Core
 
         public IEnumerable<Street> GetStreets(int districtId)
         {
-            using (var repS = _helper.StreetRepository)
-            using (var repA = _helper.AddressRepository)
+            using (var repS = _provider.GetRepository<Street>())
+            using (var repA = _provider.GetRepository<Address>())
             {
                 return repA.GetAll()
                     .Where(x => x.DistrictId == districtId)
@@ -58,7 +58,7 @@ namespace FoodSearch.BusinessLogic.Domain.Core
 
         public IEnumerable<StreetNumber> GetStreetNumbers(int streetId)
         {
-            using (var rep = _helper.AddressRepository)
+            using (var rep = _provider.GetRepository<Address>())
             {
                 StreetNumber sn = null;
                 return rep.GetAll()
@@ -68,6 +68,22 @@ namespace FoodSearch.BusinessLogic.Domain.Core
                         .Select(x => x.Number).WithAlias(() => sn.Number))
                     .TransformUsing(Transformers.AliasToBean<StreetNumber>())
                     .List<StreetNumber>();
+            }
+        }
+
+        public Address GetAddress(int addressId)
+        {
+            using (var rep = _provider.GetRepository<Address>())
+            {
+                return rep.Get(addressId);
+            }
+        }
+
+        public byte[] GetImage(int imageId)
+        {
+            using (var rep = _provider.GetRepository<Image>())
+            {
+                return rep.Get(imageId).ImageData;
             }
         }
     }

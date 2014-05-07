@@ -19,3 +19,5 @@ D:\projekty\PracaInzynierska\FoodSearch\FoodSearch.BusinessLogic.Domain.Test\obj
 D:\projekty\PracaInzynierska\FoodSearch\FoodSearch.BusinessLogic.Domain.Test\obj\Debug\FoodSearch.BusinessLogic.Domain.Test.pdb
 D:\projekty\PracaInzynierska\FoodSearch\FoodSearch.BusinessLogic.Domain.Test\bin\Debug\Ninject.dll
 D:\projekty\PracaInzynierska\FoodSearch\FoodSearch.BusinessLogic.Domain.Test\bin\Debug\Ninject.xml
+D:\projekty\PracaInzynierska\FoodSearch\FoodSearch.BusinessLogic.Domain.Test\bin\Debug\FoodSearch.BusinessLogic.Domain.SiteAdmin.dll
+D:\projekty\PracaInzynierska\FoodSearch\FoodSearch.BusinessLogic.Domain.Test\bin\Debug\FoodSearch.BusinessLogic.Domain.SiteAdmin.pdb

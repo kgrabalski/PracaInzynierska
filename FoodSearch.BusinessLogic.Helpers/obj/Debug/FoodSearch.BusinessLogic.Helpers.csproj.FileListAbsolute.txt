@@ -7,3 +7,4 @@ D:\projekty\PracaInzynierska\FoodSearch\FoodSearch.BusinessLogic.Helpers\bin\Deb
 D:\projekty\PracaInzynierska\FoodSearch\FoodSearch.BusinessLogic.Helpers\bin\Debug\FoodSearch.BusinessLogic.Helpers.pdb
 D:\projekty\PracaInzynierska\FoodSearch\FoodSearch.BusinessLogic.Helpers\obj\Debug\FoodSearch.BusinessLogic.Helpers.dll
 D:\projekty\PracaInzynierska\FoodSearch\FoodSearch.BusinessLogic.Helpers\obj\Debug\FoodSearch.BusinessLogic.Helpers.pdb
+D:\projekty\PracaInzynierska\FoodSearch\FoodSearch.BusinessLogic.Helpers\obj\Debug\FoodSearch.BusinessLogic.Helpers.csprojResolveAssemblyReference.cache

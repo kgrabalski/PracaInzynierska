@@ -4,7 +4,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-using FoodSearch.Data.Mapping.Helpers;
 using FoodSearch.Data.Mapping.Interface;
 
 using NHibernate;
@@ -15,9 +14,9 @@ namespace FoodSearch.Data.Mapping.Repository
     {
         private readonly ISession session;
 
-        public FoodSearchRepository()
+        public FoodSearchRepository(ISessionSource sessionSource)
         {
-            session = NHibernateHelper.Configure().BuildSessionFactory().OpenSession();
+            session = sessionSource.Session;
         }
 
         public T Get<TId>(TId id) where TId : struct

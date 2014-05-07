@@ -63,6 +63,14 @@
       <Project>{C0879B51-2AF2-4D83-A239-4B7F0BD1D039}</Project>
       <Name>FoodSearch.BusinessLogic.Domain.Order</Name>
     </ProjectReference>
+    <ProjectReference Include="..\FoodSearch.BusinessLogic.Domain.RestraurantAdmin\FoodSearch.BusinessLogic.Domain.RestraurantAdmin.csproj">
+      <Project>{140694A6-E80E-4C42-8E66-F043019608A3}</Project>
+      <Name>FoodSearch.BusinessLogic.Domain.RestraurantAdmin</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FoodSearch.BusinessLogic.Domain.SiteAdmin\FoodSearch.BusinessLogic.Domain.SiteAdmin.csproj">
+      <Project>{29481033-93DB-4905-BBF3-26D69F9071DF}</Project>
+      <Name>FoodSearch.BusinessLogic.Domain.SiteAdmin</Name>
+    </ProjectReference>
     <ProjectReference Include="..\FoodSearch.BusinessLogic.Domain.User\FoodSearch.BusinessLogic.Domain.User.csproj">
       <Project>{C62D4EAF-4EE1-4F2E-96EA-0C630FFD59EB}</Project>
       <Name>FoodSearch.BusinessLogic.Domain.User</Name>

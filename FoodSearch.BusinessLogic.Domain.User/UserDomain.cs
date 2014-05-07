@@ -10,11 +10,11 @@ namespace FoodSearch.BusinessLogic.Domain.User
 {
     public class UserDomain : IUserDomain
     {
-        private readonly IRepositoryHelper _helper;
+        private readonly IRepositoryProvider _provider;
 
-        public UserDomain(IRepositoryHelper helper)
+        public UserDomain(IRepositoryProvider provider)
         {
-            _helper = helper;
+            _provider = provider;
         }
     }
 }

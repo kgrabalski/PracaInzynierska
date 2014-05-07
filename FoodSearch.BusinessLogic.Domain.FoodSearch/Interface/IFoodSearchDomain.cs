@@ -5,6 +5,8 @@ using System.Text;
 
 using FoodSearch.BusinessLogic.Domain.Core.Interface;
 using FoodSearch.BusinessLogic.Domain.Order.Interface;
+using FoodSearch.BusinessLogic.Domain.RestraurantAdmin.Interface;
+using FoodSearch.BusinessLogic.Domain.SiteAdmin.Interface;
 using FoodSearch.BusinessLogic.Domain.User.Interface;
 
 namespace FoodSearch.BusinessLogic.Domain.FoodSearch.Interface
@@ -14,5 +16,7 @@ namespace FoodSearch.BusinessLogic.Domain.FoodSearch.Interface
         ICoreDomain Core { get; }
         IOrderDomain Order { get; }
         IUserDomain User { get; }
+        IRestaurantAdminDomain RestaurantAdmin { get; }
+        ISiteAdminDomain SiteAdmin { get; }
     }
 }

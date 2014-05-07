@@ -14,5 +14,7 @@ namespace FoodSearch.Data.Mapping.Entities
         public virtual int ImageId { get; set; }
         public virtual Image Image { get; set; }
         public virtual string Name { get; set; }
+        public virtual float MinOrderAmount { get; set; }
+        public virtual bool IsOpen { get; set; }
     }
 }

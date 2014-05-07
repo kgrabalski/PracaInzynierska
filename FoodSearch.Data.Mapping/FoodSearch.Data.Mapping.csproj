@@ -100,12 +100,13 @@
     <Compile Include="Entities\User.cs" />
     <Compile Include="Entities\UserState.cs" />
     <Compile Include="Entities\UserType.cs" />
-    <Compile Include="Helpers\NHibernateHelper.cs" />
+    <Compile Include="Interface\IRepositoryProvider.cs" />
     <Compile Include="Interface\IRepository.cs" />
-    <Compile Include="Interface\IRepositoryHelper.cs" />
+    <Compile Include="Interface\ISessionSource.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repository\FoodSearchRepositoryProvider.cs" />
     <Compile Include="Repository\FoodSearchRepository.cs" />
-    <Compile Include="Repository\RepositoryHelper.cs" />
+    <Compile Include="Repository\SessionSource.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
