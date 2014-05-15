@@ -16,6 +16,7 @@ namespace FoodSearch.Data.Mapping.Entities.Mapping
             LazyLoad();
             Id(x => x.DishGroupId).Column("DishGroupId").GeneratedBy.Identity().Not.Nullable();
             Map(x => x.Name).Column("Name").Not.Nullable();
+            Map(x => x.RestaurantId).Column("RestaurantId").Not.Nullable();
         }
     }
 }

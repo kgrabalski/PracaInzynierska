@@ -21,7 +21,7 @@ namespace FoodSearch.BusinessLogic.Domain.Test
         private ISiteAdminDomain domain;
 
         [TestInitialize]
-        public void BusinessLogic_Domain_Core_InitializeTest()
+        public void BusinessLogic_Domain_SiteAdmin_InitializeTest()
         {
             sessionSource = new SessionSource(Databases.FoodSearchTest);
             provider = new FoodSearchRepositoryProvider(sessionSource);
@@ -29,10 +29,16 @@ namespace FoodSearch.BusinessLogic.Domain.Test
         }
 
         [TestMethod]
-        public void BusinessLogic_Domain_Core_CreateRestaurant()
+        public void BusinessLogic_Domain_SiteAdmin_CreateRestaurant()
         {
             var id = domain.CreateRestaurant("Testowa resrauracja", 1315, 2);
             Assert.IsTrue(id != Guid.Empty);
+        }
+
+        [TestMethod]
+        public void BusinessLogic_Domain_SiteAdmin_GetRestaurants()
+        {
+            var rest = domain.GetRestaurants();
         }
     }
 }

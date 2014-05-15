@@ -21,9 +21,9 @@ namespace FoodSearch.Data.Mapping.Entities.Mapping
             Map(x => x.Email).Column("Email").Not.Nullable();
             Map(x => x.Password).Column("Password").Not.Nullable();
             Map(x => x.UserTypeId).Column("UserTypeId").Not.Nullable();
-            References(x => x.UserType).Column("UserTypeId").LazyLoad().Not.Nullable();
+            References(x => x.UserType).Column("UserTypeId").LazyLoad().Not.Nullable().Not.Insert();
             Map(x => x.UserStateId).Column("UserStateId").Not.Nullable();
-            References(x => x.UserState).Column("UserStateId").LazyLoad().Not.Nullable();
+            References(x => x.UserState).Column("UserStateId").LazyLoad().Not.Nullable().Not.Insert();
             Map(x => x.CreateDate).Column("CreateDate").Not.Nullable();
         }
     }

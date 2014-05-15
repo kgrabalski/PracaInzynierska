@@ -24,13 +24,22 @@ namespace FoodSearch.Data.Mapping.Repository
             return session.Get<T>(id);
         }
 
-        public TId Save<TId>(T value) where TId : struct
+        public TId Create<TId>(T value) where TId : struct
         {
             using (var transaction = session.BeginTransaction())
             {
                 TId id = (TId)session.Save(value);
                 transaction.Commit();
                 return id;
+            }
+        }
+
+        public void Create(T value)
+        {
+            using (var transaction = session.BeginTransaction())
+            {
+                session.Save(value);
+                transaction.Commit();
             }
         }
 

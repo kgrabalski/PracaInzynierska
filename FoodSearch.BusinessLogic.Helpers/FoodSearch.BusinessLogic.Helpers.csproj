@@ -44,7 +44,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Email\EmailBody.cs" />
+    <Compile Include="Email\EmailBodyHelper.cs" />
+    <Compile Include="Email\EmailHelper.cs" />
+    <Compile Include="Email\MailHelperMessageType.cs" />
+    <Compile Include="Email\MailHelperSendFrom.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Email\Content\Registration.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Email\Content\Registration.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

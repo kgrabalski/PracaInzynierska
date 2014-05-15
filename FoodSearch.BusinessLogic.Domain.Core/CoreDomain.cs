@@ -79,11 +79,23 @@ namespace FoodSearch.BusinessLogic.Domain.Core
             }
         }
 
-        public byte[] GetImage(int imageId)
+        public Image GetImage(int imageId)
         {
             using (var rep = _provider.GetRepository<Image>())
             {
-                return rep.Get(imageId).ImageData;
+                return rep.Get(imageId);
+            }
+        }
+
+        public int AddImage(byte[] imageBytes, string contentType)
+        {
+            using (var rep = _provider.GetRepository<Image>())
+            {
+                return rep.Create<int>(new Image()
+                {
+                    ImageData = imageBytes,
+                    ContentType = contentType
+                });
             }
         }
     }

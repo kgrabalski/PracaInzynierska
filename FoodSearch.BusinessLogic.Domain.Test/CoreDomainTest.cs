@@ -62,7 +62,7 @@ namespace FoodSearch.BusinessLogic.Domain.Test
         {
             var image = domain.GetImage(1);
             Assert.IsNotNull(image);
-            Assert.IsTrue(image.Length > 0);
+            Assert.IsTrue(image.ImageData.Length > 0);
         }
     }
 }

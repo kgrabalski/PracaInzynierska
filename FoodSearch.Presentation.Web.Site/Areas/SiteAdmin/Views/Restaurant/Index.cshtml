@@ -1,0 +1,42 @@
+﻿@model IEnumerable<FoodSearch.BusinessLogic.Domain.SiteAdmin.Models.Restaurant>
+@{
+    Layout = "~/Areas/SiteAdmin/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "SiteAdmin";
+}
+
+
+<form action="@Url.Action("Create")">
+    <input type="submit" value="Dodaj restauracje"/>
+</form>
+<table>
+    <thead>
+        <tr>
+            <th>Logo</th>
+            <th>Nazwa</th>
+            <th>Adres</th>
+            <th>Akcja</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var r in Model)
+        {
+            <tr>
+                <td><img src="@Url.Action("GetLogo", "Restaurant", new {logoId = r.LogoId})" width="100" height="100"/></td>
+                <td>@r.Name</td>
+                <td>
+                    @r.Street @r.Number<br/>
+                    @r.City, @r.District
+                </td>
+                <td>
+                    <form action="@Url.Action("Edit", new {restaurantId = r.RestaurantId})">
+                        <input type="submit" value="Edytuj"/>
+                    </form>
+                    <br/>
+                    <form action="@Url.Action("Delete", new {restaurantId = r.RestaurantId})" method="POST">
+                        <input type="submit" value="Usuń"/>
+                    </form>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

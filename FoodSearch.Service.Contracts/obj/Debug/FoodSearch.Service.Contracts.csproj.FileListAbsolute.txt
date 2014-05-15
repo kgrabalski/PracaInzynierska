@@ -1,8 +1,3 @@
-C:\C#\Inzynierka\FoodSearch.Service.Contracts\bin\Debug\FoodSearch.Service.Contracts.dll
-C:\C#\Inzynierka\FoodSearch.Service.Contracts\bin\Debug\FoodSearch.Service.Contracts.pdb
-C:\C#\Inzynierka\FoodSearch.Service.Contracts\obj\Debug\FoodSearch.Service.Contracts.csprojResolveAssemblyReference.cache
-C:\C#\Inzynierka\FoodSearch.Service.Contracts\obj\Debug\FoodSearch.Service.Contracts.dll
-C:\C#\Inzynierka\FoodSearch.Service.Contracts\obj\Debug\FoodSearch.Service.Contracts.pdb
 D:\projekty\PracaInzynierska\FoodSearch\FoodSearch.Service.Contracts\bin\Debug\FoodSearch.Service.Contracts.dll.config
 D:\projekty\PracaInzynierska\FoodSearch\FoodSearch.Service.Contracts\bin\Debug\FoodSearch.Service.Contracts.dll
 D:\projekty\PracaInzynierska\FoodSearch\FoodSearch.Service.Contracts\bin\Debug\FoodSearch.Service.Contracts.pdb

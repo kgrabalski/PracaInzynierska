@@ -16,6 +16,7 @@ namespace FoodSearch.Data.Mapping.Entities.Mapping
             LazyLoad();
             Id(x => x.ImageId).Column("ImageId").GeneratedBy.Identity().Not.Nullable();
             Map(x => x.ImageData).Column("ImageData").Not.Nullable().Length(int.MaxValue);
+            Map(x => x.ContentType).Column("ContentType").Not.Nullable();
         }
     }
 }

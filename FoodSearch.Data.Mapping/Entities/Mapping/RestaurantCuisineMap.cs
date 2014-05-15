@@ -8,12 +8,17 @@ using FluentNHibernate.Mapping;
 
 namespace FoodSearch.Data.Mapping.Entities.Mapping
 {
-    //public class RestaurantCuisineMap : ClassMap<RestaurantCuisine>
-    //{
-    //    public RestaurantCuisineMap()
-    //    {
-    //        Table("RestaurantCuisines");
-    //        CompositeId().KeyProperty(x => x.RestaurantId, "RestaurantId").KeyReference(x => x.CuisineId, "CuisineId");
-    //    }
-    //}
+    public class RestaurantCuisineMap : ClassMap<RestaurantCuisine>
+    {
+        public RestaurantCuisineMap()
+        {
+            Table("RestaurantCuisines");
+            LazyLoad();
+            Id(x => x.RestaurantCuisineId).Column("RestaurantCuisineId").GeneratedBy.Identity().Not.Nullable();
+            Map(x => x.RestaurantId).Column("RestaurantId").Not.Nullable();
+            References(x => x.Restaurant).Column("RestaurantId").Not.Nullable().Not.Insert().LazyLoad();
+            Map(x => x.CuisineId).Column("CuisineId").Not.Nullable();
+            References(x => x.Cuisine).Column("CuisineId").Not.Nullable().LazyLoad().Not.Insert();
+        }
+    }
 }

@@ -111,18 +111,37 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Areas\RestaurantAdmin\Models\" />
+    <Folder Include="Areas\SiteAdmin\Models\" />
+    <Folder Include="Areas\SiteAdmin\Scripts\" />
+    <Folder Include="Areas\SiteAdmin\Views\Home\" />
+    <Folder Include="Areas\User\Controllers\" />
+    <Folder Include="Areas\User\Models\" />
+    <Folder Include="Areas\User\Views\Shared\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
-    <Compile Include="App_Start\NinjectWebCommon.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Areas\RestaurantAdmin\Controllers\AccountController.cs" />
+    <Compile Include="Areas\RestaurantAdmin\Controllers\HomeController.cs" />
+    <Compile Include="Areas\RestaurantAdmin\RestaurantAdminAreaRegistration.cs" />
+    <Compile Include="Areas\SiteAdmin\Controllers\AccountController.cs" />
+    <Compile Include="Areas\SiteAdmin\Controllers\HomeController.cs" />
+    <Compile Include="Areas\SiteAdmin\Controllers\RestaurantController.cs" />
+    <Compile Include="Areas\SiteAdmin\SiteAdminAreaRegistration.cs" />
+    <Compile Include="Areas\User\UserAreaRegistration.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Helpers\AreaAuthorizeAttribute.cs" />
+    <Compile Include="Helpers\CompressAttribute.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Providers\CreateUserResult.cs" />
+    <Compile Include="Providers\FoodSearchMembershipProvider.cs" />
+    <Compile Include="Providers\FoodSearchRoleProvider.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap-theme.css" />
@@ -130,14 +149,20 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="favicon.ico" />
-    <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
-    <Content Include="fonts\glyphicons-halflings-regular.woff" />
-    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
-    <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Areas\User\Views\web.config" />
+    <Content Include="Areas\SiteAdmin\Views\web.config" />
+    <Content Include="Areas\RestaurantAdmin\Views\web.config" />
+    <Content Include="Areas\SiteAdmin\Views\Restaurant\Index.cshtml" />
+    <Content Include="Areas\SiteAdmin\Views\Shared\_Layout.cshtml" />
+    <Content Include="Areas\SiteAdmin\Views\Restaurant\Create.cshtml" />
+    <Content Include="Areas\SiteAdmin\Views\Account\Login.cshtml" />
+    <Content Include="Areas\RestaurantAdmin\Views\Account\Login.cshtml" />
+    <Content Include="Areas\RestaurantAdmin\Views\Shared\_Layout.cshtml" />
+    <Content Include="Areas\RestaurantAdmin\Views\Home\Index.cshtml" />
     <None Include="Scripts\jquery-2.1.0.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -165,7 +190,32 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Scripts\jquery-2.1.0.min.map" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\FoodSearch.BusinessLogic.Domain.Core\FoodSearch.BusinessLogic.Domain.Core.csproj">
+      <Project>{075008BC-66B0-436E-9BB2-897C2D1FB2D0}</Project>
+      <Name>FoodSearch.BusinessLogic.Domain.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FoodSearch.BusinessLogic.Domain.FoodSearch\FoodSearch.BusinessLogic.Domain.FoodSearch.csproj">
+      <Project>{489E10B0-1EBA-484E-BE1E-11C533CB00CF}</Project>
+      <Name>FoodSearch.BusinessLogic.Domain.FoodSearch</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FoodSearch.BusinessLogic.Domain.RestraurantAdmin\FoodSearch.BusinessLogic.Domain.RestraurantAdmin.csproj">
+      <Project>{140694A6-E80E-4C42-8E66-F043019608A3}</Project>
+      <Name>FoodSearch.BusinessLogic.Domain.RestraurantAdmin</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FoodSearch.BusinessLogic.Domain.SiteAdmin\FoodSearch.BusinessLogic.Domain.SiteAdmin.csproj">
+      <Project>{29481033-93DB-4905-BBF3-26D69F9071DF}</Project>
+      <Name>FoodSearch.BusinessLogic.Domain.SiteAdmin</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FoodSearch.BusinessLogic.Domain.User\FoodSearch.BusinessLogic.Domain.User.csproj">
+      <Project>{C62D4EAF-4EE1-4F2E-96EA-0C630FFD59EB}</Project>
+      <Name>FoodSearch.BusinessLogic.Domain.User</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FoodSearch.Data.Mapping\FoodSearch.Data.Mapping.csproj">
+      <Project>{3C7D76AD-3B68-4EB6-9A15-560D4773FB24}</Project>
+      <Name>FoodSearch.Data.Mapping</Name>
+    </ProjectReference>
+  </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
@@ -183,7 +233,7 @@
   </Target>
   <ProjectExtensions>
     <VisualStudio>
-      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+      <FlavorProperties GUID="{349C5851-65DF-11DA-9384-00065B846F21}">
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>

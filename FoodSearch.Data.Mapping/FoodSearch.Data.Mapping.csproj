@@ -80,6 +80,7 @@
     <Compile Include="Entities\Mapping\PaymentMap.cs" />
     <Compile Include="Entities\Mapping\PaymentStateMap.cs" />
     <Compile Include="Entities\Mapping\PaymentTypeMap.cs" />
+    <Compile Include="Entities\Mapping\RegistrationConfirmMap.cs" />
     <Compile Include="Entities\Mapping\RestaurantCuisineMap.cs" />
     <Compile Include="Entities\Mapping\RestaurantMap.cs" />
     <Compile Include="Entities\Mapping\StreetMap.cs" />
@@ -94,12 +95,15 @@
     <Compile Include="Entities\PaymentHistory.cs" />
     <Compile Include="Entities\PaymentState.cs" />
     <Compile Include="Entities\PaymentType.cs" />
+    <Compile Include="Entities\RegistrationConfirm.cs" />
     <Compile Include="Entities\Restaurant.cs" />
     <Compile Include="Entities\RestaurantCuisine.cs" />
     <Compile Include="Entities\Street.cs" />
     <Compile Include="Entities\User.cs" />
     <Compile Include="Entities\UserState.cs" />
+    <Compile Include="Entities\UserStates.cs" />
     <Compile Include="Entities\UserType.cs" />
+    <Compile Include="Entities\UserTypes.cs" />
     <Compile Include="Interface\IRepositoryProvider.cs" />
     <Compile Include="Interface\IRepository.cs" />
     <Compile Include="Interface\ISessionSource.cs" />
