@@ -20,13 +20,6 @@ namespace FoodSearch.Presentation.Web.Site.Areas.SiteAdmin.Controllers
             _domain = domain;
         }
 
-
-        public ActionResult Index()
-        {
-            var restaurants = _domain.SiteAdmin.GetRestaurants();
-            return View(restaurants);
-        }
-
         public ActionResult GetLogo(int logoId)
         {
             var logo = _domain.Core.GetImage(logoId);
@@ -34,37 +27,37 @@ namespace FoodSearch.Presentation.Web.Site.Areas.SiteAdmin.Controllers
         }
 
         [HttpPost]
-        public ActionResult Delete(Guid restaurantId)
+        public ActionResult GetRestaurants()
         {
-            _domain.SiteAdmin.DeleteRestaurant(restaurantId);
-            return RedirectToAction("Index");
-        }
-
-        public ActionResult Create()
-        {
-            return View();
+            var restaurants = _domain.SiteAdmin.GetRestaurants();
+            return Json(restaurants, JsonRequestBehavior.DenyGet);
         }
 
         [HttpPost]
-        public ActionResult Create(string name, int addressId, string userName, string password)
+        public ActionResult Delete(Guid restaurantId)
         {
-            if (Request.Files.Count > 0)
-            {
-                var img = Request.Files["logo"] as HttpPostedFileBase;
-                Int32 length = img.ContentLength;
-                byte[] tempImage = new byte[length];
-                img.InputStream.Read(tempImage, 0, length);
-
-                int logoId = _domain.Core.AddImage(tempImage, Request.Files["logo"].ContentType);
-                var id = _domain.SiteAdmin.CreateRestaurant(name, addressId, logoId);
-                var userId = _domain.RestaurantAdmin.CreateUser(userName, "Właściel", "Restauracji", "email", password, UserTypes.RestaurantAdmin);
-            }
-            return RedirectToAction("Index");
+            _domain.SiteAdmin.DeleteRestaurant(restaurantId);
+            return Json("ok", JsonRequestBehavior.DenyGet);
         }
 
-        public ActionResult Edit(Guid restaurantId)
+        [HttpPost]
+        public ActionResult UploadLogo()
         {
-            return View();
+            var logo = Request.Files["logo"] as HttpPostedFileBase;
+            Int32 length = logo.ContentLength;
+            byte[] tempLogo = new byte[length];
+            logo.InputStream.Read(tempLogo, 0, length);
+            var logoId = _domain.Core.AddImage(tempLogo, Request.Files["logo"].ContentType);
+            return Json(logoId, JsonRequestBehavior.DenyGet);
+        }
+
+        [HttpPost]
+        public ActionResult Create(string name, int addressId, string userName, string password, int logoId)
+        {
+            var restaurantId = _domain.SiteAdmin.CreateRestaurant(name, addressId, logoId);
+            var userId = _domain.RestaurantAdmin.CreateUser(restaurantId, userName, "Właściel", "Restauracji", "email", password, UserTypes.RestaurantAdmin);
+            var restaurant = _domain.SiteAdmin.GetRestaurant(restaurantId);
+            return Json(restaurant, JsonRequestBehavior.DenyGet);
         }
     }
 }

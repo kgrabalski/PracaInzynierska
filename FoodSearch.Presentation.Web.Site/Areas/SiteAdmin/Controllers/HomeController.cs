@@ -19,7 +19,10 @@ namespace FoodSearch.Presentation.Web.Site.Areas.SiteAdmin.Controllers
             _domain = domain;
         }
 
-
+        public ActionResult Index()
+        {
+            return View();
+        }
        
     }
 }

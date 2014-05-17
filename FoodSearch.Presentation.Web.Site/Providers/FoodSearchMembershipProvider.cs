@@ -67,7 +67,7 @@ namespace FoodSearch.Presentation.Web.Site.Providers
             {
                 _domain.User.CreateConfirmationEntry(userId, email, userName);
                 result.Status = MembershipCreateStatus.Success;
-                result.MembershipUser = new MembershipUser(Membership.Provider.Name, userName, password, email, null, null, true, false, MiscHelper.GetShiftedDateTimeFromUTCToPL(DateTime.Now), DateTime.MinValue, DateTime.MinValue, DateTime.MinValue, DateTime.MinValue);
+                result.MembershipUser = new MembershipUser(Membership.Provider.Name, userName, password, email, null, null, true, false, DateTime.Now, DateTime.MinValue, DateTime.MinValue, DateTime.MinValue, DateTime.MinValue);
                 return result;
             }
 

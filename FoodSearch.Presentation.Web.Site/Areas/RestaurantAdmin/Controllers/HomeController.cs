@@ -12,7 +12,6 @@ namespace FoodSearch.Presentation.Web.Site.Areas.RestaurantAdmin.Controllers
     [AreaAuthorize(Roles = "RestaurantAdmin, RestaurantEmployee")]
     public class HomeController : Controller
     {
-        // GET: RestaurantAdmin/Home
         public ActionResult Index()
         {
             return View();

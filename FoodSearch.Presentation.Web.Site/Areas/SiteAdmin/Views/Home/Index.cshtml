@@ -1,0 +1,59 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/SiteAdmin/Views/Shared/_Layout.cshtml";
+}
+
+@section HeadSection
+{
+    <link rel="stylesheet" href="~/Content/selectize.css"/>
+}
+
+@section ScriptSection
+{
+    <script type="text/javascript" src="~/Scripts/jquery.dataTables.js"></script>
+    <script type="text/javascript" src="~/Scripts/dataTables.bootstrap.js"></script>
+    <script type="text/javascript" src="~/Scripts/selectize.min.js"></script>
+    <script type="text/javascript" src="~/Areas/SiteAdmin/Scripts/RestaurantsViewModel.js"></script>
+    <script type="text/javascript" src="~/Areas/SiteAdmin/Scripts/CommonViewModel.js"></script>
+}
+
+<div class="wrapper row-offcanvas row-offcanvas-left">
+    <aside class="left-side sidebar-offcanvas">
+        <section class="sidebar">
+            <div class="user-panel">
+                <div class="pull-left image">
+                    <img src="~/Images/Admin/avatar3.png" class="img-circle" alt="User Image" />
+                </div>
+                <div class="pull-left info">
+                    <p>Witaj, @User.Identity.Name</p>
+                    <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
+                </div>
+            </div>
+
+            <ul class="sidebar-menu">
+                <li class="active">
+                    <a href="#" data-page="pageDashboard">
+                        <i class="fa fa-dashboard"></i> <span>Dashboard</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" data-page="pageRestaurants">
+                        <i class="fa fa-th"></i> <span>Restauracje</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" data-page="pageUsers">
+                        <i class="fa fa-th"></i> <span>Użytkownicy</span>
+                    </a>
+                </li>
+            </ul>
+        </section>
+    </aside>
+
+    @{
+        Html.RenderPartial("_Dashboard");
+        Html.RenderPartial("_Restaurants");
+        Html.RenderPartial("_Users");
+    }
+</div>

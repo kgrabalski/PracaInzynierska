@@ -40,6 +40,7 @@ namespace FoodSearch.Data.Mapping.Repository
             _kernel.Bind<IRepository<RegistrationConfirm>>().To<FoodSearchRepository<RegistrationConfirm>>();
             _kernel.Bind<IRepository<Restaurant>>().To<FoodSearchRepository<Restaurant>>();
             _kernel.Bind<IRepository<RestaurantCuisine>>().To<FoodSearchRepository<RestaurantCuisine>>();
+            _kernel.Bind<IRepository<RestaurantUser>>().To<FoodSearchRepository<RestaurantUser>>();
             _kernel.Bind<IRepository<Street>>().To<FoodSearchRepository<Street>>();
             _kernel.Bind<IRepository<User>>().To<FoodSearchRepository<User>>();
             _kernel.Bind<IRepository<UserState>>().To<FoodSearchRepository<UserState>>();

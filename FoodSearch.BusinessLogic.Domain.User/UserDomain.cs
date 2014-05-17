@@ -48,6 +48,11 @@ namespace FoodSearch.BusinessLogic.Domain.User
                     UserName = userName,
                     FirstName = firstName,
                     LastName = lastName,
+                    Email = email,
+                    Password = password,
+                    CreateDate = DateTime.Now,
+                    UserStateId = (int)UserStates.Unconfirmed,
+                    UserTypeId = (int)UserTypes.User,
                 });
             }
         }
@@ -74,11 +79,11 @@ namespace FoodSearch.BusinessLogic.Domain.User
         {
             using (var rep = _provider.GetRepository<Data.Mapping.Entities.User>())
             {
-                return rep.GetAll()
+                var user = rep.GetAll()
                     .Where(x => x.UserName == userName)
                     .List()
-                    .First()
-                    .Password.SequenceEqual(password);
+                    .FirstOrDefault();
+                return user != null && user.Password.SequenceEqual(password);
             }
         }
 
@@ -98,11 +103,11 @@ namespace FoodSearch.BusinessLogic.Domain.User
         {
             using (var rep = _provider.GetRepository<Data.Mapping.Entities.User>())
             {
-                return rep.GetAll()
+                var user = rep.GetAll()
                     .Where(x => x.UserName == userName)
                     .List()
-                    .First()
-                    .UserType.Name == role;
+                    .FirstOrDefault();
+                return user != null && user.UserType.Name == role;
             }
         }
     }

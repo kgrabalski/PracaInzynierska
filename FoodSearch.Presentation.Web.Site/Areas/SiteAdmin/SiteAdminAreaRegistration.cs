@@ -17,7 +17,7 @@ namespace FoodSearch.Presentation.Web.Site.Areas.SiteAdmin
             context.MapRoute(
                 "SiteAdmin_default",
                 "SiteAdmin/{controller}/{action}/{id}",
-                new { controller = "Restaurant", action = "Index", id = UrlParameter.Optional },
+                new { controller = "Home", action = "Index", id = UrlParameter.Optional },
                 namespaces: new[] { "FoodSearch.Presentation.Web.Site.Areas.SiteAdmin.Controllers" }
             );
         }

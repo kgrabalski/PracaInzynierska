@@ -4,28 +4,36 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
+using FoodSearch.BusinessLogic.Domain.FoodSearch.Interface;
+
 namespace FoodSearch.Presentation.Web.Site.Controllers
 {
     public class HomeController : Controller
     {
+        private readonly IFoodSearchDomain _domain;
+
+        public HomeController(IFoodSearchDomain domain)
+        {
+            _domain = domain;
+        }
+
         public ActionResult Index()
         {
-
             return View();
         }
 
-        public ActionResult About()
+        [HttpPost]
+        public ActionResult GetStreets(string query = "")
         {
-            ViewBag.Message = "Your application description page.";
-
-            return View();
+            var streets = _domain.Core.GetStreets(query);
+            return Json(streets, JsonRequestBehavior.DenyGet);
         }
 
-        public ActionResult Contact()
+        [HttpPost]
+        public ActionResult GetStreetNumbers(int streetId)
         {
-            ViewBag.Message = "Your contact page.";
-
-            return View();
+            var numbers = _domain.Core.GetStreetNumbers(streetId);
+            return Json(numbers, JsonRequestBehavior.DenyGet);
         }
     }
 }

@@ -26,7 +26,7 @@ namespace FoodSearch.Presentation.Web.Site.Areas.SiteAdmin.Controllers
                 if (Membership.ValidateUser(userName, password))
                 {
                     FormsAuthentication.SetAuthCookie(userName, rememberMe.HasValue && rememberMe.Value);
-                    return RedirectToAction("Index", "Restaurant");
+                    return RedirectToAction("Index", "Home");
                 }
             }
             return View();

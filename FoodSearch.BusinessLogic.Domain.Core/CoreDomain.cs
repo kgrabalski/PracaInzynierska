@@ -38,8 +38,9 @@ namespace FoodSearch.BusinessLogic.Domain.Core
             {
                 return rep.GetAll()
                     .WhereRestrictionOn(x => x.Name)
-                    .IsLike(query, MatchMode.Anywhere)
-                    .List();
+                    .IsInsensitiveLike(query, MatchMode.Anywhere)
+                    .List()
+                    .ToList();
             }
         }
 

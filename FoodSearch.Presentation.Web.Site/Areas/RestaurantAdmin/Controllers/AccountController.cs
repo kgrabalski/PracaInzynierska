@@ -21,12 +21,12 @@ namespace FoodSearch.Presentation.Web.Site.Areas.RestaurantAdmin.Controllers
         public ActionResult Login(string userName, string password, bool? rememberMe)
         {
             FoodSearchRoleProvider roleProvider = new FoodSearchRoleProvider();
-            if (roleProvider.IsUserInRole(userName, UserTypes.SiteAdmin.ToString()))
+            if (roleProvider.IsUserInRole(userName, UserTypes.RestaurantAdmin.ToString()) || roleProvider.IsUserInRole(userName, UserTypes.RestaurantEmployee.ToString()))
             {
                 if (Membership.ValidateUser(userName, password))
                 {
                     FormsAuthentication.SetAuthCookie(userName, rememberMe.HasValue && rememberMe.Value);
-                    return RedirectToAction("Index", "Restaurant");
+                    return RedirectToAction("Index", "Home");
                 }
             }
             return View();

@@ -10,7 +10,7 @@ namespace FoodSearch.BusinessLogic.Domain.RestraurantAdmin.Interface
 {
     public interface IRestaurantAdminDomain
     {
-        Guid CreateUser(string userName, string firstName, string lastName, string email, string password, UserTypes userType);
+        Guid CreateUser(Guid restaurantId, string userName, string firstName, string lastName, string email, string password, UserTypes userType);
         bool ChangeRestaurantState(Guid restaurantId, bool isOpened);
         int CreateCuisine(string name);
         void AddRestaurantCuisine(Guid restaurantId, int cuisineId);

@@ -22,13 +22,14 @@ namespace FoodSearch.BusinessLogic.Domain.RestraurantAdmin
             _provider = provider;
         }
 
-        public Guid CreateUser(string userName, string firstName, string lastName, string email, string password, UserTypes userType)
+        public Guid CreateUser(Guid restaurantId, string userName, string firstName, string lastName, string email, string password, UserTypes userType)
         {
-            using (var rep = _provider.GetRepository<User>())
+            using (var repU = _provider.GetRepository<User>())
+            using (var repRU = _provider.GetRepository<RestaurantUser>())
             {
                 SHA256 sha = new SHA256Cng();
                 var pass = sha.ComputeHash(Encoding.UTF8.GetBytes(password));
-                return rep.Create<Guid>(new User()
+                Guid userId = repU.Create<Guid>(new User()
                 {
                     UserName = userName,
                     FirstName = firstName,
@@ -39,6 +40,12 @@ namespace FoodSearch.BusinessLogic.Domain.RestraurantAdmin
                     UserStateId = (int)UserStates.Active,
                     UserTypeId = (int)userType
                 });
+                repRU.Create<int>(new RestaurantUser()
+                {
+                    UserId = userId,
+                    RestaurantId = restaurantId
+                });
+                return userId;
             }
         }
 

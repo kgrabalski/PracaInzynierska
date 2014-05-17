@@ -83,6 +83,7 @@
     <Compile Include="Entities\Mapping\RegistrationConfirmMap.cs" />
     <Compile Include="Entities\Mapping\RestaurantCuisineMap.cs" />
     <Compile Include="Entities\Mapping\RestaurantMap.cs" />
+    <Compile Include="Entities\Mapping\RestaurantUserMap.cs" />
     <Compile Include="Entities\Mapping\StreetMap.cs" />
     <Compile Include="Entities\Mapping\UserMap.cs" />
     <Compile Include="Entities\Mapping\UserStateMap.cs" />
@@ -98,6 +99,7 @@
     <Compile Include="Entities\RegistrationConfirm.cs" />
     <Compile Include="Entities\Restaurant.cs" />
     <Compile Include="Entities\RestaurantCuisine.cs" />
+    <Compile Include="Entities\RestaurantUser.cs" />
     <Compile Include="Entities\Street.cs" />
     <Compile Include="Entities\User.cs" />
     <Compile Include="Entities\UserState.cs" />

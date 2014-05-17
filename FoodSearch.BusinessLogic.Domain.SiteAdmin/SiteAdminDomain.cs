@@ -19,6 +19,24 @@ namespace FoodSearch.BusinessLogic.Domain.SiteAdmin
             _provider = provider;
         }
 
+        public Models.Restaurant GetRestaurant(Guid restaurantId)
+        {
+            using (var rep = _provider.GetRepository<Restaurant>())
+            {
+                var r = rep.Get(restaurantId);
+                return new Models.Restaurant()
+                {
+                    RestaurantId = r.RestaurantId,
+                    Name = r.Name,
+                    LogoId = r.ImageId,
+                    City = r.Address.City.Name,
+                    District = r.Address.District.Name,
+                    Street = r.Address.Street.Name,
+                    Number = r.Address.Number
+                };
+            }
+        }
+
         public IEnumerable<Models.Restaurant> GetRestaurants()
         {
             using (var rep = _provider.GetRepository<Restaurant>())

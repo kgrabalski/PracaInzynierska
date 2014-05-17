@@ -109,6 +109,12 @@ namespace FoodSearch.Data.Mapping.Test
         }
 
         [TestMethod]
+        public void EntitiesMap_RestaurantUser()
+        {
+            var res = _provider.GetRepository<RestaurantUser>().GetAll().List<RestaurantUser>();
+        }
+
+        [TestMethod]
         public void EntitiesMap_Restaurant()
         {
             var res = _provider.GetRepository<Restaurant>().GetAll().List<Restaurant>();

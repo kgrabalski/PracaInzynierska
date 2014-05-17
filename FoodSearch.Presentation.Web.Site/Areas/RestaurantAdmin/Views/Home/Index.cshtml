@@ -1,8 +1,104 @@
-﻿
+﻿@using FoodSearch.Data.Mapping.Entities
+
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "FoodSearch";
     Layout = "~/Areas/RestaurantAdmin/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Index</h2>
+@section HeadSection
+{
+    <link rel="stylesheet" href="~/Content/selectize.css" />
+}
 
+@section ScriptSection
+{
+    <script type="text/javascript" src="~/Scripts/jquery.dataTables.js"></script>
+    <script type="text/javascript" src="~/Scripts/dataTables.bootstrap.js"></script>
+    <script type="text/javascript" src="~/Scripts/selectize.min.js"></script>
+    <script type="text/javascript" src="~/Areas/RestaurantAdmin/Scripts/CommonViewModel.js"></script>
+}
+
+<div class="wrapper row-offcanvas row-offcanvas-left">
+    <aside class="left-side sidebar-offcanvas">
+        <section class="sidebar">
+            <div class="user-panel">
+                <div class="pull-left image">
+                    <img src="~/Images/Admin/avatar3.png" class="img-circle" alt="User Image" />
+                </div>
+                <div class="pull-left info">
+                    <p>Witaj, @User.Identity.Name</p>
+                    <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
+                </div>
+            </div>
+
+            <ul class="sidebar-menu">
+                <li class="active">
+                    <a href="#" data-page="pageDashboard">
+                        <i class="fa fa-dashboard"></i> <span>Dashboard</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" data-page="pageOrders">
+                        <i class="fa fa-edit"></i> <span>Zamówienia</span>
+                    </a>
+                </li>
+                <li class="treeview">
+                    <a href="#">
+                        <i class="fa fa-table"></i> <span>Menu</span>
+                        <i class="fa fa-angle-left pull-right"></i>
+                    </a>
+                    <ul class="treeview-menu">
+                        <li><a href="#" data-page="pageDishes"><i class="fa fa-angle-double-right"></i>Dania</a></li>
+                        <li><a href="#" data-page="pageDishGroups"><i class="fa fa-angle-double-right"></i>Grupy dań</a></li>
+                        <li><a href="#" data-page="pageCuisines"><i class="fa fa-angle-double-right"></i>Kuchnie</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" data-page="pageRestaurant">
+                        <i class="fa fa-th"></i> <span>Restauracja</span>
+                    </a>
+                </li>
+                @if (User.IsInRole(UserTypes.RestaurantAdmin.ToString()))
+                {
+                    <li>
+                        <a href="#" data-page="pageOpeningHours">
+                            <i class="fa fa-th"></i> <span>Godziny otwarcia</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" data-page="pageOpinions">
+                            <i class="fa fa-th"></i> <span>Opinie</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" data-page="pageReports">
+                            <i class="fa fa-th"></i> <span>Raporty</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" data-page="pageEmployees">
+                            <i class="fa fa-th"></i> <span>Pracownicy</span>
+                        </a>
+                    </li>
+                    
+                }
+            </ul>
+        </section>
+    </aside>
+
+    @{
+        Html.RenderPartial("_Dashboard");
+        Html.RenderPartial("_Orders");
+        Html.RenderPartial("_Dishes");
+        Html.RenderPartial("_DishGroups");
+        Html.RenderPartial("_Cuisines");
+        Html.RenderPartial("_Restaurant");
+        if (User.IsInRole(UserTypes.RestaurantAdmin.ToString()))
+        {
+            Html.RenderPartial("_OpeningHours");
+            Html.RenderPartial("_Opinions");
+            Html.RenderPartial("_Reports");
+            Html.RenderPartial("_Employees");
+        }
+    }
+</div>

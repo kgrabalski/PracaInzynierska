@@ -52,7 +52,9 @@
   <ItemGroup>
     <Compile Include="CoreDomainTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RestaurantAdminDomainTest.cs" />
     <Compile Include="SiteAdminDomainTest.cs" />
+    <Compile Include="UserDomainTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\FoodSearch.BusinessLogic.Domain.Core\FoodSearch.BusinessLogic.Domain.Core.csproj">
@@ -62,6 +64,10 @@
     <ProjectReference Include="..\FoodSearch.BusinessLogic.Domain.Order\FoodSearch.BusinessLogic.Domain.Order.csproj">
       <Project>{c0879b51-2af2-4d83-a239-4b7f0bd1d039}</Project>
       <Name>FoodSearch.BusinessLogic.Domain.Order</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FoodSearch.BusinessLogic.Domain.RestraurantAdmin\FoodSearch.BusinessLogic.Domain.RestraurantAdmin.csproj">
+      <Project>{140694A6-E80E-4C42-8E66-F043019608A3}</Project>
+      <Name>FoodSearch.BusinessLogic.Domain.RestraurantAdmin</Name>
     </ProjectReference>
     <ProjectReference Include="..\FoodSearch.BusinessLogic.Domain.SiteAdmin\FoodSearch.BusinessLogic.Domain.SiteAdmin.csproj">
       <Project>{29481033-93DB-4905-BBF3-26D69F9071DF}</Project>
