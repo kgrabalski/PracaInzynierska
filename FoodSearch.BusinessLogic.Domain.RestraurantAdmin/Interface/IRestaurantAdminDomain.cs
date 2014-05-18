@@ -18,5 +18,10 @@ namespace FoodSearch.BusinessLogic.Domain.RestraurantAdmin.Interface
         int CreateDishGroup(Guid restaurantId, string groupName);
         void EditDishGroup(int dishGroupId, string newGroupName);
         int CreateDish(Guid restaurantId, string dishName, int dishGroupId, float price);
+        Guid GetUserId(string userName);
+        Guid GetUserRestaurant(Guid userId);
+        IEnumerable<Models.OpeningHour> GetOpeningHours(Guid restaurantId, int? openingHourId = null);
+        int CreateOpeningHour(Guid restaurantId, int day, TimeSpan timeFrom, TimeSpan timeTo);
+        void DeleteOpeningHour(int openingHourId);
     }
 }

@@ -19,43 +19,39 @@ namespace FoodSearch.BusinessLogic.Domain.SiteAdmin
             _provider = provider;
         }
 
-        public Models.Restaurant GetRestaurant(Guid restaurantId)
+        public IEnumerable<Models.Restaurant> GetRestaurants(Guid? restaurantId = null)
         {
             using (var rep = _provider.GetRepository<Restaurant>())
             {
-                var r = rep.Get(restaurantId);
-                return new Models.Restaurant()
+                if (restaurantId.HasValue)
                 {
-                    RestaurantId = r.RestaurantId,
-                    Name = r.Name,
-                    LogoId = r.ImageId,
-                    City = r.Address.City.Name,
-                    District = r.Address.District.Name,
-                    Street = r.Address.Street.Name,
-                    Number = r.Address.Number
-                };
-            }
-        }
+                    var r = rep.Get(restaurantId.Value);
+                    return new[]
+                    {
+                        TransformRestaurant(r)
+                    };
+                }
 
-        public IEnumerable<Models.Restaurant> GetRestaurants()
-        {
-            using (var rep = _provider.GetRepository<Restaurant>())
-            {
                 return rep.GetAll()
                     .Where(x => x.IsDeleted == false)
                     .List()
-                    .Select(x => new Models.Restaurant()
-                    {
-                        RestaurantId = x.RestaurantId,
-                        Name = x.Name,
-                        LogoId = x.ImageId,
-                        City = x.Address.City.Name,
-                        District = x.Address.District.Name,
-                        Street = x.Address.Street.Name,
-                        Number = x.Address.Number
-                    })
+                    .Select(TransformRestaurant)
                     .ToList();
             }
+        }
+
+        private static Models.Restaurant TransformRestaurant(Restaurant r)
+        {
+            return new Models.Restaurant()
+            {
+                RestaurantId = r.RestaurantId,
+                Name = r.Name,
+                LogoId = r.ImageId,
+                City = r.Address.City.Name,
+                District = r.Address.District.Name,
+                Street = r.Address.Street.Name,
+                Number = r.Address.Number
+            };
         }
 
         public Guid CreateRestaurant(string name, int addressId, int logoId)

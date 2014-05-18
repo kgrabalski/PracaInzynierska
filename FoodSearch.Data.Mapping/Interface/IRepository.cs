@@ -12,9 +12,9 @@ namespace FoodSearch.Data.Mapping.Interface
     {
         T Get<TId>(TId id) where TId : struct;
         TId Create<TId>(T value) where TId : struct;
-        void Create(T value);
         void Update(T value);
         void Delete(T value);
+        void Delete<TId>(TId id) where TId : struct;
         IQueryOver<T, T> GetAll();
     }
 }

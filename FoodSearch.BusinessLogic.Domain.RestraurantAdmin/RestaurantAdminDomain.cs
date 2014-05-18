@@ -75,7 +75,7 @@ namespace FoodSearch.BusinessLogic.Domain.RestraurantAdmin
         {
             using (var rep = _provider.GetRepository<RestaurantCuisine>())
             {
-                rep.Create(new RestaurantCuisine()
+                rep.Create<int>(new RestaurantCuisine()
                 {
                     RestaurantId = restaurantId,
                     CuisineId = cuisineId
@@ -127,6 +127,83 @@ namespace FoodSearch.BusinessLogic.Domain.RestraurantAdmin
                     DishGroupId = dishGroupId,
                     Price = price
                 });
+            }
+        }
+
+        public Guid GetUserId(string userName)
+        {
+            using (var rep = _provider.GetRepository<User>())
+            {
+                var user = rep.GetAll()
+                    .Where(x => x.UserName == userName)
+                    .List().FirstOrDefault();
+                return user != null ? user.UserId : Guid.Empty;
+            }
+        }
+
+        public Guid GetUserRestaurant(Guid userId)
+        {
+            using (var rep = _provider.GetRepository<RestaurantUser>())
+            {
+                var rest = rep.GetAll()
+                    .Where(x => x.UserId == userId)
+                    .List().FirstOrDefault();
+                return rest != null ? rest.RestaurantId : Guid.Empty;
+            }
+        }
+
+        public IEnumerable<Models.OpeningHour> GetOpeningHours(Guid restaurantId, int? openingHourId = null)
+        {
+            using (var rep = _provider.GetRepository<OpeningHour>())
+            {
+                if (openingHourId.HasValue)
+                {
+                    var oh = rep.Get(openingHourId.Value);
+                    return new[]
+                    {
+                        TransformOpeningHour(oh)
+                    };
+                }
+                return rep.GetAll()
+                    .Where(x => x.RestaurantId == restaurantId)
+                    .OrderBy(x => x.Day).Asc
+                    .ThenBy(x => x.TimeFrom).Asc
+                    .List()
+                    .Select(TransformOpeningHour);
+            }
+        }
+
+        private static Models.OpeningHour TransformOpeningHour(OpeningHour oh)
+        {
+            string[] days = { "", "Poniedziełek", "Wtorek", "Środa", "Czwartek", "Piątek", "Sobota", "Niedziela" };
+            return new Models.OpeningHour()
+            {
+                OpeningId = oh.OpeningId,
+                Day = days[oh.Day],
+                TimeFrom = oh.TimeFrom.ToString(@"hh\:mm"),
+                TimeTo = oh.TimeTo.ToString(@"hh\:mm")
+            };
+        }
+
+        public int CreateOpeningHour(Guid restaurantId, int day, TimeSpan timeFrom, TimeSpan timeTo)
+        {
+            using (var rep = _provider.GetRepository<OpeningHour>())
+            {
+                return rep.Create<int>(new OpeningHour()
+                {
+                    RestaurantId = restaurantId,
+                    Day = day,
+                    TimeFrom = timeFrom,
+                    TimeTo = timeTo
+                });
+            }
+        }
+
+        public void DeleteOpeningHour(int openingHourId)
+        {
+            using (var rep = _provider.GetRepository<OpeningHour>())
+            {
+                rep.Delete(openingHourId);
             }
         }
     }

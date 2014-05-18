@@ -8,5 +8,7 @@ $(document).ready(function () {
         $("#" + pageId).show();
         $(this).parent().toggleClass("active");
     });
+
+    ko.applyBindings(new OpeningHoursViewModel(), document.getElementById("pageOpeningHours"));
 });
 

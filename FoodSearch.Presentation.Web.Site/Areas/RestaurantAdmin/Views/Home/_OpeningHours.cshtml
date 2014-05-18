@@ -10,6 +10,93 @@
     </section>
 
     <section class="content">
-        Godziny otwarcia
+        <div class="row">
+            <div class="col-xs-12">
+                <button class="btn btn-primary" id="addOpeningHour">Dodaj</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="box">
+                    <div class="box-header">
+                        <h3 class="box-title">Aktualne godziny otwarcia</h3>
+                    </div>
+                    <div class="box-body table-responsive">
+                        <table id="openingHoursList" class="table table-bordered table-striped">
+                            <thead>
+                                <tr>
+                                    <th>Dzień</th>
+                                    <th>Od godziny</th>
+                                    <th>Do godziny</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody data-bind="foreach: OpeningHours">
+                                <tr>
+                                    <td data-bind="text: Day"></td>
+                                    <td data-bind="text: TimeFrom"></td>
+                                    <td data-bind="text: TimeTo"></td>
+                                    <td>
+                                        <button data-bind="click: $parent.DeleteOpeningHour" class="btn btn-primary" id="addOpeningHour">Usuń</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 </aside>
+
+
+<div class="modal fade" id="addOpeningHourModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="myModalLabel">Dodaj godzinę otwarcia</h4>
+            </div>
+            <div class="modal-body">
+                <form role="form" id="addOHForm">
+                    <div class="box-body">
+                        <div class="form-group">
+                            <label for="addOHDay" class="control-label">Dzień</label>
+                            <select id="addOHDay" required>
+                                <option value="1">Poniedziałek</option>
+                                <option value="2">Wtorek</option>
+                                <option value="3">Środa</option>
+                                <option value="4">Czwartek</option>
+                                <option value="5">Piątek</option>
+                                <option value="6">Sobota</option>
+                                <option value="7">Niedziela</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="addOHTimeFrom" class="control-label">Godzina od</label>
+                            <div class="input-group">
+                                <input type="text" name="timeFrom" placeholder="Godzina od" id="addOHTimeFrom" class="form-control timepicker" required />
+                                <div class="input-group-addon">
+                                    <i class="fa fa-clock-o"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="addOHTimeTo" class="control-label">Godzina do</label>
+                            <div class="input-group">
+                                <input type="text" name="timeTo" placeholder="Godzina do" id="addOHTimeTo" class="form-control timepicker" required />
+                                <div class="input-group-addon">
+                                    <i class="fa fa-clock-o"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Anuluj</button>
+                <button type="button" class="btn btn-primary">Dodaj</button>
+            </div>
+        </div>
+    </div>
+</div>

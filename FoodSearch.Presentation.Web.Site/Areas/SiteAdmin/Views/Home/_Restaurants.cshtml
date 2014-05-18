@@ -11,7 +11,9 @@
 
     <section class="content">
         <div class="row">
-            <button class="btn btn-primary" id="addRestaurant">Dodaj restaurację</button>
+            <div class="col-xs-12">
+                <button class="btn btn-primary" id="addRestaurant">Dodaj restaurację</button>
+            </div>
         </div>
         <div class="row">
             <div class="col-xs-12">
@@ -63,9 +65,11 @@
                             <label for="addRestName" class="control-label">Nazwa restauracji</label>
                             <input type="text" name="name" placeholder="Nazwa restauracji" id="addRestName" class="form-control" required/>
                         </div>
-                        <div class="form-group">
+                        <div class="form-group col-md-8">
                             <label class="control-label">Ulica</label>
                             <select id="addRestStreet" required></select>
+                        </div>
+                        <div class="form-group col-md-4">
                             <label class="control-label">Numer</label>
                             <select id="addRestNumber" required></select>
                         </div>
@@ -79,7 +83,7 @@
                         </div>
                         <div class="form-group">
                             <label for="addRestLogo" class="control-label">Wybierz logo restauracji</label>
-                            <input type="file" name="logo" id="addRestLogo" class="form-control" required>
+                            <input type="file" name="logo" id="addRestLogo" class="form-control" required/>
                         </div>
                     </div>
                 </form>

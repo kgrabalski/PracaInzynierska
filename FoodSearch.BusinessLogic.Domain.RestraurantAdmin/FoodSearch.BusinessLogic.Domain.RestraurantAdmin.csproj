@@ -49,6 +49,7 @@
   <ItemGroup>
     <Compile Include="CodeBits\PasswordGenerator.cs" />
     <Compile Include="Interface\IRestaurantAdminDomain.cs" />
+    <Compile Include="Models\OpeningHour.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RestaurantAdminDomain.cs" />
   </ItemGroup>

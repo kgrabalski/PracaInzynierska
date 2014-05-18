@@ -56,7 +56,7 @@ namespace FoodSearch.Presentation.Web.Site.Areas.SiteAdmin.Controllers
         {
             var restaurantId = _domain.SiteAdmin.CreateRestaurant(name, addressId, logoId);
             var userId = _domain.RestaurantAdmin.CreateUser(restaurantId, userName, "Właściel", "Restauracji", "email", password, UserTypes.RestaurantAdmin);
-            var restaurant = _domain.SiteAdmin.GetRestaurant(restaurantId);
+            var restaurant = _domain.SiteAdmin.GetRestaurants(restaurantId);
             return Json(restaurant, JsonRequestBehavior.DenyGet);
         }
     }

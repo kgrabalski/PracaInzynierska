@@ -34,15 +34,6 @@ namespace FoodSearch.Data.Mapping.Repository
             }
         }
 
-        public void Create(T value)
-        {
-            using (var transaction = session.BeginTransaction())
-            {
-                session.Save(value);
-                transaction.Commit();
-            }
-        }
-
         public void Update(T value)
         {
             using (var transaction = session.BeginTransaction())
@@ -57,6 +48,16 @@ namespace FoodSearch.Data.Mapping.Repository
             using (var transaction = session.BeginTransaction())
             {
                 session.Delete(value);
+                transaction.Commit();
+            }
+        }
+
+        public void Delete<TId>(TId id) where TId : struct
+        {
+            T item = Get(id);
+            using (var transaction = session.BeginTransaction())
+            {
+                session.Delete(item);
                 transaction.Commit();
             }
         }

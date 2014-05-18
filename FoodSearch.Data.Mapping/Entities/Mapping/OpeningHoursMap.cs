@@ -16,7 +16,7 @@ namespace FoodSearch.Data.Mapping.Entities.Mapping
             LazyLoad();
             Id(x => x.OpeningId).Column("OpeningId").GeneratedBy.Identity().Not.Nullable();
             Map(x => x.RestaurantId).Column("RestaurantId").Not.Nullable();
-            References(x => x.Restaurant).Column("RestaurantId").LazyLoad().Not.Nullable();
+            References(x => x.Restaurant).Column("RestaurantId").LazyLoad().Not.Nullable().Not.Insert();
             Map(x => x.Day).Column("Day").Not.Nullable();
             Map(x => x.TimeFrom).Column("TimeFrom").CustomType("TimeAsTimeSpan").Not.Nullable();
             Map(x => x.TimeTo).Column("TimeTo").CustomType("TimeAsTimeSpan").Not.Nullable();
