@@ -18,17 +18,17 @@ namespace FoodSearch.Presentation.Web.Site
 {
     public class MvcApplication : NinjectHttpApplication
     {
-        private readonly IKernel _kernel;
+        public static readonly IKernel DependencyResolver;
 
-        public MvcApplication()
+        static MvcApplication()
         {
-            _kernel = new StandardKernel();
-            _kernel.Bind<IFoodSearchDomain>().To<FoodSearchDomain>().InSingletonScope();
+            DependencyResolver = new StandardKernel();
+            DependencyResolver.Bind<IFoodSearchDomain>().To<FoodSearchDomain>().InSingletonScope();
         }
 
         protected override IKernel CreateKernel()
         {
-            return _kernel;
+            return DependencyResolver;
         }
 
         protected override void OnApplicationStarted()
@@ -38,7 +38,7 @@ namespace FoodSearch.Presentation.Web.Site
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
-            ModelBinders.Binders.Add(typeof(RestaurantUser), _kernel.Get<RestaurantUserModelBinder>());
+            ModelBinders.Binders.Add(typeof(RestaurantUser), DependencyResolver.Get<RestaurantUserModelBinder>());
         }
     }
 }

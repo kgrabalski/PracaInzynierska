@@ -7,11 +7,18 @@ using System.Web.Security;
 using FoodSearch.BusinessLogic.Domain.FoodSearch;
 using FoodSearch.BusinessLogic.Domain.FoodSearch.Interface;
 
+using Ninject;
+
 namespace FoodSearch.Presentation.Web.Site.Providers
 {
     public class FoodSearchRoleProvider : RoleProvider
     {
-        private readonly IFoodSearchDomain _domain = new FoodSearchDomain();
+        private readonly IFoodSearchDomain _domain;
+
+        public FoodSearchRoleProvider()
+        {
+            _domain = MvcApplication.DependencyResolver.Get<IFoodSearchDomain>(); ;
+        }
 
         public override bool IsUserInRole(string username, string roleName)
         {

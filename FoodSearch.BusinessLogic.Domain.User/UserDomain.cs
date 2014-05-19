@@ -91,11 +91,11 @@ namespace FoodSearch.BusinessLogic.Domain.User
         {
             using (var rep = _provider.GetRepository<Data.Mapping.Entities.User>())
             {
-                return rep.GetAll()
+                var user = rep.GetAll()
                     .Where(x => x.UserName == userName)
                     .List()
-                    .First()
-                    .UserType.Name;
+                    .FirstOrDefault();
+                return user != null ? user.UserType.Name : "";
             }
         }
 

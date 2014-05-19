@@ -9,11 +9,18 @@ using System.Web.Security;
 using FoodSearch.BusinessLogic.Domain.FoodSearch;
 using FoodSearch.BusinessLogic.Domain.FoodSearch.Interface;
 
+using Ninject;
+
 namespace FoodSearch.Presentation.Web.Site.Providers
 {
     public class FoodSearchMembershipProvider : MembershipProvider
     {
-        private readonly IFoodSearchDomain _domain = new FoodSearchDomain();
+        private readonly IFoodSearchDomain _domain;
+
+        public FoodSearchMembershipProvider()
+        {
+            _domain = MvcApplication.DependencyResolver.Get<IFoodSearchDomain>();
+        }
 
         public override MembershipUser CreateUser(string username, string password, string email, string passwordQuestion, string passwordAnswer, bool isApproved, object providerUserKey, out MembershipCreateStatus status)
         {

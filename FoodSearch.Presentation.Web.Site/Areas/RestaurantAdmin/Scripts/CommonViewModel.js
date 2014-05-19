@@ -10,5 +10,7 @@ $(document).ready(function () {
     });
 
     ko.applyBindings(new OpeningHoursViewModel(), document.getElementById("pageOpeningHours"));
+    ko.applyBindings(new CuisinesViewModel(), document.getElementById("pageCuisines"));
+    ko.applyBindings(new DishGroupsViewModel(), document.getElementById("pageDishGroups"));
 });
 

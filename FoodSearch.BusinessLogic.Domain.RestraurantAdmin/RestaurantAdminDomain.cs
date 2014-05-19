@@ -60,14 +60,23 @@ namespace FoodSearch.BusinessLogic.Domain.RestraurantAdmin
             }
         }
 
-        public int CreateCuisine(string name)
+        public IEnumerable<Cuisine> GetCuisines()
         {
             using (var rep = _provider.GetRepository<Cuisine>())
             {
-                return rep.Create<int>(new Cuisine()
-                {
-                    Name = name
-                });
+                return rep.GetAll().List();
+            }
+        }
+
+        public IEnumerable<Cuisine> GetRestaurantCuisines(Guid restaurantId)
+        {
+            using (var rep = _provider.GetRepository<RestaurantCuisine>())
+            {
+                return rep.GetAll()
+                    .Where(x => x.RestaurantId == restaurantId)
+                    .Select(x => x.Cuisine)
+                    .List<Cuisine>()
+                    .ToList();
             }
         }
 
@@ -87,10 +96,21 @@ namespace FoodSearch.BusinessLogic.Domain.RestraurantAdmin
         {
             using (var rep = _provider.GetRepository<RestaurantCuisine>())
             {
-                var rc = rep.GetAll().Where(x => x.RestaurantId == restaurantId && x.CuisineId == cuisineId)
+                var rc = rep.GetAll()
+                    .Where(x => x.RestaurantId == restaurantId && x.CuisineId == cuisineId)
                     .List().First();
                 rep.Delete(rc);
                 return true;
+            }
+        }
+
+        public IEnumerable<DishGroup> GetDishGroups(Guid restaurantId)
+        {
+            using (var rep = _provider.GetRepository<DishGroup>())
+            {
+                return rep.GetAll()
+                    .Where(x => x.RestaurantId == restaurantId)
+                    .List();
             }
         }
 
@@ -113,6 +133,14 @@ namespace FoodSearch.BusinessLogic.Domain.RestraurantAdmin
                 var dishGroup = rep.Get(dishGroupId);
                 dishGroup.Name = newGroupName;
                 rep.Update(dishGroup);
+            }
+        }
+
+        public void DeleteDishGroup(int dishGroupId)
+        {
+            using (var rep = _provider.GetRepository<DishGroup>())
+            {
+                rep.Delete(dishGroupId);
             }
         }
 

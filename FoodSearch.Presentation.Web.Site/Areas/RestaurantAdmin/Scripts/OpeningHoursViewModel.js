@@ -15,7 +15,8 @@
             url: "/RestaurantAdmin/OpeningHours/GetOpeningHours",
             type: "POST",
             dataType: "json",
-            success: function(openings) {
+            success: function (openings) {
+                self.OpeningHours.removeAll();
                 for (var i = 0; i < openings.length; i++) {
                     var o = openings[i];
                     self.OpeningHours.push(new OpeningHour(o.OpeningId, o.Day, o.TimeFrom, o.TimeTo));

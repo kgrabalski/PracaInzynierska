@@ -54,7 +54,7 @@ namespace FoodSearch.Data.Mapping.Repository
 
         public void Delete<TId>(TId id) where TId : struct
         {
-            T item = Get(id);
+            T item = Get<TId>(id);
             using (var transaction = session.BeginTransaction())
             {
                 session.Delete(item);
