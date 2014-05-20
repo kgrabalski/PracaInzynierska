@@ -113,6 +113,7 @@
     <Folder Include="App_Data\" />
     <Folder Include="Areas\RestaurantAdmin\Models\" />
     <Folder Include="Areas\RestaurantAdmin\Views\Cuisines\" />
+    <Folder Include="Areas\RestaurantAdmin\Views\Dishes\" />
     <Folder Include="Areas\RestaurantAdmin\Views\DishGroups\" />
     <Folder Include="Areas\RestaurantAdmin\Views\OpeningHours\" />
     <Folder Include="Areas\SiteAdmin\Models\" />
@@ -126,6 +127,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Areas\RestaurantAdmin\Controllers\AccountController.cs" />
     <Compile Include="Areas\RestaurantAdmin\Controllers\CuisinesController.cs" />
+    <Compile Include="Areas\RestaurantAdmin\Controllers\DishesController.cs" />
     <Compile Include="Areas\RestaurantAdmin\Controllers\DishGroupsController.cs" />
     <Compile Include="Areas\RestaurantAdmin\Controllers\HomeController.cs" />
     <Compile Include="Areas\RestaurantAdmin\Controllers\OpeningHoursController.cs" />
@@ -152,6 +154,7 @@
   <ItemGroup>
     <Content Include="Areas\RestaurantAdmin\Scripts\CommonViewModel.js" />
     <Content Include="Areas\RestaurantAdmin\Scripts\CuisinesViewModel.js" />
+    <Content Include="Areas\RestaurantAdmin\Scripts\DishesViewModel.js" />
     <Content Include="Areas\RestaurantAdmin\Scripts\DishGroupsViewModel.js" />
     <Content Include="Areas\RestaurantAdmin\Scripts\OpeningHoursViewModel.js" />
     <Content Include="Areas\SiteAdmin\Scripts\CommonViewModel.js" />
@@ -174,6 +177,7 @@
     <Content Include="Content\selectize.legacy.css" />
     <Content Include="Scripts\bootstrap-timepicker.js" />
     <Content Include="Scripts\bootstrap-timepicker.min.js" />
+    <Content Include="Scripts\HomePage.js" />
     <Content Include="Scripts\selectize.js" />
     <Content Include="Scripts\selectize.min.js" />
     <Content Include="favicon.ico" />
@@ -257,6 +261,8 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Scripts\jquery-2.1.0.min.map" />
     <Content Include="Views\Account\Login.cshtml" />
+    <Content Include="Views\Home\Restaurants.cshtml" />
+    <Content Include="Views\Home\RestaurantDishes.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\FoodSearch.BusinessLogic.Domain.Core\FoodSearch.BusinessLogic.Domain.Core.csproj">

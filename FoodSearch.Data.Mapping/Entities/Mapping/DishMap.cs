@@ -19,7 +19,7 @@ namespace FoodSearch.Data.Mapping.Entities.Mapping
             References(x => x.Restaurant).Column("RestaurantId").LazyLoad().Not.Nullable().Not.Insert();
             Map(x => x.DishName).Column("DishName").Not.Nullable();
             Map(x => x.DishGroupId).Column("DishGroupId").Not.Nullable();
-            References(x => x.DishGroup).Column("DishGroup").Not.Nullable().LazyLoad().Not.Insert();
+            References(x => x.DishGroup).Column("DishGroupId").Not.Nullable().Not.LazyLoad().Not.Insert().Fetch.Join();
             Map(x => x.Price).Column("Price").Not.Nullable();
         }
     }

@@ -144,6 +144,38 @@ namespace FoodSearch.BusinessLogic.Domain.RestraurantAdmin
             }
         }
 
+        public IEnumerable<Models.Dish> GetDishes(Guid restaurantId, int? dishId = null)
+        {
+            using (var rep = _provider.GetRepository<Dish>())
+            {
+                if (dishId.HasValue)
+                {
+                    return new[]
+                    {
+                        TransformDish(rep.Get(dishId.Value))
+                    };
+                }
+                return rep.GetAll()
+                    .Where(x => x.RestauraintId == restaurantId)
+                    .List()
+                    .Select(TransformDish)
+                    .OrderBy(x => x.DishGroup)
+                    .ThenBy(x => x.DishName);
+            }
+        }
+
+        private static Models.Dish TransformDish(Dish d)
+        {
+            return new Models.Dish()
+            {
+                DishId = d.DishId,
+                DishName = d.DishName,
+                DishGroupId = d.DishGroupId,
+                DishGroup = d.DishGroup.Name,
+                Price = d.Price.ToString("0.00")
+            };
+        }
+
         public int CreateDish(Guid restaurantId, string dishName, int dishGroupId, float price)
         {
             using (var rep = _provider.GetRepository<Dish>())

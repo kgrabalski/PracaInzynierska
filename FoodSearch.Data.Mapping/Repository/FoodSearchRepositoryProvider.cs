@@ -45,11 +45,14 @@ namespace FoodSearch.Data.Mapping.Repository
             _kernel.Bind<IRepository<User>>().To<FoodSearchRepository<User>>();
             _kernel.Bind<IRepository<UserState>>().To<FoodSearchRepository<UserState>>();
             _kernel.Bind<IRepository<UserType>>().To<FoodSearchRepository<UserType>>();
+            _kernel.Bind<IStoredProcedureRepository>().To<FoodSearchStoredProcedureRepository>();
         }
 
         public IRepository<T> GetRepository<T>() where T : class
         {
             return _kernel.Get<IRepository<T>>();
         }
+
+        public IStoredProcedureRepository StoredProcedure { get { return _kernel.Get<IStoredProcedureRepository>(); } }
     }
 }

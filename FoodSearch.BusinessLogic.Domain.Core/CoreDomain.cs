@@ -9,6 +9,7 @@ using FoodSearch.BusinessLogic.Domain.Core.Models;
 using FoodSearch.Data.Mapping.Entities;
 using FoodSearch.Data.Mapping.Interface;
 using FoodSearch.Data.Mapping.Repository;
+using FoodSearch.Data.Mapping.StoredProcedure.Results;
 
 using NHibernate.Criterion;
 using NHibernate.Transform;
@@ -97,6 +98,14 @@ namespace FoodSearch.BusinessLogic.Domain.Core
                     ImageData = imageBytes,
                     ContentType = contentType
                 });
+            }
+        }
+
+        public IEnumerable<RestaurantInfo> GetRestaurants(int addressId, DateTime date)
+        {
+            using (var rep = _provider.StoredProcedure)
+            {
+                return rep.GetRestaurants(addressId, date);
             }
         }
     }

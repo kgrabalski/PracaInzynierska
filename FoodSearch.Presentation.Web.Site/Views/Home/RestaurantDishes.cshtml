@@ -1,0 +1,44 @@
+﻿@model IEnumerable<FoodSearch.BusinessLogic.Domain.RestraurantAdmin.Models.Dish>
+
+@{
+    ViewBag.Title = "RestaurantDishes";
+    Layout = "~/Areas/SiteAdmin/Views/Shared/_Layout.cshtml";
+}
+
+<h2>RestaurantDishes</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.DishName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DishGroupId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DishGroup)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Price)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.DishName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DishGroupId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DishGroup)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Price)
+        </td>
+    </tr>
+}
+
+</table>

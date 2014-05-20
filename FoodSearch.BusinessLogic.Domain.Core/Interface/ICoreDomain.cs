@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 using FoodSearch.BusinessLogic.Domain.Core.Models;
 using FoodSearch.Data.Mapping.Entities;
+using FoodSearch.Data.Mapping.StoredProcedure.Results;
 
 namespace FoodSearch.BusinessLogic.Domain.Core.Interface
 {
@@ -18,5 +19,6 @@ namespace FoodSearch.BusinessLogic.Domain.Core.Interface
         Address GetAddress(int addressId);
         Image GetImage(int imageId);
         int AddImage(byte[] imageBytes, string contentType);
+        IEnumerable<RestaurantInfo> GetRestaurants(int addressId, DateTime date);
     }
 }

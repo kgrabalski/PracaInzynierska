@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 
 using FoodSearch.Data.Mapping.Entities;
 
+using Dish = FoodSearch.BusinessLogic.Domain.RestraurantAdmin.Models.Dish;
+
 namespace FoodSearch.BusinessLogic.Domain.RestraurantAdmin.Interface
 {
     public interface IRestaurantAdminDomain
@@ -16,10 +18,11 @@ namespace FoodSearch.BusinessLogic.Domain.RestraurantAdmin.Interface
         IEnumerable<Cuisine> GetRestaurantCuisines(Guid restaurantId);
         void AddRestaurantCuisine(Guid restaurantId, int cuisineId);
         bool RemoveRestaurantCuisine(Guid restaurantId, int cuisineId);
-        IEnumerable<DishGroup> GetDishGroups(Guid restaurantId); 
+        IEnumerable<DishGroup> GetDishGroups(Guid restaurantId);
         int CreateDishGroup(Guid restaurantId, string groupName);
         void EditDishGroup(int dishGroupId, string newGroupName);
         void DeleteDishGroup(int dishGroupId);
+        IEnumerable<Dish> GetDishes(Guid restaurantId, int? dishId = null);
         int CreateDish(Guid restaurantId, string dishName, int dishGroupId, float price);
         Guid GetUserId(string userName);
         Guid GetUserRestaurant(Guid userId);

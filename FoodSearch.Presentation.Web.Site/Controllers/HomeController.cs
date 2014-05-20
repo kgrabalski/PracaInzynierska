@@ -35,5 +35,28 @@ namespace FoodSearch.Presentation.Web.Site.Controllers
             var numbers = _domain.Core.GetStreetNumbers(streetId);
             return Json(numbers, JsonRequestBehavior.DenyGet);
         }
+
+        [HttpPost]
+        public ActionResult Restaurants(int addressId)
+        {
+            var restaurants = _domain.Core.GetRestaurants(addressId, DateTime.Now);
+            return View(restaurants);
+        }
+
+        public ActionResult GetImage(int imageId)
+        {
+            var image = _domain.Core.GetImage(imageId);
+            return File(image.ImageData, image.ContentType);
+        }
+
+        public ActionResult RestaurantDishes(Guid? restaurantId)
+        {
+            if (restaurantId.HasValue)
+            {
+                var dishes = _domain.RestaurantAdmin.GetDishes(restaurantId.Value);
+                return View(dishes);
+            }
+            return new EmptyResult();
+        }
     }
 }

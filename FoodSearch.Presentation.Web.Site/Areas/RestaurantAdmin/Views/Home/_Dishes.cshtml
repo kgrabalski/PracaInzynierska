@@ -10,6 +10,76 @@
     </section>
 
     <section class="content">
-        Dania
+        <div class="row">
+            <div class="col-xs-12">
+                <button class="btn btn-primary" id="addDish">Dodaj</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="box">
+                    <div class="box-header">
+                        <h3 class="box-title">Dania serwowane przez restaurację</h3>
+                    </div>
+                    <div class="box-body table-responsive">
+                        <table id="restaurantDishesList" class="table table-bordered table-striped">
+                            <thead>
+                                <tr>
+                                    <th>Nazwa</th>
+                                    <th>Grupa</th>
+                                    <th>Cena</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody data-bind="foreach: Dishes">
+                                <tr>
+                                    <td data-bind="text: DishName"></td>
+                                    <td data-bind="text: DishGroup"></td>
+                                    <td data-bind="text: Price"></td>
+                                    <td>
+                                        <button  class="btn btn-primary">Usuń</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
+
+    <div class="modal fade" id="addDishModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title" id="myModalLabel">Dodaj danie</h4>
+                </div>
+                <div class="modal-body">
+                    <form role="form" id="addDishForm">
+                        <div class="box-body">
+                            <div class="form-group">
+                                <label for="addDishName" class="control-label">Nazwa</label>
+                                <input type="text" name="name" placeholder="Nazwa dania" id="addDishName" class="form-control" required />
+                            </div>
+                            <div class="form-group">
+                                <label for="addDishDG" class="control-label">Grupa</label>
+                                <select id="addDishDG" required
+                                        data-bind="options: DishGroups, optionsText: 'Name', optionsValue: 'DishGroupId',
+                                        optionsCaption: 'Wybierz grupę dań'"></select>
+                            </div>
+                            <div class="form-group">
+                                <label for="addDishPrice" class="control-label">Cena</label>
+                                <input type="text" name="name" placeholder="Cena" id="addDishPrice" class="form-control" required />
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Anuluj</button>
+                    <button type="button" class="btn btn-primary">Dodaj</button>
+                </div>
+            </div>
+        </div>
+    </div>
 </aside>

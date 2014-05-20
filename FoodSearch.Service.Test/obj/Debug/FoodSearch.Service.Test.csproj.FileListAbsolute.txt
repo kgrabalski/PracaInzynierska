@@ -1,4 +1,0 @@
-D:\projekty\PracaInzynierska\FoodSearch\FoodSearch.Service.Test\bin\Debug\FoodSearch.Service.Test.dll
-D:\projekty\PracaInzynierska\FoodSearch\FoodSearch.Service.Test\bin\Debug\FoodSearch.Service.Test.pdb
-D:\projekty\PracaInzynierska\FoodSearch\FoodSearch.Service.Test\obj\Debug\FoodSearch.Service.Test.dll
-D:\projekty\PracaInzynierska\FoodSearch\FoodSearch.Service.Test\obj\Debug\FoodSearch.Service.Test.pdb

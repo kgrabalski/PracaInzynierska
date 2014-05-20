@@ -109,13 +109,22 @@
     <Compile Include="Interface\IRepositoryProvider.cs" />
     <Compile Include="Interface\IRepository.cs" />
     <Compile Include="Interface\ISessionSource.cs" />
+    <Compile Include="Interface\IStoredProcedureRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repository\FoodSearchRepositoryProvider.cs" />
     <Compile Include="Repository\FoodSearchRepository.cs" />
+    <Compile Include="Repository\FoodSearchStoredProcedureRepository.cs" />
     <Compile Include="Repository\SessionSource.cs" />
+    <Compile Include="StoredProcedure\Results\Mapping\RestaurantInfoMap.cs" />
+    <Compile Include="StoredProcedure\Results\RestaurantInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="StoredProcedure\GetRestaurants.hbm.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
