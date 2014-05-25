@@ -1,6 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
+using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -24,11 +27,12 @@ namespace FoodSearch.Data.Mapping.Repository
         private readonly ISessionFactory _factory;
         public SessionSource(Databases db)
         {
+
             _factory = Fluently
                 .Configure()
-                .Database(MsSqlConfiguration
-                    .MsSql2012
-                    .ConnectionString(string.Format(@"Data Source=.\SQLEXPRESS14;Initial Catalog={0};Integrated Security=True;", db.ToString())))
+                .Database(MsSqlConfiguration.MsSql2012
+                //.ConnectionString(string.Format(@"Data Source=.\SQLEXPRESS14;Initial Catalog={0};Integrated Security=True;", db.ToString())))
+                .ConnectionString(string.Format(@"Server=tcp:dycfyhr4vj.database.windows.net,1433;Database={0};User ID=kgrabalski@dycfyhr4vj;Password=GrabalskiP@ssw0rd;", db.ToString())))
                 .Mappings(m =>
                 {
                     m.FluentMappings.AddFromAssemblyOf<SessionSource>();

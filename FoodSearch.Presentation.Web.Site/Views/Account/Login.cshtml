@@ -1,8 +1,31 @@
-﻿
-@{
+﻿@{
     ViewBag.Title = "Login";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Login</h2>
-
+<form role="form" method="POST" class="col-md-6 col-md-pull-3" action="@Url.Action("Login", "Account")">
+    <div class="box-body">
+        <div class="form-group">
+            <label class="control-label">Nazwa użytkownika:</label>
+            <input type="text" name="userName" placeholder="Nazwa użytkownika" class="form-control" required />
+        </div>
+        <div class="form-group">
+            <label class="control-label">Hasło:</label>
+            <input type="password" name="password" placeholder="Hasło" class="form-control" required />
+        </div>
+        <div class="form-group">
+            <div class="checkbox">
+                <label class="">
+                    <div class="icheckbox_minimal checked" style="position: relative;" aria-checked="true" aria-disabled="false">
+                        <input type="checkbox" style="position: absolute; opacity: 0;">
+                        <ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; background: none repeat scroll 0% 0% rgb(255, 255, 255); border: 0px none; opacity: 0;"></ins>
+                    </div>
+                    Zapamiętaj mnie
+                </label>
+            </div>
+        </div>
+        <div class="form-group">
+            <input type="submit" class="btn btn-primary" value="Zaloguj" />
+        </div>
+    </div>
+</form>

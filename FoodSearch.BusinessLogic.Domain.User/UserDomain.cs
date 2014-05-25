@@ -4,9 +4,12 @@ using System.Linq;
 using System.Text;
 
 using FoodSearch.BusinessLogic.Domain.User.Interface;
+using FoodSearch.BusinessLogic.Domain.User.Models;
 using FoodSearch.BusinessLogic.Helpers.Email;
 using FoodSearch.Data.Mapping.Entities;
 using FoodSearch.Data.Mapping.Interface;
+
+using NHibernate.Util;
 
 namespace FoodSearch.BusinessLogic.Domain.User
 {
@@ -68,11 +71,36 @@ namespace FoodSearch.BusinessLogic.Domain.User
                     Confirmed = false,
                     UserId = userId
                 });
-                EmailHelper.Send(MailHelperSendFrom.NoReply, 
-                    new List<string>() {email}, 
-                    "FoodSearch: potwierdzenie rejestracji", 
+                EmailHelper.Send(MailHelperSendFrom.NoReply,
+                    new List<string>() { email },
+                    "FoodSearch: potwierdzenie rejestracji",
                     EmailBodyHelper.Registration(code.ToString(), userName));
             }
+        }
+
+        public RegisterConfirmationResult ConfirmRegistration(Guid code)
+        {
+            var result = RegisterConfirmationResult.NotConfirmed;
+            using (var rep = _provider.GetRepository<RegistrationConfirm>())
+            {
+                RegistrationConfirm confirm = rep.GetAll()
+                    .Where(x => x.Code == code)
+                    .List()
+                    .FirstOrDefault();
+                if (confirm == null) return result;
+                if (confirm.Confirmed) result = RegisterConfirmationResult.AlreadyConfirmed;
+                else
+                {
+                    using (var repU = _provider.GetRepository<Data.Mapping.Entities.User>())
+                    {
+                        var user = confirm.User;
+                        user.UserStateId = (int)UserStates.Active;
+                        repU.Update(user);
+                        result = RegisterConfirmationResult.Confirmed;
+                    }
+                }
+            }
+            return result;
         }
 
         public bool ValidateUser(string userName, byte[] password)
