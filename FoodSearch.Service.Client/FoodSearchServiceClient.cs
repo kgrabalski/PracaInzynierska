@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 using FoodSearch.Service.Contracts;
+using FoodSearch.Service.Contracts.Response;
 
 namespace FoodSearch.Service.Client
 {
@@ -12,17 +13,17 @@ namespace FoodSearch.Service.Client
     {
         public FoodSearchServiceClient()
         {
-            apiPath += "StudentService/";
+            apiPath += "FoodSearchService/";
         }
 
-        public Task<Student> GetStudent(int id)
+        public Task<List<Street>> GetStreets(string query)
         {
-            return RestGet<Student>(id.ToString());
+            return RestGet<List<Street>>("Streets/" + query);
         }
 
-        public Task<int> AddStudent(string firstName, string lastName, DateTime birthDate, string group)
+        public Task<List<StreetNumber>> GetStreetNumbers(int streetId)
         {
-            return Task.Run(() => 0);
+            return RestGet<List<StreetNumber>>("StreetNumbers/" + streetId);
         }
     }
 }

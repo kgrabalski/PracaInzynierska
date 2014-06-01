@@ -1,4 +1,5 @@
 ﻿@using FoodSearch.Data.Mapping.Entities
+@model FoodSearch.BusinessLogic.Domain.RestraurantAdmin.Models.EmployeeData
 
 @{
     ViewBag.Title = "FoodSearch";
@@ -9,6 +10,7 @@
 {
     <link rel="stylesheet" href="~/Content/selectize.css" />
     <link rel="stylesheet" href="~/Content/bootstrap-timepicker.min.css" />
+    <link rel="stylesheet" href="~/Areas/RestaurantAdmin/Content/Site.css"/>
 }
 
 @section ScriptSection
@@ -29,11 +31,11 @@
         <section class="sidebar">
             <div class="user-panel">
                 <div class="pull-left image">
-                    <img src="~/Images/Admin/avatar3.png" class="img-circle" alt="User Image" />
+                    <img src="@Url.Action("GetImage", "Home", new {area = "", imageId = Model.RestaurantLogoId})" class="img-circle" alt="@Model.RestaurantName" />
                 </div>
                 <div class="pull-left info">
-                    <p>Witaj, @User.Identity.Name</p>
-                    <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
+                    <p>Witaj,</p>
+                    <p>@string.Format("{0} {1}", Model.FirstName, Model.LastName)</p>
                 </div>
             </div>
 
@@ -68,7 +70,7 @@
                 {
                     <li>
                         <a href="#" data-page="pageOpeningHours">
-                            <i class="fa fa-th"></i> <span>Godziny otwarcia</span>
+                            <i class="fa fa-clock-o"></i> <span>Godziny otwarcia</span>
                         </a>
                     </li>
                     <li>
@@ -78,12 +80,12 @@
                     </li>
                     <li>
                         <a href="#" data-page="pageReports">
-                            <i class="fa fa-th"></i> <span>Raporty</span>
+                            <i class="fa fa-bar-chart-o"></i> <span>Raporty</span>
                         </a>
                     </li>
                     <li>
                         <a href="#" data-page="pageEmployees">
-                            <i class="fa fa-th"></i> <span>Pracownicy</span>
+                            <i class="fa fa-users"></i> <span>Pracownicy</span>
                         </a>
                     </li>
                     

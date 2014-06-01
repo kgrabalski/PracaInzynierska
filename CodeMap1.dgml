@@ -1,0 +1,339 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DirectedGraph DataVirtualized="True" Layout="Sugiyama" xmlns="http://schemas.microsoft.com/vs/2009/dgml">
+  <Nodes>
+    <Node Id="@10" Category="CodeSchema_Assembly" Bounds="669.517774756263,-515.215461910437,322.483333333334,25.0000000000001" CodeSchemaProperty_StrongName="FoodSearch.BusinessLogic.Domain.FoodSearch, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" DelayedChildNodesState="Fetched" DelayedCrossGroupLinksState="Fetched" FetchedChildrenCount="2" FilePath="$(489e10b0-1eba-484e-be1e-11c533cb00cf.OutputPath)" Group="Collapsed" Label="FoodSearch.BusinessLogic.Domain.FoodSearch.dll" />
+    <Node Id="@12" Category="CodeSchema_Assembly" Bounds="651.140601724764,-405.215261897816,314.696666666666,25" CodeSchemaProperty_StrongName="FoodSearch.BusinessLogic.Domain.SiteAdmin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" FilePath="$(29481033-93db-4905-bbf3-26d69f9071df.OutputPath)" Group="Collapsed" Label="FoodSearch.BusinessLogic.Domain.SiteAdmin.dll" UseManualLocation="True" />
+    <Node Id="@14" Category="CodeSchema_Assembly" Bounds="987.270764267177,-460.215361910437,355.893333333333,25" CodeSchemaProperty_StrongName="FoodSearch.BusinessLogic.Domain.RestraurantAdmin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" FilePath="$(140694a6-e80e-4c42-8e66-f043019608a3.OutputPath)" Group="Collapsed" Label="FoodSearch.BusinessLogic.Domain.RestraurantAdmin.dll" UseManualLocation="True" />
+    <Node Id="@16" Category="CodeSchema_Assembly" Bounds="668.336757868393,-55.6543635796878,297.73,25.0000000000001" CodeSchemaProperty_StrongName="FoodSearch.Presentation.Mobile.Common, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" FilePath="$(7fe93e78-fbef-4d2e-a94a-d40619062088.OutputPath)" Group="Collapsed" Label="FoodSearch.Presentation.Mobile.Common.dll" UseManualLocation="True" />
+    <Node Id="@18" Category="CodeSchema_Assembly" Bounds="678.103318728831,55.305843713257,266.706666666666,25" CodeSchemaProperty_StrongName="FoodSearch.Presentation.Mobile.WP, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" FilePath="$(3bc5d5f4-c153-40f0-acbb-897dece794a8.OutputPath)" Group="Collapsed" Label="FoodSearch.Presentation.Mobile.WP.dll" UseManualLocation="True" />
+    <Node Id="@2" Category="CodeSchema_Assembly" Bounds="1074.07578695947,-92.0165303375225,279.773333333334,25" CodeSchemaProperty_StrongName="FoodSearch.Service.FoodSearchService, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" FilePath="$(ee613d92-9357-42e6-b50d-21303b399eee.OutputPath)" Group="Collapsed" Label="FoodSearch.Service.FoodSearchService.dll" />
+    <Node Id="@20" Category="CodeSchema_Assembly" Bounds="995.83726839143,-405.215261896396,290.97,25" CodeSchemaProperty_StrongName="FoodSearch.BusinessLogic.Domain.Order, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" FilePath="$(c0879b51-2af2-4d83-a239-4b7f0bd1d039.OutputPath)" Group="Collapsed" Label="FoodSearch.BusinessLogic.Domain.Order.dll" UseManualLocation="True" />
+    <Node Id="@22" Category="CodeSchema_Assembly" Bounds="1022.0011080896,-515.215461911856,284.02,25.0000000000001" CodeSchemaProperty_StrongName="FoodSearch.BusinessLogic.Domain.User, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" FilePath="$(c62d4eaf-4ee1-4f2e-96ea-0c630ffd59eb.OutputPath)" Group="Collapsed" Label="FoodSearch.BusinessLogic.Domain.User.dll" UseManualLocation="True" />
+    <Node Id="@24" Category="CodeSchema_Assembly" Bounds="883.593562110507,-350.215161885377,256.349999999999,25" CodeSchemaProperty_StrongName="FoodSearch.BusinessLogic.Helpers, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" FilePath="$(21317ce8-3e82-4cde-8c7b-235e077013fc.OutputPath)" Group="Collapsed" Label="FoodSearch.BusinessLogic.Helpers.dll" UseManualLocation="True" />
+    <Node Id="@26" Category="CodeSchema_Assembly" Bounds="1089.17942683665,-204.683998945919,230.526666666667,25" CodeSchemaProperty_StrongName="FoodSearch.Service.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" FilePath="$(0820c8e2-dead-43c7-a179-87591c36c4fd.OutputPath)" Group="Collapsed" Label="FoodSearch.Service.Contracts.dll" UseManualLocation="True" />
+    <Node Id="@28" Category="CodeSchema_Assembly" Bounds="1108.08475071593,-149.683898945919,210.603333333333,25" CodeSchemaProperty_StrongName="FoodSearch.Service.Client, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" FilePath="$(5b598a57-e7e2-4780-81cf-7c20ce2cf01a.OutputPath)" Group="Collapsed" Label="FoodSearch.Service.Client.dll" UseManualLocation="True" />
+    <Node Id="@29" Category="CodeSchema_Namespace" Bounds="644.142451968711,-164.048387900688,304.003333333333,25" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Label="FoodSearch‎.BusinessLogic‎.Domain‎.FoodSearch" UseManualLocation="True" />
+    <Node Id="@30" Category="CodeSchema_Namespace" Bounds="619.750785302044,-109.048387900688,352.786666666667,25" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Label="FoodSearch‎.BusinessLogic‎.Domain‎.FoodSearch‎.Interface" UseManualLocation="True" />
+    <Node Id="@4" Category="CodeSchema_Assembly" Bounds="654.662604765732,-460.215361910437,285.143333333334,25" CodeSchemaProperty_StrongName="FoodSearch.BusinessLogic.Domain.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" FilePath="$(075008bc-66b0-436e-9bb2-897c2d1fb2d0.OutputPath)" Group="Collapsed" Label="FoodSearch.BusinessLogic.Domain.Core.dll" UseManualLocation="True" />
+    <Node Id="@6" Category="CodeSchema_Assembly" Bounds="681.871797316421,-171.54375311582,255.989999999999,25" CodeSchemaProperty_StrongName="FoodSearch.Presentation.Web.Site, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" FilePath="$(ebfb7545-e952-4530-a119-9af7e9177bd2.OutputPath)" Group="Collapsed" Label="FoodSearch.Presentation.Web.Site.dll" />
+    <Node Id="@8" Category="CodeSchema_Assembly" Bounds="863.889190960506,-635.039748694169,215.376666666666,25" CodeSchemaProperty_StrongName="FoodSearch.Data.Mapping, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" FilePath="$(3c7d76ad-3b68-4eb6-9a15-560d4773fb24.OutputPath)" Group="Collapsed" Label="FoodSearch.Data.Mapping.dll" />
+    <Node Id="BusinessLogic" Bounds="631.140601724764,-555.215561911856,732.023495875746,250.000500026479" Group="Expanded" Label="Business Logic" UseManualLocation="True" />
+    <Node Id="DataAccessLayer" Bounds="843.889190960506,-675.039848694169,255.376666666666,85.0002" Group="Expanded" Label="Data Access Layer" UseManualLocation="True" />
+    <Node Id="FoodSearch.Presentation.Mobile.Android" Category="CodeSchema_Assembly" Bounds="683.576379394531,110.305943713257,271.55,25" Label="FoodSearch.Presentation.Mobile.Android.dll" UseManualLocation="True" />
+    <Node Id="FoodSearch.Presentation.Mobile.iOS.dll" Category="CodeSchema_Assembly" Bounds="696.171355794271,-0.654256286743021,247.103333333333,25.96" Label="FoodSearch.Presentation.Mobile.iOS.dll" UseManualLocation="True" />
+    <Node Id="Mobile" Bounds="648.336757868393,-95.6544635796878,337.73,250.960507292945" Group="Expanded" Label="Mobile" UseManualLocation="True" />
+    <Node Id="PresentationLayer" Bounds="628.336757868393,-251.543953717651,377.73,426.850097744726" Group="Expanded" Label="Presentation Layer" />
+    <Node Id="ServiceLayer" Bounds="1054.07578695947,-244.684098945919,319.773333333334,197.667668608397" Group="Expanded" Label="Service Layer" UseManualLocation="True" />
+    <Node Id="Web" Bounds="661.87179731642,-211.54385311582,295.989999999999,85.0002" Group="Expanded" UseManualLocation="True" />
+  </Nodes>
+  <Links>
+    <Link Source="@10" Target="@29" Category="Contains" FetchingParent="@10" />
+    <Link Source="@10" Target="@30" Category="Contains" FetchingParent="@10" />
+    <Link Source="@12" Target="@8" Category="References" Bounds="809.292356794853,-283.416490142029,22.0540660888701,193.289108557657" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="49">
+      <Category Ref="CodeSchema_Calls" />
+    </Link>
+    <Link Source="@14" Target="@8" Category="References" Bounds="830.921490074827,-337.933517010394,338.822700722732,251.385483141428" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="186">
+      <Category Ref="CodeSchema_Calls" />
+    </Link>
+    <Link Source="@16" Target="@26" Bounds="1056.75986431916,-279.526756303945,24.3656171364805,192.031515226398" />
+    <Link Source="@16" Target="@28" Bounds="1056.84729027438,-279.526756303945,33.0730476996303,247.039617189326" />
+    <Link Source="@16" Target="FoodSearch.Presentation.Mobile.Android" Bounds="869.806213378906,-30.6543636322021,84.7138671875,138.869848251343" />
+    <Link Source="@16" Target="FoodSearch.Presentation.Mobile.iOS.dll" Bounds="817.769813851419,-30.6543641815189,0.954760649785385,21.0093872416419" />
+    <Link Source="@18" Target="@16" Bounds="686.037170410156,-28.4975242614746,76.9813232421875,83.8033676147461" />
+    <Link Source="@2" Target="@10" Bounds="742.602290449618,-348.77560193089,269.315010586674,87.2271595368443" />
+    <Link Source="@20" Target="@8" Category="References" Bounds="833.321326405652,-290.772656358818,310.410486988581,204.633678387468" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="2" />
+    <Link Source="@22" Target="@24" Category="CodeSchema_Calls" Bounds="980.205871582031,-490.215454101563,111.632629394531,132.377014160156" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="2" />
+    <Link Source="@22" Target="@8" Category="References" Bounds="827.91204072591,-388.487800295524,343.178933444119,300.154596750587" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="87">
+      <Category Ref="CodeSchema_Calls" />
+    </Link>
+    <Link Source="@28" Target="@26" Category="References" Bounds="1207.9199367942,-170.80068141672,3.43383491761301,21.1167824708013" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="2" />
+    <Link Source="@29" Target="@12" Category="References" Bounds="799.859706290243,-139.048387900688,28.6368512754048,96.340249293744" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="6">
+      <Category Ref="CodeSchema_ReturnTypeLink" />
+    </Link>
+    <Link Source="@29" Target="@14" Category="References" Bounds="834.993100916964,-139.048387900688,317.662063296517,102.210548591088" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="6">
+      <Category Ref="CodeSchema_ReturnTypeLink" />
+    </Link>
+    <Link Source="@29" Target="@20" Category="References" Bounds="254.20723238882,-139.048387900688,483.331279283667,103.089811779809" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="6">
+      <Category Ref="CodeSchema_ReturnTypeLink" />
+    </Link>
+    <Link Source="@29" Target="@22" Category="References" Bounds="868.651283720206,-139.048387900688,600.000730573528,103.438179156427" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="6">
+      <Category Ref="CodeSchema_ReturnTypeLink" />
+    </Link>
+    <Link Source="@29" Target="@30" Category="Implements" Bounds="796.144104003906,-139.048385620117,0,21" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="1" />
+    <Link Source="@29" Target="@4" Category="References" Bounds="541.090881963951,-139.048387900688,227.037730493922,101.300030532836" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="6">
+      <Category Ref="CodeSchema_ReturnTypeLink" />
+    </Link>
+    <Link Source="@29" Target="@8" Category="References" Bounds="800.068234073007,-139.048387900688,47.5227259141919,151.380376894869" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="8" />
+    <Link Source="@30" Target="@12" Category="CodeSchema_ReturnTypeLink" Bounds="802.585662904381,-84.0483879006879,21.6265749966619,41.966984339317" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="1" />
+    <Link Source="@30" Target="@14" Category="CodeSchema_ReturnTypeLink" Bounds="863.494821247608,-84.0483879006879,260.377168226346,48.3248797205313" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="1" />
+    <Link Source="@30" Target="@20" Category="CodeSchema_ReturnTypeLink" Bounds="297.334121937154,-84.0483879006879,397.20813787167,48.8682173804706" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="1" />
+    <Link Source="@30" Target="@22" Category="CodeSchema_ReturnTypeLink" Bounds="921.846472601732,-84.0483879006879,493.523690364216,49.0766157903765" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="1" />
+    <Link Source="@30" Target="@4" Category="CodeSchema_ReturnTypeLink" Bounds="562.141549785174,-84.0483879006879,185.433367862257,47.7240113308324" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="1" />
+    <Link Source="@4" Target="@8" Category="References" Bounds="808.169397691421,-298.689757413119,9.66638329870523,156.898601009813" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="83">
+      <Category Ref="CodeSchema_Calls" />
+      <Category Ref="CodeSchema_ReturnTypeLink" />
+    </Link>
+    <Link Source="@6" Target="@12" Category="CodeSchema_Calls" Bounds="642.109830871174,1.83668045493199,11.9797421477903,225.26776280528" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="4" />
+    <Link Source="@6" Target="@14" Category="CodeSchema_Calls" Bounds="675.741653363645,1.83668045493199,293.23423382706,174.649556998408" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="19" />
+    <Link Source="@6" Target="@22" Category="CodeSchema_Calls" Bounds="683.374411184223,1.83668045493199,276.247142604853,120.652643678287" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="10" />
+    <Link Source="@6" Target="@29" Category="References" Bounds="830.903863855376,-234.048387900688,140.889660277343,66.1738475001939" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="2" />
+    <Link Source="@6" Target="@30" Category="References" Bounds="820.228376535705,-234.048387900688,161.323447902422,119.638900608488" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="69">
+      <Category Ref="CodeSchema_Calls" />
+    </Link>
+    <Link Source="@6" Target="@4" Category="CodeSchema_Calls" Bounds="632.340192278363,1.83668045493199,20.8816191121265,170.321849582015" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="6" />
+    <Link Source="@6" Target="@8" Category="References" Bounds="656.944506935636,1.83668045493199,69.2782308581806,395.390512396797" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="10">
+      <Category Ref="CodeSchema_Calls" />
+    </Link>
+    <Link Source="BusinessLogic" Target="@10" Category="Contains" />
+    <Link Source="BusinessLogic" Target="@12" Category="Contains" />
+    <Link Source="BusinessLogic" Target="@14" Category="Contains" />
+    <Link Source="BusinessLogic" Target="@20" Category="Contains" />
+    <Link Source="BusinessLogic" Target="@22" Category="Contains" />
+    <Link Source="BusinessLogic" Target="@24" Category="Contains" />
+    <Link Source="BusinessLogic" Target="@4" Category="Contains" />
+    <Link Source="DataAccessLayer" Target="@8" Category="Contains" />
+    <Link Source="Mobile" Target="@16" Category="Contains" />
+    <Link Source="Mobile" Target="@18" Category="Contains" />
+    <Link Source="Mobile" Target="FoodSearch.Presentation.Mobile.Android" Category="Contains" />
+    <Link Source="Mobile" Target="FoodSearch.Presentation.Mobile.iOS.dll" Category="Contains" />
+    <Link Source="PresentationLayer" Target="Mobile" Category="Contains" />
+    <Link Source="PresentationLayer" Target="Web" Category="Contains" />
+    <Link Source="ServiceLayer" Target="@2" Category="Contains" />
+    <Link Source="ServiceLayer" Target="@26" Category="Contains" />
+    <Link Source="ServiceLayer" Target="@28" Category="Contains" />
+    <Link Source="Web" Target="@6" Category="Contains" />
+  </Links>
+  <Categories>
+    <Category Id="CodeSchema_Assembly" Label="Assembly" BasedOn="File" CanBeDataDriven="True" DefaultAction="Microsoft.Contains" Icon="CodeSchema_Assembly" NavigationActionLabel="Assemblies" />
+    <Category Id="CodeSchema_Calls" Label="Calls" CanBeDataDriven="True" CanLinkedNodesBeDataDriven="True" IncomingActionLabel="Called By" OutgoingActionLabel="Calls" />
+    <Category Id="CodeSchema_Namespace" Label="Namespace" CanBeDataDriven="True" DefaultAction="Node:Both:CodeSchema_Type" Icon="CodeSchema_Namespace" NavigationActionLabel="Namespaces" />
+    <Category Id="CodeSchema_ReturnTypeLink" Label="Return" CanBeDataDriven="True" CanLinkedNodesBeDataDriven="True" IncomingActionLabel="Return types" OutgoingActionLabel="Return types" />
+    <Category Id="Contains" Label="Contains" Description="Whether the source of the link contains the target object" CanBeDataDriven="False" CanLinkedNodesBeDataDriven="True" IncomingActionLabel="Contained By" IsContainment="True" OutgoingActionLabel="Contains" />
+    <Category Id="File" Label="File" CanBeDataDriven="True" DefaultAction="Microsoft.Contains" Icon="File" NavigationActionLabel="Files" />
+    <Category Id="Implements" Label="Implements" CanBeDataDriven="True" CanLinkedNodesBeDataDriven="True" IncomingActionLabel="Implemented by" OutgoingActionLabel="Implements" />
+    <Category Id="References" Label="References" CanBeDataDriven="True" CanLinkedNodesBeDataDriven="True" IncomingActionLabel="Referenced By" OutgoingActionLabel="References" />
+  </Categories>
+  <Properties>
+    <Property Id="Bounds" DataType="System.Windows.Rect" />
+    <Property Id="CanBeDataDriven" Label="CanBeDataDriven" Description="CanBeDataDriven" DataType="System.Boolean" />
+    <Property Id="CanLinkedNodesBeDataDriven" Label="CanLinkedNodesBeDataDriven" Description="CanLinkedNodesBeDataDriven" DataType="System.Boolean" />
+    <Property Id="CodeSchemaProperty_StrongName" Label="StrongName" Description="StrongName" DataType="System.String" />
+    <Property Id="DataVirtualized" Label="Data Virtualized" Description="If true, the graph can contain nodes and links that represent data for virtualized nodes/links (i.e. not actually created in the graph)." DataType="System.Boolean" />
+    <Property Id="DefaultAction" Label="DefaultAction" Description="DefaultAction" DataType="System.String" />
+    <Property Id="DelayedChildNodesState" Label="Delayed Child Nodes State" Description="Unspecified if the delayed child nodes state is not specified. NotFetched if the group contains child nodes that are not fetched into the graph yet. Fetched if the group has all its delayed child nodes already fetched." DataType="Microsoft.VisualStudio.GraphModel.DelayedDataState" />
+    <Property Id="DelayedCrossGroupLinksState" Label="Delayed Cross-Group Links State" Description="Unspecified if the delayed cross-group links state is not specified. NotFetched if delayed cross-group links on this node are not fetched into the graph yet. Fetched if all delayed cross-group links have already fetched." DataType="Microsoft.VisualStudio.GraphModel.DelayedDataState" />
+    <Property Id="Expression" DataType="System.String" />
+    <Property Id="FetchedChildrenCount" DataType="System.Int32" />
+    <Property Id="FetchingParent" DataType="Microsoft.VisualStudio.GraphModel.GraphNodeId" />
+    <Property Id="FilePath" Label="File Path" Description="File Path" DataType="System.String" />
+    <Property Id="Group" Label="Group" Description="Display the node as a group" DataType="Microsoft.VisualStudio.GraphModel.GraphGroupStyle" />
+    <Property Id="GroupLabel" DataType="System.String" />
+    <Property Id="Icon" Label="Icon" Description="Icon" DataType="System.String" />
+    <Property Id="IncomingActionLabel" Label="IncomingActionLabel" Description="IncomingActionLabel" DataType="System.String" />
+    <Property Id="IsContainment" DataType="System.Boolean" />
+    <Property Id="IsEnabled" DataType="System.Boolean" />
+    <Property Id="IsSourceVirtualized" Label="Link Source Virtualized" Description="If true, the link source end contains data for virtualized nodes/links (i.e. not actually created in the graph)." DataType="System.Boolean" />
+    <Property Id="IsTargetVirtualized" Label="Link Target Virtualized" Description="If true, the link target end contains data for virtualized nodes/links (i.e. not actually created in the graph)." DataType="System.Boolean" />
+    <Property Id="Label" Label="Label" Description="Displayable label of an Annotatable object" DataType="System.String" />
+    <Property Id="Layout" DataType="System.String" />
+    <Property Id="NavigationActionLabel" Label="NavigationActionLabel" Description="NavigationActionLabel" DataType="System.String" />
+    <Property Id="OutgoingActionLabel" Label="OutgoingActionLabel" Description="OutgoingActionLabel" DataType="System.String" />
+    <Property Id="TargetType" DataType="System.Type" />
+    <Property Id="UseManualLocation" DataType="System.Boolean" />
+    <Property Id="Value" DataType="System.String" />
+    <Property Id="ValueLabel" DataType="System.String" />
+    <Property Id="Visibility" Label="Visibility" Description="Defines whether a node in the graph is visible or not" DataType="System.Windows.Visibility" />
+    <Property Id="Weight" Label="Weight" Description="Weight" DataType="System.Double" />
+  </Properties>
+  <QualifiedNames>
+    <Name Id="Assembly" Label="Assembly" ValueType="Uri" />
+    <Name Id="Namespace" Label="Namespace" ValueType="System.String" />
+  </QualifiedNames>
+  <IdentifierAliases>
+    <Alias n="1" Uri="Assembly=file:///C:/C%2523/Inzynierka/FoodSearch.Service.FoodSearchService/bin/Debug/FoodSearch.Service.FoodSearchService.dll" />
+    <Alias n="2" Id="(@1)" />
+    <Alias n="3" Uri="Assembly=file:///C:/C%2523/Inzynierka/FoodSearch.BusinessLogic.Domain.Core/bin/Debug/FoodSearch.BusinessLogic.Domain.Core.dll" />
+    <Alias n="4" Id="(@3)" />
+    <Alias n="5" Uri="Assembly=file:///C:/C%2523/Inzynierka/FoodSearch.Presentation.Web.Site/bin/FoodSearch.Presentation.Web.Site.dll" />
+    <Alias n="6" Id="(@5)" />
+    <Alias n="7" Uri="Assembly=file:///C:/C%2523/Inzynierka/FoodSearch.Data.Mapping/bin/Debug/FoodSearch.Data.Mapping.dll" />
+    <Alias n="8" Id="(@7)" />
+    <Alias n="9" Uri="Assembly=file:///C:/C%2523/Inzynierka/FoodSearch.BusinessLogic.Domain.FoodSearch/bin/Debug/FoodSearch.BusinessLogic.Domain.FoodSearch.dll" />
+    <Alias n="10" Id="(@9)" />
+    <Alias n="11" Uri="Assembly=file:///C:/C%2523/Inzynierka/FoodSearch.BusinessLogic.Domain.SiteAdmin/bin/Debug/FoodSearch.BusinessLogic.Domain.SiteAdmin.dll" />
+    <Alias n="12" Id="(@11)" />
+    <Alias n="13" Uri="Assembly=file:///C:/C%2523/Inzynierka/FoodSearch.BusinessLogic.Domain.RestraurantAdmin/bin/Debug/FoodSearch.BusinessLogic.Domain.RestraurantAdmin.dll" />
+    <Alias n="14" Id="(@13)" />
+    <Alias n="15" Uri="Assembly=file:///C:/C%2523/Inzynierka/FoodSearch.Presentation.Mobile.Common/bin/Debug/FoodSearch.Presentation.Mobile.Common.dll" />
+    <Alias n="16" Id="(@15)" />
+    <Alias n="17" Uri="Assembly=file:///C:/C%2523/Inzynierka/FoodSearch.Presentation.Mobile.WP/Bin/x86/Debug/FoodSearch.Presentation.Mobile.WP.dll" />
+    <Alias n="18" Id="(@17)" />
+    <Alias n="19" Uri="Assembly=file:///C:/C%2523/Inzynierka/FoodSearch.BusinessLogic.Domain.Order/bin/Debug/FoodSearch.BusinessLogic.Domain.Order.dll" />
+    <Alias n="20" Id="(@19)" />
+    <Alias n="21" Uri="Assembly=file:///C:/C%2523/Inzynierka/FoodSearch.BusinessLogic.Domain.User/bin/Debug/FoodSearch.BusinessLogic.Domain.User.dll" />
+    <Alias n="22" Id="(@21)" />
+    <Alias n="23" Uri="Assembly=file:///C:/C%2523/Inzynierka/FoodSearch.BusinessLogic.Helpers/bin/Debug/FoodSearch.BusinessLogic.Helpers.dll" />
+    <Alias n="24" Id="(@23)" />
+    <Alias n="25" Uri="Assembly=file:///C:/C%2523/Inzynierka/FoodSearch.Service.Contracts/bin/Debug/FoodSearch.Service.Contracts.dll" />
+    <Alias n="26" Id="(@25)" />
+    <Alias n="27" Uri="Assembly=file:///C:/C%2523/Inzynierka/FoodSearch.Service.Client/bin/Debug/FoodSearch.Service.Client.dll" />
+    <Alias n="28" Id="(@27)" />
+    <Alias n="29" Id="(@9 Namespace=FoodSearch.BusinessLogic.Domain.FoodSearch)" />
+    <Alias n="30" Id="(@9 Namespace=FoodSearch.BusinessLogic.Domain.FoodSearch.Interface)" />
+  </IdentifierAliases>
+  <Styles>
+    <Style TargetType="Node" GroupLabel="Category 1" ValueLabel="Has category">
+      <Condition Expression="HasCategory('Category1')" />
+      <Setter Property="Background" Value="#FFE51400" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Results" ValueLabel="True">
+      <Condition Expression="HasCategory('QueryResult')" />
+      <Setter Property="Background" Value="#FFBCFFBE" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Assembly" ValueLabel="Has category">
+      <Condition Expression="HasCategory('CodeSchema_Assembly')" />
+      <Setter Property="Background" Value="#FF094167" />
+      <Setter Property="Stroke" Value="#FF094167" />
+      <Setter Property="Icon" Value="CodeSchema_Assembly" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Namespace" ValueLabel="Has category">
+      <Condition Expression="HasCategory('CodeSchema_Namespace')" />
+      <Setter Property="Background" Value="#FF0E619A" />
+      <Setter Property="Stroke" Value="#FF0E619A" />
+      <Setter Property="Icon" Value="CodeSchema_Namespace" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Interface" ValueLabel="Has category">
+      <Condition Expression="HasCategory('CodeSchema_Interface')" />
+      <Setter Property="Background" Value="#FF1382CE" />
+      <Setter Property="Stroke" Value="#FF1382CE" />
+      <Setter Property="Icon" Value="CodeSchema_Interface" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Struct" ValueLabel="Has category">
+      <Condition Expression="HasCategory('CodeSchema_Struct')" />
+      <Setter Property="Background" Value="#FF1382CE" />
+      <Setter Property="Stroke" Value="#FF1382CE" />
+      <Setter Property="Icon" Value="CodeSchema_Struct" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Enumeration" ValueLabel="Has category">
+      <Condition Expression="HasCategory('CodeSchema_Enum')" />
+      <Setter Property="Background" Value="#FF1382CE" />
+      <Setter Property="Stroke" Value="#FF1382CE" />
+      <Setter Property="Icon" Value="CodeSchema_Enum" />
+      <Setter Property="LayoutSettings" Value="List" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Delegate" ValueLabel="Has category">
+      <Condition Expression="HasCategory('CodeSchema_Delegate')" />
+      <Setter Property="Background" Value="#FF1382CE" />
+      <Setter Property="Stroke" Value="#FF1382CE" />
+      <Setter Property="Icon" Value="CodeSchema_Delegate" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Class" ValueLabel="Has category">
+      <Condition Expression="HasCategory('CodeSchema_Type')" />
+      <Setter Property="Background" Value="#FF1382CE" />
+      <Setter Property="Stroke" Value="#FF1382CE" />
+      <Setter Property="Icon" Value="CodeSchema_Class" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Property" ValueLabel="Has category">
+      <Condition Expression="HasCategory('CodeSchema_Property')" />
+      <Setter Property="Background" Value="#FFE0E0E0" />
+      <Setter Property="Stroke" Value="#FFE0E0E0" />
+      <Setter Property="Icon" Value="CodeSchema_Property" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Method" ValueLabel="Has category">
+      <Condition Expression="HasCategory('CodeSchema_Method') Or HasCategory('CodeSchema_CallStackUnresolvedMethod')" />
+      <Setter Property="Background" Value="#FFE0E0E0" />
+      <Setter Property="Stroke" Value="#FFE0E0E0" />
+      <Setter Property="Icon" Value="CodeSchema_Method" />
+      <Setter Property="LayoutSettings" Value="List" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Event" ValueLabel="Has category">
+      <Condition Expression="HasCategory('CodeSchema_Event')" />
+      <Setter Property="Background" Value="#FFE0E0E0" />
+      <Setter Property="Stroke" Value="#FFE0E0E0" />
+      <Setter Property="Icon" Value="CodeSchema_Event" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Field" ValueLabel="Has category">
+      <Condition Expression="HasCategory('CodeSchema_Field')" />
+      <Setter Property="Background" Value="#FFE0E0E0" />
+      <Setter Property="Stroke" Value="#FFE0E0E0" />
+      <Setter Property="Icon" Value="CodeSchema_Field" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Out Parameter" ValueLabel="True">
+      <Condition Expression="CodeSchemaProperty_IsOut = 'True'" />
+      <Setter Property="Icon" Value="CodeSchema_OutParameter" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Parameter" ValueLabel="True">
+      <Condition Expression="HasCategory('CodeSchema_Parameter')" />
+      <Setter Property="Icon" Value="CodeSchema_Parameter" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Local Variable" ValueLabel="True">
+      <Condition Expression="HasCategory('CodeSchema_LocalExpression')" />
+      <Setter Property="Icon" Value="CodeSchema_LocalExpression" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Externals" ValueLabel="Has category">
+      <Condition Expression="HasCategory('Externals')" />
+      <Setter Property="Background" Value="#FF424242" />
+      <Setter Property="Stroke" Value="#FF424242" />
+    </Style>
+    <Style TargetType="Link" GroupLabel="Inherits From" ValueLabel="True" Visibility="Hidden">
+      <Condition Expression="HasCategory('InheritsFrom') And Target.HasCategory('CodeSchema_Class')" />
+      <Setter Property="TargetDecorator" Value="OpenArrow" />
+    </Style>
+    <Style TargetType="Link" GroupLabel="Implements" ValueLabel="True" Visibility="Hidden">
+      <Condition Expression="HasCategory('Implements') And Target.HasCategory('CodeSchema_Interface')" />
+      <Setter Property="TargetDecorator" Value="OpenArrow" />
+    </Style>
+    <Style TargetType="Link" GroupLabel="Field Read" ValueLabel="True" Visibility="Hidden">
+      <Condition Expression="Target.HasCategory('CodeSchema_Field') And HasCategory('CodeSchema_FieldRead')" />
+      <Setter Property="StrokeDashArray" Value="2 2" />
+    </Style>
+    <Style TargetType="Link" GroupLabel="Comment Link" ValueLabel="True" Visibility="Hidden">
+      <Condition Expression="Source.HasCategory('Comment')" />
+      <Setter Property="Stroke" Value="#FFE5C365" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Cursor Location Changed" ValueLabel="True" Visibility="Hidden">
+      <Condition Expression="IsCursorLocation" />
+      <Setter Property="IndicatorWest" Value="WestIndicator" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Disabled Breakpoint Location Changed" ValueLabel="True" Visibility="Hidden">
+      <Condition Expression="DisabledBreakpointCount" />
+      <Setter Property="IndicatorWest" Value="WestIndicator" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Enabled Breakpoint Location Changed" ValueLabel="True" Visibility="Hidden">
+      <Condition Expression="EnabledBreakpointCount" />
+      <Setter Property="IndicatorWest" Value="WestIndicator" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Instruction Pointer Location Changed" ValueLabel="True" Visibility="Hidden">
+      <Condition Expression="IsInstructionPointerLocation" />
+      <Setter Property="IndicatorWest" Value="WestIndicator" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Current Callstack Changed" ValueLabel="True" Visibility="Hidden">
+      <Condition Expression="IsCurrentCallstackFrame" />
+      <Setter Property="IndicatorWest" Value="WestIndicator" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Comment" ValueLabel="Has comment">
+      <Condition Expression="HasCategory('Comment')" />
+      <Setter Property="Background" Value="#FFFFFACD" />
+      <Setter Property="Stroke" Value="#FFE5C365" />
+      <Setter Property="StrokeThickness" Value="1" />
+      <Setter Property="NodeRadius" Value="2" />
+      <Setter Property="MaxWidth" Value="250" />
+    </Style>
+  </Styles>
+  <Paths>
+    <Path Id="075008bc-66b0-436e-9bb2-897c2d1fb2d0.OutputPath" Value="C:\C#\Inzynierka\FoodSearch.BusinessLogic.Domain.Core\bin\Debug\FoodSearch.BusinessLogic.Domain.Core.dll" />
+    <Path Id="0820c8e2-dead-43c7-a179-87591c36c4fd.OutputPath" Value="C:\C#\Inzynierka\FoodSearch.Service.Contracts\bin\Debug\FoodSearch.Service.Contracts.dll" />
+    <Path Id="140694a6-e80e-4c42-8e66-f043019608a3.OutputPath" Value="C:\C#\Inzynierka\FoodSearch.BusinessLogic.Domain.RestraurantAdmin\bin\Debug\FoodSearch.BusinessLogic.Domain.RestraurantAdmin.dll" />
+    <Path Id="21317ce8-3e82-4cde-8c7b-235e077013fc.OutputPath" Value="C:\C#\Inzynierka\FoodSearch.BusinessLogic.Helpers\bin\Debug\FoodSearch.BusinessLogic.Helpers.dll" />
+    <Path Id="29481033-93db-4905-bbf3-26d69f9071df.OutputPath" Value="C:\C#\Inzynierka\FoodSearch.BusinessLogic.Domain.SiteAdmin\bin\Debug\FoodSearch.BusinessLogic.Domain.SiteAdmin.dll" />
+    <Path Id="3bc5d5f4-c153-40f0-acbb-897dece794a8.OutputPath" Value="C:\C#\Inzynierka\FoodSearch.Presentation.Mobile.WP\Bin\x86\Debug\FoodSearch.Presentation.Mobile.WP.dll" />
+    <Path Id="3c7d76ad-3b68-4eb6-9a15-560d4773fb24.OutputPath" Value="C:\C#\Inzynierka\FoodSearch.Data.Mapping\bin\Debug\FoodSearch.Data.Mapping.dll" />
+    <Path Id="489e10b0-1eba-484e-be1e-11c533cb00cf.OutputPath" Value="C:\C#\Inzynierka\FoodSearch.BusinessLogic.Domain.FoodSearch\bin\Debug\FoodSearch.BusinessLogic.Domain.FoodSearch.dll" />
+    <Path Id="5b598a57-e7e2-4780-81cf-7c20ce2cf01a.OutputPath" Value="C:\C#\Inzynierka\FoodSearch.Service.Client\bin\Debug\FoodSearch.Service.Client.dll" />
+    <Path Id="7fe93e78-fbef-4d2e-a94a-d40619062088.OutputPath" Value="C:\C#\Inzynierka\FoodSearch.Presentation.Mobile.Common\bin\Debug\FoodSearch.Presentation.Mobile.Common.dll" />
+    <Path Id="c0879b51-2af2-4d83-a239-4b7f0bd1d039.OutputPath" Value="C:\C#\Inzynierka\FoodSearch.BusinessLogic.Domain.Order\bin\Debug\FoodSearch.BusinessLogic.Domain.Order.dll" />
+    <Path Id="c62d4eaf-4ee1-4f2e-96ea-0c630ffd59eb.OutputPath" Value="C:\C#\Inzynierka\FoodSearch.BusinessLogic.Domain.User\bin\Debug\FoodSearch.BusinessLogic.Domain.User.dll" />
+    <Path Id="ebfb7545-e952-4530-a119-9af7e9177bd2.OutputPath" Value="C:\C#\Inzynierka\FoodSearch.Presentation.Web.Site\bin\FoodSearch.Presentation.Web.Site.dll" />
+    <Path Id="ee613d92-9357-42e6-b50d-21303b399eee.OutputPath" Value="C:\C#\Inzynierka\FoodSearch.Service.FoodSearchService\bin\Debug\FoodSearch.Service.FoodSearchService.dll" />
+  </Paths>
+</DirectedGraph>

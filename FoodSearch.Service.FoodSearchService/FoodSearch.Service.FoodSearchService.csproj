@@ -39,18 +39,35 @@
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Data.Services" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.Activation" />
+    <Reference Include="System.ServiceModel.Web" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FoodSearchService.cs" />
+    <Compile Include="IFoodSearchService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\FoodSearch.BusinessLogic.Domain.Core\FoodSearch.BusinessLogic.Domain.Core.csproj">
+      <Project>{075008BC-66B0-436E-9BB2-897C2D1FB2D0}</Project>
+      <Name>FoodSearch.BusinessLogic.Domain.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FoodSearch.BusinessLogic.Domain.FoodSearch\FoodSearch.BusinessLogic.Domain.FoodSearch.csproj">
+      <Project>{489E10B0-1EBA-484E-BE1E-11C533CB00CF}</Project>
+      <Name>FoodSearch.BusinessLogic.Domain.FoodSearch</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FoodSearch.Data.Mapping\FoodSearch.Data.Mapping.csproj">
+      <Project>{3C7D76AD-3B68-4EB6-9A15-560D4773FB24}</Project>
+      <Name>FoodSearch.Data.Mapping</Name>
+    </ProjectReference>
     <ProjectReference Include="..\FoodSearch.Service.Contracts\FoodSearch.Service.Contracts.csproj">
       <Project>{0820c8e2-dead-43c7-a179-87591c36c4fd}</Project>
       <Name>FoodSearch.Service.Contracts</Name>

@@ -23,7 +23,6 @@
                 }
             }
         });
-        $("#openingHoursList").dataTable();
     };
 
     $("#addOpeningHour").click(function() {
@@ -46,7 +45,7 @@
                 },
                 dataType: "json",
                 success: function(oh) {
-                    if (oh != null) {
+                    if (oh != null && oh.OpeningId != -1) {
                         self.OpeningHours.push(new OpeningHour(oh.OpeningId, oh.Day, oh.TimeFrom, oh.TimeTo));
                         $("#addOpeningHourModal").modal("hide");
                     }
@@ -54,33 +53,43 @@
             });
         });
 
-        $("#addOHTimeFrom").timepicker({
-            showInputs: true,
-            showMeridian: false
-        });
+        
 
         $("#addOpeningHourModal .btn-primary").unbind("click").click(function() {
             $("#addOHForm").submit();
         });
 
         $("#addOpeningHourModal").modal();
+        $("#addOHTimeFrom, #addOHTimeTo").timepicker({
+            showInputs: false,
+            showMeridian: false,
+            showSeconds: false,
+            template: 'dropdown',
+            minuteStep: 30
+        }).focus(function() {
+            $(this).timepicker('showWidget');
+        });
     });
 
     self.GetOpeningHours();
 
-    self.DeleteOpeningHour = function(oh) {
-        $.ajax({
-            url: "/RestaurantAdmin/OpeningHours/Delete",
-            type: "POST",
-            dataType: "json",
-            data: {
-                'openingHourId': oh.OpeningHourId()
-            },
-            success: function(response) {
-                if (response == "ok") {
-                    self.OpeningHours.remove(oh);
+    self.DeleteOpeningHour = function (oh) {
+        $("#deleteOpeningHourModal .btn-primary").unbind("click").click(function() {
+            $.ajax({
+                url: "/RestaurantAdmin/OpeningHours/Delete",
+                type: "POST",
+                dataType: "json",
+                data: {
+                    'openingHourId': oh.OpeningHourId()
+                },
+                success: function(response) {
+                    if (response == "ok") {
+                        self.OpeningHours.remove(oh);
+                    }
+                    $("#deleteOpeningHourModal").modal("hide");
                 }
-            }
+            });
         });
+        $("#deleteOpeningHourModal").modal();
     };
 }

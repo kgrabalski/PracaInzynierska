@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <MinimumVisualStudioVersion>11.0</MinimumVisualStudioVersion>
@@ -35,12 +35,15 @@
   <ItemGroup>
     <!-- A reference to the entire .NET Framework is automatically included -->
     <ProjectReference Include="..\FoodSearch.Service.Client\FoodSearch.Service.Client.csproj">
-      <Project>{5b598a57-e7e2-4780-81cf-7c20ce2cf01a}</Project>
+      <Project>{5B598A57-E7E2-4780-81CF-7C20CE2CF01A}</Project>
       <Name>FoodSearch.Service.Client</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FoodSearch.Service.Contracts\FoodSearch.Service.Contracts.csproj">
+      <Project>{0820C8E2-DEAD-43C7-A179-87591C36C4FD}</Project>
+      <Name>FoodSearch.Service.Contracts</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

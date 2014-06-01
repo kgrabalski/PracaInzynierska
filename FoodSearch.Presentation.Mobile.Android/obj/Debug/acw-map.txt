@@ -1,1 +1,0 @@
-FoodSearch.Presentation.Mobile.Android.MainActivity;foodsearch.presentation.mobile.android.MainActivity

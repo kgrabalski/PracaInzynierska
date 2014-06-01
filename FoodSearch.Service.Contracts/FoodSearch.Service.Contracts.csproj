@@ -41,8 +41,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Response\AddStudentResponse.cs" />
-    <Compile Include="Student.cs" />
+    <Compile Include="Response\RestaurantInfo.cs" />
+    <Compile Include="Response\Street.cs" />
+    <Compile Include="Response\StreetNumber.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />

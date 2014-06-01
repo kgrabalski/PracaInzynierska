@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Net;
 using System.Net.Http;
+using System.Runtime.Serialization.Json;
 using System.Text;
 using System.Threading.Tasks;
-
-using Newtonsoft.Json;
 
 namespace FoodSearch.Service.Client
 {
@@ -15,42 +15,55 @@ namespace FoodSearch.Service.Client
         protected string apiPath = "http://foodsearch.azurewebsites.net/";
         private readonly HttpClient client = new HttpClient();
 
-        protected async Task<TResponse> RestGet<TResponse>(string url = "")
-            where TResponse : class
+        protected Task<T> RestGet<T>(string url = "") where T : class
         {
-            return await ReturnResponse<TResponse>(await client.GetAsync(apiPath + url));
-        }
-
-        protected async Task<TResponse> RestPost<TResponse>(object request, string url = "")
-            where TResponse : class
-        {
-            string json = JsonConvert.SerializeObject(request);
-            HttpContent content = new StringContent(json, Encoding.UTF8);
-            return await ReturnResponse<TResponse>(await client.PostAsync(apiPath + url, content));
-        }
-
-        protected async Task<TResponse> RestPut<TResponse>(object request, string url = "")
-            where TResponse : class
-        {
-            string json = JsonConvert.SerializeObject(request);
-            HttpContent content = new StringContent(json, Encoding.UTF8);
-            return await ReturnResponse<TResponse>(await client.PutAsync(apiPath + url, content));
-        }
-
-        protected async Task<TResponse> RestDelete<TResponse>(string url = "")
-            where TResponse : class
-        {
-            return await ReturnResponse<TResponse>(await client.DeleteAsync(apiPath + url));
-        }
-
-        private static async Task<T> ReturnResponse<T>(HttpResponseMessage resp)
-            where T : class
-        {
-            using (Stream respStream = await resp.Content.ReadAsStreamAsync())
-            using (StreamReader respReader = new StreamReader(respStream))
+            HttpWebRequest req = (HttpWebRequest) WebRequest.Create(apiPath + url);
+            Task<WebResponse> task = Task.Factory.FromAsync<WebResponse>(req.BeginGetResponse, req.EndGetResponse, null);
+            return task.ContinueWith(t =>
             {
-                return JsonConvert.DeserializeObject<T>(await respReader.ReadToEndAsync());
+                using (Stream stream = t.Result.GetResponseStream())
+                {
+                    DataContractJsonSerializer js = new DataContractJsonSerializer(typeof(T));
+                    var result = js.ReadObject(stream) as T;
+                    return result;
+                }
+            });
+        }
+
+        protected Task<TResponse> RestPost<TRequest, TResponse>(TRequest request, string url = "")
+            where TRequest : class
+            where TResponse : class
+        {
+            HttpWebRequest req = (HttpWebRequest)WebRequest.Create(apiPath + url);
+            req.Method = "POST";
+            req.ContentType = "application/x-www-form-urlencoded";
+            DataContractJsonSerializer jsRequest = new DataContractJsonSerializer(typeof(TRequest));
+            byte[] reqData;
+            using (MemoryStream memReqStream = new MemoryStream())
+            {
+                jsRequest.WriteObject(memReqStream, request);
+                using (StreamReader sr = new StreamReader(memReqStream))
+                {
+                    reqData = Encoding.UTF8.GetBytes(sr.ReadToEnd());
+                }
             }
+
+            var tStr = Task.Factory.FromAsync<Stream>(req.BeginGetRequestStream, req.EndGetRequestStream, null);
+            tStr.Wait();
+            using (Stream stream = tStr.Result)
+            {
+                stream.Write(reqData, 0, reqData.Length);
+            }
+            Task<WebResponse> task = Task.Factory.FromAsync<WebResponse>(req.BeginGetResponse, req.EndGetResponse, null);
+            return task.ContinueWith(t =>
+            {
+                using (Stream stream = t.Result.GetResponseStream())
+                {
+                    DataContractJsonSerializer js = new DataContractJsonSerializer(typeof(TResponse));
+                    var result = js.ReadObject(stream) as TResponse;
+                    return result;
+                }
+            });
         }
     }
 }

@@ -32,7 +32,7 @@ namespace FoodSearch.Data.Mapping.Repository
                 .Configure()
                 .Database(MsSqlConfiguration.MsSql2012
                 //.ConnectionString(string.Format(@"Data Source=.\SQLEXPRESS14;Initial Catalog={0};Integrated Security=True;", db.ToString())))
-                .ConnectionString(string.Format(@"Server=tcp:dycfyhr4vj.database.windows.net,1433;Database={0};User ID=kgrabalski@dycfyhr4vj;Password=GrabalskiP@ssw0rd;", db.ToString())))
+                .ConnectionString(string.Format(@"Server=tcp:dycfyhr4vj.database.windows.net,1433;Database={0};User ID=FoodSearch@dycfyhr4vj;Password=P@ssw0rd;", db.ToString())))
                 .Mappings(m =>
                 {
                     m.FluentMappings.AddFromAssemblyOf<SessionSource>();

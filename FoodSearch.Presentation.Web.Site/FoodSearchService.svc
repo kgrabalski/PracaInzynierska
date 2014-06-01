@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="FoodSearch.Service.FoodSearchService.FoodSearchService" Factory="Ninject.Extensions.Wcf.NinjectServiceHostFactory"%>

@@ -7,6 +7,7 @@ using Android.Widget;
 using Android.OS;
 
 using FoodSearch.Service.Client;
+using FoodSearch.Presentation.Mobile.Android.Adapters;
 
 namespace FoodSearch.Presentation.Mobile.Android
 {
@@ -20,28 +21,39 @@ namespace FoodSearch.Presentation.Mobile.Android
             // Set our view from the "main" layout resource
             SetContentView(Resource.Layout.Main);
 
-            FoodSearchServiceClient client = new FoodSearchServiceClient();
-            Button buttonGet = FindViewById<Button>(Resource.Id.buttonGet);
+			Button btnSearchStreet = FindViewById<Button>(Resource.Id.searchStreet);
+			EditText searchStreet = FindViewById<EditText> (Resource.Id.streetName);
+			ListView streetList = FindViewById<ListView> (Resource.Id.streetsList);
+			ListView streetNumbersList = FindViewById<ListView> (Resource.Id.streetNumbersList);
+			FoodSearchServiceClient client = new FoodSearchServiceClient();
 
-            buttonGet.Click += async delegate
-            {
-                AlertDialog ad = (new AlertDialog.Builder(this)).Create();
-                string msg = "";
-                try
-                {
-                    var s = await client.GetStudent(1);
-                    msg = s.FirstName + " " + s.LastName;
+			btnSearchStreet.Click += async delegate {
+				StreetListAdapter adapter = new StreetListAdapter(this);
+				adapter.Items = await client.GetStreets (searchStreet.Text);
+				streetList.Adapter = adapter;
 
-                }
-                catch (Exception ex)
-                {
-                    msg = ex.Message;
-                }
-                ad.SetMessage(msg);
-                ad.SetTitle("Student");
-                ad.SetButton("OK", (a, b) => ad.Hide());
-                ad.Show();
-            };
+				StreetNumberListAdapter adapter2 = new StreetNumberListAdapter(this);
+				adapter2.Items = new System.Collections.Generic.List<FoodSearch.Service.Contracts.Response.StreetNumber>();
+				streetNumbersList.Adapter = adapter2;
+			};
+
+			streetList.ItemClick += async (sender, e) => 
+			{
+				StreetNumberListAdapter adapter = new StreetNumberListAdapter(this);
+				adapter.Items = await client.GetStreetNumbers ((int)e.Id);
+				streetNumbersList.Adapter = adapter;
+			};
+
+			streetNumbersList.ItemClick += (sender, e) => 
+			{
+				AlertDialog ad = (new AlertDialog.Builder(this)).Create ();
+				ad.SetMessage (e.Id.ToString ());
+				ad.SetTitle ("AddressId");
+				ad.SetButton ("OK", (x,y) => ad.Hide ());
+				ad.Show ();
+			};
+
+
         }
     }
 }

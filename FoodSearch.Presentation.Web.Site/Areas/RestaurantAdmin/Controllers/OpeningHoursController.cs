@@ -6,6 +6,7 @@ using System.Web;
 using System.Web.Mvc;
 
 using FoodSearch.BusinessLogic.Domain.FoodSearch.Interface;
+using FoodSearch.BusinessLogic.Domain.RestraurantAdmin.Models;
 using FoodSearch.Presentation.Web.Site.Helpers;
 using FoodSearch.Presentation.Web.Site.Models;
 
@@ -33,8 +34,12 @@ namespace FoodSearch.Presentation.Web.Site.Areas.RestaurantAdmin.Controllers
         {
             TimeSpan tf = TimeSpan.ParseExact(timeFrom, @"hh\:mm", CultureInfo.InvariantCulture);
             TimeSpan tt = TimeSpan.ParseExact(timeTo, @"hh\:mm", CultureInfo.InvariantCulture);
+            OpeningHour opening = new OpeningHour() { OpeningId = -1 };
             int openingId = _domain.RestaurantAdmin.CreateOpeningHour(restUser.RestaurantId, day, tf, tt);
-            var opening = _domain.RestaurantAdmin.GetOpeningHours(restUser.RestaurantId, openingId);
+            if (openingId != -1)
+            {
+                opening = _domain.RestaurantAdmin.GetOpeningHours(restUser.RestaurantId, openingId).FirstOrDefault();
+            }
             return Json(opening, JsonRequestBehavior.DenyGet);
         }
 

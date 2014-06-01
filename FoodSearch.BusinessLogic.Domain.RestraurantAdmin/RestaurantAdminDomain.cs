@@ -8,8 +8,12 @@ using System.Threading.Tasks;
 using CodeBits;
 
 using FoodSearch.BusinessLogic.Domain.RestraurantAdmin.Interface;
+using FoodSearch.BusinessLogic.Domain.RestraurantAdmin.Models;
 using FoodSearch.Data.Mapping.Entities;
 using FoodSearch.Data.Mapping.Interface;
+
+using Dish = FoodSearch.Data.Mapping.Entities.Dish;
+using OpeningHour = FoodSearch.Data.Mapping.Entities.OpeningHour;
 
 namespace FoodSearch.BusinessLogic.Domain.RestraurantAdmin
 {
@@ -247,15 +251,9 @@ namespace FoodSearch.BusinessLogic.Domain.RestraurantAdmin
 
         public int CreateOpeningHour(Guid restaurantId, int day, TimeSpan timeFrom, TimeSpan timeTo)
         {
-            using (var rep = _provider.GetRepository<OpeningHour>())
+            using (var rep = _provider.StoredProcedure)
             {
-                return rep.Create<int>(new OpeningHour()
-                {
-                    RestaurantId = restaurantId,
-                    Day = day,
-                    TimeFrom = timeFrom,
-                    TimeTo = timeTo
-                });
+                return rep.CreateOpeningHour(restaurantId, day, timeFrom, timeTo);
             }
         }
 
@@ -264,6 +262,24 @@ namespace FoodSearch.BusinessLogic.Domain.RestraurantAdmin
             using (var rep = _provider.GetRepository<OpeningHour>())
             {
                 rep.Delete(openingHourId);
+            }
+        }
+
+        public EmployeeData GetEmployeeData(Guid restaurantId, Guid userId)
+        {
+            using (var repU = _provider.GetRepository<User>())
+            using (var repR = _provider.GetRepository<Restaurant>())
+            {
+                var user = repU.Get(userId);
+                var restaurant = repR.Get(restaurantId);
+
+                return new EmployeeData()
+                {
+                    FirstName = user.FirstName,
+                    LastName = user.LastName,
+                    RestaurantLogoId = restaurant.ImageId,
+                    RestaurantName = restaurant.Name
+                };
             }
         }
     }

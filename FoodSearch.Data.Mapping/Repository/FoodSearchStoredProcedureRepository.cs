@@ -28,6 +28,16 @@ namespace FoodSearch.Data.Mapping.Repository
             return query.List<RestaurantInfo>();
         }
 
+        public int CreateOpeningHour(Guid restaurantId, int day, TimeSpan timeFrom, TimeSpan timeTo)
+        {
+            var query = _session.GetNamedQuery("CreateOpeningHour");
+            query.SetGuid("restaurantId", restaurantId);
+            query.SetInt32("day", day);
+            query.SetTimeAsTimeSpan("timeFrom", timeFrom);
+            query.SetTimeAsTimeSpan("timeTo", timeTo);
+            return query.UniqueResult<int>();
+        }
+
         public void Dispose()
         {
             _session.Dispose();

@@ -74,8 +74,8 @@
                         </div>
                         <div class="form-group">
                             <label for="addOHTimeFrom" class="control-label">Godzina od</label>
-                            <div class="input-group">
-                                <input type="text" name="timeFrom" placeholder="Godzina od" id="addOHTimeFrom" class="form-control timepicker" required />
+                            <div class="input-group input-append bootstrap-timepicker">
+                                <input id="addOHTimeFrom" type="text" class="form-control" name="timeFrom" placeholder="Godzina od" />
                                 <div class="input-group-addon">
                                     <i class="fa fa-clock-o"></i>
                                 </div>
@@ -83,8 +83,8 @@
                         </div>
                         <div class="form-group">
                             <label for="addOHTimeTo" class="control-label">Godzina do</label>
-                            <div class="input-group">
-                                <input type="text" name="timeTo" placeholder="Godzina do" id="addOHTimeTo" class="form-control timepicker" required />
+                            <div class="input-group input-append bootstrap-timepicker">
+                                <input id="addOHTimeTo" type="text" class="form-control" name="timeTo" placeholder="Godzina do" />
                                 <div class="input-group-addon">
                                     <i class="fa fa-clock-o"></i>
                                 </div>
@@ -96,6 +96,25 @@
             <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Anuluj</button>
                 <button type="button" class="btn btn-primary">Dodaj</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="modal fade" id="deleteOpeningHourModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="myModalLabel">Usuń godzinę otwarcia</h4>
+            </div>
+            <div class="modal-body">
+               <p>Czy napewno chcesz usunąc wybraną godzinę otwarcia?</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Anuluj</button>
+                <button type="button" class="btn btn-primary">Usuń</button>
             </div>
         </div>
     </div>

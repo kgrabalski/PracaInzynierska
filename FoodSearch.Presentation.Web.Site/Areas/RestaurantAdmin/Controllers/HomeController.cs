@@ -8,6 +8,8 @@ using FoodSearch.BusinessLogic.Domain.FoodSearch.Interface;
 using FoodSearch.Data.Mapping.Entities;
 using FoodSearch.Presentation.Web.Site.Helpers;
 
+using RestaurantUser = FoodSearch.Presentation.Web.Site.Models.RestaurantUser;
+
 namespace FoodSearch.Presentation.Web.Site.Areas.RestaurantAdmin.Controllers
 {
     [AreaAuthorize(Roles = "RestaurantAdmin, RestaurantEmployee")]
@@ -20,9 +22,17 @@ namespace FoodSearch.Presentation.Web.Site.Areas.RestaurantAdmin.Controllers
             _domain = domain;
         }
 
-        public ActionResult Index()
+        public ActionResult Index(RestaurantUser restUser)
         {
-            return View();
+            var data = _domain.RestaurantAdmin.GetEmployeeData(restUser.RestaurantId, restUser.UserId);
+            return View(data);
+        }
+
+        [ChildActionOnly]
+        public ActionResult UserMenu(RestaurantUser restUser)
+        {
+            var data = _domain.RestaurantAdmin.GetEmployeeData(restUser.RestaurantId, restUser.UserId);
+            return PartialView("_UserMenu", data);
         }
     }
 }

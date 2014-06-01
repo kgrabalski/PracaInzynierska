@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+using FoodSearch.BusinessLogic.Domain.RestraurantAdmin.Models;
 using FoodSearch.Data.Mapping.Entities;
 
 using Dish = FoodSearch.BusinessLogic.Domain.RestraurantAdmin.Models.Dish;
@@ -29,5 +30,6 @@ namespace FoodSearch.BusinessLogic.Domain.RestraurantAdmin.Interface
         IEnumerable<Models.OpeningHour> GetOpeningHours(Guid restaurantId, int? openingHourId = null);
         int CreateOpeningHour(Guid restaurantId, int day, TimeSpan timeFrom, TimeSpan timeTo);
         void DeleteOpeningHour(int openingHourId);
+        EmployeeData GetEmployeeData(Guid restaurantId, Guid userId);
     }
 }

@@ -20,6 +20,7 @@
     <IISExpressAnonymousAuthentication>enabled</IISExpressAnonymousAuthentication>
     <IISExpressWindowsAuthentication>enabled</IISExpressWindowsAuthentication>
     <IISExpressUseClassicPipelineMode>false</IISExpressUseClassicPipelineMode>
+    <WcfConfigValidationEnabled>True</WcfConfigValidationEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -43,6 +44,9 @@
     <Reference Include="Ninject">
       <HintPath>..\packages\Ninject.3.2.0.0\lib\net45-full\Ninject.dll</HintPath>
     </Reference>
+    <Reference Include="Ninject.Extensions.Wcf">
+      <HintPath>..\packages\Ninject.Extensions.Wcf.3.2.1.0\lib\net45-full\Ninject.Extensions.Wcf.dll</HintPath>
+    </Reference>
     <Reference Include="Ninject.Web.Common">
       <HintPath>..\packages\Ninject.Web.Common.3.2.0.0\lib\net45-full\Ninject.Web.Common.dll</HintPath>
     </Reference>
@@ -52,7 +56,12 @@
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Data.Services" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.Activation" />
+    <Reference Include="System.ServiceModel.Web" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -112,10 +121,6 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Areas\RestaurantAdmin\Models\" />
-    <Folder Include="Areas\RestaurantAdmin\Views\Cuisines\" />
-    <Folder Include="Areas\RestaurantAdmin\Views\Dishes\" />
-    <Folder Include="Areas\RestaurantAdmin\Views\DishGroups\" />
-    <Folder Include="Areas\RestaurantAdmin\Views\OpeningHours\" />
     <Folder Include="Areas\SiteAdmin\Models\" />
     <Folder Include="Areas\User\Controllers\" />
     <Folder Include="Areas\User\Models\" />
@@ -152,6 +157,7 @@
     <Compile Include="Providers\FoodSearchRoleProvider.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Areas\RestaurantAdmin\Content\Site.css" />
     <Content Include="Areas\RestaurantAdmin\Scripts\CommonViewModel.js" />
     <Content Include="Areas\RestaurantAdmin\Scripts\CuisinesViewModel.js" />
     <Content Include="Areas\RestaurantAdmin\Scripts\DishesViewModel.js" />
@@ -175,6 +181,7 @@
     <Content Include="Content\selectize.css" />
     <Content Include="Content\selectize.default.css" />
     <Content Include="Content\selectize.legacy.css" />
+    <Content Include="FoodSearchService.svc" />
     <Content Include="Scripts\bootstrap-timepicker.js" />
     <Content Include="Scripts\bootstrap-timepicker.min.js" />
     <Content Include="Scripts\HomePage.js" />
@@ -220,6 +227,7 @@
     <Content Include="Areas\RestaurantAdmin\Views\Home\_Opinions.cshtml" />
     <Content Include="Areas\RestaurantAdmin\Views\Home\_Reports.cshtml" />
     <Content Include="Areas\RestaurantAdmin\Views\Home\_Employees.cshtml" />
+    <Content Include="Areas\RestaurantAdmin\Views\Shared\_UserMenu.cshtml" />
     <None Include="Properties\PublishProfiles\foodsearch.pubxml" />
     <None Include="Scripts\jquery-2.1.0.intellisense.js" />
     <Content Include="Images\Admin\ajax-loader.gif" />
@@ -293,6 +301,14 @@
     <ProjectReference Include="..\FoodSearch.Data.Mapping\FoodSearch.Data.Mapping.csproj">
       <Project>{3C7D76AD-3B68-4EB6-9A15-560D4773FB24}</Project>
       <Name>FoodSearch.Data.Mapping</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FoodSearch.Service.Contracts\FoodSearch.Service.Contracts.csproj">
+      <Project>{0820c8e2-dead-43c7-a179-87591c36c4fd}</Project>
+      <Name>FoodSearch.Service.Contracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FoodSearch.Service.FoodSearchService\FoodSearch.Service.FoodSearchService.csproj">
+      <Project>{ee613d92-9357-42e6-b50d-21303b399eee}</Project>
+      <Name>FoodSearch.Service.FoodSearchService</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

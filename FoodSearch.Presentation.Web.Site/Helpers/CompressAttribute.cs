@@ -18,6 +18,7 @@ namespace FoodSearch.Presentation.Web.Site.Helpers
             acceptEncoding = acceptEncoding.ToUpperInvariant();
 
             HttpResponseBase response = filterContext.HttpContext.Response;
+            if (response.Filter == null) return;
 
             if (acceptEncoding.Contains("GZIP"))
             {
