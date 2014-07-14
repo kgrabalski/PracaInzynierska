@@ -81,8 +81,8 @@
                 data: {
                     'cuisineId': cid
                 },
-                success: function(response) {
-                    if (response == "ok") {
+                success: function (response) {
+                    if (response == true) {
                         var cs = self.GetCuisineById(cid);
                         self.RestaurantCuisines.push(cs);
                         self.AvailableCuisines(cs);
@@ -95,7 +95,8 @@
         $("#addRestaurantCuisineModal .btn-primary").unbind("click").click(function () {
             $("#addRCForm").submit();
         });
-
+        var selectize = $("#addRCName")[0].selectize;
+        selectize.clear();
         $("#addRestaurantCuisineModal").modal();
     };
 

@@ -47,7 +47,6 @@ namespace FoodSearch.BusinessLogic.Domain.Core
 
         public IEnumerable<Street> GetStreets(int districtId)
         {
-            using (var repS = _provider.GetRepository<Street>())
             using (var repA = _provider.GetRepository<Address>())
             {
                 return repA.GetAll()

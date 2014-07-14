@@ -28,7 +28,7 @@ namespace FoodSearch.Service.FoodSearchService
         IEnumerable<Contracts.Response.StreetNumber> StreetNumbers(string streetId);
 
         [OperationContract]
-        [WebGet(UriTemplate = "/Restaurants/{addressId}", ResponseFormat = WebMessageFormat.Json)]
+        [WebGet(UriTemplate = "/GetRestaurants/{addressId}", ResponseFormat = WebMessageFormat.Json)]
         [Description("Zwraca listę restauracji dowożących pod podany adres")]
         IEnumerable<Contracts.Response.RestaurantInfo> Restaurants(string addressId);
     }

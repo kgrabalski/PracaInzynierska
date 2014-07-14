@@ -31,7 +31,7 @@ namespace FoodSearch.Presentation.Web.Site.Areas.RestaurantAdmin.Controllers
         public ActionResult Create(RestaurantUser restUser, string dishName, int dishGroupId, float price)
         {
             var dishId = _domain.RestaurantAdmin.CreateDish(restUser.RestaurantId, dishName, dishGroupId, price);
-            var dish = _domain.RestaurantAdmin.GetDishes(restUser.RestaurantId, dishId);
+            var dish = _domain.RestaurantAdmin.GetDishes(restUser.RestaurantId, dishId).FirstOrDefault();
             return Json(dish, JsonRequestBehavior.DenyGet);
         }
     }

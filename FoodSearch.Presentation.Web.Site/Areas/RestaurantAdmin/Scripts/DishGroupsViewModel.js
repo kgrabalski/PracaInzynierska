@@ -38,6 +38,8 @@
                 }
             }
         });
+        
+    
     };
 
     self.CreateDishGroup = function() {
@@ -61,7 +63,8 @@
         $("#addDishGropModal .btn-primary").unbind("click").click(function () {
             $("#addDGForm").submit();
         });
-        
+
+        $("#addDGName").val("");
         $("#addDishGropModal").modal();
     };
 

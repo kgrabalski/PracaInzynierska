@@ -84,15 +84,20 @@ namespace FoodSearch.BusinessLogic.Domain.RestraurantAdmin
             }
         }
 
-        public void AddRestaurantCuisine(Guid restaurantId, int cuisineId)
+        public bool AddRestaurantCuisine(Guid restaurantId, int cuisineId)
         {
             using (var rep = _provider.GetRepository<RestaurantCuisine>())
             {
-                rep.Create<int>(new RestaurantCuisine()
+                bool canCreate = rep.GetAll()
+                    .Where(x => x.RestaurantId == restaurantId && x.CuisineId == cuisineId)
+                    .RowCount() == 0;
+                if (!canCreate) return false;
+
+                return rep.Create<int>(new RestaurantCuisine()
                 {
                     RestaurantId = restaurantId,
                     CuisineId = cuisineId
-                });
+                }) > 0;
             }
         }
 

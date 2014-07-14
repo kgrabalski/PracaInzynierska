@@ -6,19 +6,12 @@ D:\projekty\PracaInzynierska\FoodSearch\FoodSearch.Presentation.Mobile.Android\b
 D:\projekty\PracaInzynierska\FoodSearch\FoodSearch.Presentation.Mobile.Android\bin\Debug\com.FoodSearch-Signed.apk
 D:\projekty\PracaInzynierska\FoodSearch\FoodSearch.Presentation.Mobile.Android\bin\Debug\FoodSearch.Service.Client.dll
 D:\projekty\PracaInzynierska\FoodSearch\FoodSearch.Presentation.Mobile.Android\bin\Debug\FoodSearch.Service.Contracts.dll
-D:\projekty\PracaInzynierska\FoodSearch\FoodSearch.Presentation.Mobile.Android\bin\Debug\System.Net.Http.Extensions.dll
-D:\projekty\PracaInzynierska\FoodSearch\FoodSearch.Presentation.Mobile.Android\bin\Debug\System.Net.Http.Primitives.dll
 D:\projekty\PracaInzynierska\FoodSearch\FoodSearch.Presentation.Mobile.Android\bin\Debug\System.Net.Http.dll
-D:\projekty\PracaInzynierska\FoodSearch\FoodSearch.Presentation.Mobile.Android\bin\Debug\Newtonsoft.Json.dll
 D:\projekty\PracaInzynierska\FoodSearch\FoodSearch.Presentation.Mobile.Android\bin\Debug\FoodSearch.Service.Client.pdb
 D:\projekty\PracaInzynierska\FoodSearch\FoodSearch.Presentation.Mobile.Android\bin\Debug\FoodSearch.Service.Client.dll.mdb
 D:\projekty\PracaInzynierska\FoodSearch\FoodSearch.Presentation.Mobile.Android\bin\Debug\FoodSearch.Service.Contracts.pdb
 D:\projekty\PracaInzynierska\FoodSearch\FoodSearch.Presentation.Mobile.Android\bin\Debug\FoodSearch.Service.Contracts.dll.mdb
-D:\projekty\PracaInzynierska\FoodSearch\FoodSearch.Presentation.Mobile.Android\bin\Debug\System.Net.Http.Extensions.xml
-D:\projekty\PracaInzynierska\FoodSearch\FoodSearch.Presentation.Mobile.Android\bin\Debug\System.Net.Http.Primitives.xml
 D:\projekty\PracaInzynierska\FoodSearch\FoodSearch.Presentation.Mobile.Android\bin\Debug\System.Net.Http.xml
-D:\projekty\PracaInzynierska\FoodSearch\FoodSearch.Presentation.Mobile.Android\bin\Debug\Newtonsoft.Json.xml
-D:\projekty\PracaInzynierska\FoodSearch\FoodSearch.Presentation.Mobile.Android\obj\Debug\FoodSearch.Presentation.Mobile.Android.csproj.App.config
 D:\projekty\PracaInzynierska\FoodSearch\FoodSearch.Presentation.Mobile.Android\obj\Debug\FoodSearch.Presentation.Mobile.Android.csprojResolveAssemblyReference.cache
 D:\projekty\PracaInzynierska\FoodSearch\FoodSearch.Presentation.Mobile.Android\obj\Debug\FoodSearch.Presentation.Mobile.Android.dll
 D:\projekty\PracaInzynierska\FoodSearch\FoodSearch.Presentation.Mobile.Android\obj\Debug\FoodSearch.Presentation.Mobile.Android.pdb
@@ -28,3 +21,5 @@ D:\projekty\PracaInzynierska\FoodSearch\FoodSearch.Presentation.Mobile.Android\o
 D:\projekty\PracaInzynierska\FoodSearch\FoodSearch.Presentation.Mobile.Android\obj\Debug\res\drawable\icon.png
 D:\projekty\PracaInzynierska\FoodSearch\FoodSearch.Presentation.Mobile.Android\obj\Debug\R.cs.flag
 D:\projekty\PracaInzynierska\FoodSearch\FoodSearch.Presentation.Mobile.Android\obj\Debug\uploadflags.txt
+D:\projekty\PracaInzynierska\FoodSearch\FoodSearch.Presentation.Mobile.Android\obj\Debug\res\layout\streetitem.xml
+D:\projekty\PracaInzynierska\FoodSearch\FoodSearch.Presentation.Mobile.Android\obj\Debug\res\layout\streetnumber.xml

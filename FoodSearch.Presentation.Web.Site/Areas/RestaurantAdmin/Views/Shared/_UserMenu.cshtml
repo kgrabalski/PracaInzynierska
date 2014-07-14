@@ -8,7 +8,7 @@
     <ul class="dropdown-menu">
 
         <li class="user-header bg-light-blue">
-            <img src="@Url.Action("GetImage", "Home", new {area = "", imageId = Model.RestaurantLogoId})" class="img-circle" alt="@Model.RestaurantName" />
+            <img src="/Home/GetImage?imageId=@Model.RestaurantLogoId" class="img-circle" alt="@Model.RestaurantName" />
             <p>
                 @string.Format("{0} {1}", Model.FirstName, Model.LastName)
                 <small>@Model.RestaurantName</small>

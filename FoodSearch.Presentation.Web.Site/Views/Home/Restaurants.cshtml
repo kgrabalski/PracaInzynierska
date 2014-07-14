@@ -32,10 +32,10 @@
             @Html.DisplayFor(modelItem => item.RestaurantId)
         </td>
         <td>
-            <a href="@Url.Action("RestaurantDishes", "Home", new {restaurantId = item.RestaurantId})">@item.RestaurantName</a>
+            <a href="/Home/RestaurantDishes?restaurantId=@item.RestaurantId">@item.RestaurantName</a>
         </td>
         <td>
-            <img src="@Url.Action("GetImage", "Home", new {imageId = item.LogoId})"/>
+            <img src="/Home/GetImage?imageId=@item.LogoId"/>
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.TimeFrom)

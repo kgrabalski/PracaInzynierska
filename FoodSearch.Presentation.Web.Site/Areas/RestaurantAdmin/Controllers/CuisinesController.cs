@@ -37,8 +37,8 @@ namespace FoodSearch.Presentation.Web.Site.Areas.RestaurantAdmin.Controllers
         [HttpPost]
         public ActionResult AddRestaurantCuisine(RestaurantUser restUser, int cuisineId)
         {
-            _domain.RestaurantAdmin.AddRestaurantCuisine(restUser.RestaurantId, cuisineId);
-            return Json("ok", JsonRequestBehavior.DenyGet);
+            bool success = _domain.RestaurantAdmin.AddRestaurantCuisine(restUser.RestaurantId, cuisineId);
+            return Json(success, JsonRequestBehavior.DenyGet);
         }
 
         [HttpPost]

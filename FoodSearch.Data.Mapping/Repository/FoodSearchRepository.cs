@@ -12,23 +12,23 @@ namespace FoodSearch.Data.Mapping.Repository
 {
     public class FoodSearchRepository<T> : IRepository<T> where T : class
     {
-        private readonly ISession session;
+        private readonly ISession _session;
 
         public FoodSearchRepository(ISessionSource sessionSource)
         {
-            session = sessionSource.Session;
+            _session = sessionSource.Session;
         }
 
         public T Get<TId>(TId id) where TId : struct
         {
-            return session.Get<T>(id);
+            return _session.Get<T>(id);
         }
 
         public TId Create<TId>(T value) where TId : struct
         {
-            using (var transaction = session.BeginTransaction())
+            using (var transaction = _session.BeginTransaction())
             {
-                TId id = (TId)session.Save(value);
+                TId id = (TId)_session.Save(value);
                 transaction.Commit();
                 return id;
             }
@@ -36,18 +36,18 @@ namespace FoodSearch.Data.Mapping.Repository
 
         public void Update(T value)
         {
-            using (var transaction = session.BeginTransaction())
+            using (var transaction = _session.BeginTransaction())
             {
-                session.Update(value);
+                _session.Update(value);
                 transaction.Commit();
             }
         }
 
         public void Delete(T value)
         {
-            using (var transaction = session.BeginTransaction())
+            using (var transaction = _session.BeginTransaction())
             {
-                session.Delete(value);
+                _session.Delete(value);
                 transaction.Commit();
             }
         }
@@ -55,21 +55,21 @@ namespace FoodSearch.Data.Mapping.Repository
         public void Delete<TId>(TId id) where TId : struct
         {
             T item = Get<TId>(id);
-            using (var transaction = session.BeginTransaction())
+            using (var transaction = _session.BeginTransaction())
             {
-                session.Delete(item);
+                _session.Delete(item);
                 transaction.Commit();
             }
         }
 
         public IQueryOver<T, T> GetAll()
         {
-            return session.QueryOver<T>();
+            return _session.QueryOver<T>();
         }
 
         public void Dispose()
         {
-            session.Dispose();
+            _session.Dispose();
         }
     }
 }

@@ -47,9 +47,6 @@ namespace FoodSearch.Presentation.Mobile.Android
 			// aapt resource value: 0x7f020000
 			public const int Icon = 2130837504;
 			
-			// aapt resource value: 0x7f020001
-			public const int monoandroidsplash = 2130837505;
-			
 			static Drawable()
 			{
 				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
@@ -63,20 +60,20 @@ namespace FoodSearch.Presentation.Mobile.Android
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f060004
-			public const int itemName = 2131099652;
+			// aapt resource value: 0x7f050004
+			public const int itemName = 2131034116;
 			
-			// aapt resource value: 0x7f060001
-			public const int searchStreet = 2131099649;
+			// aapt resource value: 0x7f050001
+			public const int searchStreet = 2131034113;
 			
-			// aapt resource value: 0x7f060000
-			public const int streetName = 2131099648;
+			// aapt resource value: 0x7f050000
+			public const int streetName = 2131034112;
 			
-			// aapt resource value: 0x7f060003
-			public const int streetNumbersList = 2131099651;
+			// aapt resource value: 0x7f050003
+			public const int streetNumbersList = 2131034115;
 			
-			// aapt resource value: 0x7f060002
-			public const int streetsList = 2131099650;
+			// aapt resource value: 0x7f050002
+			public const int streetsList = 2131034114;
 			
 			static Id()
 			{
@@ -125,22 +122,6 @@ namespace FoodSearch.Presentation.Mobile.Android
 			}
 			
 			private String()
-			{
-			}
-		}
-		
-		public partial class Style
-		{
-			
-			// aapt resource value: 0x7f050000
-			public const int Mono_Android_Theme_Splash = 2131034112;
-			
-			static Style()
-			{
-				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
-			}
-			
-			private Style()
 			{
 			}
 		}
