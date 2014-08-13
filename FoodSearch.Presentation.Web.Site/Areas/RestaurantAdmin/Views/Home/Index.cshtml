@@ -16,15 +16,22 @@
 
 @section ScriptSection
 {
-    <script type="text/javascript" src="~/Scripts/jquery.dataTables.js"></script>
-    <script type="text/javascript" src="~/Scripts/dataTables.bootstrap.js"></script>
-    <script type="text/javascript" src="~/Scripts/selectize.min.js"></script>
-    <script type="text/javascript" src="~/Scripts/bootstrap-timepicker.min.js"></script>
-    <script type="text/javascript" src="~/Areas/RestaurantAdmin/Scripts/OpeningHoursViewModel.js"></script>
-    <script type="text/javascript" src="~/Areas/RestaurantAdmin/Scripts/CuisinesViewModel.js"></script>
-    <script type="text/javascript" src="~/Areas/RestaurantAdmin/Scripts/DishGroupsViewModel.js"></script>
-    <script type="text/javascript" src="~/Areas/RestaurantAdmin/Scripts/DishesViewModel.js"></script>
-    <script type="text/javascript" src="~/Areas/RestaurantAdmin/Scripts/CommonViewModel.js"></script>
+    @*<script type="text/javascript" src="~/Scripts/jquery.dataTables.js"></script>*@
+    @*<script type="text/javascript" src="~/Scripts/dataTables.bootstrap.js"></script>*@
+    @*<script type="text/javascript" src="~/Scripts/selectize.min.js"></script>*@
+    @*<script type="text/javascript" src="~/Scripts/bootstrap-timepicker.min.js"></script>*@
+    @*<script type="text/javascript" src="~/Areas/RestaurantAdmin/Scripts/OpeningHoursViewModel.js"></script>*@
+    @*<script type="text/javascript" src="~/Areas/RestaurantAdmin/Scripts/CuisinesViewModel.js"></script>*@
+    @*<script type="text/javascript" src="~/Areas/RestaurantAdmin/Scripts/DishGroupsViewModel.js"></script>*@
+    @*<script type="text/javascript" src="~/Areas/RestaurantAdmin/Scripts/DishesViewModel.js"></script>*@
+    @*<script type="text/javascript" src="~/Areas/RestaurantAdmin/Scripts/CommonViewModel.js"></script>*@
+    <script src="~/Scripts/Admin/Common/directives.js"></script>
+    <script src="~/Scripts/Admin/RestaurantAdmin/app.js"></script>
+    <script src="~/Scripts/Admin/RestaurantAdmin/controller/controllersEmployee.js"></script>
+    @if (User.IsInRole(UserTypes.RestaurantAdmin.ToString()))
+    {
+        <script src="~/Scripts/Admin/RestaurantAdmin/controller/controllersAdmin.js"></script>
+    }
 }
 
 <div class="wrapper row-offcanvas row-offcanvas-left">
@@ -40,74 +47,113 @@
                 </div>
             </div>
 
-            <ul class="sidebar-menu">
-                <li class="active">
-                    <a href="#" data-page="pageDashboard">
-                        <i class="fa fa-dashboard"></i> <span>Dashboard</span>
+            <sidebarmenu>
+                <sidebarmenuitem>
+                    <a href="@Url.Action("", new {area="RestaurantAdmin"})">
+                        <i class=" fa fa-dashboard"></i> <span>Dashboard</span>
                     </a>
-                </li>
-                <li>
-                    <a href="#" data-page="pageOrders">
+                </sidebarmenuitem>
+                <sidebarmenuitem>
+                    <a href="/RestaurantAdmin#/orders">
                         <i class="fa fa-edit"></i> <span>Zamówienia</span>
                     </a>
-                </li>
-                <li class="treeview">
-                    <a href="#">
-                        <i class="fa fa-table"></i> <span>Menu</span>
-                        <i class="fa fa-angle-left pull-right"></i>
+                </sidebarmenuitem>
+                <sidebarmenuitem>
+                    <a href="/RestaurantAdmin#/dishes">
+                        <i class="fa fa-cutlery"></i> <span>Dania</span>
                     </a>
-                    <ul class="treeview-menu">
-                        <li><a href="#" data-page="pageDishes"><i class="fa fa-angle-double-right"></i>Dania</a></li>
-                        <li><a href="#" data-page="pageDishGroups"><i class="fa fa-angle-double-right"></i>Grupy dań</a></li>
-                        <li><a href="#" data-page="pageCuisines"><i class="fa fa-angle-double-right"></i>Kuchnie</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="#" data-page="pageRestaurant">
-                        <i class="fa fa-th"></i> <span>Restauracja</span>
+                </sidebarmenuitem>
+                <sidebarmenuitem>
+                    <a href="/RestaurantAdmin#/dishGroups">
+                        <i class="fa fa-book"></i> <span>Grupy dań</span>
                     </a>
-                </li>
+                </sidebarmenuitem>
+                <sidebarmenuitem>
+                    <a href="/RestaurantAdmin#/cuisines">
+                        <i class="fa fa-list"></i> <span>Kuchnie</span>
+                    </a>
+                </sidebarmenuitem>
+                
+
                 @if (User.IsInRole(UserTypes.RestaurantAdmin.ToString()))
                 {
-                    <li>
-                        <a href="#" data-page="pageOpeningHours">
+                    <sidebarmenuitem>
+                        <a href="/RestaurantAdmin#/restaurant">
+                            <i class="fa fa-cog"></i> <span>Restauracja</span>
+                        </a>
+                    </sidebarmenuitem>
+                    <sidebarmenuitem>
+                        <a href="/RestaurantAdmin#/openingHours">
                             <i class="fa fa-clock-o"></i> <span>Godziny otwarcia</span>
                         </a>
-                    </li>
-                    <li>
-                        <a href="#" data-page="pageOpinions">
-                            <i class="fa fa-th"></i> <span>Opinie</span>
+                    </sidebarmenuitem>
+                    <sidebarmenuitem>
+                        <a href="/RestaurantAdmin#/opinions">
+                            <i class="fa fa-comments"></i> <span>Opinie</span>
                         </a>
-                    </li>
-                    <li>
-                        <a href="#" data-page="pageReports">
+                    </sidebarmenuitem>
+                    <sidebarmenuitem>
+                        <a href="/RestaurantAdmin#/reports">
                             <i class="fa fa-bar-chart-o"></i> <span>Raporty</span>
                         </a>
-                    </li>
-                    <li>
-                        <a href="#" data-page="pageEmployees">
-                            <i class="fa fa-users"></i> <span>Pracownicy</span>
+                    </sidebarmenuitem>
+                    <sidebarmenuitem>
+                        <a href="/RestaurantAdmin#/employees">
+                            <i class="fa fa-user"></i> <span>Pracownicy</span>
                         </a>
-                    </li>
-                    
+                    </sidebarmenuitem>
+
                 }
-            </ul>
+            </sidebarmenu>
+
+
+
         </section>
     </aside>
 
-    @{
-        Html.RenderPartial("_Dashboard");
-        Html.RenderPartial("_Orders");
-        Html.RenderPartial("_Dishes");
-        Html.RenderPartial("_DishGroups");
-        Html.RenderPartial("_Cuisines");
-        Html.RenderPartial("_Restaurant");
-        if (User.IsInRole(UserTypes.RestaurantAdmin.ToString()))
-        {
-            Html.RenderPartial("_OpeningHours");
-            Html.RenderPartial("_Opinions");
-            Html.RenderPartial("_Reports");
-            Html.RenderPartial("_Employees");
-        }
-    }
+    <div ng-view></div>
 </div>
+
+<script type="text/ng-template" id="dashboardTemplate">
+    @{ Html.RenderPartial("_Dashboard"); }
+</script>
+
+<script type="text/ng-template" id="ordersTemplate">
+    @{ Html.RenderPartial("_Orders");}
+</script>
+
+<script type="text/ng-template" id="dishesTemplate">
+    @{ Html.RenderPartial("_Dishes");}
+</script>
+
+<script type="text/ng-template" id="dishGroupsTemplate">
+    @{ Html.RenderPartial("_DishGroups");}
+</script>
+
+<script type="text/ng-template" id="cuisinesTemplate">
+    @{ Html.RenderPartial("_Cuisines");}
+</script>
+
+
+@if (User.IsInRole(UserTypes.RestaurantAdmin.ToString()))
+{
+    <script type="text/ng-template" id="restaurantTemplate">
+        @{ Html.RenderPartial("_Restaurant");}
+    </script>
+
+    <script type="text/ng-template" id="openingHoursTemplate">
+        @{ Html.RenderPartial("_OpeningHours"); }
+    </script>
+
+    <script type="text/ng-template" id="opinionsTemplate">
+        @{ Html.RenderPartial("_Opinions"); }
+    </script>
+
+    <script type="text/ng-template" id="reportsTemplate">
+        @{ Html.RenderPartial("_Reports"); }
+    </script>
+
+    <script type="text/ng-template" id="employeesTemplate">
+        @{ Html.RenderPartial("_Employees"); }
+    </script>
+}

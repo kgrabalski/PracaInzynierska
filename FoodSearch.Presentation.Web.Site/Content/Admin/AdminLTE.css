@@ -2483,6 +2483,10 @@ Component: timeline
   color: #222;
   background: #f9f9f9;
 }
+.skin-blue .sidebar > .sidebar-menu > li.active-true > a {
+  color: #222;
+  background: #f9f9f9;
+}
 .skin-blue .sidebar > .sidebar-menu > li > .treeview-menu {
   margin: 0 1px;
   background: #f9f9f9;

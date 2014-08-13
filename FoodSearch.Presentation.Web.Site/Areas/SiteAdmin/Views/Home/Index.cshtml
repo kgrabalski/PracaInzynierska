@@ -1,21 +1,23 @@
-﻿
-@{
+﻿@{
     ViewBag.Title = "Index";
     Layout = "~/Areas/SiteAdmin/Views/Shared/_Layout.cshtml";
 }
 
 @section HeadSection
 {
-    <link rel="stylesheet" href="~/Content/selectize.css"/>
+    <link rel="stylesheet" href="~/Content/selectize.css" />
 }
 
 @section ScriptSection
 {
-    <script type="text/javascript" src="~/Scripts/jquery.dataTables.js"></script>
-    <script type="text/javascript" src="~/Scripts/dataTables.bootstrap.js"></script>
-    <script type="text/javascript" src="~/Scripts/selectize.min.js"></script>
-    <script type="text/javascript" src="~/Areas/SiteAdmin/Scripts/RestaurantsViewModel.js"></script>
-    <script type="text/javascript" src="~/Areas/SiteAdmin/Scripts/CommonViewModel.js"></script>
+    @*<script type="text/javascript" src="~/Scripts/jquery.dataTables.js"></script>*@
+    @*<script type="text/javascript" src="~/Scripts/dataTables.bootstrap.js"></script>*@
+    @*<script type="text/javascript" src="~/Scripts/selectize.min.js"></script>*@
+    @*<script type="text/javascript" src="~/Areas/SiteAdmin/Scripts/RestaurantsViewModel.js"></script>*@
+    @*<script type="text/javascript" src="~/Areas/SiteAdmin/Scripts/CommonViewModel.js"></script>*@
+    <script src="~/Scripts/Admin/Common/directives.js"></script>
+    <script src="~/Scripts/Admin/SiteAdmin/app.js"></script>
+    <script src="~/Scripts/Admin/SiteAdmin/controller/controllers.js"></script>
 }
 
 <div class="wrapper row-offcanvas row-offcanvas-left">
@@ -31,29 +33,35 @@
                 </div>
             </div>
 
-            <ul class="sidebar-menu">
-                <li class="active">
-                    <a href="#" data-page="pageDashboard">
+            <sidebarmenu>
+                <sidebarmenuitem >
+                    <a href="@Url.Action("", new {area = "SiteAdmin"})">
                         <i class="fa fa-dashboard"></i> <span>Dashboard</span>
                     </a>
-                </li>
-                <li>
-                    <a href="#" data-page="pageRestaurants">
-                        <i class="fa fa-th"></i> <span>Restauracje</span>
+                </sidebarmenuitem>
+                <sidebarmenuitem>
+                    <a href="/SiteAdmin#/restaurants">
+                        <i class="fa fa-folder"></i> <span>Restauracje</span>
                     </a>
-                </li>
-                <li>
-                    <a href="#" data-page="pageUsers">
-                        <i class="fa fa-th"></i> <span>Użytkownicy</span>
+                </sidebarmenuitem>
+                <sidebarmenuitem>
+                    <a href="/SiteAdmin#/users">
+                        <i class="fa fa-user"></i> <span>Użytkownicy</span>
                     </a>
-                </li>
-            </ul>
+                </sidebarmenuitem>
+            </sidebarmenu>
         </section>
     </aside>
-
-    @{
-        Html.RenderPartial("_Dashboard");
-        Html.RenderPartial("_Restaurants");
-        Html.RenderPartial("_Users");
-    }
+    <div ng-view></div>
 </div>
+
+<script type="text/ng-template" id="dashboardTemplate">
+    @{ Html.RenderPartial("_Dashboard"); }
+</script>
+<script type="text/ng-template" id="restaurantsTemplate">
+    @{ Html.RenderPartial("_Restaurants"); }
+</script>
+
+<script type="text/ng-template" id="usersTemplate">
+    @{ Html.RenderPartial("_Users"); }
+</script>
