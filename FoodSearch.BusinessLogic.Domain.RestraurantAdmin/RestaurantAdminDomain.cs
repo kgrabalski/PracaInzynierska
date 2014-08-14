@@ -10,10 +10,17 @@ using FoodSearch.BusinessLogic.Domain.RestraurantAdmin.Models;
 using FoodSearch.Data.Mapping.Entities;
 using FoodSearch.Data.Mapping.Interface;
 
-using Cuisine = FoodSearch.BusinessLogic.Domain.RestraurantAdmin.Models.Cuisine;
-using Dish = FoodSearch.BusinessLogic.Domain.RestraurantAdmin.Models.Dish;
-using DishGroup = FoodSearch.BusinessLogic.Domain.RestraurantAdmin.Models.DishGroup;
-using OpeningHour = FoodSearch.BusinessLogic.Domain.RestraurantAdmin.Models.OpeningHour;
+using CuisineDto = FoodSearch.BusinessLogic.Domain.RestraurantAdmin.Models.Cuisine;
+using Cuisine = FoodSearch.Data.Mapping.Entities.Cuisine;
+
+using DishDto = FoodSearch.BusinessLogic.Domain.RestraurantAdmin.Models.Dish;
+using Dish = FoodSearch.Data.Mapping.Entities.Dish;
+
+using DishGroupDto = FoodSearch.BusinessLogic.Domain.RestraurantAdmin.Models.DishGroup;
+using DishGroup = FoodSearch.Data.Mapping.Entities.DishGroup;
+
+using OpeningHourDto = FoodSearch.BusinessLogic.Domain.RestraurantAdmin.Models.OpeningHour;
+using OpeningHour = FoodSearch.Data.Mapping.Entities.OpeningHour;
 
 namespace FoodSearch.BusinessLogic.Domain.RestraurantAdmin
 {
@@ -64,24 +71,23 @@ namespace FoodSearch.BusinessLogic.Domain.RestraurantAdmin
             }
         }
 
-        public IEnumerable<Cuisine> GetCuisines()
+        public IEnumerable<CuisineDto> GetCuisines()
         {
-            using (var rep = _provider.GetRepository<FoodSearch.Data.Mapping.Entities.Cuisine>())
+            using (var rep = _provider.GetRepository<Cuisine>())
             {
-                return rep.GetAll().List().Map<IEnumerable<Cuisine>>();
+                return rep.GetAll().List().Map<IEnumerable<CuisineDto>>();
             }
         }
 
-        public IEnumerable<Cuisine> GetRestaurantCuisines(Guid restaurantId)
+        public IEnumerable<CuisineDto> GetRestaurantCuisines(Guid restaurantId)
         {
             using (var rep = _provider.GetRepository<RestaurantCuisine>())
             {
                 return rep.GetAll()
                     .Where(x => x.RestaurantId == restaurantId)
                     .Select(x => x.Cuisine)
-                    .List()
-                    .ToList()
-                    .Map<IEnumerable<Cuisine>>();
+                    .List<Cuisine>()
+                    .Map<IEnumerable<CuisineDto>>();
             }
         }
 
@@ -108,20 +114,23 @@ namespace FoodSearch.BusinessLogic.Domain.RestraurantAdmin
             {
                 var rc = rep.GetAll()
                     .Where(x => x.RestaurantId == restaurantId && x.CuisineId == cuisineId)
-                    .List().First();
+                    .SingleOrDefault();
+
+                if (rc == null) return false;
+
                 rep.Delete(rc);
                 return true;
             }
         }
 
-        public IEnumerable<DishGroup> GetDishGroups(Guid restaurantId)
+        public IEnumerable<DishGroupDto> GetDishGroups(Guid restaurantId)
         {
-            using (var rep = _provider.GetRepository<Data.Mapping.Entities.DishGroup>())
+            using (var rep = _provider.GetRepository<DishGroup>())
             {
                 return rep.GetAll()
                     .Where(x => x.RestaurantId == restaurantId)
                     .List()
-                    .Map<IEnumerable<DishGroup>>();
+                    .Map<IEnumerable<DishGroupDto>>();
             }
         }
 
@@ -155,28 +164,28 @@ namespace FoodSearch.BusinessLogic.Domain.RestraurantAdmin
             }
         }
 
-        public IEnumerable<Dish> GetDishes(Guid restaurantId, int? dishId = null)
+        public IEnumerable<DishDto> GetDishes(Guid restaurantId, int? dishId = null)
         {
-            using (var rep = _provider.GetRepository<Data.Mapping.Entities.Dish>())
+            using (var rep = _provider.GetRepository<Dish>())
             {
                 if (dishId.HasValue)
                 {
-                    return new[] { rep.Get(dishId.Value) }.Map<IEnumerable<Dish>>();
+                    return new[] { rep.Get(dishId.Value) }.Map<IEnumerable<DishDto>>();
                 }
                 return rep.GetAll()
                     .Where(x => x.RestauraintId == restaurantId)
                     .OrderBy(x => x.DishGroup).Asc
                     .ThenBy(x => x.DishName).Asc
                     .List()
-                    .Map<IEnumerable<Dish>>();
+                    .Map<IEnumerable<DishDto>>();
             }
         }
 
         public int CreateDish(Guid restaurantId, string dishName, int dishGroupId, float price)
         {
-            using (var rep = _provider.GetRepository<Data.Mapping.Entities.Dish>())
+            using (var rep = _provider.GetRepository<Dish>())
             {
-                return rep.Create<int>(new Data.Mapping.Entities.Dish()
+                return rep.Create<int>(new Dish()
                 {
                     RestauraintId = restaurantId,
                     DishName = dishName,
@@ -208,9 +217,9 @@ namespace FoodSearch.BusinessLogic.Domain.RestraurantAdmin
             }
         }
 
-        public IEnumerable<OpeningHour> GetOpeningHours(Guid restaurantId, int? openingHourId = null)
+        public IEnumerable<OpeningHourDto> GetOpeningHours(Guid restaurantId, int? openingHourId = null)
         {
-            using (var rep = _provider.GetRepository<Data.Mapping.Entities.OpeningHour>())
+            using (var rep = _provider.GetRepository<OpeningHour>())
             {
                 if (!openingHourId.HasValue)
                     return rep.GetAll()
@@ -218,10 +227,10 @@ namespace FoodSearch.BusinessLogic.Domain.RestraurantAdmin
                         .OrderBy(x => x.Day).Asc
                         .ThenBy(x => x.TimeFrom).Asc
                         .List()
-                        .Map<IEnumerable<OpeningHour>>();
+                        .Map<IEnumerable<OpeningHourDto>>();
 
                 var oh = rep.Get(openingHourId.Value);
-                return new[] {oh}.Map<IEnumerable<OpeningHour>>();
+                return new[] {oh}.Map<IEnumerable<OpeningHourDto>>();
             }
         }
 

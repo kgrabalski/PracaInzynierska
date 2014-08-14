@@ -15,16 +15,16 @@ using FoodSearch.Data.Mapping.StoredProcedure.Results;
 using NHibernate.Criterion;
 using NHibernate.Transform;
 
-using District = FoodSearch.BusinessLogic.Domain.Core.Models.District;
-using DistrictEnt = FoodSearch.Data.Mapping.Entities.District;
+using DistrictDto = FoodSearch.BusinessLogic.Domain.Core.Models.District;
+using District = FoodSearch.Data.Mapping.Entities.District;
 
-using Image = FoodSearch.BusinessLogic.Domain.Core.Models.Image;
-using ImageEnt = FoodSearch.Data.Mapping.Entities.Image;
+using ImageDto = FoodSearch.BusinessLogic.Domain.Core.Models.Image;
+using Image = FoodSearch.Data.Mapping.Entities.Image;
 
-using RestaurantInfo = FoodSearch.BusinessLogic.Domain.Core.Models.RestaurantInfo;
+using RestaurantInfoDto = FoodSearch.BusinessLogic.Domain.Core.Models.RestaurantInfo;
 
-using Street = FoodSearch.BusinessLogic.Domain.Core.Models.Street;
-using StreetEnt = FoodSearch.Data.Mapping.Entities.Street;
+using StreetDto = FoodSearch.BusinessLogic.Domain.Core.Models.Street;
+using Street = FoodSearch.Data.Mapping.Entities.Street;
 
 namespace FoodSearch.BusinessLogic.Domain.Core
 {
@@ -37,35 +37,35 @@ namespace FoodSearch.BusinessLogic.Domain.Core
             _provider = provider;
         }
 
-        public IEnumerable<District> GetDistricts()
+        public IEnumerable<DistrictDto> GetDistricts()
         {
-            using (var rep = _provider.GetRepository<DistrictEnt>())
+            using (var rep = _provider.GetRepository<District>())
             {
-                return rep.GetAll().List().Map<IEnumerable<District>>();
+                return rep.GetAll().List().Map<IEnumerable<DistrictDto>>();
             }
         }
 
-        public IEnumerable<Street> GetStreets(string query)
+        public IEnumerable<StreetDto> GetStreets(string query)
         {
-            using (var rep = _provider.GetRepository<StreetEnt>())
+            using (var rep = _provider.GetRepository<Street>())
             {
                 return rep.GetAll()
                     .WhereRestrictionOn(x => x.Name)
                     .IsInsensitiveLike(query, MatchMode.Anywhere)
                     .List()
-                    .Map<IEnumerable<Street>>();
+                    .Map<IEnumerable<StreetDto>>();
             }
         }
 
-        public IEnumerable<Street> GetStreets(int districtId)
+        public IEnumerable<StreetDto> GetStreets(int districtId)
         {
             using (var repA = _provider.GetRepository<Address>())
             {
                 return repA.GetAll()
                     .Where(x => x.DistrictId == districtId)
                     .Select(x => x.Street)
-                    .List<StreetEnt>()
-                    .Map<IEnumerable<Street>>();
+                    .List<Street>()
+                    .Map<IEnumerable<StreetDto>>();
             }
         }
 
@@ -84,11 +84,11 @@ namespace FoodSearch.BusinessLogic.Domain.Core
             }
         }
 
-        public Image GetImage(int imageId)
+        public ImageDto GetImage(int imageId)
         {
-            using (var rep = _provider.GetRepository<ImageEnt>())
+            using (var rep = _provider.GetRepository<Image>())
             {
-                return rep.Get(imageId).Map<Image>();
+                return rep.Get(imageId).Map<ImageDto>();
             }
         }
 
@@ -104,11 +104,11 @@ namespace FoodSearch.BusinessLogic.Domain.Core
             }
         }
 
-        public IEnumerable<RestaurantInfo> GetRestaurants(int addressId, DateTime date)
+        public IEnumerable<RestaurantInfoDto> GetRestaurants(int addressId, DateTime date)
         {
             using (var rep = _provider.StoredProcedure)
             {
-                return rep.GetRestaurants(addressId, date).Map<IEnumerable<RestaurantInfo>>();
+                return rep.GetRestaurants(addressId, date).Map<IEnumerable<RestaurantInfoDto>>();
             }
         }
     }

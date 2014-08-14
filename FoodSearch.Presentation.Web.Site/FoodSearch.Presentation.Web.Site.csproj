@@ -150,10 +150,8 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Areas\RestaurantAdmin\Controllers\AccountController.cs" />
     <Compile Include="Areas\RestaurantAdmin\Controllers\CuisineController.cs" />
-    <Compile Include="Areas\RestaurantAdmin\Controllers\DishesController.cs" />
-    <Compile Include="Areas\RestaurantAdmin\Controllers\DishGroupsController.cs" />
     <Compile Include="Areas\RestaurantAdmin\Controllers\HomeController.cs" />
-    <Compile Include="Areas\RestaurantAdmin\Controllers\OpeningHoursController.cs" />
+    <Compile Include="Areas\RestaurantAdmin\Controllers\RestaurantCuisineController.cs" />
     <Compile Include="Areas\RestaurantAdmin\RestaurantAdminAreaRegistration.cs" />
     <Compile Include="Areas\SiteAdmin\Controllers\AccountController.cs" />
     <Compile Include="Areas\SiteAdmin\Controllers\HomeController.cs" />
@@ -167,7 +165,11 @@
     </Compile>
     <Compile Include="Helpers\AreaAuthorizeAttribute.cs" />
     <Compile Include="Helpers\CompressAttribute.cs" />
+    <Compile Include="Helpers\MyHttpControllerHandler.cs" />
+    <Compile Include="Helpers\MyHttpControllerRouteHandler.cs" />
+    <Compile Include="Helpers\RestaurantUserModelBinderProvider.cs" />
     <Compile Include="Helpers\RestaurantUserModelBinder.cs" />
+    <Compile Include="Helpers\RestaurantUserModelBinderWebApi.cs" />
     <Compile Include="Models\RestaurantUser.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Providers\CreateUserResult.cs" />

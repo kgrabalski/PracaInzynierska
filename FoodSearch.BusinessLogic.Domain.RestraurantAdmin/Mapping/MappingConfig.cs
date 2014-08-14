@@ -14,11 +14,15 @@ namespace FoodSearch.BusinessLogic.Domain.RestraurantAdmin.Mapping
     {
         static MappingConfig()
         {
-            Mapper.CreateMap<Data.Mapping.Entities.Cuisine, Cuisine>();
+            Mapper.CreateMap<Data.Mapping.Entities.Cuisine, Cuisine>()
+                .ForMember(x => x.Id, x => x.MapFrom(y => y.CuisineId));
 
-            Mapper.CreateMap<Data.Mapping.Entities.DishGroup, DishGroup>();
+            Mapper.CreateMap<Data.Mapping.Entities.DishGroup, DishGroup>()
+                .ForMember(x => x.Id, x => x.MapFrom(y => y.DishGroupId))
+                .ForSourceMember(x => x.RestaurantId, x => x.Ignore());
 
             Mapper.CreateMap<Data.Mapping.Entities.Dish, Dish>()
+                .ForMember(x => x.Id, x => x.MapFrom(y => y.DishId))
                 .ForSourceMember(x => x.RestauraintId, x => x.Ignore())
                 .ForSourceMember(x => x.Restaurant, x => x.Ignore())
                 .ForMember(x => x.Price, x => x.ResolveUsing(y => y.Price.ToString("0.00")))

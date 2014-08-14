@@ -7,6 +7,8 @@ using System.Web.Mvc;
 using FoodSearch.BusinessLogic.Domain.FoodSearch.Interface;
 using FoodSearch.Presentation.Web.Site.Models;
 
+using Ninject;
+
 namespace FoodSearch.Presentation.Web.Site.Helpers
 {
     public class RestaurantUserModelBinder : IModelBinder
@@ -18,6 +20,11 @@ namespace FoodSearch.Presentation.Web.Site.Helpers
         {
             _domain = domain;
         }
+
+        //public RestaurantUserModelBinder() : this(MvcApplication.DependencyResolver.Get<IFoodSearchDomain>())
+        //{
+            
+        //}
 
         public object BindModel(ControllerContext controllerContext, ModelBindingContext bindingContext)
         {

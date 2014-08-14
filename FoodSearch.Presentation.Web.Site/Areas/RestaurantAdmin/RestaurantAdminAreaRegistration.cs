@@ -1,6 +1,8 @@
 ﻿using System.Web.Http;
 using System.Web.Mvc;
 
+using FoodSearch.Presentation.Web.Site.Helpers;
+
 namespace FoodSearch.Presentation.Web.Site.Areas.RestaurantAdmin
 {
     public class RestaurantAdminAreaRegistration : AreaRegistration 
@@ -19,7 +21,8 @@ namespace FoodSearch.Presentation.Web.Site.Areas.RestaurantAdmin
                 name: "RestaurantAdmin_api",
                 routeTemplate: "RestaurantAdmin/api/{controller}/{id}",
                 defaults: new { area = "RestaurantAdmin", id = RouteParameter.Optional }
-            );
+            )
+            .RouteHandler = new MyHttpControllerRouteHandler();
 
             context.MapRoute(
                 "RestaurantAdmin_default",

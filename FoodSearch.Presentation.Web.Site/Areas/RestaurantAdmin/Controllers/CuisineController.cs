@@ -21,7 +21,7 @@ namespace FoodSearch.Presentation.Web.Site.Areas.RestaurantAdmin.Controllers
             _domain = domain;
         }
 
-        // GET api/<controller>
+        //api/Cuisine
         public IEnumerable<Cuisine> Get()
         {
             return _domain.RestaurantAdmin.GetCuisines();

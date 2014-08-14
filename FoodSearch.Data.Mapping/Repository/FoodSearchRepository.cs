@@ -24,6 +24,20 @@ namespace FoodSearch.Data.Mapping.Repository
             return _session.Get<T>(id);
         }
 
+        public bool TryGet<TId>(TId id, out T entity) where TId : struct
+        {
+            try
+            {
+                entity = Get(id);
+                return true;
+            }
+            catch (Exception)
+            {
+                entity = default(T);
+                return false;
+            }
+        }
+
         public TId Create<TId>(T value) where TId : struct
         {
             using (var transaction = _session.BeginTransaction())
@@ -54,11 +68,40 @@ namespace FoodSearch.Data.Mapping.Repository
 
         public void Delete<TId>(TId id) where TId : struct
         {
-            T item = Get<TId>(id);
             using (var transaction = _session.BeginTransaction())
             {
+                T item;
+                if (!TryGet(id, out item)) return;
+
                 _session.Delete(item);
                 transaction.Commit();
+            }
+        }
+
+        public bool TryDelete(T value)
+        {
+            try
+            {
+                Delete(value);
+                return false;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+        }
+
+        public bool TryDelete<TId>(TId id) where TId : struct
+        {
+            try
+            {
+                Delete(id);
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
+                throw;
             }
         }
 
