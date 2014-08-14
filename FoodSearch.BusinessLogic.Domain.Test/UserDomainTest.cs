@@ -10,31 +10,13 @@ using FoodSearch.BusinessLogic.Domain.User.Interface;
 using FoodSearch.Data.Mapping.Interface;
 using FoodSearch.Data.Mapping.Repository;
 
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NUnit.Framework;
 
 namespace FoodSearch.BusinessLogic.Domain.Test
 {
-    [TestClass]
-    public class UserDomainTest
+    [TestFixture(Category = "UserDomain integration tests")]
+    public class UserDomainTest : DomainTest<UserDomain>
     {
-        private ISessionSource sessionSource;
-        private IRepositoryProvider provider;
-        private IUserDomain domain;
 
-        [TestInitialize]
-        public void BusinessLogic_Domain_User_InitializeTest()
-        {
-            sessionSource = new SessionSource(Databases.FoodSearchTest);
-            provider = new FoodSearchRepositoryProvider(sessionSource);
-            domain = new UserDomain(provider);
-        }
-
-        [TestMethod]
-        public void BusinessLogic_Domain_User_CreateUser()
-        {
-            SHA256 sha = new SHA256Cng();
-            var passwordHash = sha.ComputeHash(Encoding.UTF8.GetBytes("admin"));
-            var userId = domain.CreateUser("admin", "Krzysztof", "Grabalski", "kgrabalski@poczta.onet.pl", passwordHash);
-        }
     }
 }

@@ -35,6 +35,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="nunit.framework">
+      <HintPath>..\packages\NUnit.2.6.3\lib\nunit.framework.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
   </ItemGroup>
   <Choose>
@@ -43,14 +46,11 @@
         <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
       </ItemGroup>
     </When>
-    <Otherwise>
-      <ItemGroup>
-        <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework" />
-      </ItemGroup>
-    </Otherwise>
+    <Otherwise />
   </Choose>
   <ItemGroup>
     <Compile Include="CoreDomainTest.cs" />
+    <Compile Include="DomainTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RestaurantAdminDomainTest.cs" />
     <Compile Include="SiteAdminDomainTest.cs" />
@@ -77,10 +77,17 @@
       <Project>{c62d4eaf-4ee1-4f2e-96ea-0c630ffd59eb}</Project>
       <Name>FoodSearch.BusinessLogic.Domain.User</Name>
     </ProjectReference>
+    <ProjectReference Include="..\FoodSearch.Data.Mapping.Test\FoodSearch.Data.Mapping.Test.csproj">
+      <Project>{3466015A-0C4A-429D-A7C3-A46F11682FFF}</Project>
+      <Name>FoodSearch.Data.Mapping.Test</Name>
+    </ProjectReference>
     <ProjectReference Include="..\FoodSearch.Data.Mapping\FoodSearch.Data.Mapping.csproj">
       <Project>{3c7d76ad-3b68-4eb6-9a15-560d4773fb24}</Project>
       <Name>FoodSearch.Data.Mapping</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">

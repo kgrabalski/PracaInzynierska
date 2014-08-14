@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 using FoodSearch.BusinessLogic.Domain.Core.Interface;
+using FoodSearch.BusinessLogic.Domain.Core.Mapping;
 using FoodSearch.BusinessLogic.Domain.Core.Models;
 using FoodSearch.Data.Mapping.Entities;
 using FoodSearch.Data.Mapping.Interface;
@@ -13,6 +14,17 @@ using FoodSearch.Data.Mapping.StoredProcedure.Results;
 
 using NHibernate.Criterion;
 using NHibernate.Transform;
+
+using District = FoodSearch.BusinessLogic.Domain.Core.Models.District;
+using DistrictEnt = FoodSearch.Data.Mapping.Entities.District;
+
+using Image = FoodSearch.BusinessLogic.Domain.Core.Models.Image;
+using ImageEnt = FoodSearch.Data.Mapping.Entities.Image;
+
+using RestaurantInfo = FoodSearch.BusinessLogic.Domain.Core.Models.RestaurantInfo;
+
+using Street = FoodSearch.BusinessLogic.Domain.Core.Models.Street;
+using StreetEnt = FoodSearch.Data.Mapping.Entities.Street;
 
 namespace FoodSearch.BusinessLogic.Domain.Core
 {
@@ -27,21 +39,21 @@ namespace FoodSearch.BusinessLogic.Domain.Core
 
         public IEnumerable<District> GetDistricts()
         {
-            using (var rep = _provider.GetRepository<District>())
+            using (var rep = _provider.GetRepository<DistrictEnt>())
             {
-                return rep.GetAll().List();
+                return rep.GetAll().List().Map<IEnumerable<District>>();
             }
         }
 
         public IEnumerable<Street> GetStreets(string query)
         {
-            using (var rep = _provider.GetRepository<Street>())
+            using (var rep = _provider.GetRepository<StreetEnt>())
             {
                 return rep.GetAll()
                     .WhereRestrictionOn(x => x.Name)
                     .IsInsensitiveLike(query, MatchMode.Anywhere)
                     .List()
-                    .ToList();
+                    .Map<IEnumerable<Street>>();
             }
         }
 
@@ -52,8 +64,8 @@ namespace FoodSearch.BusinessLogic.Domain.Core
                 return repA.GetAll()
                     .Where(x => x.DistrictId == districtId)
                     .Select(x => x.Street)
-                    .List<Street>()
-                    .ToList();
+                    .List<StreetEnt>()
+                    .Map<IEnumerable<Street>>();
             }
         }
 
@@ -72,19 +84,11 @@ namespace FoodSearch.BusinessLogic.Domain.Core
             }
         }
 
-        public Address GetAddress(int addressId)
-        {
-            using (var rep = _provider.GetRepository<Address>())
-            {
-                return rep.Get(addressId);
-            }
-        }
-
         public Image GetImage(int imageId)
         {
-            using (var rep = _provider.GetRepository<Image>())
+            using (var rep = _provider.GetRepository<ImageEnt>())
             {
-                return rep.Get(imageId);
+                return rep.Get(imageId).Map<Image>();
             }
         }
 
@@ -104,7 +108,7 @@ namespace FoodSearch.BusinessLogic.Domain.Core
         {
             using (var rep = _provider.StoredProcedure)
             {
-                return rep.GetRestaurants(addressId, date);
+                return rep.GetRestaurants(addressId, date).Map<IEnumerable<RestaurantInfo>>();
             }
         }
     }

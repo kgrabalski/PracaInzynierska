@@ -12,6 +12,7 @@ using FoodSearch.BusinessLogic.Domain.FoodSearch.Interface;
 using FoodSearch.Data.Mapping.Entities;
 using FoodSearch.Service.Contracts.Response;
 
+using RestaurantInfo = FoodSearch.Service.Contracts.Response.RestaurantInfo;
 using Street = FoodSearch.Service.Contracts.Response.Street;
 
 namespace FoodSearch.Service.FoodSearchService

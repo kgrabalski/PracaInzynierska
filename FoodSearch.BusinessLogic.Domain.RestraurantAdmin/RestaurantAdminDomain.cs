@@ -3,17 +3,17 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
-using System.Threading.Tasks;
-
-using CodeBits;
 
 using FoodSearch.BusinessLogic.Domain.RestraurantAdmin.Interface;
+using FoodSearch.BusinessLogic.Domain.RestraurantAdmin.Mapping;
 using FoodSearch.BusinessLogic.Domain.RestraurantAdmin.Models;
 using FoodSearch.Data.Mapping.Entities;
 using FoodSearch.Data.Mapping.Interface;
 
-using Dish = FoodSearch.Data.Mapping.Entities.Dish;
-using OpeningHour = FoodSearch.Data.Mapping.Entities.OpeningHour;
+using Cuisine = FoodSearch.BusinessLogic.Domain.RestraurantAdmin.Models.Cuisine;
+using Dish = FoodSearch.BusinessLogic.Domain.RestraurantAdmin.Models.Dish;
+using DishGroup = FoodSearch.BusinessLogic.Domain.RestraurantAdmin.Models.DishGroup;
+using OpeningHour = FoodSearch.BusinessLogic.Domain.RestraurantAdmin.Models.OpeningHour;
 
 namespace FoodSearch.BusinessLogic.Domain.RestraurantAdmin
 {
@@ -66,9 +66,9 @@ namespace FoodSearch.BusinessLogic.Domain.RestraurantAdmin
 
         public IEnumerable<Cuisine> GetCuisines()
         {
-            using (var rep = _provider.GetRepository<Cuisine>())
+            using (var rep = _provider.GetRepository<FoodSearch.Data.Mapping.Entities.Cuisine>())
             {
-                return rep.GetAll().List();
+                return rep.GetAll().List().Map<IEnumerable<Cuisine>>();
             }
         }
 
@@ -79,8 +79,9 @@ namespace FoodSearch.BusinessLogic.Domain.RestraurantAdmin
                 return rep.GetAll()
                     .Where(x => x.RestaurantId == restaurantId)
                     .Select(x => x.Cuisine)
-                    .List<Cuisine>()
-                    .ToList();
+                    .List()
+                    .ToList()
+                    .Map<IEnumerable<Cuisine>>();
             }
         }
 
@@ -115,11 +116,12 @@ namespace FoodSearch.BusinessLogic.Domain.RestraurantAdmin
 
         public IEnumerable<DishGroup> GetDishGroups(Guid restaurantId)
         {
-            using (var rep = _provider.GetRepository<DishGroup>())
+            using (var rep = _provider.GetRepository<Data.Mapping.Entities.DishGroup>())
             {
                 return rep.GetAll()
                     .Where(x => x.RestaurantId == restaurantId)
-                    .List();
+                    .List()
+                    .Map<IEnumerable<DishGroup>>();
             }
         }
 
@@ -153,43 +155,28 @@ namespace FoodSearch.BusinessLogic.Domain.RestraurantAdmin
             }
         }
 
-        public IEnumerable<Models.Dish> GetDishes(Guid restaurantId, int? dishId = null)
+        public IEnumerable<Dish> GetDishes(Guid restaurantId, int? dishId = null)
         {
-            using (var rep = _provider.GetRepository<Dish>())
+            using (var rep = _provider.GetRepository<Data.Mapping.Entities.Dish>())
             {
                 if (dishId.HasValue)
                 {
-                    return new[]
-                    {
-                        TransformDish(rep.Get(dishId.Value))
-                    };
+                    return new[] { rep.Get(dishId.Value) }.Map<IEnumerable<Dish>>();
                 }
                 return rep.GetAll()
                     .Where(x => x.RestauraintId == restaurantId)
+                    .OrderBy(x => x.DishGroup).Asc
+                    .ThenBy(x => x.DishName).Asc
                     .List()
-                    .Select(TransformDish)
-                    .OrderBy(x => x.DishGroup)
-                    .ThenBy(x => x.DishName);
+                    .Map<IEnumerable<Dish>>();
             }
-        }
-
-        private static Models.Dish TransformDish(Dish d)
-        {
-            return new Models.Dish()
-            {
-                DishId = d.DishId,
-                DishName = d.DishName,
-                DishGroupId = d.DishGroupId,
-                DishGroup = d.DishGroup.Name,
-                Price = d.Price.ToString("0.00")
-            };
         }
 
         public int CreateDish(Guid restaurantId, string dishName, int dishGroupId, float price)
         {
-            using (var rep = _provider.GetRepository<Dish>())
+            using (var rep = _provider.GetRepository<Data.Mapping.Entities.Dish>())
             {
-                return rep.Create<int>(new Dish()
+                return rep.Create<int>(new Data.Mapping.Entities.Dish()
                 {
                     RestauraintId = restaurantId,
                     DishName = dishName,
@@ -221,38 +208,23 @@ namespace FoodSearch.BusinessLogic.Domain.RestraurantAdmin
             }
         }
 
-        public IEnumerable<Models.OpeningHour> GetOpeningHours(Guid restaurantId, int? openingHourId = null)
+        public IEnumerable<OpeningHour> GetOpeningHours(Guid restaurantId, int? openingHourId = null)
         {
-            using (var rep = _provider.GetRepository<OpeningHour>())
+            using (var rep = _provider.GetRepository<Data.Mapping.Entities.OpeningHour>())
             {
-                if (openingHourId.HasValue)
-                {
-                    var oh = rep.Get(openingHourId.Value);
-                    return new[]
-                    {
-                        TransformOpeningHour(oh)
-                    };
-                }
-                return rep.GetAll()
-                    .Where(x => x.RestaurantId == restaurantId)
-                    .OrderBy(x => x.Day).Asc
-                    .ThenBy(x => x.TimeFrom).Asc
-                    .List()
-                    .Select(TransformOpeningHour);
+                if (!openingHourId.HasValue)
+                    return rep.GetAll()
+                        .Where(x => x.RestaurantId == restaurantId)
+                        .OrderBy(x => x.Day).Asc
+                        .ThenBy(x => x.TimeFrom).Asc
+                        .List()
+                        .Map<IEnumerable<OpeningHour>>();
+
+                var oh = rep.Get(openingHourId.Value);
+                return new[] {oh}.Map<IEnumerable<OpeningHour>>();
             }
         }
 
-        private static Models.OpeningHour TransformOpeningHour(OpeningHour oh)
-        {
-            string[] days = { "", "Poniedziełek", "Wtorek", "Środa", "Czwartek", "Piątek", "Sobota", "Niedziela" };
-            return new Models.OpeningHour()
-            {
-                OpeningId = oh.OpeningId,
-                Day = days[oh.Day],
-                TimeFrom = oh.TimeFrom.ToString(@"hh\:mm"),
-                TimeTo = oh.TimeTo.ToString(@"hh\:mm")
-            };
-        }
 
         public int CreateOpeningHour(Guid restaurantId, int day, TimeSpan timeFrom, TimeSpan timeTo)
         {
@@ -264,7 +236,7 @@ namespace FoodSearch.BusinessLogic.Domain.RestraurantAdmin
 
         public void DeleteOpeningHour(int openingHourId)
         {
-            using (var rep = _provider.GetRepository<OpeningHour>())
+            using (var rep = _provider.GetRepository<Data.Mapping.Entities.OpeningHour>())
             {
                 rep.Delete(openingHourId);
             }

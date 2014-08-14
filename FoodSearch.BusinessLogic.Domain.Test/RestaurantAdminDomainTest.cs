@@ -9,23 +9,18 @@ using FoodSearch.BusinessLogic.Domain.RestraurantAdmin.Interface;
 using FoodSearch.Data.Mapping.Interface;
 using FoodSearch.Data.Mapping.Repository;
 
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NUnit.Framework;
 
 namespace FoodSearch.BusinessLogic.Domain.Test
 {
-    [TestClass]
-    public class RestaurantAdminDomainTest
+    [TestFixture(Category = "RestaurantAdminDomain integration tests")]
+    public class RestaurantAdminDomainTest : DomainTest<RestaurantAdminDomain>
     {
-        private ISessionSource sessionSource;
-        private IRepositoryProvider provider;
-        private IRestaurantAdminDomain domain;
-
-        [TestInitialize]
-        public void BusinessLogic_Domain_RestaurantAdmin_InitializeTest()
+        [Test(Description = "Get cuisines")]
+        public void GetCuisines()
         {
-            sessionSource = new SessionSource(Databases.FoodSearchTest);
-            provider = new FoodSearchRepositoryProvider(sessionSource);
-            domain = new RestaurantAdminDomain(provider);
+            var cuisines = Domain.GetCuisines();
+            Assert.IsTrue(cuisines.Any());
         }
     }
 }

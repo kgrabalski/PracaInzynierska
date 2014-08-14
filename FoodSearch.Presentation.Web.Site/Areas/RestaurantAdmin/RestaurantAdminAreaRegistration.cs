@@ -1,4 +1,5 @@
-﻿using System.Web.Mvc;
+﻿using System.Web.Http;
+using System.Web.Mvc;
 
 namespace FoodSearch.Presentation.Web.Site.Areas.RestaurantAdmin
 {
@@ -14,6 +15,12 @@ namespace FoodSearch.Presentation.Web.Site.Areas.RestaurantAdmin
 
         public override void RegisterArea(AreaRegistrationContext context) 
         {
+            context.Routes.MapHttpRoute(
+                name: "RestaurantAdmin_api",
+                routeTemplate: "RestaurantAdmin/api/{controller}/{id}",
+                defaults: new { area = "RestaurantAdmin", id = RouteParameter.Optional }
+            );
+
             context.MapRoute(
                 "RestaurantAdmin_default",
                 "RestaurantAdmin/{controller}/{action}/{id}",

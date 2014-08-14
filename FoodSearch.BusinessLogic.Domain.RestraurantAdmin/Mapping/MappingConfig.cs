@@ -1,0 +1,60 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+using AutoMapper;
+
+using FoodSearch.BusinessLogic.Domain.RestraurantAdmin.Models;
+
+namespace FoodSearch.BusinessLogic.Domain.RestraurantAdmin.Mapping
+{
+    public static class MappingConfig
+    {
+        static MappingConfig()
+        {
+            Mapper.CreateMap<Data.Mapping.Entities.Cuisine, Cuisine>();
+
+            Mapper.CreateMap<Data.Mapping.Entities.DishGroup, DishGroup>();
+
+            Mapper.CreateMap<Data.Mapping.Entities.Dish, Dish>()
+                .ForSourceMember(x => x.RestauraintId, x => x.Ignore())
+                .ForSourceMember(x => x.Restaurant, x => x.Ignore())
+                .ForMember(x => x.Price, x => x.ResolveUsing(y => y.Price.ToString("0.00")))
+                .ForMember(x => x.DishName, x => x.ResolveUsing(y => y.DishGroup.Name));
+
+            string[] days = { "", "Poniedziełek", "Wtorek", "Środa", "Czwartek", "Piątek", "Sobota", "Niedziela" };
+            Mapper.CreateMap<Data.Mapping.Entities.OpeningHour, OpeningHour>()
+                .ForSourceMember(x => x.RestaurantId, x => x.Ignore())
+                .ForSourceMember(x => x.Restaurant, x => x.Ignore())
+                .ForMember(x => x.TimeFrom, x => x.ResolveUsing(y => y.TimeFrom.ToString(@"hh\:mm")))
+                .ForMember(x => x.TimeTo, x => x.ResolveUsing(y => y.TimeTo.ToString(@"hh\:mm")))
+                .ForMember(x => x.Day, x => x.ResolveUsing(y => days[y.Day]));
+
+            Mapper.AssertConfigurationIsValid();
+        }
+
+        #region Extensions
+        public static TDestination Map<TSource, TDestination>(this TSource @this)
+        {
+            return Mapper.Map<TSource, TDestination>(@this);
+        }
+
+        public static TDestination Map<TDestination>(this object @this)
+        {
+            if (@this == null)
+            {
+                return default(TDestination);
+            }
+
+            return (TDestination)@this.Map(typeof(TDestination));
+        }
+
+        public static object Map(this object @this, Type destinationType)
+        {
+            return Mapper.Map(@this, @this.GetType(), destinationType);
+        }
+        #endregion
+    }
+}
