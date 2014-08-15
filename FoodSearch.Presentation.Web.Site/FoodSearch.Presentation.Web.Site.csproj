@@ -140,7 +140,6 @@
     <Folder Include="Areas\User\Controllers\" />
     <Folder Include="Areas\User\Models\" />
     <Folder Include="Areas\User\Views\Shared\" />
-    <Folder Include="Scripts\Admin\RestaurantAdmin\service\" />
     <Folder Include="Scripts\Admin\SiteAdmin\service\" />
   </ItemGroup>
   <ItemGroup>
@@ -207,6 +206,7 @@
     <Content Include="Scripts\Admin\RestaurantAdmin\app.js" />
     <Content Include="Scripts\Admin\RestaurantAdmin\controller\controllersAdmin.js" />
     <Content Include="Scripts\Admin\RestaurantAdmin\controller\controllersEmployee.js" />
+    <Content Include="Scripts\Admin\RestaurantAdmin\service\services.js" />
     <Content Include="Scripts\Admin\SiteAdmin\app.js" />
     <Content Include="Scripts\Admin\SiteAdmin\controller\controllers.js" />
     <Content Include="Scripts\angular-animate.js" />
@@ -226,6 +226,10 @@
     <Content Include="Scripts\angular-scenario.js" />
     <Content Include="Scripts\angular-touch.js" />
     <Content Include="Scripts\angular-touch.min.js" />
+    <Content Include="Scripts\angular-ui\ui-bootstrap-tpls.js" />
+    <Content Include="Scripts\angular-ui\ui-bootstrap-tpls.min.js" />
+    <Content Include="Scripts\angular-ui\ui-bootstrap.js" />
+    <Content Include="Scripts\angular-ui\ui-bootstrap.min.js" />
     <Content Include="Scripts\angular.js" />
     <Content Include="Scripts\angular.min.js" />
     <Content Include="Scripts\bootstrap-timepicker.js" />

@@ -23,20 +23,18 @@ namespace FoodSearch.Presentation.Web.Site.Areas.RestaurantAdmin.Controllers
             _domain = domain;
         }
 
-        //api/RestaurantCuisine
         public IEnumerable<Cuisine> Get([ModelBinder] RestaurantUser ru)
         {
             return _domain.RestaurantAdmin.GetRestaurantCuisines(ru.RestaurantId);
         }
 
-        //api/RestaurantCuisine
-        public HttpResponseMessage Post([ModelBinder] RestaurantUser ru, [FromBody]int id)
+        public HttpResponseMessage Post([ModelBinder] RestaurantUser ru, int id)
         {
-            bool result = _domain.RestaurantAdmin.AddRestaurantCuisine(ru.RestaurantId, id);
-            return Request.CreateResponse(result ? HttpStatusCode.Created : HttpStatusCode.OK);
+            var result = _domain.RestaurantAdmin.AddRestaurantCuisine(ru.RestaurantId, id);
+            return Request.CreateResponse(result != null ? HttpStatusCode.Created : HttpStatusCode.Conflict, result);
         }
 
-        public HttpResponseMessage Delete([ModelBinder] RestaurantUser ru, [FromBody]int id)
+        public HttpResponseMessage Delete([ModelBinder] RestaurantUser ru, int id)
         {
             bool result = _domain.RestaurantAdmin.RemoveRestaurantCuisine(ru.RestaurantId, id);
             return Request.CreateResponse(result ? HttpStatusCode.OK : HttpStatusCode.NotFound);

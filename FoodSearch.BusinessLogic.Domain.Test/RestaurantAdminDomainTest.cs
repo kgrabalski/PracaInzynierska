@@ -36,12 +36,12 @@ namespace FoodSearch.BusinessLogic.Domain.Test
             Assert.IsTrue(cuisines.Any());
         }
 
-        [TestCase(1, Result = false, Description = "Add already existing cuisine to restaurant")]
-        [TestCase(4, Result = true, Description = "Add new cuisine to restaurant")]
-        public bool AddRestaurantCuisine(int cuisineId)
+        [TestCase(1, false, Description = "Add already existing cuisine to restaurant")]
+        [TestCase(4, true, Description = "Add new cuisine to restaurant")]
+        public void AddRestaurantCuisine(int cuisineId, bool shouldSucceed)
         {
             Guid restaurantId = Guid.Parse("575B7C69-2FE2-4A1F-BE58-23714B09A0FA");
-            bool result = Domain.AddRestaurantCuisine(restaurantId, cuisineId);
+            var result = Domain.AddRestaurantCuisine(restaurantId, cuisineId);
 
             using (var rep = RepositoryOf<RestaurantCuisine>())
             {
@@ -49,7 +49,7 @@ namespace FoodSearch.BusinessLogic.Domain.Test
                 Assert.IsTrue(cuisines.Any(x => x.CuisineId == cuisineId));
             }
 
-            return result;
+            Assert.AreEqual(shouldSucceed, result != null);
         }
 
 
