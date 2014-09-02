@@ -22,11 +22,11 @@
                 templateUrl: 'dishesTemplate'
             })
             .when("/dishGroups", {
-                controller: 'Dishes',
+                controller: 'DishGroupsController',
                 templateUrl: 'dishGroupsTemplate'
             })
             .when("/cuisines", {
-                controller: 'Cuisines',
+                controller: 'CuisinesController',
                 templateUrl: 'cuisinesTemplate'
             })
             .when("/cuisines/add", {

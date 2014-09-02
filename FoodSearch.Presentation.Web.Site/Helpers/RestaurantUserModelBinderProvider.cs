@@ -1,14 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿using FoodSearch.BusinessLogic.Domain.FoodSearch.Interface;
+using FoodSearch.Presentation.Web.Site.Models;
+using Ninject;
+using System;
 using System.Web.Http;
 using System.Web.Http.ModelBinding;
-
-using FoodSearch.BusinessLogic.Domain.FoodSearch.Interface;
-using FoodSearch.Presentation.Web.Site.Models;
-
-using Ninject;
 
 namespace FoodSearch.Presentation.Web.Site.Helpers
 {

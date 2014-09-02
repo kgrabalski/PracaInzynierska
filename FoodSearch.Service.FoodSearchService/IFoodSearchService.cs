@@ -1,15 +1,9 @@
-﻿using System;
+﻿using FoodSearch.Service.Contracts.Response;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Linq;
-using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.ServiceModel.Web;
-using System.Text;
 
-using FoodSearch.Service.Contracts.Response;
-
-using StreetNumber = FoodSearch.BusinessLogic.Domain.Core.Models.StreetNumber;
 
 namespace FoodSearch.Service.FoodSearchService
 {

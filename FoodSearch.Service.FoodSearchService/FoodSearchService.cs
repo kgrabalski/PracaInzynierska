@@ -1,17 +1,10 @@
-﻿using System;
+﻿using FoodSearch.BusinessLogic.Domain.FoodSearch;
+using FoodSearch.BusinessLogic.Domain.FoodSearch.Interface;
+using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.ServiceModel.Activation;
-using System.Text;
-
-using FoodSearch.BusinessLogic.Domain.Core.Models;
-using FoodSearch.BusinessLogic.Domain.FoodSearch;
-using FoodSearch.BusinessLogic.Domain.FoodSearch.Interface;
-using FoodSearch.Data.Mapping.Entities;
-using FoodSearch.Service.Contracts.Response;
-
 using RestaurantInfo = FoodSearch.Service.Contracts.Response.RestaurantInfo;
 using Street = FoodSearch.Service.Contracts.Response.Street;
 

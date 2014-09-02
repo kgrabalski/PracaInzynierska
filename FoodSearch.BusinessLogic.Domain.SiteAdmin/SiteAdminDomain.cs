@@ -1,12 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-using FoodSearch.BusinessLogic.Domain.SiteAdmin.Interface;
+﻿using FoodSearch.BusinessLogic.Domain.SiteAdmin.Interface;
 using FoodSearch.Data.Mapping.Entities;
 using FoodSearch.Data.Mapping.Interface;
+using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace FoodSearch.BusinessLogic.Domain.SiteAdmin
 {

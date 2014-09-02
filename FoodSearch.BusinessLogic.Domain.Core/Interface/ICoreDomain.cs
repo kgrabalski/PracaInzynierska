@@ -1,13 +1,6 @@
-﻿using System;
+﻿using FoodSearch.BusinessLogic.Domain.Core.Models;
+using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-using FoodSearch.BusinessLogic.Domain.Core.Models;
-using FoodSearch.Data.Mapping.Entities;
-using FoodSearch.Data.Mapping.StoredProcedure.Results;
-
 using District = FoodSearch.BusinessLogic.Domain.Core.Models.District;
 using Image = FoodSearch.BusinessLogic.Domain.Core.Models.Image;
 using RestaurantInfo = FoodSearch.BusinessLogic.Domain.Core.Models.RestaurantInfo;

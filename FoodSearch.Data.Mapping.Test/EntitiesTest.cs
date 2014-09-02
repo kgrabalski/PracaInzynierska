@@ -1,11 +1,9 @@
 ﻿
+using FoodSearch.Data.Mapping.Entities;
+using NUnit.Framework;
 using System;
 using System.Linq;
 using System.Reflection;
-
-using FoodSearch.Data.Mapping.Entities;
-
-using NUnit.Framework;
 
 namespace FoodSearch.Data.Mapping.Test
 {

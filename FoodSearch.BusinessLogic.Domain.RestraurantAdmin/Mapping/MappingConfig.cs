@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-using AutoMapper;
-
+﻿using AutoMapper;
 using FoodSearch.BusinessLogic.Domain.RestraurantAdmin.Models;
+using System;
 
 namespace FoodSearch.BusinessLogic.Domain.RestraurantAdmin.Mapping
 {

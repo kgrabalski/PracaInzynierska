@@ -1,16 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-using FoodSearch.BusinessLogic.Domain.RestraurantAdmin;
-using FoodSearch.BusinessLogic.Domain.RestraurantAdmin.Interface;
+﻿using FoodSearch.BusinessLogic.Domain.RestraurantAdmin;
 using FoodSearch.Data.Mapping.Entities;
-using FoodSearch.Data.Mapping.Interface;
-using FoodSearch.Data.Mapping.Repository;
-
 using NUnit.Framework;
+using System;
+using System.Linq;
 
 namespace FoodSearch.BusinessLogic.Domain.Test
 {
@@ -67,6 +59,47 @@ namespace FoodSearch.BusinessLogic.Domain.Test
             }
 
             return result;
+        }
+
+        [TestCase("575B7C69-2FE2-4A1F-BE58-23714B09A0FA", true, Description = "Get existing dish groups")]
+        [TestCase("03C936DF-45C2-45FC-93CD-E55A8469964B", false, Description = "Get dish groups from restaurant without them")]
+        public void GetDishGroups(string restaurantIdString, bool expectedAny)
+        {
+            Guid restaurantId = Guid.Parse(restaurantIdString);
+            var result = Domain.GetDishGroups(restaurantId);
+
+            Assert.AreEqual(expectedAny, result.Any());
+        }
+
+        [TestCase("575B7C69-2FE2-4A1F-BE58-23714B09A0FA", "grupaTestowa1", false, Description = "Try to create duplicated dish group")]
+        [TestCase("575B7C69-2FE2-4A1F-BE58-23714B09A0FA", "grupaTestowa3", true, Description = "Create new dish group")]
+        public void CreateDishGroup(string restaurantIdString, string groupName, bool shouldSucceed)
+        {
+            Guid restaurantId = Guid.Parse(restaurantIdString);
+            var result = Domain.CreateDishGroup(restaurantId, groupName);
+
+            Assert.AreEqual(shouldSucceed, result != null);
+        }
+
+        [TestCase("575B7C69-2FE2-4A1F-BE58-23714B09A0FA", 10, "wontWork", Result = false, Description = "Edit non existing dish group")]
+        [TestCase("03C936DF-45C2-45FC-93CD-E55A8469964B", 4, "wontWork", Result = false, Description = "Edit existring dish group from another restaurant")]
+        [TestCase("575B7C69-2FE2-4A1F-BE58-23714B09A0FA", 4, "nowaNazwa", Result = true, Description = "Edit existring dish group from right restaurant")]
+        public bool EditDishGroup(string restaurantIdString, int dishGroupId, string dishGroupName)
+        {
+            Guid restaurantId = Guid.Parse(restaurantIdString);
+            
+            return Domain.EditDishGroup(restaurantId, dishGroupId, dishGroupName);
+        }
+
+        [TestCase("575B7C69-2FE2-4A1F-BE58-23714B09A0FA", 10, false, Description = "Delete non existing dish group")]
+        [TestCase("03C936DF-45C2-45FC-93CD-E55A8469964B", 4, false, Description = "Delete existring dish group from another restaurant")]
+        [TestCase("575B7C69-2FE2-4A1F-BE58-23714B09A0FA", 5, true, Description = "Delete existring dish group from right restaurant")]
+        public void DeleteDishGroup(string restaurantIdString, int dishGroupId, bool shouldSucceed)
+        {
+            Guid restaurantId = Guid.Parse(restaurantIdString);
+            bool result = Domain.DeleteDishGroup(restaurantId, dishGroupId);
+
+            Assert.AreEqual(shouldSucceed, result);
         }
     }
 }

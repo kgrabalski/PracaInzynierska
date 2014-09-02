@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-using FoodSearch.Data.Mapping.Interface;
-
+﻿using FoodSearch.Data.Mapping.Interface;
 using NHibernate;
+using System;
 
 namespace FoodSearch.Data.Mapping.Repository
 {
@@ -26,16 +20,8 @@ namespace FoodSearch.Data.Mapping.Repository
 
         public bool TryGet<TId>(TId id, out T entity) where TId : struct
         {
-            try
-            {
-                entity = Get(id);
-                return true;
-            }
-            catch (Exception)
-            {
-                entity = default(T);
-                return false;
-            }
+            entity = Get(id);
+            return entity != null;
         }
 
         public TId Create<TId>(T value) where TId : struct
@@ -66,15 +52,16 @@ namespace FoodSearch.Data.Mapping.Repository
             }
         }
 
-        public void Delete<TId>(TId id) where TId : struct
+        public bool Delete<TId>(TId id) where TId : struct
         {
             using (var transaction = _session.BeginTransaction())
             {
                 T item;
-                if (!TryGet(id, out item)) return;
+                if (!TryGet(id, out item)) return false;
 
                 _session.Delete(item);
                 transaction.Commit();
+                return true;
             }
         }
 

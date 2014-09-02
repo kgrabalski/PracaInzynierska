@@ -1,11 +1,6 @@
-﻿using System;
+﻿using FoodSearch.Service.Contracts.Response;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
-
-using FoodSearch.Service.Contracts;
-using FoodSearch.Service.Contracts.Response;
 
 namespace FoodSearch.Service.Client
 {

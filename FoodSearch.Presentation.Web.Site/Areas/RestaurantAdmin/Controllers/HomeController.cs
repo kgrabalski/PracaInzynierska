@@ -1,13 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
-
-using FoodSearch.BusinessLogic.Domain.FoodSearch.Interface;
-using FoodSearch.Data.Mapping.Entities;
+﻿using FoodSearch.BusinessLogic.Domain.FoodSearch.Interface;
 using FoodSearch.Presentation.Web.Site.Helpers;
-
+using System.Web.Mvc;
 using RestaurantUser = FoodSearch.Presentation.Web.Site.Models.RestaurantUser;
 
 namespace FoodSearch.Presentation.Web.Site.Areas.RestaurantAdmin.Controllers

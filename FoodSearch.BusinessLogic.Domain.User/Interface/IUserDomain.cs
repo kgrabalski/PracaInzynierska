@@ -1,9 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-using FoodSearch.BusinessLogic.Domain.User.Models;
+﻿using FoodSearch.BusinessLogic.Domain.User.Models;
+using System;
 
 namespace FoodSearch.BusinessLogic.Domain.User.Interface
 {

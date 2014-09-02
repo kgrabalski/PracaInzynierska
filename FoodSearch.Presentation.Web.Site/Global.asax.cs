@@ -1,20 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Http;
-using System.Web.Mvc;
-using System.Web.Optimization;
-using System.Web.Routing;
-
-using FoodSearch.BusinessLogic.Domain.FoodSearch;
+﻿using FoodSearch.BusinessLogic.Domain.FoodSearch;
 using FoodSearch.BusinessLogic.Domain.FoodSearch.Interface;
 using FoodSearch.Presentation.Web.Site.App_Start;
 using FoodSearch.Presentation.Web.Site.Helpers;
 using FoodSearch.Presentation.Web.Site.Models;
-
 using Ninject;
 using Ninject.Web.Common;
+using System.Web.Http;
+using System.Web.Mvc;
+using System.Web.Optimization;
+using System.Web.Routing;
 
 namespace FoodSearch.Presentation.Web.Site
 {

@@ -1,26 +1,21 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Security.Cryptography;
-using System.Text;
-
-using FoodSearch.BusinessLogic.Domain.RestraurantAdmin.Interface;
+﻿using FoodSearch.BusinessLogic.Domain.RestraurantAdmin.Interface;
 using FoodSearch.BusinessLogic.Domain.RestraurantAdmin.Mapping;
 using FoodSearch.BusinessLogic.Domain.RestraurantAdmin.Models;
 using FoodSearch.Data.Mapping.Entities;
 using FoodSearch.Data.Mapping.Interface;
-
-using CuisineDto = FoodSearch.BusinessLogic.Domain.RestraurantAdmin.Models.Cuisine;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Security.Cryptography;
+using System.Text;
 using Cuisine = FoodSearch.Data.Mapping.Entities.Cuisine;
-
-using DishDto = FoodSearch.BusinessLogic.Domain.RestraurantAdmin.Models.Dish;
+using CuisineDto = FoodSearch.BusinessLogic.Domain.RestraurantAdmin.Models.Cuisine;
 using Dish = FoodSearch.Data.Mapping.Entities.Dish;
-
-using DishGroupDto = FoodSearch.BusinessLogic.Domain.RestraurantAdmin.Models.DishGroup;
+using DishDto = FoodSearch.BusinessLogic.Domain.RestraurantAdmin.Models.Dish;
 using DishGroup = FoodSearch.Data.Mapping.Entities.DishGroup;
-
-using OpeningHourDto = FoodSearch.BusinessLogic.Domain.RestraurantAdmin.Models.OpeningHour;
+using DishGroupDto = FoodSearch.BusinessLogic.Domain.RestraurantAdmin.Models.DishGroup;
 using OpeningHour = FoodSearch.Data.Mapping.Entities.OpeningHour;
+using OpeningHourDto = FoodSearch.BusinessLogic.Domain.RestraurantAdmin.Models.OpeningHour;
 
 namespace FoodSearch.BusinessLogic.Domain.RestraurantAdmin
 {
@@ -137,33 +132,53 @@ namespace FoodSearch.BusinessLogic.Domain.RestraurantAdmin
             }
         }
 
-        public int CreateDishGroup(Guid restaurantId, string groupName)
+        public DishGroupDto CreateDishGroup(Guid restaurantId, string groupName)
         {
             using (var rep = _provider.GetRepository<DishGroup>())
             {
-                return rep.Create<int>(new DishGroup()
+                bool canCreate = rep.GetAll()
+                    .Where(x => x.RestaurantId == restaurantId && x.Name == groupName)
+                    .RowCount() == 0;
+                if (!canCreate) return null;
+
+                DishGroup newDishGroup = new DishGroup()
                 {
                     RestaurantId = restaurantId,
                     Name = groupName
-                });
+                };
+                int dishGroupId = rep.Create<int>(newDishGroup);
+                newDishGroup.DishGroupId = dishGroupId;
+                
+                return newDishGroup.Map<DishGroupDto>();
             }
         }
 
-        public void EditDishGroup(int dishGroupId, string newGroupName)
+        public bool EditDishGroup(Guid restaurantId, int dishGroupId, string newGroupName)
         {
             using (var rep = _provider.GetRepository<DishGroup>())
             {
-                var dishGroup = rep.Get(dishGroupId);
-                dishGroup.Name = newGroupName;
-                rep.Update(dishGroup);
+                DishGroup dishGroup;
+                if (rep.TryGet(dishGroupId, out dishGroup) && dishGroup.RestaurantId == restaurantId)
+                {
+                    dishGroup.Name = newGroupName;
+                    rep.Update(dishGroup);
+                    return true;
+                }
+                return false;
             }
         }
 
-        public void DeleteDishGroup(int dishGroupId)
+        public bool DeleteDishGroup(Guid restaurantId, int dishGroupId)
         {
             using (var rep = _provider.GetRepository<DishGroup>())
             {
-                rep.Delete(dishGroupId);
+                DishGroup dishGroup;
+                if (rep.TryGet(dishGroupId, out dishGroup) && dishGroup.RestaurantId == restaurantId)
+                {
+                    rep.Delete(dishGroup);
+                    return true;
+                }
+                return false;
             }
         }
 

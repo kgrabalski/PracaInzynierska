@@ -51,8 +51,7 @@
             <div class="box-body">
                 <div class="form-group">
                     <label for="addRCName" class="control-label">Kuchnia</label>
-                    <select id="addRCName" required ng-options="c.Id as c.Name for c in allCuisines" 
-                            ng-model="toAdd.Id"/>
+                    <select id="addRCName" required options="allCuisines" ng-model="toAdd.Id" selectize="options"/>
                 </div>
             </div>
         </form>
@@ -63,25 +62,23 @@
     </div>
 </script>
 
-<script type="text/ng-template" id="addRestaurantCuisineModal">
+
+<script type="text/ng-template" id="removeRestaurantCuisineModal">
     <div class="modal-header">
         <button type="button" class="close" ng-click="cancel()">&times;</button>
-        <h4 class="modal-title" id="myModalLabel">Dodaj kuchnię</h4>
+        <h4 class="modal-title" id="myModalLabel">Usuń kuchnię</h4>
     </div>
     <div class="modal-body">
-        <form role="form" name="addRCForm">
+        <form role="form" name="removeRCForm">
             <div class="box-body">
                 <div class="form-group">
-                    <label for="addRCName" class="control-label">Kuchnia</label>
-                    <select id="addRCName"
-                            required ng-options="c.Id as c.Name for c in allCuisines"
-                            ng-model="toAdd.Id" />
+                    Czy napewno chcesz usunąć kuchnię {{cuisine.Name}}?
                 </div>
             </div>
         </form>
     </div>
     <div class="modal-footer">
         <button type="button" class="btn btn-default" ng-click="cancel()">Anuluj</button>
-        <button type="button" class="btn btn-primary" ng-click="add()" ng-disabled="!addRCForm.$valid">Dodaj</button>
+        <button type="button" class="btn btn-primary" ng-click="remove()">Usuń</button>
     </div>
 </script>

@@ -1,10 +1,6 @@
-﻿using System;
+﻿using FoodSearch.BusinessLogic.Domain.SiteAdmin.Models;
+using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-using FoodSearch.BusinessLogic.Domain.SiteAdmin.Models;
 
 namespace FoodSearch.BusinessLogic.Domain.SiteAdmin.Interface
 {

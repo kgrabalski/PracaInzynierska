@@ -1,7 +1,5 @@
-﻿using System.Web;
+﻿using FoodSearch.Presentation.Web.Site.Helpers;
 using System.Web.Mvc;
-
-using FoodSearch.Presentation.Web.Site.Helpers;
 
 namespace FoodSearch.Presentation.Web.Site
 {

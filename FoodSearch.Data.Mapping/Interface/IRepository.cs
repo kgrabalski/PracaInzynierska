@@ -1,10 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-using NHibernate;
+﻿using NHibernate;
+using System;
 
 namespace FoodSearch.Data.Mapping.Interface
 {
@@ -15,7 +10,7 @@ namespace FoodSearch.Data.Mapping.Interface
         TId Create<TId>(T value) where TId : struct;
         void Update(T value);
         void Delete(T value);
-        void Delete<TId>(TId id) where TId : struct;
+        bool Delete<TId>(TId id) where TId : struct;
         bool TryDelete(T value);
         bool TryDelete<TId>(TId id) where TId : struct;
         IQueryOver<T, T> GetAll();

@@ -8,7 +8,7 @@
 
 @section HeadSection
 {
-    <link rel="stylesheet" href="~/Content/selectize.css" />
+    <link rel="stylesheet" href="~/Content/Selectize/css/selectize.css" />
     <link rel="stylesheet" href="~/Content/bootstrap-timepicker.min.css" />
     <link rel="stylesheet" href="~/Areas/RestaurantAdmin/Content/Site.css"/>
     <link rel="stylesheet" href="~/Content/Admin/ionicons.min.css"/>
@@ -18,17 +18,14 @@
 {
     @*<script type="text/javascript" src="~/Scripts/jquery.dataTables.js"></script>*@
     @*<script type="text/javascript" src="~/Scripts/dataTables.bootstrap.js"></script>*@
-    <script type="text/javascript" src="~/Scripts/selectize.min.js"></script>
     @*<script type="text/javascript" src="~/Scripts/bootstrap-timepicker.min.js"></script>*@
-    @*<script type="text/javascript" src="~/Areas/RestaurantAdmin/Scripts/OpeningHoursViewModel.js"></script>*@
-    @*<script type="text/javascript" src="~/Areas/RestaurantAdmin/Scripts/CuisinesViewModel.js"></script>*@
-    @*<script type="text/javascript" src="~/Areas/RestaurantAdmin/Scripts/DishGroupsViewModel.js"></script>*@
-    @*<script type="text/javascript" src="~/Areas/RestaurantAdmin/Scripts/DishesViewModel.js"></script>*@
-    @*<script type="text/javascript" src="~/Areas/RestaurantAdmin/Scripts/CommonViewModel.js"></script>*@
+    <script src="~/Content/Selectize/js/standalone/selectize.min.js"></script>
     <script src="~/Scripts/Admin/Common/directives.js"></script>
     <script src="~/Scripts/Admin/RestaurantAdmin/app.js"></script>
     <script src="~/Scripts/Admin/RestaurantAdmin/service/services.js"></script>
     <script src="~/Scripts/Admin/RestaurantAdmin/controller/controllersEmployee.js"></script>
+    <script src="~/Scripts/Admin/RestaurantAdmin/controller/cuisineController.js"></script>
+    <script src="~/Scripts/Admin/RestaurantAdmin/controller/dishGroupController.js"></script>
     @if (User.IsInRole(UserTypes.RestaurantAdmin.ToString()))
     {
         <script src="~/Scripts/Admin/RestaurantAdmin/controller/controllersAdmin.js"></script>
@@ -47,65 +44,69 @@
                     <p>@string.Format("{0} {1}", Model.FirstName, Model.LastName)</p>
                 </div>
             </div>
-
-            <sidebarmenu>
-                <sidebarmenuitem>
-                    <a href="@Url.Action("", new {area="RestaurantAdmin"})">
+            
+            <ul class="sidebar-menu">
+                <li navigation-item>
+                    <a href="/RestaurantAdmin#/dashboard">
                         <i class=" fa fa-dashboard"></i> <span>Dashboard</span>
                     </a>
-                </sidebarmenuitem>
-                <sidebarmenuitem>
+                </li>
+                <li navigation-item>
                     <a href="/RestaurantAdmin#/orders">
                         <i class="fa fa-edit"></i> <span>Zamówienia</span>
                     </a>
-                </sidebarmenuitem>
-                <sidebarmenuitem>
+                </li>
+                <li navigation-item>
                     <a href="/RestaurantAdmin#/dishes">
                         <i class="fa fa-cutlery"></i> <span>Dania</span>
                     </a>
-                </sidebarmenuitem>
-                <sidebarmenuitem>
+                </li>
+                <li navigation-item>
                     <a href="/RestaurantAdmin#/dishGroups">
                         <i class="fa fa-book"></i> <span>Grupy dań</span>
                     </a>
-                </sidebarmenuitem>
-                <sidebarmenuitem>
+                </li>
+                <li navigation-item>
                     <a href="/RestaurantAdmin#/cuisines">
                         <i class="fa fa-list"></i> <span>Kuchnie</span>
                     </a>
-                </sidebarmenuitem>
+                </li>
                 
-
                 @if (User.IsInRole(UserTypes.RestaurantAdmin.ToString()))
                 {
-                    <sidebarmenuitem>
+                    <li navigation-item>
                         <a href="/RestaurantAdmin#/restaurant">
                             <i class="fa fa-cog"></i> <span>Restauracja</span>
                         </a>
-                    </sidebarmenuitem>
-                    <sidebarmenuitem>
+                    </li>
+                    <li navigation-item>
                         <a href="/RestaurantAdmin#/openingHours">
                             <i class="fa fa-clock-o"></i> <span>Godziny otwarcia</span>
                         </a>
-                    </sidebarmenuitem>
-                    <sidebarmenuitem>
+                    </li>
+                    <li navigation-item>
                         <a href="/RestaurantAdmin#/opinions">
                             <i class="fa fa-comments"></i> <span>Opinie</span>
                         </a>
-                    </sidebarmenuitem>
-                    <sidebarmenuitem>
+                    </li>
+                    <li navigation-item>
                         <a href="/RestaurantAdmin#/reports">
                             <i class="fa fa-bar-chart-o"></i> <span>Raporty</span>
                         </a>
-                    </sidebarmenuitem>
-                    <sidebarmenuitem>
+                    </li>
+                    <li navigation-item>
                         <a href="/RestaurantAdmin#/employees">
                             <i class="fa fa-user"></i> <span>Pracownicy</span>
                         </a>
-                    </sidebarmenuitem>
+                    </li>
+
 
                 }
-            </sidebarmenu>
+            </ul>
+
+               
+
+               
 
 
 

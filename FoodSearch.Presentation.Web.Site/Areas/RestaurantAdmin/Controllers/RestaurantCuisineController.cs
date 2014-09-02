@@ -1,15 +1,12 @@
-﻿using System;
+﻿using FoodSearch.BusinessLogic.Domain.FoodSearch.Interface;
+using FoodSearch.BusinessLogic.Domain.RestraurantAdmin.Models;
+using FoodSearch.Presentation.Web.Site.Helpers;
+using FoodSearch.Presentation.Web.Site.Models;
 using System.Collections.Generic;
-using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
 using System.Web.Http.ModelBinding;
-
-using FoodSearch.BusinessLogic.Domain.FoodSearch.Interface;
-using FoodSearch.BusinessLogic.Domain.RestraurantAdmin.Models;
-using FoodSearch.Presentation.Web.Site.Helpers;
-using FoodSearch.Presentation.Web.Site.Models;
 
 namespace FoodSearch.Presentation.Web.Site.Areas.RestaurantAdmin.Controllers
 {
@@ -23,17 +20,23 @@ namespace FoodSearch.Presentation.Web.Site.Areas.RestaurantAdmin.Controllers
             _domain = domain;
         }
 
-        public IEnumerable<Cuisine> Get([ModelBinder] RestaurantUser ru)
+        //get list of restaurant cuisines
+        [HttpGet]
+        public IEnumerable<Cuisine> GetAll([ModelBinder] RestaurantUser ru)
         {
             return _domain.RestaurantAdmin.GetRestaurantCuisines(ru.RestaurantId);
         }
 
-        public HttpResponseMessage Post([ModelBinder] RestaurantUser ru, int id)
+        //add new restaurant cuisine
+        [HttpPost]
+        public HttpResponseMessage Add([ModelBinder] RestaurantUser ru, int id)
         {
             var result = _domain.RestaurantAdmin.AddRestaurantCuisine(ru.RestaurantId, id);
             return Request.CreateResponse(result != null ? HttpStatusCode.Created : HttpStatusCode.Conflict, result);
         }
 
+        //delete existing restaurant cuisine
+        [HttpDelete]
         public HttpResponseMessage Delete([ModelBinder] RestaurantUser ru, int id)
         {
             bool result = _domain.RestaurantAdmin.RemoveRestaurantCuisine(ru.RestaurantId, id);

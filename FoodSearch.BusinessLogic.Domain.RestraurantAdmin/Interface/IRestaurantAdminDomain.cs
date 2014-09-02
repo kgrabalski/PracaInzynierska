@@ -1,12 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-using FoodSearch.BusinessLogic.Domain.RestraurantAdmin.Models;
+﻿using FoodSearch.BusinessLogic.Domain.RestraurantAdmin.Models;
 using FoodSearch.Data.Mapping.Entities;
-
+using System;
+using System.Collections.Generic;
 using Cuisine = FoodSearch.BusinessLogic.Domain.RestraurantAdmin.Models.Cuisine;
 using Dish = FoodSearch.BusinessLogic.Domain.RestraurantAdmin.Models.Dish;
 using DishGroup = FoodSearch.BusinessLogic.Domain.RestraurantAdmin.Models.DishGroup;
@@ -24,9 +19,9 @@ namespace FoodSearch.BusinessLogic.Domain.RestraurantAdmin.Interface
         Guid CreateUser(Guid restaurantId, string userName, string firstName, string lastName, string email, string password, UserTypes userType);
         bool ChangeRestaurantState(Guid restaurantId, bool isOpened);
         IEnumerable<DishGroup> GetDishGroups(Guid restaurantId);
-        int CreateDishGroup(Guid restaurantId, string groupName);
-        void EditDishGroup(int dishGroupId, string newGroupName);
-        void DeleteDishGroup(int dishGroupId);
+        DishGroup CreateDishGroup(Guid restaurantId, string groupName);
+        bool EditDishGroup(Guid restaurantId, int dishGroupId, string newGroupName);
+        bool DeleteDishGroup(Guid restaurantId, int dishGroupId);
         IEnumerable<Dish> GetDishes(Guid restaurantId, int? dishId = null);
         int CreateDish(Guid restaurantId, string dishName, int dishGroupId, float price);
         Guid GetUserId(string userName);

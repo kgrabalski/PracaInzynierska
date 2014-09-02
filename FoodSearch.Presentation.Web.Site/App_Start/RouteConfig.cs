@@ -1,14 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using FoodSearch.Service.FoodSearchService;
 using System.ServiceModel.Activation;
-using System.Web;
 using System.Web.Mvc;
 using System.Web.Routing;
 
-using FoodSearch.Service.FoodSearchService;
-
-using Ninject.Extensions.Wcf;
 
 namespace FoodSearch.Presentation.Web.Site
 {

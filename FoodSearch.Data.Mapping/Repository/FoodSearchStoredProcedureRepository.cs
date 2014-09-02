@@ -1,13 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-using FoodSearch.Data.Mapping.Interface;
+﻿using FoodSearch.Data.Mapping.Interface;
 using FoodSearch.Data.Mapping.StoredProcedure.Results;
-
 using NHibernate;
+using System;
+using System.Collections.Generic;
 
 namespace FoodSearch.Data.Mapping.Repository
 {

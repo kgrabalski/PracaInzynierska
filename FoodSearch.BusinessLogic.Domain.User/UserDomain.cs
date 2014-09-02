@@ -1,15 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-using FoodSearch.BusinessLogic.Domain.User.Interface;
+﻿using FoodSearch.BusinessLogic.Domain.User.Interface;
 using FoodSearch.BusinessLogic.Domain.User.Models;
 using FoodSearch.BusinessLogic.Helpers.Email;
 using FoodSearch.Data.Mapping.Entities;
 using FoodSearch.Data.Mapping.Interface;
+using System;
+using System.Collections.Generic;
+using System.Linq;
 
-using NHibernate.Util;
 
 namespace FoodSearch.BusinessLogic.Domain.User
 {

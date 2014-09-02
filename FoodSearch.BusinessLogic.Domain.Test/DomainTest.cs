@@ -1,12 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-using FoodSearch.Data.Mapping.Interface;
+﻿using FoodSearch.Data.Mapping.Interface;
 using FoodSearch.Data.Mapping.Repository;
 using FoodSearch.Data.Mapping.Test;
+using System;
 
 namespace FoodSearch.BusinessLogic.Domain.Test
 {

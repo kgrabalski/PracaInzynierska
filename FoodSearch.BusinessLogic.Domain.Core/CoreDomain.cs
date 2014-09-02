@@ -1,30 +1,19 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-using FoodSearch.BusinessLogic.Domain.Core.Interface;
+﻿using FoodSearch.BusinessLogic.Domain.Core.Interface;
 using FoodSearch.BusinessLogic.Domain.Core.Mapping;
 using FoodSearch.BusinessLogic.Domain.Core.Models;
 using FoodSearch.Data.Mapping.Entities;
 using FoodSearch.Data.Mapping.Interface;
-using FoodSearch.Data.Mapping.Repository;
-using FoodSearch.Data.Mapping.StoredProcedure.Results;
-
 using NHibernate.Criterion;
 using NHibernate.Transform;
-
-using DistrictDto = FoodSearch.BusinessLogic.Domain.Core.Models.District;
+using System;
+using System.Collections.Generic;
 using District = FoodSearch.Data.Mapping.Entities.District;
-
-using ImageDto = FoodSearch.BusinessLogic.Domain.Core.Models.Image;
+using DistrictDto = FoodSearch.BusinessLogic.Domain.Core.Models.District;
 using Image = FoodSearch.Data.Mapping.Entities.Image;
-
+using ImageDto = FoodSearch.BusinessLogic.Domain.Core.Models.Image;
 using RestaurantInfoDto = FoodSearch.BusinessLogic.Domain.Core.Models.RestaurantInfo;
-
-using StreetDto = FoodSearch.BusinessLogic.Domain.Core.Models.Street;
 using Street = FoodSearch.Data.Mapping.Entities.Street;
+using StreetDto = FoodSearch.BusinessLogic.Domain.Core.Models.Street;
 
 namespace FoodSearch.BusinessLogic.Domain.Core
 {

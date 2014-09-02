@@ -10,7 +10,6 @@
 
 namespace FoodSearch.Presentation.Mobile.WP.Resources
 {
-    using System;
 
 
     /// <summary>

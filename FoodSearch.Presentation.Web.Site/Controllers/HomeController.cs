@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿using FoodSearch.BusinessLogic.Domain.FoodSearch.Interface;
+using System;
 using System.Web.Mvc;
-
-using FoodSearch.BusinessLogic.Domain.FoodSearch.Interface;
 
 namespace FoodSearch.Presentation.Web.Site.Controllers
 {

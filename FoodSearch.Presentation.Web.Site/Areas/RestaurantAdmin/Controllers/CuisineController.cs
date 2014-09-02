@@ -1,13 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Net.Http;
-using System.Web.Http;
-
-using FoodSearch.BusinessLogic.Domain.FoodSearch.Interface;
+﻿using FoodSearch.BusinessLogic.Domain.FoodSearch.Interface;
 using FoodSearch.BusinessLogic.Domain.RestraurantAdmin.Models;
 using FoodSearch.Presentation.Web.Site.Helpers;
+using System.Collections.Generic;
+using System.Web.Http;
 
 namespace FoodSearch.Presentation.Web.Site.Areas.RestaurantAdmin.Controllers
 {
@@ -21,7 +16,7 @@ namespace FoodSearch.Presentation.Web.Site.Areas.RestaurantAdmin.Controllers
             _domain = domain;
         }
 
-        //api/Cuisine
+        //get list of cuisines
         public IEnumerable<Cuisine> Get()
         {
             return _domain.RestaurantAdmin.GetCuisines();
