@@ -5,16 +5,14 @@
 
 @section HeadSection
 {
-    <link rel="stylesheet" href="~/Content/selectize.css" />
+    <link rel="stylesheet" href="~/Content/Selectize/css/selectize.css" />
 }
 
 @section ScriptSection
 {
     @*<script type="text/javascript" src="~/Scripts/jquery.dataTables.js"></script>*@
     @*<script type="text/javascript" src="~/Scripts/dataTables.bootstrap.js"></script>*@
-    @*<script type="text/javascript" src="~/Scripts/selectize.min.js"></script>*@
-    @*<script type="text/javascript" src="~/Areas/SiteAdmin/Scripts/RestaurantsViewModel.js"></script>*@
-    @*<script type="text/javascript" src="~/Areas/SiteAdmin/Scripts/CommonViewModel.js"></script>*@
+    <script src="~/Content/Selectize/js/standalone/selectize.min.js"></script>
     <script src="~/Scripts/Admin/Common/directives.js"></script>
     <script src="~/Scripts/Admin/SiteAdmin/app.js"></script>
     <script src="~/Scripts/Admin/SiteAdmin/controller/controllers.js"></script>
@@ -32,25 +30,25 @@
                     <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
                 </div>
             </div>
-
-            <sidebarmenu>
-                <sidebarmenuitem >
-                    <a href="@Url.Action("", new {area = "SiteAdmin"})">
+            
+            <ul class="sidebar-menu">
+                <li navigation-item>
+                    <a href="/SiteAdmin#/dashboard">
                         <i class="fa fa-dashboard"></i> <span>Dashboard</span>
                     </a>
-                </sidebarmenuitem>
-                <sidebarmenuitem>
+                </li>
+                <li navigation-item>
                     <a href="/SiteAdmin#/restaurants">
                         <i class="fa fa-folder"></i> <span>Restauracje</span>
                     </a>
-                </sidebarmenuitem>
-                <sidebarmenuitem>
+                </li>
+                <li navigation-item>
                     <a href="/SiteAdmin#/users">
                         <i class="fa fa-user"></i> <span>Użytkownicy</span>
                     </a>
-                </sidebarmenuitem>
-            </sidebarmenu>
-        </section>
+                </li>
+            </ul>
+</section>
     </aside>
     <div ng-view></div>
 </div>

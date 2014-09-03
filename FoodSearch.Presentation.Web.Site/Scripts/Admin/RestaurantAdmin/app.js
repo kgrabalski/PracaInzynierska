@@ -18,7 +18,7 @@
                 templateUrl: 'ordersTemplate'
             })
             .when("/dishes", {
-                controller: 'Dishes',
+                controller: 'DishesController',
                 templateUrl: 'dishesTemplate'
             })
             .when("/dishGroups", {
@@ -38,7 +38,7 @@
                 templateUrl: 'restaurantTemplate'
             })
             .when("/openingHours", {
-                controller: 'OpeningHours',
+                controller: 'OpeningHoursController',
                 templateUrl: 'openingHoursTemplate'
             })
             .when("/opinions", {

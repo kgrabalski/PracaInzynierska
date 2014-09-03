@@ -12,14 +12,10 @@
     <section class="content">
         <div class="row">
             <div class="col-xs-12">
-                <button class="btn btn-primary" id="addDishGroup">Dodaj</button>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-xs-12">
                 <div class="box">
                     <div class="box-header">
                         <h3 class="box-title">Grupy dań</h3>
+                        <button class="btn btn-primary pull-right" id="addDishGroup" ng-click="addNew()">Dodaj</button>
                     </div>
                     <div class="box-body table-responsive">
                         <table id="dishGroupsList" class="table table-bordered table-striped">
@@ -27,13 +23,17 @@
                                 <tr>
                                     <th>Nazwa</th>
                                     <th></th>
+                                    <th></th>
                                 </tr>
                             </thead>
-                            <tbody data-bind="foreach: DishGroups">
+                            <tbody ng-repeat="g in dishGroups.Items">
                                 <tr>
-                                    <td data-bind="text: Name"></td>
+                                    <td>{{g.Name}}</td>
                                     <td>
-                                        <button data-bind="click: $parent.DeleteDishGroup" class="btn btn-primary">Usuń</button>
+                                        <button ng-click="edit($index)" class="btn btn-primary">Edytuj</button>
+                                    </td>
+                                    <td>
+                                        <button ng-click="remove($index)" class="btn btn-primary">Usuń</button>
                                     </td>
                                 </tr>
                             </tbody>
@@ -45,45 +45,43 @@
     </section>
 </aside>
 
-<div class="modal fade" id="addDishGropModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                <h4 class="modal-title" id="myModalLabel">Dodaj grupę dań</h4>
-            </div>
-            <div class="modal-body">
-                <form role="form" id="addDGForm">
-                    <div class="box-body">
-                        <div class="form-group">
-                            <label for="addDGName" class="control-label">Nazwa</label>
-                            <input type="text" name="name" placeholder="Nazwa grupy" id="addDGName" class="form-control" required />
-                        </div>
-                    </div>
-                </form>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Anuluj</button>
-                <button type="button" class="btn btn-primary">Dodaj</button>
-            </div>
-        </div>
+<script type="text/ng-template" id="addDishGroupModal">
+    <div class="modal-header">
+        <button type="button" class="close" ng-click="cancel()">&times;</button>
+        <h4 class="modal-title" id="myModalLabel">{{operation}} grupę dań</h4>
     </div>
-</div>
+    <div class="modal-body">
+        <form role="form" name="addDGForm">
+            <div class="box-body">
+                <div class="form-group">
+                    <label for="addDGName" class="control-label">Nazwa grupy dań:</label>
+                    <input type="text" id="addDGName" required ng-model="toAdd.Name" placeholder="Nazwa grupy" class="form-control"/>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" ng-click="cancel()">Anuluj</button>
+        <button type="button" class="btn btn-primary" ng-click="add()" ng-disabled="!addDGForm.$valid" ng-hide="edit">{{operation}}</button>
+    </div>
+</script>
 
-<div class="modal fade" id="deleteDishGroupModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                <h4 class="modal-title" id="myModalLabel">Usuń grupę dań</h4>
-            </div>
-            <div class="modal-body">
-                <p>Czy napewno chcesz usunąc wybraną grupę dań?</p>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Anuluj</button>
-                <button type="button" class="btn btn-primary">Usuń</button>
-            </div>
-        </div>
+<script type="text/ng-template" id="removeDishGroupModal">
+    <div class="modal-header">
+        <button type="button" class="close" ng-click="cancel()">&times;</button>
+        <h4 class="modal-title" id="myModalLabel">Usuń grupę dań</h4>
     </div>
-</div>
+    <div class="modal-body">
+        <form role="form" name="removeDGForm">
+            <div class="box-body">
+                <div class="form-group">
+                    Czy napewno chcesz grupę dań {{dishGroup.Name}}?
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" ng-click="cancel()">Anuluj</button>
+        <button type="button" class="btn btn-primary" ng-click="remove()">Usuń</button>
+    </div>
+</script>

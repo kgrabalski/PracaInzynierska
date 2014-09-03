@@ -45,17 +45,18 @@ app.controller('CuisinesController', ['$scope', 'RestaurantCuisineService', '$mo
     }
 ]);
 
-app.controller('AddCuisineController', ['$scope', '$modalInstance', 'CuisineService', 'toAdd',
-    function ($scope, $modalInstance, cuisineService, toAdd) {
+app.controller('AddCuisineController', [
+    '$scope', '$modalInstance', 'CuisineService', 'toAdd',
+    function($scope, $modalInstance, cuisineService, toAdd) {
 
         $scope.allCuisines = cuisineService.query();
         $scope.toAdd = toAdd;
 
-        $scope.add = function () {
+        $scope.add = function() {
             $modalInstance.close($scope.toAdd);
         };
 
-        $scope.cancel = function () {
+        $scope.cancel = function() {
             $modalInstance.dismiss('cancel');
         };
 
@@ -67,13 +68,15 @@ app.controller('AddCuisineController', ['$scope', '$modalInstance', 'CuisineServ
     }
 ]);
 
-app.controller('RemoveCuisineController', ['$scope', '$modalInstance', 'toRemove',
-    function ($scope, $modalInstance, toRemove) {
+app.controller('RemoveCuisineController', [
+    '$scope', '$modalInstance', 'toRemove',
+    function($scope, $modalInstance, toRemove) {
         $scope.cuisine = toRemove;
-        $scope.cancel = function () {
+        $scope.cancel = function() {
             $modalInstance.dismiss('cancel');
         };
-        $scope.remove = function () {
+        $scope.remove = function() {
             $modalInstance.close(true);
         }
-    }]);
+    }
+]);

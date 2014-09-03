@@ -26,9 +26,11 @@
     <script src="~/Scripts/Admin/RestaurantAdmin/controller/controllersEmployee.js"></script>
     <script src="~/Scripts/Admin/RestaurantAdmin/controller/cuisineController.js"></script>
     <script src="~/Scripts/Admin/RestaurantAdmin/controller/dishGroupController.js"></script>
+    <script src="~/Scripts/Admin/RestaurantAdmin/controller/dishController.js"></script>
     @if (User.IsInRole(UserTypes.RestaurantAdmin.ToString()))
     {
         <script src="~/Scripts/Admin/RestaurantAdmin/controller/controllersAdmin.js"></script>
+        <script src="~/Scripts/Admin/RestaurantAdmin/controller/openingHoursController.js"></script>
     }
 }
 
@@ -99,17 +101,8 @@
                             <i class="fa fa-user"></i> <span>Pracownicy</span>
                         </a>
                     </li>
-
-
                 }
             </ul>
-
-               
-
-               
-
-
-
         </section>
     </aside>
 

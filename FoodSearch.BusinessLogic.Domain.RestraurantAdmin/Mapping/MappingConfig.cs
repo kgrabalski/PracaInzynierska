@@ -17,10 +17,10 @@ namespace FoodSearch.BusinessLogic.Domain.RestraurantAdmin.Mapping
 
             Mapper.CreateMap<Data.Mapping.Entities.Dish, Dish>()
                 .ForMember(x => x.Id, x => x.MapFrom(y => y.DishId))
-                .ForSourceMember(x => x.RestauraintId, x => x.Ignore())
+                .ForSourceMember(x => x.RestaurantId, x => x.Ignore())
                 .ForSourceMember(x => x.Restaurant, x => x.Ignore())
                 .ForMember(x => x.Price, x => x.ResolveUsing(y => y.Price.ToString("0.00")))
-                .ForMember(x => x.DishName, x => x.ResolveUsing(y => y.DishGroup.Name));
+                .ForMember(x => x.DishGroup, x => x.ResolveUsing(y => y.DishGroup.Name));
 
             string[] days = { "", "Poniedziełek", "Wtorek", "Środa", "Czwartek", "Piątek", "Sobota", "Niedziela" };
             Mapper.CreateMap<Data.Mapping.Entities.OpeningHour, OpeningHour>()

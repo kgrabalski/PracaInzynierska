@@ -1,5 +1,6 @@
 ﻿using FoodSearch.BusinessLogic.Domain.FoodSearch.Interface;
 using FoodSearch.BusinessLogic.Domain.RestraurantAdmin.Models;
+using FoodSearch.Presentation.Web.Site.Areas.RestaurantAdmin.Models;
 using FoodSearch.Presentation.Web.Site.Helpers;
 using FoodSearch.Presentation.Web.Site.Models;
 using System.Collections.Generic;
@@ -29,18 +30,26 @@ namespace FoodSearch.Presentation.Web.Site.Areas.RestaurantAdmin.Controllers
 
         //create new dish group
         [HttpPost]
-        public HttpResponseMessage Create([ModelBinder] RestaurantUser ru, [FromBody] string name)
+        public HttpResponseMessage Create([ModelBinder] RestaurantUser ru, DishGroupModel dg)
         {
-            var result = _domain.RestaurantAdmin.CreateDishGroup(ru.RestaurantId, name);
-            return Request.CreateResponse(result != null ? HttpStatusCode.Created : HttpStatusCode.Conflict, result);
+            if (ModelState.IsValid)
+            {
+                var result = _domain.RestaurantAdmin.CreateDishGroup(ru.RestaurantId, dg.Name);
+                return Request.CreateResponse(result != null ? HttpStatusCode.Created : HttpStatusCode.Conflict, result);
+            }
+            return Request.CreateErrorResponse(HttpStatusCode.BadRequest, ModelState);
         }
 
         //edit dish group name
-        [HttpPost]
-        public HttpResponseMessage Edit([ModelBinder] RestaurantUser ru, [FromUri] int id, [FromBody] string name)
+        [HttpPut]
+        public HttpResponseMessage Edit([ModelBinder] RestaurantUser ru, [FromUri] int id, DishGroupModel dg)
         {
-            bool result = _domain.RestaurantAdmin.EditDishGroup(ru.RestaurantId, id, name);
-            return Request.CreateResponse(result ? HttpStatusCode.OK : HttpStatusCode.NotFound);
+            if (ModelState.IsValid)
+            {
+                bool result = _domain.RestaurantAdmin.EditDishGroup(ru.RestaurantId, id, dg.Name);
+                return Request.CreateResponse(result ? HttpStatusCode.OK : HttpStatusCode.NotFound);
+            }
+            return Request.CreateErrorResponse(HttpStatusCode.BadRequest, ModelState);
         }
 
         //delete dish group

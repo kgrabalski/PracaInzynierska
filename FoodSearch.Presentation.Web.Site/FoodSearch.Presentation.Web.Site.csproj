@@ -135,11 +135,11 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Areas\RestaurantAdmin\Models\" />
     <Folder Include="Areas\SiteAdmin\Models\" />
     <Folder Include="Areas\User\Controllers\" />
     <Folder Include="Areas\User\Models\" />
     <Folder Include="Areas\User\Views\Shared\" />
+    <Folder Include="Models\Restaurant\" />
     <Folder Include="Scripts\Admin\SiteAdmin\service\" />
   </ItemGroup>
   <ItemGroup>
@@ -149,9 +149,12 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Areas\RestaurantAdmin\Controllers\AccountController.cs" />
     <Compile Include="Areas\RestaurantAdmin\Controllers\CuisineController.cs" />
+    <Compile Include="Areas\RestaurantAdmin\Controllers\DishController.cs" />
     <Compile Include="Areas\RestaurantAdmin\Controllers\DishGroupController.cs" />
     <Compile Include="Areas\RestaurantAdmin\Controllers\HomeController.cs" />
     <Compile Include="Areas\RestaurantAdmin\Controllers\RestaurantCuisineController.cs" />
+    <Compile Include="Areas\RestaurantAdmin\Models\DishGroupModel.cs" />
+    <Compile Include="Areas\RestaurantAdmin\Models\DishModel.cs" />
     <Compile Include="Areas\RestaurantAdmin\RestaurantAdminAreaRegistration.cs" />
     <Compile Include="Areas\SiteAdmin\Controllers\AccountController.cs" />
     <Compile Include="Areas\SiteAdmin\Controllers\HomeController.cs" />
@@ -212,7 +215,9 @@
     <Content Include="Scripts\Admin\RestaurantAdmin\controller\controllersAdmin.js" />
     <Content Include="Scripts\Admin\RestaurantAdmin\controller\controllersEmployee.js" />
     <Content Include="Scripts\Admin\RestaurantAdmin\controller\cuisineController.js" />
+    <Content Include="Scripts\Admin\RestaurantAdmin\controller\dishController.js" />
     <Content Include="Scripts\Admin\RestaurantAdmin\controller\dishGroupController.js" />
+    <Content Include="Scripts\Admin\RestaurantAdmin\controller\openingHoursController.js" />
     <Content Include="Scripts\Admin\RestaurantAdmin\service\services.js" />
     <Content Include="Scripts\Admin\SiteAdmin\app.js" />
     <Content Include="Scripts\Admin\SiteAdmin\controller\controllers.js" />

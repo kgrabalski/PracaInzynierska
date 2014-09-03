@@ -97,6 +97,12 @@ namespace FoodSearch.Data.Mapping.Repository
             return _session.QueryOver<T>();
         }
 
+        public void Evict(T entity)
+        {
+            _session.Evict(entity);
+        }
+
+
         public void Dispose()
         {
             _session.Dispose();

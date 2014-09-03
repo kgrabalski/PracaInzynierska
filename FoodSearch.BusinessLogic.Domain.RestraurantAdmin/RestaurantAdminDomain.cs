@@ -191,25 +191,35 @@ namespace FoodSearch.BusinessLogic.Domain.RestraurantAdmin
                     return new[] { rep.Get(dishId.Value) }.Map<IEnumerable<DishDto>>();
                 }
                 return rep.GetAll()
-                    .Where(x => x.RestauraintId == restaurantId)
+                    .Where(x => x.RestaurantId == restaurantId)
                     .OrderBy(x => x.DishGroup).Asc
                     .ThenBy(x => x.DishName).Asc
                     .List()
+                    .ToList()
                     .Map<IEnumerable<DishDto>>();
             }
         }
 
-        public int CreateDish(Guid restaurantId, string dishName, int dishGroupId, float price)
+        public DishDto CreateDish(Guid restaurantId, string dishName, int dishGroupId, float price)
         {
             using (var rep = _provider.GetRepository<Dish>())
             {
-                return rep.Create<int>(new Dish()
+                bool canCreate = rep.GetAll()
+                    .Where(x => x.RestaurantId == restaurantId && x.DishName == dishName && x.DishGroupId == dishGroupId)
+                    .RowCount() == 0;
+                if (!canCreate) return null;
+
+                var newDish = new Dish()
                 {
-                    RestauraintId = restaurantId,
+                    RestaurantId = restaurantId,
                     DishName = dishName,
                     DishGroupId = dishGroupId,
                     Price = price
-                });
+                };
+                int dishId = rep.Create<int>(newDish);
+
+                rep.Evict(newDish);
+                return rep.Get(dishId).Map<DishDto>();
             }
         }
 

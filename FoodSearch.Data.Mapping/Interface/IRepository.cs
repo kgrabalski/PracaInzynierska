@@ -14,5 +14,6 @@ namespace FoodSearch.Data.Mapping.Interface
         bool TryDelete(T value);
         bool TryDelete<TId>(TId id) where TId : struct;
         IQueryOver<T, T> GetAll();
+        void Evict(T entity);
     }
 }

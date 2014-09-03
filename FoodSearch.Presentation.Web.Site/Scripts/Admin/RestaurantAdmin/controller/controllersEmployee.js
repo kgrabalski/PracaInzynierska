@@ -11,9 +11,3 @@ app.controller('Orders', ['$scope',
         $scope.napis = "Orders";
     }
 ]);
-
-app.controller('Dishes', ['$scope',
-    function ($scope) {
-        $scope.napis = "Dishes";
-    }
-]);

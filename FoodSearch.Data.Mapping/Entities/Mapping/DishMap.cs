@@ -10,11 +10,11 @@ namespace FoodSearch.Data.Mapping.Entities.Mapping
             Table("Dishes");
             LazyLoad();
             Id(x => x.DishId).Column("DishId").GeneratedBy.Identity().Not.Nullable();
-            Map(x => x.RestauraintId).Column("RestaurantId").Not.Nullable();
-            References(x => x.Restaurant).Column("RestaurantId").LazyLoad().Not.Nullable().Not.Insert();
+            Map(x => x.RestaurantId).Column("RestaurantId").Not.Nullable();
+            References(x => x.Restaurant).Column("RestaurantId").LazyLoad().Not.Insert();
             Map(x => x.DishName).Column("DishName").Not.Nullable();
             Map(x => x.DishGroupId).Column("DishGroupId").Not.Nullable();
-            References(x => x.DishGroup).Column("DishGroupId").Not.Nullable().Not.LazyLoad().Not.Insert().Fetch.Join();
+            References(x => x.DishGroup).Column("DishGroupId").Not.LazyLoad().Not.Insert();
             Map(x => x.Price).Column("Price").Not.Nullable();
         }
     }
