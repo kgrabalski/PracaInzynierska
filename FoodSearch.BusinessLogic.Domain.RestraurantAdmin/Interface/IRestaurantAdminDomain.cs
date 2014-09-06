@@ -22,13 +22,13 @@ namespace FoodSearch.BusinessLogic.Domain.RestraurantAdmin.Interface
         DishGroup CreateDishGroup(Guid restaurantId, string groupName);
         bool EditDishGroup(Guid restaurantId, int dishGroupId, string newGroupName);
         bool DeleteDishGroup(Guid restaurantId, int dishGroupId);
-        IEnumerable<Dish> GetDishes(Guid restaurantId, int? dishId = null);
+        IEnumerable<Dish> GetDishes(Guid restaurantId);
         Dish CreateDish(Guid restaurantId, string dishName, int dishGroupId, float price);
         Guid GetUserId(string userName);
         Guid GetUserRestaurant(Guid userId);
-        IEnumerable<OpeningHour> GetOpeningHours(Guid restaurantId, int? openingHourId = null);
-        int CreateOpeningHour(Guid restaurantId, int day, TimeSpan timeFrom, TimeSpan timeTo);
-        void DeleteOpeningHour(int openingHourId);
+        IEnumerable<OpeningHour> GetOpeningHours(Guid restaurantId);
+        OpeningHour CreateOpeningHour(Guid restaurantId, int day, TimeSpan timeFrom, TimeSpan timeTo);
+        bool DeleteOpeningHour(int openingHourId);
         EmployeeData GetEmployeeData(Guid restaurantId, Guid userId);
     }
 }

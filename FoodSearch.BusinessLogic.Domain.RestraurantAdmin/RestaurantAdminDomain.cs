@@ -182,14 +182,10 @@ namespace FoodSearch.BusinessLogic.Domain.RestraurantAdmin
             }
         }
 
-        public IEnumerable<DishDto> GetDishes(Guid restaurantId, int? dishId = null)
+        public IEnumerable<DishDto> GetDishes(Guid restaurantId)
         {
             using (var rep = _provider.GetRepository<Dish>())
             {
-                if (dishId.HasValue)
-                {
-                    return new[] { rep.Get(dishId.Value) }.Map<IEnumerable<DishDto>>();
-                }
                 return rep.GetAll()
                     .Where(x => x.RestaurantId == restaurantId)
                     .OrderBy(x => x.DishGroup).Asc
@@ -245,37 +241,34 @@ namespace FoodSearch.BusinessLogic.Domain.RestraurantAdmin
             }
         }
 
-        public IEnumerable<OpeningHourDto> GetOpeningHours(Guid restaurantId, int? openingHourId = null)
+        public IEnumerable<OpeningHourDto> GetOpeningHours(Guid restaurantId)
         {
             using (var rep = _provider.GetRepository<OpeningHour>())
             {
-                if (!openingHourId.HasValue)
-                    return rep.GetAll()
-                        .Where(x => x.RestaurantId == restaurantId)
-                        .OrderBy(x => x.Day).Asc
-                        .ThenBy(x => x.TimeFrom).Asc
-                        .List()
-                        .Map<IEnumerable<OpeningHourDto>>();
-
-                var oh = rep.Get(openingHourId.Value);
-                return new[] {oh}.Map<IEnumerable<OpeningHourDto>>();
+                return rep.GetAll()
+                    .Where(x => x.RestaurantId == restaurantId)
+                    .OrderBy(x => x.Day).Asc
+                    .ThenBy(x => x.TimeFrom).Asc
+                    .List()
+                    .Map<IEnumerable<OpeningHourDto>>();
             }
         }
 
-
-        public int CreateOpeningHour(Guid restaurantId, int day, TimeSpan timeFrom, TimeSpan timeTo)
+        public OpeningHourDto CreateOpeningHour(Guid restaurantId, int day, TimeSpan timeFrom, TimeSpan timeTo)
         {
             using (var rep = _provider.StoredProcedure)
+            using (var repOh = _provider.GetRepository<OpeningHour>())
             {
-                return rep.CreateOpeningHour(restaurantId, day, timeFrom, timeTo);
+                int openingId = rep.CreateOpeningHour(restaurantId, day, timeFrom, timeTo);
+                return openingId > 0 ? repOh.Get(openingId).Map<OpeningHourDto>() : null;
             }
         }
 
-        public void DeleteOpeningHour(int openingHourId)
+        public bool DeleteOpeningHour(int openingHourId)
         {
-            using (var rep = _provider.GetRepository<Data.Mapping.Entities.OpeningHour>())
+            using (var rep = _provider.GetRepository<OpeningHour>())
             {
-                rep.Delete(openingHourId);
+                return rep.TryDelete(openingHourId);
             }
         }
 

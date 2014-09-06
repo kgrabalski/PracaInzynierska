@@ -152,9 +152,11 @@
     <Compile Include="Areas\RestaurantAdmin\Controllers\DishController.cs" />
     <Compile Include="Areas\RestaurantAdmin\Controllers\DishGroupController.cs" />
     <Compile Include="Areas\RestaurantAdmin\Controllers\HomeController.cs" />
+    <Compile Include="Areas\RestaurantAdmin\Controllers\OpeningHourController.cs" />
     <Compile Include="Areas\RestaurantAdmin\Controllers\RestaurantCuisineController.cs" />
     <Compile Include="Areas\RestaurantAdmin\Models\DishGroupModel.cs" />
     <Compile Include="Areas\RestaurantAdmin\Models\DishModel.cs" />
+    <Compile Include="Areas\RestaurantAdmin\Models\OpeningHourModel.cs" />
     <Compile Include="Areas\RestaurantAdmin\RestaurantAdminAreaRegistration.cs" />
     <Compile Include="Areas\SiteAdmin\Controllers\AccountController.cs" />
     <Compile Include="Areas\SiteAdmin\Controllers\HomeController.cs" />

@@ -26,9 +26,10 @@ namespace FoodSearch.BusinessLogic.Domain.RestraurantAdmin.Mapping
             Mapper.CreateMap<Data.Mapping.Entities.OpeningHour, OpeningHour>()
                 .ForSourceMember(x => x.RestaurantId, x => x.Ignore())
                 .ForSourceMember(x => x.Restaurant, x => x.Ignore())
+                .ForMember(x => x.Id, x => x.ResolveUsing(y => y.OpeningId))
                 .ForMember(x => x.TimeFrom, x => x.ResolveUsing(y => y.TimeFrom.ToString(@"hh\:mm")))
                 .ForMember(x => x.TimeTo, x => x.ResolveUsing(y => y.TimeTo.ToString(@"hh\:mm")))
-                .ForMember(x => x.Day, x => x.ResolveUsing(y => days[y.Day]));
+                .ForMember(x => x.DayName, x => x.ResolveUsing(y => days[y.Day]));
 
             Mapper.AssertConfigurationIsValid();
         }

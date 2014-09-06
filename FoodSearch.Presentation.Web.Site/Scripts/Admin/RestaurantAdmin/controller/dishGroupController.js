@@ -66,8 +66,8 @@ app.controller('DishGroupsController', [
 ]);
 
 app.controller('AddDishGroupController', [
-    '$scope', '$modalInstance', 'DishGroupService', 'toAdd', 'edit',
-    function ($scope, $modalInstance, dishGroupService, toAdd, edit) {
+    '$scope', '$modalInstance', 'toAdd', 'edit',
+    function ($scope, $modalInstance, toAdd, edit) {
         $scope.originalValue = toAdd.Name;
         $scope.toAdd = toAdd;
         $scope.operation = edit == true ? "Edytuj" : "Dodaj";

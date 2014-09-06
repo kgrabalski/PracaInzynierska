@@ -12,14 +12,10 @@
     <section class="content">
         <div class="row">
             <div class="col-xs-12">
-                <button class="btn btn-primary" id="addOpeningHour">Dodaj</button>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-xs-12">
                 <div class="box">
                     <div class="box-header">
-                        <h3 class="box-title">Aktualne godziny otwarcia</h3>
+                        <h3 class="box-title">Godziny otwarcia restauracji</h3>
+                        <button class="btn btn-primary pull-right" ng-click="addNew()" id="addOpeningHour">Dodaj</button>
                     </div>
                     <div class="box-body table-responsive">
                         <table id="openingHoursList" class="table table-bordered table-striped">
@@ -31,13 +27,13 @@
                                     <th></th>
                                 </tr>
                             </thead>
-                            <tbody data-bind="foreach: OpeningHours">
+                            <tbody ng-repeat="oh in openingHours.Items | orderBy:['Day','TimeFrom','TimeTo']">
                                 <tr>
-                                    <td data-bind="text: Day"></td>
-                                    <td data-bind="text: TimeFrom"></td>
-                                    <td data-bind="text: TimeTo"></td>
+                                    <td>{{oh.DayName}}</td>
+                                    <td>{{oh.TimeFrom}}</td>
+                                    <td>{{oh.TimeTo}}</td>
                                     <td>
-                                        <button data-bind="click: $parent.DeleteOpeningHour" class="btn btn-primary">Usuń</button>
+                                        <button ng-click="remove($index)" class="btn btn-primary">Usuń</button>
                                     </td>
                                 </tr>
                             </tbody>
@@ -49,73 +45,61 @@
     </section>
 </aside>
 
-
-<div class="modal fade" id="addOpeningHourModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                <h4 class="modal-title" id="myModalLabel">Dodaj godzinę otwarcia</h4>
-            </div>
-            <div class="modal-body">
-                <form role="form" id="addOHForm">
-                    <div class="box-body">
-                        <div class="form-group">
-                            <label for="addOHDay" class="control-label">Dzień</label>
-                            <select id="addOHDay" required>
-                                <option value="1">Poniedziałek</option>
-                                <option value="2">Wtorek</option>
-                                <option value="3">Środa</option>
-                                <option value="4">Czwartek</option>
-                                <option value="5">Piątek</option>
-                                <option value="6">Sobota</option>
-                                <option value="7">Niedziela</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label for="addOHTimeFrom" class="control-label">Godzina od</label>
-                            <div class="input-group input-append bootstrap-timepicker">
-                                <input id="addOHTimeFrom" type="text" class="form-control" name="timeFrom" placeholder="Godzina od" />
-                                <div class="input-group-addon">
-                                    <i class="fa fa-clock-o"></i>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="addOHTimeTo" class="control-label">Godzina do</label>
-                            <div class="input-group input-append bootstrap-timepicker">
-                                <input id="addOHTimeTo" type="text" class="form-control" name="timeTo" placeholder="Godzina do" />
-                                <div class="input-group-addon">
-                                    <i class="fa fa-clock-o"></i>
-                                </div>
-                            </div>
+<script type="text/ng-template" id="addOpeningHourModal">
+    <div class="modal-header">
+        <button type="button" class="close" ng-click="cancel()">&times;</button>
+        <h4 class="modal-title" id="myModalLabel">Dodaj godzinę otwarcia</h4>
+    </div>
+    <div class="modal-body">
+        <form role="form" name="addOHForm">
+            <div class="box-body">
+                <div class="form-group">
+                    <label for="addOHDay" class="control-label">Dzień</label>
+                    <select id="addOHDay" required placeholder="Wybierz dzień" ng-model="toAdd.Day" selectize="options" options="daysList"/>
+                </div>
+                <div class="form-group">
+                    <label for="addOHTimeFrom" class="control-label">Godzina od</label>
+                    <div class="input-group input-append bootstrap-timepicker">
+                        <input id="addOHTimeFrom" type="time" class="form-control" placeholder="Godzina od" ng-model="toAdd.TimeFrom" required/>
+                        <div class="input-group-addon">
+                            <i class="fa fa-clock-o"></i>
                         </div>
                     </div>
-                </form>
+                </div>
+                <div class="form-group">
+                    <label for="addOHTimeTo" class="control-label">Godzina do</label>
+                    <div class="input-group input-append bootstrap-timepicker">
+                        <input id="addOHTimeTo" type="time" class="form-control" placeholder="Godzina do" ng-model="toAdd.TimeTo" required/>
+                        <div class="input-group-addon">
+                            <i class="fa fa-clock-o"></i>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Anuluj</button>
-                <button type="button" class="btn btn-primary">Dodaj</button>
-            </div>
-        </div>
+        </form>
     </div>
-</div>
-
-
-<div class="modal fade" id="deleteOpeningHourModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                <h4 class="modal-title" id="myModalLabel">Usuń godzinę otwarcia</h4>
-            </div>
-            <div class="modal-body">
-               <p>Czy napewno chcesz usunąc wybraną godzinę otwarcia?</p>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Anuluj</button>
-                <button type="button" class="btn btn-primary">Usuń</button>
-            </div>
-        </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" ng-click="cancel()">Anuluj</button>
+        <button type="button" class="btn btn-primary" ng-click="add()" ng-disabled="!addOHForm.$valid" >Dodaj</button>
     </div>
-</div>
+</script>
+
+<script type="text/ng-template" id="removeOpeningHourModal">
+    <div class="modal-header">
+        <button type="button" class="close" ng-click="cancel()">&times;</button>
+        <h4 class="modal-title" id="myModalLabel">Usuń godziny otwarcia</h4>
+    </div>
+    <div class="modal-body">
+        <form role="form" name="removeOHForm">
+            <div class="box-body">
+                <div class="form-group">
+                    Czy napewno chcesz usunąć wybraną godzinę otwarcia?
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" ng-click="cancel()">Anuluj</button>
+        <button type="button" class="btn btn-primary" ng-click="remove()">Usuń</button>
+    </div>
+</script>

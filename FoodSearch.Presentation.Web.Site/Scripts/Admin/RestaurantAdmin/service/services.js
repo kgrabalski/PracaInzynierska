@@ -33,4 +33,13 @@ services.service('DishService', [
         service.Items = service.query();
         return service;
     }
-])
+]);
+
+services.service('OpeningHourService', [
+    '$resource', function($resource) {
+        var service = $resource('/RestaurantAdmin/api/OpeningHour/:openingId',
+                                { openingId: "@Id" });
+        service.Items = service.query();
+        return service;
+    }
+]);
