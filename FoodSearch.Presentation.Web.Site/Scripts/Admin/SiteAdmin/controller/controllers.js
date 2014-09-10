@@ -6,12 +6,6 @@ app.controller('Dashboard', ['$scope',
     }
 ]);
 
-app.controller('Restaurants', ['$scope',
-    function($scope) {
-        $scope.napis = "Restaurants";
-    }
-]);
-
 app.controller('Users', ['$scope',
     function($scope) {
         $scope.napis = "Users";

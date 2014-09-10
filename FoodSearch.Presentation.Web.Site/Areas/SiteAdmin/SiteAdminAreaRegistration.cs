@@ -1,4 +1,7 @@
-﻿using System.Web.Mvc;
+﻿using System.Web.Http;
+using System.Web.Mvc;
+
+using FoodSearch.Presentation.Web.Site.Helpers;
 
 namespace FoodSearch.Presentation.Web.Site.Areas.SiteAdmin
 {
@@ -14,6 +17,14 @@ namespace FoodSearch.Presentation.Web.Site.Areas.SiteAdmin
 
         public override void RegisterArea(AreaRegistrationContext context) 
         {
+            context.Routes.MapHttpRoute(
+                name: "SiteAdmin_api",
+                routeTemplate: "SiteAdmin/api/{controller}/{id}",
+                defaults: new { area = "SitetAdmin", id = RouteParameter.Optional }
+            )
+            .RouteHandler = new MyHttpControllerRouteHandler();
+
+
             context.MapRoute(
                 "SiteAdmin_default",
                 "SiteAdmin/{controller}/{action}/{id}",

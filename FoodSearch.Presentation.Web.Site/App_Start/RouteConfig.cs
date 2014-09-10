@@ -1,7 +1,9 @@
-﻿using FoodSearch.Service.FoodSearchService;
-using System.ServiceModel.Activation;
+﻿using System.ServiceModel.Activation;
+using System.Web.Http;
 using System.Web.Mvc;
 using System.Web.Routing;
+
+using FoodSearch.Presentation.Web.Site.Helpers;
 
 
 namespace FoodSearch.Presentation.Web.Site
@@ -12,7 +14,12 @@ namespace FoodSearch.Presentation.Web.Site
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
-            routes.Add(new ServiceRoute("FoodSearchService", new WebServiceHostFactory(), typeof(FoodSearchService)));
+            routes.MapHttpRoute(
+                name: "Default_api",
+                routeTemplate: "api/{controller}/{id}",
+                defaults: new { area = "", id = RouteParameter.Optional }
+            )
+            .RouteHandler = new MyHttpControllerRouteHandler();
 
             routes.MapRoute(
                 name: "Default",

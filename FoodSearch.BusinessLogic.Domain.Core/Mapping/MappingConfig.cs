@@ -8,9 +8,18 @@ namespace FoodSearch.BusinessLogic.Domain.Core.Mapping
     {
         static MappingConfig()
         {
-            Mapper.CreateMap<Data.Mapping.Entities.District, District>();
-            Mapper.CreateMap<Data.Mapping.Entities.Image, Image>();
-            Mapper.CreateMap<Data.Mapping.Entities.Street, Street>();
+            Mapper.CreateMap<Data.Mapping.Entities.City, City>()
+                .ForMember(x => x.Id, x => x.ResolveUsing(y => y.CityId));
+
+            Mapper.CreateMap<Data.Mapping.Entities.District, District>()
+                .ForMember(x => x.Id, x => x.ResolveUsing(y => y.DistrictId));
+
+            Mapper.CreateMap<Data.Mapping.Entities.Image, Image>()
+                .ForMember(x => x.Id, x => x.MapFrom(y => y.ImageId));
+
+            Mapper.CreateMap<Data.Mapping.Entities.Street, Street>()
+                .ForMember(x => x.Id, x => x.MapFrom(y => y.StreetId));
+
             Mapper.CreateMap<Data.Mapping.StoredProcedure.Results.RestaurantInfo, RestaurantInfo>();
 
             Mapper.AssertConfigurationIsValid();

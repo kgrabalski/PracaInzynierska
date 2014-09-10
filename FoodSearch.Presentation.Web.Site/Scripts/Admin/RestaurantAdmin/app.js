@@ -5,9 +5,10 @@
                                                             'FoodSearch.Admin.Common',
                                                             'FoodSearch.RestaurantAdmin.Services',
                                                             'ui.bootstrap',
-                                                            'ui.bootstrap.tpls']);
+                                                            'ui.bootstrap.tpls',
+                                                            'a8m.group-by']);
 
-    app.config(function ($routeProvider) {
+    app.config(function($routeProvider) {
         $routeProvider
             .when("/dashboard", {
                 controller: 'Dashboard',
@@ -32,7 +33,6 @@
             .when("/cuisines/add", {
 
             })
-        
             .when("/restaurant", {
                 controller: 'Restaurant',
                 templateUrl: 'restaurantTemplate'
@@ -53,9 +53,9 @@
                 controller: 'Employees',
                 templateUrl: 'employeesTemplate'
             })
-        
             .otherwise({
                 redirectTo: "/dashboard"
             });
     });
+
 })();

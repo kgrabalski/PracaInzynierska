@@ -135,12 +135,11 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Areas\RestaurantAdmin\Scripts\" />
     <Folder Include="Areas\SiteAdmin\Models\" />
     <Folder Include="Areas\User\Controllers\" />
     <Folder Include="Areas\User\Models\" />
     <Folder Include="Areas\User\Views\Shared\" />
-    <Folder Include="Models\Restaurant\" />
-    <Folder Include="Scripts\Admin\SiteAdmin\service\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
@@ -159,7 +158,9 @@
     <Compile Include="Areas\RestaurantAdmin\Models\OpeningHourModel.cs" />
     <Compile Include="Areas\RestaurantAdmin\RestaurantAdminAreaRegistration.cs" />
     <Compile Include="Areas\SiteAdmin\Controllers\AccountController.cs" />
+    <Compile Include="Areas\SiteAdmin\Controllers\CityController.cs" />
     <Compile Include="Areas\SiteAdmin\Controllers\HomeController.cs" />
+    <Compile Include="Areas\SiteAdmin\Controllers\LogoController.cs" />
     <Compile Include="Areas\SiteAdmin\Controllers\RestaurantController.cs" />
     <Compile Include="Areas\SiteAdmin\SiteAdminAreaRegistration.cs" />
     <Compile Include="Areas\User\UserAreaRegistration.cs" />
@@ -183,11 +184,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Areas\RestaurantAdmin\Content\Site.css" />
-    <Content Include="Areas\RestaurantAdmin\Scripts\CommonViewModel.js" />
-    <Content Include="Areas\RestaurantAdmin\Scripts\CuisinesViewModel.js" />
-    <Content Include="Areas\RestaurantAdmin\Scripts\DishesViewModel.js" />
-    <Content Include="Areas\RestaurantAdmin\Scripts\DishGroupsViewModel.js" />
-    <Content Include="Areas\RestaurantAdmin\Scripts\OpeningHoursViewModel.js" />
     <Content Include="Areas\SiteAdmin\Scripts\CommonViewModel.js" />
     <Content Include="Areas\SiteAdmin\Scripts\RestaurantsViewModel.js" />
     <Content Include="Content\Admin\AdminLTE.css" />
@@ -223,11 +219,14 @@
     <Content Include="Scripts\Admin\RestaurantAdmin\service\services.js" />
     <Content Include="Scripts\Admin\SiteAdmin\app.js" />
     <Content Include="Scripts\Admin\SiteAdmin\controller\controllers.js" />
+    <Content Include="Scripts\Admin\SiteAdmin\controller\restaurantController.js" />
+    <Content Include="Scripts\Admin\SiteAdmin\service\service.js" />
     <Content Include="Scripts\angular-animate.js" />
     <Content Include="Scripts\angular-animate.min.js" />
     <Content Include="Scripts\angular-cookies.js" />
     <Content Include="Scripts\angular-cookies.min.js" />
     <Content Include="Scripts\angular-csp.css" />
+    <Content Include="Scripts\angular-filter.min.js" />
     <Content Include="Scripts\angular-loader.js" />
     <Content Include="Scripts\angular-loader.min.js" />
     <Content Include="Scripts\angular-mocks.js" />
@@ -664,10 +663,6 @@
     <ProjectReference Include="..\FoodSearch.Service.Contracts\FoodSearch.Service.Contracts.csproj">
       <Project>{0820c8e2-dead-43c7-a179-87591c36c4fd}</Project>
       <Name>FoodSearch.Service.Contracts</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\FoodSearch.Service.FoodSearchService\FoodSearch.Service.FoodSearchService.csproj">
-      <Project>{ee613d92-9357-42e6-b50d-21303b399eee}</Project>
-      <Name>FoodSearch.Service.FoodSearchService</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

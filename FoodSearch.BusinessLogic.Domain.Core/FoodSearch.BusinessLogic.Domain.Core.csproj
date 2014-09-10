@@ -55,6 +55,7 @@
     <Compile Include="CoreDomain.cs" />
     <Compile Include="Interface\ICoreDomain.cs" />
     <Compile Include="Mapping\MappingConfig.cs" />
+    <Compile Include="Models\City.cs" />
     <Compile Include="Models\District.cs" />
     <Compile Include="Models\Image.cs" />
     <Compile Include="Models\RestaurantInfo.cs" />

@@ -10,12 +10,12 @@
 
 @section ScriptSection
 {
-    @*<script type="text/javascript" src="~/Scripts/jquery.dataTables.js"></script>*@
-    @*<script type="text/javascript" src="~/Scripts/dataTables.bootstrap.js"></script>*@
     <script src="~/Content/Selectize/js/standalone/selectize.min.js"></script>
     <script src="~/Scripts/Admin/Common/directives.js"></script>
     <script src="~/Scripts/Admin/SiteAdmin/app.js"></script>
     <script src="~/Scripts/Admin/SiteAdmin/controller/controllers.js"></script>
+    <script src="~/Scripts/Admin/SiteAdmin/controller/restaurantController.js"></script>
+    <script src="~/Scripts/Admin/SiteAdmin/service/service.js"></script>
 }
 
 <div class="wrapper row-offcanvas row-offcanvas-left">
@@ -48,8 +48,9 @@
                     </a>
                 </li>
             </ul>
-</section>
+        </section>
     </aside>
+    <div error-alert></div>
     <div ng-view></div>
 </div>
 

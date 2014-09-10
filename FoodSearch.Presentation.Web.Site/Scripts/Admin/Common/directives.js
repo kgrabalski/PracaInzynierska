@@ -22,6 +22,39 @@ directives.directive('navigationItem', [
     }
 ]);
 
+directives.directive('errorAlert', function() {
+    return {
+        restrict: 'A',
+        replace: true,
+        transclude: false,
+        scope: true,
+        template: "<aside class='right-side' ng-show='showError'>" +
+            "<section class='content'>" +
+            "<div class='row box-header'>" +
+            "<div class='alert alert-danger alert-dismissable'>" +
+            "<button type='button' class='close' ng-click='hideError()'>" +
+            "   <span aria-hidden='true'>&times;</span><span class='sr-only'>Close</span>" +
+            "</button>" +
+            "<strong>Błąd!</strong> Kod błędu: <b>{{message}}</b>" +
+            "</div>" +
+            "</div>" +
+            "</section>" +
+            "/aside>",
+        link: function(scope, element, attrs) {
+            scope.showError = false;
+            scope.message = "test";
+            scope.hideError = function () {
+                scope.showError = false;
+            }
+
+            scope.$on('resourceErrorEvent', function (e, message) {
+                scope.message = message;
+                scope.showError = true;
+            });
+        }
+    }
+});
+
 directives.directive('selectize', function () {
     'use strict';
     return {

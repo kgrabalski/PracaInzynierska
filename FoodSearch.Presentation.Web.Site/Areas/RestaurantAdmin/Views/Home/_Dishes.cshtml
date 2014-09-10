@@ -17,22 +17,22 @@
                         <h3 class="box-title">Dania serwowane przez restaurację</h3>
                         <button class="btn btn-primary pull-right" id="addDish" ng-click="addNew()">Dodaj</button>
                     </div>
-                    <div class="box-body table-responsive">
-                        <table id="restaurantDishesList" class="table table-bordered table-striped">
+                    <div class="box-body table-responsive" ng-repeat="(key, value) in dishes.Items | groupBy: 'DishGroup'">
+                        <h4>Grupa: {{key}}</h4>
+                        <table id="restaurantDishesList" class="table table-bordered table-hover">
                             <thead>
                                 <tr>
                                     <th>Nazwa</th>
-                                    <th>Grupa</th>
                                     <th>Cena</th>
                                     <th></th>
                                 </tr>
                             </thead>
-                            <tbody ng-repeat="d in dishes.Items">
+                            <tbody ng-repeat="i in value">
                                 <tr>
-                                    <td>{{d.DishName}}</td>
-                                    <td>{{d.DishGroup}}</td>
-                                    <td>{{d.Price}}</td>
+                                    <td>{{i.DishName}}</td>
+                                    <td>{{i.Price}}</td>
                                     <td>
+                                        <button class="btn btn-primary">Edytuj</button>
                                         <button ng-click="remove($index)" class="btn btn-primary">Usuń</button>
                                     </td>
                                 </tr>

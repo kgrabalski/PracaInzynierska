@@ -6,8 +6,8 @@ namespace FoodSearch.BusinessLogic.Domain.SiteAdmin.Interface
 {
     public interface ISiteAdminDomain
     {
-        IEnumerable<Restaurant> GetRestaurants(Guid? restaurantId = null);
-        Guid CreateRestaurant(string name, int addressId, int logoId);
-        void DeleteRestaurant(Guid restaurantId);
+        IEnumerable<Restaurant> GetRestaurants();
+        Restaurant CreateRestaurant(string name, int addressId, int logoId);
+        bool DeleteRestaurant(Guid restaurantId);
     }
 }

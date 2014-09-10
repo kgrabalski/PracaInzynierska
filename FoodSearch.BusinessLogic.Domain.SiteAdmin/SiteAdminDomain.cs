@@ -1,9 +1,13 @@
 ﻿using FoodSearch.BusinessLogic.Domain.SiteAdmin.Interface;
+using FoodSearch.BusinessLogic.Domain.SiteAdmin.Mapping;
 using FoodSearch.Data.Mapping.Entities;
 using FoodSearch.Data.Mapping.Interface;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+
+using Restaurant = FoodSearch.Data.Mapping.Entities.Restaurant;
+using RestaurantDto = FoodSearch.BusinessLogic.Domain.SiteAdmin.Models.Restaurant;
 
 namespace FoodSearch.BusinessLogic.Domain.SiteAdmin
 {
@@ -16,72 +20,49 @@ namespace FoodSearch.BusinessLogic.Domain.SiteAdmin
             _provider = provider;
         }
 
-        public IEnumerable<Models.Restaurant> GetRestaurants(Guid? restaurantId = null)
+        public IEnumerable<RestaurantDto> GetRestaurants()
         {
             using (var rep = _provider.GetRepository<Restaurant>())
             {
-                if (restaurantId.HasValue)
-                {
-                    var r = rep.Get(restaurantId.Value);
-                    return new[]
-                    {
-                        TransformRestaurant(r)
-                    };
-                }
-
                 return rep.GetAll()
                     .Where(x => x.IsDeleted == false)
+                    .OrderBy(x => x.Name).Asc
                     .List()
-                    .Select(TransformRestaurant)
-                    .ToList();
+                    .ToList()
+                    .Map<IEnumerable<RestaurantDto>>();
             }
         }
 
-        private static Models.Restaurant TransformRestaurant(Restaurant r)
-        {
-            return new Models.Restaurant()
-            {
-                RestaurantId = r.RestaurantId,
-                Name = r.Name,
-                LogoId = r.ImageId,
-                City = r.Address.City.Name,
-                District = r.Address.District.Name,
-                Street = r.Address.Street.Name,
-                Number = r.Address.Number
-            };
-        }
-
-        public Guid CreateRestaurant(string name, int addressId, int logoId)
+        public RestaurantDto CreateRestaurant(string name, int addressId, int logoId)
         {
             using (var rep = _provider.GetRepository<Restaurant>())
             {
-                Restaurant restaurant = new Restaurant()
+                bool canCreate = rep.GetAll()
+                    .Where(x => x.Name == name && x.AddressId == addressId)
+                    .RowCount() == 0;
+                if (!canCreate) return null;
+
+                var newRestaurant = new Restaurant()
                 {
                     Name = name,
                     AddressId = addressId,
                     ImageId = logoId,
-                    IsOpen = false,
                     IsDeleted = false,
+                    IsOpen = false,
                     MinOrderAmount = 0f
                 };
-                return rep.Create<Guid>(restaurant);
+                Guid restaurantId = rep.Create<Guid>(newRestaurant);
+
+                rep.Evict(newRestaurant);
+                return rep.Get(restaurantId).Map<RestaurantDto>();
             }
         }
 
-        public void DeleteRestaurant(Guid restaurantId)
+        public bool DeleteRestaurant(Guid restaurantId)
         {
             using (var rep = _provider.GetRepository<Restaurant>())
             {
-                var r = rep.Get(restaurantId);
-                try
-                {
-                    rep.Delete(r);
-                }
-                catch (Exception)
-                {
-                    r.IsDeleted = true;
-                    rep.Update(r);
-                }
+                return rep.TryDelete(restaurantId);
             }
         }
     }

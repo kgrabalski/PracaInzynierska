@@ -82,13 +82,11 @@ namespace FoodSearch.Data.Mapping.Repository
         {
             try
             {
-                Delete(id);
-                return true;
+                return Delete(id);
             }
             catch (Exception)
             {
                 return false;
-                throw;
             }
         }
 

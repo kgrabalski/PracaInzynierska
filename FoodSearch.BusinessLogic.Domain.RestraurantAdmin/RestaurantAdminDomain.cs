@@ -259,6 +259,7 @@ namespace FoodSearch.BusinessLogic.Domain.RestraurantAdmin
             using (var rep = _provider.StoredProcedure)
             using (var repOh = _provider.GetRepository<OpeningHour>())
             {
+                if (timeFrom == timeTo) return null;
                 int openingId = rep.CreateOpeningHour(restaurantId, day, timeFrom, timeTo);
                 return openingId > 0 ? repOh.Get(openingId).Map<OpeningHourDto>() : null;
             }

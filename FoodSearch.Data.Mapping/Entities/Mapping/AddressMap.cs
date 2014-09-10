@@ -17,8 +17,6 @@ namespace FoodSearch.Data.Mapping.Entities.Mapping
             Map(x => x.Number).Column("Number").Not.Nullable();
             Map(x => x.Lat).Column("Lat").Not.Nullable();
             Map(x => x.Lon).Column("Lon").Not.Nullable();
-            Map(x => x.CityId).Column("CityId").Not.Nullable();
-            References(x => x.City).Column("CityId").LazyLoad().Not.Nullable();
         }
     }
 }

@@ -7,6 +7,9 @@ using NHibernate.Criterion;
 using NHibernate.Transform;
 using System;
 using System.Collections.Generic;
+
+using City = FoodSearch.Data.Mapping.Entities.City;
+using CityDto = FoodSearch.BusinessLogic.Domain.Core.Models.City;
 using District = FoodSearch.Data.Mapping.Entities.District;
 using DistrictDto = FoodSearch.BusinessLogic.Domain.Core.Models.District;
 using Image = FoodSearch.Data.Mapping.Entities.Image;
@@ -26,21 +29,35 @@ namespace FoodSearch.BusinessLogic.Domain.Core
             _provider = provider;
         }
 
-        public IEnumerable<DistrictDto> GetDistricts()
+        public IEnumerable<CityDto> GetCities()
+        {
+            using (var rep = _provider.GetRepository<City>())
+            {
+                return rep.GetAll().List().Map<IEnumerable<CityDto>>();
+            }
+        } 
+
+        public IEnumerable<DistrictDto> GetDistricts(int cityId)
         {
             using (var rep = _provider.GetRepository<District>())
             {
-                return rep.GetAll().List().Map<IEnumerable<DistrictDto>>();
+                return rep.GetAll()
+                    .Where(x => x.CityId == cityId)
+                    .List()
+                    .Map<IEnumerable<DistrictDto>>();
             }
         }
 
-        public IEnumerable<StreetDto> GetStreets(string query)
+        public IEnumerable<StreetDto> GetStreets(int cityId, string query)
         {
-            using (var rep = _provider.GetRepository<Street>())
+            using (var rep = _provider.GetRepository<Address>())
             {
                 return rep.GetAll()
+                    .Where(x => x.District.CityId == cityId)
+                    .JoinQueryOver(x => x.Street)
                     .WhereRestrictionOn(x => x.Name)
                     .IsInsensitiveLike(query, MatchMode.Anywhere)
+                    .TransformUsing(Transformers.DistinctRootEntity)
                     .List()
                     .Map<IEnumerable<StreetDto>>();
             }

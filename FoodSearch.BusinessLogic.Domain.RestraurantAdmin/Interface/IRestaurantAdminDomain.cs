@@ -15,7 +15,6 @@ namespace FoodSearch.BusinessLogic.Domain.RestraurantAdmin.Interface
         IEnumerable<Cuisine> GetRestaurantCuisines(Guid restaurantId);
         Cuisine AddRestaurantCuisine(Guid restaurantId, int cuisineId);
         bool RemoveRestaurantCuisine(Guid restaurantId, int cuisineId);
-
         Guid CreateUser(Guid restaurantId, string userName, string firstName, string lastName, string email, string password, UserTypes userType);
         bool ChangeRestaurantState(Guid restaurantId, bool isOpened);
         IEnumerable<DishGroup> GetDishGroups(Guid restaurantId);

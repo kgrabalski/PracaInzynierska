@@ -21,7 +21,7 @@ namespace FoodSearch.Presentation.Web.Site.Controllers
         [HttpPost]
         public ActionResult GetStreets(string query = "")
         {
-            var streets = _domain.Core.GetStreets(query);
+            var streets = _domain.Core.GetStreets(1, query);
             return Json(streets, JsonRequestBehavior.DenyGet);
         }
 

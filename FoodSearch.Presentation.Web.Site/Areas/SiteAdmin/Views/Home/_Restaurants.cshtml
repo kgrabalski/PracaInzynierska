@@ -12,17 +12,13 @@
     <section class="content">
         <div class="row">
             <div class="col-xs-12">
-                <button class="btn btn-primary" id="addRestaurant">Dodaj restaurację</button>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-xs-12">
                 <div class="box">
                     <div class="box-header">
                         <h3 class="box-title">Lista restauracji</h3>
+                        <button class="btn btn-primary pull-right" id="addRestaurant" ng-click="addNew()">Dodaj restaurację</button>
                     </div>
                     <div class="box-body table-responsive">
-                        <table id="restaurantList" class="table table-bordered table-striped">
+                        <table id="restaurantList" class="table table-bordered table-hover">
                             <thead>
                                 <tr>
                                     <th>Logo</th>
@@ -30,17 +26,21 @@
                                     <th>Miasto</th>
                                     <th>Dzielnica</th>
                                     <th>Adres</th>
+                                    <th></th>
                                 </tr>
                             </thead>
-                            <tbody data-bind="foreach: Restaurants">
+                            <tbody ng-repeat="r in restaurants.Items">
                                 <tr>
                                     <td>
-                                        <img data-bind="attr: {'src': LogoUrl}" width="100" height="100" />
+                                        <img ng-src="/SiteAdmin/api/logo/{{r.LogoId}}" width="100" height="100" />
                                     </td>
-                                    <td data-bind="text: Name"></td>
-                                    <td data-bind="text: City"></td>
-                                    <td data-bind="text: District"></td>
-                                    <td data-bind="text: Address"></td>
+                                    <td>{{r.Name}}</td>
+                                    <td>{{r.City}}</td>
+                                    <td>{{r.District}}</td>
+                                    <td>{{r.Street}} {{r.Number}}</td>
+                                    <td>
+                                        <button ng-click="remove($index)" class="btn btn-primary">Usuń</button>
+                                    </td>
                                 </tr>
                             </tbody>
                         </table>
@@ -51,47 +51,52 @@
     </section>
 </aside>
 
-<div class="modal fade" id="addRestaurantModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                <h4 class="modal-title" id="myModalLabel">Dodaj restaurację</h4>
-            </div>
-            <div class="modal-body">
-                <form role="form" enctype="multipart/form-data" id="addRestForm">
-                    <div class="box-body">
-                        <div class="form-group">
-                            <label for="addRestName" class="control-label">Nazwa restauracji</label>
-                            <input type="text" name="name" placeholder="Nazwa restauracji" id="addRestName" class="form-control" required/>
-                        </div>
-                        <div class="form-group col-md-8">
-                            <label class="control-label">Ulica</label>
-                            <select id="addRestStreet" required></select>
-                        </div>
-                        <div class="form-group col-md-4">
-                            <label class="control-label">Numer</label>
-                            <select id="addRestNumber" required></select>
-                        </div>
-                        <div class="form-group">
-                            <label for="addRestUser" class="control-label">Nazwa użytkownika właściciela restauracji</label>
-                            <input type="text" name="userName" placeholder="Nazwa użytkownika" id="addRestUser" class="form-control" required/>
-                        </div>
-                        <div class="form-group">
-                            <label for="addRestPass" class="control-label">Hasło właściciela restauracji</label>
-                            <input type="password" name="userName" placeholder="Hasło właściciela" id="addRestPass" class="form-control" required />
-                        </div>
-                        <div class="form-group">
-                            <label for="addRestLogo" class="control-label">Wybierz logo restauracji</label>
-                            <input type="file" name="logo" id="addRestLogo" class="form-control" required/>
-                        </div>
-                    </div>
-                </form>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Anuluj</button>
-                <button type="button" class="btn btn-primary">Dodaj restaurację</button>
-            </div>
-        </div>
+<script type="text/ng-template" id="addRestaurantModal">
+    <div class="modal-header">
+        <button type="button" class="close" ng-click="cancel()">&times;</button>
+        <h4 class="modal-title" id="myModalLabel">Dodaj restaurację</h4>
     </div>
-</div>
+    <div class="modal-body">
+        <form role="form" enctype="multipart/form-data" id="addRForm">
+            <div class="box-body">
+                <div class="form-group">
+                    <label for="addRestName" class="control-label">Nazwa restauracji</label>
+                    <input type="text" name="name" placeholder="Nazwa restauracji" class="form-control" required ng-model="toAdd.Name"/>
+                </div>
+                <div class="form-group col-md-6">
+                    <label class="control-label" for="addCity">Miasto</label>
+                    <select placeholder="Wybierz miasto" id="addCity" required 
+                            ng-model="toAdd.CityId" options="allCities" selectize="cityOptions"></select>
+                </div>
+                <div class="form-group col-md-6">
+                    <label class="control-label">Dzielnica:</label>
+                    <input type="text" class="form-control" ng-model="toAdd.District" readonly/>
+                </div>
+                <div class="form-group col-md-8">
+                    <label class="control-label">Ulica</label>
+                    <select id="addRestStreet" required></select>
+                </div>
+                <div class="form-group col-md-4">
+                    <label class="control-label">Numer</label>
+                    <select id="addRestNumber" required></select>
+                </div>
+                <div class="form-group">
+                    <label for="addRestUser" class="control-label">Nazwa użytkownika właściciela restauracji</label>
+                    <input type="text" name="userName" placeholder="Nazwa użytkownika" id="addRestUser" class="form-control" required />
+                </div>
+                <div class="form-group">
+                    <label for="addRestPass" class="control-label">Hasło właściciela restauracji</label>
+                    <input type="password" name="userName" placeholder="Hasło właściciela" id="addRestPass" class="form-control" required />
+                </div>
+                <div class="form-group">
+                    <label for="addRestLogo" class="control-label">Wybierz logo restauracji</label>
+                    <input type="file" name="logo" id="addRestLogo" class="form-control" required />
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" ng-click="cancel()">Anuluj</button>
+        <button type="button" class="btn btn-primary" ng-click="add()" ng-disabled="!addRForm.$valid">Dodaj</button>
+    </div>
+</script>

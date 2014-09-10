@@ -6,6 +6,7 @@ using FoodSearch.Data.Mapping.Interface;
 using FoodSearch.Data.Mapping.Repository;
 
 using NHibernate;
+using NHibernate.Driver;
 
 namespace FoodSearch.Data.Mapping.Test
 {
@@ -17,8 +18,9 @@ namespace FoodSearch.Data.Mapping.Test
         {
             _factory = Fluently
                 .Configure()
-                .Database(MsSqlConfiguration.MsSql2012.
-                    ConnectionString(string.Format(@"Data Source=(LocalDb)\v11.0;Initial Catalog={0};Integrated Security=SSPI;AttachDBFilename={1}", dbName, dbPath))
+                .Database(MsSqlConfiguration.MsSql2008.
+                    ConnectionString(string.Format(@"Data Source=(LocalDb)\v11.0;Initial Catalog={0};Integrated Security=SSPI;AttachDBFilename={1};", dbName, dbPath))
+                    .Driver("NHibernate.Driver.Sql2008ClientDriver")
                     .DefaultSchema("dbo"))
                 .Mappings(m =>
                 {

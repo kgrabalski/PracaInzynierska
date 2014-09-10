@@ -1,4 +1,6 @@
-﻿using FoodSearch.BusinessLogic.Domain.RestraurantAdmin;
+﻿using System.Globalization;
+
+using FoodSearch.BusinessLogic.Domain.RestraurantAdmin;
 using FoodSearch.Data.Mapping.Entities;
 using NUnit.Framework;
 using System;
@@ -35,13 +37,19 @@ namespace FoodSearch.BusinessLogic.Domain.Test
             Guid restaurantId = Guid.Parse("575B7C69-2FE2-4A1F-BE58-23714B09A0FA");
             var result = Domain.AddRestaurantCuisine(restaurantId, cuisineId);
 
-            using (var rep = RepositoryOf<RestaurantCuisine>())
+            Assert.AreEqual(shouldSucceed, result != null);
+
+            if (shouldSucceed)
             {
-                var cuisines = rep.GetAll().Where(x => x.RestaurantId == restaurantId).List();
-                Assert.IsTrue(cuisines.Any(x => x.CuisineId == cuisineId));
+                using (var rep = RepositoryOf<RestaurantCuisine>())
+                {
+                    var restCuisine = rep.GetAll()
+                        .Where(x => x.RestaurantId == restaurantId && x.CuisineId == cuisineId)
+                        .SingleOrDefault();
+                    Assert.IsNotNull(restCuisine);
+                }
             }
 
-            Assert.AreEqual(shouldSucceed, result != null);
         }
 
 
@@ -79,6 +87,16 @@ namespace FoodSearch.BusinessLogic.Domain.Test
             var result = Domain.CreateDishGroup(restaurantId, groupName);
 
             Assert.AreEqual(shouldSucceed, result != null);
+
+            if (shouldSucceed)
+            {
+                using (var rep = RepositoryOf<DishGroup>())
+                {
+                    var dishGroup = rep.Get(result.Id);
+                    Assert.IsNotNull(dishGroup);
+                    Assert.AreEqual(groupName, dishGroup.Name);
+                }
+            }
         }
 
         [TestCase("575B7C69-2FE2-4A1F-BE58-23714B09A0FA", 10, "wontWork", Result = false, TestName = "Edit non existing dish group")]
@@ -100,6 +118,15 @@ namespace FoodSearch.BusinessLogic.Domain.Test
             bool result = Domain.DeleteDishGroup(restaurantId, dishGroupId);
 
             Assert.AreEqual(shouldSucceed, result);
+
+            if (shouldSucceed)
+            {
+                using (var rep = RepositoryOf<DishGroup>())
+                {
+                    DishGroup dg;
+                    Assert.IsFalse(rep.TryGet(dishGroupId, out dg));
+                }
+            }
         }
 
         [TestCase("D3FE2D94-6ADE-4AB2-ADC6-06BEEB6D0AB2", false, TestName = "Get dishes from restaurant without them")]
@@ -132,6 +159,49 @@ namespace FoodSearch.BusinessLogic.Domain.Test
                 }
             }
             return result;
+        }
+
+        [TestCase(TestName = "Get restaurant opening hours")]
+        public void GetOpeningHours()
+        {
+            Guid restaurantId = Guid.Parse("575B7C69-2FE2-4A1F-BE58-23714B09A0FA");
+            var openingHours = Domain.GetOpeningHours(restaurantId);
+
+            Assert.IsTrue(openingHours.Any());
+        }
+
+        [TestCase(5, "20:00", "21:30", Result = true, TestName = "Create valid opening hour")]
+        [TestCase(5, "22:00", "23:00", Result = true, TestName = "Create valid opening hour 2")]
+        [TestCase(1, "06:30", "10:00", Result = false, TestName = "Try creating overlapping opening hour 1")]
+        [TestCase(1, "18:00", "21:00", Result = false, TestName = "Try creating overlapping opening hour 2")]
+        [TestCase(1, "08:30", "10:00", Result = false, TestName = "Try creating overlapping opening hour 3")]
+        [TestCase(1, "07:00", "07:00", Result = false, TestName = "Try creating opening hour with same hours 1")]
+        [TestCase(1, "10:00", "10:00", Result = false, TestName = "Try creating opening hour with same hours 2")]
+        [TestCase(1, "20:00", "20:00", Result = false, TestName = "Try creating opening hour with same hours 3")]
+        [TestCase(1, "21:00", "21:00", Result = false, TestName = "Try creating opening hour with same hours 4")]
+        [TestCase(1, "13:00", "11:00", Result = false, TestName = "Try creating opening hour with timeTo < timeFrom")]
+        public bool CreateOpeningHour(int day, string timeFromString, string timeToString)
+        {
+            Guid restaurantId = Guid.Parse("575B7C69-2FE2-4A1F-BE58-23714B09A0FA");
+            TimeSpan timeFrom = TimeSpan.ParseExact(timeFromString, "g", CultureInfo.InvariantCulture);
+            TimeSpan timeTo = TimeSpan.ParseExact(timeToString, "g", CultureInfo.InvariantCulture);
+
+            var openingHour = Domain.CreateOpeningHour(restaurantId, day, timeFrom, timeTo);
+            return openingHour != null;
+        }
+
+        [TestCase(3, true, TestName = "Delete existing opening hour")]
+        [TestCase(1000, false, TestName = "Delete non existing opening hour")]
+        public void DeleteOpeningHour(int openingId, bool shouldSucceed)
+        {
+            bool result = Domain.DeleteOpeningHour(openingId);
+            Assert.AreEqual(shouldSucceed, result);
+
+            using (var rep = RepositoryOf<OpeningHour>())
+            {
+                OpeningHour oh;
+                Assert.IsFalse(rep.TryGet(openingId, out oh));
+            }
         }
     }
 }

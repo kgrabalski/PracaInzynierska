@@ -1,7 +1,11 @@
 ﻿(function () {
     'use strict';
 
-    var app = angular.module('FoodSearch.SiteAdmin', ['ngRoute', 'FoodSearch.Admin.Common']);
+    var app = angular.module('FoodSearch.SiteAdmin', ['ngRoute',
+                                                      'FoodSearch.Admin.Common',
+                                                      'FoodSearch.SiteAdmin.Services',
+                                                      'ui.bootstrap',
+                                                      'ui.bootstrap.tpls']);
     
     app.config( function ($routeProvider) {
         $routeProvider
@@ -10,7 +14,7 @@
                 templateUrl: 'dashboardTemplate'
             })
             .when("/restaurants", {
-                controller: 'Restaurants',
+                controller: 'RestaurantsController',
                 templateUrl: 'restaurantsTemplate'
             })
             .when("/users", {

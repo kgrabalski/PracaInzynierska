@@ -10,8 +10,9 @@ namespace FoodSearch.BusinessLogic.Domain.Core.Interface
 {
     public interface ICoreDomain
     {
-        IEnumerable<District> GetDistricts();
-        IEnumerable<Street> GetStreets(string query);
+        IEnumerable<City> GetCities();
+        IEnumerable<District> GetDistricts(int cityId);
+        IEnumerable<Street> GetStreets(int cityId, string query);
         IEnumerable<Street> GetStreets(int districtId);
         IEnumerable<StreetNumber> GetStreetNumbers(int streetId);
         Image GetImage(int imageId);
