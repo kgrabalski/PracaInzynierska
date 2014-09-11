@@ -33,6 +33,15 @@ namespace FoodSearch.Data.Mapping.Repository
             return query.UniqueResult<int>();
         }
 
+        public IEnumerable<StreetResult> GetStreets(int cityId, string query)
+        {
+            if (string.IsNullOrEmpty(query)) query = "";
+            var q = _session.GetNamedQuery("GetStreets");
+            q.SetInt32("cityId", cityId);
+            q.SetString("query", query);
+            return q.List<StreetResult>();
+        }
+
         public void Dispose()
         {
             _session.Dispose();

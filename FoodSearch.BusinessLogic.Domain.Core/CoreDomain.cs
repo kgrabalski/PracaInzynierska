@@ -50,16 +50,9 @@ namespace FoodSearch.BusinessLogic.Domain.Core
 
         public IEnumerable<StreetDto> GetStreets(int cityId, string query)
         {
-            using (var rep = _provider.GetRepository<Address>())
+            using (var rep = _provider.StoredProcedure)
             {
-                return rep.GetAll()
-                    .Where(x => x.District.CityId == cityId)
-                    .JoinQueryOver(x => x.Street)
-                    .WhereRestrictionOn(x => x.Name)
-                    .IsInsensitiveLike(query, MatchMode.Anywhere)
-                    .TransformUsing(Transformers.DistinctRootEntity)
-                    .List()
-                    .Map<IEnumerable<StreetDto>>();
+                return rep.GetStreets(cityId, query).Map<IEnumerable<StreetDto>>();
             }
         }
 
@@ -83,7 +76,7 @@ namespace FoodSearch.BusinessLogic.Domain.Core
                 return rep.GetAll()
                     .Where(x => x.StreetId == streetId)
                     .SelectList(list => list
-                        .Select(x => x.AddressId).WithAlias(() => sn.AddressId)
+                        .Select(x => x.AddressId).WithAlias(() => sn.Id)
                         .Select(x => x.Number).WithAlias(() => sn.Number))
                     .TransformUsing(Transformers.AliasToBean<StreetNumber>())
                     .List<StreetNumber>();

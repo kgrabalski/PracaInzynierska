@@ -6,6 +6,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
+using Address = FoodSearch.Data.Mapping.Entities.Address;
+using AddressDto = FoodSearch.BusinessLogic.Domain.SiteAdmin.Models.Address;
 using Restaurant = FoodSearch.Data.Mapping.Entities.Restaurant;
 using RestaurantDto = FoodSearch.BusinessLogic.Domain.SiteAdmin.Models.Restaurant;
 
@@ -63,6 +65,14 @@ namespace FoodSearch.BusinessLogic.Domain.SiteAdmin
             using (var rep = _provider.GetRepository<Restaurant>())
             {
                 return rep.TryDelete(restaurantId);
+            }
+        }
+
+        public AddressDto GetAddress(int addressId)
+        {
+            using (var rep = _provider.GetRepository<Address>())
+            {
+                return rep.Get(addressId).Map<AddressDto>();
             }
         }
     }

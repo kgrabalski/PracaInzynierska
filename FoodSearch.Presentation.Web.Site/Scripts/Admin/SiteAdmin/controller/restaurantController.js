@@ -23,19 +23,63 @@ app.controller('RestaurantsController', ['$scope', 'RestaurantService', '$modal'
 ]);
 
 app.controller('AddRestaurantController', [
-    '$scope', '$modalInstance', 'CityService', function($scope, $modalInstance, city) {
+    '$scope', '$modalInstance', 'CityService', 'StreetService', 'AddressService',
+    function ($scope, $modalInstance, city, street, address) {
         $scope.allCities = city.query();
         $scope.cityOptions = {
             valueField: 'Id',
             labelField: 'Name',
-            create: false
+            create: false,
+            onChange: function(value) {
+                if (value == "") $scope.toAdd.StreetId = "";
+            }
         };
+
+        $scope.allStreets = [];
+        $scope.streetOptions = {
+            valueField: 'Id',
+            labelField: 'Name',
+            sortField: 'Name',
+            searchField: ['Name'],
+            create: false,
+            load: function(query, callback) {
+                if (query.length < 3) return callback();
+                $scope.allStreets = street.query({ cityId: $scope.toAdd.CityId, query: query });
+            },
+            onChange: function (value) {
+                $scope.toAdd.AddressId = "";
+                $scope.allStreetNumbers = [];
+                if (value != "") {
+                    $scope.allStreetNumbers = street.query({ Id: value });
+                }
+            }
+        };
+
+        $scope.allStreetNumbers = [];
+        $scope.streetNumbersOptions = {
+            valueField: 'Id',
+            labelField: 'Number',
+            create: false,
+            onChange: function(value) {
+                if (value != "") {
+                    address.get({ Id: value }, function(adr) {
+                        $scope.toAdd.District = adr.District;
+                    });
+                } else $scope.toAdd.District = "nieznana";
+            }
+        }
 
         $scope.toAdd = {
             Name: "",
             CityId: -1,
-            District: 'nieznana'
-        }
+            District: 'nieznana',
+            StreetId: -1,
+            AddressId: -1,
+            UserName: "",
+            UserPassword: "",
+            LogoFile: ""
+        };
+
         $scope.add = function () {
             $modalInstance.close($scope.toAdd);
         };

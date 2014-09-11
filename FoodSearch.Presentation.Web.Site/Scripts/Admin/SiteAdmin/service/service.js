@@ -17,3 +17,17 @@ services.service('CityService', [
         return service;
     }
 ]);
+
+services.service('StreetService', [
+    '$resource', function($resource) {
+        var service = $resource('/SiteAdmin/api/Street/:streetId', { streetId: "@Id" });
+        return service;
+    }
+]);
+
+services.service('AddressService', [
+    '$resource', function($resource) {
+        var service = $resource('/SiteAdmin/api/Address/:addressId', { addressId: "@Id" });
+        return service;
+    }
+]);

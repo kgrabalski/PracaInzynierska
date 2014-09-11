@@ -117,7 +117,9 @@
     <Compile Include="Repository\FoodSearchStoredProcedureRepository.cs" />
     <Compile Include="Repository\SessionSource.cs" />
     <Compile Include="StoredProcedure\Results\Mapping\RestaurantInfoMap.cs" />
+    <Compile Include="StoredProcedure\Results\Mapping\StreetResultMap.cs" />
     <Compile Include="StoredProcedure\Results\RestaurantInfo.cs" />
+    <Compile Include="StoredProcedure\Results\StreetResult.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -129,6 +131,11 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="StoredProcedure\CreateOpeningHour.hbm.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="StoredProcedure\GetStreets.hbm.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
   </ItemGroup>

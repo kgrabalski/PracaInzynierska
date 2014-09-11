@@ -9,5 +9,6 @@ namespace FoodSearch.BusinessLogic.Domain.SiteAdmin.Interface
         IEnumerable<Restaurant> GetRestaurants();
         Restaurant CreateRestaurant(string name, int addressId, int logoId);
         bool DeleteRestaurant(Guid restaurantId);
+        Address GetAddress(int addressId);
     }
 }

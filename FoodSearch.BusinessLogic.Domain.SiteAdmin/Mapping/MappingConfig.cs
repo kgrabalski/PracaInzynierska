@@ -21,6 +21,12 @@ namespace FoodSearch.BusinessLogic.Domain.SiteAdmin.Mapping
                 .ForMember(x => x.District, x => x.MapFrom(y => y.Address.District.Name))
                 .ForMember(x => x.Street, x => x.MapFrom(y => y.Address.Street.Name))
                 .ForMember(x => x.Number, x => x.MapFrom(y => y.Address.Number));
+
+            Mapper.CreateMap<Data.Mapping.Entities.Address, Address>()
+                .ForMember(x => x.Id, x => x.MapFrom(y => y.AddressId))
+                .ForMember(x => x.District, x => x.MapFrom(y => y.District.Name));
+
+            Mapper.AssertConfigurationIsValid();
         }
 
         #region Extensions

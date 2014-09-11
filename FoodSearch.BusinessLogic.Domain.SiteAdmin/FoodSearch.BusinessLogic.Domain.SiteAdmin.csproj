@@ -55,6 +55,7 @@
   <ItemGroup>
     <Compile Include="Interface\ISiteAdminDomain.cs" />
     <Compile Include="Mapping\MappingConfig.cs" />
+    <Compile Include="Models\Address.cs" />
     <Compile Include="Models\Restaurant.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SiteAdminDomain.cs" />
