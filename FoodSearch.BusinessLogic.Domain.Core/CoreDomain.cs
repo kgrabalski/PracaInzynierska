@@ -14,7 +14,6 @@ using District = FoodSearch.Data.Mapping.Entities.District;
 using DistrictDto = FoodSearch.BusinessLogic.Domain.Core.Models.District;
 using Image = FoodSearch.Data.Mapping.Entities.Image;
 using ImageDto = FoodSearch.BusinessLogic.Domain.Core.Models.Image;
-using RestaurantInfoDto = FoodSearch.BusinessLogic.Domain.Core.Models.RestaurantInfo;
 using Street = FoodSearch.Data.Mapping.Entities.Street;
 using StreetDto = FoodSearch.BusinessLogic.Domain.Core.Models.Street;
 
@@ -100,14 +99,6 @@ namespace FoodSearch.BusinessLogic.Domain.Core
                     ImageData = imageBytes,
                     ContentType = contentType
                 });
-            }
-        }
-
-        public IEnumerable<RestaurantInfoDto> GetRestaurants(int addressId, DateTime date)
-        {
-            using (var rep = _provider.StoredProcedure)
-            {
-                return rep.GetRestaurants(addressId, date).Map<IEnumerable<RestaurantInfoDto>>();
             }
         }
     }

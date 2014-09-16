@@ -4,6 +4,8 @@ using FoodSearch.BusinessLogic.Domain.Core.Interface;
 using FoodSearch.BusinessLogic.Domain.FoodSearch.Interface;
 using FoodSearch.BusinessLogic.Domain.Order;
 using FoodSearch.BusinessLogic.Domain.Order.Interface;
+using FoodSearch.BusinessLogic.Domain.Restaurant;
+using FoodSearch.BusinessLogic.Domain.Restaurant.Interface;
 using FoodSearch.BusinessLogic.Domain.RestraurantAdmin;
 using FoodSearch.BusinessLogic.Domain.RestraurantAdmin.Interface;
 using FoodSearch.BusinessLogic.Domain.SiteAdmin;
@@ -39,6 +41,7 @@ namespace FoodSearch.BusinessLogic.Domain.FoodSearch
             _kernel.Bind<IUserDomain>().To<UserDomain>().InThreadScope();
             _kernel.Bind<IRestaurantAdminDomain>().To<RestaurantAdminDomain>().InThreadScope();
             _kernel.Bind<ISiteAdminDomain>().To<SiteAdminDomain>().InThreadScope();
+            _kernel.Bind<IRestaurantDomain>().To<RestaurantDomain>().InThreadScope();
         }
 
         public ICoreDomain Core { get { return _kernel.Get<ICoreDomain>(); } }
@@ -46,5 +49,6 @@ namespace FoodSearch.BusinessLogic.Domain.FoodSearch
         public IUserDomain User { get { return _kernel.Get<IUserDomain>(); } }
         public IRestaurantAdminDomain RestaurantAdmin { get { return _kernel.Get<IRestaurantAdminDomain>(); } }
         public ISiteAdminDomain SiteAdmin { get { return _kernel.Get<ISiteAdminDomain>(); } }
+        public IRestaurantDomain Restaurant { get { return _kernel.Get<IRestaurantDomain>(); } }
     }
 }

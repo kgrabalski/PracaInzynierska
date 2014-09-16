@@ -63,6 +63,10 @@
       <Project>{C0879B51-2AF2-4D83-A239-4B7F0BD1D039}</Project>
       <Name>FoodSearch.BusinessLogic.Domain.Order</Name>
     </ProjectReference>
+    <ProjectReference Include="..\FoodSearch.BusinessLogic.Domain.Restaurant\FoodSearch.BusinessLogic.Domain.Restaurant.csproj">
+      <Project>{C74E76C5-8E76-4B4F-A3EA-E921D912DAFF}</Project>
+      <Name>FoodSearch.BusinessLogic.Domain.Restaurant</Name>
+    </ProjectReference>
     <ProjectReference Include="..\FoodSearch.BusinessLogic.Domain.RestraurantAdmin\FoodSearch.BusinessLogic.Domain.RestraurantAdmin.csproj">
       <Project>{140694A6-E80E-4C42-8E66-F043019608A3}</Project>
       <Name>FoodSearch.BusinessLogic.Domain.RestraurantAdmin</Name>

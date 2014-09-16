@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace FoodSearch.BusinessLogic.Domain.Core.Models
+namespace FoodSearch.BusinessLogic.Domain.Restaurant.Models
 {
     public class RestaurantInfo
     {

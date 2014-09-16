@@ -1,25 +1,126 @@
-﻿@{
-    Layout = null;
-}
+﻿<!doctype html>
+<html lang="pl">
+<head>
+    <meta charset="utf-8">
+    <title>FoodSearch.pl</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="icon" type="image/png" href="~/favicon.ico" />
+    <meta itemprop="image" content="~/favicon.ico">
+    
+    <link rel="stylesheet" href="~/Content/bootstrap.min.css"/>
+    <link rel="stylesheet" href="~/Content/Site.css"/>
 
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>@ViewBag.Title</title>
-        <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
-        <!--[if lt IE 9]>
-            <script src="~/Scripts/html5shiv.min.js"></script>
-            <script src="~/Scripts/respond.min.js"></script>
-        <![endif]-->
-        @RenderSection("HeadSection", false)
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    @RenderSection("HeadSection", false)
 </head>
-<body>
-    @RenderBody()
-    
-    <script type="text/javascript" src="~/Scripts/jquery-2.1.0.min.js"></script>
-    <script type="text/javascript" src="~/Scripts/bootstrap.min.js"></script>
-    
-    @RenderSection("ScriptSection", false)
-</body>
+
+    <body>
+        <header>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="alert alert-info cookie-alert fade in">
+                            <button class="close" aria-hidden="true" data-dismiss="alert" type="button">×</button>
+                            <strong>Ta strona korzysta z plików cookies. <a href="@Url.Action("Privacy", "Regulation", new {area = ""})">Polityka prywatności</a></strong>
+                        </div>
+                    </div>
+                </div>
+                <div class="row user-links">
+                    <div class="col-md-2 col-md-offset-8 col-xs-6 login">
+                        <a href="@Url.Action("Login", "Account", new {area = ""})">Zaloguj się</a>
+                    </div>
+                    <div class="col-md-2 register">
+                        <a href="@Url.Action("Register", "Account", new {area = ""})">Zarejestruj się</a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12 col-xs-6">
+                        <a href="@Url.Action("Index", "Home", new {area = ""})">
+                            <img style="display: block; margin:auto"/>
+                        </a>
+                    </div>
+                </div>
+                
+                <nav class="navbar navbar-default">
+                    <ul class="nav nav-justified">
+                        <li class="active" id="menu1">
+                            <a href="@Url.Action("Index", "Home", new {area = ""})">REZERWUJ</a>
+                        </li>
+                        <li class="" id="menu2">
+                            <a href="@Url.Action("Index", "Restaurant", new {area = ""})">RESTAURACJE</a>
+                        </li>
+                        <li class="" id="menu3">
+                            <a href="@Url.Action("Index", "AddObject", new {area = ""})">DODAJ OBIEKT</a>
+                        </li>
+                        <li class="" id="menu4">
+                            <a href="@Url.Action("Index", "Contact", new {area = ""})">KONTAKT</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        
+        <section>
+            @RenderBody()
+        </section>
+        @*
+
+    <footer class="section2">
+        <div class="footer-wrapper">
+            <div class="zone-footer zone clearfix">
+                <div class="footer-container container">
+                    <div class="website-short-description block">
+                        <img src="~/Images/logoFooter.png" class="logo" alt="" />
+                        <div class="description-text">
+                        </div>
+                    </div>
+
+                    <div class="recent-posts block">
+                        <h3 class="title">Ważne Rzeczy</h3>
+                        <ul>
+                            <li class="first">
+                                <a href="@Url.Action("Index", "AboutUs", new {area = ""})">O nas</a>
+                            </li>
+                            <li>
+                                <a href="@Url.Action("Index", "AddObject", new {area = ""})">Dodaj obiekt</a>
+                            </li>
+                            <li>
+                                <a href="@Url.Action("Main", "Regulation", new {area = ""})">Regulamin</a>
+                            </li>
+                            <li class="last">
+                                <a href="@Url.Action("Privacy", "Regulation", new {area = ""})">Polityka prywatności</a>
+                            </li>
+                            <li class="last">
+
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="recent-posts block contact">
+                        <h3 class="title">Kontakt</h3>
+                        <ul>
+                            <li class="first">
+                                <div class="text-green">
+                                    OpenKort.pl <br />
+                                    ul. Kłopotowskiego 22 <br />
+                                    03-717 Warszawa
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="copyright-wrapper">
+            <div class="zone clearfix">
+                <div class="container">
+                    <div class="copyright block">&copy; Wszelkie prawa zastrzeżone przez OpenKort.pl</div>
+                </div>
+            </div>
+        </div>
+    </footer>*@
+
+        @RenderSection("ScriptSection", false)
+    </body>
 </html>

@@ -1,42 +1,50 @@
-﻿body {
-    padding-top: 50px;
-    padding-bottom: 20px;
+﻿/*COMMON*/
+a {
+    color: #4d4d4d;
+    text-decoration: none;
+    -webkit-transition: color 0.2s ease-in-out 0s;
+    -moz-transition: color 0.2s ease-in-out 0s;
+    -ms-transition: color 0.2s ease-in-out 0s;
+    -o-transition: color 0.2s ease-in-out 0s;
+    transition: color 0.2s ease-in-out 0s;
 }
 
-/* Set padding to keep content from hitting the edges */
-.body-content {
-    padding-left: 15px;
-    padding-right: 15px;
-}
+    a:hover {
+        color: #98b709;
+        text-decoration: none;
+    }
 
-/* Set width on the form input elements since they're 100% wide by default */
-input,
-select,
-textarea {
-    max-width: 280px;
-}
-
-/* styles for validation helpers */
-.field-validation-error {
-    color: #b94a48;
-}
-
-.field-validation-valid {
+select::-ms-expand,
+input::-ms-clear,
+input::-ms-reveal {
     display: none;
 }
 
-input.input-validation-error {
-    border: 1px solid #b94a48;
+*:focus {
+    outline: none;
 }
 
-input[type="checkbox"].input-validation-error {
-    border: 0 none;
+/*COOKIE ALERT*/
+.cookie-alert {
+    /*margin-bottom: 0;*/
 }
 
-.validation-summary-errors {
-    color: #b94a48;
+/*USER PANEL*/
+
+/*LOGIN BUTTON*/
+.user-links {
+    margin-top: -20px;
 }
 
-.validation-summary-valid {
-    display: none;
+.user-links .login {
+    background: url(../images/link-arrow.png) no-repeat 20px center;
+    padding: 8px 15px 8px 30px;
+    border-left: 1px solid #e6e6e6;
+}
+
+.user-links .register {
+    background: url(../images/link-arrow.png) no-repeat 20px center; 
+    padding: 8px 17px 8px 30px;
+    border-left: 1px solid #e6e6e6;
+    border-right: 1px solid #e6e6e6;
 }

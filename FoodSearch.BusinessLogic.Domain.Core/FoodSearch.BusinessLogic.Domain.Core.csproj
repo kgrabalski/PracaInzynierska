@@ -58,7 +58,6 @@
     <Compile Include="Models\City.cs" />
     <Compile Include="Models\District.cs" />
     <Compile Include="Models\Image.cs" />
-    <Compile Include="Models\RestaurantInfo.cs" />
     <Compile Include="Models\Street.cs" />
     <Compile Include="Models\StreetNumber.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

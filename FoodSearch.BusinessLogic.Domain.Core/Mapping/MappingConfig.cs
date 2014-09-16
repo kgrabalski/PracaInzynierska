@@ -23,7 +23,7 @@ namespace FoodSearch.BusinessLogic.Domain.Core.Mapping
             Mapper.CreateMap<Data.Mapping.StoredProcedure.Results.StreetResult, Street>()
                 .ForMember(x => x.Id, x => x.MapFrom(y => y.StreetId));
 
-            Mapper.CreateMap<Data.Mapping.StoredProcedure.Results.RestaurantInfo, RestaurantInfo>();
+            
 
             Mapper.AssertConfigurationIsValid();
         }

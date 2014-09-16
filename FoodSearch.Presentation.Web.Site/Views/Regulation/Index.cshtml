@@ -1,0 +1,239 @@
+﻿@using FoodSearch.Presentation.Web.Site.Models
+@{
+    ViewBag.Title = "OpenKort.pl - Regulamin";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="content-wrapper container" id="regulationMain">
+    <div class="content-middle">
+        <div class="content-proper">
+            <div class="block-title">
+                <h1>Regulamin</h1>
+            </div>
+        </div>
+        <div class="justified">
+            <h2>1. Terminy i definicje</h2>
+            <p>
+                1.1  Użytkownik - osoba fizyczna posiadająca aktywne konto w portalu Openkort.pl.
+            </p>
+            <p>
+                1.2  Openkort - serwis umożliwiający rezerwacje kortów tenisowych i zarządzanie klubem tenisowym, administratorem strony jest
+                FUNDACJA STARTUP SCHOOL zarejestrowana w Krajowym Rejestrze Sądowym pod numerem KRS 0000350012, NIP: 1132791341, REGON: 142273363.
+                Z siedzibą w Warszawie przy ul. Kłopotowskiego 22, 03-717 Warszawa.
+            </p>
+            <p>
+                1.3  Portal - serwis internetowy dostępny pod adresem <a href="http://foodsearch.azurewebsites.net">http://www.foodsearch.pl</a>
+            </p>
+            <p>
+                1.4  Rezerwacja - proces zajęcia i opłacenia kortu tenisowego, zaczynający się od wybrania godziny, daty, dzielnicy oraz konkretnego
+                Obiektu, przez potwierdzenie swoich danych, do wpłacenia Należności przez serwis Paypal lub PayU. Może być dokonana jedynie przez
+                zalogowanego Użytkownika Portalu.
+            </p>
+            <p>
+                1.5  Właściciel - osoba będąca prawnie właścicielem klubu tenisowego.
+            </p>
+            <p>
+                1.6  Osoba zarządzająca - osoba zajmująca się administracją klubu sportowego, wybrana przez właściciela i mówiąca w jego imieniu
+                podczas jego nieobecności.
+            </p>
+            <p>
+                1.7  Obiekt - klub tenisowy.
+            </p>
+            <p>
+                1.8  Konto - Strona/przestrzeń serwerowa Portalu, udostępniona Użytkownikowi, dzięki której Użytkownik może dokonywać rezerwacji
+                oraz przeglądać oferty kortów.
+            </p>
+            <p>
+                1.9  Profil Obiektu - miejsce w Portalu, gdzie opublikowane są Dane oraz informacje na temat Obiektu.
+            </p>
+            <p>
+                1.10 Profil Użytkownika – Miejsce w Portalu, gdzie użytkownik ma dostęp do swoich Danych, Historii Rezerwacji i Utworzonych Rezerwacji.
+            </p>
+            <p>
+                1.11 Historia rezerwacji – Zawiera wszystkie utworzone Rezerwacje do bieżącej daty.
+            </p>
+            <p>
+                1.12 Utworzona Rezerwacja – Rezerwacja utworzona za pomocą Portalu Openkort.pl, jeszcze nie odebrana.
+            </p>
+            <p>
+                1.13 Należność – kwota w PLN ustalona przez Obiekt za korzystanie z ich usług.
+            </p>
+            <p>
+                1.14 Najpóźniejszy termin odwołania rezerwacji - jest ustalany indywidualnie w każdym Obiekcie i jest dostępny na Profilu Obiektu.
+            </p>
+            <p>
+                1.15 Termin odebrania rezerwacji -  jest ustalany indywidualnie w każdym Obiekcie i jest dostępny na Profilu Obiektu.
+            </p>
+            <p>
+                1.16  Dane - dane osobowe, firmy i bądź inne dane potrzebne do weryfikacji Użytkownika.
+            </p>
+            <p>
+                1.17 Usunięcie rezerwacji – wycofanie się z rezerwowania terminu w Obiekcie, pozwalające na odzyskanie Należności, jeśli zostało zgłoszone
+                przed Najpóźniejszym terminem odwołania rezerwacji.
+            </p>
+            <p>
+                1.18 Numer Rezerwacji - unikatowy numer przyporządkowany każdej rezerwacji, służący do potwierdzenia tożsamości Użytkownika przy Odbiorze
+                rezerwacji.
+            </p>
+            <p>
+                1.19 Odbiór rezerwacji - polega na fizycznym pojawieniu się Użytkownika w klubie tenisowym w którym została utworzona rezerwacja oraz
+                potwierdzeniu swojej tożsamości przy pomocy niezbędnych Danych ( Imię, Nazwisko, Numer Rezerwacji) w celu skorzystania z usług klubu, o
+                których mowa w dokonanej Rezerwacji.
+            </p>
+
+            <br />
+            <br />
+            <h2>2. Warunki korzystania z serwisu</h2>
+            <p>
+                2.1  Niezbędnym dla korzystania z Serwisu jest posiadanie przez Użytkownika urządzenia pozwalającego na dostęp do sieci Internet, przeglądarką
+                internetową, akceptującym pliki typu cookies.
+            </p>
+            <p>
+                2.2  W ramach Serwisu zabronione jest korzystanie z wirusów, botów, robaków bądź innych kodów komputerowych, plików lub programów (w szczególności
+                automatyzujących procesy skryptów i aplikacji bądź innych kodów, plików lub narzędzi).
+            </p>
+
+            <br />
+            <br />
+            <h2>3. Rejestracja</h2>
+            <p>
+                3.1 Użytkownikiem Serwisu może być każda osoba fizyczna, która ukończy proces rejestracji oraz zaakceptuje treść Regulaminu w całości.
+            </p>
+            <p>
+                3.2  Rejestracja polega na poprawnym wypełnieniu formularza, znajdującego się na stronie <a href="@Url.Action("Index", "Home", new HomeModel(){ShowRegister = true})">Rejestracja</a>:  wybranie hasła, podania adresu
+                e-mail oraz podstawowych Danych.
+            </p>
+            <p>
+                3.3  Adres email jest wybierany 1 raz i pozostaje niezmienialny.
+            </p>
+            <p>
+                3.4  Użytkownik, który wypełnił dane w formularzu rejestracyjnym, otrzymuje na wpisany przez niego adres e-mail wiadomość zawierającą link
+                aktywujący konto. W momencie kliknięcia w ten link, konto zostaje aktywowane, a pomiędzy Użytkownikiem a Openkortem dochodzi do zawarcia
+                umowy, której przedmiotem są usługi świadczone przez Openkort.
+            </p>
+            <p>
+                3.5  Dokonując rejestracji w serwisie internetowym Openkort, Użytkownik wyraża zgodę na przetwarzanie swoich danych osobowych zgodnie z Polityką
+                Ochrony Prywatności wyrażoną w dalszej części Regulaminu oraz zgodnie z ustawą z dnia 29 sierpnia 1997r. o Ochronie Danych Osobowych i ustawą
+                z dnia 18 lipca 2002 r. o Świadczeniu Usług Drogą Elektroniczną z późniejszym zmianami.
+            </p>
+            <p>
+                3.6  Po rejestracji i aktywowaniu konta, Użytkownik ma prawo do:
+                <ul>
+                    <li>Tworzenia Rezerwacji.</li>
+                    <li>Przeglądania Profili klubów tenisowych.</li>
+                    <li>Dostępu do swojego Profilu Użytkownika.</li>
+                    <li>Dostępu do historii swoich rezerwacji.</li>
+                    <li>Usuwania rezerwacji.</li>
+                </ul>
+            </p>
+            <p>
+                3.7  Poprzez rejestrację Użytkownik wyraża zgodę na przetwarzanie danych osobowych w celu poprawnego przeprowadzenia Rezerwacji, a w
+                szczególności na przekazanie ich po zakończeniu Rezerwacji osobom będącym stroną transakcji.
+            </p>
+            <p>
+                3.8  Rejestrując się, Użytkownik akceptuje otrzymywanie powiadomień oraz materiałów reklamowych na pocztę e-mail.
+            </p>
+            <p>
+                3.9  Użytkownik ma obowiązek podania prawdziwych danych. Wykrycie nieprawidłowych danych spowoduje bezterminową blokadę konta.
+            </p>
+
+            <br />
+            <br />
+            <h2>4. Konto</h2>
+            <p>
+                4.1  Zabrania się przekazywania loginu i hasła osobom trzecim.
+            </p>
+            <p>
+                4.2  W przypadku stwierdzenia łamania przez Użytkownika zasad niniejszego Regulaminu, konto zostanie zablokowane (na stałe lub tymczasowo).
+            </p>
+            <p>
+                4.3  Użytkownik może zażądać usunięcia swojego konta. Wtym celu powinien wysłać e-mail z prośbą pod adres kontakt@openkort.pl z
+                dopiskiem “Usunięcie konta” w temacie.
+            </p>
+            <p>
+                4.4  Po usunięciu lub zablokowaniu Konta, Openkort przetwarza Dane Użytkowników Portalu w zakresie określonym w ustawie o świadczeniu
+                usług drogą elektroniczną, w celu: należytego rozliczenia usług w ramach Portalu, należytego zakończenia wykonywania usług na rzecz Użytkownika.
+            </p>
+            <p>
+                4.5  Openkort zastrzega sobie możliwość czasowego zablokowania konta bądź dostępu do wybranych usług świadczonych przez Openkort w przypadku
+                podejrzenia, że bezpieczeństwo danego konta zostało zagrożone.
+            </p>
+
+            <br />
+            <br />
+            <h2>5. Rezerwacja</h2>
+            <p>
+                5.1  Użytkownik ma obowiązek zapłaty za Rezerwację podczas procesu Rezerwacji na stronie Openkort.pl, wybierając jedną z dostępnych możliwości zapłaty (PayPal, Payu).
+            </p>
+            <p>
+                5.2  Odebranie rezerwacji musi być potwierdzone Imieniem i Nazwiskiem oraz numerem Rezerwacji.
+            </p>
+            <p>
+                5.3  Odstąpienie od rezerwacji ze zwrotem pieniężnym może nastąpić w terminie określonym przez regulamin klubu tenisowego.
+            </p>
+            <p>
+                5.4  Najpóźniejszy termin odebrania Rezerwacji jest określony przez regulamin klubu tenisowego, w którym dokonana została Rezerwacja.
+            </p>
+            <p>
+                5.5  Właściciel lub osoba zarządzająca klubem tenisowym, może zamknąć rezerwację w przypadku warunków pogodowych lub awarii uniemożliwiających korzystanie z kortu tenisowego.
+            </p>
+
+            <br />
+            <br />
+            <h2>6. Reklamacje</h2>
+            <p>
+                6.1  Wszelkie reklamacje powinny być zgłaszane na adres e-mail kontakt@openkort.pl z dopiskiem „Reklamacja” w temacie.
+            </p>
+            <p>
+                6.2  Zgłoszenia reklamacyjne będą rozpatrywane przez Openkort w terminie 14 dni od dnia zgłoszenia reklamacji. Openkort.pl zastrzega sobie jednak prawo
+                do pozostawienia reklamacji bez rozpoznania, jeżeli wynikać one będą z nieznajomości postanowień niniejszego Regulaminu lub przepisów prawa.
+            </p>
+
+            <br />
+            <br />
+            <h2>7. Odpowiedzialność</h2>
+            <p>
+                7.1  Openkort nie ponosi odpowiedzialności za zakłócenia w funkcjonowaniu Serwisu wywołane siłą wyższą, awarią sprzętu lub niedozwoloną ingerencją
+                Użytkowników, nawet jeśli spowodowałyby one utratę Danych na Kontach Użytkowników.
+            </p>
+            <p>
+                7.2  Openkort nie ponosi odpowiedzialności za czasową niemożność korzystania przez Użytkowników z funkcji Serwisu, wynikającą z dokonywania zmian i
+                ulepszeń w systemie. O przerwach technicznych i czasie ich trwania Użytkownicy zostaną powiadomieni.
+            </p>
+
+            <br />
+            <br />
+            <h2>8. Postanowienia końcowe</h2>
+            <p>
+                8.1  Regulamin dostępny jest pod tym adresem: Openkort.pl/regulamin
+            </p>
+            <p>
+                8.2  Akceptując niniejszy Regulamin, Użytkownik wyraża zgodę na jego wszystkie warunki i zobowiązuje się do ich przestrzegania. Korzystanie z Serwisu
+                jest jednoznaczne z akceptacją Regulaminu.
+            </p>
+            <p>
+                8.3  Serwis zastrzega sobie prawo do zmiany postanowień Regulaminu w każdej chwili, informując o tym Użytkowników zgodnie z wymaganiami określonymi
+                przepisami w tym zakresie. Użytkownik, który nie akceptuje zmian Regulaminu, ma prawo do rozwiązania Umowy w ciągu 30 dni od daty zmiany postanowień
+                Regulaminu poprzez usunięcie Konta (do tego czasu obowiązuje go niezmieniona forma regulaminu).
+            </p>
+            <p>
+                8.4  W przypadku, gdy serwis Openkort.pl wprowadzi nowe postanowienia w niniejszym Regulaminie, Użytkownik ma możliwość odstąpienia od ich akceptacji,
+                co spowoduje wygaśnięcie umowy zawartej między Użytkownikiem, a serwisem Openkort.pl
+            </p>
+            <p>
+                8.5  Prywatność oraz poufność danych osobowych oraz obowiązki Użytkownika z tym związane określa Polityka Prywatności dostepna pod tym
+                adresem: <a href="@Url.Action("Privacy", "Regulation", new {area = ""})">Polityka prywatności</a>
+            </p>
+            <p>
+                8.6  Jeżeli którekolwiek postanowienie Regulaminu zostanie uznane prawomocnym orzeczeniem Sądu za nieważne, pozostałe postanowienia pozostają w mocy.*
+            </p>
+
+
+
+        </div>
+
+
+
+        <div class="clearfix"></div>
+    </div>
+
+</div>

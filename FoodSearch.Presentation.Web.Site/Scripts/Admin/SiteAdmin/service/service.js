@@ -5,7 +5,14 @@ services.service('RestaurantService', [
         var service = $resource('/SiteAdmin/api/Restaurant/:restaurantId', { restaurantId: "@Id" });
         service.Items = service.query();
         service.createNew = function(toAdd) {
-            return service.get({ Id: toAdd.Id });
+            var fd = new FormData();
+            angular.forEach(toAdd, function(v, k) {
+                fd.append(k, v);
+            });
+            return $http.post("/SiteAdmin/api/Restaurant", fd, {
+                transformRequest: angular.identity,
+                headers: {'Content-Type': undefined}
+            });
         }
         return service;
     }
@@ -14,6 +21,7 @@ services.service('RestaurantService', [
 services.service('CityService', [
     '$resource', function($resource) {
         var service = $resource('/SiteAdmin/api/City/:cityId', { cityId: "@Id" });
+        service.Items = service.query();
         return service;
     }
 ]);

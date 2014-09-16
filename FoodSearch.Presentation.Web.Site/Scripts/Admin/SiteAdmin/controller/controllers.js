@@ -1,13 +1,25 @@
 ﻿var app = angular.module('FoodSearch.SiteAdmin');
 
-app.controller('Dashboard', ['$scope',
+app.controller('DashboardController', ['$scope',
     function ($scope) {
         $scope.napis = "Dashboard";
     }
 ]);
 
-app.controller('Users', ['$scope',
+app.controller('UsersController', ['$scope',
     function($scope) {
         $scope.napis = "Users";
     }
-])
+]);
+
+app.controller('DistrictsController', ['$scope',
+    function ($scope) {
+        $scope.napis = "Users";
+    }
+]);
+
+app.controller('StreetsController', ['$scope',
+    function ($scope) {
+        $scope.napis = "Users";
+    }
+]);

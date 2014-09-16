@@ -136,7 +136,6 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Areas\RestaurantAdmin\Scripts\" />
-    <Folder Include="Areas\SiteAdmin\Models\" />
     <Folder Include="Areas\User\Controllers\" />
     <Folder Include="Areas\User\Models\" />
     <Folder Include="Areas\User\Views\Shared\" />
@@ -164,10 +163,13 @@
     <Compile Include="Areas\SiteAdmin\Controllers\LogoController.cs" />
     <Compile Include="Areas\SiteAdmin\Controllers\RestaurantController.cs" />
     <Compile Include="Areas\SiteAdmin\Controllers\StreetController.cs" />
+    <Compile Include="Areas\SiteAdmin\Models\CityModel.cs" />
+    <Compile Include="Areas\SiteAdmin\Models\RestaurantModel.cs" />
     <Compile Include="Areas\SiteAdmin\SiteAdminAreaRegistration.cs" />
     <Compile Include="Areas\User\UserAreaRegistration.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\RegulationController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -209,6 +211,7 @@
     <Content Include="Content\Selectize\js\standalone\selectize.js" />
     <Content Include="Content\Selectize\js\standalone\selectize.min.js" />
     <Content Include="FoodSearchService.svc" />
+    <Content Include="Images\link-arrow.png" />
     <Content Include="Scripts\Admin\Common\directives.js" />
     <Content Include="Scripts\Admin\Common\services.js" />
     <Content Include="Scripts\Admin\RestaurantAdmin\app.js" />
@@ -220,6 +223,7 @@
     <Content Include="Scripts\Admin\RestaurantAdmin\controller\openingHoursController.js" />
     <Content Include="Scripts\Admin\RestaurantAdmin\service\services.js" />
     <Content Include="Scripts\Admin\SiteAdmin\app.js" />
+    <Content Include="Scripts\Admin\SiteAdmin\controller\cityController.js" />
     <Content Include="Scripts\Admin\SiteAdmin\controller\controllers.js" />
     <Content Include="Scripts\Admin\SiteAdmin\controller\restaurantController.js" />
     <Content Include="Scripts\Admin\SiteAdmin\service\service.js" />
@@ -581,6 +585,9 @@
     <Content Include="Content\Selectize\less\plugins\optgroup_columns.less" />
     <Content Include="Content\Selectize\less\plugins\dropdown_header.less" />
     <Content Include="Content\Selectize\less\plugins\drag_drop.less" />
+    <Content Include="Areas\SiteAdmin\Views\Home\_Cities.cshtml" />
+    <Content Include="Areas\SiteAdmin\Views\Home\_Districts.cshtml" />
+    <Content Include="Areas\SiteAdmin\Views\Home\_Streets.cshtml" />
     <None Include="Properties\PublishProfiles\foodsearch.pubxml" />
     <Content Include="Scripts\errors.json" />
     <Content Include="Scripts\angular-touch.min.js.map" />
@@ -632,6 +639,8 @@
     <Content Include="Views\Home\Restaurants.cshtml" />
     <Content Include="Views\Home\RestaurantDishes.cshtml" />
     <Content Include="Scripts\version.json" />
+    <Content Include="Views\Regulation\Privacy.cshtml" />
+    <Content Include="Views\Regulation\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\FoodSearch.BusinessLogic.Domain.Core\FoodSearch.BusinessLogic.Domain.Core.csproj">
@@ -645,6 +654,10 @@
     <ProjectReference Include="..\FoodSearch.BusinessLogic.Domain.Order\FoodSearch.BusinessLogic.Domain.Order.csproj">
       <Project>{c0879b51-2af2-4d83-a239-4b7f0bd1d039}</Project>
       <Name>FoodSearch.BusinessLogic.Domain.Order</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FoodSearch.BusinessLogic.Domain.Restaurant\FoodSearch.BusinessLogic.Domain.Restaurant.csproj">
+      <Project>{C74E76C5-8E76-4B4F-A3EA-E921D912DAFF}</Project>
+      <Name>FoodSearch.BusinessLogic.Domain.Restaurant</Name>
     </ProjectReference>
     <ProjectReference Include="..\FoodSearch.BusinessLogic.Domain.RestraurantAdmin\FoodSearch.BusinessLogic.Domain.RestraurantAdmin.csproj">
       <Project>{140694A6-E80E-4C42-8E66-F043019608A3}</Project>

@@ -88,13 +88,18 @@
                            class="form-control" required ng-model="toAdd.UserName"/>
                 </div>
                 <div class="form-group">
+                    <label for="addRestEmail" class="control-label">Email właściciela restauracji</label>
+                    <input type="email" name="email" placeholder="Adres email" id="addRestEmail"
+                           class="form-control" required ng-model="toAdd.UserEmail" />
+                </div>
+                <div class="form-group">
                     <label for="addRestPass" class="control-label">Hasło właściciela restauracji</label>
                     <input type="password" name="userName" placeholder="Hasło właściciela" id="addRestPass"
                             class="form-control" required ng-model="toAdd.UserPassword"/>
                 </div>
                 <div class="form-group">
                     <label for="addRestLogo" class="control-label">Wybierz logo restauracji</label>
-                    <input type="file" name="logo" id="addRestLogo" class="form-control" required />
+                    <input type="file" name="logo" id="addRestLogo" class="form-control" required file-Model="toAdd.LogoFile"/>
                 </div>
             </div>
         </form>

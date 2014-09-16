@@ -35,7 +35,7 @@ namespace FoodSearch.Presentation.Web.Site.Controllers
         [HttpPost]
         public ActionResult Restaurants(int addressId)
         {
-            var restaurants = _domain.Core.GetRestaurants(addressId, DateTime.Now);
+            var restaurants = _domain.Restaurant.GetRestaurants(addressId, DateTime.Now);
             return View(restaurants);
         }
 

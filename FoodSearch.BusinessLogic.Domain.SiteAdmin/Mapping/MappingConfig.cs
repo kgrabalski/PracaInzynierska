@@ -26,6 +26,9 @@ namespace FoodSearch.BusinessLogic.Domain.SiteAdmin.Mapping
                 .ForMember(x => x.Id, x => x.MapFrom(y => y.AddressId))
                 .ForMember(x => x.District, x => x.MapFrom(y => y.District.Name));
 
+            Mapper.CreateMap<Data.Mapping.Entities.City, City>()
+                .ForMember(x => x.Id, x => x.MapFrom(y => y.CityId));
+
             Mapper.AssertConfigurationIsValid();
         }
 

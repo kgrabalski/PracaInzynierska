@@ -15,7 +15,11 @@ app.controller('RestaurantsController', ['$scope', 'RestaurantService', '$modal'
             });
             modalAdd.result.then(function (newRestaurant) {
                 var rest = restaurant.createNew(newRestaurant);
-                if (rest != null) $scope.restaurants.Items.push(rest);
+                rest.then(function(nr) {
+                    if (nr.status == 201) {
+                        $scope.restaurants.Items.push(restaurant.get({Id: nr.data.Id}));
+                    }
+                });
             });
         }
 
@@ -76,8 +80,9 @@ app.controller('AddRestaurantController', [
             StreetId: -1,
             AddressId: -1,
             UserName: "",
+            UserEmail: "",
             UserPassword: "",
-            LogoFile: ""
+            LogoFile: null
         };
 
         $scope.add = function () {

@@ -10,7 +10,7 @@
     app.config( function ($routeProvider) {
         $routeProvider
             .when("/dashboard", {
-                controller: 'Dashboard',
+                controller: 'DashboardController',
                 templateUrl: 'dashboardTemplate'
             })
             .when("/restaurants", {
@@ -18,8 +18,20 @@
                 templateUrl: 'restaurantsTemplate'
             })
             .when("/users", {
-                controller: 'Users',
+                controller: 'UsersController',
                 templateUrl: 'usersTemplate'
+            })
+            .when("/cities", {
+                controller: 'CitiesController',
+                templateUrl: 'citiesTemplate'
+            })
+            .when("/districts", {
+                controller: 'DistrictsController',
+                templateUrl: 'districtsTemplate'
+            })
+            .when("/streets", {
+                controller: 'StreetsController',
+                templateUrl: 'streetsTemplate'
             })
             .otherwise({
                 redirectTo: "/dashboard"

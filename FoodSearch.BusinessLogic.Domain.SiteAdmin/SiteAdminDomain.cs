@@ -1,4 +1,7 @@
-﻿using FoodSearch.BusinessLogic.Domain.SiteAdmin.Interface;
+﻿using System.Security.Cryptography;
+using System.Text;
+
+using FoodSearch.BusinessLogic.Domain.SiteAdmin.Interface;
 using FoodSearch.BusinessLogic.Domain.SiteAdmin.Mapping;
 using FoodSearch.Data.Mapping.Entities;
 using FoodSearch.Data.Mapping.Interface;
@@ -10,6 +13,8 @@ using Address = FoodSearch.Data.Mapping.Entities.Address;
 using AddressDto = FoodSearch.BusinessLogic.Domain.SiteAdmin.Models.Address;
 using Restaurant = FoodSearch.Data.Mapping.Entities.Restaurant;
 using RestaurantDto = FoodSearch.BusinessLogic.Domain.SiteAdmin.Models.Restaurant;
+using City = FoodSearch.Data.Mapping.Entities.City;
+using CityDto = FoodSearch.BusinessLogic.Domain.SiteAdmin.Models.City;
 
 namespace FoodSearch.BusinessLogic.Domain.SiteAdmin
 {
@@ -22,10 +27,15 @@ namespace FoodSearch.BusinessLogic.Domain.SiteAdmin
             _provider = provider;
         }
 
-        public IEnumerable<RestaurantDto> GetRestaurants()
+        public IEnumerable<RestaurantDto> GetRestaurants(Guid? restaurantId = null)
         {
             using (var rep = _provider.GetRepository<Restaurant>())
             {
+                if (restaurantId.HasValue)
+                {
+                    return new[] {rep.Get(restaurantId.Value)}.Map<IEnumerable<RestaurantDto>>();
+                }
+
                 return rep.GetAll()
                     .Where(x => x.IsDeleted == false)
                     .OrderBy(x => x.Name).Asc
@@ -35,9 +45,10 @@ namespace FoodSearch.BusinessLogic.Domain.SiteAdmin
             }
         }
 
-        public RestaurantDto CreateRestaurant(string name, int addressId, int logoId)
+        public Guid? CreateRestaurant(string name, int addressId, int logoId, string userName, string userPassword, string userEmail)
         {
             using (var rep = _provider.GetRepository<Restaurant>())
+            using (var repU = _provider.GetRepository<RestaurantUser>())
             {
                 bool canCreate = rep.GetAll()
                     .Where(x => x.Name == name && x.AddressId == addressId)
@@ -53,10 +64,14 @@ namespace FoodSearch.BusinessLogic.Domain.SiteAdmin
                     IsOpen = false,
                     MinOrderAmount = 0f
                 };
-                Guid restaurantId = rep.Create<Guid>(newRestaurant);
-
-                rep.Evict(newRestaurant);
-                return rep.Get(restaurantId).Map<RestaurantDto>();
+                var restaurantId = rep.Create<Guid>(newRestaurant);
+                var userId = CreateUser(userName, userPassword, userEmail, "Właściciel", "restauracji", UserTypes.RestaurantAdmin, UserStates.Active);
+                var restaurantUserId = repU.Create<int>(new RestaurantUser()
+                {
+                    RestaurantId = restaurantId,
+                    UserId = userId
+                });
+                return restaurantId;
             }
         }
 
@@ -73,6 +88,61 @@ namespace FoodSearch.BusinessLogic.Domain.SiteAdmin
             using (var rep = _provider.GetRepository<Address>())
             {
                 return rep.Get(addressId).Map<AddressDto>();
+            }
+        }
+
+        public Guid CreateUser(string userName, string userPassword, string email, string firstName, string lastName, UserTypes userType, UserStates userState)
+        {
+            using (var rep = _provider.GetRepository<User>())
+            {
+                var password = (MD5.Create()).ComputeHash(Encoding.UTF8.GetBytes(userPassword));
+                return rep.Create<Guid>(new User()
+                {
+                    UserName = userName,
+                    Password = password,
+                    Email = email,
+                    FirstName = firstName,
+                    LastName = lastName,
+                    CreateDate = DateTime.Now,
+                    UserTypeId = (int) userType,
+                    UserStateId = (int) userState
+                });
+            }
+        }
+
+        public CityDto CreateCity(string name)
+        {
+            using (var rep = _provider.GetRepository<City>())
+            {
+                bool canCreate = rep.GetAll()
+                    .Where(x => x.Name == name)
+                    .RowCount() == 0;
+                if (!canCreate) return null;
+
+                int cityId = rep.Create<int>(new City()
+                {
+                    Name = name
+                });
+
+                return new CityDto()
+                {
+                    Id = cityId,
+                    Name = name
+                };
+            }
+        }
+
+        public bool DeleteCity(int cityId)
+        {
+            using (var repC = _provider.GetRepository<City>())
+            using (var repD = _provider.GetRepository<District>())
+            {
+                bool canDelete = repD.GetAll()
+                    .Where(x => x.CityId == cityId)
+                    .RowCount() == 0;
+                if (!canDelete) return false;
+
+                return repC.Delete(cityId);
             }
         }
     }
