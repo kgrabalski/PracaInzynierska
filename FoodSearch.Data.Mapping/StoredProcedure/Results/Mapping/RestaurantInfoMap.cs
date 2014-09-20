@@ -14,6 +14,8 @@ namespace FoodSearch.Data.Mapping.StoredProcedure.Results.Mapping
             Map(x => x.LogoId).Column("LogoId");
             Map(x => x.TimeFrom).Column("TimeFrom");
             Map(x => x.TimeTo).Column("TimeTo");
+            Map(x => x.RestaurantRating).Column("RestaurantRating");
+            Map(x => x.UsersVoted).Column("UsersVoted");
         }
     }
 }

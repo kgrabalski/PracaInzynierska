@@ -54,12 +54,13 @@ namespace FoodSearch.Presentation.Web.Site.Areas.SiteAdmin.Controllers
                 var form = httpRequest.Form;
                 string restaurantName = form["Name"];
                 int addressId = int.Parse(form["AddressId"]);
-                string userName = form["UserName"];
+                string firstName = form["FirstName"];
+                string lastName = form["LastName"];
                 string userPassword = form["UserPassword"];
                 string userEmail = form["UserEmail"];
 
                 int logoId = _domain.Core.AddImage(logoBytes, file.ContentType);
-                Guid? restaurantId = _domain.SiteAdmin.CreateRestaurant(restaurantName, addressId, logoId, userName, userPassword, userEmail);
+                Guid? restaurantId = _domain.SiteAdmin.CreateRestaurant(restaurantName, addressId, logoId, userPassword, userEmail, firstName, lastName);
                 return Request.CreateResponse(restaurantId.HasValue ? HttpStatusCode.Created : HttpStatusCode.Conflict, new {Id = restaurantId});
             }
             

@@ -20,6 +20,7 @@ namespace FoodSearch.Data.Mapping.Test
         [TestCase(typeof(Address), TestName = "Address")]
         [TestCase(typeof(City), TestName = "City")]
         [TestCase(typeof(Cuisine), TestName = "Cuisine")]
+        [TestCase(typeof(DeliveryAddress), TestName = "DeliveryAddress")]
         [TestCase(typeof(DeliveryType), TestName = "DeliveryType")]
         [TestCase(typeof(Dish), TestName = "Dish")]
         [TestCase(typeof(DishGroup), TestName = "DishGroup")]

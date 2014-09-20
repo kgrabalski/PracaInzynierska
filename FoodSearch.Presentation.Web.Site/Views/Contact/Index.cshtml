@@ -1,0 +1,57 @@
+﻿@model FoodSearch.Presentation.Web.Site.Models.ContactModel
+
+@{
+    ViewBag.Title = "FoodSearch.pl - Kontakt";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="row">
+    <div class="col-md-12 col-lg-12 col-xs-12">
+        <div class="well well-sm">
+            <form method="POST">
+                <fieldset>
+                    <legend>Skontaktuj się z nami</legend>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for="name">Imie i nazwisko</label>
+                                <input type="text" class="form-control" id="name" name="Name" placeholder="Podaj imię i nazwisko" required="required" value="@Model.Name" />
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Adres email</label>
+                                <div class="input-group">
+                                    <span class="input-group-addon">
+                                        <span class="glyphicon glyphicon-envelope"></span>
+                                    </span>
+                                    <input type="email" class="form-control" id="email" name="Email" placeholder="Podaj adres email" required="required" value="@Model.Email" />
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="subject">Temat wiadomości</label>
+                                <select id="subject" name="subject" class="form-control" required="required">
+                                    <option value="0" selected="">Choose One:</option>
+                                    <option value="1">General Customer Service</option>
+                                    <option value="2">Suggestions</option>
+                                    <option value="3">Product Support</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="form-group">
+                                <label for="name">Wiadomość</label>
+                                <textarea name="Message" id="message" class="form-control" rows="9" cols="25" required="required"
+                                          placeholder="Treść wiadomości">@Model.Message</textarea>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <button type="submit" class="btn btn-primary pull-right" id="btnContactUs">
+                                Wyślij wiadomość
+                            </button>
+                        </div>
+                    </div>
+                </fieldset>
+                
+            </form>
+        </div>
+    </div>
+</div>

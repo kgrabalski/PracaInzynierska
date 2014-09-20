@@ -13,10 +13,10 @@ namespace FoodSearch.BusinessLogic.Domain.SiteAdmin.Interface
     public interface ISiteAdminDomain
     {
         IEnumerable<Restaurant> GetRestaurants(Guid? restaurantId = null);
-        Guid? CreateRestaurant(string name, int addressId, int logoId, string userName, string userPassword, string userEmail);
+        Guid? CreateRestaurant(string name, int addressId, int logoId, string userPassword, string userEmail, string userFirstName, string userLastName);
         bool DeleteRestaurant(Guid restaurantId);
         Address GetAddress(int addressId);
-        Guid CreateUser(string userName, string userPassword, string email, string firstName, string lastName, UserTypes userType, UserStates userState);
+        Guid CreateUser(string email, string userPassword, string firstName, string lastName, UserTypes userType, UserStates userState);
         City CreateCity(string name);
         bool DeleteCity(int cityId);
     }

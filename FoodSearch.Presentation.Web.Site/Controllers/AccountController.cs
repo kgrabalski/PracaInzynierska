@@ -3,6 +3,8 @@ using System;
 using System.Web.Mvc;
 using System.Web.Security;
 
+using FoodSearch.Presentation.Web.Site.Models;
+
 namespace FoodSearch.Presentation.Web.Site.Controllers
 {
     public class AccountController : Controller
@@ -14,34 +16,37 @@ namespace FoodSearch.Presentation.Web.Site.Controllers
             _domain = domain;
         }
 
-        public ActionResult Login()
+        public ActionResult Login(string returnUrl)
         {
-            return View();
+            return View(new LoginModel()
+            {
+                ReturnUrl = returnUrl
+            });
         }
 
         [HttpPost]
-        public ActionResult Login(string userName, string password, bool? rememberMe)
+        public ActionResult Login(LoginModel m)
         {
-            if (Membership.ValidateUser(userName, password))
+            if (ModelState.IsValid)
             {
-                FormsAuthentication.SetAuthCookie(userName, rememberMe.HasValue && rememberMe.Value);
-
+                if (Membership.ValidateUser(m.Email, m.Password))
+                {
+                    FormsAuthentication.SetAuthCookie(m.Email, true);
+                    if (!string.IsNullOrEmpty(m.ReturnUrl) && Url.IsLocalUrl(m.ReturnUrl))
+                    {
+                        return Redirect(m.ReturnUrl);
+                    }
+                    return RedirectToAction("Index", "Home");
+                }
             }
-            return View();
+            return View(m);
         }
 
-        [Authorize(Roles = "User")]
+        [Authorize]
         public ActionResult Logout()
         {
             FormsAuthentication.SignOut();
             return RedirectToAction("Index", "Home");
-        }
-
-        [HttpPost]
-        public ActionResult IsUserNameDuplicated(string userName)
-        {
-            bool duplicated = _domain.User.IsUserNameDuplicated(userName);
-            return Json(duplicated, JsonRequestBehavior.DenyGet);
         }
 
         [HttpPost]
@@ -56,6 +61,11 @@ namespace FoodSearch.Presentation.Web.Site.Controllers
             if (!code.HasValue) return new HttpNotFoundResult();
             var result = _domain.User.ConfirmRegistration(code.Value);
             return View(result);
+        }
+
+        public ActionResult Register()
+        {
+            return View();
         }
     }
 }

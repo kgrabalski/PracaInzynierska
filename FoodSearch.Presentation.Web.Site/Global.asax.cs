@@ -3,6 +3,8 @@ using FoodSearch.BusinessLogic.Domain.FoodSearch.Interface;
 using FoodSearch.Presentation.Web.Site.App_Start;
 using FoodSearch.Presentation.Web.Site.Helpers;
 using FoodSearch.Presentation.Web.Site.Models;
+using FoodSearch.Presentation.Web.Site.Providers;
+
 using Ninject;
 using Ninject.Web.Common;
 using System.Web.Http;
@@ -36,6 +38,7 @@ namespace FoodSearch.Presentation.Web.Site
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
             ModelBinders.Binders.Add(typeof(RestaurantUser), DependencyResolver.Get<RestaurantUserModelBinder>());
+            ModelBinders.Binders.Add(typeof(UserInfo), DependencyResolver.Get<UserInfoModelBinder>());
         }
     }
 }

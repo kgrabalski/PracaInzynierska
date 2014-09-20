@@ -21,14 +21,14 @@ namespace FoodSearch.Presentation.Web.Site.Areas.SiteAdmin.Controllers
         }
 
         [HttpPost]
-        public ActionResult Login(string userName, string password, bool? rememberMe)
+        public ActionResult Login(string email, string password, bool? rememberMe)
         {
             FoodSearchRoleProvider roleProvider = new FoodSearchRoleProvider();
-            if (roleProvider.IsUserInRole(userName, UserTypes.SiteAdmin.ToString()))
+            if (roleProvider.IsUserInRole(email, UserTypes.SiteAdmin.ToString()))
             {
-                if (Membership.ValidateUser(userName, password))
+                if (Membership.ValidateUser(email, password))
                 {
-                    FormsAuthentication.SetAuthCookie(userName, rememberMe.HasValue && rememberMe.Value);
+                    FormsAuthentication.SetAuthCookie(email, rememberMe.HasValue && rememberMe.Value);
                     return RedirectToAction("Index", "Home");
                 }
             }

@@ -21,15 +21,9 @@ namespace FoodSearch.Presentation.Web.Site.Providers
             throw new NotImplementedException();
         }
 
-        public CreateUserResult CreateUser(string userName, string firstName, string lastName, string email, string password)
+        public CreateUserResult CreateUser(string firstName, string lastName, string email, string password)
         {
             CreateUserResult result = new CreateUserResult();
-
-            if (string.IsNullOrEmpty(userName))
-            {
-                result.Status = MembershipCreateStatus.InvalidUserName;
-                return result;
-            }
 
             if (string.IsNullOrEmpty(password))
             {
@@ -40,12 +34,6 @@ namespace FoodSearch.Presentation.Web.Site.Providers
             if (string.IsNullOrEmpty(email))
             {
                 result.Status = MembershipCreateStatus.InvalidEmail;
-                return result;
-            }
-
-            if (_domain.User.IsUserNameDuplicated(userName))
-            {
-                result.Status = MembershipCreateStatus.DuplicateUserName;
                 return result;
             }
 
@@ -63,12 +51,12 @@ namespace FoodSearch.Presentation.Web.Site.Providers
                 return result;
             }
 
-            Guid userId = _domain.User.CreateUser(userName, firstName, lastName, email, hash);
+            Guid userId = _domain.User.CreateUser(firstName, lastName, email, hash);
             if (userId != Guid.Empty)
             {
-                _domain.User.CreateConfirmationEntry(userId, email, userName);
+                _domain.User.CreateConfirmationEntry(userId, email);
                 result.Status = MembershipCreateStatus.Success;
-                result.MembershipUser = new MembershipUser(Membership.Provider.Name, userName, password, email, null, null, true, false, DateTime.Now, DateTime.MinValue, DateTime.MinValue, DateTime.MinValue, DateTime.MinValue);
+                result.MembershipUser = new MembershipUser(Membership.Provider.Name, email, null, email, null, null, true, false, DateTime.Now, DateTime.MinValue, DateTime.MinValue, DateTime.MinValue, DateTime.MinValue);
                 return result;
             }
 

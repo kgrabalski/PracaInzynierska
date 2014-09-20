@@ -1,9 +1,15 @@
-﻿using FoodSearch.BusinessLogic.Domain.FoodSearch.Interface;
+﻿using System.Web.SessionState;
+
+using FoodSearch.BusinessLogic.Domain.FoodSearch.Interface;
 using System;
 using System.Web.Mvc;
 
+using FoodSearch.BusinessLogic.Domain.User.Models;
+using FoodSearch.Presentation.Web.Site.Models;
+
 namespace FoodSearch.Presentation.Web.Site.Controllers
 {
+    [SessionState(SessionStateBehavior.Required)]
     public class HomeController : Controller
     {
         private readonly IFoodSearchDomain _domain;
@@ -16,20 +22,6 @@ namespace FoodSearch.Presentation.Web.Site.Controllers
         public ActionResult Index()
         {
             return View();
-        }
-
-        [HttpPost]
-        public ActionResult GetStreets(string query = "")
-        {
-            var streets = _domain.Core.GetStreets(1, query);
-            return Json(streets, JsonRequestBehavior.DenyGet);
-        }
-
-        [HttpPost]
-        public ActionResult GetStreetNumbers(int streetId)
-        {
-            var numbers = _domain.Core.GetStreetNumbers(streetId);
-            return Json(numbers, JsonRequestBehavior.DenyGet);
         }
 
         [HttpPost]
@@ -53,6 +45,17 @@ namespace FoodSearch.Presentation.Web.Site.Controllers
                 return View(dishes);
             }
             return new EmptyResult();
+        }
+
+        [ChildActionOnly]
+        public ActionResult UserLinks(UserInfo ui)
+        {
+            UserDetails details = new UserDetails();
+            if (User.Identity.IsAuthenticated)
+            {
+                details = _domain.User.GetUserDetails(ui.UserId);
+            }
+            return PartialView("_UserLinks", details);
         }
     }
 }

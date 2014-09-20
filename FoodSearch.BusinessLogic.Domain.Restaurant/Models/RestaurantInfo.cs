@@ -9,5 +9,8 @@ namespace FoodSearch.BusinessLogic.Domain.Restaurant.Models
         public int LogoId { get; set; }
         public string TimeFrom { get; set; }
         public string TimeTo { get; set; }
+        public float RestaurantRating { get; set; }
+        public int StarsCount { get; set; }
+        public int UsersVoted { get; set; }
     }
 }

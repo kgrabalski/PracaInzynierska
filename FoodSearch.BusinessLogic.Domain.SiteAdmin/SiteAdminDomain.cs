@@ -45,7 +45,7 @@ namespace FoodSearch.BusinessLogic.Domain.SiteAdmin
             }
         }
 
-        public Guid? CreateRestaurant(string name, int addressId, int logoId, string userName, string userPassword, string userEmail)
+        public Guid? CreateRestaurant(string name, int addressId, int logoId, string userPassword, string userEmail, string userFirstName, string userLastName)
         {
             using (var rep = _provider.GetRepository<Restaurant>())
             using (var repU = _provider.GetRepository<RestaurantUser>())
@@ -65,7 +65,7 @@ namespace FoodSearch.BusinessLogic.Domain.SiteAdmin
                     MinOrderAmount = 0f
                 };
                 var restaurantId = rep.Create<Guid>(newRestaurant);
-                var userId = CreateUser(userName, userPassword, userEmail, "Właściciel", "restauracji", UserTypes.RestaurantAdmin, UserStates.Active);
+                var userId = CreateUser(userEmail, userPassword, userFirstName, userLastName, UserTypes.RestaurantAdmin, UserStates.Active);
                 var restaurantUserId = repU.Create<int>(new RestaurantUser()
                 {
                     RestaurantId = restaurantId,
@@ -91,14 +91,13 @@ namespace FoodSearch.BusinessLogic.Domain.SiteAdmin
             }
         }
 
-        public Guid CreateUser(string userName, string userPassword, string email, string firstName, string lastName, UserTypes userType, UserStates userState)
+        public Guid CreateUser(string email, string userPassword, string firstName, string lastName, UserTypes userType, UserStates userState)
         {
             using (var rep = _provider.GetRepository<User>())
             {
                 var password = (MD5.Create()).ComputeHash(Encoding.UTF8.GetBytes(userPassword));
                 return rep.Create<Guid>(new User()
                 {
-                    UserName = userName,
                     Password = password,
                     Email = email,
                     FirstName = firstName,

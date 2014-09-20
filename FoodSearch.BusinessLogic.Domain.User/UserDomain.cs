@@ -1,4 +1,6 @@
-﻿using FoodSearch.BusinessLogic.Domain.User.Interface;
+﻿using System.Runtime.InteropServices;
+
+using FoodSearch.BusinessLogic.Domain.User.Interface;
 using FoodSearch.BusinessLogic.Domain.User.Models;
 using FoodSearch.BusinessLogic.Helpers.Email;
 using FoodSearch.Data.Mapping.Entities;
@@ -19,16 +21,6 @@ namespace FoodSearch.BusinessLogic.Domain.User
             _provider = provider;
         }
 
-        public bool IsUserNameDuplicated(string userName)
-        {
-            using (var rep = _provider.GetRepository<Data.Mapping.Entities.User>())
-            {
-                return rep.GetAll()
-                    .Where(x => x.UserName == userName)
-                    .RowCount() > 0;
-            }
-        }
-
         public bool IsEmailDuplicated(string email)
         {
             using (var rep = _provider.GetRepository<Data.Mapping.Entities.User>())
@@ -39,13 +31,12 @@ namespace FoodSearch.BusinessLogic.Domain.User
             }
         }
 
-        public Guid CreateUser(string userName, string firstName, string lastName, string email, byte[] password)
+        public Guid CreateUser(string firstName, string lastName, string email, byte[] password)
         {
             using (var rep = _provider.GetRepository<Data.Mapping.Entities.User>())
             {
                 return rep.Create<Guid>(new Data.Mapping.Entities.User()
                 {
-                    UserName = userName,
                     FirstName = firstName,
                     LastName = lastName,
                     Email = email,
@@ -57,9 +48,10 @@ namespace FoodSearch.BusinessLogic.Domain.User
             }
         }
 
-        public void CreateConfirmationEntry(Guid userId, string email, string userName)
+        public void CreateConfirmationEntry(Guid userId, string email)
         {
             using (var rep = _provider.GetRepository<RegistrationConfirm>())
+            using (var repU = _provider.GetRepository<Data.Mapping.Entities.User>())
             {
                 Guid code = Guid.NewGuid();
                 rep.Create<int>(new RegistrationConfirm()
@@ -68,10 +60,14 @@ namespace FoodSearch.BusinessLogic.Domain.User
                     Confirmed = false,
                     UserId = userId
                 });
+                var user = repU.Get(userId);
+
                 EmailHelper.Send(MailHelperSendFrom.NoReply,
-                    new List<string>() { email },
+                    new List<string>() {email},
                     "FoodSearch: potwierdzenie rejestracji",
-                    EmailBodyHelper.Registration(code.ToString(), userName));
+                    EmailBodyHelper.Registration(
+                        code.ToString(),
+                        string.Format("{0} {1}", user.FirstName, user.LastName)));
             }
         }
 
@@ -100,39 +96,75 @@ namespace FoodSearch.BusinessLogic.Domain.User
             return result;
         }
 
-        public bool ValidateUser(string userName, byte[] password)
+        public bool ValidateUser(string email, byte[] password)
         {
             using (var rep = _provider.GetRepository<Data.Mapping.Entities.User>())
             {
                 var user = rep.GetAll()
-                    .Where(x => x.UserName == userName)
-                    .List()
-                    .FirstOrDefault();
+                    .Where(x => x.Email == email)
+                    .SingleOrDefault();
                 return user != null && user.Password.SequenceEqual(password);
             }
         }
 
-        public string GetUserRole(string userName)
+        public string GetUserRole(string email)
         {
             using (var rep = _provider.GetRepository<Data.Mapping.Entities.User>())
             {
                 var user = rep.GetAll()
-                    .Where(x => x.UserName == userName)
-                    .List()
-                    .FirstOrDefault();
+                    .Where(x => x.Email == email)
+                    .SingleOrDefault();
                 return user != null ? user.UserType.Name : "";
             }
         }
 
-        public bool ValidateUserRole(string userName, string role)
+        public bool ValidateUserRole(string email, string role)
         {
             using (var rep = _provider.GetRepository<Data.Mapping.Entities.User>())
             {
                 var user = rep.GetAll()
-                    .Where(x => x.UserName == userName)
-                    .List()
-                    .FirstOrDefault();
+                    .Where(x => x.Email == email)
+                    .SingleOrDefault();
                 return user != null && user.UserType.Name == role;
+            }
+        }
+
+        public int CreateDeliveryAddress(Guid userId, int addressId, string flatNumber)
+        {
+            using (var rep = _provider.GetRepository<DeliveryAddress>())
+            {
+                return rep.Create<int>(new DeliveryAddress()
+                {
+                    UserId = userId,
+                    AddressId = addressId,
+                    FlatNumber = flatNumber
+                });
+            }
+        }
+
+        public UserDetails GetUserDetails(Guid userId)
+        {
+            using (var rep = _provider.GetRepository<Data.Mapping.Entities.User>())
+            {
+                var user = rep.Get(userId);
+                return new UserDetails()
+                {
+                    UserId = user.UserId,
+                    FirstName = user.FirstName,
+                    LastName = user.LastName,
+                    Email = user.Email
+                };
+            }
+        }
+
+        public Guid GetUserId(string user)
+        {
+            using (var rep = _provider.GetRepository<Data.Mapping.Entities.User>())
+            {
+                return rep.GetAll()
+                    .Where(x => x.Email == user)
+                    .SingleOrDefault()
+                    .UserId;
             }
         }
     }

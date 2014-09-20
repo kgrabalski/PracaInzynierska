@@ -79,7 +79,8 @@ app.controller('AddRestaurantController', [
             District: 'nieznana',
             StreetId: -1,
             AddressId: -1,
-            UserName: "",
+            FirstName: "",
+            LastName: "",
             UserEmail: "",
             UserPassword: "",
             LogoFile: null

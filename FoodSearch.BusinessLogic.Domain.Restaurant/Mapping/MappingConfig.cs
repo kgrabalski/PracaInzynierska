@@ -14,7 +14,8 @@ namespace FoodSearch.BusinessLogic.Domain.Restaurant.Mapping
     {
         static MappingConfig()
         {
-            Mapper.CreateMap<Data.Mapping.StoredProcedure.Results.RestaurantInfo, RestaurantInfo>();
+            Mapper.CreateMap<Data.Mapping.StoredProcedure.Results.RestaurantInfo, RestaurantInfo>()
+                .ForMember(x => x.StarsCount, x => x.ResolveUsing(y => (int)Math.Round(y.RestaurantRating, 1)));
 
             Mapper.AssertConfigurationIsValid();
         }

@@ -28,7 +28,7 @@ namespace FoodSearch.BusinessLogic.Domain.RestraurantAdmin
             _provider = provider;
         }
 
-        public Guid CreateUser(Guid restaurantId, string userName, string firstName, string lastName, string email, string password, UserTypes userType)
+        public Guid CreateUser(Guid restaurantId, string firstName, string lastName, string email, string password, UserTypes userType)
         {
             using (var repU = _provider.GetRepository<User>())
             using (var repRU = _provider.GetRepository<RestaurantUser>())
@@ -37,7 +37,6 @@ namespace FoodSearch.BusinessLogic.Domain.RestraurantAdmin
                 var pass = sha.ComputeHash(Encoding.UTF8.GetBytes(password));
                 Guid userId = repU.Create<Guid>(new User()
                 {
-                    UserName = userName,
                     FirstName = firstName,
                     LastName = lastName,
                     Email = email,
@@ -219,13 +218,13 @@ namespace FoodSearch.BusinessLogic.Domain.RestraurantAdmin
             }
         }
 
-        public Guid GetUserId(string userName)
+        public Guid GetUserId(string email)
         {
             using (var rep = _provider.GetRepository<User>())
             {
                 var user = rep.GetAll()
-                    .Where(x => x.UserName == userName)
-                    .List().FirstOrDefault();
+                    .Where(x => x.Email == email)
+                    .SingleOrDefault();
                 return user != null ? user.UserId : Guid.Empty;
             }
         }

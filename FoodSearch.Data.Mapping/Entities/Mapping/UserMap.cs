@@ -10,7 +10,6 @@ namespace FoodSearch.Data.Mapping.Entities.Mapping
             Table("Users");
             LazyLoad();
             Id(x => x.UserId).Column("UserId").Not.Nullable().GeneratedBy.Guid();
-            Map(x => x.UserName).Column("UserName").Not.Nullable();
             Map(x => x.FirstName).Column("FirstName").Not.Nullable();
             Map(x => x.LastName).Column("LastName").Not.Nullable();
             Map(x => x.Email).Column("Email").Not.Nullable();

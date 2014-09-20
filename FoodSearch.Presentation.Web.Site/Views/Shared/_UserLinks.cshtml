@@ -1,0 +1,40 @@
+﻿@model FoodSearch.BusinessLogic.Domain.User.Models.UserDetails
+    
+@if (User.Identity.IsAuthenticated)
+{
+    <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown">@string.Format("{0} {1}", Model.FirstName, Model.LastName) <span class="caret"></span></a>
+        <ul class="dropdown-menu" role="menu">
+            @{
+    if (User.IsInRole("User"))
+    {
+        <li><a href="#">Panel użytkownika</a></li>
+    }
+    else
+    {
+        if (User.IsInRole("SiteAdmin"))
+        {
+            <li><a href="@Url.Action("Index", "Home", new {area = "SiteAdmin"})">Panel administratora</a></li>
+        }
+        else if (User.IsInRole("RestaurantAdmin") || User.IsInRole("RestaurantEmployee"))
+        {
+            <li><a href="@Url.Action("Index", "Home", new {area = "RestaurantAdmin"})">Panel restauracji</a></li>
+        }
+    }
+            }
+
+            <li class="divider"></li>
+            <li><a href="@Url.Action("Logout", "Account", new {area = ""})">Wyloguj się</a></li>
+        </ul>
+    </li>
+}
+else
+{
+    <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Użytkownik <span class="caret"></span></a>
+        <ul class="dropdown-menu" role="menu">
+            <li><a href="@Url.Action("Login", "Account", new {area = ""})">Zaloguj się</a></li>
+            <li><a href="@Url.Action("Register", "Account", new {area = ""})">Zarejestruj się</a></li>
+        </ul>
+    </li>
+}

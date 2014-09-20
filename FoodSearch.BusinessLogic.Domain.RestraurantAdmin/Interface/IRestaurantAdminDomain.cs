@@ -15,7 +15,7 @@ namespace FoodSearch.BusinessLogic.Domain.RestraurantAdmin.Interface
         IEnumerable<Cuisine> GetRestaurantCuisines(Guid restaurantId);
         Cuisine AddRestaurantCuisine(Guid restaurantId, int cuisineId);
         bool RemoveRestaurantCuisine(Guid restaurantId, int cuisineId);
-        Guid CreateUser(Guid restaurantId, string userName, string firstName, string lastName, string email, string password, UserTypes userType);
+        Guid CreateUser(Guid restaurantId, string firstName, string lastName, string email, string password, UserTypes userType);
         bool ChangeRestaurantState(Guid restaurantId, bool isOpened);
         IEnumerable<DishGroup> GetDishGroups(Guid restaurantId);
         DishGroup CreateDishGroup(Guid restaurantId, string groupName);
@@ -23,7 +23,7 @@ namespace FoodSearch.BusinessLogic.Domain.RestraurantAdmin.Interface
         bool DeleteDishGroup(Guid restaurantId, int dishGroupId);
         IEnumerable<Dish> GetDishes(Guid restaurantId);
         Dish CreateDish(Guid restaurantId, string dishName, int dishGroupId, float price);
-        Guid GetUserId(string userName);
+        Guid GetUserId(string email);
         Guid GetUserRestaurant(Guid userId);
         IEnumerable<OpeningHour> GetOpeningHours(Guid restaurantId);
         OpeningHour CreateOpeningHour(Guid restaurantId, int day, TimeSpan timeFrom, TimeSpan timeTo);

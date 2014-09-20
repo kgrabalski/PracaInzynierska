@@ -5,13 +5,15 @@ namespace FoodSearch.BusinessLogic.Domain.User.Interface
 {
     public interface IUserDomain
     {
-        bool IsUserNameDuplicated(string userName);
         bool IsEmailDuplicated(string email);
-        Guid CreateUser(string userName, string firstName, string lastName, string email, byte[] password);
-        void CreateConfirmationEntry(Guid userId, string email, string userName);
+        Guid CreateUser(string firstName, string lastName, string email, byte[] password);
+        void CreateConfirmationEntry(Guid userId, string email);
         RegisterConfirmationResult ConfirmRegistration(Guid code);
-        bool ValidateUser(string userName, byte[] password);
-        string GetUserRole(string userName);
-        bool ValidateUserRole(string userName, string role);
+        bool ValidateUser(string email, byte[] password);
+        string GetUserRole(string email);
+        bool ValidateUserRole(string email, string role);
+        int CreateDeliveryAddress(Guid userId, int addressId, string flatNumber);
+        UserDetails GetUserDetails(Guid userId);
+        Guid GetUserId(string user);
     }
 }

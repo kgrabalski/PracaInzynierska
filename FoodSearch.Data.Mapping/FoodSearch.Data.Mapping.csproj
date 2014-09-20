@@ -60,6 +60,7 @@
     <Compile Include="Entities\Address.cs" />
     <Compile Include="Entities\City.cs" />
     <Compile Include="Entities\Cuisine.cs" />
+    <Compile Include="Entities\DeliveryAddress.cs" />
     <Compile Include="Entities\DeliveryType.cs" />
     <Compile Include="Entities\Dish.cs" />
     <Compile Include="Entities\DishGroup.cs" />
@@ -68,6 +69,7 @@
     <Compile Include="Entities\Mapping\AddressMap.cs" />
     <Compile Include="Entities\Mapping\CityMap.cs" />
     <Compile Include="Entities\Mapping\CuisineMap.cs" />
+    <Compile Include="Entities\Mapping\DeliveryAddressMap.cs" />
     <Compile Include="Entities\Mapping\DeliveryTypeMap.cs" />
     <Compile Include="Entities\Mapping\DishGroupMap.cs" />
     <Compile Include="Entities\Mapping\DishMap.cs" />
