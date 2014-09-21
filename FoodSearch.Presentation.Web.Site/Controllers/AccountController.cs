@@ -65,7 +65,17 @@ namespace FoodSearch.Presentation.Web.Site.Controllers
 
         public ActionResult Register()
         {
-            return View();
+            return View(new RegisterModel());
+        }
+
+        [HttpPost]
+        public ActionResult Register(RegisterModel model)
+        {
+            if (ModelState.IsValid)
+            {
+                //TODO: zrobić rejestracje
+            }
+            return View(model);
         }
     }
 }

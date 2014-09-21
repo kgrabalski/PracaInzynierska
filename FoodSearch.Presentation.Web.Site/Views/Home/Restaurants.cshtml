@@ -1,7 +1,7 @@
 ﻿@model IEnumerable<FoodSearch.BusinessLogic.Domain.Restaurant.Models.RestaurantInfo>
 
 @{
-    ViewBag.Title = "Restaurants";
+    ViewBag.Title = "FoodSearch.pl - restauracje";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
@@ -19,16 +19,27 @@
             <div class="list-group">
                 @foreach (var ri in Model)
                 {
-                    <a href="@Url.Action("RestaurantDishes", new {area = "", restaurantId = ri.RestaurantId})" class="list-group-item">
+                    <a href="@Url.Action("RestaurantDishes", "Home", new {area = "", restaurantId = ri.RestaurantId})" class="list-group-item restaurant-item">
                         <div class="media col-md-3">
                             <figure class="pull-left">
-                                <img src="@Url.Action("GetImage", "Home", new {area = "", imageId = ri.LogoId})" />
+                                <img class="img-responsive img-thumbnail restaurant-logo" src="@Url.Action("GetImage", "Home", new {area = "", imageId = ri.LogoId})" />
                             </figure>
                         </div>
                         <div class="col-md-6">
                             <h4 class="list-group-item-heading">@ri.RestaurantName</h4>
                             <p class="list-group-item-text">
-                                @ri.RestaurantName
+                                @ri.Street @ri.Number
+                                <br />
+                                Otwarta od: @ri.TimeFrom do: @ri.TimeTo
+                                <br/><br/>
+                                @if (ri.MinimumOrder > 0)
+                                {
+                                    @:Minimalna kwota zamówienia: @ri.MinimumOrder zł.
+                                }
+                                else
+                                {
+                                    @:Brak minimalnej kwoty zamówienia.
+                                }
                             </p>
                         </div>
                         <div class="col-md-3 text-center">
@@ -45,7 +56,7 @@
                                         @for (int i = 5 - ri.StarsCount; i > 0; i--)
                                         {
                                             <span class="glyphicon glyphicon-star-empty"></span>
-                                        }                                       
+                                        }
                                     </div>
                                     <div>
                                         <span class="glyphicon glyphicon-user"></span>@ri.UsersVoted głosów

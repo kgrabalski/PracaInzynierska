@@ -151,6 +151,7 @@
     <Folder Include="Areas\User\Models\" />
     <Folder Include="Areas\User\Views\Shared\" />
     <Folder Include="Views\Address\" />
+    <Folder Include="Views\Basket\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
@@ -182,6 +183,7 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\AddObjectController.cs" />
     <Compile Include="Controllers\AddressController.cs" />
+    <Compile Include="Controllers\BasketController.cs" />
     <Compile Include="Controllers\ContactController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\RegulationController.cs" />
@@ -196,11 +198,16 @@
     <Compile Include="Helpers\RestaurantUserModelBinderProvider.cs" />
     <Compile Include="Helpers\RestaurantUserModelBinder.cs" />
     <Compile Include="Helpers\RestaurantUserModelBinderWebApi.cs" />
+    <Compile Include="Models\Basket.cs" />
+    <Compile Include="Models\BasketItem.cs" />
     <Compile Include="Models\ContactModel.cs" />
     <Compile Include="Models\LoginModel.cs" />
+    <Compile Include="Models\RegisterModel.cs" />
+    <Compile Include="Models\RestaurantDishesModel.cs" />
     <Compile Include="Models\RestaurantUser.cs" />
     <Compile Include="Models\UserInfo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Providers\BasketModelBinder.cs" />
     <Compile Include="Providers\CreateUserResult.cs" />
     <Compile Include="Providers\FoodSearchMembershipProvider.cs" />
     <Compile Include="Providers\FoodSearchRoleProvider.cs" />
@@ -1116,6 +1123,8 @@
     <Content Include="Scripts\version.json" />
     <Content Include="Scripts\jquery-2.1.1.min.map" />
     <Content Include="Views\Shared\_UserLinks.cshtml" />
+    <Content Include="Views\Shared\_RestaurantInfo.cshtml" />
+    <Content Include="Views\Restaurants\Page.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\FoodSearch.BusinessLogic.Domain.Core\FoodSearch.BusinessLogic.Domain.Core.csproj">

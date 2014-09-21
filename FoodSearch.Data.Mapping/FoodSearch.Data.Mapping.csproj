@@ -119,7 +119,9 @@
     <Compile Include="Repository\FoodSearchStoredProcedureRepository.cs" />
     <Compile Include="Repository\SessionSource.cs" />
     <Compile Include="StoredProcedure\Results\Mapping\RestaurantInfoMap.cs" />
+    <Compile Include="StoredProcedure\Results\Mapping\PartnerRestaurantMap.cs" />
     <Compile Include="StoredProcedure\Results\Mapping\StreetResultMap.cs" />
+    <Compile Include="StoredProcedure\Results\PartnerRestaurant.cs" />
     <Compile Include="StoredProcedure\Results\RestaurantInfo.cs" />
     <Compile Include="StoredProcedure\Results\StreetResult.cs" />
   </ItemGroup>
@@ -138,6 +140,11 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="StoredProcedure\GetStreets.hbm.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="StoredProcedure\GetPartnerRestaurants.hbm.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
   </ItemGroup>

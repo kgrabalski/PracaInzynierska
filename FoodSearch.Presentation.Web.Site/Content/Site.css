@@ -119,3 +119,45 @@ html > /**/ body a.list-group-item {
 }
 .rating .glyphicon {font-size: 22px;}
 .rating-num { margin-top:0;font-size: 54px; }
+.restaurant-item {
+    padding: 10px 0;
+}
+.restaurant-logo {
+    min-height: 146px;
+    max-height: 146px;
+}
+
+/*BASKET*/
+.no-padding {
+    padding: 0;
+}
+.no-padding-left {
+    padding-left: 0;
+}
+
+.input-group form {
+    max-width: 40px;
+    display: block;
+}
+
+.input-group .form-left {
+    float: left;
+}
+
+.input-group .form-right {
+    float: right;
+}
+
+.input-group #count {
+    max-width: 72px;
+}
+
+.input-group .form-left .input-group-btn button {
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+
+/*LIST DISH*/

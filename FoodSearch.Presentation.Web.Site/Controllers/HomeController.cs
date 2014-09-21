@@ -37,14 +37,20 @@ namespace FoodSearch.Presentation.Web.Site.Controllers
             return File(image.ImageData, image.ContentType);
         }
 
-        public ActionResult RestaurantDishes(Guid? restaurantId)
+        public ActionResult RestaurantDishes(Guid? restaurantId, Basket basket)
         {
             if (restaurantId.HasValue)
             {
-                var dishes = _domain.RestaurantAdmin.GetDishes(restaurantId.Value);
-                return View(dishes);
+                basket.CurrentRestaurant = restaurantId.Value;
+                var dishes = _domain.Restaurant.GetDishes(restaurantId.Value);
+                var model = new RestaurantDishesModel()
+                {
+                    DishGroups = dishes,
+                    Basket = basket
+                };
+                return View(model);
             }
-            return new EmptyResult();
+            return HttpNotFound();
         }
 
         [ChildActionOnly]

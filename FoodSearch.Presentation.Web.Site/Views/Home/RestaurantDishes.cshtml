@@ -1,44 +1,135 @@
-﻿@model System.Collections.Generic.IEnumerable<FoodSearch.BusinessLogic.Domain.RestraurantAdmin.Models.Dish>
+﻿@model FoodSearch.Presentation.Web.Site.Models.RestaurantDishesModel
 
 @{
     ViewBag.Title = "RestaurantDishes";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>RestaurantDishes</h2>
+<div class="row">
+    <div class="col-lg-12 col-xs-12">
+        <div class="well col-lg-12 col-xs-12">
+            <div>
+                <div class="col-lg-8 col-md-8 col-xs-12 no-padding-left">
+                    <h1 class="text-center">Lista serwowanych dań</h1>
+                        @foreach (var dg in Model.DishGroups)
+                        {
+                            <h4>@dg.Name</h4>
+                            <div class="list-group">
+                                @foreach (var d in dg.Dishes)
+                                {
+                                    <div class="list-group-item">
+                                        <div class="row">
+                                            <div class="col-lg-2 hidden-xs">
+                                                <span class="glyphicon glyphicon-cog text-center primary" style="font-size: 48px;"></span>
+                                            </div>
+                                            <div class="col-lg-6 col-xs-12">
+                                                <h4>@d.Name</h4>
 
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.DishName)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.DishGroupId)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.DishGroup)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Price)
-        </th>
-        <th></th>
-    </tr>
+                                            </div>
+                                            <div class="col-lg-4 col-xs-12">
+                                                <h4 class="text-center">@d.Price.ToString("0.00") zł.</h4>
+                                                <form method="POST" action="@Url.Action("Add", "Basket")">
+                                                    <input type="hidden" name="returnUrl" value="@Request.Url.PathAndQuery"/>
+                                                    <input type="hidden" name="dishId" value="@d.Id"/>
+                                                    <button type="submit" class="btn btn-primary btn-block">
+                                                        <span class="glyphicon glyphicon-shopping-cart"></span>
+                                                        Zamów
+                                                    </button>
+                                                </form>
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                }
+                            </div>
+                        }
+                </div>
+                <div class="col-lg-4 col-md-4 col-xs-12 no-padding">
+                    <div class="panel panel-info">
+                        <div class="panel-heading">
+                            <div class="panel-title">
+                                <div class="row">
+                                    <div class="col-xs-12">
+                                        <h5><span class="glyphicon glyphicon-shopping-cart"></span> Koszyk</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel-body">
+                            @if (Model.Basket.Items.Count > 0)
+                            {
+                                foreach (var item in Model.Basket.Items)
+                                {
+                                    <div class="row">
+                                        <div class="col-lg-12 col-xs-12">
+                                            <h4 class="product-name"><strong>@item.Name</strong></h4>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-xs-6">
+                                            <h6><strong>@item.Price.ToString("0.00") zł.</strong></h6>
+                                        </div>
+                                        <div class="col-xs-6">
+                                            <div class="input-group">
+                                                <form method="POST" class="form-left" action="@Url.Action("Remove", "Basket")">
+                                                    <input type="hidden" name="returnUrl" value="@Request.Url.PathAndQuery" />
+                                                    <input type="hidden" name="dishId" value="@item.DishId" />
+                                                    <span class="input-group-btn">
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.DishName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.DishGroupId)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.DishGroup)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Price)
-        </td>
-    </tr>
-}
+                                                        <button type="submit" class="btn btn-danger">
+                                                            <span class="glyphicon glyphicon-minus"></span>
+                                                        </button>
+                                                    </span>
+                                                </form>
+                                                
+                                                <input type="text" class="form-control text-center" id="count" value="@item.Count" />
+                                                
+                                                <form method="POST" class="form-right" action="@Url.Action("Add", "Basket")">
+                                                    <input type="hidden" name="returnUrl" value="@Request.Url.PathAndQuery" />
+                                                    <input type="hidden" name="dishId" value="@item.DishId" />
+                                                    <span class="input-group-btn">
 
-</table>
+                                                        <button type="submit" class="btn btn-success">
+                                                            <span class="glyphicon glyphicon-plus"></span>
+                                                        </button>
+                                                    </span>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <hr>
+                                }
+
+                            }
+                            else
+                            {
+                                <div class="row">
+                                    <div class="col-lg-12 col-xs-12 text-center">
+                                        Twój koszyk jest pusty
+                                    </div>
+                                </div>
+                                <hr/>
+                            }
+
+                            
+
+                        </div>
+                        <div class="panel-footer">
+                            <div class="row">
+                                <div class="col-xs-6">
+                                    <h4>Razem: <strong>@Model.Basket.Total.ToString("0.00") zł</strong></h4>
+                                </div>
+                                <div class="col-xs-6">
+                                    <button type="button" class="btn btn-primary btn-block">
+                                        Zamów
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</div>

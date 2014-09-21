@@ -17,6 +17,13 @@ namespace FoodSearch.BusinessLogic.Domain.Restaurant.Mapping
             Mapper.CreateMap<Data.Mapping.StoredProcedure.Results.RestaurantInfo, RestaurantInfo>()
                 .ForMember(x => x.StarsCount, x => x.ResolveUsing(y => (int)Math.Round(y.RestaurantRating, 1)));
 
+            Mapper.CreateMap<Data.Mapping.Entities.Dish, Dish>()
+                .ForMember(x => x.Id, x => x.ResolveUsing(y => y.DishId))
+                .ForMember(x => x.Name, x => x.ResolveUsing(y => y.DishName));
+
+            Mapper.CreateMap<Data.Mapping.StoredProcedure.Results.PartnerRestaurant, PartnerRestaurant>()
+                .ForMember(x => x.StarsCount, x => x.ResolveUsing(y => (int)Math.Round(y.RestaurantRating, 1)));
+
             Mapper.AssertConfigurationIsValid();
         }
 

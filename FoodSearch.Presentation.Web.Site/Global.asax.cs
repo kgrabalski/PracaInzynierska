@@ -39,6 +39,7 @@ namespace FoodSearch.Presentation.Web.Site
             BundleConfig.RegisterBundles(BundleTable.Bundles);
             ModelBinders.Binders.Add(typeof(RestaurantUser), DependencyResolver.Get<RestaurantUserModelBinder>());
             ModelBinders.Binders.Add(typeof(UserInfo), DependencyResolver.Get<UserInfoModelBinder>());
+            ModelBinders.Binders.Add(typeof(Basket), new BasketModelBinder());
         }
     }
 }

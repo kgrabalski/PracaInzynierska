@@ -1,82 +1,108 @@
-﻿@model dynamic
+﻿@model FoodSearch.Presentation.Web.Site.Models.RegisterModel
 
 @{
     ViewBag.Title = "FoodSearch.pl - Rejestracja";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<div id="signupbox" style="margin-top:50px" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
-    <div class="panel panel-info">
-        <div class="panel-heading">
-            <div class="panel-title">Rejestracja</div>
-            <div style="float:right; font-size: 85%; position: relative; top:-10px"><a id="signinlink" href="#" onclick="$('#signupbox').hide(); $('#loginbox').show()">Sign In</a></div>
+<div class="container">
+    <div id="signupbox" style="margin-top:50px" class="mainbox col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1">
+        <div class="panel panel-info">
+            <div class="panel-heading">
+                <div class="panel-title">Rejestracja</div>
+            </div>
+            <div class="panel-body">
+                <form id="signupform" class="form-horizontal" role="form" method="POST" action="@Url.Action("Register")">
+
+                    <div id="signupalert" style="display:none" class="alert alert-danger">
+                        <p>Error:</p>
+                        @Html.ValidationSummary()
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="FirstName" class="col-md-3 control-label">Imię</label>
+                        <div class="col-md-9">
+                            <input type="text" class="form-control" name="FirstName" placeholder="Imię" value="@Model.FirstName" required>
+                        </div>
+                    </div>
+                
+                    <div class="form-group">
+                        <label for="LastName" class="col-md-3 control-label">Nazwisko</label>
+                        <div class="col-md-9">
+                            <input type="text" class="form-control" name="LastName" placeholder="Nazwisko" value="@Model.LastName" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="Email" class="col-md-3 control-label">Adres email</label>
+                        <div class="col-md-9">
+                            <input type="email" class="form-control" name="Email" placeholder="Adres email" value="@Model.Email" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="Password" class="col-md-3 control-label">Hasło</label>
+                        <div class="col-md-9">
+                            <input type="password" class="form-control" name="Password" placeholder="Hasło" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="RepeatPassword" class="col-md-3 control-label">Powtórz hasło</label>
+                        <div class="col-md-9">
+                            <input type="password" class="form-control" name="RepeatPassword" placeholder="Powtórz hasło" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="selectCity" class="col-md-3 control-label">Miasto</label>
+                        <div class="col-md-9">
+                            <select id="selectCity" required></select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="selectStreet" class="col-md-3 control-label">Ulica</label>
+                        <div class="col-md-9">
+                            <select id="selectStreet" required></select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="selectNumber" class="col-md-3 control-label">Numer</label>
+                        <div class="col-md-9">
+                            <select id="selectNumber" name="AddressId" required></select>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="LastName" class="col-md-3 control-label">Numer mieszkania</label>
+                        <div class="col-md-9">
+                            <input type="text" class="form-control" name="FlatNumber" placeholder="Numer mieszkania" value="@Model.FlatNumber">
+                        </div>
+                    </div>
+
+                    <div class="form-group" style="margin-top: 10px;">
+                        <div class="col-sm-12">
+                            <input type="submit" id="btn-signup" class="btn btn-primary btn-block" value="Zarejestruj się"/>
+                        </div>
+                    </div>
+                    
+
+                    <div class="form-group">
+                        <div class="col-md-12 control">
+                            <div style="border-top: 1px solid #888; padding-top: 15px; font-size: 85%">
+                                Posiadasz już konto? <a href="@Url.Action("Login")"> Zaloguj się tutaj </a>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                </form>
+            </div>
         </div>
-        <div class="panel-body">
-            <form id="signupform" class="form-horizontal" role="form">
-
-                <div id="signupalert" style="display:none" class="alert alert-danger">
-                    <p>Error:</p>
-                    <span></span>
-                </div>
-
-
-
-                <div class="form-group">
-                    <label for="email" class="col-md-3 control-label">Email</label>
-                    <div class="col-md-9">
-                        <input type="text" class="form-control" name="email" placeholder="Email Address">
-                    </div>
-                </div>
-
-                <div class="form-group">
-                    <label for="firstname" class="col-md-3 control-label">First Name</label>
-                    <div class="col-md-9">
-                        <input type="text" class="form-control" name="firstname" placeholder="First Name">
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label for="lastname" class="col-md-3 control-label">Last Name</label>
-                    <div class="col-md-9">
-                        <input type="text" class="form-control" name="lastname" placeholder="Last Name">
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label for="password" class="col-md-3 control-label">Password</label>
-                    <div class="col-md-9">
-                        <input type="password" class="form-control" name="passwd" placeholder="Password">
-                    </div>
-                </div>
-
-                <div class="form-group">
-                    <label for="icode" class="col-md-3 control-label">Invitation Code</label>
-                    <div class="col-md-9">
-                        <input type="text" class="form-control" name="icode" placeholder="">
-                    </div>
-                </div>
-
-                <div class="form-group">
-                    <!-- Button -->
-                    <div class="col-md-offset-3 col-md-9">
-                        <button id="btn-signup" type="button" class="btn btn-info"><i class="icon-hand-right"></i> &nbsp Sign Up</button>
-                        <span style="margin-left:8px;">or</span>
-                    </div>
-                </div>
-
-                <div style="border-top: 1px solid #999; padding-top:20px" class="form-group">
-
-                    <div class="col-md-offset-3 col-md-9">
-                        <button id="btn-fbsignup" type="button" class="btn btn-primary"><i class="icon-facebook"></i>   Sign Up with Facebook</button>
-                    </div>
-
-                </div>
-
-
-
-            </form>
-        </div>
-    </div>
 
 
 
 
-</div> 
+    </div> 
+</div>

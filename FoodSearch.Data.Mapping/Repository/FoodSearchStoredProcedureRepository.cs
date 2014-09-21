@@ -42,6 +42,12 @@ namespace FoodSearch.Data.Mapping.Repository
             return q.List<StreetResult>();
         }
 
+        public IEnumerable<PartnerRestaurant> GetPartnerRestaurants()
+        {
+            var query = _session.GetNamedQuery("GetPartnerRestaurants");
+            return query.List<PartnerRestaurant>();
+        }
+
         public void Dispose()
         {
             _session.Dispose();

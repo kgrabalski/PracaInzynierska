@@ -1,8 +1,56 @@
-﻿@model dynamic
+﻿@model IEnumerable<FoodSearch.BusinessLogic.Domain.Restaurant.Models.PartnerRestaurant>
 
 @{
-    ViewBag.Title = "FoodSearch.pl - Restauracje";
+    ViewBag.Title = "FoodSearch.pl - restauracje";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>FoodSearch.pl - Restauracje</h2>
+<div class="row">
+
+    <div class="col-lg-12 col-xs-12">
+        <div class="well">
+            <h1 class="text-center">Współpracujące restauracje</h1>
+            <div class="list-group">
+                @foreach (var ri in Model)
+                {
+                    <a href="@Url.Action("Page", "Restaurants", new {area = "", restaurantId = ri.RestaurantId})" class="list-group-item restaurant-item">
+                        <div class="media col-md-3">
+                            <figure class="pull-left">
+                                <img class="img-responsive img-thumbnail restaurant-logo" src="@Url.Action("GetImage", "Home", new {area = "", imageId = ri.LogoId})" />
+                            </figure>
+                        </div>
+                        <div class="col-md-6">
+                            <h4 class="list-group-item-heading">@ri.RestaurantName</h4>
+                            <p class="list-group-item-text">
+                                @ri.Street @ri.Number
+                            </p>
+                        </div>
+                        <div class="col-md-3 text-center">
+                            <div class="panel panel-default">
+                                <div class="panel-body text-center">
+                                    <h1 class="rating-num">
+                                        @ri.RestaurantRating.ToString("0.0")
+                                    </h1>
+                                    <div class="rating">
+                                        @for (int i = 0; i < ri.StarsCount; i++)
+                                        {
+                                            <span class="glyphicon glyphicon-star"></span>
+                                        }
+                                        @for (int i = 5 - ri.StarsCount; i > 0; i--)
+                                        {
+                                            <span class="glyphicon glyphicon-star-empty"></span>
+                                        }
+                                    </div>
+                                    <div>
+                                        <span class="glyphicon glyphicon-user"></span>@ri.UsersVoted głosów
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                }
+            </div>
+        </div>
+    </div>
+
+</div>
