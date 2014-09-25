@@ -13,7 +13,7 @@ namespace FoodSearch.Presentation.Web.Site.Providers
 
         public FoodSearchMembershipProvider()
         {
-            _domain = MvcApplication.DependencyResolver.Get<IFoodSearchDomain>();
+            _domain = FoodSearch.Service.Api.MvcApplication.DependencyResolver.Get<IFoodSearchDomain>();
         }
 
         public override MembershipUser CreateUser(string username, string password, string email, string passwordQuestion, string passwordAnswer, bool isApproved, object providerUserKey, out MembershipCreateStatus status)
@@ -43,15 +43,7 @@ namespace FoodSearch.Presentation.Web.Site.Providers
                 return result;
             }
 
-            SHA256 md5 = SHA256Cng.Create();
-            var hash = md5.ComputeHash(Encoding.UTF8.GetBytes(password));
-            if (hash.Length > 128)
-            {
-                result.Status = MembershipCreateStatus.InvalidPassword;
-                return result;
-            }
-
-            Guid userId = _domain.User.CreateUser(firstName, lastName, email, hash);
+            Guid userId = _domain.User.CreateUser(firstName, lastName, email, password);
             if (userId != Guid.Empty)
             {
                 _domain.User.CreateConfirmationEntry(userId, email);
@@ -91,7 +83,7 @@ namespace FoodSearch.Presentation.Web.Site.Providers
 
         public override bool ValidateUser(string username, string password)
         {
-            SHA256 sha = new SHA256Cng();
+            SHA256 sha = SHA256.Create();
             var hash = sha.ComputeHash(Encoding.UTF8.GetBytes(password));
             return _domain.User.ValidateUser(username, hash);
         }

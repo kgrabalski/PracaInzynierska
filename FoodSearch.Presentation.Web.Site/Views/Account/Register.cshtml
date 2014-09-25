@@ -5,6 +5,17 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
+@section HeadSection
+{
+    <link rel="stylesheet" href="~/Content/Selectize/css/selectize.css" />
+}
+
+@section ScriptSection
+{
+    <script type="text/javascript" src="~/Scripts/selectize.min.js"></script>
+    <script type="text/javascript" src="~/Scripts/Frontend/HomePage.js"></script>
+}
+
 <div class="container">
     <div id="signupbox" style="margin-top:50px" class="mainbox col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1">
         <div class="panel panel-info">
@@ -57,19 +68,19 @@
                     <div class="form-group">
                         <label for="selectCity" class="col-md-3 control-label">Miasto</label>
                         <div class="col-md-9">
-                            <select id="selectCity" required></select>
+                            <select id="selectCity" required placeholder="Miasto"></select>
                         </div>
                     </div>
                     <div class="form-group">
                         <label for="selectStreet" class="col-md-3 control-label">Ulica</label>
                         <div class="col-md-9">
-                            <select id="selectStreet" required></select>
+                            <select id="selectStreet" required placeholder="Ulica"></select>
                         </div>
                     </div>
                     <div class="form-group">
                         <label for="selectNumber" class="col-md-3 control-label">Numer</label>
                         <div class="col-md-9">
-                            <select id="selectNumber" name="AddressId" required></select>
+                            <select id="selectNumber" name="AddressId" required placeholder="Numer budynku"></select>
                         </div>
                     </div>
                     

@@ -1,4 +1,6 @@
 ﻿using FoodSearch.BusinessLogic.Domain.FoodSearch.Interface;
+using FoodSearch.Service.Api;
+
 using Ninject;
 using System;
 using System.Web.Security;

@@ -1,4 +1,6 @@
 ﻿using System.Runtime.InteropServices;
+using System.Security.Cryptography;
+using System.Text;
 
 using FoodSearch.BusinessLogic.Domain.User.Interface;
 using FoodSearch.BusinessLogic.Domain.User.Models;
@@ -31,16 +33,17 @@ namespace FoodSearch.BusinessLogic.Domain.User
             }
         }
 
-        public Guid CreateUser(string firstName, string lastName, string email, byte[] password)
+        public Guid CreateUser(string firstName, string lastName, string email, string password)
         {
             using (var rep = _provider.GetRepository<Data.Mapping.Entities.User>())
             {
+                var passHash = SHA256.Create().ComputeHash(Encoding.UTF8.GetBytes(password));
                 return rep.Create<Guid>(new Data.Mapping.Entities.User()
                 {
                     FirstName = firstName,
                     LastName = lastName,
                     Email = email,
-                    Password = password,
+                    Password = passHash,
                     CreateDate = DateTime.Now,
                     UserStateId = (int)UserStates.Unconfirmed,
                     UserTypeId = (int)UserTypes.User,
@@ -133,6 +136,7 @@ namespace FoodSearch.BusinessLogic.Domain.User
         {
             using (var rep = _provider.GetRepository<DeliveryAddress>())
             {
+                if (string.IsNullOrEmpty(flatNumber) || string.IsNullOrWhiteSpace(flatNumber)) flatNumber = string.Empty;
                 return rep.Create<int>(new DeliveryAddress()
                 {
                     UserId = userId,

@@ -1,11 +1,11 @@
-﻿using System.Linq;
-
-using FoodSearch.Presentation.Web.Site.Helpers;
-using Ninject.Web.WebApi;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Web.Http;
-using System.Web.Http.ModelBinding;
 
-namespace FoodSearch.Presentation.Web.Site.App_Start
+using Ninject.Web.WebApi;
+
+namespace FoodSearch.Service.Api
 {
     public static class WebApiConfig
     {
@@ -19,7 +19,11 @@ namespace FoodSearch.Presentation.Web.Site.App_Start
 
             config.DependencyResolver = new NinjectDependencyResolver(MvcApplication.DependencyResolver);
 
-            config.Services.Insert(typeof(ModelBinderProvider), 0, new RestaurantUserModelBinderProvider());
+            config.Routes.MapHttpRoute(
+                name: "Default_api",
+                routeTemplate: "{controller}/{id}",
+                defaults: new { id = RouteParameter.Optional, area = "" }
+            );
         }
     }
 }

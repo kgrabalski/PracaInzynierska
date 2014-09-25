@@ -19,6 +19,7 @@ namespace FoodSearch.Data.Mapping.Repository
             _kernel.Bind<IRepository<Address>>().To<FoodSearchRepository<Address>>();
             _kernel.Bind<IRepository<City>>().To<FoodSearchRepository<City>>();
             _kernel.Bind<IRepository<Cuisine>>().To<FoodSearchRepository<Cuisine>>();
+            _kernel.Bind<IRepository<DeliveryAddress>>().To<FoodSearchRepository<DeliveryAddress>>();
             _kernel.Bind<IRepository<DeliveryType>>().To<FoodSearchRepository<DeliveryType>>();
             _kernel.Bind<IRepository<Dish>>().To<FoodSearchRepository<Dish>>();
             _kernel.Bind<IRepository<DishGroup>>().To<FoodSearchRepository<DishGroup>>();

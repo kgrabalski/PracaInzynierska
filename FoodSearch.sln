@@ -59,6 +59,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FoodSearch.BusinessLogic.Do
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FoodSearch.BusinessLogic.Domain.Restaurant", "FoodSearch.BusinessLogic.Domain.Restaurant\FoodSearch.BusinessLogic.Domain.Restaurant.csproj", "{C74E76C5-8E76-4B4F-A3EA-E921D912DAFF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FoodSearch.Service.Api", "FoodSearch.Service.Api\FoodSearch.Service.Api.csproj", "{E54C0B09-DB27-436C-A4C2-8D0704EE5B8D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Ad-Hoc|Any CPU = Ad-Hoc|Any CPU
@@ -745,6 +747,38 @@ Global
 		{C74E76C5-8E76-4B4F-A3EA-E921D912DAFF}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{C74E76C5-8E76-4B4F-A3EA-E921D912DAFF}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{C74E76C5-8E76-4B4F-A3EA-E921D912DAFF}.Release|x86.ActiveCfg = Release|Any CPU
+		{E54C0B09-DB27-436C-A4C2-8D0704EE5B8D}.Ad-Hoc|Any CPU.ActiveCfg = Release|Any CPU
+		{E54C0B09-DB27-436C-A4C2-8D0704EE5B8D}.Ad-Hoc|Any CPU.Build.0 = Release|Any CPU
+		{E54C0B09-DB27-436C-A4C2-8D0704EE5B8D}.Ad-Hoc|ARM.ActiveCfg = Release|Any CPU
+		{E54C0B09-DB27-436C-A4C2-8D0704EE5B8D}.Ad-Hoc|iPhone.ActiveCfg = Release|Any CPU
+		{E54C0B09-DB27-436C-A4C2-8D0704EE5B8D}.Ad-Hoc|iPhoneSimulator.ActiveCfg = Release|Any CPU
+		{E54C0B09-DB27-436C-A4C2-8D0704EE5B8D}.Ad-Hoc|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{E54C0B09-DB27-436C-A4C2-8D0704EE5B8D}.Ad-Hoc|Mixed Platforms.Build.0 = Release|Any CPU
+		{E54C0B09-DB27-436C-A4C2-8D0704EE5B8D}.Ad-Hoc|x86.ActiveCfg = Release|Any CPU
+		{E54C0B09-DB27-436C-A4C2-8D0704EE5B8D}.AppStore|Any CPU.ActiveCfg = Release|Any CPU
+		{E54C0B09-DB27-436C-A4C2-8D0704EE5B8D}.AppStore|Any CPU.Build.0 = Release|Any CPU
+		{E54C0B09-DB27-436C-A4C2-8D0704EE5B8D}.AppStore|ARM.ActiveCfg = Release|Any CPU
+		{E54C0B09-DB27-436C-A4C2-8D0704EE5B8D}.AppStore|iPhone.ActiveCfg = Release|Any CPU
+		{E54C0B09-DB27-436C-A4C2-8D0704EE5B8D}.AppStore|iPhoneSimulator.ActiveCfg = Release|Any CPU
+		{E54C0B09-DB27-436C-A4C2-8D0704EE5B8D}.AppStore|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{E54C0B09-DB27-436C-A4C2-8D0704EE5B8D}.AppStore|Mixed Platforms.Build.0 = Release|Any CPU
+		{E54C0B09-DB27-436C-A4C2-8D0704EE5B8D}.AppStore|x86.ActiveCfg = Release|Any CPU
+		{E54C0B09-DB27-436C-A4C2-8D0704EE5B8D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E54C0B09-DB27-436C-A4C2-8D0704EE5B8D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E54C0B09-DB27-436C-A4C2-8D0704EE5B8D}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{E54C0B09-DB27-436C-A4C2-8D0704EE5B8D}.Debug|iPhone.ActiveCfg = Debug|Any CPU
+		{E54C0B09-DB27-436C-A4C2-8D0704EE5B8D}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU
+		{E54C0B09-DB27-436C-A4C2-8D0704EE5B8D}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{E54C0B09-DB27-436C-A4C2-8D0704EE5B8D}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{E54C0B09-DB27-436C-A4C2-8D0704EE5B8D}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{E54C0B09-DB27-436C-A4C2-8D0704EE5B8D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E54C0B09-DB27-436C-A4C2-8D0704EE5B8D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E54C0B09-DB27-436C-A4C2-8D0704EE5B8D}.Release|ARM.ActiveCfg = Release|Any CPU
+		{E54C0B09-DB27-436C-A4C2-8D0704EE5B8D}.Release|iPhone.ActiveCfg = Release|Any CPU
+		{E54C0B09-DB27-436C-A4C2-8D0704EE5B8D}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
+		{E54C0B09-DB27-436C-A4C2-8D0704EE5B8D}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{E54C0B09-DB27-436C-A4C2-8D0704EE5B8D}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{E54C0B09-DB27-436C-A4C2-8D0704EE5B8D}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -772,6 +806,7 @@ Global
 		{140694A6-E80E-4C42-8E66-F043019608A3} = {E25BAA0C-4F6C-42FF-A1CC-CE5DF4B228A2}
 		{29481033-93DB-4905-BBF3-26D69F9071DF} = {E25BAA0C-4F6C-42FF-A1CC-CE5DF4B228A2}
 		{C74E76C5-8E76-4B4F-A3EA-E921D912DAFF} = {E25BAA0C-4F6C-42FF-A1CC-CE5DF4B228A2}
+		{E54C0B09-DB27-436C-A4C2-8D0704EE5B8D} = {5CEE0E3C-B9AB-41CE-9CD4-13B70F827CDE}
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
 		StartupItem = FoodSearch.BusinessLogic.Domain.FoodSearch\FoodSearch.BusinessLogic.Domain.FoodSearch.csproj

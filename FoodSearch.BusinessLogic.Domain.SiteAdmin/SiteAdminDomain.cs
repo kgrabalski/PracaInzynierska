@@ -95,7 +95,7 @@ namespace FoodSearch.BusinessLogic.Domain.SiteAdmin
         {
             using (var rep = _provider.GetRepository<User>())
             {
-                var password = (MD5.Create()).ComputeHash(Encoding.UTF8.GetBytes(userPassword));
+                var password = (SHA256.Create()).ComputeHash(Encoding.UTF8.GetBytes(userPassword));
                 return rep.Create<Guid>(new User()
                 {
                     Password = password,

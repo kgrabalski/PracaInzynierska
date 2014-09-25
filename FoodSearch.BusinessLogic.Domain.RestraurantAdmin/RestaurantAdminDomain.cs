@@ -33,7 +33,7 @@ namespace FoodSearch.BusinessLogic.Domain.RestraurantAdmin
             using (var repU = _provider.GetRepository<User>())
             using (var repRU = _provider.GetRepository<RestaurantUser>())
             {
-                SHA256 sha = new SHA256Cng();
+                SHA256 sha = SHA256.Create();
                 var pass = sha.ComputeHash(Encoding.UTF8.GetBytes(password));
                 Guid userId = repU.Create<Guid>(new User()
                 {

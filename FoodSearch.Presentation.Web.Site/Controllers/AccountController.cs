@@ -56,11 +56,16 @@ namespace FoodSearch.Presentation.Web.Site.Controllers
             return Json(duplicated, JsonRequestBehavior.DenyGet);
         }
 
-        public ActionResult ConfirmRegistration(Guid? code)
+        public ActionResult Verify(Guid? code)
         {
             if (!code.HasValue) return new HttpNotFoundResult();
             var result = _domain.User.ConfirmRegistration(code.Value);
             return View(result);
+        }
+
+        public ActionResult AccountCreated()
+        {
+            return View();
         }
 
         public ActionResult Register()
@@ -72,9 +77,17 @@ namespace FoodSearch.Presentation.Web.Site.Controllers
         public ActionResult Register(RegisterModel model)
         {
             if (ModelState.IsValid)
-            {
-                //TODO: zrobić rejestracje
-            }
+                if (!_domain.User.IsEmailDuplicated(model.Email))
+                {
+                    Guid userId = _domain.User.CreateUser(model.FirstName, model.LastName, model.Email, model.Password);
+                    _domain.User.CreateConfirmationEntry(userId, model.Email);
+                    _domain.User.CreateDeliveryAddress(userId, model.AddressId, model.FlatNumber);
+                    return RedirectToAction("AccountCreated");
+                }
+                else
+                {
+                    ModelState.AddModelError("Email", "Podany adres email istnieje już w bazie");
+                }
             return View(model);
         }
     }

@@ -1118,13 +1118,14 @@
     <Content Include="Views\Restaurants\Index.cshtml" />
     <Content Include="Views\Contact\Index.cshtml" />
     <Content Include="Views\AddObject\Index.cshtml" />
-    <Content Include="Views\Account\ConfirmRegistration.cshtml" />
     <Content Include="Views\Account\Register.cshtml" />
     <Content Include="Scripts\version.json" />
     <Content Include="Scripts\jquery-2.1.1.min.map" />
     <Content Include="Views\Shared\_UserLinks.cshtml" />
     <Content Include="Views\Shared\_RestaurantInfo.cshtml" />
     <Content Include="Views\Restaurants\Page.cshtml" />
+    <Content Include="Views\Account\Verify.cshtml" />
+    <Content Include="Views\Account\AccountCreated.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\FoodSearch.BusinessLogic.Domain.Core\FoodSearch.BusinessLogic.Domain.Core.csproj">
@@ -1158,6 +1159,10 @@
     <ProjectReference Include="..\FoodSearch.Data.Mapping\FoodSearch.Data.Mapping.csproj">
       <Project>{3C7D76AD-3B68-4EB6-9A15-560D4773FB24}</Project>
       <Name>FoodSearch.Data.Mapping</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FoodSearch.Service.Api\FoodSearch.Service.Api.csproj">
+      <Project>{e54c0b09-db27-436c-a4c2-8d0704ee5b8d}</Project>
+      <Name>FoodSearch.Service.Api</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
