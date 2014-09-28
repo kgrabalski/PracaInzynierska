@@ -18,6 +18,8 @@ namespace FoodSearch.Data.Mapping.Entities.Mapping
             Map(x => x.MinOrderAmount).Column("MinOrderAmount").Not.Nullable();
             Map(x => x.IsOpen).Column("IsOpen").Not.Nullable();
             Map(x => x.IsDeleted).Column("IsDeleted").Not.Nullable();
+            Map(x => x.DeliveryPrice).Column("DeliveryPrice").Not.Nullable();
+            Map(x => x.FreeDeliveryFrom).Column("FreeDeliveryFrom").Not.Nullable();
         }
     }
 }

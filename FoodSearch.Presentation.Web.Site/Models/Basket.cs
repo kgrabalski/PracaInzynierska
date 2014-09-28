@@ -60,5 +60,12 @@ namespace FoodSearch.Presentation.Web.Site.Models
         {
             get { return _items.Sum(x => x.Price*x.Count); }
         }
+
+        public decimal DeliveryPrice { get; set; }
+
+        public decimal TotalWithDelivery
+        {
+            get { return Total + DeliveryPrice; }
+        }
     }
 }

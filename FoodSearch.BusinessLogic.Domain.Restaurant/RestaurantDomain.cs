@@ -69,5 +69,16 @@ namespace FoodSearch.BusinessLogic.Domain.Restaurant
                 return rep.GetPartnerRestaurants().Map<IEnumerable<PartnerRestaurant>>();
             }
         }
+
+        public decimal GetDeliveryPrice(Guid restaurantId, decimal totalPrice)
+        {
+            using (var rep = _provider.GetRepository<Data.Mapping.Entities.Restaurant>())
+            {
+                var rest = rep.Get(restaurantId);
+                decimal freeDelivery = (decimal)rest.FreeDeliveryFrom;
+                if (totalPrice >= freeDelivery) return decimal.Zero;
+                return (decimal) rest.DeliveryPrice;
+            }
+        }
     }
 }

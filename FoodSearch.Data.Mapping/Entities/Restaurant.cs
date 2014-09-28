@@ -13,5 +13,7 @@ namespace FoodSearch.Data.Mapping.Entities
         public virtual float MinOrderAmount { get; set; }
         public virtual bool IsOpen { get; set; }
         public virtual bool IsDeleted { get; set; }
+        public virtual float DeliveryPrice { get; set; }
+        public virtual float FreeDeliveryFrom { get; set; }
     }
 }

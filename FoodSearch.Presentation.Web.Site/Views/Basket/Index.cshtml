@@ -1,0 +1,112 @@
+﻿@using System.Globalization
+@using FoodSearch.Presentation.Web.Site.Providers
+@model FoodSearch.Presentation.Web.Site.Models.Basket
+
+@{
+    ViewBag.Title = "FoodSearch.pl - Koszyk";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="row">
+    <div class="col-lg-12 col-xs-12">
+        <div class="well">
+            <h1 class="text-center">Koszyk</h1>
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th>Danie</th>
+                        <th>Ilość</th>
+                        <th class="text-center">Cena</th>
+                        <th class="text-center">Razem</th>
+                        <th> </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @if (Model.Items.Count == 0)
+                    {
+                        <tr>
+                            <td colspan="5" class="text-center">
+                                Twój koszyk jest pusty
+                            </td>
+                        </tr>
+                    }
+                    else
+                    {
+                        foreach (var item in Model.Items)
+                         {
+                             <tr>
+                                 <td class="col-sm-8 col-md-6">
+                                     <div class="media">
+                                         <span class="thumbnail pull-left glyphicon glyphicon-cog" style="width: 72px; height: 72px; font-size: 48px; text-align: center;"></span>
+                                         <div class="media-body">
+                                             <h4 class="media-heading"><a href="#">@item.Name</a></h4>
+                                         </div>
+                                     </div>
+                                 </td>
+                                 <td class="col-sm-1 col-md-1" style="text-align: center">
+                                     <input type="number" class="form-control" value="@item.Count" readonly>
+                                 </td>
+                                 <td class="col-sm-1 col-md-1 text-center"><strong>@item.Price.ToString("C")</strong></td>
+                                 <td class="col-sm-1 col-md-1 text-center"><strong>@item.Total.ToString("C")</strong></td>
+                                 <td class="col-sm-1 col-md-1">
+                                     <form method="POST" action="@Url.Action("Remove", "Basket")">
+                                         <input type="hidden" name="returnUrl" value="@Url.Action("Index")" />
+                                         <input type="hidden" name="dishId" value="@item.DishId" />
+                                         <button type="submit" class="btn btn-danger">
+                                             <span class="glyphicon glyphicon-remove"></span> Usuń
+                                         </button>
+                                     </form>
+                                 </td>
+                             </tr>
+                         }
+                    }        
+
+                    
+                    <tr>
+                        <td>   </td>
+                        <td>   </td>
+                        <td>   </td>
+                        <td><h5>Dania razem:</h5></td>
+                        <td class="text-right"><h5><strong>@Model.Total.ToPln()</strong></h5></td>
+                    </tr>
+                    <tr>
+                        <td>   </td>
+                        <td>   </td>
+                        <td>   </td>
+                        <td><h5>Dostawa:</h5></td>
+                        <td class="text-right"><h5><strong>@Model.DeliveryPrice.ToPln()</strong></h5></td>
+                    </tr>
+                    <tr>
+                        <td>   </td>
+                        <td>   </td>
+                        <td>   </td>
+                        <td><h3>Razem:</h3></td>
+                        <td class="text-right"><h3><strong>@Model.TotalWithDelivery.ToPln()</strong></h3></td>
+                    </tr>
+                    <tr>
+                        <td>   </td>
+                        <td>   </td>
+                        <td>   </td>
+                        <td>
+                            <form method="GET" action="@Url.Action("RestaurantDishes", "Home", new {area = ""})">
+                                <input type="hidden" name="restaurantId" value="@Model.CurrentRestaurant"/>
+                                <button type="submit" class="btn btn-default">
+                                    <span class="glyphicon glyphicon-shopping-cart"></span> Wróć
+                                </button>
+                            </form>
+                            
+                        </td>
+                        <td>
+                            @if (Model.Items.Count > 0)
+                            {
+                                <button type="button" class="btn btn-success">
+                                    Zamów <span class="glyphicon glyphicon-play"></span>
+                                </button>
+                            }
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

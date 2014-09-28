@@ -1,17 +1,16 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="FoodSearch.Presentation.Mobile.Android\MainActivity.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.android_44" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="FoodSearch.Presentation.Mobile.Common\App.cs">
     <Files>
-      <File FileName="FoodSearch.Service.Client\RestServiceClientBase.cs" Line="1" Column="1" />
-      <File FileName="FoodSearch.Presentation.Mobile.Android\MainActivity.cs" Line="39" Column="4" />
-      <File FileName="FoodSearch.Presentation.Mobile.Android\Adapters\StreetNumberListAdapter.cs" Line="1" Column="1" />
-      <File FileName="FoodSearch.Service.Client\FoodSearchServiceClient.cs" Line="1" Column="1" />
-      <File FileName="FoodSearch.Presentation.Mobile.Android\Adapters\StreetListAdapter.cs" Line="1" Column="1" />
+      <File FileName="FoodSearch.BusinessLogic.Domain.User\packages.config" Line="12" Column="12" />
+      <File FileName="FoodSearch.Presentation.Mobile.Common\App.cs" Line="43" Column="43" />
+      <File FileName="FoodSearch.Presentation.Mobile.Android\MainActivity.cs" Line="3" Column="3" />
+      <File FileName="FoodSearch.Service.Client\ServiceClientBase.cs" Line="6" Column="6" />
+      <File FileName="FoodSearch.Service.Client\FoodSearchServiceClient.cs" Line="41" Column="41" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.Presentation.Mobile.FoodSearch.Presentation.Mobile.Android MonoForAntroid.PreferredDevice="3.7&quot; WVGA (Nexus One)" AndroidDeviceId-Debug="BX902YXDG8" />
 </Properties>
