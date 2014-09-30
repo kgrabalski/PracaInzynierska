@@ -1,19 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using FoodSearch.Service.Client.Interfaces;
 
 namespace FoodSearch.Service.Client
 {
-	public class FoodSearchServiceClient : ServiceClientBase
+	public class FoodSearchServiceClient : IFoodSearchServiceClient
 	{
-		public async Task<IEnumerable<City>> GetCities()
-		{
-			var response = await Get ("city");
-			if (response.StatusCode == System.Net.HttpStatusCode.OK) {
-				return Deserialize<List<City>> (response.Message);
-			}
-			return new List<City> ();
-		}
+		private IFoodSearchCoreServiceClient _core;
+
+		public IFoodSearchCoreServiceClient Core { get { return _core ?? (_core = new FoodSearchCoreServiceClient ()); } }
 	}
 }
 

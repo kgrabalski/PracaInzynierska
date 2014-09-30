@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
+﻿using System.IO;
 using System.Net;
 using System.Net.Http;
 using System.Net.Http.Headers;
@@ -9,7 +6,7 @@ using System.Web.Http;
 
 using FoodSearch.BusinessLogic.Domain.FoodSearch.Interface;
 
-namespace FoodSearch.Service.Api.Controllers
+namespace FoodSearch.Service.Api.Areas.Core.Controllers
 {
     public class LogoController : ApiController
     {

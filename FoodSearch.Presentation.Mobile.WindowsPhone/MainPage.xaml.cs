@@ -5,6 +5,10 @@ using System.Net;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Navigation;
+
+using FoodSearch.Presentation.Mobile.Common;
+using FoodSearch.Presentation.Mobile.Common.Views;
+
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
 using FoodSearch.Presentation.Mobile.WindowsPhone.Resources;
@@ -21,7 +25,7 @@ namespace FoodSearch.Presentation.Mobile.WindowsPhone
             InitializeComponent();
 
             Forms.Init();
-            Content = Common.App.GetMainPage().ConvertPageToUIElement(this);
+            Content = ViewLocator.GetView<MainView>().ConvertPageToUIElement(this);
         }
 
         // Sample code for building a localized ApplicationBar

@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage 	xmlns="http://xamarin.com/schemas/2014/forms" 
+				xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+				x:Class="FoodSearch.Presentation.Mobile.Common.Views.MainView"
+				xmlns:vm="FoodSearch.Presentation.Mobile.Common.ViewModels">
+	<ContentPage.BindingContext>
+		<vm:MainViewModel/>
+	</ContentPage.BindingContext>
+
+	<Grid>
+		<Grid.RowDefinitions>
+			<RowDefinition Height="Auto"></RowDefinition>
+			<RowDefinition Height="10px"></RowDefinition>
+			<RowDefinition Height="Auto"></RowDefinition>
+			<RowDefinition Height="Auto"></RowDefinition>
+			<RowDefinition Height="Auto"></RowDefinition>
+		</Grid.RowDefinitions>
+
+		<Label Text="Znajdź restaurację" HorizontalOptions="CenterAndExpand" TextColor="Aqua"></Label>
+
+		<Label Text="Wybierz miasto:" Grid.Row="2"></Label>
+		<Picker Title="Wybierz miasto" Items="{ Binding Cities }"></Picker>
+	</Grid>
+</ContentPage>

@@ -10,10 +10,11 @@ using Android.OS;
 using Xamarin.Forms;
 
 using FoodSearch.Presentation.Mobile.Common;
+using FoodSearch.Presentation.Mobile.Common.Views;
 
 namespace FoodSearch.Presentation.Mobile.Android
 {
-	[Activity (Label = "FoodSearch.Presentation.Mobile.Android", MainLauncher = true, Icon = "@drawable/icon")]
+	[Activity (Label = "FoodSearch", MainLauncher = true, Icon = "@drawable/icon")]
 	public class MainActivity : Xamarin.Forms.Platform.Android.AndroidActivity
 	{
 		protected override void OnCreate (Bundle bundle)
@@ -21,7 +22,7 @@ namespace FoodSearch.Presentation.Mobile.Android
 			base.OnCreate (bundle);
 
 			Forms.Init (this, bundle);
-			SetPage (App.GetMainPage ());
+			SetPage (ViewLocator.GetView<MainView>());
 		}
 	}
 }

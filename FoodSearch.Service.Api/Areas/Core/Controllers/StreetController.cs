@@ -1,14 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Net.Http;
+﻿using System.Collections.Generic;
 using System.Web.Http;
 
 using FoodSearch.BusinessLogic.Domain.Core.Models;
 using FoodSearch.BusinessLogic.Domain.FoodSearch.Interface;
 
-namespace FoodSearch.Service.Api.Controllers
+namespace FoodSearch.Service.Api.Areas.Core.Controllers
 {
     public class StreetController : ApiController
     {

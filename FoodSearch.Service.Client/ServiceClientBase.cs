@@ -2,20 +2,23 @@
 using Newtonsoft.Json;
 using System.Net.Http;
 using System.Threading.Tasks;
+using FoodSearch.Service.Client.Response;
 
 namespace FoodSearch.Service.Client
 {
 	public abstract class ServiceClientBase
 	{
-		protected readonly string _serviceBase = "http://foodsearch.azurewebsites.net/MobileApi/";
+		protected readonly string _baseAddress = "http://foodsearch.azurewebsites.net/MobileApi/";
 
-		protected async Task<Response> Get(string url)
+		protected abstract string ServiceAddress { get ; }
+
+		protected async Task<GetResponse> Get(string url)
 		{
 			HttpClient client = new HttpClient ();
-			var response = await client.GetAsync (_serviceBase + url);
-			return new Response {
+			var response = await client.GetAsync (ServiceAddress + url);
+			return new GetResponse {
 				StatusCode = response.StatusCode,
-				Message = await response.Content.ReadAsStringAsync ()
+				Body = await response.Content.ReadAsStringAsync ()
 			};
 		}
 

@@ -118,9 +118,10 @@
     </Compile>
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
-    <Compile Include="Controllers\CityController.cs" />
-    <Compile Include="Controllers\LogoController.cs" />
-    <Compile Include="Controllers\StreetController.cs" />
+    <Compile Include="Areas\Core\CoreAreaRegistration.cs" />
+    <Compile Include="Areas\Core\Controllers\CityController.cs" />
+    <Compile Include="Areas\Core\Controllers\LogoController.cs" />
+    <Compile Include="Areas\Core\Controllers\StreetController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -129,6 +130,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
+    <Content Include="Areas\Core\Views\web.config" />
     <None Include="Properties\PublishProfiles\foodsearch.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -139,6 +141,9 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Areas\Core\Models\" />
+    <Folder Include="Areas\Core\Views\Shared\" />
+    <Folder Include="Controllers\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>

@@ -1,16 +1,23 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.android_44" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="FoodSearch.Presentation.Mobile.Common\App.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.44" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="FoodSearch.Presentation.Mobile.Common\ViewModels\MainViewModel.cs">
     <Files>
-      <File FileName="FoodSearch.BusinessLogic.Domain.User\packages.config" Line="12" Column="12" />
-      <File FileName="FoodSearch.Presentation.Mobile.Common\App.cs" Line="43" Column="43" />
-      <File FileName="FoodSearch.Presentation.Mobile.Android\MainActivity.cs" Line="3" Column="3" />
-      <File FileName="FoodSearch.Service.Client\ServiceClientBase.cs" Line="6" Column="6" />
-      <File FileName="FoodSearch.Service.Client\FoodSearchServiceClient.cs" Line="41" Column="41" />
+      <File FileName="FoodSearch.BusinessLogic.Domain.User\packages.config" Line="1" Column="1" />
+      <File FileName="FoodSearch.Presentation.Mobile.Common\ViewLocator.cs" Line="1" Column="1" />
+      <File FileName="FoodSearch.Presentation.Mobile.Common\ViewModels\MainViewModel.cs" Line="1" Column="1" />
+      <File FileName="c:\C#\Inzynierka\FoodSearch.Presentation.Mobile.Common\Views\MainView.xaml.cs" Line="1" Column="1" />
+      <File FileName="FoodSearch.Presentation.Mobile.Common\Views\MainView.xaml" Line="1" Column="1" />
+      <File FileName="FoodSearch.Presentation.Mobile.Common\ViewModels\ViewModelBase.cs" Line="1" Column="1" />
+      <File FileName="FoodSearch.Presentation.Mobile.Common\Views\MainView.cs" Line="1" Column="1" />
+      <File FileName="FoodSearch.Presentation.Mobile.Common\Views\ViewBase.cs" Line="1" Column="1" />
+      <File FileName="FoodSearch.Presentation.Mobile.Android\MainActivity.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
+    <BreakpointStore>
+      <Breakpoint file="C:\C#\Inzynierka\FoodSearch.Presentation.Mobile.Android\MainActivity.cs" line="25" column="13" />
+    </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.Presentation.Mobile.FoodSearch.Presentation.Mobile.Android MonoForAntroid.PreferredDevice="Nexus 4" />
 </Properties>
