@@ -136,7 +136,6 @@
     <Folder Include="Areas\User\Views\Shared\" />
     <Folder Include="Views\Address\" />
     <Folder Include="Views\Order\" />
-    <Folder Include="Views\Payment\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
@@ -190,6 +189,7 @@
     <Compile Include="Models\LoginModel.cs" />
     <Compile Include="Models\RegisterModel.cs" />
     <Compile Include="Models\RestaurantDishesModel.cs" />
+    <Compile Include="Models\RestaurantPageModel.cs" />
     <Compile Include="Models\RestaurantUser.cs" />
     <Compile Include="Models\UserInfo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

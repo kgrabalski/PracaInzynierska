@@ -1,0 +1,25 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace FoodSearch.BusinessLogic.Domain.Restaurant.Models
+{
+    public class RestaurantDetails
+    {
+        public Guid RestaurantId { get; set; }
+        public string RestaurantName { get; set; }
+        public int LogoId { get; set; }
+        public int AddressId { get; set; }
+        public string City { get; set; }
+        public string District { get; set; }
+        public string Street { get; set; }
+        public string Number { get; set; }
+        public float Lat { get; set; }
+        public float Lon { get; set; }
+        public float MinimumOrder { get; set; }
+        public float DeliveryPrice { get; set; }
+        public float FreeDeliveryFrom { get; set; }
+    }
+}

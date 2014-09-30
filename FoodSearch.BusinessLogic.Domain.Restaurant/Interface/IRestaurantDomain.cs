@@ -15,5 +15,8 @@ namespace FoodSearch.BusinessLogic.Domain.Restaurant.Interface
         Dish GetDish(int dishId);
         IEnumerable<PartnerRestaurant> GetPartnerRestaurants();
         decimal GetDeliveryPrice(Guid restaurantId, decimal totalPrice);
+        IEnumerable<Opinion> GetOpinions(Guid restaurantId, int page = 0, int pageSize = 10);
+        RestaurantDetails GetRestaurantDetails(Guid restaurantId);
+        RestaurantRating GetRestaurantRating(Guid restaurantId);
     }
 }

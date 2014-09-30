@@ -55,8 +55,11 @@
     <Compile Include="Mapping\MappingConfig.cs" />
     <Compile Include="Models\Dish.cs" />
     <Compile Include="Models\DishGroup.cs" />
+    <Compile Include="Models\Opinion.cs" />
     <Compile Include="Models\PartnerRestaurant.cs" />
+    <Compile Include="Models\RestaurantDetails.cs" />
     <Compile Include="Models\RestaurantInfo.cs" />
+    <Compile Include="Models\RestaurantRating.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RestaurantDomain.cs" />
   </ItemGroup>
