@@ -1,4 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Net;
+
 using Newtonsoft.Json;
 using System.Net.Http;
 using System.Threading.Tasks;
@@ -12,11 +15,11 @@ namespace FoodSearch.Service.Client
 
 		protected abstract string ServiceAddress { get ; }
 
-		protected async Task<GetResponse> Get(string url)
+		protected async Task<HttpResponse> Get(string url)
 		{
 			HttpClient client = new HttpClient ();
 			var response = await client.GetAsync (ServiceAddress + url);
-			return new GetResponse {
+			return new HttpResponse {
 				StatusCode = response.StatusCode,
 				Body = await response.Content.ReadAsStringAsync ()
 			};
@@ -26,6 +29,15 @@ namespace FoodSearch.Service.Client
 		{
 			return JsonConvert.DeserializeObject<T> (jsonString);
 		}
+
+		protected List<T> DeserializeList<T>(HttpResponse response)
+		{
+			if (response.StatusCode == HttpStatusCode.OK)
+			{
+				return Deserialize<List<T>>(response.Body);
+			}
+			return new List<T>();
+		} 
 	}
 }
 

@@ -1,6 +1,7 @@
 ﻿using System;
 
 using FoodSearch.Presentation.Mobile.Common.Components;
+using FoodSearch.Presentation.Mobile.Common.Services;
 
 using Xamarin.Forms;
 using FoodSearch.Presentation.Mobile.Common.ViewModels;
@@ -13,15 +14,9 @@ namespace FoodSearch.Presentation.Mobile.Common.Views
 		{
 			var vm = new MainViewModel ();
             view.BindingContext = vm;
+		    view.Title = "FoodSearch";
 
-            //page header
-		    var pageHeader = new Label()
-		    {
-		        Text = "FoodSearch.pl",
-		        TextColor = new Color(66, 139, 202),
-		        HorizontalOptions = LayoutOptions.CenterAndExpand,
-		        MinimumHeightRequest = 100
-		    };
+            NavigationPage.SetHasNavigationBar(view, true);
 
             //label: Wybierz miasto
 		    var labelSelectCity = new Label()
@@ -78,17 +73,12 @@ namespace FoodSearch.Presentation.Mobile.Common.Views
 		        Text = "Szukaj",
 		        VerticalOptions = LayoutOptions.EndAndExpand,
 		    };
-            //btnSearch.SetBinding<MainViewModel>(Button.CommandProperty, x => x.SearchRestaurants);
-		    btnSearch.Clicked += async (sender, args) =>
-		    {
-		        await view.DisplayAlert("Wybrany adres", vm.SelectedStreetNumber.Id.ToString(), "OK", "Anuluj");
-		    };
+            btnSearch.SetBinding<MainViewModel>(Button.CommandProperty, x => x.SearchRestaurants);
 
 			view.Content = new StackLayout()
 			{
                 Children =
                 {
-                    pageHeader,
                     labelSelectCity,
                     citiesList,
                     labelSelectStreet,
@@ -108,7 +98,7 @@ namespace FoodSearch.Presentation.Mobile.Common.Views
             view.ToolbarItems.Add(new ToolbarItem()
             {
                 Name = "Test",
-                Command = new Command(() => view.Navigation.PushAsync(ViewLocator.GetView<AuthorizeView>()))
+                Command = new Command(() => NavigationService.Navigation.PushAsync(ViewLocator.Authorize))
             });
 		}
 	}

@@ -18,11 +18,11 @@ namespace FoodSearch.Presentation.Mobile.Common.ViewModels
 			}
 		}
 
-		protected readonly IFoodSearchServiceClient _client;
+		protected readonly IFoodSearchServiceClient Client;
 
 		public ViewModelBase (IFoodSearchServiceClient client)
 		{
-			_client = client;
+			Client = client;
 		}
 
 		public ViewModelBase () : this(new FoodSearchServiceClient())

@@ -118,10 +118,15 @@
     </Compile>
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Areas\Core\Controllers\DishController.cs" />
+    <Compile Include="Areas\Core\Controllers\RestaurantController.cs" />
     <Compile Include="Areas\Core\CoreAreaRegistration.cs" />
     <Compile Include="Areas\Core\Controllers\CityController.cs" />
     <Compile Include="Areas\Core\Controllers\LogoController.cs" />
     <Compile Include="Areas\Core\Controllers\StreetController.cs" />
+    <Compile Include="Areas\Order\Models\Basket.cs" />
+    <Compile Include="Areas\Order\Models\BasketItem.cs" />
+    <Compile Include="Areas\Order\OrderAreaRegistration.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -131,6 +136,7 @@
   <ItemGroup>
     <Content Include="packages.config" />
     <Content Include="Areas\Core\Views\web.config" />
+    <Content Include="Areas\Order\Views\web.config" />
     <None Include="Properties\PublishProfiles\foodsearch.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -143,6 +149,8 @@
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Core\Models\" />
     <Folder Include="Areas\Core\Views\Shared\" />
+    <Folder Include="Areas\Order\Controllers\" />
+    <Folder Include="Areas\Order\Views\Shared\" />
     <Folder Include="Controllers\" />
     <Folder Include="Models\" />
   </ItemGroup>
@@ -154,6 +162,10 @@
     <ProjectReference Include="..\FoodSearch.BusinessLogic.Domain.FoodSearch\FoodSearch.BusinessLogic.Domain.FoodSearch.csproj">
       <Project>{489E10B0-1EBA-484E-BE1E-11C533CB00CF}</Project>
       <Name>FoodSearch.BusinessLogic.Domain.FoodSearch</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FoodSearch.BusinessLogic.Domain.Restaurant\FoodSearch.BusinessLogic.Domain.Restaurant.csproj">
+      <Project>{C74E76C5-8E76-4B4F-A3EA-E921D912DAFF}</Project>
+      <Name>FoodSearch.BusinessLogic.Domain.Restaurant</Name>
     </ProjectReference>
     <ProjectReference Include="..\FoodSearch.BusinessLogic.Domain.User\FoodSearch.BusinessLogic.Domain.User.csproj">
       <Project>{C62D4EAF-4EE1-4F2E-96EA-0C630FFD59EB}</Project>

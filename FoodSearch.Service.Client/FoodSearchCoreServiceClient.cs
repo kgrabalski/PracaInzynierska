@@ -15,30 +15,31 @@ namespace FoodSearch.Service.Client
 		public async Task<IEnumerable<City>> GetCities ()
 		{
 			var response = await Get ("city");
-			if (response.StatusCode == System.Net.HttpStatusCode.OK) {
-				return Deserialize<List<City>> (response.Body);
-			}
-			return new List<City> ();
+			return DeserializeList<City>(response);
 		}
 
 		public async Task<IEnumerable<Street>> GetStreets(int cityId, string query)
 		{
 			var response = await Get(string.Format("street?cityId={0}&query={1}", cityId, query));
-			if (response.StatusCode == HttpStatusCode.OK)
-			{
-				return Deserialize<List<Street>>(response.Body);
-			}
-			return new List<Street>();
+			return DeserializeList<Street>(response);
 		}
 
 		public async Task<IEnumerable<StreetNumber>> GetStreetNumbers(int streetId)
 		{
-			var response = await Get(string.Format("street/" + streetId));
-			if (response.StatusCode == HttpStatusCode.OK)
-			{
-				return Deserialize<List<StreetNumber>>(response.Body);
-			}
-			return new List<StreetNumber>();
+			var response = await Get("street/" + streetId);
+			return DeserializeList<StreetNumber>(response);
+		}
+
+		public async Task<IEnumerable<Restaurant>> GetRestaurants(int addressId)
+		{
+			var response = await Get("restaurant?addressId=" + addressId);
+			return DeserializeList<Restaurant>(response);
+		}
+
+		public async Task<IEnumerable<DishGroup>> GetDishes(Guid restaurantId)
+		{
+			var response = await Get("dish?restaurantId=" + restaurantId);
+			return DeserializeList<DishGroup>(response);
 		}
 	}
 }

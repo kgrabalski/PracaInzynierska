@@ -8,7 +8,7 @@ namespace FoodSearch.Presentation.Mobile.Common.Views
 		protected readonly Page _view;
 		public Page View {get {return _view;}}
 
-		public ViewBase (Page view)
+	    protected ViewBase (Page view)
 		{
 			_view = view;
 		}
@@ -16,7 +16,7 @@ namespace FoodSearch.Presentation.Mobile.Common.Views
 
 	public abstract class ViewBase<T> : ViewBase where T : Page, new()
 	{
-		public ViewBase () : base(new T())
+	    protected ViewBase () : base(new T())
 		{
 			ComposeView ((T)_view);
 		}

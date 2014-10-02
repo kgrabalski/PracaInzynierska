@@ -17,7 +17,7 @@ namespace FoodSearch.Presentation.Mobile.Common.Components
     }
  
     public static BindableProperty ItemsSourceProperty =
-        BindableProperty.Create<ListPicker, IEnumerable>(o => o.ItemsSource, default(IEnumerable), BindingMode.OneWay,null,
+        BindableProperty.Create<ListPicker, IEnumerable>(o => o.ItemsSource, default(IEnumerable), BindingMode.TwoWay,null,
         new BindableProperty.BindingPropertyChangedDelegate<IEnumerable>(OnItemsSourceChanged), null, null);
  
     public static BindableProperty SelectedItemProperty =

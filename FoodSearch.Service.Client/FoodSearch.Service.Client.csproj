@@ -30,6 +30,9 @@
     <ConsolePause>false</ConsolePause>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Contracts\Dish.cs" />
+    <Compile Include="Contracts\DishGroup.cs" />
+    <Compile Include="Contracts\Restaurant.cs" />
     <Compile Include="Contracts\Street.cs" />
     <Compile Include="Contracts\StreetNumber.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -39,7 +42,6 @@
     <Compile Include="Interfaces\IFoodSearchServiceClient.cs" />
     <Compile Include="Interfaces\IFoodSearchCoreServiceClient.cs" />
     <Compile Include="FoodSearchCoreServiceClient.cs" />
-    <Compile Include="Response\GetResponse.cs" />
     <Compile Include="Response\HttpResponse.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />

@@ -1,6 +1,6 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.44" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="FoodSearch.Presentation.Mobile.Common\ViewModels\MainViewModel.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="FoodSearch.Presentation.Mobile.Common\Views\MainView.cs">
     <Files>
       <File FileName="FoodSearch.BusinessLogic.Domain.User\packages.config" Line="1" Column="1" />
       <File FileName="FoodSearch.Presentation.Mobile.Common\ViewLocator.cs" Line="1" Column="1" />
@@ -8,14 +8,22 @@
       <File FileName="c:\C#\Inzynierka\FoodSearch.Presentation.Mobile.Common\Views\MainView.xaml.cs" Line="1" Column="1" />
       <File FileName="FoodSearch.Presentation.Mobile.Common\Views\MainView.xaml" Line="1" Column="1" />
       <File FileName="FoodSearch.Presentation.Mobile.Common\ViewModels\ViewModelBase.cs" Line="1" Column="1" />
-      <File FileName="FoodSearch.Presentation.Mobile.Common\Views\MainView.cs" Line="1" Column="1" />
+      <File FileName="FoodSearch.Presentation.Mobile.Common\Views\MainView.cs" Line="22" Column="22" />
       <File FileName="FoodSearch.Presentation.Mobile.Common\Views\ViewBase.cs" Line="1" Column="1" />
       <File FileName="FoodSearch.Presentation.Mobile.Android\MainActivity.cs" Line="1" Column="1" />
+      <File FileName="FoodSearch.Presentation.Mobile.Common\Services\NavigationService.cs" Line="1" Column="1" />
+      <File FileName="c:\C#\Inzynierka\FoodSearch.Presentation.Mobile.Common\Views\RestaurantsListView.cs" Line="1" Column="1" />
+      <File FileName="FoodSearch.Presentation.Mobile.Common\Views\Partial\RestaurantItemPartial.cs" Line="1" Column="1" />
+      <File FileName="FoodSearch.Presentation.Mobile.Common\ViewModels\RestaurantListViewModel.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
-      <Breakpoint file="C:\C#\Inzynierka\FoodSearch.Presentation.Mobile.Android\MainActivity.cs" line="25" column="13" />
+      <Breakpoint file="c:\C#\Inzynierka\FoodSearch.Presentation.Mobile.Common\Views\RestaurantsListView.cs" line="35" column="1" />
+      <Breakpoint file="C:\C#\Inzynierka\FoodSearch.Presentation.Mobile.Common\ViewModels\RestaurantListViewModel.cs" line="61" column="1" />
+      <Breakpoint file="C:\C#\Inzynierka\FoodSearch.Presentation.Mobile.Common\ViewModels\RestaurantListViewModel.cs" line="67" column="1" />
+      <Breakpoint file="C:\C#\Inzynierka\FoodSearch.Presentation.Mobile.Common\ViewModels\RestaurantListViewModel.cs" line="47" column="1" />
+      <Breakpoint file="C:\C#\Inzynierka\FoodSearch.Presentation.Mobile.Common\Views\MainView.cs" line="15" column="1" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />

@@ -22,7 +22,7 @@ namespace FoodSearch.Presentation.Mobile.Android
 			base.OnCreate (bundle);
 
 			Forms.Init (this, bundle);
-			SetPage (ViewLocator.GetView<MainView>());
+			SetPage (ViewLocator.StartScreen);
 		}
 	}
 }

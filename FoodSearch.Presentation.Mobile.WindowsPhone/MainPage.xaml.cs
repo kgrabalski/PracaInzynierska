@@ -25,7 +25,7 @@ namespace FoodSearch.Presentation.Mobile.WindowsPhone
             InitializeComponent();
 
             Forms.Init();
-            Content = ViewLocator.GetView<MainView>().ConvertPageToUIElement(this);
+            Content = ViewLocator.StartScreen.ConvertPageToUIElement(this);
         }
 
         // Sample code for building a localized ApplicationBar

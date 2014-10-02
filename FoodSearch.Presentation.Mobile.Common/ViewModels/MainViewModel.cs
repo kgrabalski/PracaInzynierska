@@ -1,6 +1,7 @@
 ﻿using System;
 
 using FoodSearch.Presentation.Mobile.Common.Infrastucture;
+using FoodSearch.Presentation.Mobile.Common.Services;
 using FoodSearch.Service.Client.Interfaces;
 using FoodSearch.Service.Client;
 using System.Collections.Generic;
@@ -10,7 +11,6 @@ namespace FoodSearch.Presentation.Mobile.Common.ViewModels
 {
 	public class MainViewModel : ViewModelBase
 	{
-        
         #region Cities
 
         private IEnumerable<City> _cities;
@@ -73,7 +73,7 @@ namespace FoodSearch.Presentation.Mobile.Common.ViewModels
         
         #region Streets
 
-        private IEnumerable<Street> _streets;
+        private IEnumerable<Street> _streets = new List<Street>();
         public IEnumerable<Street> Streets
         {
             get
@@ -82,7 +82,7 @@ namespace FoodSearch.Presentation.Mobile.Common.ViewModels
             }
             set
             {
-                if (_streets != value)
+                if (!_streets.Equals(value))
                 {
                     _streets = value;
                     OnPropertyChanged();
@@ -114,7 +114,7 @@ namespace FoodSearch.Presentation.Mobile.Common.ViewModels
 
         #region StreetNumbers
 
-        private IEnumerable<StreetNumber> _streetNumbers;
+        private IEnumerable<StreetNumber> _streetNumbers = new List<StreetNumber>();
         public IEnumerable<StreetNumber> StreetNumbers
         {
             get
@@ -123,7 +123,7 @@ namespace FoodSearch.Presentation.Mobile.Common.ViewModels
             }
             set
             {
-                if (_streetNumbers != value)
+                if (!_streetNumbers.Equals(value))
                 {
                     _streetNumbers = value;
                     SelectedStreetNumber = null;
@@ -162,13 +162,13 @@ namespace FoodSearch.Presentation.Mobile.Common.ViewModels
             {
                 return _searchStreets ?? (_searchStreets = new Command(async () =>
                 {
-                    Streets = await _client.Core.GetStreets(SelectedCity.Id, StreetQuery);
+                    Streets = new List<Street>();
+                    Streets = await Client.Core.GetStreets(SelectedCity.Id, StreetQuery);
                 }));
             }
         }
         #endregion
 
-        
         #region SearchRestaurants
 
         private Command _searchRestaurants;
@@ -176,9 +176,11 @@ namespace FoodSearch.Presentation.Mobile.Common.ViewModels
         {
             get
             {
-                return _searchRestaurants ?? (_searchRestaurants = new Command(() =>
+                return _searchRestaurants ?? (_searchRestaurants = new Command(async () =>
                 {
-                    
+                    await NavigationService.Navigation.PushAsync(ViewLocator.RestaurantList);
+                    //TODO: usunąć stałe AddressId
+                    MessageService.Send(SelectedStreetNumber ?? new StreetNumber(){Id = 797});
                 }));
             }
         }
@@ -186,18 +188,19 @@ namespace FoodSearch.Presentation.Mobile.Common.ViewModels
 
 		public MainViewModel ()
 		{
-			_cities = new List<City> ();
+			Cities = new List<City> ();
 			InitializeView ();
 		}
 
-		public async void InitializeView()
+		private async void InitializeView()
 		{
-			Cities = await _client.Core.GetCities ();
+			Cities = await Client.Core.GetCities ();
 		}
 
 	    private async void GetStreetNumbers()
 	    {
-	        StreetNumbers = await _client.Core.GetStreetNumbers(_selectedStreet.Id);
+	        StreetNumbers = new List<StreetNumber>();
+	        StreetNumbers = await Client.Core.GetStreetNumbers(_selectedStreet.Id);
 	    }
 	}
 }
