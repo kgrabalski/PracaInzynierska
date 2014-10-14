@@ -135,7 +135,7 @@
     <Folder Include="Areas\User\Models\" />
     <Folder Include="Areas\User\Views\Shared\" />
     <Folder Include="Views\Address\" />
-    <Folder Include="Views\Order\" />
+    <Folder Include="Views\Basket\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
@@ -1113,7 +1113,10 @@
     <Content Include="Scripts\angular-ui\ui-bootstrap-tpls.min.js" />
     <Content Include="Scripts\angular-ui\ui-bootstrap.js" />
     <Content Include="Scripts\angular-ui\ui-bootstrap.min.js" />
-    <Content Include="Views\Basket\Index.cshtml" />
+    <Content Include="Views\Order\Basket.cshtml" />
+    <Content Include="Views\Order\Shipping.cshtml" />
+    <Content Include="Views\Order\Payment.cshtml" />
+    <Content Include="Views\Order\Success.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\FoodSearch.BusinessLogic.Domain.Core\FoodSearch.BusinessLogic.Domain.Core.csproj">
@@ -1147,10 +1150,6 @@
     <ProjectReference Include="..\FoodSearch.Data.Mapping\FoodSearch.Data.Mapping.csproj">
       <Project>{3C7D76AD-3B68-4EB6-9A15-560D4773FB24}</Project>
       <Name>FoodSearch.Data.Mapping</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\FoodSearch.Service.Api\FoodSearch.Service.Api.csproj">
-      <Project>{E54C0B09-DB27-436C-A4C2-8D0704EE5B8D}</Project>
-      <Name>FoodSearch.Service.Api</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

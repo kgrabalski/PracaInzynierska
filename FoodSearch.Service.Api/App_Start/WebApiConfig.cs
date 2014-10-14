@@ -4,6 +4,9 @@ using System.Linq;
 using System.Web.Http;
 using System.Web.Mvc;
 
+using FoodSearch.Service.Api.Areas.Order.Models;
+using FoodSearch.Service.Api.Providers;
+
 using Ninject.Web.WebApi;
 
 namespace FoodSearch.Service.Api
@@ -26,6 +29,8 @@ namespace FoodSearch.Service.Api
                 routeTemplate: "{controller}/{id}",
                 defaults: new { id = RouteParameter.Optional, area = "" }
             );
+
+            ModelBinders.Binders.Add(typeof(Basket), new BasketModelBinder());
         }
     }
 }

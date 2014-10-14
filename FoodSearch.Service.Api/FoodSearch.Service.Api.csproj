@@ -107,15 +107,6 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="..\FoodSearch.Presentation.Web.Site\Providers\CreateUserResult.cs">
-      <Link>Providers\CreateUserResult.cs</Link>
-    </Compile>
-    <Compile Include="..\FoodSearch.Presentation.Web.Site\Providers\FoodSearchMembershipProvider.cs">
-      <Link>Providers\FoodSearchMembershipProvider.cs</Link>
-    </Compile>
-    <Compile Include="..\FoodSearch.Presentation.Web.Site\Providers\FoodSearchRoleProvider.cs">
-      <Link>Providers\FoodSearchRoleProvider.cs</Link>
-    </Compile>
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Areas\Core\Controllers\DishController.cs" />
@@ -124,6 +115,7 @@
     <Compile Include="Areas\Core\Controllers\CityController.cs" />
     <Compile Include="Areas\Core\Controllers\LogoController.cs" />
     <Compile Include="Areas\Core\Controllers\StreetController.cs" />
+    <Compile Include="Areas\Order\Controllers\BasketController.cs" />
     <Compile Include="Areas\Order\Models\Basket.cs" />
     <Compile Include="Areas\Order\Models\BasketItem.cs" />
     <Compile Include="Areas\Order\OrderAreaRegistration.cs" />
@@ -132,6 +124,10 @@
     </Compile>
     <Compile Include="Helpers\CompressAttribute.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Providers\BasketModelBinder.cs" />
+    <Compile Include="Providers\CreateUserResult.cs" />
+    <Compile Include="Providers\FoodSearchMembershipProvider.cs" />
+    <Compile Include="Providers\FoodSearchRoleProvider.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
@@ -149,7 +145,7 @@
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Core\Models\" />
     <Folder Include="Areas\Core\Views\Shared\" />
-    <Folder Include="Areas\Order\Controllers\" />
+    <Folder Include="Areas\Order\Views\Basket\" />
     <Folder Include="Areas\Order\Views\Shared\" />
     <Folder Include="Controllers\" />
     <Folder Include="Models\" />
@@ -183,7 +179,7 @@
     <VisualStudio>
       <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
         <WebProjectProperties>
-          <UseIIS>True</UseIIS>
+          <UseIIS>False</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>4658</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>

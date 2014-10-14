@@ -120,8 +120,8 @@
                                     <h4>Razem: <strong>@Model.Basket.Total.ToString("0.00") zł</strong></h4>
                                 </div>
                                 <div class="col-xs-6">
-                                    <form method="GET" action="@Url.Action("Index", "Basket")">
-                                        <button type="submit" class="btn btn-primary btn-block">
+                                    <form method="GET" action="@Url.Action("Basket", "Order", new {area = ""})">
+                                        <button type="submit" class="btn btn-primary btn-block"> 
                                             Zamów
                                         </button>
                                     </form>

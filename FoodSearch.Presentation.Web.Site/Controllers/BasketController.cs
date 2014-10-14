@@ -41,12 +41,5 @@ namespace FoodSearch.Presentation.Web.Site.Controllers
             }
             return RedirectToAction("Index", "Home");
         }
-
-        public ActionResult Index(Basket basket)
-        {
-            if (basket.CurrentRestaurant != Guid.Empty) 
-                basket.DeliveryPrice = _domain.Restaurant.GetDeliveryPrice(basket.CurrentRestaurant, basket.Total);
-            return View(basket);
-        }
     }
 }

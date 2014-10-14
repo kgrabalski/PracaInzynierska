@@ -12,6 +12,8 @@ namespace FoodSearch.Presentation.Mobile.Common.Views
     {
         protected override void ComposeView(TabbedPage view)
         {
+			view.Title = "Menu restauracji";
+			NavigationPage.SetHasNavigationBar (View, true);
             view.Children.Add(ViewLocator.DishList);
             view.Children.Add(ViewLocator.OpinionList);
         }

@@ -45,14 +45,16 @@ namespace FoodSearch.Service.Api.Areas.Order.Models
             }
         }
 
-        public void RemoveItem(int dishId)
+        public bool RemoveItem(int dishId)
         {
             var item = _items.SingleOrDefault(x => x.DishId == dishId);
             if (item != null)
             {
                 item.Count--;
                 if (item.Count == 0) _items.Remove(item);
+                return true;
             }
+            return false;
         }
 
         public decimal Total

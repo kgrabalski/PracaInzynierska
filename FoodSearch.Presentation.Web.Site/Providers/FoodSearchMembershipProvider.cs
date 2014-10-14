@@ -13,7 +13,7 @@ namespace FoodSearch.Presentation.Web.Site.Providers
 
         public FoodSearchMembershipProvider()
         {
-            _domain = FoodSearch.Service.Api.MvcApplication.DependencyResolver.Get<IFoodSearchDomain>();
+            _domain = MvcApplication.DependencyResolver.Get<IFoodSearchDomain>();
         }
 
         public override MembershipUser CreateUser(string username, string password, string email, string passwordQuestion, string passwordAnswer, bool isApproved, object providerUserKey, out MembershipCreateStatus status)

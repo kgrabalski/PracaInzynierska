@@ -14,13 +14,6 @@ namespace FoodSearch.Presentation.Web.Site
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
-            routes.MapHttpRoute(
-                name: "Default_api",
-                routeTemplate: "api/{controller}/{id}",
-                defaults: new { area = "", id = RouteParameter.Optional }
-            )
-            .RouteHandler = new MyHttpControllerRouteHandler();
-
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",

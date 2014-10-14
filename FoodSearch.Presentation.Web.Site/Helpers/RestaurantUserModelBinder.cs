@@ -15,11 +15,6 @@ namespace FoodSearch.Presentation.Web.Site.Helpers
             _domain = domain;
         }
 
-        //public RestaurantUserModelBinder() : this(MvcApplication.DependencyResolver.Get<IFoodSearchDomain>())
-        //{
-            
-        //}
-
         public object BindModel(ControllerContext controllerContext, ModelBindingContext bindingContext)
         {
             RestaurantUser restaurantUser = controllerContext.HttpContext.Session[_sessionKey] as RestaurantUser;
