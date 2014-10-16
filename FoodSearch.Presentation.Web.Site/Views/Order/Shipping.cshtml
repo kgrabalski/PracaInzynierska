@@ -1,6 +1,18 @@
-﻿@{
+﻿@model FoodSearch.BusinessLogic.Domain.Order.Models.DeliveryAddress
+@{
     ViewBag.Title = "FoodSearch.pl - Dostawa";
     Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section HeadSection
+{
+    <link rel="stylesheet" href="~/Content/Selectize/css/selectize.css" />
+}
+
+@section ScriptSection
+{
+    <script type="text/javascript" src="~/Scripts/selectize.min.js"></script>
+    <script src="~/Scripts/Frontend/Delivery.js"></script>
 }
 
 <div class="row">
@@ -14,21 +26,89 @@
                     </div>
                     <div class="stepwizard-step">
                         <button type="button" class="btn btn-primary btn-circle" disabled="disabled">2</button>
-                        <p>Dostawa</p>
+                        <p>Dostawa i płatność</p>
                     </div>
                     <div class="stepwizard-step">
                         <button type="button" class="btn btn-default btn-circle" disabled="disabled">3</button>
-                        <p>Płatność</p>
-                    </div>
-                    <div class="stepwizard-step">
-                        <button type="button" class="btn btn-default btn-circle" disabled="disabled">4</button>
                         <p>Smacznego!</p>
                     </div>
                 </div>
             </div>
 
-            <h1 class="text-center">Dostawa</h1>
+            <h1 class="text-center">Dostawa i płatność</h1>
             
+            <form method="POST" action="@Url.Action("CreateOrder")" class="form-horizontal">
+                
+                <div class="form-group">
+                    <label for="paymentType" class="col-md-3 control-label">Sposób płatności</label>
+                    <div class="col-md-9">
+                        <select name="paymentType" id="selectPaymentType" required placeholder="Sposób zapłaty">
+                            <option value="1" selected="selected">PayPal</option>
+                            <option value="2">Gotówka</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="deliveryType" class="col-md-3 control-label">Sposób dostawy</label>
+                    <div class="col-md-9">
+                        <select name="deliveryType" id="selectDeliveryType" required placeholder="Sposób dostawy">
+                            <option value="1" selected="selected">Dowóz</option>
+                            <option value="2">Odbiór osobisty</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div id="deliveryData">
+                    <div class="form-group">
+                        <label class="col-md-3 control-label">Imię</label>
+                        <div class="col-md-9">
+                            <input type="text" class="form-control" placeholder="Imię" value="@Model.FirstName" disabled="disabled">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-md-3 control-label">Nazwisko</label>
+                        <div class="col-md-9">
+                            <input type="text" class="form-control" placeholder="Nazwisko" value="@Model.LastName" disabled="disabled">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-md-3 control-label">Miasto</label>
+                        <div class="col-md-9">
+                            <input type="text" class="form-control" placeholder="Miasto" value="@Model.City" disabled="disabled">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-md-3 control-label">Ulica</label>
+                        <div class="col-md-9">
+                            <input type="text" class="form-control" placeholder="Ulica" value="@Model.Street" disabled="disabled">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-md-3 control-label">Number budynku</label>
+                        <div class="col-md-9">
+                            <input type="text" class="form-control" placeholder="Numer budynku" value="@Model.StreetNumber" disabled="disabled">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-md-3 control-label">Numer mieszkania</label>
+                        <div class="col-md-9">
+                            <input type="text" class="form-control" placeholder="Numer mieszkania" value="@Model.FlatNumber" disabled="disabled">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group" style="margin-top: 10px;">
+                    <div class="col-sm-12">
+                        <input type="submit" class="btn btn-primary btn-block" value="Zapłać" />
+                    </div>
+                </div>
+            </form>
         </div>
     </div>
 </div>

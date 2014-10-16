@@ -35,6 +35,8 @@
     <Compile Include="Contracts\Restaurant.cs" />
     <Compile Include="Contracts\Street.cs" />
     <Compile Include="Contracts\StreetNumber.cs" />
+    <Compile Include="FoodSearchUserServiceClient.cs" />
+    <Compile Include="Interfaces\IFoodSearchUserServiceClient.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Contracts\City.cs" />
     <Compile Include="ServiceClientBase.cs" />

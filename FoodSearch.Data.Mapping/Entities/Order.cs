@@ -10,8 +10,6 @@ namespace FoodSearch.Data.Mapping.Entities
         public virtual DateTime CreateDate { get; set; }
         public virtual int DeliveryTypeId { get; set; }
         public virtual DeliveryType DeliveryType { get; set; }
-        public virtual Guid PaymentId { get; set; }
-        public virtual Payment Payment { get; set; }
         public virtual string DeliveryData { get; set; }
     }
 }

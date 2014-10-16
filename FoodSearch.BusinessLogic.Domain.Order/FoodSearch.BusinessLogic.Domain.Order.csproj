@@ -49,6 +49,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Interface\IOrderDomain.cs" />
+    <Compile Include="Models\CreateOrderResult.cs" />
+    <Compile Include="Models\DeliveryAddress.cs" />
+    <Compile Include="Models\OrderItem.cs" />
     <Compile Include="OrderDomain.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

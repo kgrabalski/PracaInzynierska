@@ -262,6 +262,7 @@
     <Content Include="Scripts\bootstrap-timepicker.min.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\Frontend\Delivery.js" />
     <Content Include="Scripts\Frontend\HomePage.js" />
     <Content Include="Scripts\html5shiv-printshiv.js" />
     <Content Include="Scripts\html5shiv-printshiv.min.js" />
@@ -1115,8 +1116,8 @@
     <Content Include="Scripts\angular-ui\ui-bootstrap.min.js" />
     <Content Include="Views\Order\Basket.cshtml" />
     <Content Include="Views\Order\Shipping.cshtml" />
-    <Content Include="Views\Order\Payment.cshtml" />
     <Content Include="Views\Order\Success.cshtml" />
+    <Content Include="Views\Order\Cancel.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\FoodSearch.BusinessLogic.Domain.Core\FoodSearch.BusinessLogic.Domain.Core.csproj">

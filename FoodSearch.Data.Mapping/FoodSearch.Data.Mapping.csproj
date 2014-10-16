@@ -68,6 +68,7 @@
     <Compile Include="Entities\Cuisine.cs" />
     <Compile Include="Entities\DeliveryAddress.cs" />
     <Compile Include="Entities\DeliveryType.cs" />
+    <Compile Include="Entities\DeliveryTypes.cs" />
     <Compile Include="Entities\Dish.cs" />
     <Compile Include="Entities\DishGroup.cs" />
     <Compile Include="Entities\District.cs" />
@@ -89,6 +90,7 @@
     <Compile Include="Entities\Mapping\PaymentMap.cs" />
     <Compile Include="Entities\Mapping\PaymentStateMap.cs" />
     <Compile Include="Entities\Mapping\PaymentTypeMap.cs" />
+    <Compile Include="Entities\Mapping\PayPalIpnResponseMap.cs" />
     <Compile Include="Entities\Mapping\RegistrationConfirmMap.cs" />
     <Compile Include="Entities\Mapping\RestaurantCuisineMap.cs" />
     <Compile Include="Entities\Mapping\RestaurantMap.cs" />
@@ -104,7 +106,10 @@
     <Compile Include="Entities\Payment.cs" />
     <Compile Include="Entities\PaymentHistory.cs" />
     <Compile Include="Entities\PaymentState.cs" />
+    <Compile Include="Entities\PaymentStates.cs" />
     <Compile Include="Entities\PaymentType.cs" />
+    <Compile Include="Entities\PaymentTypes.cs" />
+    <Compile Include="Entities\PayPalIpnResponse.cs" />
     <Compile Include="Entities\RegistrationConfirm.cs" />
     <Compile Include="Entities\Restaurant.cs" />
     <Compile Include="Entities\RestaurantCuisine.cs" />

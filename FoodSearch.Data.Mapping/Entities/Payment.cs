@@ -11,5 +11,7 @@ namespace FoodSearch.Data.Mapping.Entities
         public virtual PaymentState PaymentState { get; set; }
         public virtual float Amount { get; set; }
         public virtual DateTime CreateDate { get; set; }
+        public virtual Guid OrderId { get; set; }
+        public virtual Order Order { get; set; }
     }
 }

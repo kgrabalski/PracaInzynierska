@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-using FoodSearch.BusinessLogic.Domain.Restaurant.Models;
+using FoodSearch.Data.Mapping.Entities;
+
+using Dish = FoodSearch.BusinessLogic.Domain.Restaurant.Models.Dish;
 
 namespace FoodSearch.Presentation.Web.Site.Models
 {

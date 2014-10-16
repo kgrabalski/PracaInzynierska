@@ -2,6 +2,8 @@
 using FoodSearch.Data.Mapping.Entities;
 using FoodSearch.Data.Mapping.Interface;
 
+using NHibernate;
+
 using Ninject;
 
 namespace FoodSearch.Data.Mapping.Repository
@@ -33,6 +35,7 @@ namespace FoodSearch.Data.Mapping.Repository
             _kernel.Bind<IRepository<PaymentHistory>>().To<FoodSearchRepository<PaymentHistory>>();
             _kernel.Bind<IRepository<PaymentState>>().To<FoodSearchRepository<PaymentState>>();
             _kernel.Bind<IRepository<PaymentType>>().To<FoodSearchRepository<PaymentType>>();
+            _kernel.Bind<IRepository<PayPalIpnResponse>>().To<FoodSearchRepository<PayPalIpnResponse>>();
             _kernel.Bind<IRepository<RegistrationConfirm>>().To<FoodSearchRepository<RegistrationConfirm>>();
             _kernel.Bind<IRepository<Restaurant>>().To<FoodSearchRepository<Restaurant>>();
             _kernel.Bind<IRepository<RestaurantCuisine>>().To<FoodSearchRepository<RestaurantCuisine>>();
@@ -50,5 +53,10 @@ namespace FoodSearch.Data.Mapping.Repository
         }
 
         public IStoredProcedureRepository StoredProcedure { get { return _kernel.Get<IStoredProcedureRepository>(); } }
+
+        public ITransaction BeginTransaction
+        {
+            get { return _sessionSource.Session.BeginTransaction(); }
+        }
     }
 }

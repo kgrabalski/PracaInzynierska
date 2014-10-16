@@ -119,6 +119,9 @@
     <Compile Include="Areas\Order\Models\Basket.cs" />
     <Compile Include="Areas\Order\Models\BasketItem.cs" />
     <Compile Include="Areas\Order\OrderAreaRegistration.cs" />
+    <Compile Include="Areas\User\Controllers\LoginController.cs" />
+    <Compile Include="Areas\User\Controllers\RegisterController.cs" />
+    <Compile Include="Areas\User\UserAreaRegistration.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -133,6 +136,7 @@
     <Content Include="packages.config" />
     <Content Include="Areas\Core\Views\web.config" />
     <Content Include="Areas\Order\Views\web.config" />
+    <Content Include="Areas\User\Views\web.config" />
     <None Include="Properties\PublishProfiles\foodsearch.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -147,6 +151,8 @@
     <Folder Include="Areas\Core\Views\Shared\" />
     <Folder Include="Areas\Order\Views\Basket\" />
     <Folder Include="Areas\Order\Views\Shared\" />
+    <Folder Include="Areas\User\Models\" />
+    <Folder Include="Areas\User\Views\Shared\" />
     <Folder Include="Controllers\" />
     <Folder Include="Models\" />
   </ItemGroup>

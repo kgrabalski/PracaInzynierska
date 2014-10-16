@@ -12,6 +12,8 @@ using System.Collections.Generic;
 using System.Linq;
 
 
+
+
 namespace FoodSearch.BusinessLogic.Domain.User
 {
     public class UserDomain : IUserDomain
