@@ -5,6 +5,8 @@ using FoodSearch.Service.Client.Interfaces;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using FoodSearch.Service.Client.Contracts;
+using System.Collections.ObjectModel;
+using System.Net.Http;
 
 namespace FoodSearch.Service.Client
 {
@@ -12,35 +14,41 @@ namespace FoodSearch.Service.Client
 	{
 		protected override string ServiceAddress { get { return _baseAddress + "Core/"; } }
 
-		public async Task<IEnumerable<City>> GetCities ()
+		public async Task<ObservableCollection<City>> GetCities ()
 		{
 			var response = await Get ("city");
 			return DeserializeList<City>(response);
 		}
 
-		public async Task<IEnumerable<Street>> GetStreets(int cityId, string query)
+        public async Task<ObservableCollection<Street>> GetStreets(int cityId, string query)
 		{
 			var response = await Get(string.Format("street?cityId={0}&query={1}", cityId, query));
 			return DeserializeList<Street>(response);
 		}
 
-		public async Task<IEnumerable<StreetNumber>> GetStreetNumbers(int streetId)
+        public async Task<ObservableCollection<StreetNumber>> GetStreetNumbers(int streetId)
 		{
 			var response = await Get("street/" + streetId);
 			return DeserializeList<StreetNumber>(response);
 		}
 
-		public async Task<IEnumerable<Restaurant>> GetRestaurants(int addressId)
+        public async Task<ObservableCollection<Restaurant>> GetRestaurants(int addressId)
 		{
 			var response = await Get("restaurant?addressId=" + addressId);
 			return DeserializeList<Restaurant>(response);
 		}
 
-		public async Task<IEnumerable<DishGroup>> GetDishes(Guid restaurantId)
+        public async Task<ObservableCollection<DishGroup>> GetDishes(Guid restaurantId)
 		{
 			var response = await Get("dish?restaurantId=" + restaurantId);
 			return DeserializeList<DishGroup>(response);
 		}
+
+        public Task<byte[]> GetLogo(int logoId)
+        {
+            var client = new HttpClient();
+            return client.GetByteArrayAsync(ServiceAddress + "Logo/" + logoId.ToString());
+        }
 	}
 }
 

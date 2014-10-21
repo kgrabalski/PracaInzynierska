@@ -7,7 +7,7 @@ using System.Runtime.CompilerServices;
 [assembly: AssemblyTitle ("FoodSearch.Presentation.Mobile.Common")]
 [assembly: AssemblyDescription ("")]
 [assembly: AssemblyConfiguration ("")]
-[assembly: AssemblyCompany ("")]
+[assembly: AssemblyCompany ("Krzysztof Grabalski")]
 [assembly: AssemblyProduct ("")]
 [assembly: AssemblyCopyright ("Krzysztof")]
 [assembly: AssemblyTrademark ("")]

@@ -6,65 +6,45 @@ using System.Threading.Tasks;
 
 using FoodSearch.Presentation.Mobile.Common.Services;
 using FoodSearch.Service.Client.Contracts;
+using System.Collections.ObjectModel;
 
 namespace FoodSearch.Presentation.Mobile.Common.ViewModels
 {
     public class RestaurantListViewModel : ViewModelBase
     {
-        #region Restaurants
+        private ObservableCollection<Restaurant> _restaurants = new ObservableCollection<Restaurant>();
 
-        private IEnumerable<Restaurant> _restaurants;
-        public IEnumerable<Restaurant> Restaurants
+        public ObservableCollection<Restaurant> Restaurants
         {
-            get
-            {
-                return _restaurants;
-            }
-            set
-            {
-                if (_restaurants != value)
-                {
-                    _restaurants = value;
-                    OnPropertyChanged();
-                }
-            }
+            get { return _restaurants; }
+            set { SetProperty(ref _restaurants, value); }
         }
-        #endregion
 
-        #region SelectedRestaurant
+        private Restaurant _selectedRestaurant = new Restaurant();
 
-        private Restaurant _selectedRestaurant;
         public Restaurant SelectedRestaurant
         {
-            get
-            {
-                return _selectedRestaurant;
-            }
-            set
-            {
-                if (_selectedRestaurant != value)
-                {
-                    _selectedRestaurant = value;
-                    OnPropertyChanged();
-                    if (_selectedRestaurant != null)
-                    {
-                        NavigationService.Navigation.PushAsync(ViewLocator.RestaurantMenu);
-                        MessageService.Send(SelectedRestaurant);
-                    }
+            get { return _selectedRestaurant; }
+            set 
+            { 
+                if (SetProperty(ref _selectedRestaurant, value) && value != null) {
+                    NavigationService.Navigation.PushAsync(ViewLocator.RestaurantMenu);
+                    MessageService.Send(SelectedRestaurant);
+                    SelectedRestaurant = null;
                 }
             }
         }
-        #endregion
-        
+                 
         public RestaurantListViewModel()
         {
-            Restaurants = new List<Restaurant>();
             MessageService.Register<StreetNumber>(GetRestaurants);
         }
 
         private async void GetRestaurants(StreetNumber sn)
         {
+            IsBusy = true;
             Restaurants = await Client.Core.GetRestaurants(sn.Id);
+            IsBusy = false;
         }
     }
 }

@@ -22,7 +22,12 @@ namespace FoodSearch.Service.Api.Areas.Core.Controllers
         [HttpGet]
         public IEnumerable<RestaurantInfo> GetRestaurants([FromUri] int addressId)
         {
-            return _domain.Restaurant.GetRestaurants(addressId, DateTime.Now);
+#if DEBUG
+            DateTime date = DateTime.Now;
+#else
+            DateTime date = DateTime.Now.Subtract(new TimeSpan(2, 0, 0));
+#endif
+            return _domain.Restaurant.GetRestaurants(addressId, date);
         }
     }
 }

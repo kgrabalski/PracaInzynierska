@@ -10,12 +10,17 @@ namespace FoodSearch.Presentation.Mobile.Common.ViewModels
 	{
 		public event PropertyChangedEventHandler PropertyChanged;
 
-		public void OnPropertyChanged([CallerMemberName] string propertyName = "")
+		protected bool SetProperty<T>(ref T property, T newValue, [CallerMemberName] string propertyName = "")
 		{
-			if (PropertyChanged != null)
+            if (property != null && property.Equals(newValue)) return false;
+
+			property = newValue;
+			var handler = PropertyChanged;
+			if (handler != null) 
 			{
-				PropertyChanged (this, new PropertyChangedEventArgs (propertyName));
+				PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
 			}
+			return true;
 		}
 
 		protected readonly IFoodSearchServiceClient Client;
@@ -29,6 +34,15 @@ namespace FoodSearch.Presentation.Mobile.Common.ViewModels
 		{
 
 		}
+
+        private bool _isBusy = false;
+
+        public bool IsBusy
+        {
+            get { return _isBusy; }
+            set { SetProperty(ref _isBusy, value); }
+        }
+
 	}
 }
 

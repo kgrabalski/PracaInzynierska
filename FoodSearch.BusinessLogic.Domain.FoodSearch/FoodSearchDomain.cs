@@ -33,7 +33,7 @@ namespace FoodSearch.BusinessLogic.Domain.FoodSearch
 #else
             _kernel.Bind<ISessionSource>().To<SessionSource>()
                 .InSingletonScope()
-                .WithConstructorArgument("db", Databases.FoodSeach);
+                .WithConstructorArgument("db", Databases.FoodSearchTest);
 #endif
             _kernel.Bind<IRepositoryProvider>().To<FoodSearchRepositoryProvider>();
             _kernel.Bind<ICoreDomain>().To<CoreDomain>().InThreadScope();

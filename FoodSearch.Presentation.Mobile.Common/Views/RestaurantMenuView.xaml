@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TabbedPage 
+	xmlns="http://xamarin.com/schemas/2014/forms" 
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+	x:Class="FoodSearch.Presentation.Mobile.Common.RestaurantMenuView"
+	Title="Informacje o restauracji" >
+	<TabbedPage.Children>
+		<ContentPage Title="Menu" BindingContext="{Binding Menu}">
+			<StackLayout VerticalOptions="FillAndExpand">
+				<ActivityIndicator IsVisible="{Binding IsBusy}" IsRunning="{Binding IsBusy}"/>
+				<ListView ItemsSource="{Binding DishGroups, Mode=TwoWay}" IsGroupingEnabled="true"
+					GroupDisplayBinding="{Binding GroupName}" GroupShortNameBinding="{Binding GroupName}">
+
+				</ListView>
+			</StackLayout>
+		</ContentPage>
+
+		<ContentPage Title="Opinie" BindingContext="{Binding Opinion}">
+
+		</ContentPage>
+	</TabbedPage.Children>
+</TabbedPage>

@@ -47,14 +47,19 @@
     <Compile Include="ViewModels\MainViewModel.cs" />
     <Compile Include="Views\AuthorizeView.cs" />
     <Compile Include="Views\DishListView.cs" />
-    <Compile Include="Views\MainView.cs" />
     <Compile Include="ViewLocator.cs" />
-    <Compile Include="Views\OpinionListView.cs" />
     <Compile Include="Views\Partial\DishItemPartial.cs" />
-    <Compile Include="Views\Partial\RestaurantItemPartial.cs" />
-    <Compile Include="Views\RestaurantMenuView.cs" />
-    <Compile Include="Views\RestaurantsListView.cs" />
-    <Compile Include="Views\ViewBase.cs" />
+    <Compile Include="Infrastucture\ObservableExtension.cs" />
+    <Compile Include="Views\MainView.xaml.cs">
+      <DependentUpon>MainView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\RestaurantsListView.xaml.cs">
+      <DependentUpon>RestaurantsListView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Converters\WebImageConverter.cs" />
+    <Compile Include="Views\RestaurantMenuView.xaml.cs">
+      <DependentUpon>RestaurantMenuView.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <ItemGroup>
@@ -70,6 +75,9 @@
     <Reference Include="Xamarin.Forms.Xaml">
       <HintPath>..\packages\Xamarin.Forms.1.2.3.6257\lib\portable-win+net45+wp80+MonoAndroid10+MonoTouch10\Xamarin.Forms.Xaml.dll</HintPath>
     </Reference>
+    <Reference Include="Ninject">
+      <HintPath>..\packages\Portable.Ninject.3.3\lib\portable-net4+sl5+wp8+win8+wpa81+monotouch+monoandroid\Ninject.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -81,4 +89,18 @@
     </PropertyGroup>
     <Error Condition="!Exists('..\packages\Xamarin.Forms.1.2.3.6257\build\portable-win+net45+wp80+MonoAndroid10+MonoTouch10\Xamarin.Forms.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Xamarin.Forms.1.2.3.6257\build\portable-win+net45+wp80+MonoAndroid10+MonoTouch10\Xamarin.Forms.targets'))" />
   </Target>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\MainView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\RestaurantsListView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\RestaurantMenuView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Converters\" />
+  </ItemGroup>
 </Project>

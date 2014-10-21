@@ -2,16 +2,18 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using FoodSearch.Service.Client.Contracts;
+using System.Collections.ObjectModel;
 
 namespace FoodSearch.Service.Client.Interfaces
 {
-	public interface IFoodSearchCoreServiceClient
+    public interface IFoodSearchCoreServiceClient
 	{
-		Task<IEnumerable<City>> GetCities();
-	    Task<IEnumerable<Street>> GetStreets(int cityId, string query);
-	    Task<IEnumerable<StreetNumber>> GetStreetNumbers(int streetId);
-	    Task<IEnumerable<Restaurant>> GetRestaurants(int addressId);
-	    Task<IEnumerable<DishGroup>> GetDishes(Guid restaurantId);
+		Task<ObservableCollection<City>> GetCities();
+	    Task<ObservableCollection<Street>> GetStreets(int cityId, string query);
+	    Task<ObservableCollection<StreetNumber>> GetStreetNumbers(int streetId);
+	    Task<ObservableCollection<Restaurant>> GetRestaurants(int addressId);
+	    Task<ObservableCollection<DishGroup>> GetDishes(Guid restaurantId);
+        Task<byte[]> GetLogo(int logoId);
 	}
 }
 

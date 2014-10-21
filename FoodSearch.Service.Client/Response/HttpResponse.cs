@@ -3,10 +3,10 @@ using System.Net;
 
 namespace FoodSearch.Service.Client.Response
 {
-	public class HttpResponse
+	public class HttpResponse<T>
 	{
 		public HttpStatusCode StatusCode { get; set; }
-	    public string Body { get; set; }
+	    public T Body { get; set; }
 	}
 }
 

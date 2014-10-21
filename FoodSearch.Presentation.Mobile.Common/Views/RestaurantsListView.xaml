@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage 
+	xmlns="http://xamarin.com/schemas/2014/forms" 
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+	xmlns:conv="clr-namespace:FoodSearch.Presentation.Mobile.Common.Converters;assembly=FoodSearch.Presentation.Mobile.Common"
+	x:Class="FoodSearch.Presentation.Mobile.Common.RestaurantsListView"
+	Title="Znalezione restauracje">
+
+	<ContentPage.Resources>
+		<ResourceDictionary>
+			<conv:WebImageConverter x:Key="WebImageConverter"/>
+		</ResourceDictionary>
+	</ContentPage.Resources>
+
+	<StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+		<ActivityIndicator IsVisible="{Binding IsBusy}" IsRunning="{Binding IsBusy}"/>
+		<ListView ItemsSource="{Binding Restaurants, Mode=TwoWay}" SelectedItem="{Binding SelectedRestaurant, Mode=TwoWay}" RowHeight="100"
+			HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+			<ListView.ItemTemplate>
+				<DataTemplate>
+					<ViewCell>
+						<StackLayout Orientation="Horizontal" Padding="5">
+							<Image WidthRequest="90" HeightRequest="90" Aspect="AspectFit" Source="{Binding Converter={StaticResource WebImageConverter}}"/>
+							<StackLayout>
+								<Label Text="{Binding RestaurantName}"/>
+								<Label Text="{Binding Address}"/>
+								<Label Text="{Binding Openings}"/>
+							</StackLayout>
+						</StackLayout>
+					</ViewCell>
+				</DataTemplate>
+			</ListView.ItemTemplate>
+		</ListView>
+	</StackLayout>
+</ContentPage>

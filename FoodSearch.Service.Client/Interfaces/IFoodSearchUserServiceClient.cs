@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace FoodSearch.Service.Client.Interfaces
 {
-    public interface IFoodSearchUserServiceClient
+    public interface IFoodSearchUserServiceClient 
     {
     }
 }
