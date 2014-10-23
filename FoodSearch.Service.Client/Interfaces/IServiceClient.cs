@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace FoodSearch.Service.Client
+namespace FoodSearch.Service.Client.Interfaces
 {
     public interface IServiceClient
     {

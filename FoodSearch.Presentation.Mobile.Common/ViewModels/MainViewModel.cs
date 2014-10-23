@@ -133,7 +133,7 @@ namespace FoodSearch.Presentation.Mobile.Common.ViewModels
             }
         }
 
-		public MainViewModel ()
+        public MainViewModel (IFoodSearchServiceClient client) : base(client)
 		{
 			InitializeView ();
 		}

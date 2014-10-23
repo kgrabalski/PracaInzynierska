@@ -30,11 +30,6 @@ namespace FoodSearch.Presentation.Mobile.Common.ViewModels
 			Client = client;
 		}
 
-		public ViewModelBase () : this(new FoodSearchServiceClient())
-		{
-
-		}
-
         private bool _isBusy = false;
 
         public bool IsBusy

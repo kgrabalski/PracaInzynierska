@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage 
+	xmlns="http://xamarin.com/schemas/2014/forms" 
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+	x:Class="FoodSearch.Presentation.Mobile.Common.Views.BasketView"
+	Title="Koszyk">
+
+	<StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+		<ActivityIndicator IsVisible="{Binding IsBusy}" IsRunning="{Binding IsBusy}"/>
+		<Label Text="Koszyk jest pusty" IsVisible="{Binding IsEmpty}" HorizontalOptions="CenterAndExpand" />
+
+		<Grid IsVisible="{Binding IsNotEmpty}" HeightRequest="100">
+			<Grid.RowDefinitions>
+				<RowDefinition Height="Auto"/>
+				<RowDefinition Height="Auto"/>
+				<RowDefinition Height="Auto"/>
+			</Grid.RowDefinitions>
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="2*"/>
+				<ColumnDefinition Width="1*"/>
+			</Grid.ColumnDefinitions>
+		</Grid>
+
+		<ListView ItemsSource="{Binding BasketItems, Mode=TwoWay}" SelectedItem="{Binding SelectedItem, Mode=TwoWay}"
+			RowHeight="50" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+			<ListView.ItemTemplate>
+				<DataTemplate>
+					<ViewCell>
+						<StackLayout Padding="5" Orientation="Horizontal">
+							<StackLayout>
+								<Label Scale="1.2" AnchorX="0" AnchorY="0" Text="{Binding Name}"/>
+								<Label Text="{Binding Price}"/>
+							</StackLayout>
+							<Stepper Maximum="100" Minimum="0" Increment="1" Value="{Binding Count}"/>
+						</StackLayout>
+					</ViewCell>
+				</DataTemplate>
+			</ListView.ItemTemplate>
+		</ListView>
+	</StackLayout>
+
+	<ContentPage.ToolbarItems>
+		<ToolbarItem Name="Zamów" Order="Primary" Command="{Binding OrderCommand}">
+			<ToolbarItem.Icon>
+				<OnPlatform x:TypeArguments="FileImageSource"
+					iOS="order.png"
+					Android="ic_action_accept.png"
+					WinPhone="Images/add.png" />
+			</ToolbarItem.Icon>
+		</ToolbarItem>
+		<ToolbarItem Name="Wyczyść koszyk" Order="Primary" Command="{Binding ClearBasket}">
+			<ToolbarItem.Icon>
+				<OnPlatform x:TypeArguments="FileImageSource"
+					iOS="clear.png"
+					Android="ic_action_discard.png"
+					WinPhone="Images/add.png" />
+			</ToolbarItem.Icon>
+		</ToolbarItem>
+		<ToolbarItem Name="Logowanie" Order="Secondary"/>
+	</ContentPage.ToolbarItems>
+</ContentPage>

@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using FoodSearch.Presentation.Mobile.Common.Services;
 using FoodSearch.Service.Client.Contracts;
 using System.Collections.ObjectModel;
+using FoodSearch.Service.Client.Interfaces;
 
 namespace FoodSearch.Presentation.Mobile.Common.ViewModels
 {
@@ -35,7 +36,7 @@ namespace FoodSearch.Presentation.Mobile.Common.ViewModels
             }
         }
                  
-        public RestaurantListViewModel()
+        public RestaurantListViewModel(IFoodSearchServiceClient client) : base(client)
         {
             MessageService.Register<StreetNumber>(GetRestaurants);
         }

@@ -30,7 +30,10 @@ namespace FoodSearch.Service.Api.Areas.Order.Controllers
         [HttpPost]
         public HttpResponseMessage Add([ModelBinder] Basket basket, [FromUri] int id)
         {
-            throw new NotImplementedException();
+            var dish = _domain.Restaurant.GetDish(id);
+            if (dish == null) return Request.CreateResponse(HttpStatusCode.NotFound);
+            basket.AddItem(dish);
+            return Request.CreateResponse(HttpStatusCode.Created);
         }
 
         [HttpDelete]
@@ -38,6 +41,13 @@ namespace FoodSearch.Service.Api.Areas.Order.Controllers
         {
             bool removed = basket.RemoveItem(id);
             return Request.CreateResponse(removed ? HttpStatusCode.OK : HttpStatusCode.NotFound);
+        }
+
+        [HttpDelete]
+        public HttpResponseMessage DeleteAll([ModelBinder] Basket basket)
+        {
+            basket.Items.Clear();
+            return Request.CreateResponse(HttpStatusCode.OK);
         }
     }
 

@@ -2,17 +2,13 @@
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.9f5cf426" />
   <MonoDevelop.Ide.Workbench ActiveDocument="FoodSearch.Presentation.Mobile.Common\ViewModels\DishListViewModel.cs">
     <Files>
-      <File FileName="FoodSearch.Presentation.Mobile.Common\Views\MainView.xaml" Line="132" Column="132" />
-      <File FileName="FoodSearch.Presentation.Mobile.Common\Views\MainView.xaml.cs" Line="53" Column="53" />
-      <File FileName="FoodSearch.Presentation.Mobile.Common\Views\RestaurantsListView.xaml.cs" Line="4" Column="4" />
-      <File FileName="FoodSearch.Presentation.Mobile.Common\ViewModels\RestaurantListViewModel.cs" Line="1" Column="1" />
-      <File FileName="FoodSearch.Presentation.Mobile.Common\Views\RestaurantMenuView.xaml" Line="18" Column="18" />
-      <File FileName="FoodSearch.Presentation.Mobile.Common\ViewModels\DishListViewModel.cs" Line="10" Column="10" />
-      <File FileName="FoodSearch.Presentation.Mobile.Common\Views\RestaurantsListView.xaml" Line="23" Column="23" />
-      <File FileName="d:\projekty\PracaInzynierska\FoodSearch\FoodSearch.Presentation.Mobile.Common\Services\MessageService.cs" Line="1" Column="1" />
-      <File FileName="FoodSearch.Presentation.Mobile.Common\ViewLocator.cs" Line="77" Column="77" />
-      <File FileName="FoodSearch.Presentation.Mobile.Common\Views\RestaurantMenuView.xaml.cs" Line="57" Column="57" />
-      <File FileName="FoodSearch.Presentation.Mobile.Common\Views\DishListView.cs" Line="22" Column="22" NotebookId="1" />
+      <File FileName="FoodSearch.Presentation.Mobile.Common\Views\BasketView.xaml" Line="56" Column="56" />
+      <File FileName="FoodSearch.Presentation.Mobile.Common\ViewModels\BasketViewModel.cs" Line="38" Column="38" />
+      <File FileName="FoodSearch.Service.Client\Contracts\BasketItem.cs" Line="1" Column="1" />
+      <File FileName="FoodSearch.Presentation.Mobile.Common\Views\RestaurantMenuView.xaml" Line="5" Column="5" />
+      <File FileName="FoodSearch.Service.Client\Interfaces\IFoodSearchOrderServiceClient.cs" Line="34" Column="34" />
+      <File FileName="FoodSearch.Service.Client\FoodSearchOrderServiceClient.cs" Line="1" Column="1" />
+      <File FileName="FoodSearch.Presentation.Mobile.Common\ViewModels\DishListViewModel.cs" Line="44" Column="44" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

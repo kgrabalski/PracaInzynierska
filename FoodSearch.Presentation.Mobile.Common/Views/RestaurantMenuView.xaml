@@ -3,20 +3,59 @@
 	xmlns="http://xamarin.com/schemas/2014/forms" 
 	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
 	x:Class="FoodSearch.Presentation.Mobile.Common.RestaurantMenuView"
-	Title="Informacje o restauracji" >
+	Title="{Binding Menu.RestaurantName, Mode=TwoWay}" >
 	<TabbedPage.Children>
 		<ContentPage Title="Menu" BindingContext="{Binding Menu}">
 			<StackLayout VerticalOptions="FillAndExpand">
 				<ActivityIndicator IsVisible="{Binding IsBusy}" IsRunning="{Binding IsBusy}"/>
-				<ListView ItemsSource="{Binding DishGroups, Mode=TwoWay}" IsGroupingEnabled="true"
-					GroupDisplayBinding="{Binding GroupName}" GroupShortNameBinding="{Binding GroupName}">
-
+				<ListView ItemsSource="{Binding DishGroups, Mode=TwoWay}" SelectedItem="{Binding SelectedDish, Mode=TwoWay}"
+					IsGroupingEnabled="true" GroupDisplayBinding="{Binding GroupName}" GroupShortNameBinding="{Binding GroupName}"
+					VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" RowHeight="50">
+					<ListView.ItemTemplate>
+						<DataTemplate>
+							<ViewCell>
+								<StackLayout Orientation="Horizontal" Padding="5">
+									<Image WidthRequest="40" HeightRequest="40" Aspect="AspectFit"
+										Source="ic_action_dish.png"/>
+									<StackLayout>
+										<Label Scale="1.2" AnchorX="0" AnchorY="0" Text="{Binding Name}"/>
+										<Label Text="{Binding PricePln}"/>
+									</StackLayout>
+								</StackLayout>
+							</ViewCell>
+						</DataTemplate>
+					</ListView.ItemTemplate>
 				</ListView>
 			</StackLayout>
+
+			<ContentPage.ToolbarItems>
+				<ToolbarItem Name="Dodaj do koszyka" Order="Primary"
+					Command="{Binding AddToBasket}">
+					<ToolbarItem.Icon>
+						<OnPlatform x:TypeArguments="FileImageSource"
+							iOS="add.png"
+							Android="ic_action_new.png"
+							WinPhone="Images/add.png" />
+					</ToolbarItem.Icon>
+				</ToolbarItem>
+				<ToolbarItem Name="Koszyk" Order="Primary"
+					Command="{Binding ShowBasket}">
+					<ToolbarItem.Icon>
+						<OnPlatform x:TypeArguments="FileImageSource"
+							iOS="basket.png"
+							Android="ic_stat_shopping.png"
+							WinPhone="Images/basket.png" />
+					</ToolbarItem.Icon>
+				</ToolbarItem>
+  			</ContentPage.ToolbarItems>
 		</ContentPage>
 
 		<ContentPage Title="Opinie" BindingContext="{Binding Opinion}">
 
 		</ContentPage>
 	</TabbedPage.Children>
+
+	<TabbedPage.ToolbarItems>
+		<ToolbarItem Name="Logowanie" Order="Secondary"/>
+	</TabbedPage.ToolbarItems>
 </TabbedPage>

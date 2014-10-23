@@ -4,6 +4,7 @@ using Xamarin.Forms;
 
 using Ninject;
 using FoodSearch.Presentation.Mobile.Common.ViewModels;
+using FoodSearch.Presentation.Mobile.Common.Services;
 
 namespace FoodSearch.Presentation.Mobile.Common
 {	
@@ -14,8 +15,8 @@ namespace FoodSearch.Presentation.Mobile.Common
 			InitializeComponent ();
             NavigationPage.SetHasNavigationBar(this, true);
             BindingContext = new {
-                Menu = ViewLocator.DependencyResolver.Get<DishListViewModel>(),
-                Opinion = ViewLocator.DependencyResolver.Get<OpinionListViewModel>()
+                Menu = DependencyResolver.Current.Get<DishListViewModel>(),
+                Opinion = DependencyResolver.Current.Get<OpinionListViewModel>()
             };
 		}
 	}

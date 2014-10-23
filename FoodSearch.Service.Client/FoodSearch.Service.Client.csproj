@@ -48,6 +48,9 @@
     <Compile Include="Interfaces\IServiceClient.cs" />
     <Compile Include="Interfaces\IFoodSearchOrderServiceClient.cs" />
     <Compile Include="FoodSearchOrderServiceClient.cs" />
+    <Compile Include="Contracts\BasketItem.cs" />
+    <Compile Include="Response\HttpBodyResponse.cs" />
+    <Compile Include="Requests\GetDeliveryPriceRequest.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <Import Project="..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets" Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets')" />
@@ -69,4 +72,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Requests\" />
+  </ItemGroup>
 </Project>

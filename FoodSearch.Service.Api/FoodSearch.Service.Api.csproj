@@ -116,8 +116,10 @@
     <Compile Include="Areas\Core\Controllers\LogoController.cs" />
     <Compile Include="Areas\Core\Controllers\StreetController.cs" />
     <Compile Include="Areas\Order\Controllers\BasketController.cs" />
+    <Compile Include="Areas\Order\Controllers\DeliveryPriceController.cs" />
     <Compile Include="Areas\Order\Models\Basket.cs" />
     <Compile Include="Areas\Order\Models\BasketItem.cs" />
+    <Compile Include="Areas\Order\Models\DeliveryPriceModel.cs" />
     <Compile Include="Areas\Order\OrderAreaRegistration.cs" />
     <Compile Include="Areas\User\Controllers\LoginController.cs" />
     <Compile Include="Areas\User\Controllers\RegisterController.cs" />
@@ -126,8 +128,11 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Helpers\CompressAttribute.cs" />
+    <Compile Include="Helpers\MyApiControllerHandler.cs" />
+    <Compile Include="Helpers\MyApiControllerRouteHandler.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Providers\BasketModelBinder.cs" />
+    <Compile Include="Providers\BasketModelBinderProvider.cs" />
+    <Compile Include="Providers\BasketModelBinderWebApi.cs" />
     <Compile Include="Providers\CreateUserResult.cs" />
     <Compile Include="Providers\FoodSearchMembershipProvider.cs" />
     <Compile Include="Providers\FoodSearchRoleProvider.cs" />
@@ -164,6 +169,10 @@
     <ProjectReference Include="..\FoodSearch.BusinessLogic.Domain.FoodSearch\FoodSearch.BusinessLogic.Domain.FoodSearch.csproj">
       <Project>{489E10B0-1EBA-484E-BE1E-11C533CB00CF}</Project>
       <Name>FoodSearch.BusinessLogic.Domain.FoodSearch</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FoodSearch.BusinessLogic.Domain.Order\FoodSearch.BusinessLogic.Domain.Order.csproj">
+      <Project>{C0879B51-2AF2-4D83-A239-4B7F0BD1D039}</Project>
+      <Name>FoodSearch.BusinessLogic.Domain.Order</Name>
     </ProjectReference>
     <ProjectReference Include="..\FoodSearch.BusinessLogic.Domain.Restaurant\FoodSearch.BusinessLogic.Domain.Restaurant.csproj">
       <Project>{C74E76C5-8E76-4B4F-A3EA-E921D912DAFF}</Project>

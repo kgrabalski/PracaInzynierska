@@ -16,13 +16,15 @@ namespace FoodSearch.Service.Client
 
 		protected abstract string ServiceAddress { get ; }
 
-        protected async Task<HttpResponse<string>> Get(string url)
+        protected async Task<HttpBodyResponse<string>> Get(string url)
 		{
             try
             {
                 HttpClient client = new HttpClient ();
+                
                 var response = await client.GetAsync (ServiceAddress + url);
-                return new HttpResponse<string> {
+
+                return new HttpBodyResponse<string> {
                     StatusCode = response.StatusCode,
                     Body = await response.Content.ReadAsStringAsync ()
                 };
@@ -31,15 +33,33 @@ namespace FoodSearch.Service.Client
             {
                 throw;
             }
-			
 		}
+
+        protected async Task<HttpResponse> Post(string url, object data)
+        {
+            HttpClient client = new HttpClient();
+            string jsonString = string.Empty;
+            if (data != null) 
+            {
+                jsonString = JsonConvert.SerializeObject(data);
+            }
+            var response = await client.PostAsync(ServiceAddress + url, new StringContent(jsonString));
+            return new HttpResponse() { StatusCode = response.StatusCode };
+        }
+
+        protected async Task<HttpResponse> Delete(string url)
+        {
+            HttpClient client = new HttpClient();
+            var response = await client.DeleteAsync(ServiceAddress + url);
+            return new HttpResponse() { StatusCode = response.StatusCode };
+        }
 
 		protected T Deserialize<T>(string jsonString)
 		{
 			return JsonConvert.DeserializeObject<T> (jsonString);
 		}
 
-        protected ObservableCollection<T> DeserializeList<T>(HttpResponse<string> response)
+        protected ObservableCollection<T> DeserializeList<T>(HttpBodyResponse<string> response)
 		{
 			if (response.StatusCode == HttpStatusCode.OK)
 			{
