@@ -2,6 +2,7 @@
 <ContentPage 
 	xmlns="http://xamarin.com/schemas/2014/forms" 
 	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+	xmlns:b="clr-namespace:Xamarin.Behaviors;assembly=Xamarin.Behaviors"
 	x:Class="FoodSearch.Presentation.Mobile.Common.Views.BasketView"
 	Title="Koszyk">
 
@@ -9,30 +10,57 @@
 		<ActivityIndicator IsVisible="{Binding IsBusy}" IsRunning="{Binding IsBusy}"/>
 		<Label Text="Koszyk jest pusty" IsVisible="{Binding IsEmpty}" HorizontalOptions="CenterAndExpand" />
 
-		<Grid IsVisible="{Binding IsNotEmpty}" HeightRequest="100">
+		<Grid IsVisible="{Binding IsNotEmpty}">
 			<Grid.RowDefinitions>
 				<RowDefinition Height="Auto"/>
 				<RowDefinition Height="Auto"/>
 				<RowDefinition Height="Auto"/>
 			</Grid.RowDefinitions>
 			<Grid.ColumnDefinitions>
-				<ColumnDefinition Width="2*"/>
-				<ColumnDefinition Width="1*"/>
+				<ColumnDefinition Width="*"/>
+				<ColumnDefinition Width="*"/>
 			</Grid.ColumnDefinitions>
+
+			<Label Text="Dania razem:" Grid.Row="0" Grid.Column="0"/>
+			<Label Text="Dostawa:" Grid.Row="1" Grid.Column="0"/>
+			<Label Text="Do zapłaty:" Grid.Row="2" Grid.Column="0" AnchorX="0" AnchorY="0" Scale="1.3"/>
+
+			<Label Grid.Row="0" Grid.Column="1" Text="{Binding DishesTotal}"/>
+			<Label Grid.Row="1" Grid.Column="1" Text="{Binding DeliveryPrice}"/>
+			<Label Grid.Row="2" Grid.Column="1" Text="{Binding TotalPrice}" AnchorX="0" AnchorY="0" Scale="1.3"/>
 		</Grid>
 
 		<ListView ItemsSource="{Binding BasketItems, Mode=TwoWay}" SelectedItem="{Binding SelectedItem, Mode=TwoWay}"
-			RowHeight="50" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+			RowHeight="60" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
 			<ListView.ItemTemplate>
 				<DataTemplate>
 					<ViewCell>
-						<StackLayout Padding="5" Orientation="Horizontal">
-							<StackLayout>
-								<Label Scale="1.2" AnchorX="0" AnchorY="0" Text="{Binding Name}"/>
-								<Label Text="{Binding Price}"/>
-							</StackLayout>
-							<Stepper Maximum="100" Minimum="0" Increment="1" Value="{Binding Count}"/>
-						</StackLayout>
+						<Grid>
+							<Grid.RowDefinitions>
+								<RowDefinition Height="30"/>
+								<RowDefinition Height="30"/>
+							</Grid.RowDefinitions>
+							<Grid.ColumnDefinitions>
+								<ColumnDefinition Width="60"/>
+								<ColumnDefinition Width="*"/>
+								<ColumnDefinition Width="*"/>
+								<ColumnDefinition Width="*"/>
+								<ColumnDefinition Width="*"/>
+								<ColumnDefinition Width="50"/>
+							</Grid.ColumnDefinitions>
+						
+
+							<Image Grid.Row="0" Grid.RowSpan="2" Grid.Column="0" WidthRequest="55" HeightRequest="55" Aspect="AspectFit" Source="ic_action_dish.png"/>
+							<Label Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="4" Text="{Binding Name}"/>
+							<Label Grid.Row="1" Grid.Column="1" Text="Cena:"/>
+							<Label Grid.Row="1" Grid.Column="2" Text="{Binding Price}"/>
+							<Label Grid.Row="1" Grid.Column="3" Text="Ilosc:"/>
+							<Label Grid.Row="1" Grid.Column="4" Text="{Binding Count}"/>
+
+							<Button Grid.Row="0" Grid.Column="5" Text="+" Command="{Binding AddToBasket}" CommandParameter="{Binding}" HeightRequest="30" WidthRequest="50"/>
+							<Button Grid.Row="1" Grid.Column="5" Text="-" HeightRequest="30" WidthRequest="50"
+								Command="{Binding RemoveFromBasket}" CommandParameter="{Binding}" />
+						</Grid>
 					</ViewCell>
 				</DataTemplate>
 			</ListView.ItemTemplate>

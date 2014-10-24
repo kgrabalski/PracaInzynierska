@@ -63,6 +63,7 @@
     <Compile Include="ViewModels\BasketViewModel.cs" />
     <Compile Include="Services\DependencyResolver.cs" />
     <Compile Include="Services\RestaurantService.cs" />
+    <Compile Include="Infrastucture\GenericCommand.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <ItemGroup>
@@ -83,6 +84,9 @@
     </Reference>
     <Reference Include="Acr.XamForms.UserDialogs">
       <HintPath>..\packages\Acr.XamForms.UserDialogs.2.1.2\lib\portable-win+net45+MonoAndroid+MonoTouch+wp8\Acr.XamForms.UserDialogs.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Behaviors">
+      <HintPath>..\packages\Xamarin.Forms.Behaviors.1.2.0\lib\Xamarin.Behaviors.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

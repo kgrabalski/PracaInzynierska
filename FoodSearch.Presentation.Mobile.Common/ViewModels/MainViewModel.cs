@@ -118,6 +118,14 @@ namespace FoodSearch.Presentation.Mobile.Common.ViewModels
                 }));
             }
         }
+
+        private bool _canSearch = false;
+
+        public bool CanSearch
+        {
+            get { return _canSearch; }
+            set { SetProperty(ref _canSearch, value); }
+        }
               
         private Command _searchRestaurants;
         public Command SearchRestaurants
@@ -144,6 +152,8 @@ namespace FoodSearch.Presentation.Mobile.Common.ViewModels
             Cities = await Client.Core.GetCities();
             CanSelectCity = true;
             IsBusy = false;
+            //TODO: usunac na produkcji
+            CanSearch = true;
 		}
 
 	    private async void GetStreetNumbers()

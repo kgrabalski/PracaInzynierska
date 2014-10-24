@@ -12,7 +12,7 @@
 		</ResourceDictionary>
 	</ContentPage.Resources>
 
-	<StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+	<StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Padding="5">
 		<ActivityIndicator IsVisible="{Binding IsBusy}" IsRunning="{Binding IsBusy}"/>
 		<ListView ItemsSource="{Binding Restaurants, Mode=TwoWay}" SelectedItem="{Binding SelectedRestaurant, Mode=TwoWay}" RowHeight="100"
 			HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">

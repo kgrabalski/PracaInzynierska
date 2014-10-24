@@ -7,6 +7,8 @@ using System.Linq;
 using FoodSearch.Presentation.Mobile.Common.Infrastucture;
 using FoodSearch.Presentation.Mobile.Common.Services;
 using Acr.XamForms.UserDialogs;
+using System.Threading.Tasks;
+using System.Globalization;
 
 namespace FoodSearch.Presentation.Mobile.Common
 {
@@ -44,25 +46,25 @@ namespace FoodSearch.Presentation.Mobile.Common
             set { SetProperty(ref _isNotEmpty, value); }
         }
 
-        private decimal _dishesTotal;
+        private string _dishesTotal;
 
-        public decimal DishesTotal
+		public string DishesTotal
         {
             get { return _dishesTotal; }
             set { SetProperty(ref _dishesTotal, value); }
         }
 
-        private decimal _deliveryPrice;
+		private string _deliveryPrice;
 
-        public decimal DeliveryPrice
+		public string DeliveryPrice
         {
             get { return _deliveryPrice; }
             set { SetProperty(ref _deliveryPrice, value); }
         }
 
-        private decimal _totalPrice;
+		private string _totalPrice;
 
-        public decimal TotalPrice
+		public string TotalPrice
         {
             get { return _totalPrice; }
             set { SetProperty(ref _totalPrice, value); }
@@ -95,15 +97,48 @@ namespace FoodSearch.Presentation.Mobile.Common
                 return _clearBasket ?? (_clearBasket = new Command(async () =>
                     {
                         IsBusy = true;
-                        if (await Client.Order.ClearBasket()) 
+						bool cleared = await Client.Order.ClearBasket();
+                        if (cleared) 
                         {
-                            UpdateBasket();
+                            await UpdateBasketAsync();
                             _dialogService.Toast("Wyczyszczono koszyk");
                         }
                         IsBusy = false;
                     }));
             }
         }
+
+		private Command<BasketItem> _addToBasket;
+
+		public Command<BasketItem> AddToBasket
+		{
+			get
+			{
+				return _addToBasket ?? (_addToBasket = new Command<BasketItem>(async item =>
+					{
+						IsBusy = true;
+						bool success = await Client.Order.AddToBasket (item.DishId);
+						if (success) await UpdateBasketAsync ();
+						IsBusy = false;
+					}));
+			}
+		}
+
+		private Command<BasketItem> _removeFromBasket;
+
+		public Command<BasketItem> RemoveFromBasket
+		{
+			get
+			{
+				return _removeFromBasket ?? (_removeFromBasket = new Command<BasketItem>(async item =>
+					{
+						IsBusy = true;
+						bool success = await Client.Order.RemoveFromBasket (item.DishId);
+						if (success) await UpdateBasketAsync ();
+						IsBusy = false;
+					}));
+			}
+		}
 
         private readonly IUserDialogService _dialogService;
 
@@ -115,15 +150,33 @@ namespace FoodSearch.Presentation.Mobile.Common
 
         private async void UpdateBasket()
         {
-            IsBusy = true;
-            BasketItems.Clear();
-            BasketItems = await Client.Order.GetBasket();
-            IsEmpty = BasketItems.Count == 0;
-            DishesTotal = BasketItems.Sum(x => x.Total);
-            DeliveryPrice = await Client.Order.GetDeliveryPrice(RestaurantService.CurrentRestaurantId, DishesTotal);
-            TotalPrice = DishesTotal + DeliveryPrice;
-            IsBusy = false;
+			UpdateBasketAsync ();
         }
+
+		private async Task UpdateBasketAsync()
+		{
+			IsBusy = true;
+			BasketItems.Clear();
+            var basketItems = await Client.Order.GetBasket();
+            bool isEmpty = basketItems.Count == 0;
+            decimal dishesTotal = basketItems.Sum(x => x.Total);
+			decimal deliveryPrice = await Client.Order.GetDeliveryPrice(RestaurantService.CurrentRestaurantId, dishesTotal);
+			decimal totalPrice = dishesTotal + deliveryPrice;
+			
+            Xamarin.Forms.Device.BeginInvokeOnMainThread(() => {
+                BasketItems = basketItems;
+                IsEmpty = isEmpty;
+                DishesTotal = ToCurrency(dishesTotal);
+                DeliveryPrice = ToCurrency(deliveryPrice);
+                TotalPrice = ToCurrency(totalPrice);
+                IsBusy = false;
+            });
+		}
+
+		private string ToCurrency(decimal value)
+		{
+			return value.ToString("C", new CultureInfo("pl-PL"));
+		}
     }
 }
 

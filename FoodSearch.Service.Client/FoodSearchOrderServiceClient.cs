@@ -26,6 +26,7 @@ namespace FoodSearch.Service.Client
             using (var handler = new HttpClientHandler() { CookieContainer = cookieContainer })
             using (var client = new HttpClient(handler))
             {
+				
                 var response = await client.GetAsync(ServiceAddress + "Basket");
                 var httpResponse = new HttpBodyResponse<string>()
                 {
@@ -63,7 +64,8 @@ namespace FoodSearch.Service.Client
             using (var client = new HttpClient(handler))
             {
                 var response = await Delete("Basket");
-                return response.StatusCode == System.Net.HttpStatusCode.OK;
+				cookieContainer = new CookieContainer();
+				return response.StatusCode == System.Net.HttpStatusCode.NoContent;
             }
         }
 

@@ -15,8 +15,7 @@
 						<DataTemplate>
 							<ViewCell>
 								<StackLayout Orientation="Horizontal" Padding="5">
-									<Image WidthRequest="40" HeightRequest="40" Aspect="AspectFit"
-										Source="ic_action_dish.png"/>
+									<Image WidthRequest="40" HeightRequest="40" Aspect="AspectFit" Source="ic_action_dish.png"/>
 									<StackLayout>
 										<Label Scale="1.2" AnchorX="0" AnchorY="0" Text="{Binding Name}"/>
 										<Label Text="{Binding PricePln}"/>

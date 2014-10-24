@@ -24,6 +24,7 @@
 /// <reference path="selectize.js" />
 /// <reference path="angular-ui/ui-bootstrap-tpls.js" />
 /// <reference path="angular-ui/ui-bootstrap.js" />
+/// <reference path="frontend/delivery.js" />
 /// <reference path="frontend/homepage.js" />
 /// <reference path="../content/selectize/js/selectize.js" />
 /// <reference path="admin/common/directives.js" />

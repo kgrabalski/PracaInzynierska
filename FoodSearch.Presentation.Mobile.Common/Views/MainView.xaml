@@ -4,7 +4,7 @@
 			 xmlns:component="clr-namespace:FoodSearch.Presentation.Mobile.Common.Components;assembly=FoodSearch.Presentation.Mobile.Common"
              x:Class="FoodSearch.Presentation.Mobile.Common.Views.MainView"
              Title="FoodSearch">
-  	<Grid>
+  	<Grid Padding="5">
 	    <Grid.RowDefinitions>
 	      <RowDefinition Height="Auto" />
 	      <RowDefinition Height="Auto" />
@@ -41,7 +41,7 @@
 	    <component:ListPicker Grid.Row="7" Grid.Column="0" Title="Wybierz numer budynku" IsEnabled="{Binding CanSelectStreetNumber, Mode=TwoWay}"
 	    	ItemsSource="{Binding StreetNumbers, Mode=TwoWay}" SelectedItem="{Binding SelectedStreetNumber, Mode=TwoWay}"/>
 
-	    <Button Grid.Row="8" Grid.Column="0" Text="Szukaj" Command="{Binding SearchRestaurants}"/>
+	    <Button Grid.Row="8" Grid.Column="0" Text="Szukaj" Command="{Binding SearchRestaurants}" IsEnabled="{Binding CanSearch}"/>
   	</Grid>
 
 	<ContentPage.ToolbarItems>

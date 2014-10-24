@@ -8,7 +8,7 @@ namespace FoodSearch.Service.Api.Areas.Order.Models
 {
     public class Basket
     {
-        private readonly List<BasketItem> _items = new List<BasketItem>();
+        private List<BasketItem> _items = new List<BasketItem>();
         public List<BasketItem> Items { get { return _items; } }
         private Guid _currentRestaurant;
 
@@ -55,6 +55,11 @@ namespace FoodSearch.Service.Api.Areas.Order.Models
                 return true;
             }
             return false;
+        }
+
+        public void ClearBasket()
+        {
+            _items = new List<BasketItem>();
         }
 
         public decimal Total

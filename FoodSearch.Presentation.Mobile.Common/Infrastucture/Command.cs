@@ -30,5 +30,11 @@ namespace FoodSearch.Presentation.Mobile.Common.Infrastucture
         }
 
         public event EventHandler CanExecuteChanged;
+
+		public void OnCanEvecuteChanged()
+		{
+			var handler = CanExecuteChanged;
+			if (handler != null) CanExecuteChanged (this, EventArgs.Empty);
+		}
     }
 }
