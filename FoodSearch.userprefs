@@ -1,16 +1,12 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.44" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.android_44" />
   <MonoDevelop.Ide.Workbench ActiveDocument="FoodSearch.Presentation.Mobile.Common\Views\BasketView.xaml">
     <Files>
-      <File FileName="FoodSearch.Presentation.Mobile.Common\Views\BasketView.xaml" Line="15" Column="15" />
-      <File FileName="FoodSearch.Presentation.Mobile.Common\ViewModels\BasketViewModel.cs" Line="7" Column="7" />
-      <File FileName="FoodSearch.Service.Client\Contracts\BasketItem.cs" Line="1" Column="1" />
-      <File FileName="FoodSearch.Service.Client\Interfaces\IFoodSearchOrderServiceClient.cs" Line="1" Column="1" />
-      <File FileName="FoodSearch.Service.Client\FoodSearchOrderServiceClient.cs" Line="1" Column="1" />
-      <File FileName="FoodSearch.Presentation.Mobile.Common\ViewModels\DishListViewModel.cs" Line="1" Column="1" />
-      <File FileName="FoodSearch.Presentation.Mobile.Common\ViewLocator.cs" Line="1" Column="1" />
-      <File FileName="c:\C#\Inzynierka\FoodSearch.Presentation.Mobile.Common\ViewModels\RestaurantListViewModel.cs" Line="1" Column="1" />
-      <File FileName="c:\C#\Inzynierka\FoodSearch.Presentation.Mobile.Common\ViewModels\ViewModelBase.cs" Line="9" Column="9" />
+      <File FileName="FoodSearch.Presentation.Mobile.Common\Views\MainView.xaml" Line="36" Column="36" />
+      <File FileName="FoodSearch.Presentation.Mobile.Common\Views\RestaurantsListView.xaml" Line="93" Column="93" />
+      <File FileName="FoodSearch.Presentation.Mobile.Common\Views\RestaurantMenuView.xaml" Line="84" Column="84" />
+      <File FileName="FoodSearch.Presentation.Mobile.Common\ViewModels\DishListViewModel.cs" Line="9" Column="9" />
+      <File FileName="FoodSearch.Presentation.Mobile.Common\Views\BasketView.xaml" Line="21" Column="21" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

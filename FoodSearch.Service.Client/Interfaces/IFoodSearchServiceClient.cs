@@ -2,7 +2,7 @@
 
 namespace FoodSearch.Service.Client.Interfaces
 {
-    public interface IFoodSearchServiceClient : IServiceClient
+    public interface IFoodSearchServiceClient
 	{
 		IFoodSearchCoreServiceClient Core { get; }
         IFoodSearchUserServiceClient User { get; }

@@ -72,6 +72,9 @@
     <Reference Include="AndHUD">
       <HintPath>..\packages\Acr.XamForms.UserDialogs.2.1.2\lib\MonoAndroid\AndHUD.dll</HintPath>
     </Reference>
+    <Reference Include="Xamarin.Behaviors">
+      <HintPath>..\packages\Xamarin.Forms.Behaviors.1.2.0\lib\Xamarin.Behaviors.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MainActivity.cs" />

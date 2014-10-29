@@ -1,4 +1,4 @@
-﻿@model FoodSearch.BusinessLogic.Domain.Order.Models.DeliveryAddress
+﻿@model FoodSearch.Presentation.Web.Site.Models.ShippingModel
 @{
     ViewBag.Title = "FoodSearch.pl - Dostawa";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -43,8 +43,10 @@
                     <label for="paymentType" class="col-md-3 control-label">Sposób płatności</label>
                     <div class="col-md-9">
                         <select name="paymentType" id="selectPaymentType" required placeholder="Sposób zapłaty">
-                            <option value="1" selected="selected">PayPal</option>
-                            <option value="2">Gotówka</option>
+                            @foreach (var type in Model.PaymentTypes)
+                            {
+                                <option value="@type.Id" selected="selected">@type.Name</option>
+                            }
                         </select>
                     </div>
                 </div>
@@ -53,8 +55,10 @@
                     <label for="deliveryType" class="col-md-3 control-label">Sposób dostawy</label>
                     <div class="col-md-9">
                         <select name="deliveryType" id="selectDeliveryType" required placeholder="Sposób dostawy">
-                            <option value="1" selected="selected">Dowóz</option>
-                            <option value="2">Odbiór osobisty</option>
+                            @foreach (var type in Model.DeliveryTypes)
+                            {
+                                <option value="@type.Id" selected="selected">@type.Name</option>
+                            }
                         </select>
                     </div>
                 </div>
@@ -63,42 +67,42 @@
                     <div class="form-group">
                         <label class="col-md-3 control-label">Imię</label>
                         <div class="col-md-9">
-                            <input type="text" class="form-control" placeholder="Imię" value="@Model.FirstName" disabled="disabled">
+                            <input type="text" class="form-control" placeholder="Imię" value="@Model.DeliveryAddress.FirstName" disabled="disabled">
                         </div>
                     </div>
 
                     <div class="form-group">
                         <label class="col-md-3 control-label">Nazwisko</label>
                         <div class="col-md-9">
-                            <input type="text" class="form-control" placeholder="Nazwisko" value="@Model.LastName" disabled="disabled">
+                            <input type="text" class="form-control" placeholder="Nazwisko" value="@Model.DeliveryAddress.LastName" disabled="disabled">
                         </div>
                     </div>
 
                     <div class="form-group">
                         <label class="col-md-3 control-label">Miasto</label>
                         <div class="col-md-9">
-                            <input type="text" class="form-control" placeholder="Miasto" value="@Model.City" disabled="disabled">
+                            <input type="text" class="form-control" placeholder="Miasto" value="@Model.DeliveryAddress.City" disabled="disabled">
                         </div>
                     </div>
 
                     <div class="form-group">
                         <label class="col-md-3 control-label">Ulica</label>
                         <div class="col-md-9">
-                            <input type="text" class="form-control" placeholder="Ulica" value="@Model.Street" disabled="disabled">
+                            <input type="text" class="form-control" placeholder="Ulica" value="@Model.DeliveryAddress.Street" disabled="disabled">
                         </div>
                     </div>
 
                     <div class="form-group">
                         <label class="col-md-3 control-label">Number budynku</label>
                         <div class="col-md-9">
-                            <input type="text" class="form-control" placeholder="Numer budynku" value="@Model.StreetNumber" disabled="disabled">
+                            <input type="text" class="form-control" placeholder="Numer budynku" value="@Model.DeliveryAddress.StreetNumber" disabled="disabled">
                         </div>
                     </div>
 
                     <div class="form-group">
                         <label class="col-md-3 control-label">Numer mieszkania</label>
                         <div class="col-md-9">
-                            <input type="text" class="form-control" placeholder="Numer mieszkania" value="@Model.FlatNumber" disabled="disabled">
+                            <input type="text" class="form-control" placeholder="Numer mieszkania" value="@Model.DeliveryAddress.FlatNumber" disabled="disabled">
                         </div>
                     </div>
                 </div>

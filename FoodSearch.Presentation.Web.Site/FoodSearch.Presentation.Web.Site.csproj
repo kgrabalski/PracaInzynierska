@@ -191,6 +191,7 @@
     <Compile Include="Models\RestaurantDishesModel.cs" />
     <Compile Include="Models\RestaurantPageModel.cs" />
     <Compile Include="Models\RestaurantUser.cs" />
+    <Compile Include="Models\ShippingModel.cs" />
     <Compile Include="Models\UserInfo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Providers\BasketModelBinder.cs" />

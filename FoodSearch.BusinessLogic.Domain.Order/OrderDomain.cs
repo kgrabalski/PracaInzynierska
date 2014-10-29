@@ -5,6 +5,7 @@ using System.Linq;
 using System.Xml.Linq;
 
 using FoodSearch.BusinessLogic.Domain.Order.Interface;
+using FoodSearch.BusinessLogic.Domain.Order.Mapping;
 using FoodSearch.BusinessLogic.Domain.Order.Models;
 using FoodSearch.Data.Mapping.Entities;
 using FoodSearch.Data.Mapping.Interface;
@@ -12,6 +13,11 @@ using FoodSearch.Data.Mapping.Interface;
 using DeliveryAddressDto = FoodSearch.BusinessLogic.Domain.Order.Models.DeliveryAddress;
 using DeliveryAddress = FoodSearch.Data.Mapping.Entities.DeliveryAddress;
 
+using DeliveryTypeDto = FoodSearch.BusinessLogic.Domain.Order.Models.DeliveryType;
+using DeliveryType = FoodSearch.Data.Mapping.Entities.DeliveryType;
+
+using PaymentTypeDto = FoodSearch.BusinessLogic.Domain.Order.Models.PaymentType;
+using PaymentType = FoodSearch.Data.Mapping.Entities.PaymentType;
 
 namespace FoodSearch.BusinessLogic.Domain.Order
 {
@@ -194,6 +200,22 @@ namespace FoodSearch.BusinessLogic.Domain.Order
                     Status = status,
                     CreateDate = DateTime.Now
                 });
+            }
+        }
+
+        public IEnumerable<PaymentTypeDto> GetPaymentTypes()
+        {
+            using (var rep = _provider.GetRepository<PaymentType>())
+            {
+                return rep.GetAll().List().Map<IEnumerable<PaymentTypeDto>>();
+            }
+        }
+
+        public IEnumerable<DeliveryTypeDto> GetDeliveryTypes()
+        {
+            using (var rep = _provider.GetRepository<DeliveryType>())
+            {
+                return rep.GetAll().List().Map<IEnumerable<DeliveryTypeDto>>();
             }
         }
     }

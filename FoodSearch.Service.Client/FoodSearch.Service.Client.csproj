@@ -30,8 +30,10 @@
     <ConsolePause>false</ConsolePause>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Contracts\DeliveryType.cs" />
     <Compile Include="Contracts\Dish.cs" />
     <Compile Include="Contracts\DishGroup.cs" />
+    <Compile Include="Contracts\PaymentType.cs" />
     <Compile Include="Contracts\Restaurant.cs" />
     <Compile Include="Contracts\Street.cs" />
     <Compile Include="Contracts\StreetNumber.cs" />
@@ -45,7 +47,6 @@
     <Compile Include="Interfaces\IFoodSearchCoreServiceClient.cs" />
     <Compile Include="FoodSearchCoreServiceClient.cs" />
     <Compile Include="Response\HttpResponse.cs" />
-    <Compile Include="Interfaces\IServiceClient.cs" />
     <Compile Include="Interfaces\IFoodSearchOrderServiceClient.cs" />
     <Compile Include="FoodSearchOrderServiceClient.cs" />
     <Compile Include="Contracts\BasketItem.cs" />
@@ -72,7 +73,5 @@
     </Reference>
   </ItemGroup>
   <ItemGroup />
-  <ItemGroup>
-    <Folder Include="Requests\" />
-  </ItemGroup>
+  <ItemGroup />
 </Project>

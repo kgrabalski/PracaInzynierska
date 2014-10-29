@@ -9,6 +9,8 @@ using FoodSearch.Presentation.Mobile.Common.Services;
 using Acr.XamForms.UserDialogs;
 using System.Threading.Tasks;
 using System.Globalization;
+using FoodSearch.Presentation.Mobile.Common.Services.Interfaces;
+using System.Windows.Input;
 
 namespace FoodSearch.Presentation.Mobile.Common
 {
@@ -76,11 +78,22 @@ namespace FoodSearch.Presentation.Mobile.Common
         {
             get
             {
-                return _orderCommand ?? (_orderCommand = new Command(() =>
+                return _orderCommand ?? (_orderCommand = new Command(async () =>
                     {
                         if (IsEmpty) 
                         {
-                            _dialogService.Toast("Koszyk jest pusty");
+                            DialogService.Toast("Koszyk jest pusty");
+                            return;
+                        }
+                        if (!AuthorizationService.IsAuthorized)
+                        {
+                            DialogService.Confirm(new ConfirmConfig(){
+                                Title = "Logowanie",
+                                Message = "Aby kontynuować składanie zamówienia musisz być zalogowany.\nCzy chcesz przejść teraz do ekranu logowania?",
+                                OkText = "Tak",
+                                CancelText = "Nie",
+                                OnConfirm = (bool response) => { if (response) AuthorizationService.AuthorizationCommand.Execute(null); }
+                            });
                             return;
                         }
                         //TODO: Skladanie zamowienia
@@ -96,14 +109,14 @@ namespace FoodSearch.Presentation.Mobile.Common
             {
                 return _clearBasket ?? (_clearBasket = new Command(async () =>
                     {
-                        IsBusy = true;
+                        Loading(true);
 						bool cleared = await Client.Order.ClearBasket();
                         if (cleared) 
                         {
                             await UpdateBasketAsync();
-                            _dialogService.Toast("Wyczyszczono koszyk");
+                            DialogService.Toast("Wyczyszczono koszyk");
                         }
-                        IsBusy = false;
+                        Loading(false);
                     }));
             }
         }
@@ -116,10 +129,10 @@ namespace FoodSearch.Presentation.Mobile.Common
 			{
 				return _addToBasket ?? (_addToBasket = new Command<BasketItem>(async item =>
 					{
-						IsBusy = true;
+                        Loading(true);
 						bool success = await Client.Order.AddToBasket (item.DishId);
 						if (success) await UpdateBasketAsync ();
-						IsBusy = false;
+                        Loading(false);
 					}));
 			}
 		}
@@ -132,19 +145,18 @@ namespace FoodSearch.Presentation.Mobile.Common
 			{
 				return _removeFromBasket ?? (_removeFromBasket = new Command<BasketItem>(async item =>
 					{
-						IsBusy = true;
+                        Loading(true);
 						bool success = await Client.Order.RemoveFromBasket (item.DishId);
 						if (success) await UpdateBasketAsync ();
-						IsBusy = false;
+                        Loading(false);
 					}));
 			}
 		}
 
-        private readonly IUserDialogService _dialogService;
+        public ICommand LoginCommand { get { return AuthorizationService.AuthorizationCommand; } }
 
-        public BasketViewModel(IFoodSearchServiceClient client, IUserDialogService dialogService) : base(client)
+        public BasketViewModel(IFoodSearchServiceClient client, IAuthorizationService authorizationService, IUserDialogService dialogService) : base(client, authorizationService, dialogService)
         {
-            _dialogService = dialogService;
             UpdateBasket();
         }
 
@@ -155,8 +167,7 @@ namespace FoodSearch.Presentation.Mobile.Common
 
 		private async Task UpdateBasketAsync()
 		{
-			IsBusy = true;
-			BasketItems.Clear();
+            Loading(true);
             var basketItems = await Client.Order.GetBasket();
             bool isEmpty = basketItems.Count == 0;
             decimal dishesTotal = basketItems.Sum(x => x.Total);
@@ -169,7 +180,7 @@ namespace FoodSearch.Presentation.Mobile.Common
                 DishesTotal = ToCurrency(dishesTotal);
                 DeliveryPrice = ToCurrency(deliveryPrice);
                 TotalPrice = ToCurrency(totalPrice);
-                IsBusy = false;
+                DialogService.HideLoading();
             });
 		}
 
@@ -177,6 +188,14 @@ namespace FoodSearch.Presentation.Mobile.Common
 		{
 			return value.ToString("C", new CultureInfo("pl-PL"));
 		}
+
+        private void Loading(bool show)
+        {
+            if (show)
+                DialogService.ShowLoading("Odświeżanie koszyka...");
+            else
+                DialogService.HideLoading();
+        }
     }
 }
 

@@ -10,7 +10,6 @@
 	      <RowDefinition Height="Auto" />
 	      <RowDefinition Height="Auto" />
 	      <RowDefinition Height="Auto" />
-	      <RowDefinition Height="Auto" />
 	      <RowDefinition Height="*" />
 	      <RowDefinition Height="Auto" />
 	      <RowDefinition Height="Auto" />
@@ -21,15 +20,14 @@
 	      <ColumnDefinition Width="*" />
 	    </Grid.ColumnDefinitions>
 
-	    <ActivityIndicator Grid.Row="0" Grid.Column="0" IsVisible="{Binding IsBusy}" IsRunning="{Binding IsBusy}"/>
-	    <Label Grid.Row="1" Grid.Column="0" Text="Wybierz miasto:"/>
-	    <component:ListPicker Grid.Row="2" Grid.Column="0" Title="Wybierz miasto" IsEnabled="{Binding CanSelectCity, Mode=TwoWay}"
+	    <Label Grid.Row="0" Grid.Column="0" Text="Wybierz miasto:"/>
+	    <component:ListPicker Grid.Row="1" Grid.Column="0" Title="Wybierz miasto" IsEnabled="{Binding CanSelectCity, Mode=TwoWay}"
 	    	ItemsSource="{Binding Cities, Mode=TwoWay}" SelectedItem="{Binding SelectedCity, Mode=TwoWay}" />
 	    
-	    <Label Grid.Row="3" Grid.Column="0" Text="Wybierz ulicę:"/>
-	    <SearchBar Grid.Row="4" Grid.Column="0" Placeholder="Wybierz ulicę" IsEnabled="{Binding CanQueryStreets, Mode=TwoWay}"
+	    <Label Grid.Row="2" Grid.Column="0" Text="Wybierz ulicę:"/>
+	    <SearchBar Grid.Row="3" Grid.Column="0" Placeholder="Wybierz ulicę" IsEnabled="{Binding CanQueryStreets, Mode=TwoWay}"
 	    	Text="{Binding StreetQuery, Mode=TwoWay}" SearchCommand="{Binding SearchStreets}"/>
-	    <ListView Grid.Row="5" Grid.Column="0" ItemsSource="{Binding Streets, Mode=TwoWay}" SelectedItem="{Binding SelectedStreet, Mode=TwoWay}">
+	    <ListView Grid.Row="4" Grid.Column="0" ItemsSource="{Binding Streets, Mode=TwoWay}" SelectedItem="{Binding SelectedStreet, Mode=TwoWay}">
 	    	<ListView.ItemTemplate>
 	    		<DataTemplate>
 	    			<TextCell Text="{Binding Name}"/>
@@ -37,15 +35,15 @@
 	    	</ListView.ItemTemplate>
 	    </ListView>
 
-	    <Label Grid.Row="6" Grid.Column="0" Text="Wybierz numer budynku"/>
-	    <component:ListPicker Grid.Row="7" Grid.Column="0" Title="Wybierz numer budynku" IsEnabled="{Binding CanSelectStreetNumber, Mode=TwoWay}"
+	    <Label Grid.Row="5" Grid.Column="0" Text="Wybierz numer budynku"/>
+	    <component:ListPicker Grid.Row="6" Grid.Column="0" Title="Wybierz numer budynku" IsEnabled="{Binding CanSelectStreetNumber, Mode=TwoWay}"
 	    	ItemsSource="{Binding StreetNumbers, Mode=TwoWay}" SelectedItem="{Binding SelectedStreetNumber, Mode=TwoWay}"/>
 
-	    <Button Grid.Row="8" Grid.Column="0" Text="Szukaj" Command="{Binding SearchRestaurants}" IsEnabled="{Binding CanSearch}"/>
+	    <Button Grid.Row="7" Grid.Column="0" Text="Szukaj" Command="{Binding SearchRestaurants}" IsEnabled="{Binding CanSearch}"/>
   	</Grid>
 
 	<ContentPage.ToolbarItems>
-		<ToolbarItem Name="Logowanie" Order="Primary">
+		<ToolbarItem Name="Logowanie" Order="Primary" Command="{Binding LoginCommand}">
 			<ToolbarItem.Icon>
 				<OnPlatform x:TypeArguments="FileImageSource"
 					Android="ic_action_person.png"

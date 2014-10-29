@@ -14,6 +14,8 @@ using Acr.XamForms.UserDialogs;
 
 using Command = FoodSearch.Presentation.Mobile.Common.Infrastucture.Command;
 using FoodSearch.Service.Client.Interfaces;
+using FoodSearch.Presentation.Mobile.Common.Services.Interfaces;
+using System.Windows.Input;
 
 namespace FoodSearch.Presentation.Mobile.Common.ViewModels
 {
@@ -45,14 +47,11 @@ namespace FoodSearch.Presentation.Mobile.Common.ViewModels
                     {
                         if (SelectedDish != null)
                         {
-                            IsBusy = true;
+                            DialogService.ShowLoading("Dodawanie do koszyka...");
                             bool success = await Client.Order.AddToBasket(SelectedDish.Id);
-                            if (success) 
-                            {
-                                _dialogService.Toast("Dodano do koszyka: " + SelectedDish.Name);
-                            }
-                            IsBusy = false;
-                        } else _dialogService.Toast("Wybierz danie które chcesz dodać do koszyka");
+                            DialogService.HideLoading();
+                            if (success) DialogService.Toast("Dodano do koszyka: " + SelectedDish.Name);
+                        } else DialogService.Toast("Wybierz danie które chcesz dodać do koszyka");
                     }));
             }
         }
@@ -70,11 +69,10 @@ namespace FoodSearch.Presentation.Mobile.Common.ViewModels
             }
         }
 
-        private readonly IUserDialogService _dialogService;
+        public ICommand LoginCommand { get { return AuthorizationService.AuthorizationCommand; } }
 
-        public DishListViewModel(IFoodSearchServiceClient client, IUserDialogService dialogService) : base(client)
+        public DishListViewModel(IFoodSearchServiceClient client, IAuthorizationService authorizationService, IUserDialogService dialogService) : base(client, authorizationService, dialogService)
         {
-            _dialogService = dialogService;
             MessageService.Register<Restaurant>(GetDishes);
         }
 
@@ -82,11 +80,11 @@ namespace FoodSearch.Presentation.Mobile.Common.ViewModels
         {
             RestaurantService.CurrentRestaurantId = r.RestaurantId;
             RestaurantService.CurrentRestaurantName = r.RestaurantName;
-            IsBusy = true;
+            DialogService.ShowLoading("Wyszukiwanie dan...");
             DishGroups = (await Client.Core.GetDishes(r.RestaurantId))
                 .Select(x => new Grouping<Dish>(x.Dishes) {GroupName = x.Name})
                 .AsObservable();
-            IsBusy = false;
+            DialogService.HideLoading();
         }
     }
 }

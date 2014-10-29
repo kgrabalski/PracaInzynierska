@@ -3,6 +3,8 @@ using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using FoodSearch.Service.Client.Interfaces;
 using FoodSearch.Service.Client;
+using FoodSearch.Presentation.Mobile.Common.Services.Interfaces;
+using Acr.XamForms.UserDialogs;
 
 namespace FoodSearch.Presentation.Mobile.Common.ViewModels
 {
@@ -24,20 +26,15 @@ namespace FoodSearch.Presentation.Mobile.Common.ViewModels
 		}
 
 		protected readonly IFoodSearchServiceClient Client;
+        protected readonly IAuthorizationService AuthorizationService;
+        protected readonly IUserDialogService DialogService;
 
-		public ViewModelBase (IFoodSearchServiceClient client)
+        public ViewModelBase (IFoodSearchServiceClient client, IAuthorizationService authorizationService, IUserDialogService dialogService)
 		{
 			Client = client;
+            AuthorizationService = authorizationService;
+            DialogService = dialogService;
 		}
-
-        private bool _isBusy = false;
-
-        public bool IsBusy
-        {
-            get { return _isBusy; }
-            set { SetProperty(ref _isBusy, value); }
-        }
-
 	}
 }
 

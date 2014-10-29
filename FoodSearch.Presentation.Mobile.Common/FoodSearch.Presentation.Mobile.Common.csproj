@@ -44,7 +44,6 @@
     <Compile Include="ViewModels\RestaurantListViewModel.cs" />
     <Compile Include="ViewModels\ViewModelBase.cs" />
     <Compile Include="ViewModels\MainViewModel.cs" />
-    <Compile Include="Views\AuthorizeView.cs" />
     <Compile Include="ViewLocator.cs" />
     <Compile Include="Infrastucture\ObservableExtension.cs" />
     <Compile Include="Views\MainView.xaml.cs">
@@ -64,6 +63,11 @@
     <Compile Include="Services\DependencyResolver.cs" />
     <Compile Include="Services\RestaurantService.cs" />
     <Compile Include="Infrastucture\GenericCommand.cs" />
+    <Compile Include="Views\AuthorizeView.xaml.cs">
+      <DependentUpon>AuthorizeView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Services\Interfaces\IAuthorizationService.cs" />
+    <Compile Include="Services\AuthorizationService.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <ItemGroup>
@@ -112,8 +116,12 @@
     <EmbeddedResource Include="Views\BasketView.xaml">
       <Generator>MSBuild:Compile</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\AuthorizeView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Converters\" />
+    <Folder Include="Services\Interfaces\" />
   </ItemGroup>
 </Project>

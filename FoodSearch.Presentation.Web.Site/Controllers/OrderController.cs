@@ -34,8 +34,13 @@ namespace FoodSearch.Presentation.Web.Site.Controllers
         [HttpPost]
         public ActionResult Shipping(Basket basket, UserInfo ui)
         {
-            var deliveryAddress = _domain.Order.GetUserDeliveryAddress(ui.UserId);
-            return View(deliveryAddress);
+            var shippingModel = new ShippingModel()
+            {
+                DeliveryAddress = _domain.Order.GetUserDeliveryAddress(ui.UserId),
+                DeliveryTypes = _domain.Order.GetDeliveryTypes(),
+                PaymentTypes = _domain.Order.GetPaymentTypes()
+            };
+            return View(shippingModel);
         }
 
         [HttpPost]

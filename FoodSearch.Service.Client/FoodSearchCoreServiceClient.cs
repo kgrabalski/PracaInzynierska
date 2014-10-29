@@ -12,7 +12,11 @@ namespace FoodSearch.Service.Client
 {
 	public class FoodSearchCoreServiceClient : ServiceClientBase, IFoodSearchCoreServiceClient
 	{
-		protected override string ServiceAddress { get { return _baseAddress + "Core/"; } }
+	    public FoodSearchCoreServiceClient(CookieContainer cookieContainer) : base(cookieContainer)
+	    {
+	    }
+
+	    protected override string ServiceAddress { get { return _baseAddress + "Core/"; } }
 
 		public async Task<ObservableCollection<City>> GetCities ()
 		{

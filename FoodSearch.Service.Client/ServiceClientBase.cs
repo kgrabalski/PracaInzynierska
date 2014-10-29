@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Net;
+using System.Text;
 
 using Newtonsoft.Json;
 using System.Net.Http;
@@ -16,42 +17,55 @@ namespace FoodSearch.Service.Client
 
 		protected abstract string ServiceAddress { get ; }
 
+        protected readonly CookieContainer CookieContainer;
+
+        protected ServiceClientBase(CookieContainer cookieContainer)
+        {
+            CookieContainer = cookieContainer;
+        }
+        
         protected async Task<HttpBodyResponse<string>> Get(string url)
 		{
-            try
+            using (var handler = new HttpClientHandler() {CookieContainer = CookieContainer})
+            using (var client = new HttpClient(handler))
             {
-                HttpClient client = new HttpClient ();
-                
-                var response = await client.GetAsync (ServiceAddress + url);
+                var response = await client.GetAsync(ServiceAddress + url);
 
-                return new HttpBodyResponse<string> {
+                return new HttpBodyResponse<string>
+                {
                     StatusCode = response.StatusCode,
-                    Body = await response.Content.ReadAsStringAsync ()
+                    Body = await response.Content.ReadAsStringAsync()
                 };
-            }
-            catch (AggregateException ex)
-            {
-                throw;
             }
 		}
 
-        protected async Task<HttpResponse> Post(string url, object data)
+        protected async Task<HttpBodyResponse<string>> Post(string url, object data)
         {
-            HttpClient client = new HttpClient();
-            string jsonString = string.Empty;
-            if (data != null) 
+            using (var handler = new HttpClientHandler() {CookieContainer = CookieContainer})
+            using (var client = new HttpClient(handler))
             {
-                jsonString = JsonConvert.SerializeObject(data);
+                string jsonString = string.Empty;
+                if (data != null)
+                {
+                    jsonString = JsonConvert.SerializeObject(data);
+                }
+                var response = await client.PostAsync(ServiceAddress + url, new StringContent(jsonString, Encoding.UTF8, "application/json"));
+                return new HttpBodyResponse<string>()
+                {
+                    StatusCode = response.StatusCode,
+                    Body = await response.Content.ReadAsStringAsync()
+                };
             }
-            var response = await client.PostAsync(ServiceAddress + url, new StringContent(jsonString));
-            return new HttpResponse() { StatusCode = response.StatusCode };
         }
 
         protected async Task<HttpResponse> Delete(string url)
         {
-            HttpClient client = new HttpClient();
-            var response = await client.DeleteAsync(ServiceAddress + url);
-            return new HttpResponse() { StatusCode = response.StatusCode };
+            using (var handler = new HttpClientHandler() {CookieContainer = CookieContainer})
+            using (var client = new HttpClient(handler))
+            {
+                var response = await client.DeleteAsync(ServiceAddress + url);
+                return new HttpResponse() {StatusCode = response.StatusCode};
+            }
         }
 
 		protected T Deserialize<T>(string jsonString)

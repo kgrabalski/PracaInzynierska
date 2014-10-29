@@ -7,6 +7,9 @@ using FoodSearch.Service.Client;
 using System.Collections.Generic;
 using FoodSearch.Service.Client.Contracts;
 using System.Collections.ObjectModel;
+using FoodSearch.Presentation.Mobile.Common.Services.Interfaces;
+using Acr.XamForms.UserDialogs;
+using System.Windows.Input;
 
 namespace FoodSearch.Presentation.Mobile.Common.ViewModels
 {
@@ -111,10 +114,10 @@ namespace FoodSearch.Presentation.Mobile.Common.ViewModels
             {
                 return _searchStreets ?? (_searchStreets = new Command(async () =>
                 {
-                    IsBusy = true;
+                    DialogService.ShowLoading("Wyszukiwanie...");
                     Streets.Clear();
                     Streets = await Client.Core.GetStreets(SelectedCity.Id, StreetQuery);
-                    IsBusy = false;
+                    DialogService.HideLoading();
                 }));
             }
         }
@@ -141,29 +144,31 @@ namespace FoodSearch.Presentation.Mobile.Common.ViewModels
             }
         }
 
-        public MainViewModel (IFoodSearchServiceClient client) : base(client)
+        public ICommand LoginCommand { get { return AuthorizationService.AuthorizationCommand; } }
+
+        public MainViewModel (IFoodSearchServiceClient client, IAuthorizationService authorizationService, IUserDialogService dialogService) : base(client, authorizationService, dialogService)
 		{
 			InitializeView ();
 		}
 
 		private async void InitializeView()
 		{
-            IsBusy = true;
+            DialogService.ShowLoading("Ladowanie");
             Cities = await Client.Core.GetCities();
             CanSelectCity = true;
-            IsBusy = false;
+            DialogService.HideLoading();
             //TODO: usunac na produkcji
             CanSearch = true;
 		}
 
 	    private async void GetStreetNumbers()
 	    {
-            IsBusy = true;
+            DialogService.ShowLoading("Wyszukiwanie...");
             CanSelectStreetNumber = false;
             StreetNumbers = new ObservableCollection<StreetNumber>();
 	        StreetNumbers = await Client.Core.GetStreetNumbers(_selectedStreet.Id);
             CanSelectStreetNumber = true;
-            IsBusy = false;
+            DialogService.HideLoading();
 	    }
 	}
 }

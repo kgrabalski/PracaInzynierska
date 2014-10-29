@@ -117,12 +117,15 @@
     <Compile Include="Areas\Core\Controllers\StreetController.cs" />
     <Compile Include="Areas\Order\Controllers\BasketController.cs" />
     <Compile Include="Areas\Order\Controllers\DeliveryPriceController.cs" />
+    <Compile Include="Areas\Order\Controllers\DeliveryTypeController.cs" />
+    <Compile Include="Areas\Order\Controllers\PaymentTypeController.cs" />
     <Compile Include="Areas\Order\Models\Basket.cs" />
     <Compile Include="Areas\Order\Models\BasketItem.cs" />
     <Compile Include="Areas\Order\Models\DeliveryPriceModel.cs" />
     <Compile Include="Areas\Order\OrderAreaRegistration.cs" />
     <Compile Include="Areas\User\Controllers\LoginController.cs" />
     <Compile Include="Areas\User\Controllers\RegisterController.cs" />
+    <Compile Include="Areas\User\Models\LoginModel.cs" />
     <Compile Include="Areas\User\UserAreaRegistration.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -156,7 +159,6 @@
     <Folder Include="Areas\Core\Views\Shared\" />
     <Folder Include="Areas\Order\Views\Basket\" />
     <Folder Include="Areas\Order\Views\Shared\" />
-    <Folder Include="Areas\User\Models\" />
     <Folder Include="Areas\User\Views\Shared\" />
     <Folder Include="Controllers\" />
     <Folder Include="Models\" />

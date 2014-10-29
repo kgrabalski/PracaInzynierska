@@ -37,7 +37,7 @@ namespace FoodSearch.Presentation.Mobile.Common
 		}
 
 		public static Page Main { get { return GetView<MainView>(); } }
-//		public static Page Authorize { get { return GetView<AuthorizeView>(); } }
+		public static Page Authorize { get { return GetView<AuthorizeView>(true); } }
         public static Page RestaurantList { get { return GetView<RestaurantsListView>(true); } }
         public static Page RestaurantMenu { get { return GetView<RestaurantMenuView>(true); } }
         public static Page Basket {get { return GetView<BasketView>(true); } } 

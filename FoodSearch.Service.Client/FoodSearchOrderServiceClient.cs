@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Threading.Tasks;
 using System.Collections.ObjectModel;
+
+using FoodSearch.Service.Client.Contracts;
 using FoodSearch.Service.Client.Interfaces;
 using System.Net;
 using System.Net.Http;
@@ -14,7 +16,9 @@ namespace FoodSearch.Service.Client
 {
     public class FoodSearchOrderServiceClient : ServiceClientBase, IFoodSearchOrderServiceClient
     {
-        private CookieContainer cookieContainer = new CookieContainer();
+        public FoodSearchOrderServiceClient(CookieContainer cookieContainer) : base(cookieContainer)
+        {
+        }
 
         protected override string ServiceAddress
         {
@@ -23,50 +27,26 @@ namespace FoodSearch.Service.Client
 
         public async Task<ObservableCollection<BasketItem>> GetBasket()
         {
-            using (var handler = new HttpClientHandler() { CookieContainer = cookieContainer })
-            using (var client = new HttpClient(handler))
-            {
-				
-                var response = await client.GetAsync(ServiceAddress + "Basket");
-                var httpResponse = new HttpBodyResponse<string>()
-                {
-                    Body = await response.Content.ReadAsStringAsync(), 
-                    StatusCode = response.StatusCode
-                };
-
-                return DeserializeList<BasketItem>(httpResponse);
-            }
+            var response = await Get("Basket");
+            return DeserializeList<BasketItem>(response);
         }
 
         public async Task<bool> AddToBasket(int dishId)
         {
-            using (var handler = new HttpClientHandler() {CookieContainer = cookieContainer} )
-            using (var client = new HttpClient(handler))
-            {
-                var response = await client.PostAsync(ServiceAddress + "Basket/" + dishId, new StringContent(string.Empty));
-                return response.StatusCode == HttpStatusCode.Created;
-            }
+            var response = await Post("Basket/" + dishId, null);
+            return response.StatusCode == HttpStatusCode.Created;
         }
 
         public async Task<bool> RemoveFromBasket(int dishId)
         {
-            using (var handler = new HttpClientHandler() { CookieContainer = cookieContainer })
-            using (var client = new HttpClient(handler))
-            {
-                var response = await Delete("Basket/" + dishId);
-                return response.StatusCode == System.Net.HttpStatusCode.OK;
-            }
+            var response = await Delete("Basket/" + dishId);
+            return response.StatusCode == System.Net.HttpStatusCode.OK;
         }
 
         public async Task<bool> ClearBasket()
         {
-            using (var handler = new HttpClientHandler() { CookieContainer = cookieContainer })
-            using (var client = new HttpClient(handler))
-            {
-                var response = await Delete("Basket");
-				cookieContainer = new CookieContainer();
-				return response.StatusCode == System.Net.HttpStatusCode.NoContent;
-            }
+            var response = await Delete("Basket");
+            return response.StatusCode == System.Net.HttpStatusCode.NoContent;
         }
 
         public async Task<decimal> GetDeliveryPrice(Guid restaurantId, decimal totalPrice)
@@ -76,12 +56,20 @@ namespace FoodSearch.Service.Client
                 RestaurantId = restaurantId,
                 TotalPrice = totalPrice
             };
-            string jsonRequest = JsonConvert.SerializeObject(request);
-            HttpContent httpContent = new StringContent(jsonRequest, Encoding.UTF8, "application/json");
-            HttpClient client = new HttpClient();
-            var response = await client.PostAsync(ServiceAddress + "DeliveryPrice", httpContent);
-            var responseString = await response.Content.ReadAsStringAsync();
-            return decimal.Parse(responseString, CultureInfo.InvariantCulture);
+            var response = await Post("DeliveryPrice", request);
+            return decimal.Parse(response.Body, CultureInfo.InvariantCulture);
+        }
+
+        public async Task<ObservableCollection<DeliveryType>> GetDeliveryTypes()
+        {
+            var response = await Get("DeliveryType");
+            return DeserializeList<DeliveryType>(response);
+        }
+
+        public async Task<ObservableCollection<PaymentType>> GetPaymentTypes()
+        {
+            var response = await Get("PaymentType");
+            return DeserializeList<PaymentType>(response);
         }
     }
 }

@@ -8,6 +8,8 @@ using FoodSearch.Presentation.Mobile.Common.Services;
 using FoodSearch.Service.Client.Contracts;
 using System.Collections.ObjectModel;
 using FoodSearch.Service.Client.Interfaces;
+using Acr.XamForms.UserDialogs;
+using FoodSearch.Presentation.Mobile.Common.Services.Interfaces;
 
 namespace FoodSearch.Presentation.Mobile.Common.ViewModels
 {
@@ -36,16 +38,16 @@ namespace FoodSearch.Presentation.Mobile.Common.ViewModels
             }
         }
                  
-        public RestaurantListViewModel(IFoodSearchServiceClient client) : base(client)
+        public RestaurantListViewModel(IFoodSearchServiceClient client, IAuthorizationService authorizationService, IUserDialogService dialogService) : base(client, authorizationService, dialogService)
         {
             MessageService.Register<StreetNumber>(GetRestaurants);
         }
 
         private async void GetRestaurants(StreetNumber sn)
         {
-            IsBusy = true;
+            DialogService.ShowLoading("Wyszukiwanie restauracji...");
             Restaurants = await Client.Core.GetRestaurants(sn.Id);
-            IsBusy = false;
+            DialogService.HideLoading();
         }
     }
 }
