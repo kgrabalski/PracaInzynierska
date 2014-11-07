@@ -7,6 +7,7 @@ using FoodSearch.Service.Client.Interfaces;
 using FoodSearch.Presentation.Mobile.Common.Infrastucture;
 using Acr.XamForms.UserDialogs;
 using FoodSearch.Presentation.Mobile.Common.Services.Interfaces;
+using FoodSearch.Presentation.Mobile.Common.Services;
 
 namespace FoodSearch.Presentation.Mobile.Common.ViewModels
 {
@@ -40,7 +41,19 @@ namespace FoodSearch.Presentation.Mobile.Common.ViewModels
             {
                 return _loginCommand ?? (_loginCommand = new Command(async () =>
                     {
-                        DialogService.Toast("Logowanie");
+                        if (!string.IsNullOrEmpty(Email) && !string.IsNullOrEmpty(Password))
+                        {
+                            bool success = await AuthorizationService.Authorize(Email, Password);
+                            if (success)
+                            {
+                                DialogService.Toast("Zalogowano pomyślnie");
+                                await NavigationService.Navigation.PopAsync();
+                            } else {
+                                DialogService.Toast("Błędny adres email lub hasło");
+                                Password = string.Empty;
+                                Email = string.Empty;
+                            }
+                        }
                     }));
             }
         }

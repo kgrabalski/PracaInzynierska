@@ -8,6 +8,7 @@ using System.Net.Http;
 using System.Threading.Tasks;
 using FoodSearch.Service.Client.Response;
 using System.Collections.ObjectModel;
+using FoodSearch.Service.Client.Interfaces;
 
 namespace FoodSearch.Service.Client
 {
@@ -18,6 +19,8 @@ namespace FoodSearch.Service.Client
 		protected abstract string ServiceAddress { get ; }
 
         protected readonly CookieContainer CookieContainer;
+
+        public IFoodSearchServiceClient ClientHandler { get; set; }
 
         protected ServiceClientBase(CookieContainer cookieContainer)
         {
@@ -30,12 +33,14 @@ namespace FoodSearch.Service.Client
             using (var client = new HttpClient(handler))
             {
                 var response = await client.GetAsync(ServiceAddress + url);
-
-                return new HttpBodyResponse<string>
+                var result = new HttpBodyResponse<string>
                 {
                     StatusCode = response.StatusCode,
                     Body = await response.Content.ReadAsStringAsync()
                 };
+                if (result.StatusCode == HttpStatusCode.Unauthorized)
+                    ClientHandler.OnUnauthorizedAccess();
+                return result;
             }
 		}
 
@@ -44,18 +49,45 @@ namespace FoodSearch.Service.Client
             using (var handler = new HttpClientHandler() {CookieContainer = CookieContainer})
             using (var client = new HttpClient(handler))
             {
-                string jsonString = string.Empty;
-                if (data != null)
-                {
-                    jsonString = JsonConvert.SerializeObject(data);
-                }
-                var response = await client.PostAsync(ServiceAddress + url, new StringContent(jsonString, Encoding.UTF8, "application/json"));
-                return new HttpBodyResponse<string>()
+                var content = prepareRequestContent(data);
+                var response = await client.PostAsync(ServiceAddress + url, content);
+                var result = new HttpBodyResponse<string>()
                 {
                     StatusCode = response.StatusCode,
                     Body = await response.Content.ReadAsStringAsync()
                 };
+                if (result.StatusCode == HttpStatusCode.Unauthorized)
+                    ClientHandler.OnUnauthorizedAccess();
+                return result;
             }
+        }
+
+        protected async Task<HttpBodyResponse<string>> Put(string url, object data)
+        {
+            using (var handler = new HttpClientHandler() {CookieContainer = CookieContainer})
+            using (var client = new HttpClient(handler))
+            {
+                var content = prepareRequestContent(data);
+                var response = await client.PutAsync(ServiceAddress + url, content);
+                var result = new HttpBodyResponse<string>()
+                {
+                    StatusCode = response.StatusCode,
+                    Body = await response.Content.ReadAsStringAsync()
+                };
+                if (result.StatusCode == HttpStatusCode.Unauthorized)
+                    ClientHandler.OnUnauthorizedAccess();
+                return result;
+            }
+        }
+
+        private HttpContent prepareRequestContent(object data)
+        {
+            string jsonString = string.Empty;
+            if (data != null)
+            {
+                jsonString = JsonConvert.SerializeObject(data);
+            }
+            return new StringContent(jsonString, Encoding.UTF8, "application/json");
         }
 
         protected async Task<HttpResponse> Delete(string url)
@@ -64,7 +96,10 @@ namespace FoodSearch.Service.Client
             using (var client = new HttpClient(handler))
             {
                 var response = await client.DeleteAsync(ServiceAddress + url);
-                return new HttpResponse() {StatusCode = response.StatusCode};
+                var result = new HttpResponse() {StatusCode = response.StatusCode};
+                if (result.StatusCode == HttpStatusCode.Unauthorized)
+                    ClientHandler.OnUnauthorizedAccess();
+                return result;
             }
         }
 

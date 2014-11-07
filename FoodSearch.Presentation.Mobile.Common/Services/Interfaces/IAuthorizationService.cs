@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Windows.Input;
+using System.Threading.Tasks;
 
 namespace FoodSearch.Presentation.Mobile.Common.Services.Interfaces
 {
@@ -7,7 +8,8 @@ namespace FoodSearch.Presentation.Mobile.Common.Services.Interfaces
     {
         bool IsAuthorized {get;}
         ICommand AuthorizationCommand { get;}
-        bool Authorize(string userName, string password);
+        Task<bool> Authorize(string email, string password);
+        Task<bool> Logout();
     }
 }
 

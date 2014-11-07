@@ -31,6 +31,7 @@ namespace FoodSearch.Data.Mapping.Repository
             _kernel.Bind<IRepository<Opinion>>().To<FoodSearchRepository<Opinion>>();
             _kernel.Bind<IRepository<Order>>().To<FoodSearchRepository<Order>>();
             _kernel.Bind<IRepository<OrderDish>>().To<FoodSearchRepository<OrderDish>>();
+            _kernel.Bind<IRepository<PasswordResetRequest>>().To<FoodSearchRepository<PasswordResetRequest>>();
             _kernel.Bind<IRepository<Payment>>().To<FoodSearchRepository<Payment>>();
             _kernel.Bind<IRepository<PaymentHistory>>().To<FoodSearchRepository<PaymentHistory>>();
             _kernel.Bind<IRepository<PaymentState>>().To<FoodSearchRepository<PaymentState>>();

@@ -11,8 +11,9 @@ using System.Threading.Tasks;
 using System.Globalization;
 using FoodSearch.Presentation.Mobile.Common.Services.Interfaces;
 using System.Windows.Input;
+using FoodSearch.Presentation.Mobile.Common.Helpers;
 
-namespace FoodSearch.Presentation.Mobile.Common
+namespace FoodSearch.Presentation.Mobile.Common.ViewModels
 {
     public class BasketViewModel : ViewModelBase
     {
@@ -97,6 +98,7 @@ namespace FoodSearch.Presentation.Mobile.Common
                             return;
                         }
                         //TODO: Skladanie zamowienia
+                        await NavigationService.Navigation.PushAsync(ViewLocator.Order);
                     }));
             }
         }
@@ -162,7 +164,7 @@ namespace FoodSearch.Presentation.Mobile.Common
 
         private async void UpdateBasket()
         {
-			UpdateBasketAsync ();
+			await UpdateBasketAsync ();
         }
 
 		private async Task UpdateBasketAsync()
@@ -177,16 +179,11 @@ namespace FoodSearch.Presentation.Mobile.Common
             Xamarin.Forms.Device.BeginInvokeOnMainThread(() => {
                 BasketItems = basketItems;
                 IsEmpty = isEmpty;
-                DishesTotal = ToCurrency(dishesTotal);
-                DeliveryPrice = ToCurrency(deliveryPrice);
-                TotalPrice = ToCurrency(totalPrice);
+                DishesTotal = dishesTotal.ToPln();
+                DeliveryPrice = deliveryPrice.ToPln();
+                TotalPrice = totalPrice.ToPln();
                 DialogService.HideLoading();
             });
-		}
-
-		private string ToCurrency(decimal value)
-		{
-			return value.ToString("C", new CultureInfo("pl-PL"));
 		}
 
         private void Loading(bool show)

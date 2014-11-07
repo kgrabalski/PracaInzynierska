@@ -13,8 +13,9 @@ namespace FoodSearch.Service.Client.Interfaces
         Task<bool> RemoveFromBasket(int dishId);
         Task<bool> ClearBasket();
         Task<decimal> GetDeliveryPrice(Guid restaurantId, decimal totalPrice);
-        Task<ObservableCollection<DeliveryType>> GetDeliveryTypes();
-        Task<ObservableCollection<PaymentType>> GetPaymentTypes();
+        Task<DeliveryAddress> GetDeliveryAddress();
+        Task<CreateOrderResult> CreateOrder(PaymentTypes paymentType, DeliveryTypes deliveryType);
+        Task SetCurrentRestaurant(Guid restaurantId);
     }
 }
 

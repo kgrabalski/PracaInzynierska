@@ -68,6 +68,23 @@
     </Compile>
     <Compile Include="Services\Interfaces\IAuthorizationService.cs" />
     <Compile Include="Services\AuthorizationService.cs" />
+    <Compile Include="ViewModels\OrderViewModel.cs" />
+    <Compile Include="Views\OrderView.xaml.cs">
+      <DependentUpon>OrderView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Helpers\ToPlnHelper.cs" />
+    <Compile Include="Views\OrderSuccededView.xaml.cs">
+      <DependentUpon>OrderSuccededView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\OrderFailedView.xaml.cs">
+      <DependentUpon>OrderFailedView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModels\OrderSuccededViewModel.cs" />
+    <Compile Include="ViewModels\OrderFailedViewModel.cs" />
+    <Compile Include="Views\PaymentView.xaml.cs">
+      <DependentUpon>PaymentView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModels\PaymentViewModel.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <ItemGroup>
@@ -119,9 +136,22 @@
     <EmbeddedResource Include="Views\AuthorizeView.xaml">
       <Generator>MSBuild:Compile</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\OrderView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\OrderSuccededView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\OrderFailedView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\PaymentView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Converters\" />
     <Folder Include="Services\Interfaces\" />
+    <Folder Include="Helpers\" />
   </ItemGroup>
 </Project>

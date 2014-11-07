@@ -72,11 +72,12 @@
 						<Entry Grid.Row="4" Grid.Column="1" Text="{Binding RepeatPassword, Mode=TwoWay}" Placeholder="Powtórz hasło" IsPassword="true"/>
 
 						<Label Grid.Row="5" Grid.Column="0" Text="Miasto:" VerticalOptions="Center"/>
-						<component:ListPicker Grid.Row="5" Grid.Column="1" Title="Wybierz miasto"
+						<component:ListPicker Grid.Row="5" Grid.Column="1" Title="Wybierz miasto" IsEnabled="{Binding CanSelectCity}"
 							ItemsSource="{Binding Cities, Mode=TwoWay}" SelectedItem="{Binding SelectedCity, Mode=TwoWay}"/>
 
 						<Label Grid.Row="6" Grid.Column="0" Text="Wyszukaj ulice:" VerticalOptions="Center"/>
-						<SearchBar Grid.Row="6" Grid.Column="1" Text="{Binding QueryStreet, Mode=TwoWay}" SearchCommand="{Binding SearchStreet}" Placeholder="Wyszukaj ulice"/>
+						<SearchBar Grid.Row="6" Grid.Column="1" Text="{Binding QueryStreet, Mode=TwoWay}" 
+							SearchCommand="{Binding SearchStreet}" Placeholder="Wyszukaj ulice" IsEnabled="{Binding CanSearch}"/>
 
 						<Label Grid.Row="7" Grid.Column="0" Text="Ulica:" VerticalOptions="Center"/>
 						<component:ListPicker Grid.Row="7" Grid.Column="1" Title="Wybierz ulice"

@@ -7,6 +7,9 @@ namespace FoodSearch.Service.Client.Interfaces
 		IFoodSearchCoreServiceClient Core { get; }
         IFoodSearchUserServiceClient User { get; }
         IFoodSearchOrderServiceClient Order { get; }
+
+        event EventHandler UnauthorizedAccess;
+        void OnUnauthorizedAccess();
 	}
 }
 

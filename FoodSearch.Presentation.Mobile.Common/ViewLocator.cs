@@ -40,7 +40,11 @@ namespace FoodSearch.Presentation.Mobile.Common
 		public static Page Authorize { get { return GetView<AuthorizeView>(true); } }
         public static Page RestaurantList { get { return GetView<RestaurantsListView>(true); } }
         public static Page RestaurantMenu { get { return GetView<RestaurantMenuView>(true); } }
-        public static Page Basket {get { return GetView<BasketView>(true); } } 
+        public static Page Basket { get { return GetView<BasketView>(true); } } 
+        public static Page Order { get { return GetView<OrderView>(true); } }
+        public static Page OrderSucceded { get { return GetView<OrderSuccededView>(true); } }
+        public static Page OrderFailed { get { return GetView<OrderFailedView>(); } }
+        public static Page Payment { get { return GetView<PaymentView>(); } }
 
 		public static Page StartScreen { get { return _startScreen ?? (_startScreen = new NavigationPage (Main)); } }
 	}

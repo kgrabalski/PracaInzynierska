@@ -60,16 +60,32 @@ namespace FoodSearch.Service.Client
             return decimal.Parse(response.Body, CultureInfo.InvariantCulture);
         }
 
-        public async Task<ObservableCollection<DeliveryType>> GetDeliveryTypes()
+        public async Task<DeliveryAddress> GetDeliveryAddress()
         {
-            var response = await Get("DeliveryType");
-            return DeserializeList<DeliveryType>(response);
+            var response = await Get("DeliveryAddress");
+            return Deserialize<DeliveryAddress>(response.Body);
         }
 
-        public async Task<ObservableCollection<PaymentType>> GetPaymentTypes()
+        public async Task<CreateOrderResult> CreateOrder(PaymentTypes paymentType, DeliveryTypes deliveryType)
         {
-            var response = await Get("PaymentType");
-            return DeserializeList<PaymentType>(response);
+            var request = new CreateOrderRequest()
+            {
+                PaymentTypeId = (int)paymentType,
+                DeliveryTypeId = (int)deliveryType
+            };
+            var response = await Post("Order", request);
+            if (response.StatusCode == HttpStatusCode.Created)
+            {
+                var result = Deserialize<CreateOrderResult>(response.Body);
+                result.Succeed = true;
+                return result;
+            }
+            return new CreateOrderResult() { Succeed = false };
+        }
+
+        public async Task SetCurrentRestaurant(Guid restaurantId)
+        {
+            await Post("CurrentRestaurant/" + restaurantId.ToString(), null);
         }
     }
 }

@@ -23,6 +23,10 @@ namespace FoodSearch.Presentation.Mobile.Common.Services
             _kernel.Bind<BasketViewModel>().ToSelf();
             _kernel.Bind<LoginViewModel>().ToSelf();
             _kernel.Bind<RegisterViewModel>().ToSelf();
+            _kernel.Bind<OrderViewModel>().ToSelf();
+            _kernel.Bind<OrderSuccededViewModel>().ToSelf();
+            _kernel.Bind<OrderFailedViewModel>().ToSelf();
+            _kernel.Bind<PaymentViewModel>().ToSelf();
             _kernel.Bind<IFoodSearchServiceClient>().To<FoodSearchServiceClient>().InSingletonScope();
             _kernel.Bind<IAuthorizationService>().To<AuthorizationService>().InSingletonScope();
             _kernel.Bind<IUserDialogService>().ToMethod((a) => Xamarin.Forms.DependencyService.Get<IUserDialogService>());

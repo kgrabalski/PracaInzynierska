@@ -106,7 +106,7 @@ namespace FoodSearch.BusinessLogic.Domain.User
             using (var rep = _provider.GetRepository<Data.Mapping.Entities.User>())
             {
                 var user = rep.GetAll()
-                    .Where(x => x.Email == email)
+                    .Where(x => x.Email == email && x.UserStateId == (int)UserStates.Active)
                     .SingleOrDefault();
                 return user != null && user.Password.SequenceEqual(password);
             }
@@ -171,6 +171,35 @@ namespace FoodSearch.BusinessLogic.Domain.User
                     .Where(x => x.Email == user)
                     .SingleOrDefault()
                     .UserId;
+            }
+        }
+
+        public Guid CreatePasswordResetRequest(string email)
+        {
+            Data.Mapping.Entities.User user;
+            using (var repU = _provider.GetRepository<Data.Mapping.Entities.User>())
+            {
+                user = repU.GetAll().Where(x => x.Email == email).SingleOrDefault();
+                if (user == null) return Guid.Empty;
+            }
+
+            using (var rep = _provider.GetRepository<PasswordResetRequest>())
+            {
+                var oldRequests = rep.GetAll().Where(x => x.UserId == user.UserId).List();
+                foreach (var r in oldRequests)
+                {
+                    r.IsActive = false;
+                    rep.Update(r);
+                }
+
+                var request = new PasswordResetRequest()
+                {
+                    UserId = user.UserId,
+                    CreateDate = DateTime.Now,
+                    PasswordChanged = false,
+                    IsActive = true
+                };
+                return rep.Create<Guid>(request);
             }
         }
     }

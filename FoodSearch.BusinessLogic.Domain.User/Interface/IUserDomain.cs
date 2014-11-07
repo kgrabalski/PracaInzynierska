@@ -15,5 +15,6 @@ namespace FoodSearch.BusinessLogic.Domain.User.Interface
         int CreateDeliveryAddress(Guid userId, int addressId, string flatNumber);
         UserDetails GetUserDetails(Guid userId);
         Guid GetUserId(string user);
+        Guid CreatePasswordResetRequest(string email);
     }
 }

@@ -146,6 +146,19 @@ namespace FoodSearch.Presentation.Mobile.Common.ViewModels
 
         public ICommand LoginCommand { get { return AuthorizationService.AuthorizationCommand; } }
 
+        private Command _logOutCommand;
+
+        public Command LogoutCommand
+        {
+            get
+            {
+                return _logOutCommand ?? (_logOutCommand = new Command(async () =>
+                    {
+                        await AuthorizationService.Logout();
+                    }));
+            }
+        }
+
         public MainViewModel (IFoodSearchServiceClient client, IAuthorizationService authorizationService, IUserDialogService dialogService) : base(client, authorizationService, dialogService)
 		{
 			InitializeView ();

@@ -8,6 +8,7 @@ using System.Web.Routing;
 
 using FoodSearch.Service.Api.Areas.Order.Models;
 using FoodSearch.Service.Api.Helpers;
+using FoodSearch.Service.Api.Models;
 using FoodSearch.Service.Api.Providers;
 
 using Ninject.Web.WebApi;
@@ -33,7 +34,8 @@ namespace FoodSearch.Service.Api
                 defaults: new { id = RouteParameter.Optional, area = "" }
             );
 
-            config.Services.Insert(typeof(ModelBinderProvider), 0, new BasketModelBinderProvider());
+            config.Services.Insert(typeof(ModelBinderProvider), 0, new ModelBinderWebApiProvider<Basket, ModelBinderWebApi<Basket>>());
+            config.Services.Insert(typeof(ModelBinderProvider), 0, new ModelBinderWebApiProvider<UserInfo, UserInfoModelBinderWebApi>());
         }
     }
 }

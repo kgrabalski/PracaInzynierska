@@ -86,6 +86,7 @@
     <Compile Include="Entities\Mapping\OpinionMap.cs" />
     <Compile Include="Entities\Mapping\OrderDishMap.cs" />
     <Compile Include="Entities\Mapping\OrderMap.cs" />
+    <Compile Include="Entities\Mapping\PasswordResetRequestMap.cs" />
     <Compile Include="Entities\Mapping\PaymentHistoryMap.cs" />
     <Compile Include="Entities\Mapping\PaymentMap.cs" />
     <Compile Include="Entities\Mapping\PaymentStateMap.cs" />
@@ -103,6 +104,7 @@
     <Compile Include="Entities\Opinion.cs" />
     <Compile Include="Entities\Order.cs" />
     <Compile Include="Entities\OrderDish.cs" />
+    <Compile Include="Entities\PasswordResetRequest.cs" />
     <Compile Include="Entities\Payment.cs" />
     <Compile Include="Entities\PaymentHistory.cs" />
     <Compile Include="Entities\PaymentState.cs" />

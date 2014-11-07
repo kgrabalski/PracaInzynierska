@@ -39,7 +39,7 @@
 	    <component:ListPicker Grid.Row="6" Grid.Column="0" Title="Wybierz numer budynku" IsEnabled="{Binding CanSelectStreetNumber, Mode=TwoWay}"
 	    	ItemsSource="{Binding StreetNumbers, Mode=TwoWay}" SelectedItem="{Binding SelectedStreetNumber, Mode=TwoWay}"/>
 
-	    <Button Grid.Row="7" Grid.Column="0" Text="Szukaj" Command="{Binding SearchRestaurants}" IsEnabled="{Binding CanSearch}"/>
+	    <Button Grid.Row="7" Grid.Column="0" Text="Szukaj" Command="{Binding SearchRestaurants}" IsEnabled="{Binding CanSearch, Mode=TwoWay}"/>
   	</Grid>
 
 	<ContentPage.ToolbarItems>

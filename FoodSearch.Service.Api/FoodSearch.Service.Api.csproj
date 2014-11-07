@@ -116,16 +116,18 @@
     <Compile Include="Areas\Core\Controllers\LogoController.cs" />
     <Compile Include="Areas\Core\Controllers\StreetController.cs" />
     <Compile Include="Areas\Order\Controllers\BasketController.cs" />
+    <Compile Include="Areas\Order\Controllers\CurrentRestaurantController.cs" />
+    <Compile Include="Areas\Order\Controllers\DeliveryAddressController.cs" />
     <Compile Include="Areas\Order\Controllers\DeliveryPriceController.cs" />
-    <Compile Include="Areas\Order\Controllers\DeliveryTypeController.cs" />
-    <Compile Include="Areas\Order\Controllers\PaymentTypeController.cs" />
+    <Compile Include="Areas\Order\Controllers\OrderController.cs" />
     <Compile Include="Areas\Order\Models\Basket.cs" />
     <Compile Include="Areas\Order\Models\BasketItem.cs" />
     <Compile Include="Areas\Order\Models\DeliveryPriceModel.cs" />
+    <Compile Include="Areas\Order\Models\OrderModel.cs" />
     <Compile Include="Areas\Order\OrderAreaRegistration.cs" />
-    <Compile Include="Areas\User\Controllers\LoginController.cs" />
-    <Compile Include="Areas\User\Controllers\RegisterController.cs" />
+    <Compile Include="Areas\User\Controllers\UserController.cs" />
     <Compile Include="Areas\User\Models\LoginModel.cs" />
+    <Compile Include="Areas\User\Models\RegisterModel.cs" />
     <Compile Include="Areas\User\UserAreaRegistration.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -133,12 +135,14 @@
     <Compile Include="Helpers\CompressAttribute.cs" />
     <Compile Include="Helpers\MyApiControllerHandler.cs" />
     <Compile Include="Helpers\MyApiControllerRouteHandler.cs" />
+    <Compile Include="Models\UserInfo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Providers\BasketModelBinderProvider.cs" />
-    <Compile Include="Providers\BasketModelBinderWebApi.cs" />
+    <Compile Include="Providers\ModelBinderWebApiProvider.cs" />
+    <Compile Include="Providers\ModelBinderWebApi.cs" />
     <Compile Include="Providers\CreateUserResult.cs" />
     <Compile Include="Providers\FoodSearchMembershipProvider.cs" />
     <Compile Include="Providers\FoodSearchRoleProvider.cs" />
+    <Compile Include="Providers\UserInfoModelBinderWebApi.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
@@ -161,7 +165,6 @@
     <Folder Include="Areas\Order\Views\Shared\" />
     <Folder Include="Areas\User\Views\Shared\" />
     <Folder Include="Controllers\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\FoodSearch.BusinessLogic.Domain.Core\FoodSearch.BusinessLogic.Domain.Core.csproj">
@@ -183,6 +186,10 @@
     <ProjectReference Include="..\FoodSearch.BusinessLogic.Domain.User\FoodSearch.BusinessLogic.Domain.User.csproj">
       <Project>{C62D4EAF-4EE1-4F2E-96EA-0C630FFD59EB}</Project>
       <Name>FoodSearch.BusinessLogic.Domain.User</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FoodSearch.Data.Mapping\FoodSearch.Data.Mapping.csproj">
+      <Project>{3C7D76AD-3B68-4EB6-9A15-560D4773FB24}</Project>
+      <Name>FoodSearch.Data.Mapping</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

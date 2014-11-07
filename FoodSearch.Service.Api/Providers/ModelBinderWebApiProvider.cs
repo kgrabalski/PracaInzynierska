@@ -10,11 +10,13 @@ using FoodSearch.Service.Api.Areas.Order.Models;
 
 namespace FoodSearch.Service.Api.Providers
 {
-    public class BasketModelBinderProvider : ModelBinderProvider
+    public class ModelBinderWebApiProvider<TType, TBinder> : ModelBinderProvider 
+        where TType : class, new() 
+        where TBinder : ModelBinderWebApi<TType>, new()
     {
         public override IModelBinder GetBinder(HttpConfiguration configuration, Type modelType)
         {
-            return modelType == typeof(Basket) ? new BasketModelBinderWebApi() : null;
+            return modelType == typeof(TType) ? new TBinder() : null;
         }
     }
 }

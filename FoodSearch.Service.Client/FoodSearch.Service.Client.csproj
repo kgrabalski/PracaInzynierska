@@ -52,6 +52,14 @@
     <Compile Include="Contracts\BasketItem.cs" />
     <Compile Include="Response\HttpBodyResponse.cs" />
     <Compile Include="Requests\GetDeliveryPriceRequest.cs" />
+    <Compile Include="Requests\LoginRequest.cs" />
+    <Compile Include="Requests\RegisterRequest.cs" />
+    <Compile Include="Contracts\RegistrationResult.cs" />
+    <Compile Include="Contracts\DeliveryAddress.cs" />
+    <Compile Include="Contracts\CreateOrderResult.cs" />
+    <Compile Include="Requests\CreateOrderRequest.cs" />
+    <Compile Include="Contracts\PaymentTypes.cs" />
+    <Compile Include="Contracts\DeliveryTypes.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <Import Project="..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets" Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets')" />

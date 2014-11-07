@@ -84,6 +84,7 @@ namespace FoodSearch.Presentation.Mobile.Common.ViewModels
             DishGroups = (await Client.Core.GetDishes(r.RestaurantId))
                 .Select(x => new Grouping<Dish>(x.Dishes) {GroupName = x.Name})
                 .AsObservable();
+            await Client.Order.SetCurrentRestaurant(r.RestaurantId);
             DialogService.HideLoading();
         }
     }
