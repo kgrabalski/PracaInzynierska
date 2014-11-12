@@ -15,6 +15,11 @@ namespace FoodSearch.Presentation.Mobile.Common.ViewModels
 {
 	public class MainViewModel : ViewModelBase
 	{
+        public MainViewModel (IFoodSearchServiceClient client, IServiceLocator serviceLocator) : base(client, serviceLocator)
+        {
+            InitializeView ();
+        }
+
         private ObservableCollection<City> _cities = new ObservableCollection<City>();
         public ObservableCollection<City> Cities
         {
@@ -114,10 +119,10 @@ namespace FoodSearch.Presentation.Mobile.Common.ViewModels
             {
                 return _searchStreets ?? (_searchStreets = new Command(async () =>
                 {
-                    DialogService.ShowLoading("Wyszukiwanie...");
+                    Services.Dialog.ShowLoading("Wyszukiwanie...");
                     Streets.Clear();
                     Streets = await Client.Core.GetStreets(SelectedCity.Id, StreetQuery);
-                    DialogService.HideLoading();
+                    Services.Dialog.HideLoading();
                 }));
             }
         }
@@ -137,14 +142,14 @@ namespace FoodSearch.Presentation.Mobile.Common.ViewModels
             {
                 return _searchRestaurants ?? (_searchRestaurants = new Command(async () =>
                 {
-                    await NavigationService.Navigation.PushAsync(ViewLocator.RestaurantList);
+                    await Services.Navigation.Navigate.PushAsync(ViewLocator.RestaurantList);
                     //TODO: usunąć stałe AddressId
-                        MessageService.Send(SelectedStreetNumber ?? new StreetNumber(){Id = 797});
+                    Services.Messaging.Send(SelectedStreetNumber ?? new StreetNumber(){Id = 797});
                 }));
             }
         }
 
-        public ICommand LoginCommand { get { return AuthorizationService.AuthorizationCommand; } }
+        public ICommand LoginCommand { get { return Services.Authorization.AuthorizationCommand; } }
 
         private Command _logOutCommand;
 
@@ -154,34 +159,29 @@ namespace FoodSearch.Presentation.Mobile.Common.ViewModels
             {
                 return _logOutCommand ?? (_logOutCommand = new Command(async () =>
                     {
-                        await AuthorizationService.Logout();
+                        await Services.Authorization.Logout();
                     }));
             }
         }
 
-        public MainViewModel (IFoodSearchServiceClient client, IAuthorizationService authorizationService, IUserDialogService dialogService) : base(client, authorizationService, dialogService)
-		{
-			InitializeView ();
-		}
-
 		private async void InitializeView()
 		{
-            DialogService.ShowLoading("Ladowanie");
+            Services.Dialog.ShowLoading("Ładowanie");
             Cities = await Client.Core.GetCities();
             CanSelectCity = true;
-            DialogService.HideLoading();
+            Services.Dialog.HideLoading();
             //TODO: usunac na produkcji
             CanSearch = true;
 		}
 
 	    private async void GetStreetNumbers()
 	    {
-            DialogService.ShowLoading("Wyszukiwanie...");
+            Services.Dialog.ShowLoading("Wyszukiwanie...");
             CanSelectStreetNumber = false;
             StreetNumbers = new ObservableCollection<StreetNumber>();
 	        StreetNumbers = await Client.Core.GetStreetNumbers(_selectedStreet.Id);
             CanSelectStreetNumber = true;
-            DialogService.HideLoading();
+            Services.Dialog.HideLoading();
 	    }
 	}
 }

@@ -6,6 +6,9 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Navigation;
 
+using Acr.XamForms.UserDialogs;
+using Acr.XamForms.UserDialogs.WindowsPhone;
+
 using FoodSearch.Presentation.Mobile.Common;
 using FoodSearch.Presentation.Mobile.Common.Views;
 
@@ -14,16 +17,20 @@ using Microsoft.Phone.Shell;
 using FoodSearch.Presentation.Mobile.WindowsPhone.Resources;
 
 using Xamarin.Forms;
+using Xamarin.Forms.Platform.WinPhone;
 
 namespace FoodSearch.Presentation.Mobile.WindowsPhone
 {
     public partial class MainPage : PhoneApplicationPage
     {
+        //CookieWebViewRenderer _renderer = new CookieWebViewRenderer();
+
         // Constructor
         public MainPage()
         {
             InitializeComponent();
-
+            //FIX: create IUserDialogService instance
+            var userDialog = new UserDialogService();
             Forms.Init();
             Content = ViewLocator.StartScreen.ConvertPageToUIElement(this);
         }

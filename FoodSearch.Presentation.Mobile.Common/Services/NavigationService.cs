@@ -5,12 +5,13 @@ using System.Text;
 using System.Threading.Tasks;
 
 using Xamarin.Forms;
+using FoodSearch.Presentation.Mobile.Common.Services.Interfaces;
 
 namespace FoodSearch.Presentation.Mobile.Common.Services
 {
-    public static class NavigationService
+    public class NavigationService : INavigationService
     {
-        public static INavigation Navigation
+        public INavigation Navigate
         {
 			get { return ViewLocator.StartScreen.Navigation; }
         }

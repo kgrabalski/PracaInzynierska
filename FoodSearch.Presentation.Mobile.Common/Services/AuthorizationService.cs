@@ -9,12 +9,14 @@ namespace FoodSearch.Presentation.Mobile.Common.Services
     public class AuthorizationService : IAuthorizationService
     {
         private readonly IFoodSearchServiceClient _client;
+        private readonly INavigationService _navigation;
 
         private bool _isAuthorized = false;
 
-        public AuthorizationService(IFoodSearchServiceClient client)
+        public AuthorizationService(IFoodSearchServiceClient client, INavigationService navigationService)
         {
             _client = client;
+            _navigation = navigationService;
             _client.UnauthorizedAccess += (sender, e) => AuthorizationCommand.Execute(null);
         }
 
@@ -26,7 +28,7 @@ namespace FoodSearch.Presentation.Mobile.Common.Services
             {
                 return new Command(async () =>
                     {
-                        await NavigationService.Navigation.PushAsync(ViewLocator.Authorize);
+                        await _navigation.Navigate.PushAsync(ViewLocator.Authorize);
                     });
             }
         }

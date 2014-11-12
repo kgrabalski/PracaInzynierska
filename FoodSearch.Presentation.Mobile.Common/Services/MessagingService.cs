@@ -3,14 +3,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using FoodSearch.Presentation.Mobile.Common.Services.Interfaces;
 
 namespace FoodSearch.Presentation.Mobile.Common.Services
 {
-    public static class MessageService
+    public class MessagingService : IMessagingService
     {
-        private static readonly Dictionary<Type, object> _actions = new Dictionary<Type, object>();
+        private readonly Dictionary<Type, object> _actions = new Dictionary<Type, object>();
 
-        public static void Register<T>(Action<T> receiveAction)
+        public void Register<T>(Action<T> receiveAction)
         {
             var messageType = typeof (T);
             if (!_actions.ContainsKey(messageType))
@@ -23,7 +24,7 @@ namespace FoodSearch.Presentation.Mobile.Common.Services
             }
         }
 
-        public static void Send<T>(T message)
+        public void Send<T>(T message)
         {
             var messageType = typeof (T);
             if (_actions.ContainsKey(messageType))

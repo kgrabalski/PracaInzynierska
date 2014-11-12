@@ -7,7 +7,7 @@ namespace FoodSearch.Presentation.Mobile.Common.ViewModels
 {
     public class OrderSuccededViewModel : ViewModelBase
     {
-        public OrderSuccededViewModel(IFoodSearchServiceClient client, IAuthorizationService authorizationService, IUserDialogService dialogService) : base(client, authorizationService, dialogService)
+        public OrderSuccededViewModel(IFoodSearchServiceClient client, IServiceLocator serviceLocator) : base(client, serviceLocator)
         {
         }
     }

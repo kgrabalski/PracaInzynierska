@@ -3,7 +3,7 @@ using FoodSearch.Presentation.Mobile.Common.Services;
 using Ninject;
 using FoodSearch.Presentation.Mobile.Common.ViewModels;
 
-namespace FoodSearch.Presentation.Mobile.Common
+namespace FoodSearch.Presentation.Mobile.Common.Views
 {	
 	public partial class RestaurantsListView : ContentPage
 	{	

@@ -21,6 +21,11 @@ namespace FoodSearch.Presentation.Mobile.Common.ViewModels
 {
     public class DishListViewModel : ViewModelBase
     {
+        public DishListViewModel(IFoodSearchServiceClient client, IServiceLocator serviceLocator) : base(client, serviceLocator)
+        {
+            Services.Messaging.Register<Restaurant>(GetDishes);
+        }
+
         private ObservableCollection<Grouping<Dish>> _dishGroups = new ObservableCollection<Grouping<Dish>>();
 
         public ObservableCollection<Grouping<Dish>> DishGroups
@@ -47,11 +52,11 @@ namespace FoodSearch.Presentation.Mobile.Common.ViewModels
                     {
                         if (SelectedDish != null)
                         {
-                            DialogService.ShowLoading("Dodawanie do koszyka...");
+                            Services.Dialog.ShowLoading("Dodawanie do koszyka...");
                             bool success = await Client.Order.AddToBasket(SelectedDish.Id);
-                            DialogService.HideLoading();
-                            if (success) DialogService.Toast("Dodano do koszyka: " + SelectedDish.Name);
-                        } else DialogService.Toast("Wybierz danie które chcesz dodać do koszyka");
+                            Services.Dialog.HideLoading();
+                            if (success) Services.Dialog.Toast("Dodano do koszyka: " + SelectedDish.Name);
+                        } else Services.Dialog.Toast("Wybierz danie które chcesz dodać do koszyka");
                     }));
             }
         }
@@ -64,28 +69,23 @@ namespace FoodSearch.Presentation.Mobile.Common.ViewModels
             {
                 return _showBasket ?? (_showBasket = new Command(() =>
                     {
-                        NavigationService.Navigation.PushAsync(ViewLocator.Basket);
+                        Services.Navigation.Navigate.PushAsync(ViewLocator.Basket);
                     }));
             }
         }
 
-        public ICommand LoginCommand { get { return AuthorizationService.AuthorizationCommand; } }
-
-        public DishListViewModel(IFoodSearchServiceClient client, IAuthorizationService authorizationService, IUserDialogService dialogService) : base(client, authorizationService, dialogService)
-        {
-            MessageService.Register<Restaurant>(GetDishes);
-        }
+        public ICommand LoginCommand { get { return Services.Authorization.AuthorizationCommand; } }
 
         private async void GetDishes(Restaurant r)
         {
-            RestaurantService.CurrentRestaurantId = r.RestaurantId;
-            RestaurantService.CurrentRestaurantName = r.RestaurantName;
-            DialogService.ShowLoading("Wyszukiwanie dan...");
+            Services.Restaurant.CurrentRestaurantId = r.RestaurantId;
+            Services.Restaurant.CurrentRestaurantName = r.RestaurantName;
+            Services.Dialog.ShowLoading("Wyszukiwanie dań...");
             DishGroups = (await Client.Core.GetDishes(r.RestaurantId))
                 .Select(x => new Grouping<Dish>(x.Dishes) {GroupName = x.Name})
                 .AsObservable();
             await Client.Order.SetCurrentRestaurant(r.RestaurantId);
-            DialogService.HideLoading();
+            Services.Dialog.HideLoading();
         }
     }
 }

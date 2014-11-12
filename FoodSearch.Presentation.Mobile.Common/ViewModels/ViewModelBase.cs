@@ -26,14 +26,12 @@ namespace FoodSearch.Presentation.Mobile.Common.ViewModels
 		}
 
 		protected readonly IFoodSearchServiceClient Client;
-        protected readonly IAuthorizationService AuthorizationService;
-        protected readonly IUserDialogService DialogService;
+        protected readonly IServiceLocator Services;
 
-        public ViewModelBase (IFoodSearchServiceClient client, IAuthorizationService authorizationService, IUserDialogService dialogService)
+        public ViewModelBase (IFoodSearchServiceClient client, IServiceLocator serviceLocator)
 		{
 			Client = client;
-            AuthorizationService = authorizationService;
-            DialogService = dialogService;
+            Services = serviceLocator;
 		}
 	}
 }

@@ -15,6 +15,11 @@ namespace FoodSearch.Presentation.Mobile.Common.ViewModels
 {
     public class RestaurantListViewModel : ViewModelBase
     {
+        public RestaurantListViewModel(IFoodSearchServiceClient client, IServiceLocator serviceLocator) : base(client, serviceLocator)
+        {
+            Services.Messaging.Register<StreetNumber>(GetRestaurants);
+        }
+
         private ObservableCollection<Restaurant> _restaurants = new ObservableCollection<Restaurant>();
 
         public ObservableCollection<Restaurant> Restaurants
@@ -31,23 +36,18 @@ namespace FoodSearch.Presentation.Mobile.Common.ViewModels
             set 
             { 
                 if (SetProperty(ref _selectedRestaurant, value) && value != null) {
-                    NavigationService.Navigation.PushAsync(ViewLocator.RestaurantMenu);
-                    MessageService.Send(SelectedRestaurant);
+                    Services.Navigation.Navigate.PushAsync(ViewLocator.RestaurantMenu);
+                    Services.Messaging.Send(SelectedRestaurant);
                     SelectedRestaurant = null;
                 }
             }
         }
-                 
-        public RestaurantListViewModel(IFoodSearchServiceClient client, IAuthorizationService authorizationService, IUserDialogService dialogService) : base(client, authorizationService, dialogService)
-        {
-            MessageService.Register<StreetNumber>(GetRestaurants);
-        }
 
         private async void GetRestaurants(StreetNumber sn)
         {
-            DialogService.ShowLoading("Wyszukiwanie restauracji...");
+            Services.Dialog.ShowLoading("Wyszukiwanie restauracji...");
             Restaurants = await Client.Core.GetRestaurants(sn.Id);
-            DialogService.HideLoading();
+            Services.Dialog.HideLoading();
         }
     }
 }

@@ -26,6 +26,8 @@ namespace FoodSearch.Presentation.Mobile.Android
 		
 		public static void UpdateIdValues()
 		{
+			global::Acr.XamForms.Mobile.Droid.Resource.String.ApplicationName = global::FoodSearch.Presentation.Mobile.Android.Resource.String.ApplicationName;
+			global::Acr.XamForms.Mobile.Droid.Resource.String.Hello = global::FoodSearch.Presentation.Mobile.Android.Resource.String.Hello;
 			global::Acr.XamForms.UserDialogs.Droid.Resource.Attribute.ahBarColor = global::FoodSearch.Presentation.Mobile.Android.Resource.Attribute.ahBarColor;
 			global::Acr.XamForms.UserDialogs.Droid.Resource.Attribute.ahBarLength = global::FoodSearch.Presentation.Mobile.Android.Resource.Attribute.ahBarLength;
 			global::Acr.XamForms.UserDialogs.Droid.Resource.Attribute.ahBarWidth = global::FoodSearch.Presentation.Mobile.Android.Resource.Attribute.ahBarWidth;
@@ -102,6 +104,8 @@ namespace FoodSearch.Presentation.Mobile.Android
 			global::AndroidHUD.Resource.Styleable.ProgressWheel_ahText = global::FoodSearch.Presentation.Mobile.Android.Resource.Styleable.ProgressWheel_ahText;
 			global::AndroidHUD.Resource.Styleable.ProgressWheel_ahTextColor = global::FoodSearch.Presentation.Mobile.Android.Resource.Styleable.ProgressWheel_ahTextColor;
 			global::AndroidHUD.Resource.Styleable.ProgressWheel_ahTextSize = global::FoodSearch.Presentation.Mobile.Android.Resource.Styleable.ProgressWheel_ahTextSize;
+			global::Cookies.Android.Resource.String.ApplicationName = global::FoodSearch.Presentation.Mobile.Android.Resource.String.ApplicationName;
+			global::Cookies.Android.Resource.String.Hello = global::FoodSearch.Presentation.Mobile.Android.Resource.String.Hello;
 		}
 		
 		public partial class Attribute
@@ -255,11 +259,11 @@ namespace FoodSearch.Presentation.Mobile.Android
 		public partial class String
 		{
 			
-			// aapt resource value: 0x7f040002
-			public const int ApplicationName = 2130968578;
-			
 			// aapt resource value: 0x7f040001
-			public const int Hello = 2130968577;
+			public const int ApplicationName = 2130968577;
+			
+			// aapt resource value: 0x7f040000
+			public const int Hello = 2130968576;
 			
 			// aapt resource value: 0x7f040004
 			public const int app_name = 2130968580;
@@ -267,8 +271,8 @@ namespace FoodSearch.Presentation.Mobile.Android
 			// aapt resource value: 0x7f040003
 			public const int hello = 2130968579;
 			
-			// aapt resource value: 0x7f040000
-			public const int library_name = 2130968576;
+			// aapt resource value: 0x7f040002
+			public const int library_name = 2130968578;
 			
 			static String()
 			{

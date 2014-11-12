@@ -14,7 +14,7 @@ namespace FoodSearch.Presentation.Mobile.Common.ViewModels
 {
     public class RegisterViewModel : ViewModelBase
     {
-        public RegisterViewModel(IFoodSearchServiceClient client, IAuthorizationService authorizationService, IUserDialogService dialogService) : base(client, authorizationService, dialogService)
+        public RegisterViewModel(IFoodSearchServiceClient client, IServiceLocator serviceLocator) : base(client, serviceLocator)
         {
             InitializeView();
         }
@@ -27,12 +27,12 @@ namespace FoodSearch.Presentation.Mobile.Common.ViewModels
 
         private async void GetStreetNumbers()
         {
-            DialogService.ShowLoading("Wyszukiwanie...");
+            Services.Dialog.ShowLoading("Wyszukiwanie...");
             CanSelectStreetNumber = false;
             StreetNumbers = new ObservableCollection<StreetNumber>();
             StreetNumbers = await Client.Core.GetStreetNumbers(_selectedStreet.Id);
             CanSelectStreetNumber = true;
-            DialogService.HideLoading();
+            Services.Dialog.HideLoading();
         }
 
         private string _firstName;
@@ -135,10 +135,10 @@ namespace FoodSearch.Presentation.Mobile.Common.ViewModels
             {
                 return _searchStreet ?? (_searchStreet = new Command(async () =>
                     {
-                        DialogService.ShowLoading("Wyszukiwanie...");
+                        Services.Dialog.ShowLoading("Wyszukiwanie...");
                         Streets.Clear();
                         Streets = await Client.Core.GetStreets(SelectedCity.Id, QueryStreet);
-                        DialogService.HideLoading();
+                        Services.Dialog.HideLoading();
                     }));
             }
         }
@@ -203,52 +203,52 @@ namespace FoodSearch.Presentation.Mobile.Common.ViewModels
                     {
                         if (string.IsNullOrEmpty(FirstName))
                         {
-                            DialogService.Toast("Prosze podac imie");
+                            Services.Dialog.Toast("Proszę podać imię");
                             return;
                         }
                         if (string.IsNullOrEmpty(LastName))
                         {
-                            DialogService.Toast("Prosze podac nazwisko");
+                            Services.Dialog.Toast("Proszę podać nazwisko");
                             return;
                         }
                         if (string.IsNullOrEmpty(Email))
                         {
-                            DialogService.Toast("Prosze podac poprawny adres email");
+                            Services.Dialog.Toast("Proszę podać poprawny adres email");
                             return;
                         }
                         if (string.IsNullOrEmpty(Password))
                         {
-                            DialogService.Toast("Prosze podac haslo");
+                            Services.Dialog.Toast("Proszę podać hasło");
                             return;
                         }
                         if (Password != RepeatPassword)
                         {
-                            DialogService.Toast("Podanie hasla roznia sie");
+                            Services.Dialog.Toast("Podane hasła rożnią się");
                             return;
                         }
                         if (SelectedStreetNumber == null || SelectedStreetNumber.Id == 0)
                         {
-                            DialogService.Toast("Prosze wybrac miasto, ulice oraz numer budynku");
+                            Services.Dialog.Toast("Proszę wybrać miasto, ulicę oraz numer budynku");
                         }
 
-                        DialogService.ShowLoading("Czekaj...");
+                        Services.Dialog.ShowLoading("Czekaj...");
                         var result = await Client.User.Register(FirstName, LastName, Email, Password, RepeatPassword, SelectedStreetNumber.Id, FlatNumber);
-                        DialogService.HideLoading();
+                        Services.Dialog.HideLoading();
                         switch (result)
                         {
                             case RegistrationResult.EmailDuplicated:
                                 {
-                                    DialogService.Toast("Uzytkownik o podanym adresie email juz istnieje");
+                                    Services.Dialog.Toast("Użytkownik o podanym adresie email już istnieje");
                                     break;
                                 }
                             case RegistrationResult.NotCreated:
                                 {
-                                    DialogService.Toast("Błąd podczas rejestracji - podano niepoprawne dane");
+                                    Services.Dialog.Toast("Błąd podczas rejestracji - podano niepoprawne dane");
                                     break;
                                 }
                             case RegistrationResult.Created:
                                 {
-                                    DialogService.Toast("Pomyślnie utworzono konto użytkownika.");
+                                    Services.Dialog.Toast("Pomyślnie utworzono konto użytkownika.");
                                     FirstName = string.Empty;
                                     LastName = string.Empty;
                                     Email = string.Empty;

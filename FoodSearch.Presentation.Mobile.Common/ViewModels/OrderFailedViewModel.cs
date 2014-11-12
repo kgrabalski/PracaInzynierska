@@ -8,7 +8,7 @@ namespace FoodSearch.Presentation.Mobile.Common
 {
     public class OrderFailedViewModel : ViewModelBase
     {
-        public OrderFailedViewModel(IFoodSearchServiceClient client, IAuthorizationService authorizationService, IUserDialogService dialogService) : base(client, authorizationService, dialogService)
+        public OrderFailedViewModel(IFoodSearchServiceClient client, IServiceLocator serviceLocator) : base(client, serviceLocator)
         {
         }
         

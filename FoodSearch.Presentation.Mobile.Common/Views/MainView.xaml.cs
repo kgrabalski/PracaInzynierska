@@ -12,7 +12,11 @@ namespace FoodSearch.Presentation.Mobile.Common.Views
 		{
 			InitializeComponent ();
             NavigationPage.SetHasNavigationBar(this, true);
-            BindingContext = DependencyResolver.Current.Get<MainViewModel>();
+            if (!NetworkAvailabilityService.IsConnected)
+            {
+                NetworkAvailabilityService.CloseApp();
+            } else BindingContext = DependencyResolver.Current.Get<MainViewModel>();
+
 		}
 	}
 }

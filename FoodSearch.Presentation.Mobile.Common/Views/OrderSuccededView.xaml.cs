@@ -5,7 +5,7 @@ using FoodSearch.Presentation.Mobile.Common.Services;
 using FoodSearch.Presentation.Mobile.Common.ViewModels;
 using Ninject;
 
-namespace FoodSearch.Presentation.Mobile.Common
+namespace FoodSearch.Presentation.Mobile.Common.Views
 {	
 	public partial class OrderSuccededView : ContentPage
 	{	

@@ -6,7 +6,7 @@ using Ninject;
 using FoodSearch.Presentation.Mobile.Common.ViewModels;
 using FoodSearch.Presentation.Mobile.Common.Services;
 
-namespace FoodSearch.Presentation.Mobile.Common
+namespace FoodSearch.Presentation.Mobile.Common.Views
 {	
     public partial class RestaurantMenuView : TabbedPage
 	{	
@@ -18,6 +18,7 @@ namespace FoodSearch.Presentation.Mobile.Common
                 Menu = DependencyResolver.Current.Get<DishListViewModel>(),
                 Opinion = DependencyResolver.Current.Get<OpinionListViewModel>()
             };
+            
 		}
 	}
 }

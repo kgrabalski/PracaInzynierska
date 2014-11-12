@@ -14,20 +14,20 @@ namespace FoodSearch.Presentation.Mobile.Common.ViewModels
 {
     public class OrderViewModel : ViewModelBase
     {
-        public OrderViewModel(IFoodSearchServiceClient client, IAuthorizationService authorizationService, IUserDialogService dialogService) : base(client, authorizationService, dialogService)
+        public OrderViewModel(IFoodSearchServiceClient client, IServiceLocator serviceLocator) : base(client, serviceLocator)
         {   
             InitializeView();
         }
 
         private async void InitializeView()
         {
-            if (!AuthorizationService.IsAuthorized)
+            if (!Services.Authorization.IsAuthorized)
             {
-                await NavigationService.Navigation.PopAsync();
+                await Services.Navigation.Navigate.PopAsync();
                 return;
             }
 
-            DialogService.ShowLoading("Ładowanie zamówienia");
+            Services.Dialog.ShowLoading("Ładowanie zamówienia");
             DeliveryTypes = new ObservableCollection<DeliveryType>()
             {
                 new DeliveryType() { Id = 1, Name = "Dowóz" },
@@ -41,7 +41,7 @@ namespace FoodSearch.Presentation.Mobile.Common.ViewModels
             var da = await Client.Order.GetDeliveryAddress();
             var basket = await Client.Order.GetBasket();
             decimal dishesTotal = basket.Sum(x => x.Total);
-            decimal deliveryPrice = await Client.Order.GetDeliveryPrice(RestaurantService.CurrentRestaurantId, dishesTotal);
+            decimal deliveryPrice = await Client.Order.GetDeliveryPrice(Services.Restaurant.CurrentRestaurantId, dishesTotal);
             decimal total = dishesTotal + deliveryPrice;
             TotalValue = total.ToPln();
 
@@ -52,7 +52,7 @@ namespace FoodSearch.Presentation.Mobile.Common.ViewModels
             StreetNumber = da.StreetNumber;
             FlatNumber = da.FlatNumber;
 
-            DialogService.HideLoading();
+            Services.Dialog.HideLoading();
         }
 
         private string _totalValue;
@@ -153,22 +153,22 @@ namespace FoodSearch.Presentation.Mobile.Common.ViewModels
                     {
                         if (SelectedDeliveryType.Id == 0 || SelectedPaymentType.Id == 0)
                         {
-                            DialogService.Toast("Proszę wybrać sposób platności i dostawy");
+                            Services.Dialog.Toast("Proszę wybrać sposób płatności i dostawy");
                             return;
                         }
 
-                        DialogService.ShowLoading("Skladanie zamówienia");
+                        Services.Dialog.ShowLoading("Składanie zamówienia");
                         PaymentTypes paymentType = (PaymentTypes)SelectedPaymentType.Id;
                         DeliveryTypes deliveryType = (DeliveryTypes)SelectedDeliveryType.Id;
                         var result = await Client.Order.CreateOrder(paymentType, deliveryType);
-                        DialogService.HideLoading();
+                        Services.Dialog.HideLoading();
                         if (result.Succeed)
                         {
-                            await NavigationService.Navigation.PushModalAsync(ViewLocator.Payment);
-                            MessageService.Send(result);
+                            await Services.Navigation.Navigate.PushModalAsync(ViewLocator.Payment);
+                            Services.Messaging.Send(result);
                         } else {
-                            await NavigationService.Navigation.PopToRootAsync();
-                            await NavigationService.Navigation.PushAsync(ViewLocator.OrderFailed);
+                            await Services.Navigation.Navigate.PopToRootAsync();
+                            await Services.Navigation.Navigate.PushAsync(ViewLocator.OrderFailed);
                         }
                     }));
             }

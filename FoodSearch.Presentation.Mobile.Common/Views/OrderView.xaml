@@ -2,11 +2,11 @@
 <ContentPage 
 	xmlns="http://xamarin.com/schemas/2014/forms" 
 	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
-	x:Class="FoodSearch.Presentation.Mobile.Common.OrderView"
+	x:Class="FoodSearch.Presentation.Mobile.Common.Views.OrderView"
 	xmlns:component="clr-namespace:FoodSearch.Presentation.Mobile.Common.Components;assembly=FoodSearch.Presentation.Mobile.Common"
 	Title="Zamówienie">
 
-	<Grid>
+	<Grid Padding="5">
 		<Grid.RowDefinitions>
 			<RowDefinition Height="Auto"/>
 			<RowDefinition Height="Auto"/>

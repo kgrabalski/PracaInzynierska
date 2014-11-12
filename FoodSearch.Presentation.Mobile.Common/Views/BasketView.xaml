@@ -90,7 +90,7 @@
 				<OnPlatform x:TypeArguments="FileImageSource"
 					iOS="order.png"
 					Android="ic_action_accept.png"
-					WinPhone="Images/add.png" />
+					WinPhone="Images/ic_action_accept.png" />
 			</ToolbarItem.Icon>
 		</ToolbarItem>
 		<ToolbarItem Name="Wyczyść koszyk" Order="Primary" Command="{Binding ClearBasket}">
@@ -98,7 +98,7 @@
 				<OnPlatform x:TypeArguments="FileImageSource"
 					iOS="clear.png"
 					Android="ic_action_discard.png"
-					WinPhone="Images/add.png" />
+					WinPhone="Images/ic_action_discard.png" />
 			</ToolbarItem.Icon>
 		</ToolbarItem>
 		<ToolbarItem Name="Logowanie" Order="Secondary" Command="{Binding LoginCommand}"/>

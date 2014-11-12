@@ -19,6 +19,7 @@ namespace FoodSearch.Service.Client
         public IFoodSearchOrderServiceClient Order { get { return _order ?? (_order = new FoodSearchOrderServiceClient(_cookieContainer) {ClientHandler = this}); } }
 
         public event EventHandler UnauthorizedAccess;
+        public CookieContainer Cookies { get { return _cookieContainer; } }
 
         public void OnUnauthorizedAccess()
         {

@@ -1,11 +1,12 @@
 ﻿using System;
+using FoodSearch.Presentation.Mobile.Common.Services.Interfaces;
 
 namespace FoodSearch.Presentation.Mobile.Common.Services
 {
-    public static class RestaurantService
+    public class RestaurantService : IRestaurantService
     {
-        public static Guid CurrentRestaurantId { get; set; }
-        public static string CurrentRestaurantName { get; set; }
+        public Guid CurrentRestaurantId { get; set; }
+        public string CurrentRestaurantName { get; set; }
     }
 }
 

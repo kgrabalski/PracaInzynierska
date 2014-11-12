@@ -2,7 +2,7 @@
 <TabbedPage
 	xmlns="http://xamarin.com/schemas/2014/forms" 
 	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
-	x:Class="FoodSearch.Presentation.Mobile.Common.AuthorizeView"
+	x:Class="FoodSearch.Presentation.Mobile.Common.Views.AuthorizeView"
 	xmlns:component="clr-namespace:FoodSearch.Presentation.Mobile.Common.Components;assembly=FoodSearch.Presentation.Mobile.Common"
 	Title="FoodSearch">
 
@@ -12,6 +12,7 @@
 				<Grid.RowDefinitions>
 					<RowDefinition Height="Auto"/>
 					<RowDefinition Height="Auto"/>
+					<RowDefinition Height="50"/>
 					<RowDefinition Height="*"/>
 					<RowDefinition Height="Auto"/>
 				</Grid.RowDefinitions>
@@ -24,6 +25,9 @@
 				<Entry Grid.Row="0" Grid.Column="1" Text="{Binding Email, Mode=TwoWay}" Placeholder="Login" Keyboard="Email"/>
 				<Label Grid.Row="1" Grid.Column="0" Text="Hasło:" VerticalOptions="Center"/>
 				<Entry Grid.Row="1" Grid.Column="1" Text="{Binding Password, Mode=TwoWay}" Placeholder="Hasło" IsPassword="true"/>
+				<Label Grid.Row="2" Grid.Column="0" Text="Zapamiętaj mnie" VerticalOptions="Center"/>
+				<Switch Grid.Row="2" Grid.Column="1" IsToggled="{Binding RememberMe, Mode=TwoWay}"/>
+
 				<Button Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" Text="Zaloguj się" VerticalOptions="End" Command="{Binding LoginCommand}"/>
 			</Grid>
 		</ContentPage>
@@ -56,7 +60,7 @@
 							<ColumnDefinition Width="3*"/>
 						</Grid.ColumnDefinitions>
 
-						<Label Grid.Row="0" Grid.Column="0" Text="Imie:" VerticalOptions="Center"/>
+						<Label Grid.Row="0" Grid.Column="0" Text="Imię:" VerticalOptions="Center"/>
 						<Entry Grid.Row="0" Grid.Column="1" Text="{Binding FirstName, Mode=TwoWay}" Placeholder="Imie"/>
 
 						<Label Grid.Row="1" Grid.Column="0" Text="Nazwisko:" VerticalOptions="Center"/>
@@ -75,12 +79,12 @@
 						<component:ListPicker Grid.Row="5" Grid.Column="1" Title="Wybierz miasto" IsEnabled="{Binding CanSelectCity}"
 							ItemsSource="{Binding Cities, Mode=TwoWay}" SelectedItem="{Binding SelectedCity, Mode=TwoWay}"/>
 
-						<Label Grid.Row="6" Grid.Column="0" Text="Wyszukaj ulice:" VerticalOptions="Center"/>
+						<Label Grid.Row="6" Grid.Column="0" Text="Wyszukaj ulicę:" VerticalOptions="Center"/>
 						<SearchBar Grid.Row="6" Grid.Column="1" Text="{Binding QueryStreet, Mode=TwoWay}" 
-							SearchCommand="{Binding SearchStreet}" Placeholder="Wyszukaj ulice" IsEnabled="{Binding CanSearch}"/>
+							SearchCommand="{Binding SearchStreet}" Placeholder="Wyszukaj ulicę" IsEnabled="{Binding CanSearch}"/>
 
 						<Label Grid.Row="7" Grid.Column="0" Text="Ulica:" VerticalOptions="Center"/>
-						<component:ListPicker Grid.Row="7" Grid.Column="1" Title="Wybierz ulice"
+						<component:ListPicker Grid.Row="7" Grid.Column="1" Title="Wybierz ulicę"
 							ItemsSource="{Binding Streets, Mode=TwoWay}" SelectedItem="{Binding SelectedStreet, Mode=TwoWay}"/>
 
 						<Label Grid.Row="8" Grid.Column="0" Text="Numer:" VerticalOptions="Center"/>

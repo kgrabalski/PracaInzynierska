@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Net;
 
 namespace FoodSearch.Service.Client.Interfaces
 {
@@ -10,6 +11,7 @@ namespace FoodSearch.Service.Client.Interfaces
 
         event EventHandler UnauthorizedAccess;
         void OnUnauthorizedAccess();
+        CookieContainer Cookies { get; }
 	}
 }
 

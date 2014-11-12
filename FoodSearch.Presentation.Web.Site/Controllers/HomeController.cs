@@ -24,6 +24,11 @@ namespace FoodSearch.Presentation.Web.Site.Controllers
             return View();
         }
 
+        public ActionResult Blank()
+        {
+            return new EmptyResult();
+        }
+
         [HttpPost]
         public ActionResult Restaurants(int addressId)
         {

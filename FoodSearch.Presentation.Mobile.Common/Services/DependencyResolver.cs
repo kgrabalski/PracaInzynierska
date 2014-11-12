@@ -5,6 +5,8 @@ using FoodSearch.Service.Client.Interfaces;
 using FoodSearch.Service.Client;
 using Acr.XamForms.UserDialogs;
 using FoodSearch.Presentation.Mobile.Common.Services.Interfaces;
+using Acr.XamForms.Mobile;
+using Acr.XamForms.Mobile.Net;
 
 namespace FoodSearch.Presentation.Mobile.Common.Services
 {
@@ -28,8 +30,14 @@ namespace FoodSearch.Presentation.Mobile.Common.Services
             _kernel.Bind<OrderFailedViewModel>().ToSelf();
             _kernel.Bind<PaymentViewModel>().ToSelf();
             _kernel.Bind<IFoodSearchServiceClient>().To<FoodSearchServiceClient>().InSingletonScope();
+            _kernel.Bind<IMessagingService>().To<MessagingService>().InSingletonScope();
+            _kernel.Bind<INavigationService>().To<NavigationService>().InSingletonScope();
+            _kernel.Bind<IRestaurantService>().To<RestaurantService>().InSingletonScope();
             _kernel.Bind<IAuthorizationService>().To<AuthorizationService>().InSingletonScope();
-            _kernel.Bind<IUserDialogService>().ToMethod((a) => Xamarin.Forms.DependencyService.Get<IUserDialogService>());
+            _kernel.Bind<IUserDialogService>().ToMethod(x => Xamarin.Forms.DependencyService.Get<IUserDialogService>());
+            _kernel.Bind<ISettings>().ToMethod(x => Xamarin.Forms.DependencyService.Get<ISettings>());
+            _kernel.Bind<INetworkService>().ToMethod(x => Xamarin.Forms.DependencyService.Get<INetworkService>()).InSingletonScope();
+            _kernel.Bind<IServiceLocator>().To<ServiceLocator>().InSingletonScope();
         }
     }
 }

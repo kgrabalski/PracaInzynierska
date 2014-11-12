@@ -2,7 +2,7 @@
 <ContentPage 
 	xmlns="http://xamarin.com/schemas/2014/forms" 
 	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
-	x:Class="FoodSearch.Presentation.Mobile.Common.OrderSuccededView"
+	x:Class="FoodSearch.Presentation.Mobile.Common.Views.OrderSuccededView"
 	Title="Sukces">
 	<ContentPage.Content>
 	</ContentPage.Content>

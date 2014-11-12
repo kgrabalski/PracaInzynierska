@@ -75,11 +75,30 @@
     <Reference Include="Xamarin.Behaviors">
       <HintPath>..\packages\Xamarin.Forms.Behaviors.1.2.0\lib\Xamarin.Behaviors.dll</HintPath>
     </Reference>
+    <Reference Include="Cookies.Android">
+      <HintPath>..\packages\CookieWebView.1.0.6\lib\MonoAndroid\Cookies.Android.dll</HintPath>
+    </Reference>
+    <Reference Include="Cookies">
+      <HintPath>..\packages\CookieWebView.1.0.6\lib\MonoAndroid\Cookies.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.1\lib\portable-net40+sl5+wp80+win8+monotouch+monoandroid\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Acr.XamForms.Mobile">
+      <HintPath>..\packages\Acr.XamForms.Mobile.1.5\lib\MonoAndroid\Acr.XamForms.Mobile.dll</HintPath>
+    </Reference>
+    <Reference Include="Acr.XamForms.Mobile.Droid">
+      <HintPath>..\packages\Acr.XamForms.Mobile.1.5\lib\MonoAndroid\Acr.XamForms.Mobile.Droid.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Mobile">
+      <HintPath>..\packages\Acr.XamForms.Mobile.1.5\lib\MonoAndroid\Xamarin.Mobile.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MainActivity.cs" />
     <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Renderers\CookieWebViewRenderer.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -121,5 +140,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Services\" />
+    <Folder Include="Renderers\" />
   </ItemGroup>
 </Project>

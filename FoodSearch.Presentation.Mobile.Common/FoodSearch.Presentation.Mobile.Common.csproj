@@ -31,11 +31,11 @@
     <ConsolePause>false</ConsolePause>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Components\CookieWebView.cs" />
     <Compile Include="Components\ListPicker.cs" />
     <Compile Include="Infrastucture\Command.cs" />
     <Compile Include="Models\Grouping.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Services\MessageService.cs" />
     <Compile Include="Services\NavigationService.cs" />
     <Compile Include="ViewModels\DishListViewModel.cs" />
     <Compile Include="ViewModels\LoginViewModel.cs" />
@@ -85,6 +85,13 @@
       <DependentUpon>PaymentView.xaml</DependentUpon>
     </Compile>
     <Compile Include="ViewModels\PaymentViewModel.cs" />
+    <Compile Include="Services\Interfaces\IServiceLocator.cs" />
+    <Compile Include="Services\Interfaces\IMessagingService.cs" />
+    <Compile Include="Services\MessagingService.cs" />
+    <Compile Include="Services\Interfaces\INavigationService.cs" />
+    <Compile Include="Services\Interfaces\IRestaurantService.cs" />
+    <Compile Include="Services\ServiceLocator.cs" />
+    <Compile Include="Services\NetworkAvailabilityService.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <ItemGroup>
@@ -94,6 +101,9 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Reference Include="Acr.XamForms.Mobile">
+      <HintPath>..\packages\Acr.XamForms.Mobile.1.5\lib\portable-win+net45+MonoAndroid+MonoTouch+wp8\Acr.XamForms.Mobile.dll</HintPath>
+    </Reference>
     <Reference Include="Xamarin.Forms.Core">
       <HintPath>..\packages\Xamarin.Forms.1.2.3.6257\lib\portable-win+net45+wp80+MonoAndroid10+MonoTouch10\Xamarin.Forms.Core.dll</HintPath>
     </Reference>
@@ -108,6 +118,9 @@
     </Reference>
     <Reference Include="Xamarin.Behaviors">
       <HintPath>..\packages\Xamarin.Forms.Behaviors.1.2.0\lib\Xamarin.Behaviors.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.6\lib\portable-net45+wp80+win8+wpa81+aspnetcore50\Newtonsoft.Json.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -149,9 +162,5 @@
       <Generator>MSBuild:Compile</Generator>
     </EmbeddedResource>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Converters\" />
-    <Folder Include="Services\Interfaces\" />
-    <Folder Include="Helpers\" />
-  </ItemGroup>
+  <ItemGroup />
 </Project>

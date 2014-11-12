@@ -3,7 +3,7 @@
 	xmlns="http://xamarin.com/schemas/2014/forms" 
 	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
 	xmlns:conv="clr-namespace:FoodSearch.Presentation.Mobile.Common.Converters;assembly=FoodSearch.Presentation.Mobile.Common"
-	x:Class="FoodSearch.Presentation.Mobile.Common.RestaurantsListView"
+	x:Class="FoodSearch.Presentation.Mobile.Common.Views.RestaurantsListView"
 	Title="Znalezione restauracje">
 
 	<ContentPage.Resources>

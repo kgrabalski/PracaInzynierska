@@ -11,7 +11,7 @@ namespace FoodSearch.Presentation.Mobile.Common.ViewModels
 {
     public class OpinionListViewModel : ViewModelBase
     {
-        public OpinionListViewModel(IFoodSearchServiceClient client, IAuthorizationService authorizationService, IUserDialogService dialogService) : base(client, authorizationService, dialogService)
+        public OpinionListViewModel(IFoodSearchServiceClient client, IServiceLocator serviceLocator) : base(client, serviceLocator)
         {
         }
         
