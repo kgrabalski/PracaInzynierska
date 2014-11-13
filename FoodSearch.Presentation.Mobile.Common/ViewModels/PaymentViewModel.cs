@@ -6,23 +6,27 @@ using Acr.XamForms.UserDialogs;
 using FoodSearch.Presentation.Mobile.Common.Services;
 using FoodSearch.Service.Client.Contracts;
 using System.Globalization;
+using System.Diagnostics;
+using Microsoft.AspNet.SignalR.Client;
+using Xamarin.Forms;
 
 namespace FoodSearch.Presentation.Mobile.Common.ViewModels
 {
     public class PaymentViewModel : ViewModelBase
     {
-        private readonly string _pageSuccess = "http://foodsearch.azurewebsites.net/Order/Success";
-        private string _pageCancel = "http://foodsearch.azurewebsites.net/Order/Cancel?paymentId=";
+        private string _pageSuccess = "http://foodsearch.azurewebsites.net/OrderMobile/Success?paymentId=";
+        private string _pageCancel = "http://foodsearch.azurewebsites.net/OrderMobile/Cancel?paymentId=";
 
         public PaymentViewModel(IFoodSearchServiceClient client, IServiceLocator serviceLocator) : base(client, serviceLocator)
         {
             Services.Messaging.Register<CreateOrderResult>(InitializeView);
         }
 
-        private void InitializeView(CreateOrderResult order)
+        private async void InitializeView(CreateOrderResult order)
         {
             string ipn = "http://foodsearch.azurewebsites.net/Order/UserPaymentIpn";
             _pageCancel += order.PaymentId;
+            _pageSuccess += order.PaymentId;
             
             string url = string.Format("https://www.sandbox.paypal.com/cgi-bin/webscr?cmd=_xclick&business=kgrabalski@poczta.onet.pl&item_number={0}&item_name={1}&rm=2&LC=PL&country=PL&amount={2}&currency_code=PLN&notify_url={3}&return={4}&cancel_return={5}",
                 order.PaymentId,
@@ -32,6 +36,18 @@ namespace FoodSearch.Presentation.Mobile.Common.ViewModels
                 _pageSuccess,
                 _pageCancel);
             PaymentUrl = url;
+            Services.Dialog.ShowLoading("Ładowanie PayPal");
+            Xamarin.Forms.Device.StartTimer(TimeSpan.FromSeconds(10), () => {
+                Services.Dialog.HideLoading();
+                return false;
+            });
+
+            //signalr
+            var hubConnection = new HubConnection("http://foodsearch.azurewebsites.net");
+            var hubProxy = hubConnection.CreateHubProxy("FoodSearchWebSocket");
+            hubProxy.On<bool>("UpdatePaymentStatus", UpdatePaymentStatus);
+            await hubConnection.Start();
+            await hubProxy.Invoke("Register", order.PaymentId);
         }
 
         private string _paymentUrl = "http://foodsearch.azurewebsites.net/home/blank";
@@ -44,20 +60,15 @@ namespace FoodSearch.Presentation.Mobile.Common.ViewModels
 
         public IFoodSearchServiceClient ServiceClient { get { return Client; } }
 
-        public async void OnUrlChanged(string url)
+        public void UpdatePaymentStatus(bool status)
         {
-            if (url == _pageSuccess)
-            {
+            Device.BeginInvokeOnMainThread(async () => {
                 await Services.Navigation.Navigate.PopToRootAsync();
-                await Services.Navigation.Navigate.PushAsync(ViewLocator.OrderSucceded);
-                return;
-            }
-
-            if (url == _pageCancel)
-            {
-                await Services.Navigation.Navigate.PopToRootAsync();
-                await Services.Navigation.Navigate.PushAsync(ViewLocator.OrderFailed);
-            }
+                if (status)
+                    await Services.Navigation.Navigate.PushAsync(ViewLocator.OrderSucceded);
+                else
+                    await Services.Navigation.Navigate.PushAsync(ViewLocator.OrderFailed);
+            });
         }
     }
 }

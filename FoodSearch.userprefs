@@ -1,18 +1,6 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.android_44" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="FoodSearch.Presentation.Mobile.Common\Services\NetworkAvailabilityService.cs">
-    <Files>
-      <File FileName="FoodSearch.Presentation.Mobile.Common\ViewModels\BasketViewModel.cs" Line="53" Column="53" />
-      <File FileName="FoodSearch.Presentation.Mobile.Common\Services\AuthorizationService.cs" Line="45" Column="45" />
-      <File FileName="FoodSearch.Presentation.Mobile.Common\Views\AuthorizeView.xaml" Line="36" Column="36" />
-      <File FileName="FoodSearch.Presentation.Mobile.Common\Services\DependencyResolver.cs" Line="29" Column="29" />
-      <File FileName="FoodSearch.Presentation.Mobile.Common\Views\MainView.xaml.cs" Line="1" Column="1" />
-      <File FileName="FoodSearch.Presentation.Mobile.Common\Services\NetworkAvailabilityService.cs" Line="22" Column="22" />
-      <File FileName="FoodSearch.Presentation.Mobile.Common\Services\Interfaces\IServiceLocator.cs" Line="34" Column="34" />
-      <File FileName="FoodSearch.Presentation.Mobile.Common\Services\ServiceLocator.cs" Line="81" Column="81" />
-      <File FileName="d:\projekty\PracaInzynierska\FoodSearch\FoodSearch.Presentation.Mobile.Common\ViewLocator.cs" Line="4" Column="4" />
-    </Files>
-  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.9f5cf426" />
+  <MonoDevelop.Ide.Workbench />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
       <Breakpoint file="c:\C#\Inzynierka\FoodSearch.Presentation.Mobile.Common\Views\RestaurantsListView.cs" line="35" column="1" />
@@ -28,8 +16,15 @@
       <Breakpoint file="C:\C#\Inzynierka\FoodSearch.Presentation.Mobile.Common\ViewModels\BasketViewModel.cs" line="137" column="1" />
       <Breakpoint file="C:\C#\Inzynierka\FoodSearch.Presentation.Mobile.Common\ViewModels\BasketViewModel.cs" line="138" column="1" />
       <Breakpoint file="D:\projekty\PracaInzynierska\FoodSearch\FoodSearch.Presentation.Mobile.Common\ViewModels\RegisterViewModel.cs" line="237" column="1" />
-      <Breakpoint file="D:\projekty\PracaInzynierska\FoodSearch\FoodSearch.Presentation.Mobile.Common\ViewModels\PaymentViewModel.cs" line="21" column="1" />
-      <Breakpoint file="D:\projekty\PracaInzynierska\FoodSearch\FoodSearch.Presentation.Mobile.Common\Views\MainView.xaml.cs" line="14" column="1" />
+      <Breakpoint file="D:\projekty\PracaInzynierska\FoodSearch\FoodSearch.Presentation.Mobile.Common\ViewModels\PaymentViewModel.cs" line="24" column="1" />
+      <Breakpoint file="D:\projekty\PracaInzynierska\FoodSearch\FoodSearch.Presentation.Mobile.Android\Renderers\CookieWebViewRenderer.cs" line="66" column="1" />
+      <Breakpoint file="D:\projekty\PracaInzynierska\FoodSearch\FoodSearch.Presentation.Mobile.Android\Renderers\CookieWebViewRenderer.cs" line="80" column="1" />
+      <Breakpoint file="D:\projekty\PracaInzynierska\FoodSearch\FoodSearch.Presentation.Mobile.Android\Renderers\CookieWebViewRenderer.cs" line="50" column="1" />
+      <Breakpoint file="D:\projekty\PracaInzynierska\FoodSearch\FoodSearch.Presentation.Mobile.Android\Renderers\CookieWebViewRenderer.cs" line="38" column="1" />
+      <Breakpoint file="D:\projekty\PracaInzynierska\FoodSearch\FoodSearch.Presentation.Mobile.Android\Renderers\CookieWebViewRenderer.cs" line="44" column="1" />
+      <Breakpoint file="D:\projekty\PracaInzynierska\FoodSearch\FoodSearch.Presentation.Mobile.Android\Renderers\CookieWebViewRenderer.cs" line="33" column="1" />
+      <Breakpoint file="D:\projekty\PracaInzynierska\FoodSearch\FoodSearch.Presentation.Mobile.Android\Renderers\CookieWebViewRenderer.cs" line="17" column="1" />
+      <Breakpoint file="D:\projekty\PracaInzynierska\FoodSearch\FoodSearch.Presentation.Mobile.Common\ViewModels\PaymentViewModel.cs" line="67" column="1" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />

@@ -10,8 +10,13 @@ namespace FoodSearch.Presentation.Mobile.Common
     {
         public OrderFailedViewModel(IFoodSearchServiceClient client, IServiceLocator serviceLocator) : base(client, serviceLocator)
         {
+            InitializeView();
         }
-        
+
+        private async void InitializeView()
+        {
+            await Client.Order.ClearBasket();
+        }
     }
 }
 

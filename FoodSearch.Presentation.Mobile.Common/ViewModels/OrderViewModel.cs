@@ -164,8 +164,12 @@ namespace FoodSearch.Presentation.Mobile.Common.ViewModels
                         Services.Dialog.HideLoading();
                         if (result.Succeed)
                         {
-                            await Services.Navigation.Navigate.PushModalAsync(ViewLocator.Payment);
-                            Services.Messaging.Send(result);
+                            await Services.Navigation.Navigate.PopToRootAsync();
+                            if (paymentType == FoodSearch.Service.Client.Contracts.PaymentTypes.PayPal)
+                            {
+                                await Services.Navigation.Navigate.PushAsync(ViewLocator.Payment);
+                                Services.Messaging.Send(result);
+                            } else await Services.Navigation.Navigate.PushAsync(ViewLocator.OrderSucceded);
                         } else {
                             await Services.Navigation.Navigate.PopToRootAsync();
                             await Services.Navigation.Navigate.PushAsync(ViewLocator.OrderFailed);

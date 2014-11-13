@@ -32,6 +32,19 @@ namespace FoodSearch.Presentation.Mobile.Android.Renderers
         {
             _cookieWebView = cookieWebView;
         }
+
+        public override void DoUpdateVisitedHistory(global::Android.Webkit.WebView view, string url, bool isReload)
+        {
+            base.DoUpdateVisitedHistory(view, url, isReload);
+            _cookieWebView.OnNavigating(new CookieNavigationEventArgs() { Url = url });
+        }
+
+        public override void OnLoadResource(global::Android.Webkit.WebView view, string url)
+        {
+            base.OnLoadResource(view, url);
+            _cookieWebView.OnNavigating(new CookieNavigationEventArgs() { Url = url });
+        }
+
         public override void OnPageStarted(global::Android.Webkit.WebView view, string url, Bitmap favicon)
         {
             base.OnPageStarted(view, url, favicon);
@@ -40,6 +53,14 @@ namespace FoodSearch.Presentation.Mobile.Android.Renderers
                     Url = url
                 });
         }
+
+        public override bool ShouldOverrideUrlLoading(global::Android.Webkit.WebView view, string url)
+        {
+            base.ShouldOverrideUrlLoading(view, url);
+            _cookieWebView.OnNavigating(new CookieNavigationEventArgs() { Url = url });
+            return false;
+        }
+
         public override void OnPageFinished(global::Android.Webkit.WebView view, string url)
         {
             var cookieHeader = CookieManager.Instance.GetCookie(url);

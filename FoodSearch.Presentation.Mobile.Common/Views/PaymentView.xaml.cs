@@ -12,23 +12,12 @@ namespace FoodSearch.Presentation.Mobile.Common.Views
 {	
 	public partial class PaymentView : ContentPage
 	{
-	    private readonly PaymentViewModel _vm;
-
 		public PaymentView ()
 		{
 			InitializeComponent ();
             NavigationPage.SetHasNavigationBar(this, true);
-            _vm = DependencyResolver.Current.Get<PaymentViewModel>();
-		    BindingContext = _vm;
-		    var webView = this.FindByName<CookieWebView>("webView");
-		    webView.Cookies = _vm.ServiceClient.Cookies.GetCookies(new Uri("http://foodsearch.azurewebsites.net"));
-            webView.Navigating += WebViewOnNavigating;
+            BindingContext = DependencyResolver.Current.Get<PaymentViewModel>();
 		}
-
-	    private void WebViewOnNavigating(object sender, CookieNavigationEventArgs args)
-	    {
-	        _vm.OnUrlChanged(args.Url);
-	    }
 	}
 }
 

@@ -66,11 +66,13 @@ namespace FoodSearch.Presentation.Web.Site.Controllers
             return Redirect(url);
         }
 
+        [AllowAnonymous]
         public ActionResult Success()
         {
             return View();
         }
 
+        [AllowAnonymous]
         public ActionResult Cancel(Guid paymentId)
         {
             _domain.Order.UpdatePayment(paymentId, PaymentStates.Cancelled);

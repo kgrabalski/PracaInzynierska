@@ -43,3 +43,4 @@
 /// <reference path="admin/siteadmin/controller/controllers.js" />
 /// <reference path="admin/siteadmin/controller/restaurantcontroller.js" />
 /// <reference path="admin/siteadmin/service/service.js" />
+/// <reference path="jquery.signalr-2.1.2.min.js" />
