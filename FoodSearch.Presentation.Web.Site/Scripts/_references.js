@@ -44,3 +44,6 @@
 /// <reference path="admin/siteadmin/controller/restaurantcontroller.js" />
 /// <reference path="admin/siteadmin/service/service.js" />
 /// <reference path="jquery.signalr-2.1.2.min.js" />
+/// <reference path="knockout-3.2.0.js" />
+/// <reference path="frontend/searchrestaurants.js" />
+/// <reference path="frontend/restaurantpage.js" />

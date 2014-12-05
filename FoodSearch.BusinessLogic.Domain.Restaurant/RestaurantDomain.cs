@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 
 using FoodSearch.BusinessLogic.Domain.Restaurant.Interface;
 using FoodSearch.BusinessLogic.Domain.Restaurant.Mapping;
@@ -26,11 +27,30 @@ namespace FoodSearch.BusinessLogic.Domain.Restaurant
             _provider = provider;
         }
 
-        public IEnumerable<RestaurantInfoDto> GetRestaurants(int addressId, DateTime date)
+        public IEnumerable<RestaurantInfoDto> GetRestaurants(int addressId, DateTime date, RestaurantFilter filter = null)
         {
             using (var rep = _provider.StoredProcedure)
             {
-                return rep.GetRestaurants(addressId, date).Map<IEnumerable<RestaurantInfoDto>>();
+                string filterXml = null;
+                if (filter != null)
+                {
+                    filterXml = new XElement("filter",
+                        new object[]
+                        {
+                            new XElement("cuisines", filter.Cuisines.Select(x => new XElement("cuisine", new XAttribute("id", x))))
+                        })
+                        .ToString();
+                }
+                return rep.GetRestaurants(addressId, date, filterXml).Map<IEnumerable<RestaurantInfoDto>>();
+            }
+        }
+
+        public string GetRestaurantName(Guid restaurantId)
+        {
+            using (var rep = _provider.GetRepository<Data.Mapping.Entities.Restaurant>())
+            {
+                Data.Mapping.Entities.Restaurant r;
+                return rep.TryGet(restaurantId, out r) ? r.Name : null;
             }
         }
 
@@ -72,12 +92,36 @@ namespace FoodSearch.BusinessLogic.Domain.Restaurant
             }
         }
 
-        public IEnumerable<OpinionDto> GetOpinions(Guid restaurantId, int page = 0, int pageSize = 10)
+        public bool AddOpinion(Guid restaurantId, Guid userId, int rating, string comment)
         {
             using (var rep = _provider.GetRepository<Opinion>())
             {
+                bool canCreate = rep.GetAll()
+                    .Where(x => x.RestaurantId == restaurantId && x.UserId == userId)
+                    .RowCount() == 0;
+                if (canCreate)
+                {
+                    return rep.Create<int>(new Opinion()
+                    {
+                        RestaurantId = restaurantId,
+                        UserId = userId,
+                        Rating = (short)rating,
+                        Comment = comment,
+                        CreateDate = DateTime.Now
+                    }) > 0;
+                }
+                return false;
+            }
+        }
+
+        public IEnumerable<OpinionDto> GetOpinions(Guid restaurantId, int rating = 0, int page = 0)
+        {
+            using (var rep = _provider.GetRepository<Opinion>())
+            {
+                int pageSize = 10;
                 return rep.GetAll()
-                    .Where(x => x.RestaurantId == restaurantId)
+                    .Where(x => x.RestaurantId == restaurantId &&
+                        (rating == 0 || x.Rating == rating))
                     .Skip(page*pageSize)
                     .Take(pageSize)
                     .List()
@@ -111,7 +155,7 @@ namespace FoodSearch.BusinessLogic.Domain.Restaurant
 
         public RestaurantRating GetRestaurantRating(Guid restaurantId)
         {
-            return new RestaurantRating();
+            return default(RestaurantRating);
         }
     }
 }

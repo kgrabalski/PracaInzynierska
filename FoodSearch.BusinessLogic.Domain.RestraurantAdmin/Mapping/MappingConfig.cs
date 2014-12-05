@@ -22,7 +22,7 @@ namespace FoodSearch.BusinessLogic.Domain.RestraurantAdmin.Mapping
                 .ForMember(x => x.Price, x => x.ResolveUsing(y => y.Price.ToString("0.00")))
                 .ForMember(x => x.DishGroup, x => x.ResolveUsing(y => y.DishGroup.Name));
 
-            string[] days = { "", "Poniedziełek", "Wtorek", "Środa", "Czwartek", "Piątek", "Sobota", "Niedziela" };
+            string[] days = { "", "Poniedziałek", "Wtorek", "Środa", "Czwartek", "Piątek", "Sobota", "Niedziela" };
             Mapper.CreateMap<Data.Mapping.Entities.OpeningHour, OpeningHour>()
                 .ForSourceMember(x => x.RestaurantId, x => x.Ignore())
                 .ForSourceMember(x => x.Restaurant, x => x.Ignore())

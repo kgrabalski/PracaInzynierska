@@ -127,6 +127,12 @@ html > /**/ body a.list-group-item {
     max-height: 146px;
 }
 
+.cuisineList {
+    -moz-column-count: 4;
+    -webkit-column-count: 4;
+    column-count: 4;
+}
+
 /*BASKET*/
 .no-padding {
     padding: 0;
@@ -207,4 +213,109 @@ html > /**/ body a.list-group-item {
     border-radius: 15px;
 }
 
+/*RESTAURANT PAGE*/
+#restaurantPage #map {
+    width: 350px;
+    height: 320px;
+    float: right;
+    margin-left: 30px;
+    margin-bottom: 30px;
+}
+
+#restaurantPage fieldset {
+    margin-top: 20px;
+}
+
+#restaurantPage .rating .glyphicon {font-size: 22px;}
+#restaurantPage .rating-num { margin-top:0;font-size: 54px; }
+#restaurantPage .progress { margin-bottom: 5px;}
+#restaurantPage .progress-bar { text-align: left; }
+#restaurantPage .rating-desc .col-md-3 {padding-right: 0;}
+#restaurantPage .sr-only { margin-left: 5px;overflow: visible;clip: auto; }
+
+.widget .panel-body { padding:0; }
+.widget .list-group { margin-bottom: 0; }
+.widget .panel-title { display:inline; }
+.widget .panel-heading { height: 55px;}
+.widget .label-info { float: right; }
+.widget li.list-group-item {border-radius: 0;border: 0;border-top: 1px solid #ddd;}
+.widget li.list-group-item:hover { background-color: rgba(86,61,124,.1); }
+.widget .mic-info { color: #666666;font-size: 11px; }
+.widget .action { margin-top:5px; }
+.widget .comment-text { font-size: 12px; }
+.widget .btn-block { border-top-left-radius:0;border-top-right-radius:0; }
+
 /*LIST DISH*/
+
+
+/*RESPONSIVE*/
+
+@media (max-width: 480px) {
+    .cuisineList {
+        -moz-column-count: 2;
+        -webkit-column-count: 2;
+        column-count: 2;
+    }
+    .well {
+        padding: 5px;
+    }
+    .logo-container {
+        margin: 0;
+        padding: 0;
+    }
+    .media>.pull-left {
+        margin-right: 0;
+    }
+    a.list-group-item {
+        min-height: 130px;
+    }
+    .restaurant-logo {
+        min-height: 0;
+        max-height: 100px;
+    }
+    .no-padding-left {
+        padding-right: 0;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+    .well {
+        padding: 19px;
+    }
+    .cuisineList {
+        -moz-column-count: 3;
+        -webkit-column-count: 3;
+        column-count: 3;
+    }
+    .no-padding-left {
+        padding-right: 0;
+    }
+    .logo-container {
+        margin: 0;
+        padding: 0;
+    }
+    .media>.pull-left {
+        margin-right: 0;
+    }
+    a.list-group-item {
+        min-height: 130px;
+    }
+    .restaurant-logo {
+        min-height: 0;
+        max-height: 100px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 989px) {
+    .restaurant-logo {
+        min-height: 0;
+        max-height: 146px;
+        max-width: 146px;
+    }
+}
+
+@media (min-width: 990px) {
+    .no-padding-left {
+        padding-right: 15px;
+    }
+}

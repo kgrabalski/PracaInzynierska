@@ -1,37 +1,66 @@
-﻿@model IEnumerable<FoodSearch.BusinessLogic.Domain.Restaurant.Models.RestaurantInfo>
+﻿@model FoodSearch.Presentation.Web.Site.Models.RestaurantsListModel
 
 @{
     ViewBag.Title = "FoodSearch.pl - restauracje";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
+@section ScriptSection
+{
+    <script type="text/javascript" src="~/Scripts/knockout-3.2.0.js"></script>
+    <script type="text/javascript" src="~/Scripts/Frontend/SearchRestaurants.js"></script>
+}
+
 <div class="row">
     <div class="col-lg-12 col-xs-12">
         <div class="well">
-            Filtry
+            <form data-bind="submit: DoSearch" data-addressid="@Model.AddressId" id="searchForm">
+                <fieldset>
+                    <legend class="text-center">Kuchnie:</legend>
+                    <ul class="cuisineList">
+                        <li>
+                            <input id="allCuisines" type="checkbox" checked="checked" />
+                            <label for="allCuisines">Wszystkie kuchnie</label>
+                        </li>
+                        @foreach (var c in Model.Cuisines)
+                        {
+                            <li>
+                                <input class="cuisine" id="@c.Id" type="checkbox" value="@c.Id" />
+                                <label for="@c.Id">@c.Name</label>
+                            </li>
+                        }
+                    </ul>
+                </fieldset>
+            </form>
         </div>
     </div>
 </div>
 <div class="row">
-
     <div class="col-lg-12 col-xs-12">
         <div class="well">
-            <div class="list-group">
-                @foreach (var ri in Model)
+            <div class="page-header">
+                <h1>Znalezione restauracje:</h1>
+            </div>
+            <div style="display: none" data-bind="visible: Restaurants().length == 0">
+                Brak restauracji spełniających wybrane kryteria
+            </div>
+            <div class="list-group" data-bind="template: {name: 'restaurantTemplate', foreach: Restaurants }">
+
+                @foreach (var ri in Model.Restaurants)
                 {
                     <a href="@Url.Action("RestaurantDishes", "Home", new {area = "", restaurantId = ri.RestaurantId})" class="list-group-item restaurant-item">
-                        <div class="media col-md-3">
+                        <div class="media col-sm-3 col-md-3 col-xs-3 logo-container">
                             <figure class="pull-left">
                                 <img class="img-responsive img-thumbnail restaurant-logo" src="@Url.Action("GetImage", "Home", new {area = "", imageId = ri.LogoId})" />
                             </figure>
                         </div>
-                        <div class="col-md-6">
+                        <div class="col-sm-5 col-md-6 col-xs-9">
                             <h4 class="list-group-item-heading">@ri.RestaurantName</h4>
                             <p class="list-group-item-text">
                                 @ri.Street @ri.Number
                                 <br />
                                 Otwarta od: @ri.TimeFrom do: @ri.TimeTo
-                                <br/><br/>
+                                <br /><br />
                                 @if (ri.MinimumOrder > 0)
                                 {
                                     @:Minimalna kwota zamówienia: @ri.MinimumOrder zł.
@@ -42,7 +71,7 @@
                                 }
                             </p>
                         </div>
-                        <div class="col-md-3 text-center">
+                        <div class="col-sm-4 col-md-3 text-center hidden-xs">
                             <div class="panel panel-default">
                                 <div class="panel-body text-center">
                                     <h1 class="rating-num">
@@ -71,3 +100,43 @@
     </div>
 
 </div>
+
+<script type="text/html" id="restaurantTemplate">
+    <a data-bind="attr: {'href': MenuUrl }" class="list-group-item restaurant-item">
+        <div class="media col-sm-3 col-md-3 col-xs-3 logo-container">
+            <figure class="pull-left">
+                <img class="img-responsive img-thumbnail restaurant-logo" data-bind="attr: {'src': LogoUrl}" />
+            </figure>
+        </div>
+        <div class="col-sm-5 col-md-6 col-xs-9">
+            <h4 class="list-group-item-heading" data-bind="text: RestaurantName"></h4>
+            <p class="list-group-item-text">
+                <span data-bind="text: Street"></span> 
+                <span data-bind="text: Number"></span>
+                <br />
+                Otwarta od: <span data-bind="text: TimeFrom"></span> do: <span data-bind="text: TimeTo"></span>
+                <br /><br />
+                <span data-bind="visible: MinimumOrder() > 0">
+                    Minimalna kwota zamówienia: <span data-bind="text: MinimumOrder"></span> zł.
+                </span>
+                <span data-bind="visible: MinimumOrder() == 0">
+                    Brak minimalnej kwoty zamówienia.
+                </span>
+            </p>
+        </div>
+        <div class="col-sm-4 col-md-3 text-center hidden-xs">
+            <div class="panel panel-default">
+                <div class="panel-body text-center">
+                    <h1 class="rating-num" data-bind="text: RestaurantRating"></h1>
+                    <div class="rating" data-bind="foreach: Stars">
+                        <span data-bind="css: StarStyle"></span>
+                    </div>
+                    <div>
+                        <span class="glyphicon glyphicon-user"></span><span data-bind="text: UsersVoted"></span> głosów
+                    </div>
+                </div>
+            </div>
+        </div>
+    </a>
+
+</script>

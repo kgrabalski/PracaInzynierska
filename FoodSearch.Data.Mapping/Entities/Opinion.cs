@@ -9,7 +9,8 @@ namespace FoodSearch.Data.Mapping.Entities
         public virtual Restaurant Restaurant { get; set; }
         public virtual short Rating { get; set; }
         public virtual string Comment { get; set; }
-        public virtual int UserId { get; set; }
+        public virtual Guid UserId { get; set; }
         public virtual User User { get; set; }
+        public virtual DateTime CreateDate { get; set; }
     }
 }

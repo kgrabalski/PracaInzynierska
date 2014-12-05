@@ -1,7 +1,7 @@
 ﻿@model FoodSearch.Presentation.Web.Site.Models.RestaurantDishesModel
 
 @{
-    ViewBag.Title = "RestaurantDishes";
+    ViewBag.Title = Model.RestaurantName;
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
@@ -10,19 +10,21 @@
         <div class="well col-lg-12 col-xs-12">
             <div>
                 <div class="col-lg-8 col-md-8 col-xs-12 no-padding-left">
-                    <h1 class="text-center">Lista serwowanych dań</h1>
+                    <h1 class="text-center">Menu restauracji</h1>
                         @foreach (var dg in Model.DishGroups)
                         {
-                            <h4>@dg.Name</h4>
+                            <fieldset>
+                                <legend>@dg.Name</legend>
+                            </fieldset>
                             <div class="list-group">
                                 @foreach (var d in dg.Dishes)
                                 {
                                     <div class="list-group-item">
                                         <div class="row">
-                                            <div class="col-lg-2 hidden-xs">
-                                                <span class="glyphicon glyphicon-cog text-center primary" style="font-size: 48px;"></span>
+                                            <div class="col-lg-2 col-xs-2">
+                                                <img src="~/Images/ic_action_maps_local_restaurant.png"/>
                                             </div>
-                                            <div class="col-lg-6 col-xs-12">
+                                            <div class="col-lg-6 col-xs-10">
                                                 <h4>@d.Name</h4>
 
                                             </div>

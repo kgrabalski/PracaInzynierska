@@ -3,7 +3,7 @@
   <sql-query name="GetRestaurants" read-only="true">
     <return class="FoodSearch.Data.Mapping.StoredProcedure.Results.RestaurantInfo" alias="ri"/>
     <![CDATA[ 
-    exec dbo.GetRestaurants :addressId, :date
+    exec dbo.GetRestaurants :addressId, :date, :filter
     ]]>
   </sql-query>
 </hibernate-mapping>

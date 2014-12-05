@@ -26,7 +26,8 @@ namespace FoodSearch.BusinessLogic.Domain.Restaurant.Mapping
 
             Mapper.CreateMap<Data.Mapping.Entities.Opinion, Opinion>()
                 .ForMember(x => x.Id, x => x.ResolveUsing(y => y.OpinionId))
-                .ForMember(x => x.UserName, x => x.ResolveUsing(y => string.Format("{0} {1}", y.User.FirstName, y.User.LastName)));
+                .ForMember(x => x.UserName, x => x.ResolveUsing(y => string.Format("{0} {1}", y.User.FirstName, y.User.LastName)))
+                .ForMember(x => x.Date, x => x.ResolveUsing(y => y.CreateDate.ToString("dd.MM.yyyy")));
 
             Mapper.AssertConfigurationIsValid();
         }

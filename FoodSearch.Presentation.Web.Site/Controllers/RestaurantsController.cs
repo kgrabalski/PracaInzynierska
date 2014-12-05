@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Web;
 using System.Web.Mvc;
 
@@ -31,11 +32,29 @@ namespace FoodSearch.Presentation.Web.Site.Controllers
             {
                 RestaurantDetails = _domain.Restaurant.GetRestaurantDetails(restaurantId.Value),
                 RestaurantRating = _domain.Restaurant.GetRestaurantRating(restaurantId.Value),
-                Opinions = _domain.Restaurant.GetOpinions(restaurantId.Value),
                 OpeningHours = _domain.RestaurantAdmin.GetOpeningHours(restaurantId.Value),
                 DishGroups = _domain.Restaurant.GetDishes(restaurantId.Value)
             };
-            return View();
+            return View(model);
+        }
+
+        [Authorize]
+        [HttpPost]
+        public ActionResult AddOpinion(UserInfo ui, OpinionModel op)
+        {
+            bool result = false;
+            if (ModelState.IsValid)
+            {
+                result = _domain.Restaurant.AddOpinion(op.RestaurantId, ui.UserId, op.Rating, op.Comment);
+            }
+            return new HttpStatusCodeResult(result ? HttpStatusCode.Created : HttpStatusCode.BadRequest);
+        }
+
+        [HttpPost]
+        public ActionResult GetOpinions(Guid restaurantId, int rating = 0, int page = 0)
+        {
+            var opinions = _domain.Restaurant.GetOpinions(restaurantId, rating, page);
+            return Json(opinions);
         }
     }
 }

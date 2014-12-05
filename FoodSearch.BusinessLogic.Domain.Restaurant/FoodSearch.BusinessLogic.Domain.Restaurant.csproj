@@ -58,6 +58,7 @@
     <Compile Include="Models\Opinion.cs" />
     <Compile Include="Models\PartnerRestaurant.cs" />
     <Compile Include="Models\RestaurantDetails.cs" />
+    <Compile Include="Models\RestaurantFilter.cs" />
     <Compile Include="Models\RestaurantInfo.cs" />
     <Compile Include="Models\RestaurantRating.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

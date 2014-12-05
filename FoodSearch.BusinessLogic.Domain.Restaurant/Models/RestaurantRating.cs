@@ -12,10 +12,10 @@ namespace FoodSearch.BusinessLogic.Domain.Restaurant.Models
         public int UsersVoted { get; set; }
         public float TotalRating { get; set; }
         public int StarsCount { get; set; }
-        public float Percentage1Star { get; set; }
-        public float Percentage2Stars { get; set; }
-        public float Percentage3Stars { get; set; }
-        public float Percentage4Stars { get; set; }
-        public float Percentage5Stars { get; set; }
+        public int Percentage1Star { get; set; }
+        public int Percentage2Stars { get; set; }
+        public int Percentage3Stars { get; set; }
+        public int Percentage4Stars { get; set; }
+        public int Percentage5Stars { get; set; }
     }
 }

@@ -15,11 +15,13 @@ namespace FoodSearch.Data.Mapping.Repository
             _session = sessionSource.Session;
         }
 
-        public IEnumerable<RestaurantInfo> GetRestaurants(int addressId, DateTime date)
+        public IEnumerable<RestaurantInfo> GetRestaurants(int addressId, DateTime date, string filterXml)
         {
             var query = _session.GetNamedQuery("GetRestaurants");
             query.SetInt32("addressId", addressId);
             query.SetDateTime("date", date);
+            if (string.IsNullOrEmpty(filterXml)) query.SetParameter("filter", null, NHibernateUtil.String);
+            else query.SetString("filter", filterXml);
             return query.List<RestaurantInfo>();
         }
 

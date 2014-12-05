@@ -14,18 +14,18 @@
                 @foreach (var ri in Model)
                 {
                     <a href="@Url.Action("Page", "Restaurants", new {area = "", restaurantId = ri.RestaurantId})" class="list-group-item restaurant-item">
-                        <div class="media col-md-3">
-                            <figure class="pull-left">
+                        <div class="media col-sm-3 col-md-3 col-xs-3 logo-container">
+                            <figure class=" pull-left">
                                 <img class="img-responsive img-thumbnail restaurant-logo" src="@Url.Action("GetImage", "Home", new {area = "", imageId = ri.LogoId})" />
                             </figure>
-                        </div>
-                        <div class="col-md-6">
+                    </div>
+                        <div class="col-sm-5 col-md-6 col-xs-9">
                             <h4 class="list-group-item-heading">@ri.RestaurantName</h4>
                             <p class="list-group-item-text">
                                 @ri.Street @ri.Number
                             </p>
                         </div>
-                        <div class="col-md-3 text-center">
+                        <div class="col-sm-4 col-md-3 text-center hidden-xs">
                             <div class="panel panel-default">
                                 <div class="panel-body text-center">
                                     <h1 class="rating-num">

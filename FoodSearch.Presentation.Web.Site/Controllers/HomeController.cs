@@ -4,6 +4,7 @@ using FoodSearch.BusinessLogic.Domain.FoodSearch.Interface;
 using System;
 using System.Web.Mvc;
 
+using FoodSearch.BusinessLogic.Domain.Restaurant.Models;
 using FoodSearch.BusinessLogic.Domain.User.Models;
 using FoodSearch.Presentation.Web.Site.Models;
 
@@ -32,8 +33,25 @@ namespace FoodSearch.Presentation.Web.Site.Controllers
         [HttpPost]
         public ActionResult Restaurants(int addressId)
         {
-            var restaurants = _domain.Restaurant.GetRestaurants(addressId, DateTime.Now);
+            var restaurants = new RestaurantsListModel()
+            {
+                AddressId = addressId,
+                Restaurants = _domain.Restaurant.GetRestaurants(addressId, DateTime.Now),
+                Cuisines = _domain.RestaurantAdmin.GetCuisines()
+            };
             return View(restaurants);
+        }
+
+        [HttpPost]
+        public ActionResult GetRestaurants(int addressId, int[] cuisineId)
+        {
+            RestaurantFilter filter = null;
+            if (cuisineId != null)
+            {
+                filter = new RestaurantFilter() {Cuisines = cuisineId};
+            }
+            var restaurants = _domain.Restaurant.GetRestaurants(addressId, DateTime.Now, filter);
+            return Json(restaurants, JsonRequestBehavior.DenyGet);
         }
 
         public ActionResult GetImage(int imageId)
@@ -46,10 +64,14 @@ namespace FoodSearch.Presentation.Web.Site.Controllers
         {
             if (restaurantId.HasValue)
             {
+                string restaurantName = _domain.Restaurant.GetRestaurantName(restaurantId.Value);
+                if (string.IsNullOrEmpty(restaurantName)) return HttpNotFound();
+
                 basket.CurrentRestaurant = restaurantId.Value;
                 var dishes = _domain.Restaurant.GetDishes(restaurantId.Value);
                 var model = new RestaurantDishesModel()
                 {
+                    RestaurantName = restaurantName,
                     DishGroups = dishes,
                     Basket = basket
                 };

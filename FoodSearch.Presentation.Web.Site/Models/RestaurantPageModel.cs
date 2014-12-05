@@ -14,7 +14,6 @@ namespace FoodSearch.Presentation.Web.Site.Models
     {
         public RestaurantDetails RestaurantDetails { get; set; }
         public IEnumerable<DishGroup> DishGroups { get; set; }
-        public IEnumerable<Opinion> Opinions { get; set; }
         public IEnumerable<OpeningHour> OpeningHours { get; set; }
         public RestaurantRating RestaurantRating { get; set; }
     }

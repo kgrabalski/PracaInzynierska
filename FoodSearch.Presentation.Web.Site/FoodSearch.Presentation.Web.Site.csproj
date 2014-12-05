@@ -152,9 +152,6 @@
     <Folder Include="Areas\User\Controllers\" />
     <Folder Include="Areas\User\Models\" />
     <Folder Include="Areas\User\Views\Shared\" />
-    <Folder Include="Views\Address\" />
-    <Folder Include="Views\Basket\" />
-    <Folder Include="Views\OrderMobile\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
@@ -184,7 +181,6 @@
     <Compile Include="Areas\SiteAdmin\SiteAdminAreaRegistration.cs" />
     <Compile Include="Areas\User\UserAreaRegistration.cs" />
     <Compile Include="Controllers\AccountController.cs" />
-    <Compile Include="Controllers\AddObjectController.cs" />
     <Compile Include="Controllers\AddressController.cs" />
     <Compile Include="Controllers\BasketController.cs" />
     <Compile Include="Controllers\ContactController.cs" />
@@ -207,9 +203,11 @@
     <Compile Include="Models\BasketItem.cs" />
     <Compile Include="Models\ContactModel.cs" />
     <Compile Include="Models\LoginModel.cs" />
+    <Compile Include="Models\OpinionModel.cs" />
     <Compile Include="Models\RegisterModel.cs" />
     <Compile Include="Models\RestaurantDishesModel.cs" />
     <Compile Include="Models\RestaurantPageModel.cs" />
+    <Compile Include="Models\RestaurantsListModel.cs" />
     <Compile Include="Models\RestaurantUser.cs" />
     <Compile Include="Models\ShippingModel.cs" />
     <Compile Include="Models\UserInfo.cs" />
@@ -245,6 +243,10 @@
     <Content Include="Content\Selectize\js\selectize.min.js" />
     <Content Include="Content\Selectize\js\standalone\selectize.js" />
     <Content Include="Content\Selectize\js\standalone\selectize.min.js" />
+    <Content Include="Images\ic_action_avg.png" />
+    <Content Include="Images\ic_action_bad.png" />
+    <Content Include="Images\ic_action_good.png" />
+    <Content Include="Images\ic_action_maps_local_restaurant.png" />
     <Content Include="Images\link-arrow.png" />
     <Content Include="Scripts\Admin\Common\directives.js" />
     <Content Include="Scripts\Admin\Common\services.js" />
@@ -287,6 +289,8 @@
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\Frontend\Delivery.js" />
     <Content Include="Scripts\Frontend\HomePage.js" />
+    <Content Include="Scripts\Frontend\RestaurantPage.js" />
+    <Content Include="Scripts\Frontend\SearchRestaurants.js" />
     <Content Include="Scripts\html5shiv-printshiv.js" />
     <Content Include="Scripts\html5shiv-printshiv.min.js" />
     <Content Include="Scripts\html5shiv.js" />
@@ -1027,6 +1031,8 @@
     <Content Include="Scripts\jquery.cookie.js" />
     <Content Include="Scripts\jquery.signalR-2.1.2.js" />
     <Content Include="Scripts\jquery.signalR-2.1.2.min.js" />
+    <Content Include="Scripts\knockout-3.2.0.debug.js" />
+    <Content Include="Scripts\knockout-3.2.0.js" />
     <Content Include="Scripts\selectize.js" />
     <Content Include="Scripts\selectize.min.js" />
     <Content Include="favicon.ico" />
@@ -1126,7 +1132,6 @@
     <Content Include="Views\Regulation\Index.cshtml" />
     <Content Include="Views\Restaurants\Index.cshtml" />
     <Content Include="Views\Contact\Index.cshtml" />
-    <Content Include="Views\AddObject\Index.cshtml" />
     <Content Include="Views\Account\Register.cshtml" />
     <Content Include="Scripts\version.json" />
     <Content Include="Scripts\jquery-2.1.1.min.map" />
