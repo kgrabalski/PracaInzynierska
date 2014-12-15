@@ -50,6 +50,13 @@ namespace FoodSearch.Data.Mapping.Repository
             return query.List<PartnerRestaurant>();
         }
 
+        public RestaurantRating GetRestaurantRating(Guid restaurantId)
+        {
+            var query = _session.GetNamedQuery("GetRestaurantRating");
+            query.SetGuid("restaurantId", restaurantId);
+            return query.UniqueResult<RestaurantRating>();
+        }
+
         public void Dispose()
         {
             _session.Dispose();

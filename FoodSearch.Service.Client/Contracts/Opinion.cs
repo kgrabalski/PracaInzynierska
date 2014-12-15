@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace FoodSearch.BusinessLogic.Domain.Restaurant.Models
+namespace FoodSearch.Service.Client.Contracts
 {
     public class Opinion
     {

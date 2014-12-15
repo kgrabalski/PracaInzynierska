@@ -46,6 +46,7 @@ namespace FoodSearch.Presentation.Web.Site.Controllers
         public ActionResult Logout()
         {
             FormsAuthentication.SignOut();
+            Session["UserInfo"] = null;
             return RedirectToAction("Index", "Home");
         }
 
@@ -89,6 +90,28 @@ namespace FoodSearch.Presentation.Web.Site.Controllers
                     ModelState.AddModelError("Email", "Podany adres email istnieje już w bazie");
                 }
             return View(model);
+        }
+
+        public ActionResult ForgottenPassword()
+        {
+            return View(new ResetPasswordModel());
+        }
+
+        [HttpPost]
+        public ActionResult ForgottenPassword(ResetPasswordModel model)
+        {
+            if (ModelState.IsValid)
+            {
+                Guid requestId = _domain.User.CreatePasswordResetRequest(model.Email);
+                //todo: wysłanie maila
+                model.RequestCreated = true;
+            }
+            return View(model);
+        }
+
+        public ActionResult ResetPassword(Guid? requestId)
+        {
+            return HttpNotFound();
         }
     }
 }

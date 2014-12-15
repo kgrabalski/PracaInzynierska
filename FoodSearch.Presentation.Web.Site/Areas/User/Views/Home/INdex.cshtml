@@ -1,0 +1,36 @@
+﻿
+@{
+    ViewBag.Title = "Panel użytkownika";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Panel użytkownika</h2>
+
+<div class="row">
+    <div class="col-lg-12 col-xs-12" id="userPage">
+        <div class="well">
+            <div class="page-header">
+                <h1>Panel użytkowniak</h1>
+            </div>
+            <div role="tabpanel">
+                <ul class="nav nav-tabs" role="tablist">
+                    <li role="presentation" class="active">
+                        <a href="#info" aria-controls="info" role="tab" data-toggle="tab">Dane użytkownika</a>
+                    </li>
+                    <li role="presentation" class="active">
+                        <a href="#orders" aria-controls="orders" role="tab" data-toggle="tab">Historia zamówień</a>
+                    </li>
+                </ul>
+                
+                <div class="tab-content">
+                    <div role="tabpanel" class="tab-pane fade in active" id="info">
+                        @{Html.RenderPartial("_UserData");}
+                    </div>
+                    <div role="tabpanel" class="tab-pane fade">
+                        @{Html.RenderPartial("_UserOrders");}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

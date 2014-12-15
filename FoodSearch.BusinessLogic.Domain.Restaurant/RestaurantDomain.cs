@@ -15,6 +15,7 @@ using DishDto = FoodSearch.BusinessLogic.Domain.Restaurant.Models.Dish;
 using Opinion = FoodSearch.Data.Mapping.Entities.Opinion;
 using OpinionDto = FoodSearch.BusinessLogic.Domain.Restaurant.Models.Opinion;
 using RestaurantInfoDto = FoodSearch.BusinessLogic.Domain.Restaurant.Models.RestaurantInfo;
+using RestaurantRatingDto = FoodSearch.BusinessLogic.Domain.Restaurant.Models.RestaurantRating;
 
 namespace FoodSearch.BusinessLogic.Domain.Restaurant
 {
@@ -122,6 +123,7 @@ namespace FoodSearch.BusinessLogic.Domain.Restaurant
                 return rep.GetAll()
                     .Where(x => x.RestaurantId == restaurantId &&
                         (rating == 0 || x.Rating == rating))
+                    .OrderBy(x => x.CreateDate).Desc
                     .Skip(page*pageSize)
                     .Take(pageSize)
                     .List()
@@ -153,9 +155,22 @@ namespace FoodSearch.BusinessLogic.Domain.Restaurant
             }
         }
 
-        public RestaurantRating GetRestaurantRating(Guid restaurantId)
+        public RestaurantRatingDto GetRestaurantRating(Guid restaurantId)
         {
-            return default(RestaurantRating);
+            using (var rep = _provider.StoredProcedure)
+            {
+                return rep.GetRestaurantRating(restaurantId).Map<RestaurantRatingDto>();
+            }
+        }
+
+        public bool CheckUserCommentExists(Guid userId, Guid restaurantId)
+        {
+            using (var rep = _provider.GetRepository<Opinion>())
+            {
+                return rep.GetAll()
+                    .Where(x => x.UserId == userId && x.RestaurantId == restaurantId)
+                    .RowCount() > 0;
+            }
         }
     }
 }

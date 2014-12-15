@@ -1,6 +1,15 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.9f5cf426" />
-  <MonoDevelop.Ide.Workbench />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.android_44" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="FoodSearch.Presentation.Mobile.Common\Views\OrderView.xaml">
+    <Files>
+      <File FileName="FoodSearch.Presentation.Mobile.Android\Assets\AboutAssets.txt" Line="1" Column="1" />
+      <File FileName="FoodSearch.Presentation.Mobile.Android\MainActivity.cs" Line="1" Column="1" />
+      <File FileName="FoodSearch.Presentation.Mobile.Common\Views\MainView.xaml" Line="1" Column="1" />
+      <File FileName="FoodSearch.Presentation.Mobile.Common\Views\MainView.xaml.cs" Line="4" Column="4" />
+      <File FileName="FoodSearch.Presentation.Mobile.Common\Views\RestaurantMenuView.xaml" Line="1" Column="1" />
+      <File FileName="FoodSearch.Presentation.Mobile.Common\Views\OrderView.xaml" Line="1" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
       <Breakpoint file="c:\C#\Inzynierka\FoodSearch.Presentation.Mobile.Common\Views\RestaurantsListView.cs" line="35" column="1" />

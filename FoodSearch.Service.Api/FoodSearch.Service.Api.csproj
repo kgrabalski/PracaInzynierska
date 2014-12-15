@@ -110,11 +110,14 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Areas\Core\Controllers\DishController.cs" />
+    <Compile Include="Areas\Core\Controllers\OpinionController.cs" />
     <Compile Include="Areas\Core\Controllers\RestaurantController.cs" />
+    <Compile Include="Areas\Core\Controllers\RestaurantRating.cs" />
     <Compile Include="Areas\Core\CoreAreaRegistration.cs" />
     <Compile Include="Areas\Core\Controllers\CityController.cs" />
     <Compile Include="Areas\Core\Controllers\LogoController.cs" />
     <Compile Include="Areas\Core\Controllers\StreetController.cs" />
+    <Compile Include="Areas\Core\Models\OpinionModel.cs" />
     <Compile Include="Areas\Order\Controllers\BasketController.cs" />
     <Compile Include="Areas\Order\Controllers\CurrentRestaurantController.cs" />
     <Compile Include="Areas\Order\Controllers\DeliveryAddressController.cs" />
@@ -159,7 +162,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Areas\Core\Models\" />
     <Folder Include="Areas\Core\Views\Shared\" />
     <Folder Include="Areas\Order\Views\Basket\" />
     <Folder Include="Areas\Order\Views\Shared\" />

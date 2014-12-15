@@ -10,5 +10,6 @@ namespace FoodSearch.Data.Mapping.Interface
         int CreateOpeningHour(Guid restaurantId, int day, TimeSpan timeFrom, TimeSpan timeTo);
         IEnumerable<StreetResult> GetStreets(int cityId, string query);
         IEnumerable<PartnerRestaurant> GetPartnerRestaurants();
+        RestaurantRating GetRestaurantRating(Guid restaurantId);
     }
 }

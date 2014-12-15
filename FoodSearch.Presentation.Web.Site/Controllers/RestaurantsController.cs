@@ -31,10 +31,14 @@ namespace FoodSearch.Presentation.Web.Site.Controllers
             var model = new RestaurantPageModel
             {
                 RestaurantDetails = _domain.Restaurant.GetRestaurantDetails(restaurantId.Value),
-                RestaurantRating = _domain.Restaurant.GetRestaurantRating(restaurantId.Value),
                 OpeningHours = _domain.RestaurantAdmin.GetOpeningHours(restaurantId.Value),
-                DishGroups = _domain.Restaurant.GetDishes(restaurantId.Value)
+                DishGroups = _domain.Restaurant.GetDishes(restaurantId.Value),
+                UserCommented = false
             };
+            if (User.Identity.IsAuthenticated)
+            {
+                model.UserCommented = _domain.Restaurant.CheckUserCommentExists(_domain.User.GetUserId(User.Identity.Name), restaurantId.Value);
+            }
             return View(model);
         }
 
@@ -55,6 +59,13 @@ namespace FoodSearch.Presentation.Web.Site.Controllers
         {
             var opinions = _domain.Restaurant.GetOpinions(restaurantId, rating, page);
             return Json(opinions);
+        }
+
+        [HttpPost]
+        public ActionResult GetRestaurantRating(Guid restaurantId)
+        {
+            var rating = _domain.Restaurant.GetRestaurantRating(restaurantId);
+            return Json(rating);
         }
     }
 }

@@ -1,0 +1,166 @@
+﻿<fieldset>
+    <legend>Podsumowanie</legend>
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="well well-sm">
+                <div class="row">
+                    <div class="col-xs-4 col-md-6 text-center">
+                        <h1 class="rating-num" data-bind="text: TotalRating"></h1>
+                        <div class="rating" data-bind="foreach: RestaurantStars">
+                            <span data-bind="css: StarStyle"></span>
+                        </div>
+                        <div>
+                            <a href="#" data-bind="click: getOpinionsAll">
+                                <span class="glyphicon glyphicon-user"></span>
+                                <span data-bind="text: UsersVoted"></span> głosów
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-xs-8 col-md-6">
+                        <div class="row rating-desc">
+                            <div class="col-xs-3 col-md-3 text-right">
+                                <a href="#" data-bind="click: getOpinions5">
+                                    <span class="glyphicon glyphicon-star"></span>5
+                                </a>
+                            </div>
+                            <div class="col-xs-8 col-md-9">
+                                <div class="progress progress-striped">
+                                    <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="20"
+                                         aria-valuemin="0" aria-valuemax="100" data-bind="style: {width: function(){ return Percentage5Star() + '%';}()}">
+                                        <span class="sr-only"><span data-bind="text: Percentage5Star"></span>%</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xs-3 col-md-3 text-right">
+                                <a href="#" data-bind="click: getOpinions4">
+                                    <span class="glyphicon glyphicon-star"></span>4
+                                </a>
+                            </div>
+                            <div class="col-xs-8 col-md-9">
+                                <div class="progress">
+                                    <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="20"
+                                         aria-valuemin="0" aria-valuemax="100" data-bind="style: {width: function(){ return Percentage4Star() + '%';}()}">
+                                        <span class="sr-only"><span data-bind="text: Percentage4Star"></span>%</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xs-3 col-md-3 text-right">
+                                <a href="#" data-bind="click: getOpinions3">
+                                    <span class="glyphicon glyphicon-star"></span>3
+                                </a>
+                            </div>
+                            <div class="col-xs-8 col-md-9">
+                                <div class="progress">
+                                    <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="20"
+                                         aria-valuemin="0" aria-valuemax="100" data-bind="style: {width: function(){ return Percentage3Star() + '%';}()}">
+                                        <span class="sr-only"><span data-bind="text: Percentage3Star"></span>%</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xs-3 col-md-3 text-right">
+                                <a href="#" data-bind="click: getOpinions2">
+                                    <span class="glyphicon glyphicon-star"></span>2
+                                </a>
+                            </div>
+                            <div class="col-xs-8 col-md-9">
+                                <div class="progress">
+                                    <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="20"
+                                         aria-valuemin="0" aria-valuemax="100" data-bind="style: {width: function(){ return Percentage2Star() + '%';}()}">
+                                        <span class="sr-only"><span data-bind="text: Percentage2Star"></span>%</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xs-3 col-md-3 text-right">
+                                <a href="#" data-bind="click: getOpinions1">
+                                    <span class="glyphicon glyphicon-star"></span>1
+                                </a>
+                            </div>
+                            <div class="col-xs-8 col-md-9">
+                                <div class="progress">
+                                    <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="80"
+                                         aria-valuemin="0" aria-valuemax="100" data-bind="style: {width: function(){ return Percentage1Star() + '%';}()}">
+                                        <span class="sr-only"><span data-bind="text: Percentage1Star"></span>%</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</fieldset>
+
+@if (!User.Identity.IsAuthenticated)
+{
+    <div class="alert alert-info" role="alert">
+        <span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>
+        Musisz być zalogowany aby dodać opinię
+    </div>
+}
+else if (User.Identity.IsAuthenticated && Model.UserCommented)
+{
+    <div class="alert alert-info" role="alert">
+        <span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>
+        Już dodałeś opinię o tej restauracji
+    </div>
+}
+<fieldset>
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <div class="panel panel-default widget">
+                @if (User.Identity.IsAuthenticated && !Model.UserCommented)
+                {
+                    <div class="panel-heading" data-bind="visible: NewVisible">
+                        <span class="glyphicon glyphicon-user"></span>
+                        <h3 class="panel-title">
+                            Dodaj opinię
+                        </h3>
+                        <form role="form" data-bind="submit: addOpinion">
+                            <div class="box-body">
+                                <div class="form-group">
+                                    <label class="control-label">Ocena:</label>
+                                    <div class="starrr" data-rating="3"></div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="addComment" class="control-label">Komentarz:</label>
+                                    <textarea class="form-control" id="addComment" data-bind="value: NewComment"></textarea>
+                                </div>
+                                <div class="form-group">
+                                    <input type="submit" class="form-right btn btn-primary " value="Dodaj opinię" />
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                }
+                <div class="panel-heading">
+                    <span class="glyphicon glyphicon-comment"></span>
+                    <h3 class="panel-title">
+                        Ostatnie opinie
+                    </h3>
+                </div>
+                <div class="panel-body">
+                    <ul class="list-group" data-bind="foreach: Opinions">
+                        <li class="list-group-item">
+                            <div class="row">
+                                <div class="col-xs-2 col-md-1">
+                                    <img data-bind="attr: {'src': IconUrl}" class="img-circle img-responsive" alt="" />
+                                </div>
+                                <div class="col-xs-10 col-md-11">
+                                    <div>
+                                        <div class="mic-info">
+                                            Przez: <a href="#" data-bind="text: UserName"></a> dnia <span data-bind="text: Date"></span>
+                                        </div>
+                                    </div>
+                                    <div class="comment-text" data-bind="text: Comment"></div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <a href="#" class="btn btn-primary btn-sm btn-block" role="button" data-bind="click: getMoreOpinions"><span class="glyphicon glyphicon-refresh"></span> Więcej</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</fieldset>
+

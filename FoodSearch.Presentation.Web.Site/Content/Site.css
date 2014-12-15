@@ -21,7 +21,7 @@ input::-ms-reveal {
 }
 
 *:focus {
-	outline: none;
+	outline: none !important;
 }
 
 /*NAVBAR*/
@@ -226,26 +226,82 @@ html > /**/ body a.list-group-item {
     margin-top: 20px;
 }
 
-#restaurantPage .rating .glyphicon {font-size: 22px;}
-#restaurantPage .rating-num { margin-top:0;font-size: 54px; }
-#restaurantPage .progress { margin-bottom: 5px;}
-#restaurantPage .progress-bar { text-align: left; }
-#restaurantPage .rating-desc .col-md-3 {padding-right: 0;}
-#restaurantPage .sr-only { margin-left: 5px;overflow: visible;clip: auto; }
+#restaurantPage .rating .glyphicon {
+    font-size: 22px;
+}
+#restaurantPage .rating-num {
+    margin-top: 0;
+    font-size: 54px;
+}
+#restaurantPage .progress {
+    margin-bottom: 5px;
+}
+#restaurantPage .progress-bar {
+    text-align: left;
+    color: black;
+}
+#restaurantPage .rating-desc .col-md-3 {
+    padding-right: 0;
+}
+#restaurantPage .sr-only {
+    margin-left: 5px;
+    overflow: visible;
+    clip: auto;
+}
 
-.widget .panel-body { padding:0; }
-.widget .list-group { margin-bottom: 0; }
-.widget .panel-title { display:inline; }
-.widget .panel-heading { height: 55px;}
-.widget .label-info { float: right; }
-.widget li.list-group-item {border-radius: 0;border: 0;border-top: 1px solid #ddd;}
-.widget li.list-group-item:hover { background-color: rgba(86,61,124,.1); }
-.widget .mic-info { color: #666666;font-size: 11px; }
-.widget .action { margin-top:5px; }
-.widget .comment-text { font-size: 12px; }
-.widget .btn-block { border-top-left-radius:0;border-top-right-radius:0; }
+.widget .panel-body {
+    padding: 0;
+}
+.widget .list-group {
+    margin-bottom: 0;
+}
+.widget .panel-title {
+    display: inline;
+}
+.widget .label-info {
+    float: right;
+}
+.widget li.list-group-item {
+    border-radius: 0;
+    border: 0;
+    border-top: 1px solid #ddd;
+}
+    .widget li.list-group-item:hover {
+        background-color: #563d7c;
+        background-color: rgba(86,61,124,.1);
+    }
+
+.widget .mic-info {
+    color: #666666;
+    font-size: 11px;
+}
+.widget .action {
+    margin-top: 5px;
+}
+.widget .comment-text {
+    font-size: 12px;
+}
+.widget .btn-block {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+.starrr {
+    display: inline-block;
+}
+    .starrr i {
+        font-size: 16px;
+        padding: 0 1px;
+        cursor: pointer;
+        color: #ffd119;
+    }
 
 /*LIST DISH*/
+
+/*USER PANEL*/
+#userPage fieldset {
+    margin-top: 20px;
+}
 
 
 /*RESPONSIVE*/

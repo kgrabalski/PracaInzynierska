@@ -5,6 +5,12 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
+@section ScriptSection
+{
+    <script type="text/javascript" src="~/Scripts/knockout-3.2.0.js"></script>
+    <script type="text/javascript" src="~/Scripts/Frontend/Basket.js"></script>
+}
+
 <div class="row">
     <div class="col-lg-12 col-xs-12">
         <div class="well col-lg-12 col-xs-12">
@@ -30,14 +36,11 @@
                                             </div>
                                             <div class="col-lg-4 col-xs-12">
                                                 <h4 class="text-center">@d.Price.ToString("0.00") zł.</h4>
-                                                <form method="POST" action="@Url.Action("Add", "Basket")">
-                                                    <input type="hidden" name="returnUrl" value="@Request.Url.PathAndQuery"/>
-                                                    <input type="hidden" name="dishId" value="@d.Id"/>
-                                                    <button type="submit" class="btn btn-primary btn-block">
-                                                        <span class="glyphicon glyphicon-shopping-cart"></span>
-                                                        Zamów
-                                                    </button>
-                                                </form>
+                                                <button type="button" class="btn btn-primary btn-block" id="@d.Id"
+                                                        data-bind="click: addToBasket">
+                                                    <span class="glyphicon glyphicon-shopping-cart"></span>
+                                                    Zamów
+                                                </button>
                                                 
                                             </div>
                                         </div>
@@ -46,7 +49,7 @@
                             </div>
                         }
                 </div>
-                <div class="col-lg-4 col-md-4 col-xs-12 no-padding">
+                <div class="col-lg-4 col-md-4 col-xs-12 no-padding" id="basketContainer">
                     <div class="panel panel-info">
                         <div class="panel-heading">
                             <div class="panel-title">
@@ -57,77 +60,57 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="panel-body">
-                            @if (Model.Basket.Items.Count > 0)
-                            {
-                                foreach (var item in Model.Basket.Items)
-                                {
-                                    <div class="row">
-                                        <div class="col-lg-12 col-xs-12">
-                                            <h4 class="product-name"><strong>@item.Name</strong></h4>
+                        <div class="panel-body" >
+                            <div data-bind="foreach: BasketItems">
+                                <div class="row">
+                                    <div class="col-lg-12 col-xs-12">
+                                        <h4 class="product-name"><strong data-bind="text: Name"></strong></h4>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xs-6">
+                                        <h6><strong data-bind="text: Price"></strong></h6>
+                                    </div>
+                                    <div class="col-xs-6">
+                                        <div class="input-group">
+                                            <span class="input-group-btn">
+                                                <button type="button" class="btn btn-danger" data-bind="click: $root.decrementItemCount">
+                                                    <span class="glyphicon glyphicon-minus"></span>
+                                                </button>
+                                            </span>
+                                            <input type="text" class="form-control text-center" id="count" data-bind="value: Count" />
+
+                                            <span class="input-group-btn">
+                                                <button type="submit" class="btn btn-success" data-bind="click: $root.incrementItemCount">
+                                                    <span class="glyphicon glyphicon-plus"></span>
+                                                </button>
+                                            </span>
                                         </div>
                                     </div>
-                                    <div class="row">
-                                        <div class="col-xs-6">
-                                            <h6><strong>@item.Price.ToString("0.00") zł.</strong></h6>
-                                        </div>
-                                        <div class="col-xs-6">
-                                            <div class="input-group">
-                                                <form method="POST" class="form-left" action="@Url.Action("Remove", "Basket")">
-                                                    <input type="hidden" name="returnUrl" value="@Request.Url.PathAndQuery" />
-                                                    <input type="hidden" name="dishId" value="@item.DishId" />
-                                                    <span class="input-group-btn">
-
-                                                        <button type="submit" class="btn btn-danger">
-                                                            <span class="glyphicon glyphicon-minus"></span>
-                                                        </button>
-                                                    </span>
-                                                </form>
-                                                
-                                                <input type="text" class="form-control text-center" id="count" value="@item.Count" />
-                                                
-                                                <form method="POST" class="form-right" action="@Url.Action("Add", "Basket")">
-                                                    <input type="hidden" name="returnUrl" value="@Request.Url.PathAndQuery" />
-                                                    <input type="hidden" name="dishId" value="@item.DishId" />
-                                                    <span class="input-group-btn">
-
-                                                        <button type="submit" class="btn btn-success">
-                                                            <span class="glyphicon glyphicon-plus"></span>
-                                                        </button>
-                                                    </span>
-                                                </form>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <hr>
-                                }
-
-                            }
-                            else
-                            {
+                                </div>
+                                <hr>
+                            </div>
+                            <div data-bind="visible: BasketItems().length == 0">
                                 <div class="row">
                                     <div class="col-lg-12 col-xs-12 text-center">
                                         Twój koszyk jest pusty
                                     </div>
                                 </div>
-                                <hr/>
-                            }
-
-                            
-
+                                <hr />
+                            </div>
                         </div>
-                        <div class="panel-footer">
+                        <div class="panel-footer" data-bind="visible: BasketItems().length > 0">
                             <div class="row">
                                 <div class="col-xs-6">
-                                    <h4>Razem: <strong>@Model.Basket.Total.ToString("0.00") zł</strong></h4>
+                                    <h4>Razem: <strong data-bind="text: TotalValue"></strong></h4>
                                 </div>
                                 <div class="col-xs-6">
                                     <form method="GET" action="@Url.Action("Basket", "Order", new {area = ""})">
-                                        <button type="submit" class="btn btn-primary btn-block"> 
+                                        <button type="submit" class="btn btn-primary btn-block">
                                             Zamów
                                         </button>
                                     </form>
-                                    
+
                                 </div>
                             </div>
                         </div>

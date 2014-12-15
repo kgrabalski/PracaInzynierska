@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
+using System.Net;
 using System.Web;
 using System.Web.Mvc;
 
@@ -19,27 +21,35 @@ namespace FoodSearch.Presentation.Web.Site.Controllers
         }
 
         [HttpPost]
-        public ActionResult Add(int dishId, string returnUrl, Basket basket)
+        public ActionResult Add(int dishId, Basket basket)
         {
             var dish = _domain.Restaurant.GetDish(dishId);
             basket.AddItem(dish);
-            return RedirectBack(returnUrl);
+            return new HttpStatusCodeResult(HttpStatusCode.Created);
         }
 
         [HttpPost]
-        public ActionResult Remove(int dishId, string returnUrl, Basket basket)
+        public ActionResult Remove(int dishId, Basket basket)
         {
             basket.RemoveItem(dishId);
-            return RedirectBack(returnUrl);
+            return new HttpStatusCodeResult(HttpStatusCode.OK);
         }
 
-        private ActionResult RedirectBack(string returnUrl)
+        [HttpPost]
+        public ActionResult GetBasketItems(Basket basket)
         {
-            if (!string.IsNullOrEmpty(returnUrl) && Url.IsLocalUrl(returnUrl))
+            CultureInfo plInfo = CultureInfo.GetCultureInfo("pl-pl");
+            return Json(new
             {
-                return Redirect(returnUrl);
-            }
-            return RedirectToAction("Index", "Home");
+                Total = basket.Total.ToString("C", plInfo),
+                Items = basket.Items.Select(x => new
+                {
+                    x.DishId,
+                    x.Name,
+                    x.Count,
+                    Price = x.Price.ToString("C", plInfo),
+                    Total = x.Total.ToString("C", plInfo)
+                })}, JsonRequestBehavior.DenyGet);
         }
     }
 }

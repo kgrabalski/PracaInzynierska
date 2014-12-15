@@ -56,6 +56,7 @@
             r.Number = ko.observable(no);
             r.MinimumOrder = ko.observable(mo);
             r.RestaurantRating = ko.observable(rr);
+            r.StarsCountUsersVoted = ko.observable(uv);
             r.UsersVoted = ko.observable(uv);
 
             r.Stars = ko.observableArray();

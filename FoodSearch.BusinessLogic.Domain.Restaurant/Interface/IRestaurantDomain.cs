@@ -19,5 +19,6 @@ namespace FoodSearch.BusinessLogic.Domain.Restaurant.Interface
         IEnumerable<Opinion> GetOpinions(Guid restaurantId, int rating = 0, int page = 0);
         RestaurantDetails GetRestaurantDetails(Guid restaurantId);
         RestaurantRating GetRestaurantRating(Guid restaurantId);
+        bool CheckUserCommentExists(Guid userId, Guid restaurantId);
     }
 }

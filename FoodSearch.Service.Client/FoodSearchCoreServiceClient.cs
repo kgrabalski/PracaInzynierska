@@ -8,6 +8,8 @@ using FoodSearch.Service.Client.Contracts;
 using System.Collections.ObjectModel;
 using System.Net.Http;
 
+using FoodSearch.Service.Client.Requests;
+
 namespace FoodSearch.Service.Client
 {
 	public class FoodSearchCoreServiceClient : ServiceClientBase, IFoodSearchCoreServiceClient
@@ -53,6 +55,25 @@ namespace FoodSearch.Service.Client
             var client = new HttpClient();
             return client.GetByteArrayAsync(ServiceAddress + "Logo/" + logoId.ToString());
         }
+
+	    public async Task<ObservableCollection<Opinion>> GetOpinions(Guid restaurantId, int rating = 0, int page = 0)
+	    {
+	        string url = string.Format("/opinion?restaurantId={0}&rating={1}&page={2}", restaurantId, rating, page);
+	        var response = await Get(url);
+	        return DeserializeList<Opinion>(response);
+	    }
+
+	    public async Task<bool> AddOpinion(Guid restaurantId, int rating, string comment)
+	    {
+	        var request = new AddOpinionRequest()
+	        {
+	            RestaurantId = restaurantId,
+	            Rating = rating,
+	            Comment = comment
+	        };
+	        var response = await Post("opinion", request);
+	        return response.StatusCode == HttpStatusCode.Created;
+	    }
 	}
 }
 

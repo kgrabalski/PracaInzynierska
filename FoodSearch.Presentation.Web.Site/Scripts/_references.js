@@ -47,3 +47,5 @@
 /// <reference path="knockout-3.2.0.js" />
 /// <reference path="frontend/searchrestaurants.js" />
 /// <reference path="frontend/restaurantpage.js" />
+/// <reference path="starr.js" />
+/// <reference path="frontend/basket.js" />
