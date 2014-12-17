@@ -1,13 +1,12 @@
-﻿<Properties>
+﻿<Properties StartupItem="FoodSearch.Presentation.Mobile.Android\FoodSearch.Presentation.Mobile.Android.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.android_44" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="FoodSearch.Presentation.Mobile.Common\Views\OrderView.xaml">
+  <MonoDevelop.Ide.Workbench ActiveDocument="FoodSearch.Presentation.Mobile.Common\Services\ServiceLocator.cs">
     <Files>
-      <File FileName="FoodSearch.Presentation.Mobile.Android\Assets\AboutAssets.txt" Line="1" Column="1" />
-      <File FileName="FoodSearch.Presentation.Mobile.Android\MainActivity.cs" Line="1" Column="1" />
-      <File FileName="FoodSearch.Presentation.Mobile.Common\Views\MainView.xaml" Line="1" Column="1" />
-      <File FileName="FoodSearch.Presentation.Mobile.Common\Views\MainView.xaml.cs" Line="4" Column="4" />
-      <File FileName="FoodSearch.Presentation.Mobile.Common\Views\RestaurantMenuView.xaml" Line="1" Column="1" />
-      <File FileName="FoodSearch.Presentation.Mobile.Common\Views\OrderView.xaml" Line="1" Column="1" />
+      <File FileName="FoodSearch.Presentation.Mobile.Common\Views\MainView.xaml" Line="10" Column="10" />
+      <File FileName="FoodSearch.Presentation.Mobile.Android\Renderers\CookieWebViewRenderer.cs" Line="81" Column="81" />
+      <File FileName="FoodSearch.Presentation.Mobile.Common\ViewLocator.cs" Line="9" Column="9" />
+      <File FileName="FoodSearch.Presentation.Mobile.Common\Services\ServiceLocator.cs" Line="10" Column="10" />
+      <File FileName="FoodSearch.Presentation.Mobile.Common\Views\AuthorizeView.xaml" Line="13" Column="13" NotebookId="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
@@ -26,13 +25,6 @@
       <Breakpoint file="C:\C#\Inzynierka\FoodSearch.Presentation.Mobile.Common\ViewModels\BasketViewModel.cs" line="138" column="1" />
       <Breakpoint file="D:\projekty\PracaInzynierska\FoodSearch\FoodSearch.Presentation.Mobile.Common\ViewModels\RegisterViewModel.cs" line="237" column="1" />
       <Breakpoint file="D:\projekty\PracaInzynierska\FoodSearch\FoodSearch.Presentation.Mobile.Common\ViewModels\PaymentViewModel.cs" line="24" column="1" />
-      <Breakpoint file="D:\projekty\PracaInzynierska\FoodSearch\FoodSearch.Presentation.Mobile.Android\Renderers\CookieWebViewRenderer.cs" line="66" column="1" />
-      <Breakpoint file="D:\projekty\PracaInzynierska\FoodSearch\FoodSearch.Presentation.Mobile.Android\Renderers\CookieWebViewRenderer.cs" line="80" column="1" />
-      <Breakpoint file="D:\projekty\PracaInzynierska\FoodSearch\FoodSearch.Presentation.Mobile.Android\Renderers\CookieWebViewRenderer.cs" line="50" column="1" />
-      <Breakpoint file="D:\projekty\PracaInzynierska\FoodSearch\FoodSearch.Presentation.Mobile.Android\Renderers\CookieWebViewRenderer.cs" line="38" column="1" />
-      <Breakpoint file="D:\projekty\PracaInzynierska\FoodSearch\FoodSearch.Presentation.Mobile.Android\Renderers\CookieWebViewRenderer.cs" line="44" column="1" />
-      <Breakpoint file="D:\projekty\PracaInzynierska\FoodSearch\FoodSearch.Presentation.Mobile.Android\Renderers\CookieWebViewRenderer.cs" line="33" column="1" />
-      <Breakpoint file="D:\projekty\PracaInzynierska\FoodSearch\FoodSearch.Presentation.Mobile.Android\Renderers\CookieWebViewRenderer.cs" line="17" column="1" />
       <Breakpoint file="D:\projekty\PracaInzynierska\FoodSearch\FoodSearch.Presentation.Mobile.Common\ViewModels\PaymentViewModel.cs" line="67" column="1" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

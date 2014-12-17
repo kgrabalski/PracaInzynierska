@@ -49,3 +49,5 @@
 /// <reference path="frontend/restaurantpage.js" />
 /// <reference path="starr.js" />
 /// <reference path="frontend/basket.js" />
+/// <reference path="frontend/basketsummary.js" />
+/// <reference path="frontend/userpanel.js" />

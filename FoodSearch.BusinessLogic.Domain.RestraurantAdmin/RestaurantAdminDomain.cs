@@ -195,7 +195,7 @@ namespace FoodSearch.BusinessLogic.Domain.RestraurantAdmin
             }
         }
 
-        public DishDto CreateDish(Guid restaurantId, string dishName, int dishGroupId, float price)
+        public DishDto CreateDish(Guid restaurantId, string dishName, int dishGroupId, decimal price)
         {
             using (var rep = _provider.GetRepository<Dish>())
             {

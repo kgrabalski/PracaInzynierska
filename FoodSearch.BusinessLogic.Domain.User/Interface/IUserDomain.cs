@@ -1,4 +1,6 @@
-﻿using FoodSearch.BusinessLogic.Domain.User.Models;
+﻿using System.Collections.Generic;
+
+using FoodSearch.BusinessLogic.Domain.User.Models;
 using System;
 
 namespace FoodSearch.BusinessLogic.Domain.User.Interface
@@ -16,5 +18,8 @@ namespace FoodSearch.BusinessLogic.Domain.User.Interface
         UserDetails GetUserDetails(Guid userId);
         Guid GetUserId(string user);
         Guid CreatePasswordResetRequest(string email);
+        IEnumerable<UserOrderItem> GetUserOrderItems(Guid orderId);
+        IEnumerable<UserOrder> GetUserOrders(Guid userId, int page = 0, int pageSize = 10);
+        bool ChangeUserPassword(Guid userId, string oldPassword, string newPassword);
     }
 }

@@ -151,7 +151,6 @@
     <Folder Include="App_Data\" />
     <Folder Include="Areas\RestaurantAdmin\Scripts\" />
     <Folder Include="Areas\SiteAdmin\Scripts\" />
-    <Folder Include="Areas\User\Models\" />
     <Folder Include="Areas\User\Views\Shared\" />
   </ItemGroup>
   <ItemGroup>
@@ -181,6 +180,7 @@
     <Compile Include="Areas\SiteAdmin\Models\RestaurantModel.cs" />
     <Compile Include="Areas\SiteAdmin\SiteAdminAreaRegistration.cs" />
     <Compile Include="Areas\User\Controllers\HomeController.cs" />
+    <Compile Include="Areas\User\Models\UserPanelModel.cs" />
     <Compile Include="Areas\User\UserAreaRegistration.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\AddressController.cs" />
@@ -203,6 +203,7 @@
     <Compile Include="Helpers\RestaurantUserModelBinderWebApi.cs" />
     <Compile Include="Models\Basket.cs" />
     <Compile Include="Models\BasketItem.cs" />
+    <Compile Include="Models\ChangePasswordModel.cs" />
     <Compile Include="Models\ContactModel.cs" />
     <Compile Include="Models\LoginModel.cs" />
     <Compile Include="Models\OpinionModel.cs" />
@@ -217,7 +218,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Providers\BasketModelBinder.cs" />
     <Compile Include="Providers\CreateUserResult.cs" />
-    <Compile Include="Providers\CurrencyFormatter.cs" />
     <Compile Include="Providers\FoodSearchMembershipProvider.cs" />
     <Compile Include="Providers\FoodSearchRoleProvider.cs" />
     <Compile Include="Providers\UserInfoModelBinder.cs" />
@@ -291,10 +291,12 @@
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\Frontend\Basket.js" />
+    <Content Include="Scripts\Frontend\BasketSummary.js" />
     <Content Include="Scripts\Frontend\Delivery.js" />
     <Content Include="Scripts\Frontend\HomePage.js" />
     <Content Include="Scripts\Frontend\RestaurantPage.js" />
     <Content Include="Scripts\Frontend\SearchRestaurants.js" />
+    <Content Include="Scripts\Frontend\UserPanel.js" />
     <Content Include="Scripts\html5shiv-printshiv.js" />
     <Content Include="Scripts\html5shiv-printshiv.min.js" />
     <Content Include="Scripts\html5shiv.js" />
@@ -1187,6 +1189,10 @@
     <ProjectReference Include="..\FoodSearch.BusinessLogic.Domain.User\FoodSearch.BusinessLogic.Domain.User.csproj">
       <Project>{C62D4EAF-4EE1-4F2E-96EA-0C630FFD59EB}</Project>
       <Name>FoodSearch.BusinessLogic.Domain.User</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FoodSearch.BusinessLogic.Helpers\FoodSearch.BusinessLogic.Helpers.csproj">
+      <Project>{21317CE8-3E82-4CDE-8C7B-235E077013FC}</Project>
+      <Name>FoodSearch.BusinessLogic.Helpers</Name>
     </ProjectReference>
     <ProjectReference Include="..\FoodSearch.Data.Mapping\FoodSearch.Data.Mapping.csproj">
       <Project>{3C7D76AD-3B68-4EB6-9A15-560D4773FB24}</Project>

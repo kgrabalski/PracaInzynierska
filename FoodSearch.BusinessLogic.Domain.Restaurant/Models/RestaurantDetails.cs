@@ -18,8 +18,8 @@ namespace FoodSearch.BusinessLogic.Domain.Restaurant.Models
         public string Number { get; set; }
         public float Lat { get; set; }
         public float Lon { get; set; }
-        public float MinimumOrder { get; set; }
-        public float DeliveryPrice { get; set; }
-        public float FreeDeliveryFrom { get; set; }
+        public decimal MinimumOrder { get; set; }
+        public decimal DeliveryPrice { get; set; }
+        public decimal FreeDeliveryFrom { get; set; }
     }
 }

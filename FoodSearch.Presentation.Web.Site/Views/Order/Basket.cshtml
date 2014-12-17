@@ -1,10 +1,14 @@
-﻿@using System.Globalization
-@using FoodSearch.Presentation.Web.Site.Providers
-@model FoodSearch.Presentation.Web.Site.Models.Basket
+﻿@model FoodSearch.Presentation.Web.Site.Models.Basket
 
 @{
     ViewBag.Title = "FoodSearch.pl - Koszyk";
     Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section ScriptSection
+{
+    <script type="text/javascript" src="~/Scripts/knockout-3.2.0.js"></script>
+    <script type="text/javascript" src="~/Scripts/Frontend/BasketSummary.js"></script>
 }
 
 <div class="row">
@@ -28,6 +32,12 @@
             </div>
 
             <h1 class="text-center">Koszyk</h1>
+            
+            <div class="alert alert-info" role="alert" data-bind="visible: BasketItems().length == 0">
+                <span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>
+                Twój koszyk jest pusty
+            </div>
+
             <table class="table table-hover">
                 <thead>
                     <tr>
@@ -38,67 +48,49 @@
                         <th> </th>
                     </tr>
                 </thead>
-                <tbody>
-                    @if (Model.Items.Count == 0)
-                    {
-                        <tr>
-                            <td colspan="5" class="text-center">
-                                Twój koszyk jest pusty
-                            </td>
-                        </tr>
-                    }
-                    else
-                    {
-                        foreach (var item in Model.Items)
-                        {
-                            <tr>
-                                <td class="col-sm-8 col-md-6">
-                                    <div class="media">
-                                        <span class="thumbnail pull-left glyphicon glyphicon-cog" style="width: 72px; height: 72px; font-size: 48px; text-align: center;"></span>
-                                        <div class="media-body">
-                                            <h4 class="media-heading"><a href="#">@item.Name</a></h4>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td class="col-sm-1 col-md-1" style="text-align: center">
-                                    <input type="number" class="form-control" value="@item.Count" readonly>
-                                </td>
-                                <td class="col-sm-1 col-md-1 text-center"><strong>@item.Price.ToString("C")</strong></td>
-                                <td class="col-sm-1 col-md-1 text-center"><strong>@item.Total.ToString("C")</strong></td>
-                                <td class="col-sm-1 col-md-1">
-                                    <form method="POST" action="@Url.Action("Remove", "Basket")">
-                                        <input type="hidden" name="returnUrl" value="@Url.Action("Index")" />
-                                        <input type="hidden" name="dishId" value="@item.DishId" />
-                                        <button type="submit" class="btn btn-danger">
-                                            <span class="glyphicon glyphicon-remove"></span> Usuń
-                                        </button>
-                                    </form>
-                                </td>
-                            </tr>
-                        }
-                    }
-
-
+                <tbody data-bind="foreach: BasketItems">
+                    <tr>
+                        <td class="col-sm-8 col-md-6">
+                            <div class="media">
+                                <span class="thumbnail pull-left glyphicon glyphicon-cog" style="width: 72px; height: 72px; font-size: 48px; text-align: center;"></span>
+                                <div class="media-body">
+                                    <h4 class="media-heading"><a href="#" data-bind="text: Name"></a></h4>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="col-sm-1 col-md-1" style="text-align: center">
+                            <input type="number" class="form-control" readonly data-bind="value: Count">
+                        </td>
+                        <td class="col-sm-1 col-md-1 text-center"><strong data-bind="text: Price"></strong></td>
+                        <td class="col-sm-1 col-md-1 text-center"><strong data-bind="text: Total"></strong></td>
+                        <td class="col-sm-1 col-md-1">
+                            <button type="button" class="btn btn-danger" data-bind="click: $parent.decrementItemCount">
+                                <span class="glyphicon glyphicon-remove"></span> Usuń
+                            </button>
+                        </td>
+                    </tr>
+                </tbody>
+                <tfoot>
                     <tr>
                         <td>   </td>
                         <td>   </td>
                         <td>   </td>
                         <td><h5>Dania razem:</h5></td>
-                        <td class="text-right"><h5><strong>@Model.Total.ToPln()</strong></h5></td>
+                        <td class="text-right"><h5><strong data-bind="text: Total"></strong></h5></td>
                     </tr>
                     <tr>
                         <td>   </td>
                         <td>   </td>
                         <td>   </td>
                         <td><h5>Dostawa:</h5></td>
-                        <td class="text-right"><h5><strong>@Model.DeliveryPrice.ToPln()</strong></h5></td>
+                        <td class="text-right"><h5><strong data-bind="text: DeliveryPrice"></strong></h5></td>
                     </tr>
                     <tr>
                         <td>   </td>
                         <td>   </td>
                         <td>   </td>
                         <td><h3>Razem:</h3></td>
-                        <td class="text-right"><h3><strong>@Model.TotalWithDelivery.ToPln()</strong></h3></td>
+                        <td class="text-right"><h3><strong data-bind="text: TotalWithDelivery"></strong></h3></td>
                     </tr>
                     <tr>
                         <td>   </td>
@@ -114,17 +106,15 @@
 
                         </td>
                         <td>
-                            @if (Model.Items.Count > 0)
-                            {
-                                <form method="POST" action="@Url.Action("Shipping", "Order")">
-                                    <button type="submit" class="btn btn-success">
-                                        Zamów <span class="glyphicon glyphicon-play"></span>
-                                    </button>
-                                </form>
-                            }
+                            <form method="POST" action="@Url.Action("Shipping", "Order")"
+                                  data-bind="visible: BasketItems().length > 0">
+                                <button type="submit" class="btn btn-success">
+                                    Zamów <span class="glyphicon glyphicon-play"></span>
+                                </button>
+                            </form>
                         </td>
                     </tr>
-                </tbody>
+                </tfoot>
             </table>
         </div>
     </div>

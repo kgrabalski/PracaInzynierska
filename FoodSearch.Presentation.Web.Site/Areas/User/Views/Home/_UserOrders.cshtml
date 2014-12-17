@@ -1,3 +1,58 @@
 ﻿<fieldset>
     <legend>Historia zamówień</legend>
+    
+    <table class="table table-hover table-striped">
+        <thead>
+            <tr>
+                <th>Restauracja</th>
+                <th>Data zamówienia</th>
+                <th>Kwota</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody data-bind="foreach: Orders">
+            <tr>
+                <td>
+                    <a data-bind="attr: {'href': RestaurantUrl}, text: RestaurantName"></a>
+                </td>
+                <td data-bind="text: CreateDate"></td>
+                <td data-bind="text: OrderAmount"></td>
+                <td>
+                    <a data-bind="click: ToogleShowItems" style="cursor: pointer" title="Pokaż szczegóły zamówienia">
+                        <span class="glyphicon glyphicon-expand"></span> Szczegóły
+                    </a>
+                </td>
+            </tr>
+            <tr data-bind="visible: ShowDetails">
+                <td colspan="4">
+                    <fieldset>
+                        <legend>Szczegóły zamówienia</legend>
+                        Sposób dostawy: <b data-bind="text: DeliveryType"></b><br/>
+                        Adres dostawy: <b data-bind="text: DeliveryAddress"></b>
+                        <table title="Zamówione dania:" class="table">
+                            <thead>
+                                <tr>
+                                    <th>Danie</th>
+                                    <th>Ilość</th>
+                                    <th>Cena</th>
+                                    <th>Razem</th>
+                                </tr>
+                            </thead>
+                            <tbody data-bind="foreach: OrderItems">
+                                <tr>
+                                    <td data-bind="text: DishName"></td>
+                                    <td data-bind="text: Quantity"></td>
+                                    <td data-bind="text: Price"></td>
+                                    <td data-bind="text: Total"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </fieldset>
+                </td> 
+            </tr>
+        </tbody>
+    </table>
+    <button type="button" data-bind="click: getOrders" class="btn btn-primary btn-block">
+        <span class="glyphicon glyphicon-refresh"></span> Więcej
+    </button>
 </fieldset>

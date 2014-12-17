@@ -9,7 +9,7 @@ namespace FoodSearch.Data.Mapping.Entities
         public virtual Order Order { get; set; }
         public virtual int DishId { get; set; }
         public virtual string DishName { get; set; }
-        public virtual float Price { get; set; }
+        public virtual decimal Price { get; set; }
         public virtual int Quantity { get; set; }
     }
 }

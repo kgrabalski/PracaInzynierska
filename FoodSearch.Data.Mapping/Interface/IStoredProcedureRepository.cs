@@ -11,5 +11,6 @@ namespace FoodSearch.Data.Mapping.Interface
         IEnumerable<StreetResult> GetStreets(int cityId, string query);
         IEnumerable<PartnerRestaurant> GetPartnerRestaurants();
         RestaurantRating GetRestaurantRating(Guid restaurantId);
+        IEnumerable<UserOrder> GetUserOrders(Guid userId, int page = 0, int pageSize = 10);
     }
 }

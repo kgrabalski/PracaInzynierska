@@ -42,6 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CurrencyFormatter.cs" />
     <Compile Include="Email\EmailBody.cs" />
     <Compile Include="Email\EmailBodyHelper.cs" />
     <Compile Include="Email\EmailHelper.cs" />

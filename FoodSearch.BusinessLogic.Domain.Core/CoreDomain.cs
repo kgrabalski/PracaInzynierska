@@ -3,7 +3,6 @@ using FoodSearch.BusinessLogic.Domain.Core.Mapping;
 using FoodSearch.BusinessLogic.Domain.Core.Models;
 using FoodSearch.Data.Mapping.Entities;
 using FoodSearch.Data.Mapping.Interface;
-using NHibernate.Criterion;
 using NHibernate.Transform;
 using System;
 using System.Collections.Generic;

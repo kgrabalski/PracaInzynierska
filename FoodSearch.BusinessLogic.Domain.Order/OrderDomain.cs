@@ -83,7 +83,8 @@ namespace FoodSearch.BusinessLogic.Domain.Order
                             UserId = userId,
                             CreateDate = DateTime.Now,
                             DeliveryTypeId = (int) deliveryType,
-                            DeliveryData = deliveryData.ToString()
+                            DeliveryData = deliveryData.ToString(),
+                            RestaurantId = restaurantId
                         };
                         var orderId = repO.Create<Guid>(order);
                         var paymentid = CreatePayment(orderId, paymentType, orderValue);
@@ -134,7 +135,7 @@ namespace FoodSearch.BusinessLogic.Domain.Order
                             PaymentTypeId = (int) paymentType,
                             PaymentStateId = (int) PaymentStates.Created,
                             CreateDate = DateTime.Now,
-                            Amount = (float) amount
+                            Amount = amount
                         });
                         AddPaymentHistory(paymentId, PaymentStates.Created);
                         transaction.Commit();

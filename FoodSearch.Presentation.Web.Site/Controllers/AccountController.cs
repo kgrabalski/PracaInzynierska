@@ -1,4 +1,6 @@
-﻿using FoodSearch.BusinessLogic.Domain.FoodSearch.Interface;
+﻿using System.Net;
+
+using FoodSearch.BusinessLogic.Domain.FoodSearch.Interface;
 using System;
 using System.Web.Mvc;
 using System.Web.Security;
@@ -112,6 +114,20 @@ namespace FoodSearch.Presentation.Web.Site.Controllers
         public ActionResult ResetPassword(Guid? requestId)
         {
             return HttpNotFound();
+        }
+
+        [Authorize]
+        [HttpPost]
+        public ActionResult ChangePassword(ChangePasswordModel model, UserInfo ui)
+        {
+            if (ModelState.IsValid)
+            {
+                return Json(new
+                {
+                    Result = _domain.User.ChangeUserPassword(ui.UserId, model.OldPassword, model.NewPassword)
+                }, JsonRequestBehavior.DenyGet);
+            }
+            return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
         }
     }
 }

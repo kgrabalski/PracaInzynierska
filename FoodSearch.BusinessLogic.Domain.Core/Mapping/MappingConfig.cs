@@ -23,12 +23,10 @@ namespace FoodSearch.BusinessLogic.Domain.Core.Mapping
             Mapper.CreateMap<Data.Mapping.StoredProcedure.Results.StreetResult, Street>()
                 .ForMember(x => x.Id, x => x.MapFrom(y => y.StreetId));
 
-            
-
             Mapper.AssertConfigurationIsValid();
         }
 
-        #region Extensions
+        #region MappingExtensions
         public static TDestination Map<TSource, TDestination>(this TSource @this)
         {
             return Mapper.Map<TSource, TDestination>(@this);

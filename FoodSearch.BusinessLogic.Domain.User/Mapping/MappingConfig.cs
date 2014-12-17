@@ -6,19 +6,18 @@ using System.Threading.Tasks;
 
 using AutoMapper;
 
-using FoodSearch.BusinessLogic.Domain.Order.Models;
+using FoodSearch.BusinessLogic.Domain.User.Models;
+using FoodSearch.BusinessLogic.Helpers;
 
-namespace FoodSearch.BusinessLogic.Domain.Order.Mapping
+namespace FoodSearch.BusinessLogic.Domain.User.Mapping
 {
     public static class MappingConfig
     {
         static MappingConfig()
         {
-            Mapper.CreateMap<Data.Mapping.Entities.DeliveryType, DeliveryType>()
-                .ForMember(x => x.Id, x => x.ResolveUsing(y => y.DeliveryTypeId));
-
-            Mapper.CreateMap<Data.Mapping.Entities.PaymentType, PaymentType>()
-                .ForMember(x => x.Id, x => x.ResolveUsing(y => y.PaymentTypeId));
+            Mapper.CreateMap<Data.Mapping.StoredProcedure.Results.UserOrder, UserOrder>()
+                .ForMember(x => x.OrderAmount, x => x.ResolveUsing(y => y.OrderAmount.ToPln()))
+                .ForMember(x => x.CreateDate, x => x.ResolveUsing(y => y.CreateDate.ToString("dd.MM.yyyy hh:mm")));
 
             Mapper.AssertConfigurationIsValid();
         }

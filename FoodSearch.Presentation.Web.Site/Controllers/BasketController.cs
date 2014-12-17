@@ -7,7 +7,9 @@ using System.Web;
 using System.Web.Mvc;
 
 using FoodSearch.BusinessLogic.Domain.FoodSearch.Interface;
+using FoodSearch.BusinessLogic.Helpers;
 using FoodSearch.Presentation.Web.Site.Models;
+using FoodSearch.Presentation.Web.Site.Providers;
 
 namespace FoodSearch.Presentation.Web.Site.Controllers
 {
@@ -38,17 +40,19 @@ namespace FoodSearch.Presentation.Web.Site.Controllers
         [HttpPost]
         public ActionResult GetBasketItems(Basket basket)
         {
-            CultureInfo plInfo = CultureInfo.GetCultureInfo("pl-pl");
+            basket.DeliveryPrice = _domain.Order.GetDeliveryPrice(basket.CurrentRestaurant, basket.Total);
             return Json(new
             {
-                Total = basket.Total.ToString("C", plInfo),
+                Total = basket.Total.ToPln(),
+                DeliveryPrice = basket.DeliveryPrice.ToPln(),
+                TotalWithDelivery = basket.TotalWithDelivery.ToPln(),
                 Items = basket.Items.Select(x => new
                 {
                     x.DishId,
                     x.Name,
                     x.Count,
-                    Price = x.Price.ToString("C", plInfo),
-                    Total = x.Total.ToString("C", plInfo)
+                    Price = x.Price.ToPln(),
+                    Total = x.Total.ToPln()
                 })}, JsonRequestBehavior.DenyGet);
         }
     }

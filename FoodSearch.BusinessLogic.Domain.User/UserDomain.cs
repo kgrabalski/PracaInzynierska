@@ -3,7 +3,9 @@ using System.Security.Cryptography;
 using System.Text;
 
 using FoodSearch.BusinessLogic.Domain.User.Interface;
+using FoodSearch.BusinessLogic.Domain.User.Mapping;
 using FoodSearch.BusinessLogic.Domain.User.Models;
+using FoodSearch.BusinessLogic.Helpers;
 using FoodSearch.BusinessLogic.Helpers.Email;
 using FoodSearch.Data.Mapping.Entities;
 using FoodSearch.Data.Mapping.Interface;
@@ -200,6 +202,47 @@ namespace FoodSearch.BusinessLogic.Domain.User
                     IsActive = true
                 };
                 return rep.Create<Guid>(request);
+            }
+        }
+
+        public IEnumerable<UserOrderItem> GetUserOrderItems(Guid orderId)
+        {
+            using (var rep = _provider.GetRepository<OrderDish>())
+            {
+                return rep.GetAll()
+                    .Where(x => x.OrderId == orderId)
+                    .List()
+                    .Select(x => new UserOrderItem()
+                    {
+                        DishName = x.DishName,
+                        Quantity = x.Quantity,
+                        Price = x.Price.ToPln(),
+                        Total = (x.Quantity * x.Price).ToPln()
+                    });
+            }
+        }
+
+        public IEnumerable<UserOrder> GetUserOrders(Guid userId, int page = 0, int pageSize = 10)
+        {
+            using (var rep = _provider.StoredProcedure)
+            {
+                return rep.GetUserOrders(userId, page, pageSize).Map<IEnumerable<UserOrder>>();
+            }
+        }
+
+        public bool ChangeUserPassword(Guid userId, string oldPassword, string newPassword)
+        {
+            using (var rep = _provider.GetRepository<Data.Mapping.Entities.User>())
+            {
+                var user = rep.Get(userId);
+                var sha = SHA256.Create();
+                var oldHash = sha.ComputeHash(Encoding.UTF8.GetBytes(oldPassword));
+                var newHash = sha.ComputeHash(Encoding.UTF8.GetBytes(newPassword));
+                
+                if (!user.Password.SequenceEqual(oldHash)) return false;
+                user.Password = newHash;
+                rep.Update(user);
+                return true;
             }
         }
     }

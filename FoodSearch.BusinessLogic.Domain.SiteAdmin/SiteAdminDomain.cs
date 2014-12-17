@@ -62,7 +62,7 @@ namespace FoodSearch.BusinessLogic.Domain.SiteAdmin
                     ImageId = logoId,
                     IsDeleted = false,
                     IsOpen = false,
-                    MinOrderAmount = 0f
+                    MinOrderAmount = 0m
                 };
                 var restaurantId = rep.Create<Guid>(newRestaurant);
                 var userId = CreateUser(userEmail, userPassword, userFirstName, userLastName, UserTypes.RestaurantAdmin, UserStates.Active);

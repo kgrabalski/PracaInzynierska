@@ -135,10 +135,12 @@
     <Compile Include="StoredProcedure\Results\Mapping\PartnerRestaurantMap.cs" />
     <Compile Include="StoredProcedure\Results\Mapping\RestaurantRatingMap.cs" />
     <Compile Include="StoredProcedure\Results\Mapping\StreetResultMap.cs" />
+    <Compile Include="StoredProcedure\Results\Mapping\UserOrderMap.cs" />
     <Compile Include="StoredProcedure\Results\PartnerRestaurant.cs" />
     <Compile Include="StoredProcedure\Results\RestaurantInfo.cs" />
     <Compile Include="StoredProcedure\Results\RestaurantRating.cs" />
     <Compile Include="StoredProcedure\Results\StreetResult.cs" />
+    <Compile Include="StoredProcedure\Results\UserOrder.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -165,6 +167,11 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="StoredProcedure\GetRestaurantRating.hbm.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="StoredProcedure\GetUserOrders.hbm.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
   </ItemGroup>

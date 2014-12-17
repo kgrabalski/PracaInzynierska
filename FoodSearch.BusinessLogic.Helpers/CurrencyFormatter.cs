@@ -2,9 +2,10 @@
 using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
-using System.Web;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace FoodSearch.Presentation.Web.Site.Providers
+namespace FoodSearch.BusinessLogic.Helpers
 {
     public static class CurrencyFormatter
     {

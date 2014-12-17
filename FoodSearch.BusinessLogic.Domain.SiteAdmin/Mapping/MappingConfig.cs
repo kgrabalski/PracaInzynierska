@@ -32,7 +32,7 @@ namespace FoodSearch.BusinessLogic.Domain.SiteAdmin.Mapping
             Mapper.AssertConfigurationIsValid();
         }
 
-        #region Extensions
+        #region MappingExtensions
         public static TDestination Map<TSource, TDestination>(this TSource @this)
         {
             return Mapper.Map<TSource, TDestination>(@this);

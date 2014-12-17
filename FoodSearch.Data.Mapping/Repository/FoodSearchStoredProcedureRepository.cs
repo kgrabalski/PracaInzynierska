@@ -57,6 +57,15 @@ namespace FoodSearch.Data.Mapping.Repository
             return query.UniqueResult<RestaurantRating>();
         }
 
+        public IEnumerable<UserOrder> GetUserOrders(Guid userId, int page = 0, int pageSize = 10)
+        {
+            var query = _session.GetNamedQuery("GetUserOrders");
+            query.SetGuid("userId", userId);
+            query.SetInt32("page", page);
+            query.SetInt32("pageSize", pageSize);
+            return query.List<UserOrder>();
+        }
+
         public void Dispose()
         {
             _session.Dispose();
