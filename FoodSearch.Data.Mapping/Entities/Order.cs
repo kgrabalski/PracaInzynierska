@@ -13,5 +13,7 @@ namespace FoodSearch.Data.Mapping.Entities
         public virtual string DeliveryData { get; set; }
         public virtual Guid RestaurantId { get; set; }
         public virtual Restaurant Restaurant { get; set; }
+        public virtual int OrderStateId { get; set; }
+        public virtual OrderState OrderState { get; set; }
     }
 }

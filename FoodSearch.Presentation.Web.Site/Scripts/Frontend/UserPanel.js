@@ -1,5 +1,6 @@
 ﻿$(document).ready(function() {
     ko.applyBindings(new UserOdersViewModel(), document.getElementById("ordersTab"));
+    ko.applyBindings(new UserInfoViewModel(), document.getElementById("infoTab"));
 });
 
 function UserOdersViewModel() {
@@ -76,5 +77,60 @@ function UserOdersViewModel() {
                 }
             }
         });
+    }
+}
+
+function UserInfoViewModel() {
+    var self = this;
+
+    self.OldPassword = ko.observable();
+    self.NewPassword = ko.observable();
+    self.RepeatNewPassword = ko.observable();
+    self.ShowAlert = ko.observable(false);
+
+    self.inputChanged = function(oldValue, newValue) {
+        if (self.NewPassword() != self.RepeatNewPassword()) {
+            self.ShowAlert(true);
+        } else self.ShowAlert(false);
+    }
+    self.NewPassword.subscribe(self.inputChanged);
+    self.RepeatNewPassword.subscribe(self.inputChanged);
+
+    self.changePasswordModal = function() {
+        $("#changePassword").modal();
+    }
+
+    self.changePassword = function () {
+        if (self.ShowAlert() == true) return;
+        $.ajax({
+            url: "/Account/ChangePassword",
+            type: "POST",
+            dataType: "json",
+            data: {
+                "OldPassword": self.OldPassword(),
+                "NewPassword": self.NewPassword(),
+                "RepeatNewPassword": self.RepeatNewPassword()
+            },
+            success: function(response) {
+                if (response.Result == true) {
+                    window.location = "/Account/Logout";
+                } else {
+                    self.cleanModal();
+                    $("#changePasswordAlert").show();
+                }
+            },
+            error: function () {
+                self.cleanModal();
+                $("#changePasswordAlert").show();
+            }
+        });
+    }
+
+    self.cleanModal = function() {
+        $("#changePassword").modal("hide");
+        self.OldPassword("");
+        self.NewPassword("");
+        self.RepeatNewPassword("");
+        self.ShowAlert(false);
     }
 }

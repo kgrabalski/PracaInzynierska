@@ -152,6 +152,7 @@
     <Folder Include="Areas\RestaurantAdmin\Scripts\" />
     <Folder Include="Areas\SiteAdmin\Scripts\" />
     <Folder Include="Areas\User\Views\Shared\" />
+    <Folder Include="Views\PayPal\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
@@ -189,6 +190,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\OrderController.cs" />
     <Compile Include="Controllers\OrderMobileController.cs" />
+    <Compile Include="Controllers\PayPalController.cs" />
     <Compile Include="Controllers\RegulationController.cs" />
     <Compile Include="Controllers\RestaurantsController.cs" />
     <Compile Include="Global.asax.cs">
@@ -221,7 +223,8 @@
     <Compile Include="Providers\FoodSearchMembershipProvider.cs" />
     <Compile Include="Providers\FoodSearchRoleProvider.cs" />
     <Compile Include="Providers\UserInfoModelBinder.cs" />
-    <Compile Include="WebSocket\FoodSearchHub.cs" />
+    <Compile Include="WebSocket\FoodSearchMobileHub.cs" />
+    <Compile Include="WebSocket\RestaurantAdminHub.cs" />
     <Compile Include="WebSocket\WebSocketStartup.cs" />
   </ItemGroup>
   <ItemGroup>

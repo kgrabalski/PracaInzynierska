@@ -86,12 +86,13 @@
     <Compile Include="Entities\Mapping\OpinionMap.cs" />
     <Compile Include="Entities\Mapping\OrderDishMap.cs" />
     <Compile Include="Entities\Mapping\OrderMap.cs" />
+    <Compile Include="Entities\Mapping\OrderStateHistoryMap.cs" />
+    <Compile Include="Entities\Mapping\OrderStateMap.cs" />
     <Compile Include="Entities\Mapping\PasswordResetRequestMap.cs" />
     <Compile Include="Entities\Mapping\PaymentHistoryMap.cs" />
     <Compile Include="Entities\Mapping\PaymentMap.cs" />
     <Compile Include="Entities\Mapping\PaymentStateMap.cs" />
     <Compile Include="Entities\Mapping\PaymentTypeMap.cs" />
-    <Compile Include="Entities\Mapping\PayPalIpnResponseMap.cs" />
     <Compile Include="Entities\Mapping\RegistrationConfirmMap.cs" />
     <Compile Include="Entities\Mapping\RestaurantCuisineMap.cs" />
     <Compile Include="Entities\Mapping\RestaurantMap.cs" />
@@ -104,6 +105,9 @@
     <Compile Include="Entities\Opinion.cs" />
     <Compile Include="Entities\Order.cs" />
     <Compile Include="Entities\OrderDish.cs" />
+    <Compile Include="Entities\OrderState.cs" />
+    <Compile Include="Entities\OrderStateHistory.cs" />
+    <Compile Include="Entities\OrderStates.cs" />
     <Compile Include="Entities\PasswordResetRequest.cs" />
     <Compile Include="Entities\Payment.cs" />
     <Compile Include="Entities\PaymentHistory.cs" />
@@ -111,7 +115,6 @@
     <Compile Include="Entities\PaymentStates.cs" />
     <Compile Include="Entities\PaymentType.cs" />
     <Compile Include="Entities\PaymentTypes.cs" />
-    <Compile Include="Entities\PayPalIpnResponse.cs" />
     <Compile Include="Entities\RegistrationConfirm.cs" />
     <Compile Include="Entities\Restaurant.cs" />
     <Compile Include="Entities\RestaurantCuisine.cs" />

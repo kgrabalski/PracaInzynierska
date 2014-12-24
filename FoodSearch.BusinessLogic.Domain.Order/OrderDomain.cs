@@ -1,6 +1,7 @@
 ﻿
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Xml.Linq;
 
@@ -65,7 +66,9 @@ namespace FoodSearch.BusinessLogic.Domain.Order
                         decimal orderValue = orderItems.Sum(x => (decimal) dishes.Single(y => y.DishId == x.DishId).Price * x.Quantity);
                         orderValue += GetDeliveryPrice(restaurantId, orderValue);
 
-                        var deliveryData = new XElement("xml", new XElement("DeliveryType", (int) deliveryType));
+                        var deliveryData = new XElement("xml", 
+                            new XElement("DeliveryType", (int) deliveryType),
+                            new XElement("PredictedDeliveryTime", DateTime.Now.ToString("O", CultureInfo.InvariantCulture)));
                         if (deliveryType == DeliveryTypes.Shipping)
                         {
                             var da = GetUserDeliveryAddress(userId);
@@ -84,7 +87,8 @@ namespace FoodSearch.BusinessLogic.Domain.Order
                             CreateDate = DateTime.Now,
                             DeliveryTypeId = (int) deliveryType,
                             DeliveryData = deliveryData.ToString(),
-                            RestaurantId = restaurantId
+                            RestaurantId = restaurantId,
+                            OrderStateId = (int) OrderStates.Created
                         };
                         var orderId = repO.Create<Guid>(order);
                         var paymentid = CreatePayment(orderId, paymentType, orderValue);
@@ -137,7 +141,6 @@ namespace FoodSearch.BusinessLogic.Domain.Order
                             CreateDate = DateTime.Now,
                             Amount = amount
                         });
-                        AddPaymentHistory(paymentId, PaymentStates.Created);
                         transaction.Commit();
                         return paymentId;
                     }
@@ -160,24 +163,10 @@ namespace FoodSearch.BusinessLogic.Domain.Order
                 {
                     payment.PaymentStateId = (int) paymentState;
                     rep.Update(payment);
-                    AddPaymentHistory(paymentId, paymentState);
                     return true;
                 }
             }
             return false;
-        }
-
-        public void AddPaymentHistory(Guid paymentId, PaymentStates paymentState)
-        {
-            using (var rep = _provider.GetRepository<PaymentHistory>())
-            {
-                rep.Create<int>(new PaymentHistory()
-                {
-                    PaymentId = paymentId,
-                    PaymentStateId = (int) paymentState,
-                    ModificationDate = DateTime.Now
-                });
-            }
         }
 
         public decimal GetDeliveryPrice(Guid restaurantId, decimal totalPrice)
@@ -188,19 +177,6 @@ namespace FoodSearch.BusinessLogic.Domain.Order
                 decimal freeDelivery = (decimal)rest.FreeDeliveryFrom;
                 if (totalPrice >= freeDelivery) return decimal.Zero;
                 return (decimal)rest.DeliveryPrice;
-            }
-        }
-
-        public void LogPaypalResponse(Guid? paymentId, string status)
-        {
-            using (var rep = _provider.GetRepository<PayPalIpnResponse>())
-            {
-                rep.Create<int>(new PayPalIpnResponse()
-                {
-                    PaymentId = paymentId,
-                    Status = status,
-                    CreateDate = DateTime.Now
-                });
             }
         }
 
@@ -217,6 +193,69 @@ namespace FoodSearch.BusinessLogic.Domain.Order
             using (var rep = _provider.GetRepository<DeliveryType>())
             {
                 return rep.GetAll().List().Map<IEnumerable<DeliveryTypeDto>>();
+            }
+        }
+
+        public Guid GetOrderForPayment(Guid paymentId)
+        {
+            using (var rep = _provider.GetRepository<Payment>())
+            {
+                return rep.Get(paymentId).OrderId;
+            }
+        }
+
+        public void ChangeOrderState(Guid orderId, OrderStates newOrderState)
+        {
+            using (var rep = _provider.GetRepository<Data.Mapping.Entities.Order>())
+            {
+                var order = rep.Get(orderId);
+                order.OrderStateId = (int) newOrderState;
+                rep.Update(order);
+            }
+        }
+
+        public bool ConfirmOrder(Guid orderId, TimeSpan deliveryTime)
+        {
+            using (var rep = _provider.GetRepository<Data.Mapping.Entities.Order>())
+            {
+                try
+                {
+                    var order = rep.Get(orderId);
+                    order.OrderStateId = (int) OrderStates.Confirmed;
+
+                    XElement xml = XElement.Parse(order.DeliveryData);
+                    XElement node = xml.Descendants("PredictedDeliveryTime").First();
+                    DateTime delivery = DateTime
+                        .ParseExact(node.Value, "O", CultureInfo.InvariantCulture)
+                        .Add(deliveryTime);
+                    node.Value = delivery.ToString("O", CultureInfo.InvariantCulture);
+
+                    order.DeliveryData = xml.ToString();
+                    rep.Update(order);
+                    return true;
+                }
+                catch (Exception)
+                {
+                    return false;
+                }
+            }
+        }
+
+        public DeliveryStatus GetDeliveryStatus(Guid orderId)
+        {
+            using (var rep = _provider.GetRepository<Data.Mapping.Entities.Order>())
+            {
+                var order = rep.Get(orderId);
+                XElement xml = XElement.Parse(order.DeliveryData);
+                XElement node = xml.Descendants("PredictedDeliveryTime").First();
+                DateTime delivery = DateTime.ParseExact(node.Value, "O", CultureInfo.InvariantCulture);
+
+                return new DeliveryStatus()
+                {
+                    OrderConfirmed = order.OrderStateId == (int) OrderStates.Confirmed,
+                    DeliveryDate = delivery.ToString("dd.MM.yyyy HH:mm"),
+                    MinutesLeft = delivery.Subtract(DateTime.Now).Minutes
+                };
             }
         }
     }

@@ -18,6 +18,8 @@ namespace FoodSearch.Data.Mapping.Entities.Mapping
             Map(x => x.DeliveryData).Column("DeliveryData").Not.Nullable();
             Map(x => x.RestaurantId).Column("RestaurantId").Not.Nullable();
             References(x => x.Restaurant).Column("RestaurantId").Not.Insert().Not.Update().LazyLoad();
+            Map(x => x.OrderStateId).Column("OrderStateId").Not.Nullable();
+            References(x => x.OrderState).Column("OrderStateId").Not.Insert().Not.Update().LazyLoad();
         }
     }
 }

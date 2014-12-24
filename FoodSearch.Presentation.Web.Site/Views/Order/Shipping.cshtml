@@ -21,8 +21,9 @@
             <div class="stepwizard">
                 <div class="stepwizard-row">
                     <div class="stepwizard-step">
-                        <button type="button" class="btn btn-primary btn-circle" disabled="disabled">1</button>
-                        <p>Koszyk</p>
+                        @*<button type="button" class="btn btn-primary btn-circle" disabled="disabled">1</button>*@
+                        <a class="btn btn-primary btn-circle" href="@Url.Action("Basket")">1</a>
+                        <p><a href="@Url.Action("Basket")">Koszyk</a></p>
                     </div>
                     <div class="stepwizard-step">
                         <button type="button" class="btn btn-primary btn-circle" disabled="disabled">2</button>

@@ -22,14 +22,14 @@ namespace FoodSearch.Presentation.Web.Site.Controllers
 
         public ActionResult Success(Guid paymentId)
         {
-            GlobalHost.ConnectionManager.GetHubContext<FoodSearchHub>()
+            GlobalHost.ConnectionManager.GetHubContext<FoodSearchMobileHub>()
                 .Clients.Group(paymentId.ToString()).UpdatePaymentStatus(true);
             return RedirectToAction("Success", "Order");
         }
 
         public ActionResult Cancel(Guid paymentId)
         {
-            GlobalHost.ConnectionManager.GetHubContext<FoodSearchHub>()
+            GlobalHost.ConnectionManager.GetHubContext<FoodSearchMobileHub>()
                 .Clients.Group(paymentId.ToString()).UpdatePaymentStatus(false);
             return RedirectToAction("Cancel", "Order", new {paymentId});
         }

@@ -21,10 +21,12 @@ namespace FoodSearch.BusinessLogic.Domain.Order.Interface
         CreateOrderResult CreateOrder(Guid userId, Guid restaurantId, List<OrderItem> orderItems, DeliveryTypes deliveryType, PaymentTypes paymentType);
         Guid CreatePayment(Guid orderId, PaymentTypes paymentType, decimal amount);
         bool UpdatePayment(Guid paymentId, PaymentStates paymentState);
-        void AddPaymentHistory(Guid paymentId, PaymentStates paymentState);
         decimal GetDeliveryPrice(Guid restaurantId, decimal totalPrice);
-        void LogPaypalResponse(Guid? paymentId, string status);
         IEnumerable<PaymentType> GetPaymentTypes();
         IEnumerable<DeliveryType> GetDeliveryTypes();
+        Guid GetOrderForPayment(Guid paymentId);
+        void ChangeOrderState(Guid orderId, OrderStates newOrderState);
+        bool ConfirmOrder(Guid orderId, TimeSpan deliveryTime);
+        DeliveryStatus GetDeliveryStatus(Guid orderId);
     }
 }

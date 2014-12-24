@@ -1,83 +1,104 @@
 ﻿@model FoodSearch.Presentation.Web.Site.Areas.User.Models.UserPanelModel
 
 <fieldset>
-    <legend>Dane użytkownika</legend>
 
     <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xs-offset-0 col-sm-offset-0 col-md-offset-3 col-lg-offset-3 toppad">
-
+        
+        <div class="alert alert-danger alert-dismissible" id="changePasswordAlert" style="display: none" role="alert">
+            Bład podczas zmiany hasła - podano nie poprawne hasło
+        </div>
 
         <div class="panel panel-info">
             <div class="panel-heading">
-                <h3 class="panel-title">Sheena Kristin A.Eschor</h3>
+                <h3 class="panel-title">@string.Format("{0} {1}", Model.UserDetails.FirstName, Model.UserDetails.LastName)</h3>
             </div>
             <div class="panel-body">
                 <div class="row">
-                    <div class="col-md-3 col-lg-3 " align="center"> <img alt="User Pic" src="https://lh5.googleusercontent.com/-b0-k99FZlyE/AAAAAAAAAAI/AAAAAAAAAAA/eu7opA4byxI/photo.jpg?sz=100" class="img-circle"> </div>
+                    <div class="col-md-3 col-lg-3 " align="center">
+                         <img alt="User Pic" src="https://lh5.googleusercontent.com/-b0-k99FZlyE/AAAAAAAAAAI/AAAAAAAAAAA/eu7opA4byxI/photo.jpg?sz=100" class="img-circle"> 
+                    </div>
 
-                    <!--<div class="col-xs-10 col-sm-10 hidden-md hidden-lg"> <br>
-                      <dl>
-                        <dt>DEPARTMENT:</dt>
-                        <dd>Administrator</dd>
-                        <dt>HIRE DATE</dt>
-                        <dd>11/12/2013</dd>
-                        <dt>DATE OF BIRTH</dt>
-                           <dd>11/12/2013</dd>
-                        <dt>GENDER</dt>
-                        <dd>Male</dd>
-                      </dl>
-                    </div>-->
                     <div class=" col-md-9 col-lg-9 ">
-                        <table class="table table-user-information">
+                        <table class="table">
                             <tbody>
                                 <tr>
-                                    <td>Department:</td>
-                                    <td>Programming</td>
+                                    <td>Imię:</td>
+                                    <td>@Model.UserDetails.FirstName</td>
                                 </tr>
                                 <tr>
-                                    <td>Hire date:</td>
-                                    <td>06/23/2013</td>
+                                    <td>Nazwisko:</td>
+                                    <td>@Model.UserDetails.LastName</td>
                                 </tr>
                                 <tr>
-                                    <td>Date of Birth</td>
-                                    <td>01/24/1988</td>
+                                    <td>Adres email:</td>
+                                    <td>@Model.UserDetails.Email</td>
                                 </tr>
 
                                 <tr>
                                 <tr>
-                                    <td>Gender</td>
-                                    <td>Male</td>
+                                    <td>Miasto</td>
+                                    <td>@Model.DeliveryAddress.City</td>
                                 </tr>
                                 <tr>
-                                    <td>Home Address</td>
-                                    <td>Metro Manila,Philippines</td>
+                                    <td>Ulica:</td>
+                                    <td>@Model.DeliveryAddress.Street</td>
                                 </tr>
                                 <tr>
-                                    <td>Email</td>
-                                    <td><a href="mailto:info@support.com">info@support.com</a></td>
+                                    <td>Numer:</td>
+                                    <td>
+                                        @string.Format("{0}{1}{2}",
+                                        Model.DeliveryAddress.StreetNumber,
+                                        Model.DeliveryAddress.FlatNumber != "" ? "/" : "",
+                                        Model.DeliveryAddress.FlatNumber)
+                                    </td>
                                 </tr>
-                            <td>Phone Number</td>
-                            <td>
-                                123-4567-890(Landline)<br><br>555-4567-890(Mobile)
-                            </td>
-
-                            </tr>
-
                             </tbody>
                         </table>
-
-                        <a href="#" class="btn btn-primary">My Sales Performance</a>
-                        <a href="#" class="btn btn-primary">Team Sales Performance</a>
+                        
+                        <button type="button" class="btn btn-primary btn-block"
+                                data-bind="click: changePasswordModal">Zmień hasło</button>
                     </div>
                 </div>
             </div>
-            <div class="panel-footer">
-                <a data-original-title="Broadcast Message" data-toggle="tooltip" type="button" class="btn btn-sm btn-primary"><i class="glyphicon glyphicon-envelope"></i></a>
-                <span class="pull-right">
-                    <a href="edit.html" data-original-title="Edit this user" data-toggle="tooltip" type="button" class="btn btn-sm btn-warning"><i class="glyphicon glyphicon-edit"></i></a>
-                    <a data-original-title="Remove this user" data-toggle="tooltip" type="button" class="btn btn-sm btn-danger"><i class="glyphicon glyphicon-remove"></i></a>
-                </span>
-            </div>
-
         </div>
     </div>
 </fieldset>
+
+<div class="modal fade" id="changePassword">
+    <div class="modal-dialog">
+        <form role="form" data-bind="submit: changePassword">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                    <h4 class="modal-title">Zmiana hasła</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="alert alert-danger" role="alert" data-bind="visible: ShowAlert">
+                        Podane hasła nie zgadzają się
+                    </div>
+
+                    <div class="form-group">
+                        <label for="oldPassword" class="control-label">Aktualne hasło:</label>
+                        <input id="oldPassword" type="password" class="form-control"
+                               data-bind="value: OldPassword" required="required" />
+                    </div>
+                    <div class="form-group">
+                        <label for="newPassword" class="control-label">Nowe hasło:</label>
+                        <input id="newPassword" type="password" class="form-control"
+                               data-bind="textInput: NewPassword" required="required" />
+                    </div>
+                    <div class="form-group">
+                        <label for="repeatPassword" class="control-label">Powtórz nowe hasło</label>
+                        <input id="repeatPassword" type="password" class="form-control"
+                               data-bind="textInput: RepeatNewPassword" required="required" />
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Anuluj</button>
+                    <input type="submit" class="btn btn-primary" value="Zmień hasło" />
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

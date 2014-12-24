@@ -24,7 +24,7 @@ namespace FoodSearch.Presentation.Mobile.Common.ViewModels
 
         private async void InitializeView(CreateOrderResult order)
         {
-            string ipn = "http://foodsearch.azurewebsites.net/Order/UserPaymentIpn";
+            string ipn = "http://foodsearch.azurewebsites.net/PayPal/Ipn";
             _pageCancel += order.PaymentId;
             _pageSuccess += order.PaymentId;
             
@@ -37,14 +37,14 @@ namespace FoodSearch.Presentation.Mobile.Common.ViewModels
                 _pageCancel);
             PaymentUrl = url;
             Services.Dialog.ShowLoading("Ładowanie PayPal");
-            Xamarin.Forms.Device.StartTimer(TimeSpan.FromSeconds(10), () => {
+            Device.StartTimer(TimeSpan.FromSeconds(10), () => {
                 Services.Dialog.HideLoading();
                 return false;
             });
 
             //signalr
             var hubConnection = new HubConnection("http://foodsearch.azurewebsites.net");
-            var hubProxy = hubConnection.CreateHubProxy("FoodSearchWebSocket");
+            var hubProxy = hubConnection.CreateHubProxy("FoodSearchMobile");
             hubProxy.On<bool>("UpdatePaymentStatus", UpdatePaymentStatus);
             await hubConnection.Start();
             await hubProxy.Invoke("Register", order.PaymentId);

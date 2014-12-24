@@ -7,8 +7,8 @@ using Microsoft.AspNet.SignalR.Hubs;
 
 namespace FoodSearch.Presentation.Web.Site.WebSocket
 {
-    [HubName("FoodSearchWebSocket")]
-    public class FoodSearchHub : Hub
+    [HubName("FoodSearchMobile")]
+    public class FoodSearchMobileHub : Hub
     {
         public void Register(Guid paymentId)
         {

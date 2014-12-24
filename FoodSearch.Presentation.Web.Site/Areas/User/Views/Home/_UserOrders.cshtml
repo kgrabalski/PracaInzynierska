@@ -4,26 +4,26 @@
     <table class="table table-hover table-striped">
         <thead>
             <tr>
-                <th>Restauracja</th>
                 <th>Data zamówienia</th>
+                <th>Restauracja</th>
                 <th>Kwota</th>
                 <th></th>
             </tr>
         </thead>
         <tbody data-bind="foreach: Orders">
             <tr>
+                <td data-bind="text: CreateDate"></td>
                 <td>
                     <a data-bind="attr: {'href': RestaurantUrl}, text: RestaurantName"></a>
                 </td>
-                <td data-bind="text: CreateDate"></td>
                 <td data-bind="text: OrderAmount"></td>
                 <td>
                     <a data-bind="click: ToogleShowItems" style="cursor: pointer" title="Pokaż szczegóły zamówienia">
-                        <span class="glyphicon glyphicon-expand"></span> Szczegóły
+                        Szczegóły <span class="caret"></span>
                     </a>
                 </td>
             </tr>
-            <tr data-bind="visible: ShowDetails">
+            <tr data-bind="visible: ShowDetails" class="panel panel-primary">
                 <td colspan="4">
                     <fieldset>
                         <legend>Szczegóły zamówienia</legend>

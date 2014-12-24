@@ -12,6 +12,7 @@ namespace FoodSearch.Presentation.Web.Site.Models
     {
         public DeliveryAddress DeliveryAddress { get; set; }
         public IEnumerable<DeliveryType> DeliveryTypes { get; set; }
-        public IEnumerable<PaymentType> PaymentTypes { get; set; }  
+        public IEnumerable<PaymentType> PaymentTypes { get; set; }
+        public Guid RestaurantId { get; set; }
     }
 }
