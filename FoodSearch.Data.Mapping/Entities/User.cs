@@ -8,6 +8,7 @@ namespace FoodSearch.Data.Mapping.Entities
         public virtual string FirstName { get; set; }
         public virtual string LastName { get; set; }
         public virtual string Email { get; set; }
+        public virtual string PhoneNumber { get; set; }
         public virtual byte[] Password { get; set; }
         public virtual int UserTypeId { get; set; }
         public virtual UserType UserType { get; set; }

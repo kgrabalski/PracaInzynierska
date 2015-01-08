@@ -1,4 +1,8 @@
-﻿using FoodSearch.BusinessLogic.Domain.RestraurantAdmin.Interface;
+﻿using System.IO;
+using System.Xml;
+using System.Xml.Serialization;
+
+using FoodSearch.BusinessLogic.Domain.RestraurantAdmin.Interface;
 using FoodSearch.BusinessLogic.Domain.RestraurantAdmin.Mapping;
 using FoodSearch.BusinessLogic.Domain.RestraurantAdmin.Models;
 using FoodSearch.Data.Mapping.Entities;
@@ -287,6 +291,36 @@ namespace FoodSearch.BusinessLogic.Domain.RestraurantAdmin
                     RestaurantLogoId = restaurant.ImageId,
                     RestaurantName = restaurant.Name
                 };
+            }
+        }
+
+        public IEnumerable<RestaurantOrder> GetRestaurantOrders(Guid restaurantId, bool newOrders)
+        {
+            using (var rep = _provider.StoredProcedure)
+            {
+                string result = rep.GetRestaurantOrders(restaurantId, null, newOrders ? OrderStates.Paid : OrderStates.Confirmed);
+                
+                using (var stream = new MemoryStream(Encoding.UTF8.GetBytes(result)))
+                {
+                    XmlSerializer xs = new XmlSerializer(typeof(List<RestaurantOrder>));
+                    var orders = (List<RestaurantOrder>) xs.Deserialize(stream);
+                    return orders;
+                }
+            }
+        }
+
+        public RestaurantOrder GetRestaurantOrder(Guid restaurantId, Guid orderId)
+        {
+            using (var rep = _provider.StoredProcedure)
+            {
+                string result = rep.GetRestaurantOrders(restaurantId, orderId, null);
+
+                using (var stream = new MemoryStream(Encoding.UTF8.GetBytes(result)))
+                {
+                    XmlSerializer xs = new XmlSerializer(typeof(List<RestaurantOrder>));
+                    var orders = (List<RestaurantOrder>) xs.Deserialize(stream);
+                    return orders.Single();
+                }
             }
         }
     }

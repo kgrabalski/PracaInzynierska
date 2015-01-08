@@ -1,0 +1,22 @@
+﻿#pageOpinions .rating .glyphicon {
+    font-size: 22px;
+}
+#pageOpinions .rating-num {
+    margin-top: 0;
+    font-size: 54px;
+}
+#pageOpinions .progress {
+    margin-bottom: 5px;
+}
+#pageOpinions .progress-bar {
+    text-align: left;
+    color: black;
+}
+#pageOpinions .rating-desc .col-md-3 {
+    padding-right: 0;
+}
+#pageOpinions .sr-only {
+    margin-left: 5px;
+    overflow: visible;
+    clip: auto;
+}

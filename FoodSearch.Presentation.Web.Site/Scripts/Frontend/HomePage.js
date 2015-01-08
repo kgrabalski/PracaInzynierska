@@ -1,5 +1,6 @@
 ﻿$(document).ready(function() {
     var selectNumber, selectStreet, selectCity;
+    var self = this;
 
     selectCity = $("#selectCity").selectize({
         valueField: 'Id',
@@ -78,4 +79,65 @@
     })[0].selectize;
 
     selectNumber.disable();
+
+    function DeliveryAddress(id, aid, cid, c, sid, s, sn, fn) {
+        this.Id = id;
+        this.AddressId = aid;
+        this.CityId = cid;
+        this.City = c;
+        this.StreetId = sid;
+        this.Street = s;
+        this.StreetNumber = sn;
+        this.FlatNumber = fn;
+        this.DisplayText = this.City + ", " + this.Street + " " + this.StreetNumber;
+        if (this.FlatNumber != "") {
+            this.DisplayText += "/" + this.FlatNumber;
+        }
+    }
+
+    self.Addresses = new Array();
+
+    function getDeliveryAddress(id) {
+        for (var i = 0; i < self.Addresses.length; i++) {
+            var a = self.Addresses[i];
+            if (a.Id == id) return a;
+        }
+    }
+
+    var selectAddress = $("#selectAddress").selectize({
+        valueField: 'Id',
+        labelField: 'DisplayText',
+        create: false,
+        onChange: function(value) {
+            var address = getDeliveryAddress(value);
+
+            selectCity.addOption({ Id: address.CityId, Name: address.City });
+            selectCity.setValue(address.CityId);
+
+            selectStreet.enable();
+            selectStreet.addOption({ Id: address.StreetId, Name: address.Street });
+            selectStreet.setValue(address.StreetId);
+
+            selectNumber.enable();
+            selectNumber.addOption({ Id: address.AddressId, Number: address.StreetNumber });
+            selectNumber.setValue(address.AddressId);
+        }
+    })[0].selectize;
+
+    selectAddress.load(function(callback) {
+        $.ajax({
+            url: "/Home/GetDeliveryAddresses",
+            type: "POST",
+            success: function(response) {
+                for (var i = 0; i < response.length; i++) {
+                    var a = response[i];
+                    self.Addresses.push(
+                        new DeliveryAddress(a.Id, a.AddressId, a.CityId, a.City,
+                                            a.StreetId, a.Street, a.StreetNumber, a.FlatNumber));
+                }
+                callback(self.Addresses);
+            }
+        });
+    });
+
 });

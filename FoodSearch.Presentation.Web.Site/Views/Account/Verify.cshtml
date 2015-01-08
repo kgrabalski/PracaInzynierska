@@ -1,8 +1,32 @@
-﻿@model FoodSearch.BusinessLogic.Domain.User.Models.RegisterConfirmationResult
+﻿@using FoodSearch.BusinessLogic.Domain.User.Models
+@model FoodSearch.BusinessLogic.Domain.User.Models.RegisterConfirmationResult
 
 @{
     ViewBag.Title = "FoodSearch.pl - potwierdzenie rejestracji";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>FoodSearch.pl - potwierdzenie rejestracji</h2>
+<div class="container">
+    <div id="loginbox" style="margin-top: 50px;" class="mainbox col-md-6 col-md-offset-3 col-sm-12 col-sm-offset-2 col-xs-12">
+        <div class="panel panel-info">
+            <div class="panel-heading">
+                <div class="panel-title">Potwierdzenie rejestracji</div>
+            </div>
+
+            <div style="padding-top: 30px" class="panel-body">
+
+                <h4 class="">
+                    @if (Model != RegisterConfirmationResult.NotConfirmed)
+                    {
+                        @:Twoje konto użytkownika zostało aktywowane.
+                        @:<br/> Możesz teraz korzystać z pełnej funkcjonalności serwisu FoodSearch.pl!
+                    }
+                    else
+                    {
+                        @:Wystąpił błąd podczas aktywowania twojego konta. <br/>Skontaktuj się z administratorem serwisu.
+                    }
+                </h4>
+            </div>
+        </div>
+    </div>
+</div>

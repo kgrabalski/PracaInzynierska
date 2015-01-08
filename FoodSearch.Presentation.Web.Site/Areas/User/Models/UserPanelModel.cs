@@ -12,6 +12,6 @@ namespace FoodSearch.Presentation.Web.Site.Areas.User.Models
     public class UserPanelModel
     {
         public UserDetails UserDetails { get; set; }
-        public DeliveryAddress DeliveryAddress { get; set; }
+        public IEnumerable<DeliveryAddress> DeliveryAddresses { get; set; }
     }
 }

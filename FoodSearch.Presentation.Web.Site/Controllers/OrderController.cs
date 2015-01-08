@@ -31,7 +31,7 @@ namespace FoodSearch.Presentation.Web.Site.Controllers
         {
             var shippingModel = new ShippingModel()
             {
-                DeliveryAddress = _domain.Order.GetUserDeliveryAddress(ui.UserId),
+                DeliveryAddress = _domain.Order.GetUserDeliveryAddresses(ui.UserId).First(),
                 DeliveryTypes = _domain.Order.GetDeliveryTypes(),
                 PaymentTypes = _domain.Order.GetPaymentTypes(),
                 RestaurantId = basket.CurrentRestaurant
@@ -45,7 +45,7 @@ namespace FoodSearch.Presentation.Web.Site.Controllers
             DeliveryTypes dt = (DeliveryTypes) deliveryType;
             PaymentTypes pt = (PaymentTypes) paymentType;
             var orderItems = basket.Items.Select(x => new OrderItem() { DishId = x.DishId, Quantity = x.Count }).ToList();
-            var orderInfo = _domain.Order.CreateOrder(ui.UserId, basket.CurrentRestaurant, orderItems, dt, pt);
+            var orderInfo = _domain.Order.CreateOrder(ui.UserId, basket.CurrentRestaurant, orderItems, dt, pt, null, "");
             if (pt == PaymentTypes.Cash)
             {
                 _domain.Order.ChangeOrderState(orderInfo.OrderId, OrderStates.Paid);

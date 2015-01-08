@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.30723.0
+VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BusinessLogic", "BusinessLogic", "{EA190417-AA10-4349-9628-9CD85EFF4C8E}"
 EndProject
@@ -52,6 +52,10 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FoodSearch.Service.Client", "FoodSearch.Service.Client\FoodSearch.Service.Client.csproj", "{89AA305D-AD29-4D2C-955D-15FC41DA8238}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FoodSearch.Presentation.Mobile.WindowsPhone", "FoodSearch.Presentation.Mobile.WindowsPhone\FoodSearch.Presentation.Mobile.WindowsPhone.csproj", "{CC3FF47A-D5CD-4D54-9B8A-8D568E23EC54}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Modeling", "Modeling", "{3BCA14E3-321F-42AE-8084-D8E6221EDE76}"
+EndProject
+Project("{F088123C-0E9E-452A-89E6-6BA2F21D5CAC}") = "FoodSearch.Modeling", "FoodSearch.Modeling\FoodSearch.Modeling.modelproj", "{7B5EAAC9-3C8B-4EA8-847C-7FE52AEE8750}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -697,6 +701,38 @@ Global
 		{CC3FF47A-D5CD-4D54-9B8A-8D568E23EC54}.Release|x86.ActiveCfg = Release|x86
 		{CC3FF47A-D5CD-4D54-9B8A-8D568E23EC54}.Release|x86.Build.0 = Release|x86
 		{CC3FF47A-D5CD-4D54-9B8A-8D568E23EC54}.Release|x86.Deploy.0 = Release|x86
+		{7B5EAAC9-3C8B-4EA8-847C-7FE52AEE8750}.Ad-Hoc|Any CPU.ActiveCfg = Release|Any CPU
+		{7B5EAAC9-3C8B-4EA8-847C-7FE52AEE8750}.Ad-Hoc|Any CPU.Build.0 = Release|Any CPU
+		{7B5EAAC9-3C8B-4EA8-847C-7FE52AEE8750}.Ad-Hoc|ARM.ActiveCfg = Release|Any CPU
+		{7B5EAAC9-3C8B-4EA8-847C-7FE52AEE8750}.Ad-Hoc|iPhone.ActiveCfg = Release|Any CPU
+		{7B5EAAC9-3C8B-4EA8-847C-7FE52AEE8750}.Ad-Hoc|iPhoneSimulator.ActiveCfg = Release|Any CPU
+		{7B5EAAC9-3C8B-4EA8-847C-7FE52AEE8750}.Ad-Hoc|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{7B5EAAC9-3C8B-4EA8-847C-7FE52AEE8750}.Ad-Hoc|Mixed Platforms.Build.0 = Release|Any CPU
+		{7B5EAAC9-3C8B-4EA8-847C-7FE52AEE8750}.Ad-Hoc|x86.ActiveCfg = Release|Any CPU
+		{7B5EAAC9-3C8B-4EA8-847C-7FE52AEE8750}.AppStore|Any CPU.ActiveCfg = Release|Any CPU
+		{7B5EAAC9-3C8B-4EA8-847C-7FE52AEE8750}.AppStore|Any CPU.Build.0 = Release|Any CPU
+		{7B5EAAC9-3C8B-4EA8-847C-7FE52AEE8750}.AppStore|ARM.ActiveCfg = Release|Any CPU
+		{7B5EAAC9-3C8B-4EA8-847C-7FE52AEE8750}.AppStore|iPhone.ActiveCfg = Release|Any CPU
+		{7B5EAAC9-3C8B-4EA8-847C-7FE52AEE8750}.AppStore|iPhoneSimulator.ActiveCfg = Release|Any CPU
+		{7B5EAAC9-3C8B-4EA8-847C-7FE52AEE8750}.AppStore|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{7B5EAAC9-3C8B-4EA8-847C-7FE52AEE8750}.AppStore|Mixed Platforms.Build.0 = Release|Any CPU
+		{7B5EAAC9-3C8B-4EA8-847C-7FE52AEE8750}.AppStore|x86.ActiveCfg = Release|Any CPU
+		{7B5EAAC9-3C8B-4EA8-847C-7FE52AEE8750}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7B5EAAC9-3C8B-4EA8-847C-7FE52AEE8750}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7B5EAAC9-3C8B-4EA8-847C-7FE52AEE8750}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{7B5EAAC9-3C8B-4EA8-847C-7FE52AEE8750}.Debug|iPhone.ActiveCfg = Debug|Any CPU
+		{7B5EAAC9-3C8B-4EA8-847C-7FE52AEE8750}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU
+		{7B5EAAC9-3C8B-4EA8-847C-7FE52AEE8750}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{7B5EAAC9-3C8B-4EA8-847C-7FE52AEE8750}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{7B5EAAC9-3C8B-4EA8-847C-7FE52AEE8750}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{7B5EAAC9-3C8B-4EA8-847C-7FE52AEE8750}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7B5EAAC9-3C8B-4EA8-847C-7FE52AEE8750}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7B5EAAC9-3C8B-4EA8-847C-7FE52AEE8750}.Release|ARM.ActiveCfg = Release|Any CPU
+		{7B5EAAC9-3C8B-4EA8-847C-7FE52AEE8750}.Release|iPhone.ActiveCfg = Release|Any CPU
+		{7B5EAAC9-3C8B-4EA8-847C-7FE52AEE8750}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
+		{7B5EAAC9-3C8B-4EA8-847C-7FE52AEE8750}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{7B5EAAC9-3C8B-4EA8-847C-7FE52AEE8750}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{7B5EAAC9-3C8B-4EA8-847C-7FE52AEE8750}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -722,6 +758,7 @@ Global
 		{E54C0B09-DB27-436C-A4C2-8D0704EE5B8D} = {5CEE0E3C-B9AB-41CE-9CD4-13B70F827CDE}
 		{89AA305D-AD29-4D2C-955D-15FC41DA8238} = {5CEE0E3C-B9AB-41CE-9CD4-13B70F827CDE}
 		{CC3FF47A-D5CD-4D54-9B8A-8D568E23EC54} = {FE47FA16-5FC0-4E41-8517-DABBA679779F}
+		{7B5EAAC9-3C8B-4EA8-847C-7FE52AEE8750} = {3BCA14E3-321F-42AE-8084-D8E6221EDE76}
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
 		StartupItem = FoodSearch.Presentation.Mobile.Android\FoodSearch.Presentation.Mobile.Android.csproj

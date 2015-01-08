@@ -1,26 +1,16 @@
-Witamy w serwisie Openkort.pl!
-
-
-Proponujemy zachowaæ lub wydrukowaæ tego maila.
-Informacje o twoim koncie: 
-Login: [UserName] 
+Witamy w serwisie FoodSearch.pl!
 
 
 Twoje konto jest obecnie nieaktywne. Nie mo¿esz go u¿ywaæ zanim nie odwiedzisz poni¿szej strony:
-http://openkort.pl/account/verify?id=[Id]
+http://foodsearch.azurewebsites.net/account/verify?code=[Code]
 
-Przed u¿yciem serwisu zapoznaj siê ze stron¹ jak to dzia³a:
-http://openkort.pl/howitwork
 
 Nie zapomnij swojego has³a. Jeœli jednak siê to wydarzy zawsze mo¿esz je zresetowaæ pod tym adresem:
-http://openkort.pl/account/ForgottenPassword
+http://foodsearch.azurewebsites.net/account/ForgottenPassword
 
 
 Jeœli masz jakieœ pytania, mo¿esz siê z nami skontaktowaæ pod adresem:
-www.openkort.pl/contact
-
-lub bezposrednio na email: 
-kontakt@openkort.pl
+http://foodsearch.azurewebsites.net/contact
 
 
 Dziêkujemy za rejestracje!
@@ -29,4 +19,4 @@ Dziêkujemy za rejestracje!
 
 
 -----------------------------------------------
-Jest to e-mail wys³any zgodnie z polityka www.openkort.pl akceptowan¹ przy rejestracji.
+Jest to e-mail wys³any zgodnie z polityka www.foodsearch.pl akceptowan¹ przy rejestracji.

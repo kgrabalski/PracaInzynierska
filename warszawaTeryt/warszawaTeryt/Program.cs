@@ -332,7 +332,14 @@ namespace warszawaTeryt
         private static void Main(string[] args)
         {
             //wczytajBudynki();
-            wczytajPolozenie();
+            //wczytajPolozenie();
+
+            string api = "https://maps.googleapis.com/maps/api/geocode/xml?key=AIzaSyCkrbSly-hxJRNBEpN5hFvMgDpEK-ZskVo&sensor=false&address={0}";
+            string adr = HttpUtility.UrlEncode("Lewartowskiego 17,Warszawa", Encoding.UTF8);
+            string url = string.Format(api, adr);
+            WebClient web = new WebClient();
+            web.Encoding = Encoding.UTF8;
+            string xml = web.DownloadString(url);
 
 
             Console.ReadLine();

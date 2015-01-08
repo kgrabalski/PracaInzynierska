@@ -8,7 +8,7 @@ namespace FoodSearch.BusinessLogic.Domain.User.Interface
     public interface IUserDomain
     {
         bool IsEmailDuplicated(string email);
-        Guid CreateUser(string firstName, string lastName, string email, string password);
+        Guid CreateUser(string firstName, string lastName, string email, string phoneNumber, string password);
         void CreateConfirmationEntry(Guid userId, string email);
         RegisterConfirmationResult ConfirmRegistration(Guid code);
         bool ValidateUser(string email, byte[] password);

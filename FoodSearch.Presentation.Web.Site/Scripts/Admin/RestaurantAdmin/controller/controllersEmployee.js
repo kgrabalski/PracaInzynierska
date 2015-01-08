@@ -5,9 +5,3 @@ app.controller('Dashboard', ['$scope',
         $scope.napis = "Dashboard";
     }
 ]);
-
-app.controller('Orders', ['$scope',
-    function ($scope) {
-        $scope.napis = "Orders";
-    }
-]);

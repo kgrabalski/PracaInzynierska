@@ -21,7 +21,7 @@ namespace FoodSearch.Presentation.Web.Site.Providers
             throw new NotImplementedException();
         }
 
-        public CreateUserResult CreateUser(string firstName, string lastName, string email, string password)
+        public CreateUserResult CreateUser(string firstName, string lastName, string email, string phoneNumber, string password)
         {
             CreateUserResult result = new CreateUserResult();
 
@@ -43,7 +43,7 @@ namespace FoodSearch.Presentation.Web.Site.Providers
                 return result;
             }
 
-            Guid userId = _domain.User.CreateUser(firstName, lastName, email, password);
+            Guid userId = _domain.User.CreateUser(firstName, lastName, email, phoneNumber, password);
             if (userId != Guid.Empty)
             {
                 _domain.User.CreateConfirmationEntry(userId, email);

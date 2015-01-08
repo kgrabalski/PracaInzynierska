@@ -31,26 +31,32 @@ namespace FoodSearch.BusinessLogic.Domain.Order
             _provider = provider;
         }
 
-        public DeliveryAddressDto GetUserDeliveryAddress(Guid userId)
+        public IEnumerable<DeliveryAddressDto> GetUserDeliveryAddresses(Guid userId)
         {
             using (var rep = _provider.GetRepository<DeliveryAddress>())
             {
-                var da = rep.GetAll()
+                return rep.GetAll()
                     .Where(x => x.UserId == userId)
-                    .SingleOrDefault();
-                return new DeliveryAddressDto()
-                {
-                    FirstName = da.User.FirstName,
-                    LastName = da.User.LastName,
-                    City = da.Address.District.City.Name,
-                    Street = da.Address.Street.Name,
-                    StreetNumber = da.Address.Number,
-                    FlatNumber = da.FlatNumber
-                };
+                    .List()
+                    .Select(x => new DeliveryAddressDto()
+                    {
+                        Id = x.DeliveryAddressId,
+                        AddressId = x.AddressId,
+                        FirstName = x.User.FirstName,
+                        LastName = x.User.LastName,
+                        CityId = x.Address.District.CityId,
+                        City = x.Address.District.City.Name,
+                        StreetId = x.Address.StreetId,
+                        Street = x.Address.Street.Name,
+                        StreetNumber = x.Address.Number,
+                        FlatNumber = x.FlatNumber
+                    })
+                    .ToList()
+                    .Map<IEnumerable<DeliveryAddressDto>>();
             }
         }
 
-        public CreateOrderResult CreateOrder(Guid userId, Guid restaurantId, List<OrderItem> orderItems, DeliveryTypes deliveryType, PaymentTypes paymentType)
+        public CreateOrderResult CreateOrder(Guid userId, Guid restaurantId, List<OrderItem> orderItems, DeliveryTypes deliveryType, PaymentTypes paymentType, int? addressId, string flatNumber)
         {
             using (var transaction = _provider.BeginTransaction)
             {
@@ -60,6 +66,7 @@ namespace FoodSearch.BusinessLogic.Domain.Order
                     using (var repO = _provider.GetRepository<Data.Mapping.Entities.Order>())
                     using (var repR = _provider.GetRepository<Restaurant>())
                     using (var repOd = _provider.GetRepository<OrderDish>())
+                    using (var repA = _provider.GetRepository<Address>())
                     {
                         var dishes = orderItems.Select(x => repD.Get(x.DishId)).ToList();
                         
@@ -71,14 +78,12 @@ namespace FoodSearch.BusinessLogic.Domain.Order
                             new XElement("PredictedDeliveryTime", DateTime.Now.ToString("O", CultureInfo.InvariantCulture)));
                         if (deliveryType == DeliveryTypes.Shipping)
                         {
-                            var da = GetUserDeliveryAddress(userId);
+                            var da = repA.Get(addressId.Value);
                             deliveryData.Add(new XElement("DeliveryData",
-                                new XElement("FirstName", da.FirstName),
-                                new XElement("LastName", da.LastName),
-                                new XElement("City", da.City),
+                                new XElement("City", da.District.CityId),
                                 new XElement("Street", da.Street),
-                                new XElement("StreetNumber", da.StreetNumber),
-                                new XElement("FlatNumber", da.FlatNumber)));
+                                new XElement("StreetNumber", da.Number),
+                                new XElement("FlatNumber", flatNumber)));
                         }
 
                         var order = new Data.Mapping.Entities.Order()
@@ -252,10 +257,21 @@ namespace FoodSearch.BusinessLogic.Domain.Order
 
                 return new DeliveryStatus()
                 {
-                    OrderConfirmed = order.OrderStateId == (int) OrderStates.Confirmed,
+                    ConfirmationStatus = GetConfirmationStatus(order.OrderStateId),
                     DeliveryDate = delivery.ToString("dd.MM.yyyy HH:mm"),
                     MinutesLeft = delivery.Subtract(DateTime.Now).Minutes
                 };
+            }
+        }
+
+        private ConfirmationStatus GetConfirmationStatus(int orderState)
+        {
+            switch ((OrderStates) orderState)
+            {
+                case OrderStates.Paid: return ConfirmationStatus.NotConfirmed;
+                case OrderStates.Confirmed: return ConfirmationStatus.Confirmed;
+                case OrderStates.Cancelled: return ConfirmationStatus.Cancelled;
+                default: return ConfirmationStatus.NotConfirmed;
             }
         }
     }

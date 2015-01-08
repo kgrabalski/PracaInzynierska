@@ -165,10 +165,15 @@
     <Compile Include="Areas\RestaurantAdmin\Controllers\DishGroupController.cs" />
     <Compile Include="Areas\RestaurantAdmin\Controllers\HomeController.cs" />
     <Compile Include="Areas\RestaurantAdmin\Controllers\OpeningHourController.cs" />
+    <Compile Include="Areas\RestaurantAdmin\Controllers\OpinionController.cs" />
+    <Compile Include="Areas\RestaurantAdmin\Controllers\OrderController.cs" />
+    <Compile Include="Areas\RestaurantAdmin\Controllers\OrderHistoryController.cs" />
+    <Compile Include="Areas\RestaurantAdmin\Controllers\RatingController.cs" />
     <Compile Include="Areas\RestaurantAdmin\Controllers\RestaurantCuisineController.cs" />
     <Compile Include="Areas\RestaurantAdmin\Models\DishGroupModel.cs" />
     <Compile Include="Areas\RestaurantAdmin\Models\DishModel.cs" />
     <Compile Include="Areas\RestaurantAdmin\Models\OpeningHourModel.cs" />
+    <Compile Include="Areas\RestaurantAdmin\Models\OpinionFilterModel.cs" />
     <Compile Include="Areas\RestaurantAdmin\RestaurantAdminAreaRegistration.cs" />
     <Compile Include="Areas\SiteAdmin\Controllers\AccountController.cs" />
     <Compile Include="Areas\SiteAdmin\Controllers\AddressController.cs" />
@@ -234,6 +239,7 @@
     <Content Include="Content\Admin\font-awesome.min.css" />
     <Content Include="Content\Admin\ionicons.css" />
     <Content Include="Content\Admin\ionicons.min.css" />
+    <Content Include="Content\Admin\Site.css" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap-timepicker.css" />
@@ -262,7 +268,11 @@
     <Content Include="Scripts\Admin\RestaurantAdmin\controller\cuisineController.js" />
     <Content Include="Scripts\Admin\RestaurantAdmin\controller\dishController.js" />
     <Content Include="Scripts\Admin\RestaurantAdmin\controller\dishGroupController.js" />
+    <Content Include="Scripts\Admin\RestaurantAdmin\controller\newOrdersController.js" />
     <Content Include="Scripts\Admin\RestaurantAdmin\controller\openingHoursController.js" />
+    <Content Include="Scripts\Admin\RestaurantAdmin\controller\opinionsController.js" />
+    <Content Include="Scripts\Admin\RestaurantAdmin\controller\ordersHistoryController.js" />
+    <Content Include="Scripts\Admin\RestaurantAdmin\controller\pendingOrdersController.js" />
     <Content Include="Scripts\Admin\RestaurantAdmin\service\services.js" />
     <Content Include="Scripts\Admin\SiteAdmin\app.js" />
     <Content Include="Scripts\Admin\SiteAdmin\controller\cityController.js" />
@@ -296,7 +306,9 @@
     <Content Include="Scripts\Frontend\Basket.js" />
     <Content Include="Scripts\Frontend\BasketSummary.js" />
     <Content Include="Scripts\Frontend\Delivery.js" />
+    <Content Include="Scripts\Frontend\DeliveryAddresses.js" />
     <Content Include="Scripts\Frontend\HomePage.js" />
+    <Content Include="Scripts\Frontend\Register.js" />
     <Content Include="Scripts\Frontend\RestaurantPage.js" />
     <Content Include="Scripts\Frontend\SearchRestaurants.js" />
     <Content Include="Scripts\Frontend\UserPanel.js" />

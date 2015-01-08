@@ -82,7 +82,7 @@ namespace FoodSearch.Presentation.Web.Site.Controllers
             if (ModelState.IsValid)
                 if (!_domain.User.IsEmailDuplicated(model.Email))
                 {
-                    Guid userId = _domain.User.CreateUser(model.FirstName, model.LastName, model.Email, model.Password);
+                    Guid userId = _domain.User.CreateUser(model.FirstName, model.LastName, model.Email, model.PhoneNumber, model.Password);
                     _domain.User.CreateConfirmationEntry(userId, model.Email);
                     _domain.User.CreateDeliveryAddress(userId, model.AddressId, model.FlatNumber);
                     return RedirectToAction("AccountCreated");

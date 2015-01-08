@@ -15,6 +15,10 @@ namespace FoodSearch.Presentation.Web.Site.Models
         [Required]
         public string Email { get; set; }
         [Required]
+        [MaxLength(9)]
+        [MinLength(9)]
+        public string PhoneNumber { get; set; }
+        [Required]
         public string Password { get; set; }
         [Required]
         [Compare("Password")]

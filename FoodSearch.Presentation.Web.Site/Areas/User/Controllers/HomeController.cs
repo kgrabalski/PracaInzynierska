@@ -26,7 +26,7 @@ namespace FoodSearch.Presentation.Web.Site.Areas.User.Controllers
             var model = new UserPanelModel()
             {
                 UserDetails = _domain.User.GetUserDetails(ui.UserId),
-                DeliveryAddress = _domain.Order.GetUserDeliveryAddress(ui.UserId)
+                DeliveryAddresses = _domain.Order.GetUserDeliveryAddresses(ui.UserId)
             };
             return View(model);
         }

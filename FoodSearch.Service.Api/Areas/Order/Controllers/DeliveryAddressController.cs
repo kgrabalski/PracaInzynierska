@@ -23,9 +23,9 @@ namespace FoodSearch.Service.Api.Areas.Order.Controllers
         }
 
         [HttpGet]
-        public DeliveryAddress GetDeliveryAddress([ModelBinder] UserInfo ui)
+        public IEnumerable<DeliveryAddress> GetDeliveryAddresses([ModelBinder] UserInfo ui)
         {
-            return _domain.Order.GetUserDeliveryAddress(ui.UserId);
+            return _domain.Order.GetUserDeliveryAddresses(ui.UserId);
         }
     }
 }

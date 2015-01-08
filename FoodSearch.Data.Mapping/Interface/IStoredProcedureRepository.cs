@@ -1,4 +1,7 @@
-﻿using FoodSearch.Data.Mapping.StoredProcedure.Results;
+﻿using System.Xml.Linq;
+
+using FoodSearch.Data.Mapping.Entities;
+using FoodSearch.Data.Mapping.StoredProcedure.Results;
 using System;
 using System.Collections.Generic;
 
@@ -12,5 +15,6 @@ namespace FoodSearch.Data.Mapping.Interface
         IEnumerable<PartnerRestaurant> GetPartnerRestaurants();
         RestaurantRating GetRestaurantRating(Guid restaurantId);
         IEnumerable<UserOrder> GetUserOrders(Guid userId, int page = 0, int pageSize = 10);
+        string GetRestaurantOrders(Guid restaurantId, Guid? orderId, OrderStates? ordersState);
     }
 }

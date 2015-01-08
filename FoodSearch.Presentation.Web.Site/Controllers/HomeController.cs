@@ -25,14 +25,23 @@ namespace FoodSearch.Presentation.Web.Site.Controllers
             return View();
         }
 
+        [Authorize]
+        [HttpPost]
+        public ActionResult GetDeliveryAddresses(UserInfo ui)
+        {
+            var addresses = _domain.Order.GetUserDeliveryAddresses(ui.UserId);
+            return Json(addresses, JsonRequestBehavior.DenyGet);
+        }
+
         public ActionResult Blank()
         {
             return new EmptyResult();
         }
 
         [HttpPost]
-        public ActionResult Restaurants(int addressId)
+        public ActionResult Restaurants(int addressId, int? deliveryAddressId)
         {
+            HttpContext.Session["deliveryAddressId"] = deliveryAddressId;
             var restaurants = new RestaurantsListModel()
             {
                 AddressId = addressId,

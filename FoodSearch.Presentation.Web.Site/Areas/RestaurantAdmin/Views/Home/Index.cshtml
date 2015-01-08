@@ -16,9 +16,6 @@
 
 @section ScriptSection
 {
-    @*<script type="text/javascript" src="~/Scripts/jquery.dataTables.js"></script>*@
-    @*<script type="text/javascript" src="~/Scripts/dataTables.bootstrap.js"></script>*@
-    @*<script type="text/javascript" src="~/Scripts/bootstrap-timepicker.min.js"></script>*@
     <script src="~/Content/Selectize/js/standalone/selectize.min.js"></script>
     <script src="~/Scripts/Admin/Common/directives.js"></script>
     <script src="~/Scripts/Admin/Common/services.js"></script>
@@ -28,10 +25,14 @@
     <script src="~/Scripts/Admin/RestaurantAdmin/controller/cuisineController.js"></script>
     <script src="~/Scripts/Admin/RestaurantAdmin/controller/dishGroupController.js"></script>
     <script src="~/Scripts/Admin/RestaurantAdmin/controller/dishController.js"></script>
+    <script src="~/Scripts/Admin/RestaurantAdmin/controller/opinionsController.js"></script>
+    <script src="~/Scripts/Admin/RestaurantAdmin/controller/newOrdersController.js"></script>
+    <script src="~/Scripts/Admin/RestaurantAdmin/controller/pendingOrdersController.js"></script>
     @if (User.IsInRole(UserTypes.RestaurantAdmin.ToString()))
     {
         <script src="~/Scripts/Admin/RestaurantAdmin/controller/controllersAdmin.js"></script>
         <script src="~/Scripts/Admin/RestaurantAdmin/controller/openingHoursController.js"></script>
+        <script src="~/Scripts/Admin/RestaurantAdmin/controller/ordersHistoryController.js"></script>
     }
 }
 
@@ -55,10 +56,23 @@
                     </a>
                 </li>
                 <li navigation-item>
-                    <a href="/RestaurantAdmin#/orders">
+                    <a href="/RestaurantAdmin#/newOrders">
+                        <i class="fa fa-exclamation"></i> <span>Zamówienia (nowe)</span>
+                    </a>
+                </li>
+                <li navigation-item>
+                    <a href="/RestaurantAdmin#/pendingOrders">
                         <i class="fa fa-edit"></i> <span>Zamówienia</span>
                     </a>
                 </li>
+                @if (User.IsInRole(UserTypes.RestaurantAdmin.ToString()))
+                {
+                    <li navigation-item>
+                        <a href="/RestaurantAdmin#/ordersHistory">
+                            <i class="fa fa-calendar"></i> <span>Historia zamówień</span>
+                        </a>
+                    </li>
+                }
                 <li navigation-item>
                     <a href="/RestaurantAdmin#/dishes">
                         <i class="fa fa-cutlery"></i> <span>Dania</span>

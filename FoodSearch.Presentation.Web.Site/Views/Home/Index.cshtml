@@ -23,17 +23,27 @@
                         <legend class="text-center">Znajdź restauracje</legend>
 
                         <div class="box-body">
+                            @if (User.Identity.IsAuthenticated)
+                            {
+                                <div class="form-group">
+                                    <label for="selectAddress" class="control-label">Moje adresy:</label>
+                                    <select id="selectAddress" name="deliveryAddressId" placeholder="Wybierz adres"></select>
+                                </div>
+
+                                <script type="text/javascript" src="~/Scripts/Frontend/DeliveryAddresses.js"></script>
+                            }
+
                             <div class="form-group">
                                 <label for="selectCity" class="control-label">Miasto</label>
-                                <select id="selectCity" required></select>
+                                <select id="selectCity" required placeholder="Wybierz miasto"></select>
                             </div>
                             <div class="form-group">
                                 <label for="selectStreet" class="control-label">Ulica</label>
-                                <select id="selectStreet" required></select>
+                                <select id="selectStreet" required placeholder="Wybierz ulicę"></select>
                             </div>
                             <div class="form-group">
                                 <label for="selectNumber" class="control-label">Numer</label>
-                                <select id="selectNumber" name="addressId" required></select>
+                                <select id="selectNumber" name="addressId" required placeholder="Wybierz numer"></select>
                             </div>
                             <div class="form-group">
                                 <input type="submit" class="btn btn-primary btn-block" value="Szukaj restauracji" />

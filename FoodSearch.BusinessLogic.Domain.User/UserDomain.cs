@@ -37,7 +37,7 @@ namespace FoodSearch.BusinessLogic.Domain.User
             }
         }
 
-        public Guid CreateUser(string firstName, string lastName, string email, string password)
+        public Guid CreateUser(string firstName, string lastName, string email, string phoneNumber, string password)
         {
             using (var rep = _provider.GetRepository<Data.Mapping.Entities.User>())
             {
@@ -47,6 +47,7 @@ namespace FoodSearch.BusinessLogic.Domain.User
                     FirstName = firstName,
                     LastName = lastName,
                     Email = email,
+                    PhoneNumber = phoneNumber,
                     Password = passHash,
                     CreateDate = DateTime.Now,
                     UserStateId = (int)UserStates.Unconfirmed,
@@ -73,8 +74,7 @@ namespace FoodSearch.BusinessLogic.Domain.User
                     new List<string>() {email},
                     "FoodSearch: potwierdzenie rejestracji",
                     EmailBodyHelper.Registration(
-                        code.ToString(),
-                        string.Format("{0} {1}", user.FirstName, user.LastName)));
+                        code.ToString()));
             }
         }
 
@@ -93,7 +93,7 @@ namespace FoodSearch.BusinessLogic.Domain.User
                 {
                     using (var repU = _provider.GetRepository<Data.Mapping.Entities.User>())
                     {
-                        var user = confirm.User;
+                        var user = repU.Get(confirm.User.UserId);
                         user.UserStateId = (int)UserStates.Active;
                         repU.Update(user);
                         result = RegisterConfirmationResult.Confirmed;

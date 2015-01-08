@@ -1,4 +1,7 @@
-﻿using FoodSearch.Data.Mapping.Interface;
+﻿using System.Xml.Linq;
+
+using FoodSearch.Data.Mapping.Entities;
+using FoodSearch.Data.Mapping.Interface;
 using FoodSearch.Data.Mapping.StoredProcedure.Results;
 using NHibernate;
 using System;
@@ -64,6 +67,20 @@ namespace FoodSearch.Data.Mapping.Repository
             query.SetInt32("page", page);
             query.SetInt32("pageSize", pageSize);
             return query.List<UserOrder>();
+        }
+
+        public string GetRestaurantOrders(Guid restaurantId, Guid? orderId, OrderStates? ordersState)
+        {
+            var query = _session.GetNamedQuery("GetRestaurantOrders");
+            query.SetGuid("restaurantId", restaurantId);
+
+            if (orderId.HasValue) query.SetGuid("orderId", orderId.Value);
+            else query.SetParameter("orderId", null, NHibernateUtil.Guid);
+
+            if (ordersState.HasValue) query.SetInt32("ordersState", (int) ordersState);
+            else query.SetParameter("ordersState", null, NHibernateUtil.Int32);
+
+            return query.UniqueResult<string>();
         }
 
         public void Dispose()

@@ -43,3 +43,28 @@ services.service('OpeningHourService', [
         return service;
     }
 ]);
+
+services.service('OpinionsService', [
+    '$resource', function($resource) {
+        var service = $resource('/RestaurantAdmin/api/Opinion?page=:page&rating=:rating',
+                                {page: 0, rating: 0},
+        {
+            getOpinions: {
+                method: 'GET',
+                params: { page: "@Page", rating: "@Rating" },
+                isArray: true
+            }
+        });
+        service.Page = 0;
+        service.Rating = 0;
+
+        service.Items = service.getOpinions({page: service.Page++, rating: service.Rating});
+        return service;
+    }
+]);
+
+services.service('RatingService', [
+    '$resource', function($resource) {
+        return $resource('/RestaurantAdmin/api/Rating');
+    }
+]);

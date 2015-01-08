@@ -14,9 +14,17 @@
                 controller: 'Dashboard',
                 templateUrl: 'dashboardTemplate'
             })
-            .when("/orders", {
-                controller: 'Orders',
-                templateUrl: 'ordersTemplate'
+            .when("/newOrders", {
+                controller: 'NewOrdersController',
+                templateUrl: 'newOrdersTemplate'
+            })
+            .when("/pendingOrders", {
+                controller: 'PendingOrdersController',
+                templateUrl: 'pendingOrdersTemplate'
+            })
+            .when("/ordersHistory", {
+                controller: 'OrdersHistoryController',
+                templateUrl: 'ordersHistoryTemplate'
             })
             .when("/dishes", {
                 controller: 'DishesController',
@@ -42,7 +50,7 @@
                 templateUrl: 'openingHoursTemplate'
             })
             .when("/opinions", {
-                controller: 'Opinions',
+                controller: 'OpinionsController',
                 templateUrl: 'opinionsTemplate'
             })
             .when("/reports", {

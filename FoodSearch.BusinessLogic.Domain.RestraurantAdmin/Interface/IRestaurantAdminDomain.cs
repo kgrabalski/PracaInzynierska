@@ -29,5 +29,7 @@ namespace FoodSearch.BusinessLogic.Domain.RestraurantAdmin.Interface
         OpeningHour CreateOpeningHour(Guid restaurantId, int day, TimeSpan timeFrom, TimeSpan timeTo);
         bool DeleteOpeningHour(int openingHourId);
         EmployeeData GetEmployeeData(Guid restaurantId, Guid userId);
+        IEnumerable<RestaurantOrder> GetRestaurantOrders(Guid restaurantId, bool newOrders);
+        RestaurantOrder GetRestaurantOrder(Guid restaurantId, Guid orderId);
     }
 }

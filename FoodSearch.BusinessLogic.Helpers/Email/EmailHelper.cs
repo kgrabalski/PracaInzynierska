@@ -20,7 +20,7 @@ namespace FoodSearch.BusinessLogic.Helpers.Email
             message.Priority = MailPriority.Normal;
             message.Body = body.Html;
             message.AlternateViews.Add(AlternateView.CreateAlternateViewFromString(body.PlainText, Encoding.UTF8, "text/plain"));
-            message.BodyEncoding = Encoding.UTF8;
+            message.BodyEncoding = Encoding.GetEncoding("windows-1250");
 
             SmtpClient smtpClient = new SmtpClient("smtp.googlemail.com", 587);
             smtpClient.Credentials = new NetworkCredential("admin@openkort.pl", "GrabalskiP@ssw0rd");

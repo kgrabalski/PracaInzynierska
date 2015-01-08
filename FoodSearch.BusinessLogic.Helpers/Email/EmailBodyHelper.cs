@@ -10,9 +10,9 @@ namespace FoodSearch.BusinessLogic.Helpers.Email
     {
         private static readonly string _contentPath = "FoodSearch.BusinessLogic.Helpers.Email.Content.{0}.{1}";
 
-        public static EmailBody Registration(string id, string userName)
+        public static EmailBody Registration(string code)
         {
-            return GetBody(MailHelperMessageType.Registration, new { Id = id, UserName = userName });
+            return GetBody(MailHelperMessageType.Registration, new {Code = code});
         }
 
         public static EmailBody PasswordResetRequest(string request, string userName)
@@ -35,10 +35,6 @@ namespace FoodSearch.BusinessLogic.Helpers.Email
             html = props.Aggregate(html, (current, p) => current.Replace(string.Format("[{0}]", p.Name), p.GetValue(parameters)));
             plain = props.Aggregate(plain, (current, p) => current.Replace(string.Format("[{0}]", p.Name), p.GetValue(parameters)));
 
-#if DEBUG
-            html = html.Replace("openkort.pl", "openkorttest.azurewebsites.net");
-            plain = plain.Replace("openkort.pl", "openkorttest.azurewebsites.net");
-#endif
             return new EmailBody()
             {
                 Html = html,
@@ -54,7 +50,7 @@ namespace FoodSearch.BusinessLogic.Helpers.Email
             {
                 byte[] buff = new byte[reader.BaseStream.Length];
                 reader.BaseStream.Read(buff, 0, (int)reader.BaseStream.Length);
-                return Encoding.UTF8.GetString(buff);
+                return Encoding.GetEncoding("windows-1250").GetString(buff);
             }
         }
     }

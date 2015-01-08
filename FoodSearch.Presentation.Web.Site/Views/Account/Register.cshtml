@@ -13,7 +13,7 @@
 @section ScriptSection
 {
     <script type="text/javascript" src="~/Scripts/selectize.min.js"></script>
-    <script type="text/javascript" src="~/Scripts/Frontend/HomePage.js"></script>
+    <script type="text/javascript" src="~/Scripts/Frontend/Register.js"></script>
 }
 
 <div class="container">
@@ -30,35 +30,42 @@
                         @Html.ValidationSummary()
                     </div>
                     
-                    <div class="form-group">
+                    <div class="form-group has-feedback" id="groupFName">
                         <label for="FirstName" class="col-md-3 control-label">Imię</label>
                         <div class="col-md-9">
                             <input type="text" class="form-control" name="FirstName" placeholder="Imię" value="@Model.FirstName" required>
                         </div>
                     </div>
                 
-                    <div class="form-group">
+                    <div class="form-group has-feedback" id="groupLName">
                         <label for="LastName" class="col-md-3 control-label">Nazwisko</label>
                         <div class="col-md-9">
                             <input type="text" class="form-control" name="LastName" placeholder="Nazwisko" value="@Model.LastName" required>
                         </div>
                     </div>
 
-                    <div class="form-group">
+                    <div class="form-group has-feedback" id="emailGroup">
                         <label for="Email" class="col-md-3 control-label">Adres email</label>
                         <div class="col-md-9">
-                            <input type="email" class="form-control" name="Email" placeholder="Adres email" value="@Model.Email" required>
+                            <input type="email" id="emailInput" class="form-control" name="Email" placeholder="Adres email" value="@Model.Email" required>
                         </div>
                     </div>
                     
-                    <div class="form-group">
+                    <div class="form-group has-feedback">
+                        <label for="PhoneNumber" class="col-md-3 control-label">Numer telefonu</label>
+                        <div class="col-md-9">
+                            <input type="number" class="form-control" name="PhoneNumber" placeholder="Numer telefonu" value="@Model.PhoneNumber" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group has-feedback">
                         <label for="Password" class="col-md-3 control-label">Hasło</label>
                         <div class="col-md-9">
                             <input type="password" class="form-control" name="Password" placeholder="Hasło" required>
                         </div>
                     </div>
                     
-                    <div class="form-group">
+                    <div class="form-group has-feedback">
                         <label for="RepeatPassword" class="col-md-3 control-label">Powtórz hasło</label>
                         <div class="col-md-9">
                             <input type="password" class="form-control" name="RepeatPassword" placeholder="Powtórz hasło" required>
