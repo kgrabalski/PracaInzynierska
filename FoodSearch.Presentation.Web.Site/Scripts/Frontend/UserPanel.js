@@ -133,4 +133,168 @@ function UserInfoViewModel() {
         self.RepeatNewPassword("");
         self.ShowAlert(false);
     }
+
+    //delivery addresses
+    
+
+    function DeliveryAddress(id, aid, cid, c, sid, s, sn, fn) {
+        this.Id = id;
+        this.AddressId = aid;
+        this.CityId = cid;
+        this.City = c;
+        this.StreetId = sid;
+        this.Street = s;
+        this.StreetNumber = sn;
+        this.FlatNumber = fn;
+        this.DisplayText = this.City + ", " + this.Street + " " + this.StreetNumber;
+        if (this.FlatNumber != "") {
+            this.DisplayText += "/" + this.FlatNumber;
+        }
+    }
+
+    self.DeliveryAddresses = ko.observableArray();
+
+    self.GetDeliveryAddresses = function() {
+        $.ajax({
+            url: "/Home/GetDeliveryAddresses",
+            type: "POST",
+            success: function (response) {
+                for (var i = 0; i < response.length; i++) {
+                    var a = response[i];
+                    self.DeliveryAddresses.push(
+                        new DeliveryAddress(a.Id, a.AddressId, a.CityId, a.City,
+                                            a.StreetId, a.Street, a.StreetNumber, a.FlatNumber));
+                }
+            }
+        });
+    }
+    self.GetDeliveryAddresses();
+
+    self.RemoveAddress = function(da) {
+        $.ajax({
+            url: "/User/Home/DeleteUserDeliveryAddress",
+            type: "POST",
+            data: {
+                'deliveryAddressId': da.Id
+            },
+            success: function(response) {
+                if (response == true) {
+                    self.DeliveryAddresses.remove(da);
+                }
+            }
+        });
+    };
+
+
+    self.selectCity = $("#selectCity").selectize({
+        valueField: 'Id',
+        labelField: 'Name',
+        sortField: 'Name',
+        create: false,
+        onChange: function (value) {
+            self.selectStreet.clearOptions();
+            self.selectNumber.clearOptions();
+            if (value != "") {
+                self.selectStreet.enable();
+            } else {
+                self.selectStreet.disable();
+                self.selectNumber.disable();
+            }
+        }
+    })[0].selectize;
+
+    self.selectCity.load(function (callback) {
+        $.ajax({
+            url: "/Address/Cities",
+            type: "POST",
+            dataType: "json",
+            success: function (cities) {
+                callback(cities);
+            }
+        });
+    });
+
+    self.selectStreet = $("#selectStreet").selectize({
+        valueField: 'Id',
+        labelField: 'Name',
+        sortField: 'Name',
+        searchField: ['Name'],
+        create: false,
+        load: function (query, callback) {
+            if (query.length < 3) return callback();
+            $.ajax({
+                url: "/Address/Streets",
+                data: {
+                    'cityId': $("#selectCity").val(),
+                    'query': query
+                },
+                type: "POST",
+                dataType: 'json',
+                success: function (str) {
+                    callback(str);
+                }
+            });
+        },
+        onChange: function (value) {
+            self.selectNumber.disable();
+            self.selectNumber.clearOptions();
+            self.selectNumber.load(function (callback) {
+                $.ajax({
+                    url: "/Address/StreetNumbers",
+                    data: { 'streetId': value },
+                    type: "POST",
+                    dataType: 'json',
+                    success: function (numbers) {
+                        self.selectNumber.enable();
+                        callback(numbers);
+                    }
+                });
+            });
+        }
+    })[0].selectize;
+    self.selectStreet.disable();
+
+    self.selectNumber = $("#selectNumber").selectize({
+        valueField: "Id",
+        labelField: "Number",
+        sortField: "Number",
+        searchField: ["Number"],
+        create: false
+    })[0].selectize;
+
+    self.selectNumber.disable();
+
+    self.cleanAddAddressModal = function () {
+        $("#addAddress").modal("hide");
+        self.selectStreet.clearOptions();
+        self.selectNumber.clearOptions();
+        self.selectNumber.disable();
+        $("#flatNumber").val("");
+    }
+
+    self.CreateAddressModal = function() {
+        $("#addAddress").modal();
+    }
+
+    self.CreateAddress = function() {
+        $.ajax({
+            url: "/User/Home/CreateUserDeliveryAddress",
+            type: "POST",
+            data: {
+                'addressId': $("#selectNumber").val(),
+                'flatNumber': $("#flatNumber").val()
+            },
+            success: function(a) {
+                self.cleanAddAddressModal();
+
+                for (var i = 0; i < self.DeliveryAddresses().length; i++) {
+                    var x = self.DeliveryAddresses()[i];
+                    if (x.Id == a.Id) return;
+                }
+
+                self.DeliveryAddresses.push(new DeliveryAddress(a.Id, a.AddressId, a.CityId, a.City,
+                                            a.StreetId, a.Street, a.StreetNumber, a.FlatNumber));
+            }
+        });
+    }
 }

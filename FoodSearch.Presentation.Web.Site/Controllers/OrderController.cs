@@ -31,21 +31,36 @@ namespace FoodSearch.Presentation.Web.Site.Controllers
         {
             var shippingModel = new ShippingModel()
             {
-                DeliveryAddress = _domain.Order.GetUserDeliveryAddresses(ui.UserId).First(),
                 DeliveryTypes = _domain.Order.GetDeliveryTypes(),
                 PaymentTypes = _domain.Order.GetPaymentTypes(),
                 RestaurantId = basket.CurrentRestaurant
             };
+            if (basket.DeliveryAddressId.HasValue)
+            {
+                shippingModel.DeliveryAddress = _domain.User.GetUserDeliveryAddress(basket.DeliveryAddressId.Value);
+            }
+            else
+            {
+                shippingModel.DeliveryAddress = _domain.User.GetDeliveryAddress(ui.UserId, basket.AddressId);
+            }
             return View(shippingModel);
         }
 
         [HttpPost]
-        public ActionResult CreateOrder(Basket basket, int deliveryType, int paymentType, UserInfo ui)
+        public ActionResult CreateOrder(Basket basket, UserInfo ui, CreateOrderModel model)
         {
-            DeliveryTypes dt = (DeliveryTypes) deliveryType;
-            PaymentTypes pt = (PaymentTypes) paymentType;
+            DeliveryTypes dt = (DeliveryTypes) model.DeliveryType;
+            PaymentTypes pt = (PaymentTypes) model.PaymentType;
             var orderItems = basket.Items.Select(x => new OrderItem() { DishId = x.DishId, Quantity = x.Count }).ToList();
-            var orderInfo = _domain.Order.CreateOrder(ui.UserId, basket.CurrentRestaurant, orderItems, dt, pt, null, "");
+            
+            int? deliveryAddressId = null;
+            if (dt == DeliveryTypes.Shipping)
+            {
+                deliveryAddressId = _domain.User.CreateDeliveryAddress(ui.UserId, model.AddressId, model.FlatNumber);
+            }
+
+            var orderInfo = _domain.Order.CreateOrder(ui.UserId, basket.CurrentRestaurant, orderItems, dt, pt, deliveryAddressId);
+            
             if (pt == PaymentTypes.Cash)
             {
                 _domain.Order.ChangeOrderState(orderInfo.OrderId, OrderStates.Paid);

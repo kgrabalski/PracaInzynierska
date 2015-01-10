@@ -15,7 +15,7 @@
             <div class="panel-body">
                 <div class="row">
                     <div class="col-md-3 col-lg-3 " align="center">
-                         <img alt="User Pic" src="https://lh5.googleusercontent.com/-b0-k99FZlyE/AAAAAAAAAAI/AAAAAAAAAAA/eu7opA4byxI/photo.jpg?sz=100" class="img-circle"> 
+                        <img alt="User Pic" src="https://lh5.googleusercontent.com/-b0-k99FZlyE/AAAAAAAAAAI/AAAAAAAAAAA/eu7opA4byxI/photo.jpg?sz=100" class="img-circle"> 
                     </div>
 
                     <div class=" col-md-9 col-lg-9 ">
@@ -33,25 +33,12 @@
                                     <td>Adres email:</td>
                                     <td>@Model.UserDetails.Email</td>
                                 </tr>
+                                <tr>
+                                    <td>Numer telefonu:</td>
+                                    <td>@Model.UserDetails.PhoneNumber</td>
+                                </tr>
 
                                 <tr>
-                                <tr>
-                                    <td>Miasto</td>
-                                    <td>@Model.DeliveryAddress.City</td>
-                                </tr>
-                                <tr>
-                                    <td>Ulica:</td>
-                                    <td>@Model.DeliveryAddress.Street</td>
-                                </tr>
-                                <tr>
-                                    <td>Numer:</td>
-                                    <td>
-                                        @string.Format("{0}{1}{2}",
-                                        Model.DeliveryAddress.StreetNumber,
-                                        Model.DeliveryAddress.FlatNumber != "" ? "/" : "",
-                                        Model.DeliveryAddress.FlatNumber)
-                                    </td>
-                                </tr>
                             </tbody>
                         </table>
                         
@@ -61,6 +48,36 @@
                 </div>
             </div>
         </div>
+    </div>
+    
+    <div class="col-xs-12 col-sm-12 col-md-12">
+        <fieldset>
+            <legend>Moje adresy</legend>
+            <button class="btn btn-primary btn-block" data-bind="click: CreateAddressModal">Dodaj</button>
+            <table class="table table-hover table-striped">
+                <thead>
+                    <tr>
+                        <th>Miasto</th>
+                        <th>Ulica</th>
+                        <th>Numer budynku</th>
+                        <th>Numer mieszkania</th>
+                        <th>Opcje</th>
+                    </tr>
+                </thead>
+                <tbody data-bind="foreach: DeliveryAddresses">
+                    <tr>
+                        <td data-bind="text: City"></td>
+                        <td data-bind="text: Street"></td>
+                        <td data-bind="text: StreetNumber"></td>
+                        <td data-bind="text: FlatNumber"></td>
+                        <td>
+                            <button type="button" class="btn btn-danger" 
+                                    data-bind="click: $root.RemoveAddress">Usuń</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </fieldset>
     </div>
 </fieldset>
 
@@ -97,6 +114,41 @@
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">Anuluj</button>
                     <input type="submit" class="btn btn-primary" value="Zmień hasło" />
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="modal fade" id="addAddress">
+    <div class="modal-dialog">
+        <form role="form" data-bind="submit: CreateAddress">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                    <h4 class="modal-title">Dodanie adresu</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label for="selectCity" class="control-label">Miasto</label>
+                        <select id="selectCity" required placeholder="Wybierz miasto"></select>
+                    </div>
+                    <div class="form-group">
+                        <label for="selectStreet" class="control-label">Ulica</label>
+                        <select id="selectStreet" required placeholder="Wybierz ulicę"></select>
+                    </div>
+                    <div class="form-group">
+                        <label for="selectNumber" class="control-label">Numer budynku</label>
+                        <select id="selectNumber" name="addressId" required placeholder="Wybierz numer budynku"></select>
+                    </div>
+                    <div class="form-group">
+                        <label for="flatNumber" class="control-label">Numer mieszkania</label>
+                        <input type="text" id="flatNumber" class="form-control" placeholder="Wybierz numer mieszkania" />
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Anuluj</button>
+                    <input type="submit" class="btn btn-primary" value="Dodaj adres" />
                 </div>
             </div>
         </form>

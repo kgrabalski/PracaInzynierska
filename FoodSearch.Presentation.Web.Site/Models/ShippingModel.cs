@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 using FoodSearch.BusinessLogic.Domain.Order.Models;
+using FoodSearch.BusinessLogic.Domain.User.Models;
 
 namespace FoodSearch.Presentation.Web.Site.Models
 {

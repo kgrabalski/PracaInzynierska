@@ -13,7 +13,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-
+using DeliveryAddressDto = FoodSearch.BusinessLogic.Domain.User.Models.DeliveryAddress;
+using DeliveryAddress = FoodSearch.Data.Mapping.Entities.DeliveryAddress;
 
 
 namespace FoodSearch.BusinessLogic.Domain.User
@@ -141,12 +142,94 @@ namespace FoodSearch.BusinessLogic.Domain.User
             using (var rep = _provider.GetRepository<DeliveryAddress>())
             {
                 if (string.IsNullOrEmpty(flatNumber) || string.IsNullOrWhiteSpace(flatNumber)) flatNumber = string.Empty;
+
+                var address = rep.GetAll()
+                    .Where(x => x.UserId == userId && x.AddressId == addressId && x.FlatNumber == flatNumber)
+                    .SingleOrDefault();
+
+                if (address != null) return address.DeliveryAddressId;
+
                 return rep.Create<int>(new DeliveryAddress()
                 {
                     UserId = userId,
                     AddressId = addressId,
                     FlatNumber = flatNumber
                 });
+            }
+        }
+
+        public IEnumerable<DeliveryAddressDto> GetUserDeliveryAddresses(Guid userId)
+        {
+            using (var rep = _provider.GetRepository<DeliveryAddress>())
+            {
+                return rep.GetAll()
+                    .Where(x => x.UserId == userId)
+                    .List()
+                    .Select(x => new DeliveryAddressDto()
+                    {
+                        Id = x.DeliveryAddressId,
+                        AddressId = x.AddressId,
+                        FirstName = x.User.FirstName,
+                        LastName = x.User.LastName,
+                        CityId = x.Address.District.CityId,
+                        City = x.Address.District.City.Name,
+                        StreetId = x.Address.StreetId,
+                        Street = x.Address.Street.Name,
+                        StreetNumber = x.Address.Number,
+                        FlatNumber = x.FlatNumber
+                    })
+                    .ToList();
+            }
+        }
+
+        public DeliveryAddressDto GetUserDeliveryAddress(int deliveryAddressId)
+        {
+            using (var rep = _provider.GetRepository<DeliveryAddress>())
+            {
+                var da = rep.Get(deliveryAddressId);
+                return new DeliveryAddressDto()
+                {
+                    Id = da.DeliveryAddressId,
+                    AddressId = da.AddressId,
+                    FirstName = da.User.FirstName,
+                    LastName = da.User.LastName,
+                    CityId = da.Address.District.CityId,
+                    City = da.Address.District.City.Name,
+                    StreetId = da.Address.StreetId,
+                    Street = da.Address.Street.Name,
+                    StreetNumber = da.Address.Number,
+                    FlatNumber = da.FlatNumber
+                };
+            }
+        }
+
+        public DeliveryAddressDto GetDeliveryAddress(Guid userId, int addressId)
+        {
+            using (var rep = _provider.GetRepository<Address>())
+            {
+                var address = rep.Get(addressId);
+                var userData = GetUserDetails(userId);
+                return new DeliveryAddressDto()
+                {
+                    FirstName = userData.FirstName,
+                    LastName = userData.LastName,
+                    AddressId = address.AddressId,
+                    Id = -1,
+                    CityId = address.District.CityId,
+                    City = address.District.City.Name,
+                    StreetId = address.StreetId,
+                    Street = address.Street.Name,
+                    StreetNumber = address.Number,
+                    FlatNumber = string.Empty
+                };
+            }
+        }
+
+        public void DeleteDeliveryAddress(int deliveryAddressId)
+        {
+            using (var rep = _provider.GetRepository<DeliveryAddress>())
+            {
+                rep.Delete(deliveryAddressId);
             }
         }
 
@@ -160,7 +243,8 @@ namespace FoodSearch.BusinessLogic.Domain.User
                     UserId = user.UserId,
                     FirstName = user.FirstName,
                     LastName = user.LastName,
-                    Email = user.Email
+                    Email = user.Email,
+                    PhoneNumber = user.PhoneNumber
                 };
             }
         }

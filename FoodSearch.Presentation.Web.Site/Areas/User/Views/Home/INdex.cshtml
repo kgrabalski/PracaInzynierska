@@ -4,9 +4,15 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
+@section HeadSection
+{
+    <link rel="stylesheet" href="~/Content/Selectize/css/selectize.css" />
+}
+
 @section ScriptSection
 {
     <script type="text/javascript" src="~/Scripts/knockout-3.2.0.js"></script>
+    <script type="text/javascript" src="~/Scripts/selectize.min.js"></script>
     <script type="text/javascript" src="~/Scripts/Frontend/UserPanel.js"></script>
 }
 <div class="row">

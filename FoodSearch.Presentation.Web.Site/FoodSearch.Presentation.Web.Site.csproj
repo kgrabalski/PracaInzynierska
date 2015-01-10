@@ -212,6 +212,7 @@
     <Compile Include="Models\BasketItem.cs" />
     <Compile Include="Models\ChangePasswordModel.cs" />
     <Compile Include="Models\ContactModel.cs" />
+    <Compile Include="Models\CreateOrderModel.cs" />
     <Compile Include="Models\LoginModel.cs" />
     <Compile Include="Models\OpinionModel.cs" />
     <Compile Include="Models\RegisterModel.cs" />

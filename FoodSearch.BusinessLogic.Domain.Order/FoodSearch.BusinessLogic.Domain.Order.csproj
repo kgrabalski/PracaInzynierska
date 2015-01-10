@@ -61,7 +61,6 @@
     <Compile Include="Mapping\MappingConfig.cs" />
     <Compile Include="Models\ConfirmationStatus.cs" />
     <Compile Include="Models\CreateOrderResult.cs" />
-    <Compile Include="Models\DeliveryAddress.cs" />
     <Compile Include="Models\DeliveryStatus.cs" />
     <Compile Include="Models\DeliveryType.cs" />
     <Compile Include="Models\OrderItem.cs" />

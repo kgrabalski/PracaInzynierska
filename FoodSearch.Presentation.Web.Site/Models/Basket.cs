@@ -28,6 +28,9 @@ namespace FoodSearch.Presentation.Web.Site.Models
             }
         }
 
+        public int? DeliveryAddressId { get; set; }
+        public int AddressId { get; set; }
+
         public void AddItem(Dish dish)
         {
             var item = _items.SingleOrDefault(x => x.DishId == dish.Id);

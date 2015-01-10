@@ -58,6 +58,7 @@
   <ItemGroup>
     <Compile Include="Interface\IUserDomain.cs" />
     <Compile Include="Mapping\MappingConfig.cs" />
+    <Compile Include="Models\DeliveryAddress.cs" />
     <Compile Include="Models\RegisterConfirmationResult.cs" />
     <Compile Include="Models\UserDetails.cs" />
     <Compile Include="Models\UserOrder.cs" />

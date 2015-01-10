@@ -26,21 +26,38 @@ namespace FoodSearch.Presentation.Web.Site.Areas.User.Controllers
             var model = new UserPanelModel()
             {
                 UserDetails = _domain.User.GetUserDetails(ui.UserId),
-                DeliveryAddresses = _domain.Order.GetUserDeliveryAddresses(ui.UserId)
+                DeliveryAddresses = _domain.User.GetUserDeliveryAddresses(ui.UserId)
             };
             return View(model);
         }
 
+        [HttpPost]
         public ActionResult GetUserOrders(UserInfo ui, int page = 0, int pageSize = 10)
         {
             var orders = _domain.User.GetUserOrders(ui.UserId, page, pageSize);
             return Json(orders, JsonRequestBehavior.DenyGet);
         }
 
+        [HttpPost]
         public ActionResult GetUserOrderItems(Guid orderId)
         {
             var orderItems = _domain.User.GetUserOrderItems(orderId);
             return Json(orderItems, JsonRequestBehavior.DenyGet);
+        }
+
+        [HttpPost]
+        public ActionResult CreateUserDeliveryAddress(UserInfo ui, int addressId, string flatNumber)
+        {
+            int deliveryAddressId = _domain.User.CreateDeliveryAddress(ui.UserId, addressId, flatNumber);
+            var deliveryAddress = _domain.User.GetUserDeliveryAddress(deliveryAddressId);
+            return Json(deliveryAddress, JsonRequestBehavior.DenyGet);
+        }
+
+        [HttpPost]
+        public ActionResult DeleteUserDeliveryAddress(int deliveryAddressId)
+        {
+            _domain.User.DeleteDeliveryAddress(deliveryAddressId);
+            return Json(true, JsonRequestBehavior.DenyGet);
         }
     }
 }

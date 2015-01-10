@@ -11,10 +11,10 @@ namespace FoodSearch.Data.Mapping.Entities.Mapping
             LazyLoad();
             Id(x => x.OrderId).Column("OrderId").GeneratedBy.Guid().Not.Nullable();
             Map(x => x.UserId).Column("UserId").Not.Nullable();
-            References(x => x.User).Column("UserId").LazyLoad().Not.Nullable().Not.Insert();
+            References(x => x.User).Column("UserId").LazyLoad().Not.Nullable().Not.Insert().Not.Update();
             Map(x => x.CreateDate).Column("CreateDate").Not.Nullable();
             Map(x => x.DeliveryTypeId).Column("DeliveryTypeId").Not.Nullable();
-            References(x => x.DeliveryType).Column("DeliveryTypeId").LazyLoad().Not.Nullable().Not.Insert();
+            References(x => x.DeliveryType).Column("DeliveryTypeId").LazyLoad().Not.Nullable().Not.Insert().Not.Update();
             Map(x => x.DeliveryData).Column("DeliveryData").Not.Nullable();
             Map(x => x.RestaurantId).Column("RestaurantId").Not.Nullable();
             References(x => x.Restaurant).Column("RestaurantId").Not.Insert().Not.Update().LazyLoad();

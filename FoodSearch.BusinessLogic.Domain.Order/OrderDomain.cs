@@ -11,9 +11,6 @@ using FoodSearch.BusinessLogic.Domain.Order.Models;
 using FoodSearch.Data.Mapping.Entities;
 using FoodSearch.Data.Mapping.Interface;
 
-using DeliveryAddressDto = FoodSearch.BusinessLogic.Domain.Order.Models.DeliveryAddress;
-using DeliveryAddress = FoodSearch.Data.Mapping.Entities.DeliveryAddress;
-
 using DeliveryTypeDto = FoodSearch.BusinessLogic.Domain.Order.Models.DeliveryType;
 using DeliveryType = FoodSearch.Data.Mapping.Entities.DeliveryType;
 
@@ -31,32 +28,7 @@ namespace FoodSearch.BusinessLogic.Domain.Order
             _provider = provider;
         }
 
-        public IEnumerable<DeliveryAddressDto> GetUserDeliveryAddresses(Guid userId)
-        {
-            using (var rep = _provider.GetRepository<DeliveryAddress>())
-            {
-                return rep.GetAll()
-                    .Where(x => x.UserId == userId)
-                    .List()
-                    .Select(x => new DeliveryAddressDto()
-                    {
-                        Id = x.DeliveryAddressId,
-                        AddressId = x.AddressId,
-                        FirstName = x.User.FirstName,
-                        LastName = x.User.LastName,
-                        CityId = x.Address.District.CityId,
-                        City = x.Address.District.City.Name,
-                        StreetId = x.Address.StreetId,
-                        Street = x.Address.Street.Name,
-                        StreetNumber = x.Address.Number,
-                        FlatNumber = x.FlatNumber
-                    })
-                    .ToList()
-                    .Map<IEnumerable<DeliveryAddressDto>>();
-            }
-        }
-
-        public CreateOrderResult CreateOrder(Guid userId, Guid restaurantId, List<OrderItem> orderItems, DeliveryTypes deliveryType, PaymentTypes paymentType, int? addressId, string flatNumber)
+        public CreateOrderResult CreateOrder(Guid userId, Guid restaurantId, List<OrderItem> orderItems, DeliveryTypes deliveryType, PaymentTypes paymentType, int? deliveryAddressId)
         {
             using (var transaction = _provider.BeginTransaction)
             {
@@ -66,7 +38,7 @@ namespace FoodSearch.BusinessLogic.Domain.Order
                     using (var repO = _provider.GetRepository<Data.Mapping.Entities.Order>())
                     using (var repR = _provider.GetRepository<Restaurant>())
                     using (var repOd = _provider.GetRepository<OrderDish>())
-                    using (var repA = _provider.GetRepository<Address>())
+                    using (var repDA = _provider.GetRepository<DeliveryAddress>())
                     {
                         var dishes = orderItems.Select(x => repD.Get(x.DishId)).ToList();
                         
@@ -78,12 +50,12 @@ namespace FoodSearch.BusinessLogic.Domain.Order
                             new XElement("PredictedDeliveryTime", DateTime.Now.ToString("O", CultureInfo.InvariantCulture)));
                         if (deliveryType == DeliveryTypes.Shipping)
                         {
-                            var da = repA.Get(addressId.Value);
+                            var da = repDA.Get(deliveryAddressId.Value);
                             deliveryData.Add(new XElement("DeliveryData",
-                                new XElement("City", da.District.CityId),
-                                new XElement("Street", da.Street),
-                                new XElement("StreetNumber", da.Number),
-                                new XElement("FlatNumber", flatNumber)));
+                                new XElement("City", da.Address.District.City.Name),
+                                new XElement("Street", da.Address.Street.Name),
+                                new XElement("StreetNumber", da.Address.Number),
+                                new XElement("FlatNumber", da.FlatNumber)));
                         }
 
                         var order = new Data.Mapping.Entities.Order()

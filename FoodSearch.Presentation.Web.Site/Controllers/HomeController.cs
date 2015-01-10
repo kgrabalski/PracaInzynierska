@@ -29,7 +29,7 @@ namespace FoodSearch.Presentation.Web.Site.Controllers
         [HttpPost]
         public ActionResult GetDeliveryAddresses(UserInfo ui)
         {
-            var addresses = _domain.Order.GetUserDeliveryAddresses(ui.UserId);
+            var addresses = _domain.User.GetUserDeliveryAddresses(ui.UserId);
             return Json(addresses, JsonRequestBehavior.DenyGet);
         }
 
@@ -39,9 +39,11 @@ namespace FoodSearch.Presentation.Web.Site.Controllers
         }
 
         [HttpPost]
-        public ActionResult Restaurants(int addressId, int? deliveryAddressId)
+        public ActionResult Restaurants(int addressId, int? deliveryAddressId, Basket basket)
         {
-            HttpContext.Session["deliveryAddressId"] = deliveryAddressId;
+            basket.AddressId = addressId;
+            basket.DeliveryAddressId = deliveryAddressId;
+
             var restaurants = new RestaurantsListModel()
             {
                 AddressId = addressId,

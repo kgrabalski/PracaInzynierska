@@ -15,6 +15,10 @@ namespace FoodSearch.BusinessLogic.Domain.User.Interface
         string GetUserRole(string email);
         bool ValidateUserRole(string email, string role);
         int CreateDeliveryAddress(Guid userId, int addressId, string flatNumber);
+        IEnumerable<DeliveryAddress> GetUserDeliveryAddresses(Guid userId);
+        DeliveryAddress GetUserDeliveryAddress(int deliveryAddressId);
+        DeliveryAddress GetDeliveryAddress(Guid userId, int addressId);
+        void DeleteDeliveryAddress(int deliveryAddressId);
         UserDetails GetUserDetails(Guid userId);
         Guid GetUserId(string user);
         Guid CreatePasswordResetRequest(string email);
