@@ -27,23 +27,5 @@ namespace FoodSearch.Presentation.Web.Site.Areas.SiteAdmin.Controllers
         {
             return _domain.Core.GetCities();
         }
-
-        [HttpPost]
-        public HttpResponseMessage Create(CityModel city)
-        {
-            if (ModelState.IsValid)
-            {
-                var result = _domain.SiteAdmin.CreateCity(city.Name);
-                return Request.CreateResponse(result != null ? HttpStatusCode.Created : HttpStatusCode.Conflict, result);
-            }
-            return Request.CreateErrorResponse(HttpStatusCode.BadRequest, ModelState);
-        }
-
-        [HttpDelete]
-        public HttpResponseMessage Delete([FromUri] int id)
-        {
-            bool result = _domain.SiteAdmin.DeleteCity(id);
-            return Request.CreateResponse(result ? HttpStatusCode.OK : HttpStatusCode.NotFound);
-        }
     }
 }

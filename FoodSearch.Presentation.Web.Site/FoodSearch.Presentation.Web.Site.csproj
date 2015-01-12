@@ -46,17 +46,21 @@
       <HintPath>..\packages\Microsoft.AspNet.SignalR.SystemWeb.2.1.2\lib\net45\Microsoft.AspNet.SignalR.SystemWeb.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
-    <Reference Include="Microsoft.Owin">
-      <HintPath>..\packages\Microsoft.Owin.2.0.1\lib\net45\Microsoft.Owin.dll</HintPath>
+    <Reference Include="Microsoft.Owin, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.Owin.3.0.0\lib\net45\Microsoft.Owin.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.Owin.Host.SystemWeb">
-      <HintPath>..\packages\Microsoft.Owin.Host.SystemWeb.2.0.1\lib\net45\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+    <Reference Include="Microsoft.Owin.Host.SystemWeb, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.Owin.Host.SystemWeb.3.0.0\lib\net45\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.Owin.Security">
-      <HintPath>..\packages\Microsoft.Owin.Security.2.0.1\lib\net45\Microsoft.Owin.Security.dll</HintPath>
+    <Reference Include="Microsoft.Owin.Security, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.Owin.Security.3.0.0\lib\net45\Microsoft.Owin.Security.dll</HintPath>
     </Reference>
-    <Reference Include="Newtonsoft.Json">
-      <HintPath>..\packages\Newtonsoft.Json.6.0.5\lib\net45\Newtonsoft.Json.dll</HintPath>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Newtonsoft.Json.6.0.8\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="Ninject">
       <HintPath>..\packages\Ninject.3.2.2.0\lib\net45-full\Ninject.dll</HintPath>
@@ -164,10 +168,12 @@
     <Compile Include="Areas\RestaurantAdmin\Controllers\DishController.cs" />
     <Compile Include="Areas\RestaurantAdmin\Controllers\DishGroupController.cs" />
     <Compile Include="Areas\RestaurantAdmin\Controllers\HomeController.cs" />
+    <Compile Include="Areas\RestaurantAdmin\Controllers\NewOrderController.cs" />
     <Compile Include="Areas\RestaurantAdmin\Controllers\OpeningHourController.cs" />
     <Compile Include="Areas\RestaurantAdmin\Controllers\OpinionController.cs" />
     <Compile Include="Areas\RestaurantAdmin\Controllers\OrderController.cs" />
     <Compile Include="Areas\RestaurantAdmin\Controllers\OrderHistoryController.cs" />
+    <Compile Include="Areas\RestaurantAdmin\Controllers\PendingOrderController.cs" />
     <Compile Include="Areas\RestaurantAdmin\Controllers\RatingController.cs" />
     <Compile Include="Areas\RestaurantAdmin\Controllers\RestaurantCuisineController.cs" />
     <Compile Include="Areas\RestaurantAdmin\Models\DishGroupModel.cs" />
@@ -182,7 +188,6 @@
     <Compile Include="Areas\SiteAdmin\Controllers\LogoController.cs" />
     <Compile Include="Areas\SiteAdmin\Controllers\RestaurantController.cs" />
     <Compile Include="Areas\SiteAdmin\Controllers\StreetController.cs" />
-    <Compile Include="Areas\SiteAdmin\Models\CityModel.cs" />
     <Compile Include="Areas\SiteAdmin\Models\RestaurantModel.cs" />
     <Compile Include="Areas\SiteAdmin\SiteAdminAreaRegistration.cs" />
     <Compile Include="Areas\User\Controllers\HomeController.cs" />
@@ -241,6 +246,7 @@
     <Content Include="Content\Admin\ionicons.css" />
     <Content Include="Content\Admin\ionicons.min.css" />
     <Content Include="Content\Admin\Site.css" />
+    <Content Include="Content\bootstrap-notify.css" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap-timepicker.css" />
@@ -256,6 +262,9 @@
     <Content Include="Content\Selectize\js\selectize.min.js" />
     <Content Include="Content\Selectize\js\standalone\selectize.js" />
     <Content Include="Content\Selectize\js\standalone\selectize.min.js" />
+    <Content Include="Content\styles\alert-bangtidy.css" />
+    <Content Include="Content\styles\alert-blackgloss.css" />
+    <Content Include="Fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Images\ic_action_avg.png" />
     <Content Include="Images\ic_action_bad.png" />
     <Content Include="Images\ic_action_good.png" />
@@ -276,18 +285,21 @@
     <Content Include="Scripts\Admin\RestaurantAdmin\controller\pendingOrdersController.js" />
     <Content Include="Scripts\Admin\RestaurantAdmin\service\services.js" />
     <Content Include="Scripts\Admin\SiteAdmin\app.js" />
-    <Content Include="Scripts\Admin\SiteAdmin\controller\cityController.js" />
     <Content Include="Scripts\Admin\SiteAdmin\controller\controllers.js" />
     <Content Include="Scripts\Admin\SiteAdmin\controller\restaurantController.js" />
     <Content Include="Scripts\Admin\SiteAdmin\service\service.js" />
     <Content Include="Scripts\angular-animate.js" />
     <Content Include="Scripts\angular-animate.min.js" />
+    <Content Include="Scripts\angular-aria.js" />
+    <Content Include="Scripts\angular-aria.min.js" />
     <Content Include="Scripts\angular-cookies.js" />
     <Content Include="Scripts\angular-cookies.min.js" />
     <Content Include="Scripts\angular-csp.css" />
     <Content Include="Scripts\angular-filter.min.js" />
     <Content Include="Scripts\angular-loader.js" />
     <Content Include="Scripts\angular-loader.min.js" />
+    <Content Include="Scripts\angular-messages.js" />
+    <Content Include="Scripts\angular-messages.min.js" />
     <Content Include="Scripts\angular-mocks.js" />
     <Content Include="Scripts\angular-resource.js" />
     <Content Include="Scripts\angular-resource.min.js" />
@@ -298,8 +310,13 @@
     <Content Include="Scripts\angular-scenario.js" />
     <Content Include="Scripts\angular-touch.js" />
     <Content Include="Scripts\angular-touch.min.js" />
+    <Content Include="Scripts\angular-ui\ui-bootstrap-tpls.js" />
+    <Content Include="Scripts\angular-ui\ui-bootstrap-tpls.min.js" />
+    <Content Include="Scripts\angular-ui\ui-bootstrap.js" />
+    <Content Include="Scripts\angular-ui\ui-bootstrap.min.js" />
     <Content Include="Scripts\angular.js" />
     <Content Include="Scripts\angular.min.js" />
+    <Content Include="Scripts\bootstrap-notify.js" />
     <Content Include="Scripts\bootstrap-timepicker.js" />
     <Content Include="Scripts\bootstrap-timepicker.min.js" />
     <Content Include="Scripts\bootstrap.js" />
@@ -317,6 +334,21 @@
     <Content Include="Scripts\html5shiv-printshiv.min.js" />
     <Content Include="Scripts\html5shiv.js" />
     <Content Include="Scripts\html5shiv.min.js" />
+    <Content Include="Areas\User\Views\Home\Index.cshtml" />
+    <Content Include="Areas\User\Views\Home\_UserData.cshtml" />
+    <Content Include="Areas\User\Views\Home\_UserOrders.cshtml" />
+    <Content Include="Areas\RestaurantAdmin\Views\Home\_NewOrders.cshtml" />
+    <Content Include="Areas\RestaurantAdmin\Views\Home\_PendingOrders.cshtml" />
+    <Content Include="Areas\RestaurantAdmin\Views\Home\_OrdersHistory.cshtml" />
+    <Content Include="Scripts\errors.json" />
+    <Content Include="Scripts\angular-touch.min.js.map" />
+    <Content Include="Scripts\angular-sanitize.min.js.map" />
+    <Content Include="Scripts\angular-resource.min.js.map" />
+    <Content Include="Scripts\angular-messages.min.js.map" />
+    <Content Include="Scripts\angular-loader.min.js.map" />
+    <Content Include="Scripts\angular-cookies.min.js.map" />
+    <Content Include="Scripts\angular-aria.min.js.map" />
+    <Content Include="Scripts\angular-animate.min.js.map" />
     <Content Include="Scripts\i18n\angular-locale_aa-dj.js" />
     <Content Include="Scripts\i18n\angular-locale_aa-er.js" />
     <Content Include="Scripts\i18n\angular-locale_aa-et.js" />
@@ -380,6 +412,8 @@
     <Content Include="Scripts\i18n\angular-locale_bez.js" />
     <Content Include="Scripts\i18n\angular-locale_bg-bg.js" />
     <Content Include="Scripts\i18n\angular-locale_bg.js" />
+    <Content Include="Scripts\i18n\angular-locale_bm-latn-ml.js" />
+    <Content Include="Scripts\i18n\angular-locale_bm-latn.js" />
     <Content Include="Scripts\i18n\angular-locale_bm-ml.js" />
     <Content Include="Scripts\i18n\angular-locale_bm.js" />
     <Content Include="Scripts\i18n\angular-locale_bn-bd.js" />
@@ -435,6 +469,8 @@
     <Content Include="Scripts\i18n\angular-locale_de.js" />
     <Content Include="Scripts\i18n\angular-locale_dje-ne.js" />
     <Content Include="Scripts\i18n\angular-locale_dje.js" />
+    <Content Include="Scripts\i18n\angular-locale_dsb-de.js" />
+    <Content Include="Scripts\i18n\angular-locale_dsb.js" />
     <Content Include="Scripts\i18n\angular-locale_dua-cm.js" />
     <Content Include="Scripts\i18n\angular-locale_dua.js" />
     <Content Include="Scripts\i18n\angular-locale_dyo-sn.js" />
@@ -468,8 +504,6 @@
     <Content Include="Scripts\i18n\angular-locale_en-cx.js" />
     <Content Include="Scripts\i18n\angular-locale_en-dg.js" />
     <Content Include="Scripts\i18n\angular-locale_en-dm.js" />
-    <Content Include="Scripts\i18n\angular-locale_en-dsrt-us.js" />
-    <Content Include="Scripts\i18n\angular-locale_en-dsrt.js" />
     <Content Include="Scripts\i18n\angular-locale_en-er.js" />
     <Content Include="Scripts\i18n\angular-locale_en-fj.js" />
     <Content Include="Scripts\i18n\angular-locale_en-fk.js" />
@@ -505,6 +539,7 @@
     <Content Include="Scripts\i18n\angular-locale_en-mt.js" />
     <Content Include="Scripts\i18n\angular-locale_en-mu.js" />
     <Content Include="Scripts\i18n\angular-locale_en-mw.js" />
+    <Content Include="Scripts\i18n\angular-locale_en-my.js" />
     <Content Include="Scripts\i18n\angular-locale_en-na.js" />
     <Content Include="Scripts\i18n\angular-locale_en-nf.js" />
     <Content Include="Scripts\i18n\angular-locale_en-ng.js" />
@@ -652,6 +687,7 @@
     <Content Include="Scripts\i18n\angular-locale_gl-es.js" />
     <Content Include="Scripts\i18n\angular-locale_gl.js" />
     <Content Include="Scripts\i18n\angular-locale_gsw-ch.js" />
+    <Content Include="Scripts\i18n\angular-locale_gsw-fr.js" />
     <Content Include="Scripts\i18n\angular-locale_gsw-li.js" />
     <Content Include="Scripts\i18n\angular-locale_gsw.js" />
     <Content Include="Scripts\i18n\angular-locale_gu-in.js" />
@@ -674,6 +710,8 @@
     <Content Include="Scripts\i18n\angular-locale_hr-ba.js" />
     <Content Include="Scripts\i18n\angular-locale_hr-hr.js" />
     <Content Include="Scripts\i18n\angular-locale_hr.js" />
+    <Content Include="Scripts\i18n\angular-locale_hsb-de.js" />
+    <Content Include="Scripts\i18n\angular-locale_hsb.js" />
     <Content Include="Scripts\i18n\angular-locale_hu-hu.js" />
     <Content Include="Scripts\i18n\angular-locale_hu.js" />
     <Content Include="Scripts\i18n\angular-locale_hy-am.js" />
@@ -748,6 +786,8 @@
     <Content Include="Scripts\i18n\angular-locale_ky.js" />
     <Content Include="Scripts\i18n\angular-locale_lag-tz.js" />
     <Content Include="Scripts\i18n\angular-locale_lag.js" />
+    <Content Include="Scripts\i18n\angular-locale_lb-lu.js" />
+    <Content Include="Scripts\i18n\angular-locale_lb.js" />
     <Content Include="Scripts\i18n\angular-locale_lg-ug.js" />
     <Content Include="Scripts\i18n\angular-locale_lg.js" />
     <Content Include="Scripts\i18n\angular-locale_lkt-us.js" />
@@ -791,12 +831,10 @@
     <Content Include="Scripts\i18n\angular-locale_mn.js" />
     <Content Include="Scripts\i18n\angular-locale_mr-in.js" />
     <Content Include="Scripts\i18n\angular-locale_mr.js" />
-    <Content Include="Scripts\i18n\angular-locale_ms-bn.js" />
     <Content Include="Scripts\i18n\angular-locale_ms-latn-bn.js" />
     <Content Include="Scripts\i18n\angular-locale_ms-latn-my.js" />
     <Content Include="Scripts\i18n\angular-locale_ms-latn-sg.js" />
     <Content Include="Scripts\i18n\angular-locale_ms-latn.js" />
-    <Content Include="Scripts\i18n\angular-locale_ms-my.js" />
     <Content Include="Scripts\i18n\angular-locale_ms.js" />
     <Content Include="Scripts\i18n\angular-locale_mt-mt.js" />
     <Content Include="Scripts\i18n\angular-locale_mt.js" />
@@ -865,6 +903,10 @@
     <Content Include="Scripts\i18n\angular-locale_pt-st.js" />
     <Content Include="Scripts\i18n\angular-locale_pt-tl.js" />
     <Content Include="Scripts\i18n\angular-locale_pt.js" />
+    <Content Include="Scripts\i18n\angular-locale_qu-bo.js" />
+    <Content Include="Scripts\i18n\angular-locale_qu-ec.js" />
+    <Content Include="Scripts\i18n\angular-locale_qu-pe.js" />
+    <Content Include="Scripts\i18n\angular-locale_qu.js" />
     <Content Include="Scripts\i18n\angular-locale_rm-ch.js" />
     <Content Include="Scripts\i18n\angular-locale_rm.js" />
     <Content Include="Scripts\i18n\angular-locale_rn-bi.js" />
@@ -893,6 +935,7 @@
     <Content Include="Scripts\i18n\angular-locale_sbp.js" />
     <Content Include="Scripts\i18n\angular-locale_se-fi.js" />
     <Content Include="Scripts\i18n\angular-locale_se-no.js" />
+    <Content Include="Scripts\i18n\angular-locale_se-se.js" />
     <Content Include="Scripts\i18n\angular-locale_se.js" />
     <Content Include="Scripts\i18n\angular-locale_seh-mz.js" />
     <Content Include="Scripts\i18n\angular-locale_seh.js" />
@@ -911,6 +954,8 @@
     <Content Include="Scripts\i18n\angular-locale_sk.js" />
     <Content Include="Scripts\i18n\angular-locale_sl-si.js" />
     <Content Include="Scripts\i18n\angular-locale_sl.js" />
+    <Content Include="Scripts\i18n\angular-locale_smn-fi.js" />
+    <Content Include="Scripts\i18n\angular-locale_smn.js" />
     <Content Include="Scripts\i18n\angular-locale_sn-zw.js" />
     <Content Include="Scripts\i18n\angular-locale_sn.js" />
     <Content Include="Scripts\i18n\angular-locale_so-dj.js" />
@@ -1025,6 +1070,8 @@
     <Content Include="Scripts\i18n\angular-locale_xog.js" />
     <Content Include="Scripts\i18n\angular-locale_yav-cm.js" />
     <Content Include="Scripts\i18n\angular-locale_yav.js" />
+    <Content Include="Scripts\i18n\angular-locale_yi-001.js" />
+    <Content Include="Scripts\i18n\angular-locale_yi.js" />
     <Content Include="Scripts\i18n\angular-locale_yo-bj.js" />
     <Content Include="Scripts\i18n\angular-locale_yo-ng.js" />
     <Content Include="Scripts\i18n\angular-locale_yo.js" />
@@ -1045,24 +1092,24 @@
     <Content Include="Scripts\i18n\angular-locale_zh.js" />
     <Content Include="Scripts\i18n\angular-locale_zu-za.js" />
     <Content Include="Scripts\i18n\angular-locale_zu.js" />
+    <Content Include="Fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Fonts\glyphicons-halflings-regular.eot" />
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="Content\bootstrap.css.map" />
-    <Content Include="Areas\User\Views\Home\Index.cshtml" />
-    <Content Include="Areas\User\Views\Home\_UserData.cshtml" />
-    <Content Include="Areas\User\Views\Home\_UserOrders.cshtml" />
-    <None Include="Scripts\jquery-2.1.1.intellisense.js" />
-    <Content Include="Scripts\jquery-2.1.1.js" />
-    <Content Include="Scripts\jquery-2.1.1.min.js" />
+    <None Include="Scripts\jquery-2.1.3.intellisense.js" />
+    <Content Include="Scripts\jquery-2.1.3.js" />
+    <Content Include="Scripts\jquery-2.1.3.min.js" />
     <Content Include="Scripts\jquery.cookie.js" />
     <Content Include="Scripts\jquery.signalR-2.1.2.js" />
     <Content Include="Scripts\jquery.signalR-2.1.2.min.js" />
     <Content Include="Scripts\knockout-3.2.0.debug.js" />
     <Content Include="Scripts\knockout-3.2.0.js" />
+    <Content Include="Scripts\npm.js" />
     <Content Include="Scripts\selectize.js" />
     <Content Include="Scripts\selectize.min.js" />
     <Content Include="favicon.ico" />
     <Content Include="Fonts\fontawesome-webfont.svg" />
-    <Content Include="Fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Fonts\ionicons.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
@@ -1082,14 +1129,10 @@
     <Content Include="Fonts\fontawesome-webfont.ttf" />
     <Content Include="Fonts\fontawesome-webfont.woff" />
     <Content Include="Fonts\FontAwesome.otf" />
-    <Content Include="Fonts\glyphicons-halflings-regular.eot" />
-    <Content Include="Fonts\glyphicons-halflings-regular.ttf" />
-    <Content Include="Fonts\glyphicons-halflings-regular.woff" />
     <Content Include="Fonts\ionicons.eot" />
     <Content Include="Fonts\ionicons.ttf" />
     <Content Include="Fonts\ionicons.woff" />
     <Content Include="Areas\RestaurantAdmin\Views\Home\_Dashboard.cshtml" />
-    <Content Include="Areas\RestaurantAdmin\Views\Home\_Orders.cshtml" />
     <Content Include="Areas\RestaurantAdmin\Views\Home\_Dishes.cshtml" />
     <Content Include="Areas\RestaurantAdmin\Views\Home\_DishGroups.cshtml" />
     <Content Include="Areas\RestaurantAdmin\Views\Home\_Cuisines.cshtml" />
@@ -1108,18 +1151,8 @@
     <Content Include="Content\Selectize\less\plugins\optgroup_columns.less" />
     <Content Include="Content\Selectize\less\plugins\dropdown_header.less" />
     <Content Include="Content\Selectize\less\plugins\drag_drop.less" />
-    <Content Include="Areas\SiteAdmin\Views\Home\_Cities.cshtml" />
-    <Content Include="Areas\SiteAdmin\Views\Home\_Districts.cshtml" />
-    <Content Include="Areas\SiteAdmin\Views\Home\_Streets.cshtml" />
     <None Include="Properties\PublishProfiles\foodsearch.pubxml" />
-    <Content Include="Scripts\errors.json" />
-    <Content Include="Scripts\angular-touch.min.js.map" />
-    <Content Include="Scripts\angular-sanitize.min.js.map" />
     <Content Include="Scripts\angular-route.min.js.map" />
-    <Content Include="Scripts\angular-resource.min.js.map" />
-    <Content Include="Scripts\angular-loader.min.js.map" />
-    <Content Include="Scripts\angular-cookies.min.js.map" />
-    <Content Include="Scripts\angular-animate.min.js.map" />
     <Content Include="Scripts\angular.min.js.map" />
     <Content Include="Images\Admin\ajax-loader.gif" />
     <Content Include="Images\Admin\ajax-loader1.gif" />
@@ -1159,23 +1192,19 @@
     <Content Include="Views\Restaurants\Index.cshtml" />
     <Content Include="Views\Contact\Index.cshtml" />
     <Content Include="Views\Account\Register.cshtml" />
-    <Content Include="Scripts\version.json" />
-    <Content Include="Scripts\jquery-2.1.1.min.map" />
     <Content Include="Views\Shared\_UserLinks.cshtml" />
     <Content Include="Views\Shared\_RestaurantInfo.cshtml" />
     <Content Include="Views\Restaurants\Page.cshtml" />
     <Content Include="Views\Account\Verify.cshtml" />
     <Content Include="Views\Account\AccountCreated.cshtml" />
-    <Content Include="Scripts\angular-ui\ui-bootstrap-tpls.js" />
-    <Content Include="Scripts\angular-ui\ui-bootstrap-tpls.min.js" />
-    <Content Include="Scripts\angular-ui\ui-bootstrap.js" />
-    <Content Include="Scripts\angular-ui\ui-bootstrap.min.js" />
     <Content Include="Views\Order\Basket.cshtml" />
     <Content Include="Views\Order\Shipping.cshtml" />
     <Content Include="Views\Order\Success.cshtml" />
     <Content Include="Views\Order\Cancel.cshtml" />
     <Content Include="Views\Restaurants\_Opinions.cshtml" />
     <Content Include="Views\Account\ForgottenPassword.cshtml" />
+    <Content Include="Scripts\version.json" />
+    <Content Include="Scripts\jquery-2.1.3.min.map" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\FoodSearch.BusinessLogic.Domain.Core\FoodSearch.BusinessLogic.Domain.Core.csproj">

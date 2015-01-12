@@ -7,14 +7,14 @@ using System.Xml.Serialization;
 
 namespace FoodSearch.BusinessLogic.Domain.RestraurantAdmin.Models
 {
-    [XmlRoot("Item")]
+    [XmlType(AnonymousType = true)]
     public class OrderItem
     {
-        [XmlAttribute("Name")]
-        public string DishName { get; set; }
-        [XmlAttribute("Quantity")]
+        [XmlAttribute()]
+        public string Name { get; set; }
+        [XmlAttribute()]
         public int Quantity { get; set; }
-        [XmlAttribute("Price")]
+        [XmlAttribute()]
         public decimal Price { get; set; }
     }
 }

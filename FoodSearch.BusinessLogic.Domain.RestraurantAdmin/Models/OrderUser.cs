@@ -7,17 +7,18 @@ using System.Xml.Serialization;
 
 namespace FoodSearch.BusinessLogic.Domain.RestraurantAdmin.Models
 {
+    [XmlType(AnonymousType = true)]
     public class OrderUser
     {
-        [XmlAttribute("UserId")]
-        public Guid UserId { get; set; }
-        [XmlAttribute("FirstName")]
+        [XmlAttribute()]
+        public string UserId { get; set; }
+        [XmlAttribute()]
         public string FirstName { get; set; }
-        [XmlAttribute("LastName")]
+        [XmlAttribute()]
         public string LastName { get; set; }
-        [XmlAttribute("Email")]
+        [XmlAttribute()]
         public string Email { get; set; }
-        [XmlAttribute("PhoneNumber")]
+        [XmlAttribute()]
         public string PhoneNumber { get; set; }
     }
 }

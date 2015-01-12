@@ -4,9 +4,11 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using System.Web.Http.ModelBinding;
 
 using FoodSearch.BusinessLogic.Domain.FoodSearch.Interface;
 using FoodSearch.BusinessLogic.Domain.Restaurant.Models;
+using FoodSearch.Service.Api.Areas.Order.Models;
 
 namespace FoodSearch.Service.Api.Areas.Core.Controllers
 {
@@ -20,8 +22,9 @@ namespace FoodSearch.Service.Api.Areas.Core.Controllers
         }
 
         [HttpGet]
-        public IEnumerable<DishGroup> GetDishes([FromUri] Guid restaurantId)
+        public IEnumerable<DishGroup> GetDishes([ModelBinder] Basket basket, [FromUri] Guid restaurantId)
         {
+            basket.CurrentRestaurant = restaurantId;
             return _domain.Restaurant.GetDishes(restaurantId);
         } 
     }

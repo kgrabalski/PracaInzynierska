@@ -59,6 +59,15 @@ namespace FoodSearch.Presentation.Mobile.Common.ViewModels
             set { SetProperty(ref _email, value); }
         }
 
+        private string _phoneNumber;
+
+        public string PhoneNumber
+        {
+            get { return _phoneNumber; }
+            set { SetProperty(ref _phoneNumber, value); }
+        }
+
+
         private string _password;
 
         public string Password
@@ -216,6 +225,11 @@ namespace FoodSearch.Presentation.Mobile.Common.ViewModels
                             Services.Dialog.Toast("Proszę podać poprawny adres email");
                             return;
                         }
+                        if (string.IsNullOrEmpty(PhoneNumber))
+                        {
+                            Services.Dialog.Toast("Proszę podać numer telefonu");
+                            return;
+                        }
                         if (string.IsNullOrEmpty(Password))
                         {
                             Services.Dialog.Toast("Proszę podać hasło");
@@ -232,7 +246,7 @@ namespace FoodSearch.Presentation.Mobile.Common.ViewModels
                         }
 
                         Services.Dialog.ShowLoading("Czekaj...");
-                        var result = await Client.User.Register(FirstName, LastName, Email, Password, RepeatPassword, SelectedStreetNumber.Id, FlatNumber);
+                        var result = await Client.User.Register(FirstName, LastName, Email, PhoneNumber, Password, RepeatPassword, SelectedStreetNumber.Id, FlatNumber);
                         Services.Dialog.HideLoading();
                         switch (result)
                         {

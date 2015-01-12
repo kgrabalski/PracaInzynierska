@@ -66,12 +66,14 @@ namespace FoodSearch.Service.Client
             return Deserialize<DeliveryAddress>(response.Body);
         }
 
-        public async Task<CreateOrderResult> CreateOrder(PaymentTypes paymentType, DeliveryTypes deliveryType)
+        public async Task<CreateOrderResult> CreateOrder(PaymentTypes paymentType, DeliveryTypes deliveryType, int addressId, string flatNumber)
         {
             var request = new CreateOrderRequest()
             {
                 PaymentTypeId = (int)paymentType,
-                DeliveryTypeId = (int)deliveryType
+                DeliveryTypeId = (int)deliveryType,
+                AddressId = addressId,
+                FlatNumber = flatNumber
             };
             var response = await Post("Order", request);
             if (response.StatusCode == HttpStatusCode.Created)

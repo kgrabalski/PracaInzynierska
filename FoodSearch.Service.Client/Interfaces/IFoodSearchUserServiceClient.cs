@@ -11,6 +11,6 @@ namespace FoodSearch.Service.Client.Interfaces
     {
         Task<bool> Login(string email, string password);
         Task<bool> Logout();
-        Task<RegistrationResult> Register(string firstName, string lastName, string email, string password, string repeatPassword, int addressId, string flatNumber);
+        Task<RegistrationResult> Register(string firstName, string lastName, string email, string phoneNumber, string password, string repeatPassword, int addressId, string flatNumber);
     }
 }

@@ -27,11 +27,29 @@ namespace FoodSearch.Service.Api.Areas.Order.Controllers
         [HttpPost]
         public HttpResponseMessage CreateOrder([ModelBinder] Basket basket, [ModelBinder] UserInfo ui, OrderModel model)
         {
-            DeliveryTypes dt = (DeliveryTypes) model.DeliveryTypeId;
-            PaymentTypes pt = (PaymentTypes) model.PaymentTypeId;
-            var orderItems = basket.Items.Select(x => new OrderItem() {DishId = x.DishId, Quantity = x.Count}).ToList();
-            var orderInfo = _domain.Order.CreateOrder(ui.UserId, basket.CurrentRestaurant, orderItems, dt, pt);
-            return Request.CreateResponse(HttpStatusCode.Created, orderInfo);
+            if (ModelState.IsValid)
+            {
+                DeliveryTypes dt = (DeliveryTypes) model.DeliveryTypeId;
+                PaymentTypes pt = (PaymentTypes) model.PaymentTypeId;
+                
+                var orderItems = basket.Items.Select(x => new OrderItem() {DishId = x.DishId, Quantity = x.Count}).ToList();
+
+                int? deliveryAddressId = null;
+                if (dt == DeliveryTypes.Shipping)
+                {
+                    deliveryAddressId = _domain.User.CreateDeliveryAddress(ui.UserId, model.AddressId, model.FlatNumber);
+                }
+
+                var orderInfo = _domain.Order.CreateOrder(ui.UserId, basket.CurrentRestaurant, orderItems, dt, pt, deliveryAddressId);
+
+                if (pt == PaymentTypes.Cash)
+                {
+                    _domain.Order.ChangeOrderState(orderInfo.OrderId, OrderStates.Paid);
+                }
+
+                return Request.CreateResponse(HttpStatusCode.Created, orderInfo);
+            }
+            return Request.CreateErrorResponse(HttpStatusCode.BadRequest, ModelState);
         }
     }
 }

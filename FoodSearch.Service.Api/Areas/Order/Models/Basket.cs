@@ -25,6 +25,8 @@ namespace FoodSearch.Service.Api.Areas.Order.Models
             }
         }
 
+        public int AddressId { get; set; }
+
         public void AddItem(Dish dish)
         {
             var item = _items.SingleOrDefault(x => x.DishId == dish.Id);

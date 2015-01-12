@@ -54,6 +54,7 @@
 							<RowDefinition Height="Auto"/>
 							<RowDefinition Height="Auto"/>
 							<RowDefinition Height="Auto"/>
+							<RowDefinition Height="Auto"/>
 						</Grid.RowDefinitions>
 						<Grid.ColumnDefinitions>
 							<ColumnDefinition Width="1*"/>
@@ -69,30 +70,33 @@
 						<Label Grid.Row="2" Grid.Column="0" Text="Email:" VerticalOptions="Center"/>
 						<Entry Grid.Row="2" Grid.Column="1" Text="{Binding Email, Mode=TwoWay}" Placeholder="Email" Keyboard="Email"/>
 
-						<Label Grid.Row="3" Grid.Column="0" Text="Hasło:" VerticalOptions="Center"/>
-						<Entry Grid.Row="3" Grid.Column="1" Text="{Binding Password, Mode=TwoWay}" Placeholder="Hasło" IsPassword="true"/>
+						<Label Grid.Row="3" Grid.Column="0" Text="Numer telefonu:" VerticalOptions="Center"/>
+						<Entry Grid.Row="3" Grid.Column="1" Text="{Binding PhoneNumber, Mode=TwoWay}" Placeholder="Numer telefonu" Keyboard="Telephone"/>
 
-						<Label Grid.Row="4" Grid.Column="0" Text="Powtórz hasło:" VerticalOptions="Center"/>
-						<Entry Grid.Row="4" Grid.Column="1" Text="{Binding RepeatPassword, Mode=TwoWay}" Placeholder="Powtórz hasło" IsPassword="true"/>
+						<Label Grid.Row="4" Grid.Column="0" Text="Hasło:" VerticalOptions="Center"/>
+						<Entry Grid.Row="4" Grid.Column="1" Text="{Binding Password, Mode=TwoWay}" Placeholder="Hasło" IsPassword="true"/>
 
-						<Label Grid.Row="5" Grid.Column="0" Text="Miasto:" VerticalOptions="Center"/>
-						<component:ListPicker Grid.Row="5" Grid.Column="1" Title="Wybierz miasto" IsEnabled="{Binding CanSelectCity}"
+						<Label Grid.Row="5" Grid.Column="0" Text="Powtórz hasło:" VerticalOptions="Center"/>
+						<Entry Grid.Row="5" Grid.Column="1" Text="{Binding RepeatPassword, Mode=TwoWay}" Placeholder="Powtórz hasło" IsPassword="true"/>
+
+						<Label Grid.Row="6" Grid.Column="0" Text="Miasto:" VerticalOptions="Center"/>
+						<component:ListPicker Grid.Row="6" Grid.Column="1" Title="Wybierz miasto" IsEnabled="{Binding CanSelectCity}"
 							ItemsSource="{Binding Cities, Mode=TwoWay}" SelectedItem="{Binding SelectedCity, Mode=TwoWay}"/>
 
-						<Label Grid.Row="6" Grid.Column="0" Text="Wyszukaj ulicę:" VerticalOptions="Center"/>
-						<SearchBar Grid.Row="6" Grid.Column="1" Text="{Binding QueryStreet, Mode=TwoWay}" 
+						<Label Grid.Row="7" Grid.Column="0" Text="Wyszukaj ulicę:" VerticalOptions="Center"/>
+						<SearchBar Grid.Row="7" Grid.Column="1" Text="{Binding QueryStreet, Mode=TwoWay}" 
 							SearchCommand="{Binding SearchStreet}" Placeholder="Wyszukaj ulicę" IsEnabled="{Binding CanSearch}"/>
 
-						<Label Grid.Row="7" Grid.Column="0" Text="Ulica:" VerticalOptions="Center"/>
-						<component:ListPicker Grid.Row="7" Grid.Column="1" Title="Wybierz ulicę"
+						<Label Grid.Row="8" Grid.Column="0" Text="Ulica:" VerticalOptions="Center"/>
+						<component:ListPicker Grid.Row="8" Grid.Column="1" Title="Wybierz ulicę"
 							ItemsSource="{Binding Streets, Mode=TwoWay}" SelectedItem="{Binding SelectedStreet, Mode=TwoWay}"/>
 
-						<Label Grid.Row="8" Grid.Column="0" Text="Numer:" VerticalOptions="Center"/>
-						<component:ListPicker Grid.Row="8" Grid.Column="1" Title="Wybierz numer"
+						<Label Grid.Row="9" Grid.Column="0" Text="Numer:" VerticalOptions="Center"/>
+						<component:ListPicker Grid.Row="9" Grid.Column="1" Title="Wybierz numer"
 							ItemsSource="{Binding StreetNumbers, Mode=TwoWay}" SelectedItem="{Binding SelectedStreetNumber, Mode=TwoWay}"/>
 
-						<Label Grid.Row="9" Grid.Column="0" Text="Numer mieszkania:" VerticalOptions="Center"/>
-						<Entry Grid.Row="9" Grid.Column="1" Text="{Binding FlatNumber, Mode=TwoWay}" Placeholder="Numer mieszkania" Keyboard="Numeric"/>
+						<Label Grid.Row="10" Grid.Column="0" Text="Numer mieszkania:" VerticalOptions="Center"/>
+						<Entry Grid.Row="10" Grid.Column="1" Text="{Binding FlatNumber, Mode=TwoWay}" Placeholder="Numer mieszkania" Keyboard="Numeric"/>
 					</Grid>
 				</ScrollView>
 				<Button Grid.Row="1" Grid.Column="0" Text="Zarejestruj się" Command="{Binding RegisterCommand}"/>

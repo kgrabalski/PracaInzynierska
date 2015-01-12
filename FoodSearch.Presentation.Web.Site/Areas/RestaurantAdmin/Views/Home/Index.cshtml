@@ -17,6 +17,7 @@
 @section ScriptSection
 {
     <script src="~/Content/Selectize/js/standalone/selectize.min.js"></script>
+    <script src="~/Scripts/bootstrap-notify.js"></script>
     <script src="~/Scripts/Admin/Common/directives.js"></script>
     <script src="~/Scripts/Admin/Common/services.js"></script>
     <script src="~/Scripts/Admin/RestaurantAdmin/app.js"></script>
@@ -129,8 +130,12 @@
     @{ Html.RenderPartial("_Dashboard"); }
 </script>
 
-<script type="text/ng-template" id="ordersTemplate">
-    @{ Html.RenderPartial("_Orders");}
+<script type="text/ng-template" id="newOrdersTemplate">
+    @{ Html.RenderPartial("_NewOrders");}
+</script>
+
+<script type="text/ng-template" id="pendingOrdersTemplate">
+    @{ Html.RenderPartial("_PendingOrders");}
 </script>
 
 <script type="text/ng-template" id="dishesTemplate">
@@ -150,6 +155,10 @@
 {
     <script type="text/ng-template" id="restaurantTemplate">
         @{ Html.RenderPartial("_Restaurant");}
+    </script>
+
+    <script type="text/ng-template" id="ordersHistoryTemplate">
+        @{ Html.RenderPartial("_OrdersHistory");}
     </script>
 
     <script type="text/ng-template" id="openingHoursTemplate">

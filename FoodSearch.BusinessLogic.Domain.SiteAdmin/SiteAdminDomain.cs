@@ -13,8 +13,6 @@ using Address = FoodSearch.Data.Mapping.Entities.Address;
 using AddressDto = FoodSearch.BusinessLogic.Domain.SiteAdmin.Models.Address;
 using Restaurant = FoodSearch.Data.Mapping.Entities.Restaurant;
 using RestaurantDto = FoodSearch.BusinessLogic.Domain.SiteAdmin.Models.Restaurant;
-using City = FoodSearch.Data.Mapping.Entities.City;
-using CityDto = FoodSearch.BusinessLogic.Domain.SiteAdmin.Models.City;
 
 namespace FoodSearch.BusinessLogic.Domain.SiteAdmin
 {
@@ -106,42 +104,6 @@ namespace FoodSearch.BusinessLogic.Domain.SiteAdmin
                     UserTypeId = (int) userType,
                     UserStateId = (int) userState
                 });
-            }
-        }
-
-        public CityDto CreateCity(string name)
-        {
-            using (var rep = _provider.GetRepository<City>())
-            {
-                bool canCreate = rep.GetAll()
-                    .Where(x => x.Name == name)
-                    .RowCount() == 0;
-                if (!canCreate) return null;
-
-                int cityId = rep.Create<int>(new City()
-                {
-                    Name = name
-                });
-
-                return new CityDto()
-                {
-                    Id = cityId,
-                    Name = name
-                };
-            }
-        }
-
-        public bool DeleteCity(int cityId)
-        {
-            using (var repC = _provider.GetRepository<City>())
-            using (var repD = _provider.GetRepository<District>())
-            {
-                bool canDelete = repD.GetAll()
-                    .Where(x => x.CityId == cityId)
-                    .RowCount() == 0;
-                if (!canDelete) return false;
-
-                return repC.Delete(cityId);
             }
         }
     }

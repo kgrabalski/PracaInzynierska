@@ -49,7 +49,7 @@ namespace FoodSearch.Presentation.Web.Site.Areas.User.Controllers
         public ActionResult CreateUserDeliveryAddress(UserInfo ui, int addressId, string flatNumber)
         {
             int deliveryAddressId = _domain.User.CreateDeliveryAddress(ui.UserId, addressId, flatNumber);
-            var deliveryAddress = _domain.User.GetUserDeliveryAddress(deliveryAddressId);
+            var deliveryAddress = _domain.User.GetUserDeliveryAddress(ui.UserId, deliveryAddressId);
             return Json(deliveryAddress, JsonRequestBehavior.DenyGet);
         }
 

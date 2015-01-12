@@ -37,7 +37,7 @@ namespace FoodSearch.Presentation.Web.Site.Controllers
             };
             if (basket.DeliveryAddressId.HasValue)
             {
-                shippingModel.DeliveryAddress = _domain.User.GetUserDeliveryAddress(basket.DeliveryAddressId.Value);
+                shippingModel.DeliveryAddress = _domain.User.GetUserDeliveryAddress(ui.UserId, basket.DeliveryAddressId.Value);
             }
             else
             {

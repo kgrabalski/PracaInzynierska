@@ -182,11 +182,12 @@ namespace FoodSearch.BusinessLogic.Domain.User
             }
         }
 
-        public DeliveryAddressDto GetUserDeliveryAddress(int deliveryAddressId)
+        public DeliveryAddressDto GetUserDeliveryAddress(Guid userId, int deliveryAddressId)
         {
             using (var rep = _provider.GetRepository<DeliveryAddress>())
             {
                 var da = rep.Get(deliveryAddressId);
+                if (da.UserId != userId) return default(DeliveryAddressDto);
                 return new DeliveryAddressDto()
                 {
                     Id = da.DeliveryAddressId,

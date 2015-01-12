@@ -7,7 +7,8 @@ using System.Web.Http;
 using System.Web.Http.ModelBinding;
 
 using FoodSearch.BusinessLogic.Domain.FoodSearch.Interface;
-using FoodSearch.BusinessLogic.Domain.Order.Models;
+using FoodSearch.BusinessLogic.Domain.User.Models;
+using FoodSearch.Service.Api.Areas.Order.Models;
 using FoodSearch.Service.Api.Models;
 
 namespace FoodSearch.Service.Api.Areas.Order.Controllers
@@ -23,9 +24,10 @@ namespace FoodSearch.Service.Api.Areas.Order.Controllers
         }
 
         [HttpGet]
-        public IEnumerable<DeliveryAddress> GetDeliveryAddresses([ModelBinder] UserInfo ui)
+        public HttpResponseMessage GetDeliveryAddresses([ModelBinder] UserInfo ui, [ModelBinder] Basket basket)
         {
-            return _domain.Order.GetUserDeliveryAddresses(ui.UserId);
+            var deliveryAddress = _domain.User.GetDeliveryAddress(ui.UserId, basket.AddressId);
+            return Request.CreateResponse(deliveryAddress != null ? HttpStatusCode.OK : HttpStatusCode.NotFound, deliveryAddress);
         }
     }
 }

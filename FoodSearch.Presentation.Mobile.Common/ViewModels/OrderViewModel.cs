@@ -45,6 +45,7 @@ namespace FoodSearch.Presentation.Mobile.Common.ViewModels
             decimal total = dishesTotal + deliveryPrice;
             TotalValue = total.ToPln();
 
+            addressId = da.AddressId;
             FirstName = da.FirstName;
             LastName = da.LastName;
             City = da.City;
@@ -54,6 +55,8 @@ namespace FoodSearch.Presentation.Mobile.Common.ViewModels
 
             Services.Dialog.HideLoading();
         }
+
+        private int addressId = 0;
 
         private string _totalValue;
 
@@ -160,7 +163,7 @@ namespace FoodSearch.Presentation.Mobile.Common.ViewModels
                         Services.Dialog.ShowLoading("Składanie zamówienia");
                         PaymentTypes paymentType = (PaymentTypes)SelectedPaymentType.Id;
                         DeliveryTypes deliveryType = (DeliveryTypes)SelectedDeliveryType.Id;
-                        var result = await Client.Order.CreateOrder(paymentType, deliveryType);
+                        var result = await Client.Order.CreateOrder(paymentType, deliveryType, addressId, FlatNumber);
                         Services.Dialog.HideLoading();
                         if (result.Succeed)
                         {

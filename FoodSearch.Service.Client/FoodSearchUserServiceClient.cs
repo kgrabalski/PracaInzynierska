@@ -40,13 +40,14 @@ namespace FoodSearch.Service.Client
             return response.StatusCode == HttpStatusCode.OK; 
         }
 
-        public async Task<RegistrationResult> Register(string firstName, string lastName, string email, string password, string repeatPassword, int addressId, string flatNumber)
+        public async Task<RegistrationResult> Register(string firstName, string lastName, string email, string phoneNumber, string password, string repeatPassword, int addressId, string flatNumber)
         {
             var request = new RegisterRequest()
             {
                 FirstName = firstName,
                 LastName = lastName, 
                 Email = email,
+                PhoneNumber = phoneNumber,
                 Password = password,
                 RepeatPassword = repeatPassword,
                 AddressId = addressId,

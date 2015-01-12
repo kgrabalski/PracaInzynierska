@@ -1,6 +1,8 @@
 ﻿using System.Web.Http;
 using System.Web.Mvc;
 
+using FoodSearch.Service.Api.Helpers;
+
 namespace FoodSearch.Service.Api.Areas.Core
 {
     public class CoreAreaRegistration : AreaRegistration 
@@ -19,7 +21,7 @@ namespace FoodSearch.Service.Api.Areas.Core
                 name: "Core_api",
                 routeTemplate: "Core/{controller}/{id}",
                 defaults: new {area = "Core", id = RouteParameter.Optional}
-                );
+                ).RouteHandler = new MyApiControllerRouteHandler();
         }
     }
 }

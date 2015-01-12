@@ -13,7 +13,7 @@ namespace FoodSearch.Presentation.Web.Site.Models
         public int DeliveryType { get; set; }
         [Range(1,2)]
         public int PaymentType { get; set; }
-        [Range(0, int.MaxValue)]
+        [Range(1, int.MaxValue)]
         public int AddressId { get; set; }
         public string FlatNumber { get; set; }
     }

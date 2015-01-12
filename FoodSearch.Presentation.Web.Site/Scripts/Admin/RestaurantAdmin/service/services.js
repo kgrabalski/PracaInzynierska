@@ -68,3 +68,22 @@ services.service('RatingService', [
         return $resource('/RestaurantAdmin/api/Rating');
     }
 ]);
+
+services.service('OrderService', [
+    '$resource', function ($resource) {
+        return $resource('/RestaurantAdmin/api/Order/:orderId',
+                         { orderId: "@Id" });
+    }
+]);
+
+services.service('NewOrderService', [
+    '$resource', function ($resource) {
+        return $resource('/RestaurantAdmin/api/NewOrder');
+    }
+]);
+
+services.service('PendingOrderService', [
+    '$resource', function ($resource) {
+        return $resource('/RestaurantAdmin/api/PendingOrder');
+    }
+]);

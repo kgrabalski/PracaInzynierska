@@ -17,7 +17,5 @@ namespace FoodSearch.BusinessLogic.Domain.SiteAdmin.Interface
         bool DeleteRestaurant(Guid restaurantId);
         Address GetAddress(int addressId);
         Guid CreateUser(string email, string userPassword, string firstName, string lastName, UserTypes userType, UserStates userState);
-        City CreateCity(string name);
-        bool DeleteCity(int cityId);
     }
 }

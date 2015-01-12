@@ -4,6 +4,7 @@ namespace FoodSearch.Service.Client
 {
     public class DeliveryAddress
     {
+        public int AddressId { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string City { get; set; }

@@ -29,12 +29,5 @@ namespace FoodSearch.Presentation.Web.Site.Areas.RestaurantAdmin.Controllers
             var order = _domain.RestaurantAdmin.GetRestaurantOrder(ru.RestaurantId, id);
             return Request.CreateResponse(order != null ? HttpStatusCode.OK : HttpStatusCode.NotFound, order);
         }
-
-        [HttpGet]
-        public IEnumerable<RestaurantOrder> GetOrders([ModelBinder] RestaurantUser ru, [FromUri] bool newOrders = true)
-        {
-            var orders = _domain.RestaurantAdmin.GetRestaurantOrders(ru.RestaurantId, newOrders);
-            return orders;
-        }
     }
 }

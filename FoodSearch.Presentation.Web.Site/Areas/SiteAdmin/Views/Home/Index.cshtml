@@ -15,7 +15,6 @@
     <script src="~/Scripts/Admin/SiteAdmin/app.js"></script>
     <script src="~/Scripts/Admin/SiteAdmin/controller/controllers.js"></script>
     <script src="~/Scripts/Admin/SiteAdmin/controller/restaurantController.js"></script>
-    <script src="~/Scripts/Admin/SiteAdmin/controller/cityController.js"></script>
     <script src="~/Scripts/Admin/SiteAdmin/service/service.js"></script>
 }
 
@@ -48,29 +47,6 @@
                         <i class="fa fa-user"></i> <span>Użytkownicy</span>
                     </a>
                 </li>
-                <li class="treeview">
-                    <a href="#">
-                        <i class="fa fa-compass"></i> <span>Adresy</span>
-                        <i class="fa pull-right fa-angle-down"></i>
-                    </a>
-                    <ul class="treeview-menu">
-                        <li navigation-item>
-                            <a href="/SiteAdmin#/cities" style="margin-left: 10px;">
-                                <i class="fa fa-angle-double-right"></i> Miasta
-                            </a>
-                        </li>
-                        <li navigation-item>
-                            <a href="/SiteAdmin#/districts" style="margin-left: 10px;">
-                                <i class="fa fa-angle-double-right"></i> Dzielnice
-                            </a>
-                        </li>
-                        <li navigation-item>
-                            <a href="/SiteAdmin#/streets" style="margin-left: 10px;">
-                                <i class="fa fa-angle-double-right"></i> Ulice
-                            </a>
-                        </li>
-                    </ul>
-                </li>
             </ul>
         </section>
     </aside>
@@ -87,16 +63,4 @@
 
 <script type="text/ng-template" id="usersTemplate">
     @{ Html.RenderPartial("_Users"); }
-</script>
-
-<script type="text/ng-template" id="citiesTemplate">
-    @{ Html.RenderPartial("_Cities"); }
-</script>
-
-<script type="text/ng-template" id="districtsTemplate">
-    @{ Html.RenderPartial("_Districts"); }
-</script>
-
-<script type="text/ng-template" id="streetsTemplate">
-    @{ Html.RenderPartial("_Streets"); }
 </script>

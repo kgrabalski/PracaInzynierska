@@ -142,9 +142,9 @@ namespace FoodSearch.Presentation.Mobile.Common.ViewModels
             {
                 return _searchRestaurants ?? (_searchRestaurants = new Command(async () =>
                 {
+                    if (SelectedStreetNumber == null || SelectedStreetNumber.Id == 0) return;
                     await Services.Navigation.Navigate.PushAsync(ViewLocator.RestaurantList);
-                    //TODO: usunąć stałe AddressId
-                    Services.Messaging.Send(SelectedStreetNumber ?? new StreetNumber(){Id = 797});
+                    Services.Messaging.Send(SelectedStreetNumber);
                 }));
             }
         }

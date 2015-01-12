@@ -21,18 +21,6 @@
                 controller: 'UsersController',
                 templateUrl: 'usersTemplate'
             })
-            .when("/cities", {
-                controller: 'CitiesController',
-                templateUrl: 'citiesTemplate'
-            })
-            .when("/districts", {
-                controller: 'DistrictsController',
-                templateUrl: 'districtsTemplate'
-            })
-            .when("/streets", {
-                controller: 'StreetsController',
-                templateUrl: 'streetsTemplate'
-            })
             .otherwise({
                 redirectTo: "/dashboard"
             });

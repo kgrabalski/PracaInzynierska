@@ -11,15 +11,3 @@ app.controller('UsersController', ['$scope',
         $scope.napis = "Users";
     }
 ]);
-
-app.controller('DistrictsController', ['$scope',
-    function ($scope) {
-        $scope.napis = "Users";
-    }
-]);
-
-app.controller('StreetsController', ['$scope',
-    function ($scope) {
-        $scope.napis = "Users";
-    }
-]);

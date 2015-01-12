@@ -14,7 +14,7 @@ namespace FoodSearch.Service.Client.Interfaces
         Task<bool> ClearBasket();
         Task<decimal> GetDeliveryPrice(Guid restaurantId, decimal totalPrice);
         Task<DeliveryAddress> GetDeliveryAddress();
-        Task<CreateOrderResult> CreateOrder(PaymentTypes paymentType, DeliveryTypes deliveryType);
+        Task<CreateOrderResult> CreateOrder(PaymentTypes paymentType, DeliveryTypes deliveryType, int addressId, string flatNumber);
         Task SetCurrentRestaurant(Guid restaurantId);
     }
 }

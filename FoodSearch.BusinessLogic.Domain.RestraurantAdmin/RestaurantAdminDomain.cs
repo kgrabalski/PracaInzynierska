@@ -292,7 +292,8 @@ namespace FoodSearch.BusinessLogic.Domain.RestraurantAdmin
                     RestaurantName = restaurant.Name
                 };
             }
-        }
+        }       
+
 
         public IEnumerable<RestaurantOrder> GetRestaurantOrders(Guid restaurantId, bool newOrders)
         {
@@ -302,9 +303,9 @@ namespace FoodSearch.BusinessLogic.Domain.RestraurantAdmin
                 
                 using (var stream = new MemoryStream(Encoding.UTF8.GetBytes(result)))
                 {
-                    XmlSerializer xs = new XmlSerializer(typeof(List<RestaurantOrder>));
-                    var orders = (List<RestaurantOrder>) xs.Deserialize(stream);
-                    return orders;
+                    XmlSerializer xs = new XmlSerializer(typeof (RestaurantOrders));
+                    var orders = xs.Deserialize(stream);
+                    return ((RestaurantOrders)orders).Orders;
                 }
             }
         }
@@ -317,9 +318,9 @@ namespace FoodSearch.BusinessLogic.Domain.RestraurantAdmin
 
                 using (var stream = new MemoryStream(Encoding.UTF8.GetBytes(result)))
                 {
-                    XmlSerializer xs = new XmlSerializer(typeof(List<RestaurantOrder>));
-                    var orders = (List<RestaurantOrder>) xs.Deserialize(stream);
-                    return orders.Single();
+                    XmlSerializer xs = new XmlSerializer(typeof(RestaurantOrders));
+                    var orders = (RestaurantOrders) xs.Deserialize(stream);
+                    return orders.Orders.Single();
                 }
             }
         }
