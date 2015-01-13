@@ -1,4 +1,6 @@
-﻿using Xamarin.Forms;
+﻿using FoodSearch.Presentation.Mobile.Common.Services.Interfaces;
+
+using Xamarin.Forms;
 using FoodSearch.Presentation.Mobile.Common.Services;
 using FoodSearch.Presentation.Mobile.Common.ViewModels;
 using Ninject;
@@ -7,14 +9,17 @@ using Ninject;
 namespace FoodSearch.Presentation.Mobile.Common.Views
 {	
 	public partial class MainView : ContentPage
-	{	
-		public MainView ()
-		{
+	{
+	    private readonly IServiceLocator _serviceLocator;
+
+	    public MainView ()
+	    {
+	        _serviceLocator = DependencyResolver.Current.Get<IServiceLocator>();
 			InitializeComponent ();
             NavigationPage.SetHasNavigationBar(this, true);
-            if (!NetworkAvailabilityService.IsConnected)
+            if (!_serviceLocator.NetworkAvailability.IsConnected)
             {
-                NetworkAvailabilityService.CloseApp();
+                _serviceLocator.NetworkAvailability.CloseApp();
             } else BindingContext = DependencyResolver.Current.Get<MainViewModel>();
 
 		}

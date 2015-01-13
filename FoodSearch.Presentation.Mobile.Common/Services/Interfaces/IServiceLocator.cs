@@ -13,6 +13,7 @@ namespace FoodSearch.Presentation.Mobile.Common.Services.Interfaces
         IAuthorizationService Authorization {get;}
         IUserDialogService Dialog {get;}
         ISettings Settings {get;}
+        INetworkAvailabilityService NetworkAvailability { get; }
     }
 }
 
