@@ -8,9 +8,9 @@ using Xamarin.Forms.Platform.Android;
 using WebView = Xamarin.Forms.WebView;
 
 [assembly: ExportRenderer(typeof(CookieWebView), typeof(CookieWebViewRenderer))]
-namespace Cookies.Android
+namespace FoodSearch.Presentation.Mobile.Android.Renderers
 {
-    public class CookieWebViewRenderer : WebViewRenderer
+    public class CookieWebViewRenderer : WebRenderer
     {
         protected override void OnElementChanged(ElementChangedEventArgs<WebView> e)
         {
@@ -25,14 +25,26 @@ namespace Cookies.Android
             get { return Element as CookieWebView; }
         }
     }
-    internal class CookieWebViewClient
-        : WebViewClient
+    internal class CookieWebViewClient : WebViewClient
     {
         private readonly CookieWebView _cookieWebView;
         internal CookieWebViewClient(CookieWebView cookieWebView)
         {
             _cookieWebView = cookieWebView;
         }
+
+        public override void DoUpdateVisitedHistory(global::Android.Webkit.WebView view, string url, bool isReload)
+        {
+            base.DoUpdateVisitedHistory(view, url, isReload);
+            _cookieWebView.OnNavigating(new CookieNavigationEventArgs() { Url = url });
+        }
+
+        public override void OnLoadResource(global::Android.Webkit.WebView view, string url)
+        {
+            base.OnLoadResource(view, url);
+            _cookieWebView.OnNavigating(new CookieNavigationEventArgs() { Url = url });
+        }
+
         public override void OnPageStarted(global::Android.Webkit.WebView view, string url, Bitmap favicon)
         {
             base.OnPageStarted(view, url, favicon);
@@ -41,6 +53,14 @@ namespace Cookies.Android
                     Url = url
                 });
         }
+
+        public override bool ShouldOverrideUrlLoading(global::Android.Webkit.WebView view, string url)
+        {
+            base.ShouldOverrideUrlLoading(view, url);
+            _cookieWebView.OnNavigating(new CookieNavigationEventArgs() { Url = url });
+            return false;
+        }
+
         public override void OnPageFinished(global::Android.Webkit.WebView view, string url)
         {
             var cookieHeader = CookieManager.Instance.GetCookie(url);
@@ -65,3 +85,4 @@ namespace Cookies.Android
         }
     }
 }
+

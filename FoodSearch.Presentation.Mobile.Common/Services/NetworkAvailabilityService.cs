@@ -8,35 +8,31 @@ using FoodSearch.Presentation.Mobile.Common.Services.Interfaces;
 
 namespace FoodSearch.Presentation.Mobile.Common.Services
 {
-    public class NetworkAvailabilityService : INetworkAvailabilityService
+    public static class NetworkAvailabilityService
     {
-        private readonly INetworkService _networkService;
-        private readonly IUserDialogService _dialogService;
+        private static readonly INetworkService _networkService;
+        private static readonly IUserDialogService _dialogService;
 
-        public NetworkAvailabilityService(INetworkService networkService, IUserDialogService dialogService)
+        static NetworkAvailabilityService()
         {
-            _networkService = networkService;
-            _dialogService = dialogService;
+            _networkService = DependencyResolver.Current.Get<INetworkService>();
+            _dialogService = DependencyResolver.Current.Get<IUserDialogService>();
             _networkService.StatusChanged += HandleStatusChanged;
         }
 
-        public void HandleStatusChanged (object sender, EventArgs e)
+        private static void HandleStatusChanged (object sender, EventArgs e)
         {
             if (!_networkService.IsConnected) CloseApp();
         }
 
-        public void CloseApp()
+        public static void CloseApp()
         {
-            _dialogService.Alert(new AlertConfig()
-            {
-                Message = "Aplikacja wymaga połaczenia z internetem do poprawnego działania.\nWciśnij OK aby zamknąć aplikację",
-                Title = "Brak połączenia z siecią",
-                OkText = "OK",
-                OnOk = () => { throw new WebException(); }
+            _dialogService.Alert("Aplikacja wymaga połaczenia z internetem do poprawnego działania.\nWciśnij OK aby zamknąć aplikację", "Brak połączenia z siecią", "OK", () => {
+                throw new WebException();
             });
         }
 
-        public bool IsConnected { get { return _networkService.IsConnected; } }
+        public static bool IsConnected { get { return _networkService.IsConnected; } }
     }
 }
 

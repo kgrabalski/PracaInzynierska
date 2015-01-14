@@ -37,7 +37,6 @@ namespace FoodSearch.Presentation.Mobile.Common.Services
             _kernel.Bind<IUserDialogService>().ToMethod(x => Xamarin.Forms.DependencyService.Get<IUserDialogService>());
             _kernel.Bind<ISettings>().ToMethod(x => Xamarin.Forms.DependencyService.Get<ISettings>());
             _kernel.Bind<INetworkService>().ToMethod(x => Xamarin.Forms.DependencyService.Get<INetworkService>()).InSingletonScope();
-            _kernel.Bind<INetworkAvailabilityService>().To<NetworkAvailabilityService>().InSingletonScope();
             _kernel.Bind<IServiceLocator>().To<ServiceLocator>().InSingletonScope();
         }
     }

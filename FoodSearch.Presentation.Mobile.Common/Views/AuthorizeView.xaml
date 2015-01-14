@@ -12,7 +12,7 @@
 				<Grid.RowDefinitions>
 					<RowDefinition Height="Auto"/>
 					<RowDefinition Height="Auto"/>
-					<RowDefinition Height="*"/>
+					<RowDefinition Height="50"/>
 					<RowDefinition Height="*"/>
 					<RowDefinition Height="Auto"/>
 				</Grid.RowDefinitions>
@@ -25,8 +25,8 @@
 				<Entry Grid.Row="0" Grid.Column="1" Text="{Binding Email, Mode=TwoWay}" Placeholder="Login" Keyboard="Email"/>
 				<Label Grid.Row="1" Grid.Column="0" Text="Hasło:" VerticalOptions="Center"/>
 				<Entry Grid.Row="1" Grid.Column="1" Text="{Binding Password, Mode=TwoWay}" Placeholder="Hasło" IsPassword="true"/>
-				<Label Grid.Row="2" Grid.Column="0" Text="Zapamiętaj mnie" VerticalOptions="Start"/>
-				<Switch Grid.Row="2" Grid.Column="1" IsToggled="{Binding RememberMe, Mode=TwoWay}" VerticalOptions="Start"/>
+				<Label Grid.Row="2" Grid.Column="0" Text="Zapamiętaj mnie" VerticalOptions="Center"/>
+				<Switch Grid.Row="2" Grid.Column="1" IsToggled="{Binding RememberMe, Mode=TwoWay}"/>
 
 				<Button Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" Text="Zaloguj się" VerticalOptions="End" Command="{Binding LoginCommand}"/>
 			</Grid>

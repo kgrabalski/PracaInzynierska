@@ -18,7 +18,6 @@ namespace FoodSearch.Presentation.Mobile.Common.Services
         public IAuthorizationService Authorization { get { return ResolveService<IAuthorizationService>(); }}
         public IUserDialogService Dialog { get { return ResolveService<IUserDialogService>(); }}
         public ISettings Settings { get { return ResolveService<ISettings>(); }}
-        public INetworkAvailabilityService NetworkAvailability { get { return ResolveService<INetworkAvailabilityService>(); } }
     }
 }
 

@@ -4,8 +4,8 @@ namespace FoodSearch.Presentation.Mobile.Common.Services.Interfaces
 {
     public interface INetworkAvailabilityService
     {
-        void HandleStatusChanged (object sender, EventArgs e);
+        bool IsConnected {get;}
         void CloseApp();
-        bool IsConnected { get; }
     }
 }
+

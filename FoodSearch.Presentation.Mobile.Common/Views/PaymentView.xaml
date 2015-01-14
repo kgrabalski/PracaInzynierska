@@ -3,10 +3,10 @@
 	xmlns="http://xamarin.com/schemas/2014/forms" 
 	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
 	x:Class="FoodSearch.Presentation.Mobile.Common.Views.PaymentView"
+	xmlns:component="clr-namespace:FoodSearch.Presentation.Mobile.Common.Components;assembly=FoodSearch.Presentation.Mobile.Common"
 	Title="PayPal">
 	<ContentPage.Content>
-		<WebView VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Source="{Binding PaymentUrl, Mode=TwoWay}">
-
-		</WebView>
+		<component:CookieWebView VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand"
+			Source="{Binding PaymentUrl, Mode=TwoWay}" x:Name="webView"/>
 	</ContentPage.Content>
 </ContentPage>
