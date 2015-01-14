@@ -6,6 +6,8 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Navigation;
 
+using Acr.XamForms.Mobile.WindowsPhone;
+using Acr.XamForms.Mobile.WindowsPhone.Net;
 using Acr.XamForms.UserDialogs;
 using Acr.XamForms.UserDialogs.WindowsPhone;
 
@@ -31,6 +33,7 @@ namespace FoodSearch.Presentation.Mobile.WindowsPhone
             InitializeComponent();
             //FIX: create IUserDialogService instance
             var userDialog = new UserDialogService();
+            var networkService = new NetworkService();
             Forms.Init();
             Content = ViewLocator.StartScreen.ConvertPageToUIElement(this);
         }
