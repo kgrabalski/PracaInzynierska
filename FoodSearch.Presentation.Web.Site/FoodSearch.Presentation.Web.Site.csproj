@@ -176,6 +176,7 @@
     <Compile Include="Areas\RestaurantAdmin\Controllers\PendingOrderController.cs" />
     <Compile Include="Areas\RestaurantAdmin\Controllers\RatingController.cs" />
     <Compile Include="Areas\RestaurantAdmin\Controllers\RestaurantCuisineController.cs" />
+    <Compile Include="Areas\RestaurantAdmin\Models\ConfirmOrderModel.cs" />
     <Compile Include="Areas\RestaurantAdmin\Models\DishGroupModel.cs" />
     <Compile Include="Areas\RestaurantAdmin\Models\DishModel.cs" />
     <Compile Include="Areas\RestaurantAdmin\Models\OpeningHourModel.cs" />
@@ -245,7 +246,6 @@
     <Content Include="Content\Admin\font-awesome.min.css" />
     <Content Include="Content\Admin\ionicons.css" />
     <Content Include="Content\Admin\ionicons.min.css" />
-    <Content Include="Content\Admin\Site.css" />
     <Content Include="Content\bootstrap-notify.css" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
@@ -253,6 +253,7 @@
     <Content Include="Content\bootstrap-timepicker.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\loader.css" />
     <Content Include="Content\Selectize\css\selectize.bootstrap2.css" />
     <Content Include="Content\Selectize\css\selectize.bootstrap3.css" />
     <Content Include="Content\Selectize\css\selectize.css" />
@@ -284,6 +285,7 @@
     <Content Include="Scripts\Admin\RestaurantAdmin\controller\ordersHistoryController.js" />
     <Content Include="Scripts\Admin\RestaurantAdmin\controller\pendingOrdersController.js" />
     <Content Include="Scripts\Admin\RestaurantAdmin\service\services.js" />
+    <Content Include="Scripts\Admin\RestaurantAdmin\websocket.js" />
     <Content Include="Scripts\Admin\SiteAdmin\app.js" />
     <Content Include="Scripts\Admin\SiteAdmin\controller\controllers.js" />
     <Content Include="Scripts\Admin\SiteAdmin\controller\restaurantController.js" />
@@ -323,9 +325,10 @@
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\Frontend\Basket.js" />
     <Content Include="Scripts\Frontend\BasketSummary.js" />
+    <Content Include="Scripts\Frontend\CookiePolicy.js" />
     <Content Include="Scripts\Frontend\Delivery.js" />
-    <Content Include="Scripts\Frontend\DeliveryAddresses.js" />
     <Content Include="Scripts\Frontend\HomePage.js" />
+    <Content Include="Scripts\Frontend\OrderSuccess.js" />
     <Content Include="Scripts\Frontend\Register.js" />
     <Content Include="Scripts\Frontend\RestaurantPage.js" />
     <Content Include="Scripts\Frontend\SearchRestaurants.js" />
@@ -1186,14 +1189,13 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Account\Login.cshtml" />
     <Content Include="Views\Home\Restaurants.cshtml" />
-    <Content Include="Views\Home\RestaurantDishes.cshtml" />
+    <Content Include="Views\Home\RestaurantMenu.cshtml" />
     <Content Include="Views\Regulation\Privacy.cshtml" />
     <Content Include="Views\Regulation\Index.cshtml" />
     <Content Include="Views\Restaurants\Index.cshtml" />
     <Content Include="Views\Contact\Index.cshtml" />
     <Content Include="Views\Account\Register.cshtml" />
     <Content Include="Views\Shared\_UserLinks.cshtml" />
-    <Content Include="Views\Shared\_RestaurantInfo.cshtml" />
     <Content Include="Views\Restaurants\Page.cshtml" />
     <Content Include="Views\Account\Verify.cshtml" />
     <Content Include="Views\Account\AccountCreated.cshtml" />

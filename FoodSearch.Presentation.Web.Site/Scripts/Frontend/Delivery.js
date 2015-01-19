@@ -1,4 +1,6 @@
-﻿$(document).ready(function () {
-    $("#selectDeliveryType").selectize();
-    $("#selectPaymentType").selectize();
-});
+﻿(function() {
+    $(document).ready(function() {
+        $("#selectDeliveryType").selectize();
+        $("#selectPaymentType").selectize();
+    });
+})();

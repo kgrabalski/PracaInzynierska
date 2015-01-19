@@ -22,6 +22,34 @@
   </PropertyGroup>
   <Import Project="$(VSToolsPath)\ArchitectureTools\Microsoft.VisualStudio.TeamArchitect.ModelingProject.targets" Condition="'$(VSToolsPath)' != ''" />
   <ItemGroup>
+    <Content Include="RestaurantAdmin.usecasediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="RestaurantAdmin.usecasediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>RestaurantAdmin.usecasediagram</DependentUpon>
+    </Content>
+    <Content Include="RestaurantEmployee.usecasediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="RestaurantEmployee.usecasediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>RestaurantEmployee.usecasediagram</DependentUpon>
+    </Content>
+    <Content Include="SiteAdmin.usecasediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="SiteAdmin.usecasediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>SiteAdmin.usecasediagram</DependentUpon>
+    </Content>
+    <Content Include="User.usecasediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="User.usecasediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>User.usecasediagram</DependentUpon>
+    </Content>
     <Folder Include="ModelDefinition\" />
     <Content Include="ModelDefinition\FoodSearch.Modeling.uml">
       <SubType>Content</SubType>

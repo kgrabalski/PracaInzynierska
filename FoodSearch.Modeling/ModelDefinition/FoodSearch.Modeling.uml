@@ -1,8 +1,20 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm9="http://schemas.microsoft.com/dsltools/UseCaseModel"
   dslVersion="1.0.0.0"
   Id="36ea5af6-e5bd-4839-9f43-52f120ba2311"
   name="FoodSearch.Modeling" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <ownedCommentsInternal>
+    <comment
+      Id="fbd075b0-8074-4d50-bf2a-0055a8ac8bcb">
+      <body>Zawiera wszystkie funkcje aplikacji mobilnej</body>
+      <annotatedElements>
+        <subsystemMoniker
+          Id="a3a051ad-778b-4a7c-ac1f-9dece863d877"
+          LastKnownName="Strona internetowa"
+          LastKnownLocation="FoodSearch.Modeling.uml" />
+      </annotatedElements>
+    </comment>
+  </ownedCommentsInternal>
   <profileInstances>
     <packageHasProfileInstances
       Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b">
@@ -17,28 +29,920 @@
         name="StandardProfileL3" />
     </packageHasProfileInstances>
   </profileInstances>
+  <packagedElements>
+    <packageHasNamedElement>
+      <actor
+        Id="a330f637-07ba-4312-9873-38b84df6f0df"
+        name="Użytkownik"
+        isAbstract="false"
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="1b679b3f-216f-4b91-b2bd-5636ef00cc0f"
+            isDerived="false"
+            sourceEndRoleName="Użytkownik"
+            targetEndRoleName="Strona internetowa / aplikacja mobilna"
+            isLeaf="false"
+            isAbstract="false">
+            <subsystemMoniker
+              Id="eec1763e-53a6-483d-aa42-e29435219b2f"
+              LastKnownName="Aplikacja mobilna"
+              LastKnownLocation="FoodSearch.Modeling.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="57f47703-cf19-410f-8d39-86ad74555abe"
+                  name="Użytkownik"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="71d72426-778f-4e17-8db9-51ed21be9832"
+                  name="Strona internetowa / aplikacja mobilna"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="08ebde16-91c4-4a7b-b8fb-9177a6a40ed3"
+            isDerived="false"
+            sourceEndRoleName="Użytkownik"
+            targetEndRoleName="Strona internetowa"
+            isLeaf="false"
+            isAbstract="false">
+            <subsystemMoniker
+              Id="a3a051ad-778b-4a7c-ac1f-9dece863d877"
+              LastKnownName="Strona internetowa"
+              LastKnownLocation="FoodSearch.Modeling.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="0439ce9d-8603-4f18-8792-bc996414ed1c"
+                  name="Użytkownik"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="2975097c-bb91-4408-a46b-dbbe0a9282c6"
+                  name="Strona internetowa"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="74693299-bb6c-4070-9532-b1872f642e50"
+            isDerived="false"
+            sourceEndRoleName="Użytkownik"
+            targetEndRoleName="Panel użytkownika"
+            isLeaf="false"
+            isAbstract="false">
+            <subsystemMoniker
+              Id="d8b7ee5d-70e6-42ce-addc-217535d70ca6"
+              LastKnownName="Panel użytkownika"
+              LastKnownLocation="FoodSearch.Modeling.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="2c541c34-62f8-4ca3-bc28-a8a2feb6f13b"
+                  name="Użytkownik"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="b30ff3e4-0418-41ea-a57d-20076da7af9c"
+                  name="Panel użytkownika"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </actor>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <subsystem
+        Id="eec1763e-53a6-483d-aa42-e29435219b2f"
+        name="Aplikacja mobilna"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <subsystem
+        Id="1b1ea14d-ead0-4765-a8a8-af5361e0312d"
+        name="Subsystem2"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="0a797642-fda2-4b57-ad14-c5d3731a3d7d"
+        name="Wyszukanie restauracji"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="4bb48ec0-84fa-4b03-b08b-3d8b923dfccb"
+        name="Rejestracja"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="8155b240-65bb-4eeb-a76f-e202f0918c14"
+        name="Logowanie"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="7a25fb73-300d-495f-87b5-9491ea025e77"
+        name="Rejestracja"
+        isAbstract="false"
+        isLeaf="false">
+        <subjects>
+          <subsystemMoniker
+            Id="eec1763e-53a6-483d-aa42-e29435219b2f"
+            LastKnownName="Aplikacja mobilna"
+            LastKnownLocation="FoodSearch.Modeling.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="8e0e69d7-4de0-4fee-a3ff-499601666b3b"
+        name="Logowanie"
+        isAbstract="false"
+        isLeaf="false">
+        <suppliersInternal>
+          <dependency
+            Id="ae87fe13-1607-45f3-a13b-7a9ba7d2f27d">
+            <useCaseMoniker
+              Id="7a25fb73-300d-495f-87b5-9491ea025e77"
+              LastKnownName="Rejestracja"
+              LastKnownLocation="FoodSearch.Modeling.uml" />
+          </dependency>
+        </suppliersInternal>
+        <subjects>
+          <subsystemMoniker
+            Id="eec1763e-53a6-483d-aa42-e29435219b2f"
+            LastKnownName="Aplikacja mobilna"
+            LastKnownLocation="FoodSearch.Modeling.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="e0dd1d0a-7838-4658-b048-c084c4a57ee2"
+        name="Wyszukanie restauracji"
+        isAbstract="false"
+        isLeaf="false">
+        <subjects>
+          <subsystemMoniker
+            Id="eec1763e-53a6-483d-aa42-e29435219b2f"
+            LastKnownName="Aplikacja mobilna"
+            LastKnownLocation="FoodSearch.Modeling.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="4739b3b8-398a-4ae4-92cc-752c4398c44f"
+        name="Złożenie zamówienia"
+        isAbstract="false"
+        isLeaf="false">
+        <suppliersInternal>
+          <dependency
+            Id="d3bb2081-565d-4556-ad89-3627a62c25a7">
+            <useCaseMoniker
+              Id="8e0e69d7-4de0-4fee-a3ff-499601666b3b"
+              LastKnownName="Logowanie"
+              LastKnownLocation="FoodSearch.Modeling.uml" />
+          </dependency>
+          <dependency
+            Id="cf9b73e0-383b-4f48-b0bd-2c22c448b2a0">
+            <useCaseMoniker
+              Id="e0dd1d0a-7838-4658-b048-c084c4a57ee2"
+              LastKnownName="Wyszukanie restauracji"
+              LastKnownLocation="FoodSearch.Modeling.uml" />
+          </dependency>
+        </suppliersInternal>
+        <subjects>
+          <subsystemMoniker
+            Id="eec1763e-53a6-483d-aa42-e29435219b2f"
+            LastKnownName="Aplikacja mobilna"
+            LastKnownLocation="FoodSearch.Modeling.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="a60727bb-36fc-42c9-96e8-28d9ecef6d05"
+        name="Zapłata za zamówienie"
+        isAbstract="false"
+        isLeaf="false">
+        <extendedCases>
+          <extend
+            Id="ce3a6b1f-ab47-4179-87d3-06ffe7bdd981">
+            <useCaseMoniker
+              Id="4739b3b8-398a-4ae4-92cc-752c4398c44f"
+              LastKnownName="Złożenie zamówienia"
+              LastKnownLocation="FoodSearch.Modeling.uml" />
+          </extend>
+        </extendedCases>
+        <subjects>
+          <subsystemMoniker
+            Id="eec1763e-53a6-483d-aa42-e29435219b2f"
+            LastKnownName="Aplikacja mobilna"
+            LastKnownLocation="FoodSearch.Modeling.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <subsystem
+        Id="a3a051ad-778b-4a7c-ac1f-9dece863d877"
+        name="Strona internetowa"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <targetEnds>
+          <association
+            Id="c0d3cb6d-d171-4a4d-b6fd-0dc0ca3b4f3a"
+            isDerived="false"
+            sourceEndRoleName="Strona internetowa"
+            targetEndRoleName="Aplikacja mobilna"
+            isLeaf="false"
+            isAbstract="false">
+            <subsystemMoniker
+              Id="eec1763e-53a6-483d-aa42-e29435219b2f"
+              LastKnownName="Aplikacja mobilna"
+              LastKnownLocation="FoodSearch.Modeling.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="e036a16d-90b4-4387-a5dc-140b112854d8"
+                  name="Strona internetowa"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="20619c3a-a891-4551-af6b-2be7748b9a10"
+                  name="Aplikacja mobilna"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </subsystem>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="2c61bb50-9064-4e49-b8f6-c6ee9c445c22"
+        name="Dodanie opinii"
+        isAbstract="false"
+        isLeaf="false">
+        <suppliersInternal>
+          <dependency
+            Id="10e75059-a94c-49f8-96f7-199ebedb5edf">
+            <useCaseMoniker
+              Id="8e0e69d7-4de0-4fee-a3ff-499601666b3b"
+              LastKnownName="Logowanie"
+              LastKnownLocation="FoodSearch.Modeling.uml" />
+          </dependency>
+        </suppliersInternal>
+        <subjects>
+          <subsystemMoniker
+            Id="eec1763e-53a6-483d-aa42-e29435219b2f"
+            LastKnownName="Aplikacja mobilna"
+            LastKnownLocation="FoodSearch.Modeling.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="921ed84d-bcb5-45a2-b76e-c2b177bcdb71"
+        name="Wyświetlanie opinii"
+        isAbstract="false"
+        isLeaf="false">
+        <subjects>
+          <subsystemMoniker
+            Id="eec1763e-53a6-483d-aa42-e29435219b2f"
+            LastKnownName="Aplikacja mobilna"
+            LastKnownLocation="FoodSearch.Modeling.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="08f19d3d-e6c7-41f6-9577-c76e227da6b9"
+        name="Przeglądanie restauracji"
+        isAbstract="false"
+        isLeaf="false">
+        <subjects>
+          <subsystemMoniker
+            Id="a3a051ad-778b-4a7c-ac1f-9dece863d877"
+            LastKnownName="Strona internetowa"
+            LastKnownLocation="FoodSearch.Modeling.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="9c7d9eb8-7922-4837-8ca3-0b0846f6338d"
+        name="Kontakt"
+        isAbstract="false"
+        isLeaf="false">
+        <subjects>
+          <subsystemMoniker
+            Id="a3a051ad-778b-4a7c-ac1f-9dece863d877"
+            LastKnownName="Strona internetowa"
+            LastKnownLocation="FoodSearch.Modeling.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <subsystem
+        Id="d8b7ee5d-70e6-42ce-addc-217535d70ca6"
+        name="Panel użytkownika"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="7f0e9548-0f00-4e6e-9051-73afff31e5dc"
+        name="Zmiana hasła"
+        isAbstract="false"
+        isLeaf="false">
+        <subjects>
+          <subsystemMoniker
+            Id="d8b7ee5d-70e6-42ce-addc-217535d70ca6"
+            LastKnownName="Panel użytkownika"
+            LastKnownLocation="FoodSearch.Modeling.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="3c78f2d4-138d-4a79-bcc5-46e2e2f71242"
+        name="Zarządzenie adresami dostawy"
+        isAbstract="false"
+        isLeaf="false">
+        <subjects>
+          <subsystemMoniker
+            Id="d8b7ee5d-70e6-42ce-addc-217535d70ca6"
+            LastKnownName="Panel użytkownika"
+            LastKnownLocation="FoodSearch.Modeling.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="8da2f6bb-005d-407b-814e-9120c1cb5101"
+        name="Przeglądanie historii zamówień"
+        isAbstract="false"
+        isLeaf="false">
+        <subjects>
+          <subsystemMoniker
+            Id="d8b7ee5d-70e6-42ce-addc-217535d70ca6"
+            LastKnownName="Panel użytkownika"
+            LastKnownLocation="FoodSearch.Modeling.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <actor
+        Id="b4975088-1569-475f-8627-1a2464435f59"
+        name="Pracownik restauracji"
+        isAbstract="false"
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="060f72a5-79c5-4a79-b978-a99be604bb1f"
+            isDerived="false"
+            sourceEndRoleName="Pracownik restauracji"
+            targetEndRoleName="Panel pracownika restauracji"
+            isLeaf="false"
+            isAbstract="false">
+            <subsystemMoniker
+              Id="62da775e-a36e-4517-a28e-47bf0a473bf3"
+              LastKnownName="Panel pracownika restauracji"
+              LastKnownLocation="FoodSearch.Modeling.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="26f76994-57c2-422a-b01e-ccb3213724bc"
+                  name="Pracownik restauracji"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="90308de0-6045-4b3c-b8b7-e65962815239"
+                  name="Panel pracownika restauracji"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </actor>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <subsystem
+        Id="68d55ef4-85b5-4d95-8f3e-6230f14671c7"
+        name="Obsługa zamówień"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <subsystem
+        Id="ea22ae13-1c93-42c3-beb5-92a97d249cce"
+        name="Menu restauracji"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <subsystem
+        Id="62da775e-a36e-4517-a28e-47bf0a473bf3"
+        name="Panel pracownika restauracji"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="acf0d876-5142-4694-9d90-bd42364895b3"
+        name="Rejestracja1"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="b9ecfb2a-c6f5-4411-a298-79444a6dae25"
+        name="Logowanie1"
+        isAbstract="false"
+        isLeaf="false">
+        <suppliersInternal>
+          <dependency
+            Id="b555fa4d-1bc2-4b0f-a7db-6027d1b3db23">
+            <useCaseMoniker
+              Id="acf0d876-5142-4694-9d90-bd42364895b3"
+              LastKnownName="Rejestracja1"
+              LastKnownLocation="FoodSearch.Modeling.uml" />
+          </dependency>
+        </suppliersInternal>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="fe1b77dc-e2f7-4168-81de-83d55ede59c6"
+        name="Wyszukanie restauracji1"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="5d487ba1-dba0-4d61-ab3f-d48f7eef1464"
+        name="Złożenie zamówienia1"
+        isAbstract="false"
+        isLeaf="false">
+        <suppliersInternal>
+          <dependency
+            Id="b0bc4c3b-673a-4545-b3d9-ac59a859c0d7">
+            <useCaseMoniker
+              Id="b9ecfb2a-c6f5-4411-a298-79444a6dae25"
+              LastKnownName="Logowanie1"
+              LastKnownLocation="FoodSearch.Modeling.uml" />
+          </dependency>
+          <dependency
+            Id="6253b0bf-63e6-4a61-a3fc-55d619f963d4">
+            <useCaseMoniker
+              Id="fe1b77dc-e2f7-4168-81de-83d55ede59c6"
+              LastKnownName="Wyszukanie restauracji1"
+              LastKnownLocation="FoodSearch.Modeling.uml" />
+          </dependency>
+        </suppliersInternal>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="c6dbd84c-1f01-4210-80b4-b2d999133c6d"
+        name="Zapłata za zamówienie1"
+        isAbstract="false"
+        isLeaf="false">
+        <extendedCases>
+          <extend
+            Id="4265a3f3-e18e-41f9-9407-f7e0628f9185">
+            <useCaseMoniker
+              Id="5d487ba1-dba0-4d61-ab3f-d48f7eef1464"
+              LastKnownName="Złożenie zamówienia1"
+              LastKnownLocation="FoodSearch.Modeling.uml" />
+          </extend>
+        </extendedCases>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="40b60dc7-d6b1-48d8-a669-fd2d11bdbe0c"
+        name="Dodanie opinii1"
+        isAbstract="false"
+        isLeaf="false">
+        <suppliersInternal>
+          <dependency
+            Id="4f58597f-fb2d-4f6c-aa63-7274330320dc">
+            <useCaseMoniker
+              Id="b9ecfb2a-c6f5-4411-a298-79444a6dae25"
+              LastKnownName="Logowanie1"
+              LastKnownLocation="FoodSearch.Modeling.uml" />
+          </dependency>
+        </suppliersInternal>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="67020769-de4d-40d1-860a-ac1994b3b2d4"
+        name="Wyświetlanie opinii1"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <subsystem
+        Id="bc1e432c-c92f-46e0-91a7-542abc0e9cbd"
+        name="Menu restaura"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="485b5fad-9609-422c-9280-a96e2059d3fc"
+        name="Wyświetlenie listy zamówień"
+        isAbstract="false"
+        isLeaf="false">
+        <subjects>
+          <subsystemMoniker
+            Id="62da775e-a36e-4517-a28e-47bf0a473bf3"
+            LastKnownName="Panel pracownika restauracji"
+            LastKnownLocation="FoodSearch.Modeling.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="2873b4a9-360b-4b34-a9bd-7c58b4fa7b75"
+        name="Zatwierdzenie zamówienia"
+        isAbstract="false"
+        isLeaf="false">
+        <subjects>
+          <subsystemMoniker
+            Id="62da775e-a36e-4517-a28e-47bf0a473bf3"
+            LastKnownName="Panel pracownika restauracji"
+            LastKnownLocation="FoodSearch.Modeling.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="864cc14a-666a-483a-b2eb-5b5a14ebde26"
+        name="Anulowanie zamówienia"
+        isAbstract="false"
+        isLeaf="false">
+        <subjects>
+          <subsystemMoniker
+            Id="62da775e-a36e-4517-a28e-47bf0a473bf3"
+            LastKnownName="Panel pracownika restauracji"
+            LastKnownLocation="FoodSearch.Modeling.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="9bb3fdf2-e7fe-4650-ae43-4377d26a044f"
+        name="Edycja menu restauracji"
+        isAbstract="false"
+        isLeaf="false">
+        <additions>
+          <include
+            Id="09c6d15d-d2ad-4ce4-bcaf-6cecc56386f6">
+            <useCaseMoniker
+              Id="eb2c8c75-137b-47b6-87e5-12ac3fca07b6"
+              LastKnownName="Edycja kuchni"
+              LastKnownLocation="FoodSearch.Modeling.uml" />
+          </include>
+          <include
+            Id="b1eab7f4-d970-4b19-b770-8afcffe1c385">
+            <useCaseMoniker
+              Id="ba4d9cb3-70c2-4c7b-8848-c6da0c971954"
+              LastKnownName="Edycja grup dań"
+              LastKnownLocation="FoodSearch.Modeling.uml" />
+          </include>
+          <include
+            Id="7c8fce02-3774-4f77-b4b6-a9b841ecb229">
+            <useCaseMoniker
+              Id="042a727b-fc90-463b-ae27-7ea9ffd586f2"
+              LastKnownName="Edycja dań"
+              LastKnownLocation="FoodSearch.Modeling.uml" />
+          </include>
+        </additions>
+        <subjects>
+          <subsystemMoniker
+            Id="62da775e-a36e-4517-a28e-47bf0a473bf3"
+            LastKnownName="Panel pracownika restauracji"
+            LastKnownLocation="FoodSearch.Modeling.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="eb2c8c75-137b-47b6-87e5-12ac3fca07b6"
+        name="Edycja kuchni"
+        isAbstract="false"
+        isLeaf="false">
+        <subjects>
+          <subsystemMoniker
+            Id="62da775e-a36e-4517-a28e-47bf0a473bf3"
+            LastKnownName="Panel pracownika restauracji"
+            LastKnownLocation="FoodSearch.Modeling.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="ba4d9cb3-70c2-4c7b-8848-c6da0c971954"
+        name="Edycja grup dań"
+        isAbstract="false"
+        isLeaf="false">
+        <subjects>
+          <subsystemMoniker
+            Id="62da775e-a36e-4517-a28e-47bf0a473bf3"
+            LastKnownName="Panel pracownika restauracji"
+            LastKnownLocation="FoodSearch.Modeling.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="042a727b-fc90-463b-ae27-7ea9ffd586f2"
+        name="Edycja dań"
+        isAbstract="false"
+        isLeaf="false">
+        <subjects>
+          <subsystemMoniker
+            Id="62da775e-a36e-4517-a28e-47bf0a473bf3"
+            LastKnownName="Panel pracownika restauracji"
+            LastKnownLocation="FoodSearch.Modeling.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <actor
+        Id="b38a2f04-04c9-431d-94e9-967947fb59bf"
+        name="Administrator systemu"
+        isAbstract="false"
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="e67db563-5e1e-4aa3-ada5-0a016d482d83"
+            isDerived="false"
+            sourceEndRoleName="Administrator systemu"
+            targetEndRoleName="Panel administratora"
+            isLeaf="false"
+            isAbstract="false">
+            <subsystemMoniker
+              Id="129122be-184f-4a9a-9b63-6f278515e0e9"
+              LastKnownName="Panel administratora"
+              LastKnownLocation="FoodSearch.Modeling.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="10f80731-fe37-4164-bc04-b5ef122644f4"
+                  name="Administrator systemu"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="82435ac7-808a-4e89-a71c-65484e145348"
+                  name="Panel administratora"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </actor>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <subsystem
+        Id="129122be-184f-4a9a-9b63-6f278515e0e9"
+        name="Panel administratora"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="bce66d06-9a39-48f8-a27b-dda3ef8bfb8d"
+        name="Edycja listy restauracji"
+        isAbstract="false"
+        isLeaf="false">
+        <subjects>
+          <subsystemMoniker
+            Id="129122be-184f-4a9a-9b63-6f278515e0e9"
+            LastKnownName="Panel administratora"
+            LastKnownLocation="FoodSearch.Modeling.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="0a6b87e7-9f39-4b52-9be4-cd3985a44230"
+        name="UseCase1"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="9019add8-7b12-41ee-873e-61109c7d063b"
+        name="Zarządzanie kontami właściciela restauracji"
+        isAbstract="false"
+        isLeaf="false">
+        <subjects>
+          <subsystemMoniker
+            Id="129122be-184f-4a9a-9b63-6f278515e0e9"
+            LastKnownName="Panel administratora"
+            LastKnownLocation="FoodSearch.Modeling.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="743c7990-7c2d-4726-a306-f5e08c1c1b33"
+        name="Przeglądanie raportów"
+        isAbstract="false"
+        isLeaf="false">
+        <subjects>
+          <subsystemMoniker
+            Id="129122be-184f-4a9a-9b63-6f278515e0e9"
+            LastKnownName="Panel administratora"
+            LastKnownLocation="FoodSearch.Modeling.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <subsystem
+        Id="5953bd37-d808-497a-8dd3-68a74d6c562f"
+        name="Panel właściciela restauracji"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <actor
+        Id="b709706e-241c-47be-9e9b-32cc9f1c5670"
+        name="Właściciel restauracji"
+        isAbstract="false"
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="ddd22455-893f-447f-9667-d833b66838ac"
+            isDerived="false"
+            sourceEndRoleName="Właściciel restauracji"
+            targetEndRoleName="Panel właściciela restauracji"
+            isLeaf="false"
+            isAbstract="false">
+            <subsystemMoniker
+              Id="5953bd37-d808-497a-8dd3-68a74d6c562f"
+              LastKnownName="Panel właściciela restauracji"
+              LastKnownLocation="FoodSearch.Modeling.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="913fdf2c-38a8-4515-890c-da18cb0ff7d8"
+                  name="Właściciel restauracji"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="31a88c78-4ac2-4ae8-b417-eef177416885"
+                  name="Panel właściciela restauracji"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </actor>
+    </packageHasNamedElement>
+  </packagedElements>
   <primitiveType
     Id="220a3521-e091-4221-bae9-3ef9018e845c"
     name="Integer"
     isAbstract="false"
-    isTemplate="false"
     isLeaf="false" />
   <primitiveType
     Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
     name="Boolean"
     isAbstract="false"
-    isTemplate="false"
     isLeaf="false" />
   <primitiveType
     Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
     name="String"
     isAbstract="false"
-    isTemplate="false"
     isLeaf="false" />
   <primitiveType
     Id="3ab42e7d-4969-445a-b209-471f5cb8209c"
     name="UnlimitedNatural"
     isAbstract="false"
-    isTemplate="false"
     isLeaf="false" />
 </modelStoreModel>

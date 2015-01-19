@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<useCaseDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="SiteAdmin">
+  <useCaseModelRootMoniker Id="574dca73-04ad-4691-ab75-7985fceb3109" />
+  <nestedChildShapes>
+    <actorShape Id="8e8106ae-86d5-43f9-9a72-32d372df4b75" absoluteBounds="1, 1.125, 0.5, 0.5" isReference="false" heightOffset="0">
+      <actorMoniker Id="0bb593ea-5d96-4a7d-8c2a-80b8d063cce4" LastKnownName="Administrator systemu" />
+      <relativeChildShapes />
+    </actorShape>
+    <SubsystemShape Id="2ff9603b-3d11-4f1e-9c9a-4346c8bd218d" absoluteBounds="3, 0.625, 4.875, 1.5" customColor="White">
+      <subsystemMoniker Id="130a5061-52ec-4d9d-9b18-75c9603cc37e" LastKnownName="Panel administratora" />
+      <nestedChildShapes>
+        <useCaseShape Id="0df0c79f-c47c-40ec-968a-241eab134a4a" absoluteBounds="3.125, 1.125, 1, 0.5" customColor="238, 237, 131" heightOffset="0">
+          <useCaseMoniker Id="199750c5-a29b-470b-98fa-f661b9d93011" LastKnownName="Edycja listy restauracji" />
+          <relativeChildShapes />
+        </useCaseShape>
+        <useCaseShape Id="f4b17442-fdd3-481d-8358-cb4b2264c37e" absoluteBounds="4.5, 1.125, 1.75, 0.5" customColor="238, 237, 131" heightOffset="0">
+          <useCaseMoniker Id="801245fb-0819-4f6c-abd1-a11e50d2c9ae" LastKnownName="Zarządzanie kontami właściciela restauracji" />
+          <relativeChildShapes />
+        </useCaseShape>
+        <useCaseShape Id="3dc32272-4e5e-4dc8-a5bf-ea0f78351bfe" absoluteBounds="6.625, 1.125, 1, 0.5" customColor="238, 237, 131" heightOffset="0">
+          <useCaseMoniker Id="ddb08c3d-afb9-4780-a84d-f1d398b90b01" LastKnownName="Przeglądanie raportów" />
+          <relativeChildShapes />
+        </useCaseShape>
+      </nestedChildShapes>
+    </SubsystemShape>
+    <useCaseAssociationConnector edgePoints="[(1.5 : 1.375); (3 : 1.375)]" fixedFrom="Algorithm" fixedTo="Algorithm" customColor="113, 111, 110" sourceMultiplicity="" targetMultiplicity="">
+      <associationMoniker Id="053f7658-7824-4664-bfb1-10b356951d78" />
+      <relativeChildShapes />
+      <nodes>
+        <actorShapeMoniker Id="8e8106ae-86d5-43f9-9a72-32d372df4b75" />
+        <SubsystemShapeMoniker Id="2ff9603b-3d11-4f1e-9c9a-4346c8bd218d" />
+      </nodes>
+    </useCaseAssociationConnector>
+  </nestedChildShapes>
+</useCaseDiagram>

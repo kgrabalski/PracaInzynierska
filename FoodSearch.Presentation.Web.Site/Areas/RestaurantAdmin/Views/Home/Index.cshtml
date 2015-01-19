@@ -8,32 +8,19 @@
 
 @section HeadSection
 {
-    <link rel="stylesheet" href="~/Content/Selectize/css/selectize.css" />
-    <link rel="stylesheet" href="~/Content/bootstrap-timepicker.min.css" />
-    <link rel="stylesheet" href="~/Areas/RestaurantAdmin/Content/Site.css"/>
-    <link rel="stylesheet" href="~/Content/Admin/ionicons.min.css"/>
+    @Styles.Render("~/css/restaurantAdmin/panel")
+    <link rel="stylesheet" href="~/Content/bootstrap-notify.css"/>
 }
 
 @section ScriptSection
 {
-    <script src="~/Content/Selectize/js/standalone/selectize.min.js"></script>
-    <script src="~/Scripts/bootstrap-notify.js"></script>
-    <script src="~/Scripts/Admin/Common/directives.js"></script>
-    <script src="~/Scripts/Admin/Common/services.js"></script>
-    <script src="~/Scripts/Admin/RestaurantAdmin/app.js"></script>
-    <script src="~/Scripts/Admin/RestaurantAdmin/service/services.js"></script>
-    <script src="~/Scripts/Admin/RestaurantAdmin/controller/controllersEmployee.js"></script>
-    <script src="~/Scripts/Admin/RestaurantAdmin/controller/cuisineController.js"></script>
-    <script src="~/Scripts/Admin/RestaurantAdmin/controller/dishGroupController.js"></script>
-    <script src="~/Scripts/Admin/RestaurantAdmin/controller/dishController.js"></script>
-    <script src="~/Scripts/Admin/RestaurantAdmin/controller/opinionsController.js"></script>
-    <script src="~/Scripts/Admin/RestaurantAdmin/controller/newOrdersController.js"></script>
-    <script src="~/Scripts/Admin/RestaurantAdmin/controller/pendingOrdersController.js"></script>
+    @Scripts.Render("~/js/restaurantAdmin/employee")
+    <script src="~/Scripts/jquery.signalR-2.1.2.min.js"></script>
+    <script src="/signalr/hubs"></script>
+    <script src="~/Scripts/Admin/RestaurantAdmin/websocket.js"></script>
     @if (User.IsInRole(UserTypes.RestaurantAdmin.ToString()))
     {
-        <script src="~/Scripts/Admin/RestaurantAdmin/controller/controllersAdmin.js"></script>
-        <script src="~/Scripts/Admin/RestaurantAdmin/controller/openingHoursController.js"></script>
-        <script src="~/Scripts/Admin/RestaurantAdmin/controller/ordersHistoryController.js"></script>
+        @Scripts.Render("~/js/restaurantAdmin/admin")
     }
 }
 
@@ -121,10 +108,15 @@
             </ul>
         </section>
     </aside>
-    
+
+    <div class="notifications top-right"></div>
     <div error-alert></div>
-    <div ng-view></div>
+
+    <div ng-view>
+        
+    </div>
 </div>
+
 
 <script type="text/ng-template" id="dashboardTemplate">
     @{ Html.RenderPartial("_Dashboard"); }

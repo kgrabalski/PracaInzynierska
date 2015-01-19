@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<useCaseDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="RestaurantEmployee">
+  <useCaseModelRootMoniker Id="d133f5bf-9cee-420d-8098-7ed5e3d0cb0b" />
+  <nestedChildShapes>
+    <actorShape Id="38b5282f-4617-4c8c-afec-ed87d8500e1f" absoluteBounds="0.75, 2.375, 0.5, 0.5" isReference="false" heightOffset="0">
+      <actorMoniker Id="442c8c46-30e6-4748-a9d4-b1fa16a3236b" LastKnownName="Pracownik restauracji" />
+      <relativeChildShapes />
+    </actorShape>
+    <SubsystemShape Id="8b9ac15a-584d-44ab-a78b-c6782314e3bb" absoluteBounds="3, 0.625, 5.125, 3.5" customColor="White">
+      <subsystemMoniker Id="b213954f-03cc-4799-95b6-6ab4a303d086" LastKnownName="Panel pracownika restauracji" />
+      <nestedChildShapes>
+        <useCaseShape Id="c5eed280-a1b4-41f9-ada8-8117ffbaa4c2" absoluteBounds="3.25, 1.25, 1.5, 0.625" customColor="238, 237, 131" heightOffset="0">
+          <useCaseMoniker Id="6f261541-d7bc-4a51-9c0f-c1af36bc01d6" LastKnownName="Wyświetlenie listy zamówień" />
+          <relativeChildShapes />
+        </useCaseShape>
+        <useCaseShape Id="1927a80d-0943-4736-98f6-f199ff33fbf4" absoluteBounds="5, 1.25, 1.25, 0.625" customColor="238, 237, 131" heightOffset="0">
+          <useCaseMoniker Id="2ca12da9-5bb4-4709-acc8-facee0d86948" LastKnownName="Zatwierdzenie zamówienia" />
+          <relativeChildShapes />
+        </useCaseShape>
+        <useCaseShape Id="81557131-bcea-47f7-8c47-23cad012f122" absoluteBounds="6.625, 1.25, 1, 0.625" customColor="238, 237, 131" heightOffset="0">
+          <useCaseMoniker Id="5deaf59e-0b09-4850-b8fa-628a055ffe42" LastKnownName="Anulowanie zamówienia" />
+          <relativeChildShapes />
+        </useCaseShape>
+        <useCaseShape Id="e1743f4d-4b29-4c4e-ae3c-a6aae22a8abb" absoluteBounds="3.25, 2.25, 4.25, 0.5" customColor="238, 237, 131" heightOffset="0">
+          <useCaseMoniker Id="e9f5d6e8-42a7-421c-a3dc-c6bb52c6991c" LastKnownName="Edycja menu restauracji" />
+          <relativeChildShapes />
+        </useCaseShape>
+        <useCaseShape Id="55900d3d-bfb5-4a67-afe7-513421656e7e" absoluteBounds="3.25, 3.25, 1, 0.5" customColor="238, 237, 131" heightOffset="0">
+          <useCaseMoniker Id="ab415e13-0736-44bf-99c6-7cfc3a22a060" LastKnownName="Edycja kuchni" />
+          <relativeChildShapes />
+        </useCaseShape>
+        <useCaseShape Id="bd2c15d2-5972-4373-8e64-0da3cd80cb91" absoluteBounds="4.875, 3.25, 1, 0.5" customColor="238, 237, 131" heightOffset="0">
+          <useCaseMoniker Id="24ace428-8688-4f5f-a12a-6cc38285e57b" LastKnownName="Edycja grup dań" />
+          <relativeChildShapes />
+        </useCaseShape>
+        <useCaseShape Id="70b51a98-e78c-40d3-bb83-865196a36aa6" absoluteBounds="6.5, 3.25, 1, 0.5" customColor="238, 237, 131" heightOffset="0">
+          <useCaseMoniker Id="91567a58-4b0e-4daf-a0fc-5e304fd8ccb5" LastKnownName="Edycja dań" />
+          <relativeChildShapes />
+        </useCaseShape>
+      </nestedChildShapes>
+    </SubsystemShape>
+    <useCaseAssociationConnector edgePoints="[(1.25 : 2.61130136986301); (3 : 2.51541095890411)]" fixedFrom="Algorithm" fixedTo="Algorithm" customColor="113, 111, 110" sourceMultiplicity="" targetMultiplicity="">
+      <associationMoniker Id="5df5ed4e-f1d0-4c6f-88a1-308afbd1953b" />
+      <relativeChildShapes />
+      <nodes>
+        <actorShapeMoniker Id="38b5282f-4617-4c8c-afec-ed87d8500e1f" />
+        <SubsystemShapeMoniker Id="8b9ac15a-584d-44ab-a78b-c6782314e3bb" />
+      </nodes>
+    </useCaseAssociationConnector>
+    <includeConnector edgePoints="[(4.97597640948484 : 2.74555297877856); (4.06529631254723 : 3.30597149997093)]" fixedFrom="Algorithm" fixedTo="Algorithm" customColor="Black" useCaseStereotype="«include»">
+      <includeMoniker Id="c3b38a3b-f2d7-4d74-bfcd-caa3cfb99ead" />
+      <relativeChildShapes />
+      <nodes>
+        <useCaseShapeMoniker Id="e1743f4d-4b29-4c4e-ae3c-a6aae22a8abb" />
+        <useCaseShapeMoniker Id="55900d3d-bfb5-4a67-afe7-513421656e7e" />
+      </nodes>
+    </includeConnector>
+    <includeConnector edgePoints="[(5.375 : 2.75); (5.375 : 3.25)]" fixedFrom="Algorithm" fixedTo="Algorithm" customColor="Black" useCaseStereotype="«include»">
+      <includeMoniker Id="b4416f71-47ee-4c14-8693-5ca0db0372eb" />
+      <relativeChildShapes />
+      <nodes>
+        <useCaseShapeMoniker Id="e1743f4d-4b29-4c4e-ae3c-a6aae22a8abb" />
+        <useCaseShapeMoniker Id="bd2c15d2-5972-4373-8e64-0da3cd80cb91" />
+      </nodes>
+    </includeConnector>
+    <includeConnector edgePoints="[(5.77402359051516 : 2.74555297877856); (6.68470368745277 : 3.30597149997093)]" fixedFrom="Algorithm" fixedTo="Algorithm" customColor="Black" useCaseStereotype="«include»">
+      <includeMoniker Id="5cfaa155-1879-49fc-9b03-817f9519d087" />
+      <relativeChildShapes />
+      <nodes>
+        <useCaseShapeMoniker Id="e1743f4d-4b29-4c4e-ae3c-a6aae22a8abb" />
+        <useCaseShapeMoniker Id="70b51a98-e78c-40d3-bb83-865196a36aa6" />
+      </nodes>
+    </includeConnector>
+  </nestedChildShapes>
+</useCaseDiagram>

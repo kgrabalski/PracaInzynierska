@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<useCaseDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="RestaurantAdmin">
+  <useCaseModelRootMoniker Id="7db61109-0648-4d18-b8a1-8230642fc274" />
+  <nestedChildShapes>
+    <actorShape Id="86ae78e5-4ece-4a60-ab9f-a38c5b67c1dd" absoluteBounds="0.875, 2.625, 0.5, 0.5" isReference="false" heightOffset="0">
+      <actorMoniker Id="530fd7b2-ae30-4eee-a14d-a7a8f2b5d5bb" LastKnownName="Właściciel restauracji" />
+      <relativeChildShapes />
+    </actorShape>
+    <SubsystemShape Id="78eb7b36-2dad-41d7-87af-06d89c399d77" absoluteBounds="3.375, 1.125, 4.875, 3.125" customColor="White">
+      <subsystemMoniker Id="07d44c64-6a75-4a54-95be-2db3e9579f63" LastKnownName="Panel właściciela restauracji" />
+    </SubsystemShape>
+    <useCaseAssociationConnector edgePoints="[(1.375 : 2.865); (3.375 : 2.785)]" fixedFrom="Algorithm" fixedTo="Algorithm" customColor="113, 111, 110" sourceMultiplicity="" targetMultiplicity="">
+      <associationMoniker Id="ebaa16df-cdbc-48af-830d-410694e5be31" />
+      <relativeChildShapes />
+      <nodes>
+        <actorShapeMoniker Id="86ae78e5-4ece-4a60-ab9f-a38c5b67c1dd" />
+        <SubsystemShapeMoniker Id="78eb7b36-2dad-41d7-87af-06d89c399d77" />
+      </nodes>
+    </useCaseAssociationConnector>
+  </nestedChildShapes>
+</useCaseDiagram>

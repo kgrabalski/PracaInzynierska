@@ -4,16 +4,9 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-@section HeadSection
-{
-    <link rel="stylesheet" href="~/Content/Selectize/css/selectize.css" />
-}
-
 @section ScriptSection
 {
-    <script type="text/javascript" src="~/Scripts/knockout-3.2.0.js"></script>
-    <script type="text/javascript" src="~/Scripts/selectize.min.js"></script>
-    <script type="text/javascript" src="~/Scripts/Frontend/UserPanel.js"></script>
+    @Scripts.Render("~/js/user/panel")
 }
 <div class="row">
     <div class="col-lg-12 col-xs-12" id="userPage">

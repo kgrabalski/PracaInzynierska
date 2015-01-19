@@ -3,15 +3,9 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-@section HeadSection
-{
-    <link rel="stylesheet" href="~/Content/Selectize/css/selectize.css" />
-}
-
 @section ScriptSection
 {
-    <script type="text/javascript" src="~/Scripts/selectize.min.js"></script>
-    <script type="text/javascript" src="~/Scripts/Frontend/HomePage.js"></script>
+    @Scripts.Render("~/js/frontend/homepage")
 }
 
 <div class="row">
@@ -29,8 +23,6 @@
                                     <label for="selectAddress" class="control-label">Moje adresy:</label>
                                     <select id="selectAddress" name="deliveryAddressId" placeholder="Wybierz adres"></select>
                                 </div>
-
-                                <script type="text/javascript" src="~/Scripts/Frontend/DeliveryAddresses.js"></script>
                             }
 
                             <div class="form-group">

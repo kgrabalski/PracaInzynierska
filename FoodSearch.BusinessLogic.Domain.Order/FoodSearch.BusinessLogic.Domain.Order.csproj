@@ -64,6 +64,7 @@
     <Compile Include="Models\DeliveryStatus.cs" />
     <Compile Include="Models\DeliveryType.cs" />
     <Compile Include="Models\OrderItem.cs" />
+    <Compile Include="Models\PaymentsOrder.cs" />
     <Compile Include="Models\PaymentType.cs" />
     <Compile Include="OrderDomain.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

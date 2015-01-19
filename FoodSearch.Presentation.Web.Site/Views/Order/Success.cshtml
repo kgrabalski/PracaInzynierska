@@ -1,6 +1,18 @@
-﻿@{
+﻿@model Guid
+
+@{
     ViewBag.Title = "FoodSearch.pl - Smacznego!";
     Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section HeadSection
+{
+    <link rel="stylesheet" href="~/Content/loader.css"/>
+}
+
+@section ScriptSection
+{
+    <script src="~/Scripts/Frontend/OrderSuccess.js"></script>
 }
 
 <div class="row">
@@ -24,7 +36,28 @@
             </div>
 
             <h1 class="text-center">Smacznego</h1>
+            <div id="orderId" data-order="@Model" style="display: none"></div>
 
+            <div class="loader-big">
+                <div id="circularG2">
+                    <div id="circularG_12" class="circularG2">
+                    </div>
+                    <div id="circularG_22" class="circularG2">
+                    </div>
+                    <div id="circularG_32" class="circularG2">
+                    </div>
+                    <div id="circularG_42" class="circularG2">
+                    </div>
+                    <div id="circularG_52" class="circularG2">
+                    </div>
+                    <div id="circularG_62" class="circularG2">
+                    </div>
+                    <div id="circularG_72" class="circularG2">
+                    </div>
+                    <div id="circularG_82" class="circularG2">
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>

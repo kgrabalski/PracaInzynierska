@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="574dca73-04ad-4691-ab75-7985fceb3109" name="SiteAdmin" linkedPackageId="30a42a1a-39ed-4851-a6e1-e5a0c9ae06dc" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
+  <profileInstances>
+    <packageHasProfileInstances Id="95140574-15fb-4bae-851e-affedae36a39">
+      <profileInstance Id="834a595c-5eb7-4e92-b418-968207a38c12" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="e593f03b-e0c7-4bc2-a46d-18a0bc0b90b9">
+      <profileInstance Id="f5df0a90-bcdd-4ef5-8990-5efcafe08181" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <useCaseModelRootHasTypes>
+      <actor Id="0bb593ea-5d96-4a7d-8c2a-80b8d063cce4" name="Administrator systemu" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="b38a2f04-04c9-431d-94e9-967947fb59bf" />
+        <targetEnds>
+          <association Id="053f7658-7824-4664-bfb1-10b356951d78" isDerived="false" sourceEndRoleName="Administrator systemu" targetEndRoleName="Panel administratora" isLeaf="false" isAbstract="false">
+            <subsystemMoniker Id="130a5061-52ec-4d9d-9b18-75c9603cc37e" LastKnownName="Panel administratora" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="866a2b7a-b059-4162-9b41-06d22e33604a" name="Administrator systemu" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="10f80731-fe37-4164-bc04-b5ef122644f4" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="cb6101d0-c4b8-438a-8a24-756fd4dba812" name="Panel administratora" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="82435ac7-808a-4e89-a71c-65484e145348" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="e67db563-5e1e-4aa3-ada5-0a016d482d83" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <subsystem Id="130a5061-52ec-4d9d-9b18-75c9603cc37e" name="Panel administratora" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="129122be-184f-4a9a-9b63-6f278515e0e9" />
+      </subsystem>
+    </useCaseModelRootHasTypes>
+    <packageHasNamedElement>
+      <useCase Id="199750c5-a29b-470b-98fa-f661b9d93011" name="Edycja listy restauracji" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="bce66d06-9a39-48f8-a27b-dda3ef8bfb8d" />
+        <subjects>
+          <subsystemMoniker Id="130a5061-52ec-4d9d-9b18-75c9603cc37e" LastKnownName="Panel administratora" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="801245fb-0819-4f6c-abd1-a11e50d2c9ae" name="Zarządzanie kontami właściciela restauracji" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="9019add8-7b12-41ee-873e-61109c7d063b" />
+        <subjects>
+          <subsystemMoniker Id="130a5061-52ec-4d9d-9b18-75c9603cc37e" LastKnownName="Panel administratora" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="ddb08c3d-afb9-4780-a84d-f1d398b90b01" name="Przeglądanie raportów" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="743c7990-7c2d-4726-a306-f5e08c1c1b33" />
+        <subjects>
+          <subsystemMoniker Id="130a5061-52ec-4d9d-9b18-75c9603cc37e" LastKnownName="Panel administratora" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+  </packagedElements>
+  <package Id="30a42a1a-39ed-4851-a6e1-e5a0c9ae06dc" name="FoodSearch.Modeling">
+    <elementDefinition Id="36ea5af6-e5bd-4839-9f43-52f120ba2311" />
+  </package>
+</useCaseModelRoot>

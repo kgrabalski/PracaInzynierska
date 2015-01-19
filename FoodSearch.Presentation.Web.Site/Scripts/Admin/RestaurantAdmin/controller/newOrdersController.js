@@ -1,52 +1,76 @@
-﻿var app = angular.module('FoodSearch.RestaurantAdmin');
+﻿(function () {
+    'use strict';
+    var app = angular.module('FoodSearch.RestaurantAdmin');
 
-app.controller('NewOrdersController', [
-    '$scope', 'NewOrderService', '$modal',
-    function($scope, newOrder, $modal) {
-        $scope.orders = newOrder.query();
+    app.controller('NewOrdersController', [
+        '$scope', 'NewOrderService', '$modal',
+        function($scope, newOrder, $modal) {
+            $scope.orders = newOrder.query();
 
-        $scope.confirmOrder = function(index) {
-            alert(index);
-        }
+            $scope.confirmOrder = function(index) {
+                var modalConfirm = $modal.open({
+                    templateUrl: 'confirmOrderModal',
+                    controller: 'ConfirmOrderController'
+                });
 
-        $scope.cancelOrder = function(index) {
-            var modalCancel = $modal.open({
-                templateUrl: 'cancelOrderModal',
-                controller: 'CancelOrderController',
-                resolve: {
-                    order: function() {
-                        return $scope.orders[index];
+                modalConfirm.result.then(function (dt) {
+                    var order = new newOrder();
+                    order.OrderId = $scope.orders[index].OrderId;
+                    order.DeliveryTime = dt;
+                    order.$save(function() {
+                        $scope.orders = newOrder.query();
+                    });
+                });
+            }
+
+            $scope.cancelOrder = function(index) {
+                var modalCancel = $modal.open({
+                    templateUrl: 'cancelOrderModal',
+                    controller: 'CancelOrderController'
+                });
+
+                modalCancel.result.then(function(reason) {
+                    if (reason !== "") {
+                        newOrder.cancelOrder({
+                                OrderId: $scope.orders[index].OrderId,
+                                CancellationReason: reason
+                            },
+                            function() {
+                                $scope.orders = newOrder.query();
+                            });
                     }
-                }
-            });
-
-            modalCancel.result.then(function (reason) {
-                if (reason != "") {
-                    $scope.orders = newOrder.query();
-                }
-            });
+                });
+            }
         }
-    }
-]);
+    ]);
 
-app.controller('CancelOrderController', [
-    '$scope', '$modalInstance', 'OrderService', 'order',
-    function ($scope, $modalInstance, orderService, order) {
+    app.controller('CancelOrderController', [
+        '$scope', '$modalInstance',
+        function($scope, $modalInstance) {
 
-        $scope.order = order;
+            $scope.cancelOrder = function() {
+                $modalInstance.close($scope.cancelReason);
+            };
 
-        $scope.cancelOrder = function () {
-            $modalInstance.close($scope.cancelReason);
-        };
+            $scope.cancel = function() {
+                $modalInstance.dismiss('cancel');
+            };
+        }
+    ]);
 
-        $scope.cancel = function () {
-            $modalInstance.dismiss('cancel');
-        };
-
-        $scope.options = {
-            valueField: 'Id',
-            labelField: 'Name',
-            create: false
-        };
-    }
-]);
+    app.controller('ConfirmOrderController', [
+        '$scope', '$modalInstance',
+        function($scope, $modalInstance) {
+            
+            $scope.options = {
+                create: false
+            };
+            $scope.cancel = function() {
+                $modalInstance.dismiss('cancel');
+            }
+            $scope.confirmOrder = function() {
+                $modalInstance.close($scope.deliveryTime);
+            }
+        }
+    ]);
+})();

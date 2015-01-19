@@ -71,7 +71,7 @@ namespace FoodSearch.Presentation.Web.Site.Controllers
             return File(image.ImageData, image.ContentType);
         }
 
-        public ActionResult RestaurantDishes(Guid? restaurantId, Basket basket)
+        public ActionResult RestaurantMenu(Guid? restaurantId, Basket basket)
         {
             if (restaurantId.HasValue)
             {

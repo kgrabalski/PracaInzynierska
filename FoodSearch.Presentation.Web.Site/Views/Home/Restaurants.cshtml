@@ -7,8 +7,7 @@
 
 @section ScriptSection
 {
-    <script type="text/javascript" src="~/Scripts/knockout-3.2.0.js"></script>
-    <script type="text/javascript" src="~/Scripts/Frontend/SearchRestaurants.js"></script>
+    @Scripts.Render("~/js/frontend/restaurantsList")
 }
 
 <div class="row">
@@ -48,7 +47,7 @@
 
                 @foreach (var ri in Model.Restaurants)
                 {
-                    <a href="@Url.Action("RestaurantDishes", "Home", new {area = "", restaurantId = ri.RestaurantId})" class="list-group-item restaurant-item">
+                    <a href="@Url.Action("RestaurantMenu", "Home", new {area = "", restaurantId = ri.RestaurantId})" class="list-group-item restaurant-item">
                         <div class="media col-sm-3 col-md-3 col-xs-3 logo-container">
                             <figure class="pull-left">
                                 <img class="img-responsive img-thumbnail restaurant-logo" src="@Url.Action("GetImage", "Home", new {area = "", imageId = ri.LogoId})" />

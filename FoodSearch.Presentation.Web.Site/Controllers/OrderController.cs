@@ -6,10 +6,13 @@ using FoodSearch.BusinessLogic.Domain.FoodSearch.Interface;
 using FoodSearch.BusinessLogic.Domain.Order.Models;
 using FoodSearch.Data.Mapping.Entities;
 using FoodSearch.Presentation.Web.Site.Models;
+using FoodSearch.Presentation.Web.Site.WebSocket;
+
+using Microsoft.AspNet.SignalR;
 
 namespace FoodSearch.Presentation.Web.Site.Controllers
 {
-    [Authorize(Roles = "User")]
+    [System.Web.Mvc.Authorize(Roles = "User")]
     public class OrderController : Controller
     {
         private readonly IFoodSearchDomain _domain;
@@ -64,11 +67,16 @@ namespace FoodSearch.Presentation.Web.Site.Controllers
             if (pt == PaymentTypes.Cash)
             {
                 _domain.Order.ChangeOrderState(orderInfo.OrderId, OrderStates.Paid);
-                return RedirectToAction("Success");
+
+                GlobalHost.ConnectionManager.GetHubContext<RestaurantAdminHub>()
+                .Clients.Group(basket.CurrentRestaurant.ToString())
+                .newOrder();
+
+                return RedirectToAction("Success", new {paymentId = orderInfo.PaymentId});
             }
 
             string ipn = "http://foodsearch.azurewebsites.net/PayPal/Ipn";
-            string success = "http://foodsearch.azurewebsites.net/Order/Success";
+            string success = "http://foodsearch.azurewebsites.net/Order/Success?paymentId=" + orderInfo.PaymentId;
             string cancel = "http://foodsearch.azurewebsites.net/Order/Cancel?paymentId=" + orderInfo.PaymentId;
             string url = string.Format("https://www.sandbox.paypal.com/cgi-bin/webscr?cmd=_xclick&business=kgrabalski@poczta.onet.pl&item_number={0}&item_name={1}&rm=2&LC=PL&country=PL&amount={2}&currency_code=PLN&notify_url={3}&return={4}&cancel_return={5}",
                             orderInfo.PaymentId,
@@ -82,16 +90,19 @@ namespace FoodSearch.Presentation.Web.Site.Controllers
         }
 
         [AllowAnonymous]
-        public ActionResult Success()
+        public ActionResult Success(Guid? paymentId)
         {
-            return View();
+            if (!paymentId.HasValue) return HttpNotFound();
+
+            var order = _domain.Order.GetOrderForPayment(paymentId.Value);
+            return View(order.OrderId);
         }
 
         [AllowAnonymous]
         public ActionResult Cancel(Guid paymentId)
         {
             _domain.Order.UpdatePayment(paymentId, PaymentStates.Cancelled);
-            Guid orderId = _domain.Order.GetOrderForPayment(paymentId);
+            Guid orderId = _domain.Order.GetOrderForPayment(paymentId).OrderId;
             _domain.Order.ChangeOrderState(orderId, OrderStates.Cancelled);
             return View();
         }

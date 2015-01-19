@@ -9,6 +9,9 @@ using System.Web.Mvc;
 
 using FoodSearch.BusinessLogic.Domain.FoodSearch.Interface;
 using FoodSearch.Data.Mapping.Entities;
+using FoodSearch.Presentation.Web.Site.WebSocket;
+
+using Microsoft.AspNet.SignalR;
 
 namespace FoodSearch.Presentation.Web.Site.Controllers
 {
@@ -35,8 +38,12 @@ namespace FoodSearch.Presentation.Web.Site.Controllers
             if (response == "VERIFIED")
             {
                 _domain.Order.UpdatePayment(paymentId, PaymentStates.Completed);
-                Guid orderId = _domain.Order.GetOrderForPayment(paymentId);
-                _domain.Order.ChangeOrderState(orderId, OrderStates.Paid);
+                var order = _domain.Order.GetOrderForPayment(paymentId);
+                _domain.Order.ChangeOrderState(order.OrderId, OrderStates.Paid);
+
+                GlobalHost.ConnectionManager.GetHubContext<RestaurantAdminHub>()
+                .Clients.Group(order.RestaurantId.ToString())
+                .newOrder();
             }
 
             return new EmptyResult();

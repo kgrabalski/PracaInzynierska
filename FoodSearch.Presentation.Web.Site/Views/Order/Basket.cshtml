@@ -7,8 +7,7 @@
 
 @section ScriptSection
 {
-    <script type="text/javascript" src="~/Scripts/knockout-3.2.0.js"></script>
-    <script type="text/javascript" src="~/Scripts/Frontend/BasketSummary.js"></script>
+    @Scripts.Render("~/js/frontend/basketSummary")
 }
 
 <div class="row">
@@ -97,7 +96,7 @@
                         <td>   </td>
                         <td>   </td>
                         <td>
-                            <form method="GET" action="@Url.Action("RestaurantDishes", "Home", new {area = ""})">
+                            <form method="GET" action="@Url.Action("RestaurantMenu", "Home", new {area = ""})">
                                 <input type="hidden" name="restaurantId" value="@Model.CurrentRestaurant" />
                                 <button type="submit" class="btn btn-default">
                                     <span class="glyphicon glyphicon-shopping-cart"></span> Wróć

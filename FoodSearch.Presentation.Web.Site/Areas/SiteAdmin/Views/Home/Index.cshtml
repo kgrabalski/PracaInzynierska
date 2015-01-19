@@ -3,19 +3,9 @@
     Layout = "~/Areas/SiteAdmin/Views/Shared/_Layout.cshtml";
 }
 
-@section HeadSection
-{
-    <link rel="stylesheet" href="~/Content/Selectize/css/selectize.css" />
-}
-
 @section ScriptSection
 {
-    <script src="~/Content/Selectize/js/standalone/selectize.min.js"></script>
-    <script src="~/Scripts/Admin/Common/directives.js"></script>
-    <script src="~/Scripts/Admin/SiteAdmin/app.js"></script>
-    <script src="~/Scripts/Admin/SiteAdmin/controller/controllers.js"></script>
-    <script src="~/Scripts/Admin/SiteAdmin/controller/restaurantController.js"></script>
-    <script src="~/Scripts/Admin/SiteAdmin/service/service.js"></script>
+    @Scripts.Render("~/js/siteAdmin")
 }
 
 <div class="wrapper row-offcanvas row-offcanvas-left">

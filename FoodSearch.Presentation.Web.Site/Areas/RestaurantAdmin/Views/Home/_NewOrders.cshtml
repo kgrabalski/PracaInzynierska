@@ -80,20 +80,14 @@
             <div class="box-body">
                 <div class="box-body">
                     <div class="form-group">
-                        <label for="addDishName" class="control-label">Nazwa</label>
-                        <input type="text" placeholder="Nazwa dania" ng-model="toAdd.DishName" class="form-control" required />
-                    </div>
-                    <div class="form-group">
-                        <label for="addDishDG" class="control-label">Grupa dań</label>
-                        <select placeholder="Wybierz grupę" id="addDishDG" required ng-model="toAdd.DishGroupId" options="allDishGroups.Items" selectize="options"></select>
-                    </div>
-                    <div class="form-group">
-                        <label for="addDishPrice" class="control-label">Cena</label>
-                        <div class="input-group">
-                            <input type="number" placeholder="Cena" class="form-control" required ng-model="toAdd.Price" />
-                            <span class="input-group-addon">zł.</span>
-                        </div>
-
+                        <label for="deliveryTime" class="control-label">Przewidywany czas realizacji zamówienia</label>
+                        <select placeholder="Wybierz" id="deliveryTime" required ng-model="deliveryTime" selectize="options">
+                            <option value="00:30">30 minut</option>
+                            <option value="00:45">45 minut</option>
+                            <option value="01:00">60 minut</option>
+                            <option value="01:15">75 minut</option>
+                            <option value="01:30">90 minut</option>
+                        </select>
                     </div>
                 </div>
             </div>

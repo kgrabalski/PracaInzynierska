@@ -1,6 +1,11 @@
 ﻿using FoodSearch.BusinessLogic.Domain.FoodSearch.Interface;
 using FoodSearch.Presentation.Web.Site.Helpers;
 using System.Web.Mvc;
+
+using FoodSearch.Presentation.Web.Site.WebSocket;
+
+using Microsoft.AspNet.SignalR;
+
 using RestaurantUser = FoodSearch.Presentation.Web.Site.Models.RestaurantUser;
 
 namespace FoodSearch.Presentation.Web.Site.Areas.RestaurantAdmin.Controllers
@@ -26,6 +31,12 @@ namespace FoodSearch.Presentation.Web.Site.Areas.RestaurantAdmin.Controllers
         {
             var data = _domain.RestaurantAdmin.GetEmployeeData(restUser.RestaurantId, restUser.UserId);
             return PartialView("_UserMenu", data);
+        }
+
+        [HttpPost]
+        public ActionResult GetRestaurantId(RestaurantUser restUser)
+        {
+            return Json(restUser.RestaurantId, JsonRequestBehavior.DenyGet);
         }
     }
 }

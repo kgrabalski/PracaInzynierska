@@ -8,8 +8,10 @@ using System.Web.Http.ModelBinding;
 
 using FoodSearch.BusinessLogic.Domain.FoodSearch.Interface;
 using FoodSearch.BusinessLogic.Domain.RestraurantAdmin.Models;
+using FoodSearch.Data.Mapping.Entities;
 using FoodSearch.Presentation.Web.Site.Helpers;
-using FoodSearch.Presentation.Web.Site.Models;
+
+using RestaurantUser = FoodSearch.Presentation.Web.Site.Models.RestaurantUser;
 
 namespace FoodSearch.Presentation.Web.Site.Areas.RestaurantAdmin.Controllers
 {
@@ -28,6 +30,13 @@ namespace FoodSearch.Presentation.Web.Site.Areas.RestaurantAdmin.Controllers
         {
             var orders = _domain.RestaurantAdmin.GetRestaurantOrders(ru.RestaurantId, false);
             return orders;
+        }
+
+        [HttpPut]
+        public HttpResponseMessage CompleteOrder([FromUri] Guid id)
+        {
+            bool result = _domain.Order.ChangeOrderState(id, OrderStates.Completed);
+            return Request.CreateResponse(result ? HttpStatusCode.OK : HttpStatusCode.NotFound);
         }
     }
 }

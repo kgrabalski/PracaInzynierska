@@ -5,15 +5,9 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-@section HeadSection
-{
-    <link rel="stylesheet" href="~/Content/Selectize/css/selectize.css" />
-}
-
 @section ScriptSection
 {
-    <script type="text/javascript" src="~/Scripts/selectize.min.js"></script>
-    <script type="text/javascript" src="~/Scripts/Frontend/Register.js"></script>
+    @Scripts.Render("~/js/frontend/register")
 }
 
 <div class="container">

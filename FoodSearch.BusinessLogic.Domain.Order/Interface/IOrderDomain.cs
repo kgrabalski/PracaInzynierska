@@ -20,9 +20,10 @@ namespace FoodSearch.BusinessLogic.Domain.Order.Interface
         decimal GetDeliveryPrice(Guid restaurantId, decimal totalPrice);
         IEnumerable<PaymentType> GetPaymentTypes();
         IEnumerable<DeliveryType> GetDeliveryTypes();
-        Guid GetOrderForPayment(Guid paymentId);
-        void ChangeOrderState(Guid orderId, OrderStates newOrderState);
+        PaymentsOrder GetOrderForPayment(Guid paymentId);
+        bool ChangeOrderState(Guid orderId, OrderStates newOrderState);
         bool ConfirmOrder(Guid orderId, TimeSpan deliveryTime);
+        bool CancelOrder(Guid orderId, string cancellationReason);
         DeliveryStatus GetDeliveryStatus(Guid orderId);
     }
 }

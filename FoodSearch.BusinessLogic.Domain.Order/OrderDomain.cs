@@ -173,21 +173,30 @@ namespace FoodSearch.BusinessLogic.Domain.Order
             }
         }
 
-        public Guid GetOrderForPayment(Guid paymentId)
+        public PaymentsOrder GetOrderForPayment(Guid paymentId)
         {
             using (var rep = _provider.GetRepository<Payment>())
             {
-                return rep.Get(paymentId).OrderId;
+                var payment = rep.Get(paymentId);
+                return new PaymentsOrder()
+                {
+                    OrderId = payment.OrderId,
+                    RestaurantId = payment.Order.RestaurantId
+                };
             }
         }
 
-        public void ChangeOrderState(Guid orderId, OrderStates newOrderState)
+        public bool ChangeOrderState(Guid orderId, OrderStates newOrderState)
         {
             using (var rep = _provider.GetRepository<Data.Mapping.Entities.Order>())
             {
-                var order = rep.Get(orderId);
+                Data.Mapping.Entities.Order order;
+                rep.TryGet(orderId, out order);
+                if (order == null) return false;
+
                 order.OrderStateId = (int) newOrderState;
                 rep.Update(order);
+                return true;
             }
         }
 
@@ -206,6 +215,28 @@ namespace FoodSearch.BusinessLogic.Domain.Order
                         .ParseExact(node.Value, "O", CultureInfo.InvariantCulture)
                         .Add(deliveryTime);
                     node.Value = delivery.ToString("O", CultureInfo.InvariantCulture);
+
+                    order.DeliveryData = xml.ToString();
+                    rep.Update(order);
+                    return true;
+                }
+                catch (Exception)
+                {
+                    return false;
+                }
+            }
+        }
+
+        public bool CancelOrder(Guid orderId, string cancellationReason)
+        {
+            using (var rep = _provider.GetRepository<Data.Mapping.Entities.Order>())
+            {
+                try
+                {
+                    var order = rep.Get(orderId);
+                    order.OrderStateId = (int) OrderStates.Cancelled;
+                    XElement xml = XElement.Parse(order.DeliveryData);
+                    xml.Add(new XElement("CancellationReason", cancellationReason));
 
                     order.DeliveryData = xml.ToString();
                     rep.Update(order);
