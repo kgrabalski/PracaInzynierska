@@ -300,6 +300,7 @@ namespace FoodSearch.BusinessLogic.Domain.RestraurantAdmin
             using (var rep = _provider.StoredProcedure)
             {
                 string result = rep.GetRestaurantOrders(restaurantId, null, newOrders ? OrderStates.Paid : OrderStates.Confirmed);
+                if (string.IsNullOrEmpty(result)) return Enumerable.Empty<RestaurantOrder>();
                 
                 using (var stream = new MemoryStream(Encoding.UTF8.GetBytes(result)))
                 {
@@ -315,6 +316,7 @@ namespace FoodSearch.BusinessLogic.Domain.RestraurantAdmin
             using (var rep = _provider.StoredProcedure)
             {
                 string result = rep.GetRestaurantOrders(restaurantId, orderId, null);
+                if (string.IsNullOrEmpty(result)) return default(RestaurantOrder);
 
                 using (var stream = new MemoryStream(Encoding.UTF8.GetBytes(result)))
                 {
@@ -322,6 +324,128 @@ namespace FoodSearch.BusinessLogic.Domain.RestraurantAdmin
                     var orders = (RestaurantOrders) xs.Deserialize(stream);
                     return orders.Orders.Single();
                 }
+            }
+        }
+
+        public RestaurantData GetRestaurantData(Guid restaurantId)
+        {
+            using (var rep = _provider.GetRepository<Restaurant>())
+            {
+                var rest = rep.Get(restaurantId);
+                return new RestaurantData()
+                {
+                    RestaurantId = rest.RestaurantId,
+                    Name = rest.Name,
+                    IsOpen = rest.IsOpen,
+                    MinOrderAmount = rest.MinOrderAmount,
+                    DeliveryPrice = rest.DeliveryPrice,
+                    FreeDeliveryFrom = rest.FreeDeliveryFrom
+                };
+            }
+        }
+
+        public void UpdateRestaurantData(Guid restaurantId, string restaurantName, bool isOpen, decimal minOrderAmount, decimal deliveryPrice, decimal freeDeliveryFrom)
+        {
+            using (var rep = _provider.GetRepository<Restaurant>())
+            {
+                var rest = rep.Get(restaurantId);
+                rest.Name = restaurantName;
+                rest.IsOpen = isOpen;
+                rest.MinOrderAmount = minOrderAmount;
+                rest.DeliveryPrice = deliveryPrice;
+                rest.FreeDeliveryFrom = rest.FreeDeliveryFrom;
+                
+                rep.Update(rest);
+            }
+        }
+
+        public DeliveryRange GetDeliveryRange(Guid restaurantId)
+        {
+            throw new NotImplementedException();
+        }
+
+        public IEnumerable<RestaurantEmployee> GetRestaurantEmployees(Guid restaurantId)
+        {
+            using (var rep = _provider.GetRepository<RestaurantUser>())
+            {
+                return rep.GetAll()
+                    .Where(x => x.RestaurantId == restaurantId)
+                    .List()
+                    .ToList()
+                    .Select(x => new RestaurantEmployee()
+                    {
+                        UserId = x.UserId,
+                        FirstName = x.User.FirstName,
+                        LastName = x.User.LastName
+                    })
+                    .OrderBy(x => x.LastName)
+                    .ThenBy(x => x.FirstName);
+            }
+        }
+
+        public RestaurantEmployee AddRestaurantEmployee(Guid restaurantId, string firstName, string lastName, string password)
+        {
+            using (var repU = _provider.GetRepository<User>())
+            using (var repE = _provider.GetRepository<RestaurantUser>())
+            {
+                var passwordHash = (new SHA1Cng()).ComputeHash(Encoding.UTF8.GetBytes(password));
+                Guid userId = repU.Create<Guid>(new User()
+                {
+                    FirstName = firstName,
+                    LastName = lastName,
+                    Email = "none",
+                    PhoneNumber = "123456789",
+                    Password = passwordHash,
+                    UserStateId = (int) UserStates.Active,
+                    UserTypeId = (int) UserTypes.RestaurantEmployee,
+                    CreateDate = DateTime.Now
+                });
+                repE.Create<int>(new RestaurantUser()
+                {
+                    RestaurantId = restaurantId,
+                    UserId = userId
+                });
+                var user = repU.Get(userId);
+                return new RestaurantEmployee()
+                {
+                    UserId = user.UserId,
+                    FirstName = user.FirstName,
+                    LastName = user.LastName
+                };
+            }
+        }
+
+        public bool DeleteRestaurantEmployee(Guid restaurantId, Guid employeeId)
+        {
+            try
+            {
+                using (var repU = _provider.GetRepository<User>())
+                using (var repE = _provider.GetRepository<RestaurantUser>())
+                {
+                    var restUser = repE.GetAll()
+                        .Where(x => x.RestaurantId == restaurantId && x.UserId == employeeId)
+                        .SingleOrDefault();
+                    if (restUser == null) return false;
+
+                    repE.Delete(restUser);
+                    repU.Delete(employeeId);
+                    return true;
+                }
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+        }
+
+        public void ResetEmployeePassword(Guid userId, string newPassword)
+        {
+            using (var rep = _provider.GetRepository<User>())
+            {
+                var user = rep.Get(userId);
+                var passwordHash = (new SHA1Cng()).ComputeHash(Encoding.UTF8.GetBytes(newPassword));
+                user.Password = passwordHash;
+                rep.Update(user);
             }
         }
     }

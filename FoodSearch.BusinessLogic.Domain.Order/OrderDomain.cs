@@ -257,12 +257,13 @@ namespace FoodSearch.BusinessLogic.Domain.Order
                 XElement xml = XElement.Parse(order.DeliveryData);
                 XElement node = xml.Descendants("PredictedDeliveryTime").First();
                 DateTime delivery = DateTime.ParseExact(node.Value, "O", CultureInfo.InvariantCulture);
+                node = xml.Descendants("CancellationReason").FirstOrDefault();
 
                 return new DeliveryStatus()
                 {
                     ConfirmationStatus = GetConfirmationStatus(order.OrderStateId),
                     DeliveryDate = delivery.ToString("dd.MM.yyyy HH:mm"),
-                    MinutesLeft = delivery.Subtract(DateTime.Now).Minutes
+                    CancellationReason = node != null ? node.Value : string.Empty
                 };
             }
         }

@@ -20,6 +20,7 @@
     <script src="~/Scripts/Admin/RestaurantAdmin/websocket.js"></script>
     @if (User.IsInRole(UserTypes.RestaurantAdmin.ToString()))
     {
+        <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
         @Scripts.Render("~/js/restaurantAdmin/admin")
     }
 }
@@ -90,6 +91,11 @@
                         </a>
                     </li>
                     <li navigation-item>
+                        <a href="/RestaurantAdmin#/deliveryRange">
+                            <i class="fa fa-map-marker"></i> <span>Obszar dostawy</span>
+                        </a>
+                    </li>
+                    <li navigation-item>
                         <a href="/RestaurantAdmin#/opinions">
                             <i class="fa fa-comments"></i> <span>Opinie</span>
                         </a>
@@ -155,6 +161,10 @@
 
     <script type="text/ng-template" id="openingHoursTemplate">
         @{ Html.RenderPartial("_OpeningHours"); }
+    </script>
+
+    <script type="text/ng-template" id="deliveryRangeTemplate">
+        @{ Html.RenderPartial("_DeliveryRange"); }
     </script>
 
     <script type="text/ng-template" id="opinionsTemplate">

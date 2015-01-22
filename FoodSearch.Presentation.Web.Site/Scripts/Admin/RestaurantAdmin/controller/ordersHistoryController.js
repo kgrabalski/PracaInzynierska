@@ -1,4 +1,5 @@
-﻿(function() {
+﻿(function () {
+    'use strict';
     var app = angular.module('FoodSearch.RestaurantAdmin');
 
     app.controller('OrdersHistoryController', [

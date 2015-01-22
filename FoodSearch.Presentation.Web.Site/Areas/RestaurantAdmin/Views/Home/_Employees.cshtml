@@ -10,6 +10,115 @@
     </section>
 
     <section class="content">
-        {{napis}}
+        <div class="col-xs-12">
+            <div class="box">
+                <div class="box-header">
+                    <h3 class="box-title">Pracownicy restauracji</h3>
+                    <button class="btn btn-primary pull-right" id="addEmployee" ng-click="addNew()">Dodaj</button>
+                </div>
+                <div class="box-body table-responsive">
+                    <table class="table table-bordered table-hover">
+                        <thead>
+                            <tr>
+                                <th>Imię</th>
+                                <th>Nazwisko</th>
+                                <th></th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody ng-repeat="e in employees">
+                        <tr>
+                            <td>{{e.FirstName}}</td>
+                            <td>{{e.LastName}}</td>
+                            <td>
+                                <button ng-click="remove($index)" class="btn btn-primary">Usuń</button>
+                            </td>
+                            <td>
+                                <button ng-click="resetPassword($index)" class="btn btn-primary">Resetuj hasło</button>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
     </section>
 </aside>
+
+<script type="text/ng-template" id="addEmployeeModal">
+    <div class="modal-header">
+        <button type="button" class="close" ng-click="cancel()">&times;</button>
+        <h4 class="modal-title" id="myModalLabel">Dodaj pracownika</h4>
+    </div>
+    <div class="modal-body">
+        <form role="form" name="addEForm">
+            <div class="box-body">
+                <div class="form-group">
+                    <label for="addEFName" class="control-label">Imię:</label>
+                    <input type="text" id="addEFName" required ng-model="toAdd.FirstName" placeholder="Imię" class="form-control" />
+                </div>
+                <div class="form-group">
+                    <label for="addELName" class="control-label">Nazwisko:</label>
+                    <input type="text" id="addELName" required ng-model="toAdd.LastName" placeholder="Nazwisko" class="form-control" />
+                </div>
+                <div class="form-group">
+                    <label for="addEPass" class="control-label">Hasło:</label>
+                    <input type="password" id="addEPass" required ng-model="toAdd.Password" placeholder="Hasło" class="form-control" />
+                </div>
+                <div class="form-group">
+                    <label for="addERPass" class="control-label">Powtórz hasło:</label>
+                    <input type="password" id="addERPass" required ng-model="toAdd.RepeatPassword" placeholder="Powtórz hasło" class="form-control" />
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" ng-click="cancel()">Anuluj</button>
+        <button type="button" class="btn btn-primary" ng-click="add()" ng-disabled="!addEForm.$valid">Dodaj</button>
+    </div>
+</script>
+
+<script type="text/ng-template" id="removeEmployeeModal">
+    <div class="modal-header">
+        <button type="button" class="close" ng-click="cancel()">&times;</button>
+        <h4 class="modal-title" id="myModalLabel">Usuń pracownika</h4>
+    </div>
+    <div class="modal-body">
+        <form role="form" name="removeDGForm">
+            <div class="box-body">
+                <div class="form-group">
+                    Czy napewno chcesz usunąc pracownika {{toRemove.FirstName}} {{toRemove.LastName}}?
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" ng-click="cancel()">Anuluj</button>
+        <button type="button" class="btn btn-primary" ng-click="remove()">Usuń</button>
+    </div>
+</script>
+
+<script type="text/ng-template" id="resetPasswordModal">
+    <div class="modal-header">
+        <button type="button" class="close" ng-click="cancel()">&times;</button>
+        <h4 class="modal-title" id="myModalLabel">Zmień hasło pracownika {{emp.FirstName}} {{emp.LastName}}</h4>
+    </div>
+    <div class="modal-body">
+        <form role="form" name="changePass">
+            <div class="box-body">
+                <div class="form-group">
+                    <label for="addEPass" class="control-label">Hasło:</label>
+                    <input type="password" id="addEPass" required ng-model="emp.Password" placeholder="Hasło" class="form-control" />
+                </div>
+                <div class="form-group">
+                    <label for="addERPass" class="control-label">Powtórz hasło:</label>
+                    <input type="password" id="addERPass" required ng-model="emp.RepeatPassword" placeholder="Powtórz hasło" class="form-control" />
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" ng-click="cancel()">Anuluj</button>
+        <button type="button" class="btn btn-primary" ng-click="reset()" ng-disabled="!changePass.$valid">Dodaj</button>
+    </div>
+</script>

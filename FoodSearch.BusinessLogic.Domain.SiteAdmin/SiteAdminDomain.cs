@@ -45,31 +45,10 @@ namespace FoodSearch.BusinessLogic.Domain.SiteAdmin
 
         public Guid? CreateRestaurant(string name, int addressId, int logoId, string userPassword, string userEmail, string userFirstName, string userLastName)
         {
-            using (var rep = _provider.GetRepository<Restaurant>())
-            using (var repU = _provider.GetRepository<RestaurantUser>())
+            using (var rep = _provider.StoredProcedure)
             {
-                bool canCreate = rep.GetAll()
-                    .Where(x => x.Name == name && x.AddressId == addressId)
-                    .RowCount() == 0;
-                if (!canCreate) return null;
-
-                var newRestaurant = new Restaurant()
-                {
-                    Name = name,
-                    AddressId = addressId,
-                    ImageId = logoId,
-                    IsDeleted = false,
-                    IsOpen = false,
-                    MinOrderAmount = 0m
-                };
-                var restaurantId = rep.Create<Guid>(newRestaurant);
-                var userId = CreateUser(userEmail, userPassword, userFirstName, userLastName, UserTypes.RestaurantAdmin, UserStates.Active);
-                var restaurantUserId = repU.Create<int>(new RestaurantUser()
-                {
-                    RestaurantId = restaurantId,
-                    UserId = userId
-                });
-                return restaurantId;
+                var passwordHash = (SHA256.Create()).ComputeHash(Encoding.UTF8.GetBytes(userPassword));
+                return rep.CreateRestaurant(name, addressId, logoId, userFirstName, userLastName, userEmail, "123456789", passwordHash);
             }
         }
 

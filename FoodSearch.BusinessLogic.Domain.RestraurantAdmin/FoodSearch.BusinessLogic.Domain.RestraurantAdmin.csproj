@@ -58,12 +58,15 @@
     <Compile Include="Interface\IRestaurantAdminDomain.cs" />
     <Compile Include="Mapping\MappingConfig.cs" />
     <Compile Include="Models\Cuisine.cs" />
+    <Compile Include="Models\DeliveryRange.cs" />
     <Compile Include="Models\Dish.cs" />
     <Compile Include="Models\DishGroup.cs" />
     <Compile Include="Models\EmployeeData.cs" />
     <Compile Include="Models\OpeningHour.cs" />
     <Compile Include="Models\OrderItem.cs" />
     <Compile Include="Models\OrderUser.cs" />
+    <Compile Include="Models\RestaurantData.cs" />
+    <Compile Include="Models\RestaurantEmployee.cs" />
     <Compile Include="Models\RestaurantOrder.cs" />
     <Compile Include="Models\RestaurantOrders.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

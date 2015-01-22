@@ -38,16 +38,17 @@
                 controller: 'CuisinesController',
                 templateUrl: 'cuisinesTemplate'
             })
-            .when("/cuisines/add", {
-
-            })
             .when("/restaurant", {
-                controller: 'Restaurant',
+                controller: 'RestaurantController',
                 templateUrl: 'restaurantTemplate'
             })
             .when("/openingHours", {
                 controller: 'OpeningHoursController',
                 templateUrl: 'openingHoursTemplate'
+            })
+            .when("/deliveryRange", {
+                controller: 'DeliveryRangeController',
+                templateUrl: 'deliveryRangeTemplate'
             })
             .when("/opinions", {
                 controller: 'OpinionsController',
@@ -58,7 +59,7 @@
                 templateUrl: 'reportsTemplate'
             })
             .when("/employees", {
-                controller: 'Employees',
+                controller: 'EmployeesController',
                 templateUrl: 'employeesTemplate'
             })
             .otherwise({

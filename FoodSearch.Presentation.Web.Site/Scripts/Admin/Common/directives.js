@@ -41,7 +41,7 @@
                 "</div>" +
                 "</div>" +
                 "</section>" +
-                "/aside>",
+                "</aside>",
             link: function(scope, element, attrs) {
                 scope.showError = false;
                 scope.message = "test";

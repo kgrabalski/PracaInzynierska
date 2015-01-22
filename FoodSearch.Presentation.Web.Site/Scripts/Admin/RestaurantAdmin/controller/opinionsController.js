@@ -1,4 +1,5 @@
-﻿(function() {
+﻿(function () {
+    'use strict';
     var app = angular.module('FoodSearch.RestaurantAdmin');
 
     app.controller('OpinionsController', [
@@ -23,8 +24,6 @@
                 for (var i = 0; i < (5 - r.StarsCount); i++) {
                     $scope.restaurantStars.push({ style: "glyphicon glyphicon-star-empty" });
                 }
-
-                $scope.$apply();
             });
 
             $scope.getMore = function() {

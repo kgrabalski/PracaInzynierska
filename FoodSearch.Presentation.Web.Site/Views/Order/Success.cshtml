@@ -7,7 +7,7 @@
 
 @section HeadSection
 {
-    <link rel="stylesheet" href="~/Content/loader.css"/>
+    <link rel="stylesheet" href="~/Content/loader.css" />
 }
 
 @section ScriptSection
@@ -35,10 +35,10 @@
                 </div>
             </div>
 
-            <h1 class="text-center">Smacznego</h1>
+            <h1 class="text-center" data-bind="text: greeting"></h1>
             <div id="orderId" data-order="@Model" style="display: none"></div>
 
-            <div class="loader-big">
+            <div class="loader-big" data-bind="visible: showLoader">
                 <div id="circularG2">
                     <div id="circularG_12" class="circularG2">
                     </div>
@@ -58,6 +58,16 @@
                     </div>
                 </div>
             </div>
+            <div class="text-center" data-bind="visible: confirmed">
+                <p>Twoje zamówienie zostanie zrealizowane:</p>
+                <p style="font-size: 52px;" data-bind="text: deliveryTime">01.01.2015 15:00</p>
+            </div>
+            <div class="text-center" data-bind="visible: cancelled">
+                <p>Twoje zamówienie zostało anulowane przez pracownika restauracji.</p>
+                <p>Powód anulowania:</p>
+                <p><i data-bind="text: cancellationReason"></i></p>
+            </div>
+
         </div>
     </div>
 </div>

@@ -62,3 +62,7 @@
 /// <reference path="admin/restaurantadmin/websocket.js" />
 /// <reference path="frontend/cookiepolicy.js" />
 /// <reference path="frontend/ordersuccess.js" />
+/// <reference path="admin/restaurantadmin/controller/restaurantcontroller.js" />
+/// <reference path="admin/restaurantadmin/controller/deliveryrangecontroller.js" />
+/// <reference path="jquery.icheck.min.js" />
+/// <reference path="admin/restaurantadmin/controller/employeecontroller.js" />

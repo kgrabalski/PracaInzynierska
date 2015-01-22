@@ -98,6 +98,12 @@ namespace FoodSearch.Presentation.Web.Site.Controllers
             return View(order.OrderId);
         }
 
+        [HttpPost]
+        public ActionResult GetDeliveryStatus(Guid orderId)
+        {
+            return Json(_domain.Order.GetDeliveryStatus(orderId), JsonRequestBehavior.DenyGet);
+        }
+
         [AllowAnonymous]
         public ActionResult Cancel(Guid paymentId)
         {

@@ -83,6 +83,21 @@ namespace FoodSearch.Data.Mapping.Repository
             return query.UniqueResult<string>();
         }
 
+        public Guid CreateRestaurant(string restaurantName, int addressId, int logoId, string userFirstName, string userLastName, string userEmail, string userPhone, byte[] userPassword)
+        {
+            var query = _session.GetNamedQuery("CreateRestaurant");
+            query.SetString("restaurantName", restaurantName);
+            query.SetInt32("addressId", addressId);
+            query.SetInt32("logoId", logoId);
+            query.SetString("userFirstName", userFirstName);
+            query.SetString("userLastName", userLastName);
+            query.SetString("userEmail", userEmail);
+            query.SetString("userPhone", userPhone);
+            query.SetBinary("userPassword", userPassword);
+
+            return query.UniqueResult<Guid>();
+        }
+
         public void Dispose()
         {
             _session.Dispose();

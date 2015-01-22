@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="FoodSearch.Data.Mapping" namespace="FoodSearch.Data.Mapping.StoredProcedure" auto-import="false">
+  <sql-query name="CreateRestaurant" read-only="true">
+    <return-scalar column="RestaurantId" type="System.Guid"/>
+    <![CDATA[ 
+    exec dbo.CreateRestaurant :restaurantName, :addressId, :logoId, :userFirstName, :userLastName, :userEmail, :userPhone, :userPassword
+    ]]>
+  </sql-query>
+</hibernate-mapping>

@@ -33,12 +33,12 @@ namespace FoodSearch.Presentation.Web.Site.Areas.RestaurantAdmin.Controllers
         }
 
         [HttpDelete]
-        public HttpResponseMessage CancelOrder([FromUri] Guid id, [FromUri] string cancellationReason)
+        public HttpResponseMessage CancelOrder([FromUri] Guid orderId, [FromUri] string cancellationReason)
         {
             if (string.IsNullOrEmpty(cancellationReason))
                 return Request.CreateResponse(HttpStatusCode.BadRequest);
 
-            bool result = _domain.Order.CancelOrder(id, cancellationReason);
+            bool result = _domain.Order.CancelOrder(orderId, cancellationReason);
             return Request.CreateResponse(result ? HttpStatusCode.OK : HttpStatusCode.NotFound);
         }
 

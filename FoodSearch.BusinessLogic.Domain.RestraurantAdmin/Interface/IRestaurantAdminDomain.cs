@@ -31,5 +31,12 @@ namespace FoodSearch.BusinessLogic.Domain.RestraurantAdmin.Interface
         EmployeeData GetEmployeeData(Guid restaurantId, Guid userId);
         IEnumerable<RestaurantOrder> GetRestaurantOrders(Guid restaurantId, bool newOrders);
         RestaurantOrder GetRestaurantOrder(Guid restaurantId, Guid orderId);
+        RestaurantData GetRestaurantData(Guid restaurantId);
+        void UpdateRestaurantData(Guid restaurantId, string restaurantName, bool isOpen, decimal minOrderAmount, decimal deliveryPrice, decimal freeDeliveryFrom);
+        DeliveryRange GetDeliveryRange(Guid restaurantId);
+        IEnumerable<RestaurantEmployee> GetRestaurantEmployees(Guid restaurantId);
+        RestaurantEmployee AddRestaurantEmployee(Guid restaurantId, string firstName, string lastName, string password);
+        bool DeleteRestaurantEmployee(Guid restaurantId, Guid employeeId);
+        void ResetEmployeePassword(Guid userId, string newPassword);
     }
 }

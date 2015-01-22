@@ -10,6 +10,6 @@ namespace FoodSearch.BusinessLogic.Domain.Order.Models
     {
         public ConfirmationStatus ConfirmationStatus { get; set; }
         public string DeliveryDate { get; set; }
-        public int MinutesLeft { get; set; }
+        public string CancellationReason { get; set; }
     }
 }
