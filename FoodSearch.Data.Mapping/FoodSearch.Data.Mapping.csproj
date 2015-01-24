@@ -134,12 +134,14 @@
     <Compile Include="Repository\FoodSearchRepository.cs" />
     <Compile Include="Repository\FoodSearchStoredProcedureRepository.cs" />
     <Compile Include="Repository\SessionSource.cs" />
+    <Compile Include="StoredProcedure\Results\Mapping\RestaurantDeliveryRangeMap.cs" />
     <Compile Include="StoredProcedure\Results\Mapping\RestaurantInfoMap.cs" />
     <Compile Include="StoredProcedure\Results\Mapping\PartnerRestaurantMap.cs" />
     <Compile Include="StoredProcedure\Results\Mapping\RestaurantRatingMap.cs" />
     <Compile Include="StoredProcedure\Results\Mapping\StreetResultMap.cs" />
     <Compile Include="StoredProcedure\Results\Mapping\UserOrderMap.cs" />
     <Compile Include="StoredProcedure\Results\PartnerRestaurant.cs" />
+    <Compile Include="StoredProcedure\Results\RestaurantDeliveryRange.cs" />
     <Compile Include="StoredProcedure\Results\RestaurantInfo.cs" />
     <Compile Include="StoredProcedure\Results\RestaurantRating.cs" />
     <Compile Include="StoredProcedure\Results\StreetResult.cs" />
@@ -185,6 +187,11 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="StoredProcedure\CreateRestaurant.hbm.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="StoredProcedure\GetDeliveryRange.hbm.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
   </ItemGroup>

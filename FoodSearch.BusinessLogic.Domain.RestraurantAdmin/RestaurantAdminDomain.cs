@@ -9,6 +9,7 @@ using FoodSearch.Data.Mapping.Entities;
 using FoodSearch.Data.Mapping.Interface;
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
@@ -361,7 +362,33 @@ namespace FoodSearch.BusinessLogic.Domain.RestraurantAdmin
 
         public DeliveryRange GetDeliveryRange(Guid restaurantId)
         {
-            throw new NotImplementedException();
+            using (var rep = _provider.StoredProcedure)
+            {
+                var deliveryRange = rep.GetDeliveryRange(restaurantId);
+                var points = deliveryRange.Polygon
+                    .Replace("POLYGON", "")
+                    .Replace("(", "")
+                    .Replace(")", "")
+                    .Trim()
+                    .Split(',');
+
+                var polygon = from p in points
+                    select p.Split(new[] {' '}, StringSplitOptions.RemoveEmptyEntries)
+                    into coords
+                    let lat = double.Parse(coords[1], CultureInfo.InvariantCulture)
+                    let lon = double.Parse(coords[0], CultureInfo.InvariantCulture)
+                    select new DeliveryRangePoint(lat, lon);
+
+                return new DeliveryRange()
+                {
+                    RestaurantName = deliveryRange.RestaurantName,
+                    Lat = deliveryRange.Lat,
+                    Lon = deliveryRange.Lon,
+                    HasDeliveryRadius = deliveryRange.HasDeliveryRadius,
+                    DeliveryRadius = deliveryRange.DeliveryRadius,
+                    Polygon = polygon
+                };
+            }
         }
 
         public IEnumerable<RestaurantEmployee> GetRestaurantEmployees(Guid restaurantId)

@@ -17,5 +17,6 @@ namespace FoodSearch.Data.Mapping.Interface
         IEnumerable<UserOrder> GetUserOrders(Guid userId, int page = 0, int pageSize = 10);
         string GetRestaurantOrders(Guid restaurantId, Guid? orderId, OrderStates? ordersState);
         Guid CreateRestaurant(string restaurantName, int addressId, int logoId, string userFirstName, string userLastName, string userEmail, string userPhone, byte[] userPassword);
+        RestaurantDeliveryRange GetDeliveryRange(Guid restaurantId);
     }
 }

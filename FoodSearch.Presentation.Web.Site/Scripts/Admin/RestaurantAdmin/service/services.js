@@ -125,4 +125,16 @@
             });
         }
     ]);
+
+    services.service('DeliveryRangeService', [
+        '$resource', function($resource) {
+            return $resource('RestaurantAdmin/api/DeliveryRange', {},
+            {
+                getDeliveryRange: {
+                    method: 'GET',
+                    isArray: false
+                }
+            });
+        }
+    ]);
 })();

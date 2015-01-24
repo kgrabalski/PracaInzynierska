@@ -66,3 +66,4 @@
 /// <reference path="admin/restaurantadmin/controller/deliveryrangecontroller.js" />
 /// <reference path="jquery.icheck.min.js" />
 /// <reference path="admin/restaurantadmin/controller/employeecontroller.js" />
+/// <reference path="maps.google.polygon.constainslatlng.js" />

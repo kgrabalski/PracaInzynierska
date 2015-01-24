@@ -98,6 +98,14 @@ namespace FoodSearch.Data.Mapping.Repository
             return query.UniqueResult<Guid>();
         }
 
+        public RestaurantDeliveryRange GetDeliveryRange(Guid restaurantId)
+        {
+            var query = _session.GetNamedQuery("GetDeliveryRange");
+            query.SetGuid("restaurantId", restaurantId);
+
+            return query.UniqueResult<RestaurantDeliveryRange>();
+        }
+
         public void Dispose()
         {
             _session.Dispose();

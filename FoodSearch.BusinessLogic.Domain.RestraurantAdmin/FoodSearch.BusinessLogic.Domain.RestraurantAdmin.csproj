@@ -59,6 +59,7 @@
     <Compile Include="Mapping\MappingConfig.cs" />
     <Compile Include="Models\Cuisine.cs" />
     <Compile Include="Models\DeliveryRange.cs" />
+    <Compile Include="Models\DeliveryRangePoint.cs" />
     <Compile Include="Models\Dish.cs" />
     <Compile Include="Models\DishGroup.cs" />
     <Compile Include="Models\EmployeeData.cs" />

@@ -16,8 +16,40 @@
                     <div class="box-header">
                         <h3 class="box-title">Obszar dostawy</h3>
                     </div>
-                    <div class="box-body">
-                        <div id="googleMap" style="width: 600px; height: 600px; margin-left: auto; margin-right: auto;"></div>
+                    <div id="googleMap" style="width: 600px; height: 600px;" class="col-md-6">
+
+                    </div>
+                    <div class="col-md-4">
+                        <form class="form-horizontal">
+                            <div class="box-body">
+                                <div class="form-group">
+                                    <label class="control-label">Wybierz sposób określania obszaru dostawy</label>
+                                </div>
+                                <div class="radio">
+                                    <label>
+                                        <input type="radio" name="deliveryRangeType" value="radius" checked ng-model="deliveryRangeType">
+                                        W określonej odległości od restauracji
+                                    </label>
+                                </div>
+                                <div class="radio">
+                                    <label>
+                                        <input type="radio" name="deliveryRangeType" value="range" ng-model="deliveryRangeType">
+                                        Ręczne zaznaczenie obszaru dostawy
+                                    </label>
+                                </div>
+                                <div class="form-group" ng-show="deliveryRangeType == 'radius'">
+                                    <label for="radius" class="control-label">Odległość od restauracji:</label>
+                                    <div class="input-group">
+                                        <input type="number" min="{{minRadius}}" step="0.01" class="form-control" id="radius"
+                                               ng-model="dr.DeliveryRadius" required/>
+                                        <div class="input-group-addon">km</div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <button class="btn btn-primary btn-block" ng-click="saveDeliveryRange()">Zapisz</button>
+                                </div>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>
