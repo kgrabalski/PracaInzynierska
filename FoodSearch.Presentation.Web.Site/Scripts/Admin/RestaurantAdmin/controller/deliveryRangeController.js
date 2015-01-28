@@ -65,7 +65,7 @@
 
                 $scope.ignoreCenterChange = false;
                 $scope.cancelCircleRedraw = false;
-                $scope.preservePolygon = false;
+                $scope.preservePolygon = !$scope.dr.HasDeliveryRadius;
                 $scope.firstStart = true;
 
                 $scope.$watch('dr.DeliveryRadius', function (newValue, oldValue) {
@@ -124,13 +124,13 @@
                         $scope.polygon.setMap($scope.map);
                         $scope.circle.setMap(null);
 
-                        var tmp = new google.maps.Circle({
-                            center: $scope.restaurantPosition,
-                            radius: 2500
-                        }).getBounds();
-
                         //$scope.pointsArray.clear();
                         if ($scope.pointsArray.getLength() == 0) {
+                            var tmp = new google.maps.Circle({
+                                center: $scope.restaurantPosition,
+                                radius: 2500
+                            }).getBounds();
+
                             var ne = tmp.getNorthEast();
                             var sw = tmp.getSouthWest();
                             var nw = new google.maps.LatLng(ne.lat(), sw.lng());
@@ -176,8 +176,28 @@
 
             });
 
-            $scope.saveDeliveryRange = function() {
-                console.log(JSON.stringify($scope.pointsArray.getArray()));
+            $scope.saveDeliveryRange = function () {
+                var array = [];
+                var hasDeliveryRadius = $scope.deliveryRangeType == "radius";
+                var deliveryRadius = 0;
+
+                if (!hasDeliveryRadius) {
+                    $scope.pointsArray.forEach(function(e, i) {
+                        array.push({ Lat: e.lat(), Lon: e.lng() });
+                    });
+                } else {
+                    deliveryRadius = $scope.dr.DeliveryRadius;
+                }
+
+                var updateData = {
+                    HasDeliveryRadius: hasDeliveryRadius,
+                    DeliveryRadius: deliveryRadius,
+                    Polygon: array
+                };
+
+                deliveryRange.updateDeliveryRange(updateData, function() {
+                    alert("OK");
+                });
             }
         }
     ]);

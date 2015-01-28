@@ -112,7 +112,6 @@ namespace FoodSearch.Presentation.Web.Site
             bundles.Add(new ScriptBundle("~/js/restaurantAdmin/admin").Include(
                 "~/Scripts/Admin/RestaurantAdmin/controller/controllersAdmin.js",
                 "~/Scripts/Admin/RestaurantAdmin/controller/openingHoursController.js",
-                "~/Scripts/Admin/RestaurantAdmin/controller/ordersHistoryController.js",
                 "~/Scripts/Admin/RestaurantAdmin/controller/opinionsController.js",
                 "~/Scripts/Admin/RestaurantAdmin/controller/restaurantController.js",
                 "~/Scripts/Admin/RestaurantAdmin/controller/deliveryRangeController.js",

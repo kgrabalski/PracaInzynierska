@@ -391,6 +391,34 @@ namespace FoodSearch.BusinessLogic.Domain.RestraurantAdmin
             }
         }
 
+        public bool UpdateDeliveryRange(Guid restaurantId, bool hasDeliveryRadius, decimal deliveryRadius, IEnumerable<DeliveryRangePoint> polygon)
+        {
+            using (var rep = _provider.StoredProcedure)
+            {
+                string gmlPolygon = "<xml/>";
+
+                if (!hasDeliveryRadius)
+                {
+                    string gmlTemplate = "<Polygon xmlns=\"http://www.opengis.net/gml\">" +
+                                  "  <exterior>" +
+                                  "      <LinearRing>" +
+                                  "          <posList>{0} {1} {0}</posList>" +
+                                  "      </LinearRing>" +
+                                  "  </exterior>" +
+                                  "</Polygon>";
+                    var firstVertex = polygon.First();
+                    string startPoint = string.Format("{0} {1}", firstVertex.Lon, firstVertex.Lat);
+                    string polygonPoints = polygon
+                        .Skip(1)
+                        .Aggregate(string.Empty, (current, p) => current + string.Format("{0} {1} ", p.Lon, p.Lat))
+                        .Trim();
+                    gmlPolygon = string.Format(gmlTemplate, startPoint, polygonPoints);
+                }
+
+                return rep.UpdateDeliveryRange(restaurantId, hasDeliveryRadius, deliveryRadius, gmlPolygon);
+            }
+        }
+
         public IEnumerable<RestaurantEmployee> GetRestaurantEmployees(Guid restaurantId)
         {
             using (var rep = _provider.GetRepository<RestaurantUser>())

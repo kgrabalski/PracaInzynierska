@@ -11,27 +11,29 @@
 
     <section class="content">
         <div class="row">
-            <div class="col-xs-12">
-                <div class="box">
+            <div class="col-md-6">
+                <div class="box box-primary">
                     <div class="box-header">
                         <h3 class="box-title">Kuchnie serwowane przez restaurację</h3>
-                        <button class="btn btn-primary pull-right" id="addRestaurantCuisine" ng-click="addNew()">Dodaj</button>
                     </div>
-                    <div class="box-body table-responsive">
-                        <table id="restaurantCuisinesList" class="table table-bordered table-hover">
+
+                    <div class="box-body">
+                        <button class="btn btn-primary btn-block" ng-click="addNew()">Dodaj</button>
+
+                        <table class="table table-bordered table-hover table-responsive">
                             <thead>
-                                <tr>
-                                    <th>Nazwa</th>
-                                    <th></th>
-                                </tr>
+                            <tr>
+                                <th>Nazwa</th>
+                                <th class="actions"></th>
+                            </tr>
                             </thead>
                             <tbody ng-repeat="c in cuisines.Items">
-                                <tr>
-                                    <td>{{c.Name}}</td>
-                                    <td>
-                                        <button ng-click="remove($index)" class="btn btn-primary">Usuń</button>
-                                    </td>
-                                </tr>
+                            <tr>
+                                <td>{{c.Name}}</td>
+                                <td>
+                                    <button ng-click="remove($index)" class="btn btn-primary center-block">Usuń</button>
+                                </td>
+                            </tr>
                             </tbody>
                         </table>
                     </div>

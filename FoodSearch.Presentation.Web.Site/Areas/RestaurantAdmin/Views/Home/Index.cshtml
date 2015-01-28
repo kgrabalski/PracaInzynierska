@@ -55,14 +55,6 @@
                         <i class="fa fa-edit"></i> <span>Zamówienia</span>
                     </a>
                 </li>
-                @if (User.IsInRole(UserTypes.RestaurantAdmin.ToString()))
-                {
-                    <li navigation-item>
-                        <a href="/RestaurantAdmin#/ordersHistory">
-                            <i class="fa fa-calendar"></i> <span>Historia zamówień</span>
-                        </a>
-                    </li>
-                }
                 <li navigation-item>
                     <a href="/RestaurantAdmin#/dishes">
                         <i class="fa fa-cutlery"></i> <span>Dania</span>
@@ -154,10 +146,6 @@
 {
     <script type="text/ng-template" id="restaurantTemplate">
         @{ Html.RenderPartial("_Restaurant");}
-    </script>
-
-    <script type="text/ng-template" id="ordersHistoryTemplate">
-        @{ Html.RenderPartial("_OrdersHistory");}
     </script>
 
     <script type="text/ng-template" id="openingHoursTemplate">

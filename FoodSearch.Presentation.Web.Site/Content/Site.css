@@ -214,7 +214,7 @@ html > /**/ body a.list-group-item {
 }
 
 /*RESTAURANT PAGE*/
-#restaurantPage #map {
+#info #map {
 	width: 350px;
 	height: 320px;
 	float: right;
@@ -247,6 +247,10 @@ html > /**/ body a.list-group-item {
 	margin-left: 5px;
 	overflow: visible;
 	clip: auto;
+}
+
+.tab-content fieldset {
+	margin-top: 20px;
 }
 
 .widget .panel-body {

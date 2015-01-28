@@ -79,13 +79,20 @@ namespace FoodSearch.Presentation.Web.Site.Controllers
                 if (string.IsNullOrEmpty(restaurantName)) return HttpNotFound();
 
                 basket.CurrentRestaurant = restaurantId.Value;
-                var dishes = _domain.Restaurant.GetDishes(restaurantId.Value);
-                var model = new RestaurantDishesModel()
+
+                var model = new RestaurantModel
                 {
-                    RestaurantName = restaurantName,
-                    DishGroups = dishes,
+                    RestaurantDetails = _domain.Restaurant.GetRestaurantDetails(restaurantId.Value),
+                    OpeningHours = _domain.RestaurantAdmin.GetOpeningHours(restaurantId.Value),
+                    DishGroups = _domain.Restaurant.GetDishes(restaurantId.Value),
+                    UserCommented = false,
                     Basket = basket
                 };
+                if (User.Identity.IsAuthenticated)
+                {
+                    model.UserCommented = _domain.Restaurant.CheckUserCommentExists(_domain.User.GetUserId(User.Identity.Name), restaurantId.Value);
+                }
+
                 return View(model);
             }
             return HttpNotFound();

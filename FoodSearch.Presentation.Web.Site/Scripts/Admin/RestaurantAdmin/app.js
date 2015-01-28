@@ -22,10 +22,6 @@
                 controller: 'PendingOrdersController',
                 templateUrl: 'pendingOrdersTemplate'
             })
-            .when("/ordersHistory", {
-                controller: 'OrdersHistoryController',
-                templateUrl: 'ordersHistoryTemplate'
-            })
             .when("/dishes", {
                 controller: 'DishesController',
                 templateUrl: 'dishesTemplate'

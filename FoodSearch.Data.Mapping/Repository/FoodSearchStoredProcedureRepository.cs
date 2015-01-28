@@ -106,6 +106,17 @@ namespace FoodSearch.Data.Mapping.Repository
             return query.UniqueResult<RestaurantDeliveryRange>();
         }
 
+        public bool UpdateDeliveryRange(Guid restaurantId, bool hasDeliveryRadius, decimal deliveryRadius, string polygonGml)
+        {
+            var query = _session.GetNamedQuery("UpdateDeliveryRange");
+            query.SetGuid("restaurantId", restaurantId);
+            query.SetBoolean("hasDeliveryRadius", hasDeliveryRadius);
+            query.SetDecimal("deliveryRadius", deliveryRadius);
+            query.SetString("polygonGml", polygonGml);
+
+            return query.UniqueResult<bool>();
+        }
+
         public void Dispose()
         {
             _session.Dispose();

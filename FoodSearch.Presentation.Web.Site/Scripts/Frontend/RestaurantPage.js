@@ -225,7 +225,6 @@
                 "           </div>";
             infoWindow.setContent(content);
             infoWindow.open(map, marker);
-            google.maps.event.removeEventListener(marker, "click");
         });
 
         bounds.extend(place);

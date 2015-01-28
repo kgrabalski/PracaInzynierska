@@ -129,9 +129,12 @@
     <Compile Include="Areas\Order\Models\DeliveryPriceModel.cs" />
     <Compile Include="Areas\Order\Models\OrderModel.cs" />
     <Compile Include="Areas\Order\OrderAreaRegistration.cs" />
+    <Compile Include="Areas\User\Controllers\OrderController.cs" />
     <Compile Include="Areas\User\Controllers\UserController.cs" />
+    <Compile Include="Areas\User\Controllers\UserDataController.cs" />
     <Compile Include="Areas\User\Models\LoginModel.cs" />
     <Compile Include="Areas\User\Models\RegisterModel.cs" />
+    <Compile Include="Areas\User\Models\ResetPasswordModel.cs" />
     <Compile Include="Areas\User\UserAreaRegistration.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>

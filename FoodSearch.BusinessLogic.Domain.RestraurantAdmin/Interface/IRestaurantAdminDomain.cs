@@ -34,6 +34,7 @@ namespace FoodSearch.BusinessLogic.Domain.RestraurantAdmin.Interface
         RestaurantData GetRestaurantData(Guid restaurantId);
         void UpdateRestaurantData(Guid restaurantId, string restaurantName, bool isOpen, decimal minOrderAmount, decimal deliveryPrice, decimal freeDeliveryFrom);
         DeliveryRange GetDeliveryRange(Guid restaurantId);
+        bool UpdateDeliveryRange(Guid restaurantId, bool hasDeliveryRadius, decimal deliveryRadius, IEnumerable<DeliveryRangePoint> polygon);
         IEnumerable<RestaurantEmployee> GetRestaurantEmployees(Guid restaurantId);
         RestaurantEmployee AddRestaurantEmployee(Guid restaurantId, string firstName, string lastName, string password);
         bool DeleteRestaurantEmployee(Guid restaurantId, Guid employeeId);

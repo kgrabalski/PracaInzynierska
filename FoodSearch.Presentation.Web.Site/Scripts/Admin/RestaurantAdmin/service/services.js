@@ -133,6 +133,10 @@
                 getDeliveryRange: {
                     method: 'GET',
                     isArray: false
+                },
+                updateDeliveryRange: {
+                    method: 'PUT',
+                    isArray: false
                 }
             });
         }

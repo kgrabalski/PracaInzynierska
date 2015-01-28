@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="FoodSearch.Data.Mapping" namespace="FoodSearch.Data.Mapping.StoredProcedure" auto-import="false">
+  <sql-query name="UpdateDeliveryRange" read-only="true">
+    <return-scalar column="Success" type="System.Boolean"/>
+    <![CDATA[ 
+    exec dbo.UpdateDeliveryRange :restaurantId, :hasDeliveryRadius, :deliveryRadius, :polygonGml
+    ]]>
+  </sql-query>
+</hibernate-mapping>

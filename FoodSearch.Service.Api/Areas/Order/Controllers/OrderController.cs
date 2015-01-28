@@ -24,6 +24,13 @@ namespace FoodSearch.Service.Api.Areas.Order.Controllers
             _domain = domain;
         }
 
+        [HttpGet]
+        public HttpResponseMessage GetOrderState([FromUri] Guid id)
+        {
+            var status = _domain.Order.GetDeliveryStatus(id);
+            return Request.CreateResponse(HttpStatusCode.OK, status);
+        }
+
         [HttpPost]
         public HttpResponseMessage CreateOrder([ModelBinder] Basket basket, [ModelBinder] UserInfo ui, OrderModel model)
         {

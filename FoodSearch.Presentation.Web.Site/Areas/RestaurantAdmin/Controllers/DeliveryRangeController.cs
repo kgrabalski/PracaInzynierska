@@ -28,5 +28,12 @@ namespace FoodSearch.Presentation.Web.Site.Areas.RestaurantAdmin.Controllers
         {
             return _domain.RestaurantAdmin.GetDeliveryRange(ru.RestaurantId);
         }
+
+        [HttpPut]
+        public HttpResponseMessage UpdateDeliveryRange([ModelBinder] RestaurantUser ru, DeliveryRange model)
+        {
+            bool result = _domain.RestaurantAdmin.UpdateDeliveryRange(ru.RestaurantId, model.HasDeliveryRadius, model.DeliveryRadius, model.Polygon);
+            return Request.CreateResponse(result ? HttpStatusCode.OK : HttpStatusCode.BadRequest);
+        }
     }
 }

@@ -7,10 +7,8 @@ using FoodSearch.BusinessLogic.Domain.Restaurant.Models;
 
 namespace FoodSearch.Presentation.Web.Site.Models
 {
-    public class RestaurantDishesModel
+    public class RestaurantModel : RestaurantPageModel
     {
-        public string RestaurantName { get; set; }
-        public IEnumerable<DishGroup> DishGroups { get; set; }
         public Basket Basket { get; set; }
     }
 }

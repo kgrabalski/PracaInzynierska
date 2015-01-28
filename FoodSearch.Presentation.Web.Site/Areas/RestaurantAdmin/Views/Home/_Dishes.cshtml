@@ -11,23 +11,29 @@
 
     <section class="content">
         <div class="row">
-            <div class="col-xs-12">
-                <div class="box">
+            <div class="col-md-6">
+                <div class="box box-primary">
                     <div class="box-header">
                         <h3 class="box-title">Dania serwowane przez restaurację</h3>
-                        <button class="btn btn-primary pull-right" id="addDish" ng-click="addNew()">Dodaj</button>
                     </div>
-                    <div class="box-body table-responsive" ng-repeat="(key, value) in dishes.Items | groupBy: 'DishGroup'">
-                        <h4>Grupa: {{key}}</h4>
-                        <table id="restaurantDishesList" class="table table-bordered table-hover">
-                            <thead>
+                    <div class="box-body">
+                        <button class="btn btn-primary btn-block" ng-click="addNew()">Dodaj</button>
+
+
+                        <div ng-repeat="(key, value) in dishes.Items | groupBy: 'DishGroup'">
+                            <fieldset>
+                                <legend>Grupa: {{key}}</legend>
+                            </fieldset>
+
+                            <table class="table table-bordered table-hover table-responsive">
+                                <thead>
                                 <tr>
                                     <th>Nazwa</th>
-                                    <th>Cena</th>
-                                    <th></th>
+                                    <th class="actions">Cena</th>
+                                    <th class="actions"></th>
                                 </tr>
-                            </thead>
-                            <tbody ng-repeat="i in value">
+                                </thead>
+                                <tbody ng-repeat="i in value">
                                 <tr>
                                     <td>{{i.DishName}}</td>
                                     <td>{{i.Price}}</td>
@@ -36,8 +42,9 @@
                                         <button ng-click="remove($index)" class="btn btn-primary">Usuń</button>
                                     </td>
                                 </tr>
-                            </tbody>
-                        </table>
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -65,7 +72,7 @@
                     <div class="form-group">
                         <label for="addDishPrice" class="control-label">Cena</label>
                         <div class="input-group">
-                            <input type="number" placeholder="Cena" class="form-control" required ng-model="toAdd.Price" />
+                            <input type="number" min="0.01" step="0.01" placeholder="Cena" class="form-control" required ng-model="toAdd.Price" />
                             <span class="input-group-addon">zł.</span>
                         </div>
 

@@ -54,6 +54,7 @@ namespace FoodSearch.Service.Api.Areas.User.Controllers
         }
 
         [HttpDelete]
+        [Authorize(Roles = "User")]
         public HttpResponseMessage Logout()
         {
             if (User.Identity.IsAuthenticated)

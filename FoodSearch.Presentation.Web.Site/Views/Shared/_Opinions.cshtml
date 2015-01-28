@@ -1,4 +1,6 @@
-﻿<fieldset>
+﻿@model bool
+
+<fieldset>
     <legend>Podsumowanie</legend>
     <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-12">
@@ -98,7 +100,7 @@
         Musisz być zalogowany aby dodać opinię
     </div>
 }
-else if (User.Identity.IsAuthenticated && Model.UserCommented)
+else if (User.Identity.IsAuthenticated && Model)
 {
     <div class="alert alert-info" role="alert">
         <span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>
@@ -109,7 +111,7 @@ else if (User.Identity.IsAuthenticated && Model.UserCommented)
     <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
             <div class="panel panel-default widget">
-                @if (User.Identity.IsAuthenticated && !Model.UserCommented)
+                @if (User.Identity.IsAuthenticated && !Model)
                 {
                     <div class="panel-heading" data-bind="visible: NewVisible">
                         <span class="glyphicon glyphicon-user"></span>

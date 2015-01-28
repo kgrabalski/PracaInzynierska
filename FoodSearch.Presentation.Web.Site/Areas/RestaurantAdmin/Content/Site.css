@@ -24,3 +24,27 @@
     overflow: visible;
     clip: auto;
 }
+
+.btn-block {
+    margin-bottom: 10px;
+}
+
+.table .actions {
+    width: 140px;
+}
+
+.table .actions-wide {
+    width: 185px;
+}
+
+table .th100 {
+    width: 100px;
+}
+
+table .th175 {
+    width: 175px;
+}
+
+#pageDishes fieldset {
+    margin-top: 25px;
+}

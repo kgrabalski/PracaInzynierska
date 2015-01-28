@@ -1,122 +1,168 @@
-﻿@model FoodSearch.Presentation.Web.Site.Models.RestaurantDishesModel
+﻿@using FoodSearch.Presentation.Web.Site.Models
+@model RestaurantModel
 
 @{
-    ViewBag.Title = Model.RestaurantName;
+    ViewBag.Title = Model.RestaurantDetails.RestaurantName;
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 @section ScriptSection
 {
+    <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false&language=pl"></script>
     @Scripts.Render("~/js/frontend/restaurantMenu")
+    <script src="~/Scripts/starr.js"></script>
+    <script src="~/Scripts/Frontend/RestaurantPage.js"></script>
 }
 
 <div class="row">
     <div class="col-lg-12 col-xs-12">
-        <div class="well col-lg-12 col-xs-12">
+        <div class="well">
             <div>
-                <div class="col-lg-8 col-md-8 col-xs-12 no-padding-left">
-                    <h1 class="text-center">Menu restauracji</h1>
-                        @foreach (var dg in Model.DishGroups)
-                        {
-                            <fieldset>
-                                <legend>@dg.Name</legend>
-                            </fieldset>
-                            <div class="list-group">
-                                @foreach (var d in dg.Dishes)
-                                {
-                                    <div class="list-group-item">
-                                        <div class="row">
-                                            <div class="col-lg-2 col-xs-2">
-                                                <img src="~/Images/ic_action_maps_local_restaurant.png"/>
-                                            </div>
-                                            <div class="col-lg-6 col-xs-10">
-                                                <h4>@d.Name</h4>
-
-                                            </div>
-                                            <div class="col-lg-4 col-xs-12">
-                                                <h4 class="text-center">@d.Price.ToString("0.00") zł.</h4>
-                                                <button type="button" class="btn btn-primary btn-block" id="@d.Id"
-                                                        data-bind="click: addToBasket">
-                                                    <span class="glyphicon glyphicon-shopping-cart"></span>
-                                                    Zamów
-                                                </button>
-                                                
-                                            </div>
-                                        </div>
-                                    </div>
-                                }
-                            </div>
-                        }
+                <div class="page-header">
+                    <h1>@Model.RestaurantDetails.RestaurantName</h1>
                 </div>
-                <div class="col-lg-4 col-md-4 col-xs-12 no-padding" id="basketContainer">
-                    <div class="panel panel-info">
-                        <div class="panel-heading">
-                            <div class="panel-title">
-                                <div class="row">
-                                    <div class="col-xs-12">
-                                        <h5><span class="glyphicon glyphicon-shopping-cart"></span> Koszyk</h5>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="panel-body" >
-                            <div data-bind="foreach: BasketItems">
-                                <div class="row">
-                                    <div class="col-lg-12 col-xs-12">
-                                        <h4 class="product-name"><strong data-bind="text: Name"></strong></h4>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-xs-6">
-                                        <h6><strong data-bind="text: Price"></strong></h6>
-                                    </div>
-                                    <div class="col-xs-6">
-                                        <div class="input-group">
-                                            <span class="input-group-btn">
-                                                <button type="button" class="btn btn-danger" data-bind="click: $root.decrementItemCount">
-                                                    <span class="glyphicon glyphicon-minus"></span>
-                                                </button>
-                                            </span>
-                                            <input type="text" class="form-control text-center" id="count" data-bind="value: Count" />
 
-                                            <span class="input-group-btn">
-                                                <button type="submit" class="btn btn-success" data-bind="click: $root.incrementItemCount">
-                                                    <span class="glyphicon glyphicon-plus"></span>
-                                                </button>
-                                            </span>
+                <div role="tabpanel">
+                    <ul class="nav nav-tabs" role="tablist">
+                        <li role="presentation" class="active">
+                            <a href="#menu" aria-controls="menu" role="tab" data-toggle="tab">Menu restauracji</a>
+                        </li>
+                        <li role="presentation">
+                            <a href="#info" aria-controls="info" role="tab" data-toggle="tab">Informacje</a>
+                        </li>
+                        <li role="presentation">
+                            <a href="#opinionsTab" aria-controls="opinionsTab" role="tab" data-toggle="tab">Opinie</a>
+                        </li>
+                    </ul>
+
+                    <div class="tab-content">
+                        <div role="tabpanel" class="tab-pane fade in active" id="menu">
+                            <fieldset>
+                                <legend>Menu restaurancji</legend>
+
+                                <div class="col-lg-8 col-md-8 col-xs-12 no-padding-left">
+                                    @foreach (var dg in Model.DishGroups)
+                                    {
+                                        <fieldset>
+                                            <legend>@dg.Name</legend>
+                                        </fieldset>
+                                        <div class="list-group">
+                                            @foreach (var d in dg.Dishes)
+                                            {
+                                                <div class="list-group-item">
+                                                    <div class="row">
+                                                        <div class="col-lg-2 col-xs-2">
+                                                            <img src="~/Images/ic_action_maps_local_restaurant.png" />
+                                                        </div>
+                                                        <div class="col-lg-6 col-xs-10">
+                                                            <h4>@d.Name</h4>
+
+                                                        </div>
+                                                        <div class="col-lg-4 col-xs-12">
+                                                            <h4 class="text-center">@d.Price.ToString("0.00") zł.</h4>
+                                                            <button type="button" class="btn btn-primary btn-block" id="@d.Id"
+                                                                    data-bind="click: addToBasket">
+                                                                <span class="glyphicon glyphicon-shopping-cart"></span>
+                                                                Zamów
+                                                            </button>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            }
+                                        </div>
+                                    }
+                                </div>
+                                <div class="col-lg-4 col-md-4 col-xs-12 no-padding" id="basketContainer">
+                                    <div class="panel panel-info">
+                                        <div class="panel-heading">
+                                            <div class="panel-title">
+                                                <div class="row">
+                                                    <div class="col-xs-12">
+                                                        <h5><span class="glyphicon glyphicon-shopping-cart"></span> Koszyk</h5>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="panel-body">
+                                            <div data-bind="foreach: BasketItems">
+                                                <div class="row">
+                                                    <div class="col-lg-12 col-xs-12">
+                                                        <h4 class="product-name"><strong data-bind="text: Name"></strong></h4>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-xs-6">
+                                                        <h6><strong data-bind="text: Price"></strong></h6>
+                                                    </div>
+                                                    <div class="col-xs-6">
+                                                        <div class="input-group">
+                                                            <span class="input-group-btn">
+                                                                <button type="button" class="btn btn-danger" data-bind="click: $root.decrementItemCount">
+                                                                    <span class="glyphicon glyphicon-minus"></span>
+                                                                </button>
+                                                            </span>
+                                                            <input type="text" class="form-control text-center" id="count" data-bind="value: Count" />
+
+                                                            <span class="input-group-btn">
+                                                                <button type="submit" class="btn btn-success" data-bind="click: $root.incrementItemCount">
+                                                                    <span class="glyphicon glyphicon-plus"></span>
+                                                                </button>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <hr>
+                                            </div>
+                                            <div data-bind="visible: BasketItems().length == 0">
+                                                <div class="row">
+                                                    <div class="col-lg-12 col-xs-12 text-center">
+                                                        Twój koszyk jest pusty
+                                                    </div>
+                                                </div>
+                                                <hr />
+                                            </div>
+                                        </div>
+                                        <div class="panel-footer" data-bind="visible: BasketItems().length > 0">
+                                            <div class="row">
+                                                <div class="col-xs-6">
+                                                    <h4>Razem: <strong data-bind="text: TotalValue"></strong></h4>
+                                                </div>
+                                                <div class="col-xs-6">
+                                                    <form method="GET" action="@Url.Action("Basket", "Order", new {area = ""})">
+                                                        <button type="submit" class="btn btn-primary btn-block">
+                                                            Zamów
+                                                        </button>
+                                                    </form>
+
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                                <hr>
-                            </div>
-                            <div data-bind="visible: BasketItems().length == 0">
-                                <div class="row">
-                                    <div class="col-lg-12 col-xs-12 text-center">
-                                        Twój koszyk jest pusty
-                                    </div>
-                                </div>
-                                <hr />
-                            </div>
+                            </fieldset>
                         </div>
-                        <div class="panel-footer" data-bind="visible: BasketItems().length > 0">
-                            <div class="row">
-                                <div class="col-xs-6">
-                                    <h4>Razem: <strong data-bind="text: TotalValue"></strong></h4>
-                                </div>
-                                <div class="col-xs-6">
-                                    <form method="GET" action="@Url.Action("Basket", "Order", new {area = ""})">
-                                        <button type="submit" class="btn btn-primary btn-block">
-                                            Zamów
-                                        </button>
-                                    </form>
 
-                                </div>
-                            </div>
+                        <div role="tabpanel" class="tab-pane fade" id="info">
+                            @{ Html.RenderPartial("_RestaurantInfo", new RestaurantInfoModel()
+                               {
+                                   RestaurantDetails = Model.RestaurantDetails,
+                                   OpeningHours = Model.OpeningHours
+                               });
+                            }
+                        </div>
+
+
+
+                        <div role="tabpanel" class="tab-pane fade" id="opinionsTab" data-rid="@Model.RestaurantDetails.RestaurantId">
+                            @{Html.RenderPartial("_Opinions", Model.UserCommented);}
                         </div>
                     </div>
                 </div>
+
+
             </div>
-            
+
         </div>
     </div>
 </div>

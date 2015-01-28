@@ -42,7 +42,6 @@
 /// <reference path="admin/restaurantadmin/controller/opinionscontroller.js" />
 /// <reference path="admin/restaurantadmin/controller/neworderscontroller.js" />
 /// <reference path="admin/restaurantadmin/controller/pendingorderscontroller.js" />
-/// <reference path="admin/restaurantadmin/controller/ordershistorycontroller.js" />
 /// <reference path="frontend/register.js" />
 /// <reference path="angular-touch.min.js" />
 /// <reference path="angular-scenario.js" />

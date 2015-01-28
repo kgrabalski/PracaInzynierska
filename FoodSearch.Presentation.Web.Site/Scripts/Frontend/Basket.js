@@ -64,6 +64,6 @@
     }
 
     $(document).ready(function() {
-        ko.applyBindings(new BasketViewModel());
+        ko.applyBindings(new BasketViewModel(), document.getElementById("menu"));
     });
 })();
