@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TabbedPage 
+	xmlns="http://xamarin.com/schemas/2014/forms" 
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+	x:Class="FoodSearch.Presentation.Mobile.Common.UserPanelView"
+	Title="Panel użytkownika">
+	<TabbedPage.Children>
+		<ContentPage Title="Użytkownik" BindingContext="{Binding UserInfo}">
+			<StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Padding="5">
+				<Grid VerticalOptions="Fill">
+					<Grid.RowDefinitions>
+						<RowDefinition Height="Auto"/>
+						<RowDefinition Height="Auto"/>
+						<RowDefinition Height="Auto"/>
+						<RowDefinition Height="Auto"/>
+					</Grid.RowDefinitions>
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition Width="1*"/>
+						<ColumnDefinition Width="3*"/>
+					</Grid.ColumnDefinitions>
+
+					<Label Grid.Row="0" Grid.Column="0" Text="Imię:" VerticalOptions="Center"/>
+					<Label Grid.Row="0" Grid.Column="1" Text="{Binding FirstName, Mode=TwoWay}"/>
+
+					<Label Grid.Row="1" Grid.Column="0" Text="Nazwisko:" VerticalOptions="Center"/>
+					<Label Grid.Row="1" Grid.Column="1" Text="{Binding LastName, Mode=TwoWay}"/>
+
+					<Label Grid.Row="2" Grid.Column="0" Text="Email:" VerticalOptions="Center"/>
+					<Label Grid.Row="2" Grid.Column="1" Text="{Binding Email, Mode=TwoWay}"/>
+
+					<Label Grid.Row="3" Grid.Column="0" Text="Numer telefonu:" VerticalOptions="Center"/>
+					<Label Grid.Row="3" Grid.Column="1" Text="{Binding PhoneNumber, Mode=TwoWay}"/>
+				</Grid>
+			</StackLayout>
+		</ContentPage>
+
+		<ContentPage Title="Zamówienia" BindingContext="{Binding OrdersHistory}">
+			<StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Padding="5">
+				<ListView ItemsSource="{Binding Orders, Mode=TwoWay}"
+					HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+					<ListView.ItemTemplate>
+						<DataTemplate>
+							<ViewCell>
+								<Label Text="{Binding CreateDate}"/>
+							</ViewCell>
+						</DataTemplate>
+					</ListView.ItemTemplate>
+				</ListView>
+			</StackLayout>
+			
+			<ContentPage.ToolbarItems>
+				<ToolbarItem Name="Więcej zamówień" Order="Primary" Command="{Binding GetMoreOrders}">
+					<ToolbarItem.Icon>
+						<OnPlatform x:TypeArguments="FileImageSource"
+							Android="ic_action_action_history.png"
+							WinPhone="Images/ic_action_action_history.png" />
+					</ToolbarItem.Icon>
+				</ToolbarItem>
+			</ContentPage.ToolbarItems>
+		</ContentPage>
+	</TabbedPage.Children>
+</TabbedPage>

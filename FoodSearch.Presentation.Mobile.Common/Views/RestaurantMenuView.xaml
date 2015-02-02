@@ -3,6 +3,7 @@
 	xmlns="http://xamarin.com/schemas/2014/forms" 
 	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
 	x:Class="FoodSearch.Presentation.Mobile.Common.Views.RestaurantMenuView"
+	xmlns:conv="clr-namespace:FoodSearch.Presentation.Mobile.Common.Converters;assembly=FoodSearch.Presentation.Mobile.Common"
 	Title="Restauracja" >
 	<TabbedPage.Children>
 		<ContentPage Title="Menu" BindingContext="{Binding Menu}">
@@ -64,7 +65,58 @@
 		</ContentPage>
 
 		<ContentPage Title="Opinie" BindingContext="{Binding Opinion}">
+			<ContentPage.Resources>
+				<ResourceDictionary>
+					<conv:RatingImageConverter x:Key="RatingImageConverter"/>
+				</ResourceDictionary>
+			</ContentPage.Resources>
 
+			<StackLayout VerticalOptions="FillAndExpand">
+				<ListView ItemsSource="{Binding Opinions, Mode=TwoWay}" HasUnevenRows="true"
+					VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+					<ListView.ItemTemplate>
+						<DataTemplate>
+							<ViewCell>
+								<Grid Padding="5">
+									<Grid.RowDefinitions>
+										<RowDefinition Height="Auto"/>
+										<RowDefinition Height="Auto"/>
+									</Grid.RowDefinitions>
+									<Grid.ColumnDefinitions>
+										<ColumnDefinition Width="50"/>
+										<ColumnDefinition Width="Auto"/>
+										<ColumnDefinition Width="Auto"/>
+										<ColumnDefinition Width="Auto"/>
+										<ColumnDefinition Width="*"/>
+									</Grid.ColumnDefinitions>
+
+									<Image 	Grid.Column="0" Grid.Row="0" Grid.RowSpan="2" 
+											WidthRequest="50" HeightRequest="50" Aspect="AspectFit" VerticalOptions="Start"
+											Source="{Binding Rating, Converter={StaticResource RatingImageConverter}}"/>
+									<Label 	Grid.Column="1" Grid.Row="0" Font="Micro" Text="Dodano: "/>
+									<Label 	Grid.Column="2" Grid.Row="0" Font="Micro" Text="{Binding Date}"/>
+									<Label 	Grid.Column="3" Grid.Row="0" Font="Micro" Text=" przez: "/>
+									<Label 	Grid.Column="4" Grid.Row="0" Font="Micro" Text="{Binding UserName}" HorizontalOptions="Start"/>
+
+									<Label 	Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="4" Text="{Binding Comment}" LineBreakMode="WordWrap" HorizontalOptions="Fill" VerticalOptions="FillAndExpand"/>
+								</Grid>
+							</ViewCell>
+						</DataTemplate>
+					</ListView.ItemTemplate>
+				</ListView>
+			</StackLayout>
+
+			<ContentPage.ToolbarItems>
+				<ToolbarItem Name="Więcej opinii" Order="Primary"
+					Command="{Binding GetMoreOpinions}">
+					<ToolbarItem.Icon>
+						<OnPlatform x:TypeArguments="FileImageSource"
+							iOS="add.png"
+							Android="ic_action_action_history.png"
+							WinPhone="Images/ic_action_action_history.png" />
+					</ToolbarItem.Icon>
+				</ToolbarItem>
+  			</ContentPage.ToolbarItems>
 		</ContentPage>
 	</TabbedPage.Children>
 </TabbedPage>

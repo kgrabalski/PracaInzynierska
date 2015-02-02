@@ -12,12 +12,13 @@ namespace FoodSearch.Presentation.Mobile.Common.Services
             return DependencyResolver.Current.Get<T>();
         }
 
-        public IMessagingService Messaging { get { return ResolveService<IMessagingService>(); }}
-        public INavigationService Navigation { get { return ResolveService<INavigationService>(); }}
-        public IRestaurantService Restaurant { get { return ResolveService<IRestaurantService>(); }}
-        public IAuthorizationService Authorization { get { return ResolveService<IAuthorizationService>(); }}
-        public IUserDialogService Dialog { get { return ResolveService<IUserDialogService>(); }}
-        public ISettings Settings { get { return ResolveService<ISettings>(); }}
+        public IMessagingService Messaging { get { return ResolveService<IMessagingService>(); } }
+        public INavigationService Navigation { get { return ResolveService<INavigationService>(); } }
+        public IRestaurantService Restaurant { get { return ResolveService<IRestaurantService>(); } }
+        public IAuthorizationService Authorization { get { return ResolveService<IAuthorizationService>(); } }
+        public IUserDialogService Dialog { get { return ResolveService<IUserDialogService>(); } }
+        public ISettings Settings { get { return ResolveService<ISettings>(); } }
+        public INetworkAvailabilityService NetworkAvailability { get { return ResolveService<INetworkAvailabilityService>(); } }
     }
 }
 

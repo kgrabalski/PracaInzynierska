@@ -62,18 +62,6 @@ namespace FoodSearch.Service.Client
 	        var response = await Get(url);
 	        return DeserializeList<Opinion>(response);
 	    }
-
-	    public async Task<bool> AddOpinion(Guid restaurantId, int rating, string comment)
-	    {
-	        var request = new AddOpinionRequest()
-	        {
-	            RestaurantId = restaurantId,
-	            Rating = rating,
-	            Comment = comment
-	        };
-	        var response = await Post("opinion", request);
-	        return response.StatusCode == HttpStatusCode.Created;
-	    }
 	}
 }
 

@@ -30,22 +30,5 @@ namespace FoodSearch.Service.Api.Areas.User.Controllers
         {
             return _domain.User.GetUserDetails(ui.UserId);
         }
-
-        [HttpPut]
-        public HttpResponseMessage ResetPassword([ModelBinder] UserInfo ui, ResetPasswordModel model)
-        {
-            if (ModelState.IsValid)
-            {
-                bool success = _domain.User.ChangeUserPassword(ui.UserId, model.OldPassword, model.NewPassword);
-                if (!success) return Request.CreateResponse(HttpStatusCode.Forbidden);
-
-                FormsAuthentication.SignOut();
-                HttpContext.Current.Session.Abandon();
-                HttpContext.Current.Request.Cookies.Clear();
-                HttpContext.Current.Response.Cookies.Clear();
-                return Request.CreateResponse(HttpStatusCode.OK);
-            }
-            return Request.CreateErrorResponse(HttpStatusCode.BadRequest, ModelState);
-        }
     }
 }

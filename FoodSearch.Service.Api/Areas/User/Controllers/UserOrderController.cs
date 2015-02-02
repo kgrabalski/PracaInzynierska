@@ -13,11 +13,11 @@ using FoodSearch.Service.Api.Models;
 namespace FoodSearch.Service.Api.Areas.User.Controllers
 {
     [Authorize(Roles = "User")]
-    public class OrderController : ApiController
+    public class UserOrderController : ApiController
     {
         private readonly IFoodSearchDomain _domain;
 
-        public OrderController(IFoodSearchDomain domain)
+        public UserOrderController(IFoodSearchDomain domain)
         {
             _domain = domain;
         }

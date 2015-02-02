@@ -9,6 +9,7 @@ using FoodSearch.Service.Client.Interfaces;
 using FoodSearch.Service.Client.Requests;
 using System.ServiceModel.Channels;
 using FoodSearch.Service.Client.Contracts;
+using System.Collections.ObjectModel;
 
 namespace FoodSearch.Service.Client
 {
@@ -63,6 +64,25 @@ namespace FoodSearch.Service.Client
                 default:
                     return RegistrationResult.NotCreated;
             }
+        }
+
+        public async Task<UserDetails> GetUserDetails()
+        {
+            var response = await Get("UserData");
+            return Deserialize<UserDetails>(response.Body);
+        }
+
+        public async Task<ObservableCollection<UserOrder>> GetUserOrders(int page, int pageSize = 10)
+        {
+            string url = string.Format("UserOrder?page={0}&pageSize={1}", page, pageSize);
+            var response = await Get(url);
+            return DeserializeList<UserOrder>(response);
+        }
+
+        public async Task<ObservableCollection<UserOrderItem>> GetUserOrderItems(Guid orderId)
+        {
+            var response = await Get("UserOrder/" + orderId.ToString());
+            return DeserializeList<UserOrderItem>(response);
         }
     }
 }

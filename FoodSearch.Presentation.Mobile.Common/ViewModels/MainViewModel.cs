@@ -142,7 +142,11 @@ namespace FoodSearch.Presentation.Mobile.Common.ViewModels
             {
                 return _searchRestaurants ?? (_searchRestaurants = new Command(async () =>
                 {
-                    if (SelectedStreetNumber == null || SelectedStreetNumber.Id == 0) return;
+                    if (SelectedStreetNumber == null || SelectedStreetNumber.Id == 0) {
+                        //TODO: usunac na produkcji
+                        SelectedStreetNumber = new StreetNumber{Id = 797};
+                        return;
+                    }
                     await Services.Navigation.Navigate.PushAsync(ViewLocator.RestaurantList);
                     Services.Messaging.Send(SelectedStreetNumber);
                 }));
@@ -164,6 +168,30 @@ namespace FoodSearch.Presentation.Mobile.Common.ViewModels
             }
         }
 
+        private Command _userPanelCommand;
+
+        public Command UserPanelCommand
+        {
+            get
+            {
+                return _userPanelCommand ?? (_userPanelCommand = new Command(async () =>
+                    {
+                        if (!Services.Authorization.IsAuthorized)
+                        {
+                            Services.Dialog.Confirm(new ConfirmConfig(){
+                                Title = "Logowanie",
+                                Message = "Aby przejść do panelu użytkownika musisz być zalogowany.\nCzy chcesz przejść teraz do ekranu logowania?",
+                                OkText = "Tak",
+                                CancelText = "Nie",
+                                OnConfirm = (bool response) => { if (response) Services.Authorization.AuthorizationCommand.Execute(null); }
+                            });
+                            return;
+                        }
+                        await Services.Navigation.Navigate.PushAsync(ViewLocator.UserPanel);
+                    }));
+            }
+        }
+            
 		private async void InitializeView()
 		{
             Services.Dialog.ShowLoading("Ładowanie");

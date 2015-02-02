@@ -2,6 +2,7 @@
 using FoodSearch.Presentation.Mobile.Common.Services;
 using FoodSearch.Presentation.Mobile.Common.ViewModels;
 using Ninject;
+using FoodSearch.Presentation.Mobile.Common.Services.Interfaces;
 
 
 namespace FoodSearch.Presentation.Mobile.Common.Views
@@ -12,9 +13,11 @@ namespace FoodSearch.Presentation.Mobile.Common.Views
 		{
 			InitializeComponent ();
             NavigationPage.SetHasNavigationBar(this, true);
-            if (!NetworkAvailabilityService.IsConnected)
+
+            INetworkAvailabilityService service = DependencyResolver.Current.Get<INetworkAvailabilityService>();
+            if (!service.IsConnected)
             {
-                NetworkAvailabilityService.CloseApp();
+                service.CloseApp();
             } else BindingContext = DependencyResolver.Current.Get<MainViewModel>();
 
 		}

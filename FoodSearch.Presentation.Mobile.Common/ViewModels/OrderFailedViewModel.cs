@@ -4,7 +4,7 @@ using FoodSearch.Service.Client.Interfaces;
 using FoodSearch.Presentation.Mobile.Common.Services.Interfaces;
 using Acr.XamForms.UserDialogs;
 
-namespace FoodSearch.Presentation.Mobile.Common
+namespace FoodSearch.Presentation.Mobile.Common.ViewModels
 {
     public class OrderFailedViewModel : ViewModelBase
     {

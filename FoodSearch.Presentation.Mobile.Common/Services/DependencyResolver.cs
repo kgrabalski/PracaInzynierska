@@ -29,6 +29,9 @@ namespace FoodSearch.Presentation.Mobile.Common.Services
             _kernel.Bind<OrderSuccededViewModel>().ToSelf();
             _kernel.Bind<OrderFailedViewModel>().ToSelf();
             _kernel.Bind<PaymentViewModel>().ToSelf();
+            _kernel.Bind<UserInfoViewModel>().ToSelf();
+            _kernel.Bind<OrdersHistoryViewModel>().ToSelf();
+            _kernel.Bind<OrderDetailsViewModel>().ToSelf();
             _kernel.Bind<IFoodSearchServiceClient>().To<FoodSearchServiceClient>().InSingletonScope();
             _kernel.Bind<IMessagingService>().To<MessagingService>().InSingletonScope();
             _kernel.Bind<INavigationService>().To<NavigationService>().InSingletonScope();
@@ -37,6 +40,7 @@ namespace FoodSearch.Presentation.Mobile.Common.Services
             _kernel.Bind<IUserDialogService>().ToMethod(x => Xamarin.Forms.DependencyService.Get<IUserDialogService>());
             _kernel.Bind<ISettings>().ToMethod(x => Xamarin.Forms.DependencyService.Get<ISettings>());
             _kernel.Bind<INetworkService>().ToMethod(x => Xamarin.Forms.DependencyService.Get<INetworkService>()).InSingletonScope();
+            _kernel.Bind<INetworkAvailabilityService>().To<NetworkAvailabilityService>().InSingletonScope();
             _kernel.Bind<IServiceLocator>().To<ServiceLocator>().InSingletonScope();
         }
     }

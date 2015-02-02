@@ -92,6 +92,18 @@
     <Compile Include="Services\Interfaces\IRestaurantService.cs" />
     <Compile Include="Services\ServiceLocator.cs" />
     <Compile Include="Services\NetworkAvailabilityService.cs" />
+    <Compile Include="Services\Interfaces\INetworkAvailabilityService.cs" />
+    <Compile Include="Converters\RatingImageConverter.cs" />
+    <Compile Include="Views\UserPanelView.xaml.cs">
+      <DependentUpon>UserPanelView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModels\UserInfoViewModel.cs" />
+    <Compile Include="ViewModels\OrdersHistoryViewModel.cs" />
+    <Compile Include="Infrastucture\ObservableObject.cs" />
+    <Compile Include="ViewModels\OrderDetailsViewModel.cs" />
+    <Compile Include="Views\OrderDetailsView.xaml.cs">
+      <DependentUpon>OrderDetailsView.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <ItemGroup>
@@ -173,6 +185,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\PaymentView.xaml">
       <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\UserPanelView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\OrderDetailsView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup />

@@ -15,7 +15,6 @@ namespace FoodSearch.Service.Client.Interfaces
 	    Task<ObservableCollection<DishGroup>> GetDishes(Guid restaurantId);
         Task<byte[]> GetLogo(int logoId);
         Task<ObservableCollection<Opinion>> GetOpinions(Guid restaurantId, int rating = 0, int page = 0);
-        Task<bool> AddOpinion(Guid restaurantId, int rating, string comment);
 	}
 }
 

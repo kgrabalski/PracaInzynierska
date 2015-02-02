@@ -28,6 +28,7 @@ namespace FoodSearch.Presentation.Mobile.Common.Services
             {
                 return new Command(async () =>
                     {
+                        if (IsAuthorized) return;
                         await _navigation.Navigate.PushAsync(ViewLocator.Authorize);
                     });
             }

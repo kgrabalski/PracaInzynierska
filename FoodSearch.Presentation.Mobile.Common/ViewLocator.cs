@@ -45,6 +45,8 @@ namespace FoodSearch.Presentation.Mobile.Common
         public static Page OrderSucceded { get { return GetView<OrderSuccededView>(true); } }
         public static Page OrderFailed { get { return GetView<OrderFailedView>(); } }
         public static Page Payment { get { return GetView<PaymentView>(); } }
+        public static Page UserPanel { get { return GetView<UserPanelView>(true); } }
+        public static Page OrderDetails { get { return GetView<OrderDetailsView>(true); } }
 
 		public static Page StartScreen { get { return _startScreen ?? (_startScreen = new NavigationPage (Main)); } }
 	}
