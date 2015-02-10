@@ -31,8 +31,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FoodSearch.Data.Mapping", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FoodSearch.Data.Mapping.Test", "FoodSearch.Data.Mapping.Test\FoodSearch.Data.Mapping.Test.csproj", "{3466015A-0C4A-429D-A7C3-A46F11682FFF}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Logs", "Logs", "{186AEBDC-6DFE-4E92-BF1D-DACB67E0EC29}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{761C9981-B195-4ADB-88E7-55E14363C81B}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Web", "Web", "{D5B025A4-66D4-4300-A01C-B74D7749D8D3}"

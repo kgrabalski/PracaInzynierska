@@ -9,6 +9,7 @@ using FoodSearch.Presentation.Mobile.Common.Services.Interfaces;
 using FoodSearch.Service.Client.Contracts;
 using System.Collections.ObjectModel;
 using FoodSearch.Presentation.Mobile.Common.Infrastucture;
+using FoodSearch.Presentation.Mobile.Common.Models;
 
 namespace FoodSearch.Presentation.Mobile.Common.ViewModels
 {
@@ -16,7 +17,7 @@ namespace FoodSearch.Presentation.Mobile.Common.ViewModels
     {
         public OpinionListViewModel(IFoodSearchServiceClient client, IServiceLocator serviceLocator) : base(client, serviceLocator)
         {
-            Services.Messaging.Register<Restaurant>(GetOpinions);
+            Services.Messaging.Register<RestaurantId>(GetOpinions);
         }
 
         private ObservableCollection<Opinion> _opinions = new ObservableCollection<Opinion>();
@@ -51,10 +52,10 @@ namespace FoodSearch.Presentation.Mobile.Common.ViewModels
             }
         }
             
-        private async void GetOpinions(Restaurant r)
+        private async void GetOpinions(RestaurantId r)
         {
             _opinionsPage = 0;
-            _restaurantId = r.RestaurantId;
+            _restaurantId = r.Id;
             Opinions = await Client.Core.GetOpinions(_restaurantId, 0, _opinionsPage);
         }
     }

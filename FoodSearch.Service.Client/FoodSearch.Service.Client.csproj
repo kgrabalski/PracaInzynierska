@@ -64,6 +64,8 @@
     <Compile Include="Contracts\UserDetails.cs" />
     <Compile Include="Contracts\UserOrder.cs" />
     <Compile Include="Contracts\UserOrderItem.cs" />
+    <Compile Include="Contracts\ConfirmationStatus.cs" />
+    <Compile Include="Contracts\DeliveryStatus.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <Import Project="..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets" Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets')" />

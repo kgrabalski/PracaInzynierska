@@ -16,6 +16,7 @@ namespace FoodSearch.Service.Client.Interfaces
         Task<DeliveryAddress> GetDeliveryAddress();
         Task<CreateOrderResult> CreateOrder(PaymentTypes paymentType, DeliveryTypes deliveryType, int addressId, string flatNumber);
         Task SetCurrentRestaurant(Guid restaurantId);
+        Task<DeliveryStatus> GetDeliveryStatus(Guid orderId);
     }
 }
 

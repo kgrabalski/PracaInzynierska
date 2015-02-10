@@ -36,12 +36,22 @@
 
 		<ContentPage Title="Zamówienia" BindingContext="{Binding OrdersHistory}">
 			<StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Padding="5">
-				<ListView ItemsSource="{Binding Orders, Mode=TwoWay}"
+				<ListView ItemsSource="{Binding Orders, Mode=TwoWay}" SelectedItem="{Binding SelectedOrder, Mode=TwoWay}"
 					HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
 					<ListView.ItemTemplate>
 						<DataTemplate>
 							<ViewCell>
-								<Label Text="{Binding CreateDate}"/>
+								<Grid Padding="3" VerticalOptions="Center">
+									<Grid.ColumnDefinitions>
+										<ColumnDefinition Width="2*"/>
+										<ColumnDefinition Width="1*"/>
+										<ColumnDefinition Width="3*"/>
+									</Grid.ColumnDefinitions>
+
+									<Label Grid.Column="0" Text="{Binding CreateDate}" VerticalOptions="Center" LineBreakMode="WordWrap"/>
+									<Label Grid.Column="1" Text="{Binding OrderAmount}" VerticalOptions="Center"/>
+									<Label Grid.Column="2" Text="{Binding RestaurantName}" VerticalOptions="Center"/>
+								</Grid>
 							</ViewCell>
 						</DataTemplate>
 					</ListView.ItemTemplate>

@@ -5,5 +5,9 @@
 	x:Class="FoodSearch.Presentation.Mobile.Common.Views.OrderFailedView"
 	Title="Płatność anulowana">
 	<ContentPage.Content>
+		<StackLayout Padding="5" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+			<Label Font="Large" Text="Płatność została anulowana." 
+			VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"/>
+		</StackLayout>
 	</ContentPage.Content>
 </ContentPage>

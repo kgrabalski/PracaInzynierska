@@ -89,6 +89,12 @@ namespace FoodSearch.Service.Client
         {
             await Post("CurrentRestaurant/" + restaurantId.ToString(), null);
         }
+
+        public async Task<DeliveryStatus> GetDeliveryStatus(Guid orderId)
+        {
+            var response = await Get("Order/" + orderId.ToString());
+            return Deserialize<DeliveryStatus>(response.Body);
+        }
     }
 }
 

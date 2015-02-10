@@ -50,6 +50,13 @@
       <SubType>Content</SubType>
       <DependentUpon>User.usecasediagram</DependentUpon>
     </Content>
+    <Content Include="UserGuest.usecasediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="UserGuest.usecasediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>UserGuest.usecasediagram</DependentUpon>
+    </Content>
     <Folder Include="ModelDefinition\" />
     <Content Include="ModelDefinition\FoodSearch.Modeling.uml">
       <SubType>Content</SubType>

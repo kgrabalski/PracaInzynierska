@@ -4,7 +4,7 @@
         var self = this;
 
         self.showLoader = ko.observable(true);
-        self.greeting = ko.observable("Oczekiwanie na potwierdzenie z restauracji.");
+        self.greeting = ko.observable("Oczekiwanie na potwierdzenie zamówienia przez restaurację.");
         self.confirmed = ko.observable(false);
         self.cancelled = ko.observable(false);
         self.cancellationReason = ko.observable("");

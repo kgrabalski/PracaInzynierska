@@ -10,6 +10,7 @@ using System.Collections.ObjectModel;
 using FoodSearch.Service.Client.Interfaces;
 using Acr.XamForms.UserDialogs;
 using FoodSearch.Presentation.Mobile.Common.Services.Interfaces;
+using FoodSearch.Presentation.Mobile.Common.Models;
 
 namespace FoodSearch.Presentation.Mobile.Common.ViewModels
 {
@@ -38,6 +39,7 @@ namespace FoodSearch.Presentation.Mobile.Common.ViewModels
                 if (SetProperty(ref _selectedRestaurant, value) && value != null) {
                     Services.Navigation.Navigate.PushAsync(ViewLocator.RestaurantMenu);
                     Services.Messaging.Send(SelectedRestaurant);
+                    Services.Messaging.Send(new RestaurantId() {Id = SelectedRestaurant.RestaurantId});
                     SelectedRestaurant = null;
                 }
             }

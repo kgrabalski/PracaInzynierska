@@ -3,7 +3,25 @@
 	xmlns="http://xamarin.com/schemas/2014/forms" 
 	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
 	x:Class="FoodSearch.Presentation.Mobile.Common.Views.OrderSuccededView"
-	Title="Płatność potwierdzona">
+	Title="Zamówienie">
 	<ContentPage.Content>
+		<StackLayout Padding="5">
+			<Label Text="Oczekiwanie na potwierdzenie zamówienia przez restaurację" Font="Large" 
+				VerticalOptions="CenterAndExpand" IsVisible="{Binding IsWaiting}"/>
+
+			<ActivityIndicator IsEnabled="{Binding IsWaiting}" IsVisible="{Binding IsWaiting}" IsRunning="{Binding IsWaiting}"
+				VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"/>
+
+			<Label Text="Smacznego! \n Twoje zamówienie zostanie zrealizowane:" IsVisible="{Binding IsConfirmed}"
+				Font="Large" VerticalOptions="CenterAndExpand"/>
+			<Label Text="{Binding DeliveryTime}" IsVisible="{Binding IsConfirmed}"
+				Font="Large" VerticalOptions="CenterAndExpand"/>
+
+			<Label Text="Twoje zamówienie zostało anulowane przez pracownika restauracji." IsVisible="{Binding IsCancelled}"
+				Font="Large" VerticalOptions="CenterAndExpand"/>
+
+			<Label Text="Powód:" IsVisible="{Binding IsCancelled}"/>
+			<Label Text="{Binding CancellationReason}" IsVisible="{Binding IsCancelled}"/>
+		</StackLayout>
 	</ContentPage.Content>
 </ContentPage>

@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 
 using FoodSearch.BusinessLogic.Domain.FoodSearch.Interface;
+using FoodSearch.Data.Mapping.Entities;
 using FoodSearch.Presentation.Web.Site.WebSocket;
 
 using Microsoft.AspNet.SignalR;
@@ -31,6 +32,10 @@ namespace FoodSearch.Presentation.Web.Site.Controllers
         {
             GlobalHost.ConnectionManager.GetHubContext<FoodSearchMobileHub>()
                 .Clients.Group(paymentId.ToString()).UpdatePaymentStatus(false);
+
+            _domain.Order.UpdatePayment(paymentId, PaymentStates.Cancelled);
+            Guid orderId = _domain.Order.GetOrderForPayment(paymentId).OrderId;
+            _domain.Order.ChangeOrderState(orderId, OrderStates.Cancelled);
             return RedirectToAction("Cancel", "Order", new {paymentId});
         }
     }

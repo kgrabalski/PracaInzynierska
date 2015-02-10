@@ -5,6 +5,57 @@
 	x:Class="FoodSearch.Presentation.Mobile.Common.Views.OrderDetailsView"
 	Title="Szczegóły zamówienia">
 	<ContentPage.Content>
+		<StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Padding="5">
+			<Grid>
+				<Grid.ColumnDefinitions>
+					<ColumnDefinition Width="1*"/>
+					<ColumnDefinition Width="3*"/>
+				</Grid.ColumnDefinitions>
+				<Grid.RowDefinitions>
+					<RowDefinition Height="40"/>
+					<RowDefinition Height="40"/>
+					<RowDefinition Height="40"/>
+					<RowDefinition Height="40"/>
+					<RowDefinition Height="40"/>
+				</Grid.RowDefinitions>
 
+				<Label	Grid.Row="0" Grid.Column="0" Text="Data zamówienia:"/>
+				<Label	Grid.Row="0" Grid.Column="1" Text="{Binding CreateDate}"/>
+
+				<Label	Grid.Row="1" Grid.Column="0" Text="Wartość zamówienia:"/>
+				<Label	Grid.Row="1" Grid.Column="1" Text="{Binding OrderAmount}"/>
+
+				<Label	Grid.Row="2" Grid.Column="0" Text="Restauracja:"/>
+				<Label	Grid.Row="2" Grid.Column="1" Text="{Binding RestaurantName}"/>
+
+				<Label	Grid.Row="3" Grid.Column="0" Text="Sposób dostawy:"/>
+				<Label	Grid.Row="3" Grid.Column="1" Text="{Binding DeliveryType}"/>
+
+				<Label	Grid.Row="4" Grid.Column="0" Text="Adres dostawy:"/>
+				<Label	Grid.Row="4" Grid.Column="1" Text="{Binding DeliveryAddress}"/>
+			</Grid>
+			<Label Text="Dania w zamówieniu:"/>
+			<ListView ItemsSource="{Binding OrderItems}">
+				<ListView.ItemTemplate>
+					<DataTemplate>
+						<ViewCell>
+							<Grid Padding="3">
+								<Grid.ColumnDefinitions>
+									<ColumnDefinition Width="2*"/>
+									<ColumnDefinition Width="*"/>
+									<ColumnDefinition Width="*"/>
+									<ColumnDefinition Width="*"/>
+								</Grid.ColumnDefinitions>
+
+								<Label 	Grid.Column="0" Text="{Binding DishName}"/>
+								<Label 	Grid.Column="1" Text="{Binding Quantity}"/>
+								<Label 	Grid.Column="2" Text="{Binding Price}"/>
+								<Label 	Grid.Column="3" Text="{Binding Total}"/>
+							</Grid>
+						</ViewCell>
+					</DataTemplate>
+				</ListView.ItemTemplate>
+			</ListView>
+		</StackLayout>
 	</ContentPage.Content>
 </ContentPage>

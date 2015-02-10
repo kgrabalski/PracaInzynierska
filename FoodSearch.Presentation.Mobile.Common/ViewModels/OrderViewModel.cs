@@ -172,8 +172,14 @@ namespace FoodSearch.Presentation.Mobile.Common.ViewModels
                             {
                                 await Services.Navigation.Navigate.PushAsync(ViewLocator.Payment);
                                 Services.Messaging.Send(result);
-                            } else await Services.Navigation.Navigate.PushAsync(ViewLocator.OrderSucceded);
-                        } else {
+                            } else 
+                            {
+                                await Services.Navigation.Navigate.PushAsync(ViewLocator.OrderSucceded);
+                                Services.Messaging.Send(result.OrderId);
+                            }
+                        } 
+                        else 
+                        {
                             await Services.Navigation.Navigate.PopToRootAsync();
                             await Services.Navigation.Navigate.PushAsync(ViewLocator.OrderFailed);
                         }

@@ -142,13 +142,16 @@ namespace FoodSearch.Presentation.Mobile.Common.ViewModels
             {
                 return _searchRestaurants ?? (_searchRestaurants = new Command(async () =>
                 {
-                    if (SelectedStreetNumber == null || SelectedStreetNumber.Id == 0) {
-                        //TODO: usunac na produkcji
-                        SelectedStreetNumber = new StreetNumber{Id = 797};
-                        return;
-                    }
-                    await Services.Navigation.Navigate.PushAsync(ViewLocator.RestaurantList);
-                    Services.Messaging.Send(SelectedStreetNumber);
+                        await Services.Navigation.Navigate.PushAsync(ViewLocator.OrderSucceded);
+                        Services.Messaging.Send(Guid.Parse("C90D5CA3-26AC-48B0-8FB7-1438D5082090"));
+
+//                    if (SelectedStreetNumber == null || SelectedStreetNumber.Id == 0) {
+//                        //TODO: usunac na produkcji
+//                        SelectedStreetNumber = new StreetNumber{Id = 797};
+//                        return;
+//                    }
+//                    await Services.Navigation.Navigate.PushAsync(ViewLocator.RestaurantList);
+//                    Services.Messaging.Send(SelectedStreetNumber);
                 }));
             }
         }
