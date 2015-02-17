@@ -31,21 +31,18 @@ namespace FoodSearch.Presentation.Web.Site.Areas.RestaurantAdmin.Controllers
         }
 
         [HttpPost]
+        [ValidateModel]
         public HttpResponseMessage UpdateRestaurantData([ModelBinder] RestaurantUser ru, UpdateRestaurantDataModel model)
         {
-            if (ModelState.IsValid)
-            {
-                _domain.RestaurantAdmin.UpdateRestaurantData(
-                    ru.RestaurantId,
-                    model.Name,
-                    model.IsOpen,
-                    model.MinOrderAmount,
-                    model.DeliveryPrice,
-                    model.FreeDeliveryFrom
-                    );
-                return Request.CreateResponse(HttpStatusCode.OK);
-            }
-            return Request.CreateErrorResponse(HttpStatusCode.BadRequest, ModelState);
+            _domain.RestaurantAdmin.UpdateRestaurantData(
+                ru.RestaurantId,
+                model.Name,
+                model.IsOpen,
+                model.MinOrderAmount,
+                model.DeliveryPrice,
+                model.FreeDeliveryFrom
+                );
+            return Request.CreateResponse(HttpStatusCode.OK);
         }
     }
 }

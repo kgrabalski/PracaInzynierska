@@ -71,7 +71,8 @@ namespace FoodSearch.BusinessLogic.Domain.Restaurant
                         {
                             Id = d.DishId,
                             Name = d.DishName,
-                            Price = d.Price
+                            Price = d.Price,
+                            ImageId = d.ImageId
                         }).ToList()
                     });
             }

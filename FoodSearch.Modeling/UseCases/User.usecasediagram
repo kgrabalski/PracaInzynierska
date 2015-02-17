@@ -1,0 +1,231 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="b95dea64-03f4-4dc8-b375-5b812480bfe4" name="User" linkedPackageId="29899c56-4ea0-428f-8c61-c5c01ebff4dd" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
+  <ownedCommentsInternal>
+    <comment Id="e4145ab3-d43a-4846-8a1d-09060e462481">
+      <elementDefinition Id="d5123329-7ce5-403d-aa7c-ed69de4c789d" />
+      <body>Zawiera wszystkie funkcje aplikacji mobilnej</body>
+      <annotatedElements>
+        <subsystemMoniker Id="14e878b1-f999-4b21-8eb5-1ec4c1f999c2" LastKnownName="Aplikacja internetowa i panel użytkownika" />
+      </annotatedElements>
+    </comment>
+    <comment Id="ab9be754-8093-4d7e-9ed5-4a9ba077295e">
+      <elementDefinition Id="2383d8db-1405-432f-b819-cf1b3e996bc9" />
+      <body>Zawiera wszystkie funkcje użytkownika niezalogowanego</body>
+      <annotatedElements>
+        <actorMoniker Id="49c8358b-a2d5-4699-905f-73654fda4e7e" LastKnownName="Użytkownik zalogowany" />
+      </annotatedElements>
+    </comment>
+  </ownedCommentsInternal>
+  <packagedElements>
+    <useCaseModelRootHasTypes>
+      <actor Id="49c8358b-a2d5-4699-905f-73654fda4e7e" name="Użytkownik zalogowany" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="415ddb5d-be1f-4ce7-b96c-12217eecc731" />
+        <targetEnds>
+          <association Id="8bd498bb-1840-49ab-a22f-1320a9f91c3e" isDerived="false" sourceEndRoleName="Użytkownik niezalogowany (gość)" targetEndRoleName="Aplikacja mobilna" isLeaf="false" isAbstract="false">
+            <subsystemMoniker Id="3fcde04d-9989-4832-95b6-4097cb453c5b" LastKnownName="Aplikacja mobilna" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="4309d11b-45ad-4bce-9c42-1c9e84b675d4" name="Użytkownik niezalogowany (gość)" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="1dc69017-7131-4dbc-96d3-60bee9382bc2" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="a7fb2d0d-0389-459f-baf7-d894816e478d" name="Aplikacja mobilna" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="c0a4c321-d838-4fd7-b6d4-7577e44977f4" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="167bc227-e545-40dc-ba4b-a294a5501941" />
+          </association>
+          <association Id="67e82c1c-df5a-4849-924a-a0e9019372af" isDerived="false" sourceEndRoleName="Użytkownik niezalogowany (gość)" targetEndRoleName="Aplikacja internetowa" isLeaf="false" isAbstract="false">
+            <subsystemMoniker Id="14e878b1-f999-4b21-8eb5-1ec4c1f999c2" LastKnownName="Aplikacja internetowa i panel użytkownika" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="fabd68cf-cc6f-449c-9e73-4faffed2682b" name="Użytkownik niezalogowany (gość)" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="6feebbda-cdf5-485b-9054-f001efb50caa" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="fd55d5b7-5f45-4288-977f-d300b843eb1f" name="Aplikacja internetowa" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="ec4ccfd9-4ca0-4572-b490-c538a3a91f97" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="1f3fa402-ad14-4da5-988e-bcc1f9601337" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <subsystem Id="3fcde04d-9989-4832-95b6-4097cb453c5b" name="Aplikacja mobilna" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="478f8dd5-a29a-4acc-8fc7-d54c4c3d44f8" />
+      </subsystem>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <subsystem Id="14e878b1-f999-4b21-8eb5-1ec4c1f999c2" name="Aplikacja internetowa i panel użytkownika" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="d1ae0244-f36d-4128-acf0-b791637482a0" />
+        <targetEnds>
+          <association Id="c2f742e1-1b43-4640-bd39-935a7bd426fa" isDerived="false" sourceEndRoleName="Aplikacja internetowa" targetEndRoleName="Aplikacja mobilna" isLeaf="false" isAbstract="false">
+            <subsystemMoniker Id="3fcde04d-9989-4832-95b6-4097cb453c5b" LastKnownName="Aplikacja mobilna" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="81e15b3e-b78e-428c-b369-3ebb5a78cc03" name="Aplikacja internetowa" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="0143daac-0e2c-4cf0-931b-87049ee60da4" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="93a6808e-a3cb-4f33-922c-eed37c605923" name="Aplikacja mobilna" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="ca1e439c-d165-4190-85b8-f72031a90006" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="b89cc1c1-de97-4d1e-b6e6-ca0c4dd0ff05" />
+          </association>
+        </targetEnds>
+      </subsystem>
+    </useCaseModelRootHasTypes>
+    <packageHasNamedElement>
+      <useCase Id="a284735e-7c21-4b41-81d1-0ce7a0fb652d" name="Zmień hasło" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="3cbd016f-c8c5-4f1b-a803-b37523954f41" />
+        <subjects>
+          <subsystemMoniker Id="14e878b1-f999-4b21-8eb5-1ec4c1f999c2" LastKnownName="Aplikacja internetowa i panel użytkownika" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="8d7a2708-56aa-4478-9017-379fd19d1035" name="Dodaj adres dostawy" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="8efaa374-df3f-48b8-adf6-c4a4c56d4098" />
+        <subjects>
+          <subsystemMoniker Id="14e878b1-f999-4b21-8eb5-1ec4c1f999c2" LastKnownName="Aplikacja internetowa i panel użytkownika" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="ef1516ad-7fb2-46a3-94f8-18d56d155f0f" name="Usuń adres dostawy" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="fa6d0b8d-cb21-4520-af6d-ae88730589fb" />
+        <subjects>
+          <subsystemMoniker Id="14e878b1-f999-4b21-8eb5-1ec4c1f999c2" LastKnownName="Aplikacja internetowa i panel użytkownika" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="9d9593f5-763e-4dda-bacb-82ff05382d67" name="Wyświetl historię zamówień" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="088cbde9-647d-4e26-a75a-b1eb9312b4b8" />
+        <subjects>
+          <subsystemMoniker Id="3fcde04d-9989-4832-95b6-4097cb453c5b" LastKnownName="Aplikacja mobilna" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="e26bc361-7f9f-4749-8db4-a774fa134d44" name="Wyświetl szczegóły zamówienia" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="40a4546e-8757-47ed-b6b6-16ec4c168fd9" />
+        <subjects>
+          <subsystemMoniker Id="3fcde04d-9989-4832-95b6-4097cb453c5b" LastKnownName="Aplikacja mobilna" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="28afb75f-66c0-4d34-9eef-a63e88828a08" name="Wybór poprzedniego adresu dostawy" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="d5fc05d7-54d3-4856-a55c-4e59c55b87bc" />
+        <subjects>
+          <subsystemMoniker Id="14e878b1-f999-4b21-8eb5-1ec4c1f999c2" LastKnownName="Aplikacja internetowa i panel użytkownika" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="cfaebdc9-1b1c-4daf-8b28-51facbe3caa6" name="Dodaj opinię" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="6660d7ed-8516-4569-8619-929931044711" />
+        <subjects>
+          <subsystemMoniker Id="14e878b1-f999-4b21-8eb5-1ec4c1f999c2" LastKnownName="Aplikacja internetowa i panel użytkownika" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="aa1c5e63-5bbb-4fa5-9fd8-f686070a0beb" name="Wybór sposobu dostawy" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="8048f883-c8cf-41b4-a3e8-4ca1fa880a66" />
+        <subjects>
+          <subsystemMoniker Id="3fcde04d-9989-4832-95b6-4097cb453c5b" LastKnownName="Aplikacja mobilna" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="c0a26911-35a0-4596-b26b-aab2e9d47f4b" name="Wybór sposobu płatności" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="d3e6e0ae-90eb-422e-bcba-02f2f58c1021" />
+        <subjects>
+          <subsystemMoniker Id="3fcde04d-9989-4832-95b6-4097cb453c5b" LastKnownName="Aplikacja mobilna" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="c72c0f14-f9f6-49d8-bef2-206d18eff4ed" name="Złożenie zamówienia" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="cf8be707-60fb-437f-b60d-6f940caba8a4" />
+        <subjects>
+          <subsystemMoniker Id="3fcde04d-9989-4832-95b6-4097cb453c5b" LastKnownName="Aplikacja mobilna" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="3635ff36-e7bc-4f48-87c0-b5d5c1b80dff" name="Anulowanie płatności / zamównienia" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="9f50e059-0f93-44fd-84bc-1d24b400498a" />
+        <subjects>
+          <subsystemMoniker Id="3fcde04d-9989-4832-95b6-4097cb453c5b" LastKnownName="Aplikacja mobilna" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="f493f498-0d69-463e-93c4-77f1b2d0f26e" name="Płatność gotówką" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="cd4c84d1-34df-4d3e-8a4b-f1bc13339dd3" />
+        <subjects>
+          <subsystemMoniker Id="3fcde04d-9989-4832-95b6-4097cb453c5b" LastKnownName="Aplikacja mobilna" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="2acda4a2-cd0b-4983-948c-6c6f92304d60" name="Płatność kartą kredytową" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="359e0d91-a200-4189-a0eb-f9aacafdda3c" />
+        <subjects>
+          <subsystemMoniker Id="3fcde04d-9989-4832-95b6-4097cb453c5b" LastKnownName="Aplikacja mobilna" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="fb18f7b3-50f0-423b-adf6-31e9f6fa2a65" name="Płatność kontem PayPal" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="d6696dbc-97a3-4b07-9da4-1cea9a6f6d84" />
+        <subjects>
+          <subsystemMoniker Id="3fcde04d-9989-4832-95b6-4097cb453c5b" LastKnownName="Aplikacja mobilna" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="9adc2f04-ab17-43a6-a16b-44cba7603070" name="Wyświetl status zamówienia" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="54a37bbd-452c-4696-80d3-0a8e9843d331" />
+        <subjects>
+          <subsystemMoniker Id="3fcde04d-9989-4832-95b6-4097cb453c5b" LastKnownName="Aplikacja mobilna" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+  </packagedElements>
+  <package Id="29899c56-4ea0-428f-8c61-c5c01ebff4dd" name="FoodSearch.Modeling">
+    <elementDefinition Id="36ea5af6-e5bd-4839-9f43-52f120ba2311" />
+    <profileInstances>
+      <packageHasProfileInstances Id="90a66ac6-3261-4165-8e96-8affcbfe5f69">
+        <profileInstance Id="4c45e532-30c7-4cdc-aefe-692c7d401179" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="80ff0ac4-db03-44d5-8f45-52f920986e8b">
+        <profileInstance Id="8335f28a-bfbb-4ead-86a4-d074dc8b7853" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="635d830d-29e7-4deb-b130-e1e2805bad0d">
+        <profileInstance Id="d37d391f-4209-428a-8bbb-4ab259ab10e2" name="CSharpProfile">
+          <elementDefinition Id="3201879c-1ae7-4ee8-b00b-8b08e4b8449d" />
+        </profileInstance>
+        <elementDefinition Id="de54e42b-dae9-49d1-a758-f6391f1e16d7" />
+      </packageHasProfileInstances>
+    </profileInstances>
+  </package>
+</useCaseModelRoot>

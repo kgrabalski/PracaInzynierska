@@ -75,7 +75,6 @@ namespace FoodSearch.BusinessLogic.Domain.Order
                             var dish = dishes.Single(x => x.DishId == item.DishId);
                             repOd.Create<int>(new OrderDish()
                             {
-                                DishId = dish.DishId,
                                 DishName = dish.DishName,
                                 Price = dish.Price,
                                 Quantity = item.Quantity,

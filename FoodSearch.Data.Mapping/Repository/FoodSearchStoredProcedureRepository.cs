@@ -117,6 +117,12 @@ namespace FoodSearch.Data.Mapping.Repository
             return query.UniqueResult<bool>();
         }
 
+        public void ClearImagesTable()
+        {
+            var query = _session.GetNamedQuery("ClearImagesTable");
+            query.ExecuteUpdate();
+        }
+
         public void Dispose()
         {
             _session.Dispose();

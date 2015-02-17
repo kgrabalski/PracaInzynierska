@@ -11,7 +11,7 @@ using System.Web.Http.ModelBinding;
 
 namespace FoodSearch.Presentation.Web.Site.Areas.RestaurantAdmin.Controllers
 {
-    [AreaAuthorize(Roles = "RestaurantAdmin, RestaurantEmployee")]
+    [AreaAuthorize(Roles = "RestaurantAdmin")]
     public class DishGroupController : ApiController
     {
         private readonly IFoodSearchDomain _domain;
@@ -30,26 +30,20 @@ namespace FoodSearch.Presentation.Web.Site.Areas.RestaurantAdmin.Controllers
 
         //create new dish group
         [HttpPost]
+        [ValidateModel]
         public HttpResponseMessage Create([ModelBinder] RestaurantUser ru, DishGroupModel dg)
         {
-            if (ModelState.IsValid)
-            {
-                var result = _domain.RestaurantAdmin.CreateDishGroup(ru.RestaurantId, dg.Name);
-                return Request.CreateResponse(result != null ? HttpStatusCode.Created : HttpStatusCode.Conflict, result);
-            }
-            return Request.CreateErrorResponse(HttpStatusCode.BadRequest, ModelState);
+            var result = _domain.RestaurantAdmin.CreateDishGroup(ru.RestaurantId, dg.Name);
+            return Request.CreateResponse(result != null ? HttpStatusCode.Created : HttpStatusCode.Conflict, result);
         }
 
         //edit dish group name
         [HttpPut]
+        [ValidateModel]
         public HttpResponseMessage Edit([ModelBinder] RestaurantUser ru, [FromUri] int id, DishGroupModel dg)
         {
-            if (ModelState.IsValid)
-            {
-                bool result = _domain.RestaurantAdmin.EditDishGroup(ru.RestaurantId, id, dg.Name);
-                return Request.CreateResponse(result ? HttpStatusCode.OK : HttpStatusCode.NotFound);
-            }
-            return Request.CreateErrorResponse(HttpStatusCode.BadRequest, ModelState);
+            bool result = _domain.RestaurantAdmin.EditDishGroup(ru.RestaurantId, id, dg.Name);
+            return Request.CreateResponse(result ? HttpStatusCode.OK : HttpStatusCode.NotFound);
         }
 
         //delete dish group

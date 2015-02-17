@@ -1,0 +1,247 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" dslVersion="1.0.0.0" Id="31057ef5-d88f-4058-9ab1-05c105dfdfde" name="UserGuest" linkedPackageId="c790cfe0-1ca9-4321-8d1c-a3c9357c8e5c" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
+  <ownedCommentsInternal>
+    <comment Id="c90d38a5-7742-4c9e-8791-f79b4c41f290">
+      <elementDefinition Id="8c8af767-2b31-4902-9473-707ff7943157" />
+      <body>Zawiera wszystkie funkcje aplikacji mobilnej</body>
+      <annotatedElements>
+        <subsystemMoniker Id="f695d98b-1e81-4091-b64d-1e2f4709faec" LastKnownName="Aplikacja internetowa" />
+      </annotatedElements>
+    </comment>
+  </ownedCommentsInternal>
+  <profileInstances>
+    <packageHasProfileInstances Id="a7825672-bbd6-425c-87a4-8adba2b39be7">
+      <profileInstance Id="5daf6efd-3cd8-4268-8976-f0493615982e" name="CSharpProfile">
+        <elementDefinition Id="3201879c-1ae7-4ee8-b00b-8b08e4b8449d" />
+      </profileInstance>
+      <elementDefinition Id="de54e42b-dae9-49d1-a758-f6391f1e16d7" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <useCaseModelRootHasTypes>
+      <subsystem Id="650cdbf9-031e-43e2-a79f-90543a88c06e" name="Aplikacja mobilna" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="45354525-c3c0-4825-962f-f17eb21bb713" />
+      </subsystem>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="4cf36683-5a88-4de6-8015-a91484ba5cf2" name="Rejestracja" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="6f5d2f71-7165-4414-94f3-02cc142d63ea" />
+        <subjects>
+          <subsystemMoniker Id="650cdbf9-031e-43e2-a79f-90543a88c06e" LastKnownName="Aplikacja mobilna" />
+        </subjects>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <actor Id="0a10d583-e585-40e3-9c3a-713c5721407c" name="Użytkownik niezalogowany (gość)" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="8bfef5f4-a46e-4151-aa27-f5ad20e48c8b" />
+        <targetEnds>
+          <association Id="2bde8841-7799-4aa0-b6f0-9f041932e72c" isDerived="false" sourceEndRoleName="Użytkownik niezalogowany (gość)" targetEndRoleName="Aplikacja mobilna" isLeaf="false" isAbstract="false">
+            <subsystemMoniker Id="650cdbf9-031e-43e2-a79f-90543a88c06e" LastKnownName="Aplikacja mobilna" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="cb77ea0d-b451-4109-8f7f-98aacd84dc01" name="Użytkownik niezalogowany (gość)" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="382aed6d-aa2d-46d8-9791-ead6a68e1326" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="77ca5f7e-6ba7-4132-94ab-164f6ecd7ed5" name="Aplikacja mobilna" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="46fa02a0-11fc-475e-8a16-b683116bb2eb" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="8031798d-50d5-4c1b-bd40-1b05898c1aeb" />
+          </association>
+          <association Id="842bae05-415c-47a5-aa8d-e468daeb1f19" isDerived="false" sourceEndRoleName="Użytkownik niezalogowany (gość)" targetEndRoleName="Aplikacja internetowa" isLeaf="false" isAbstract="false">
+            <subsystemMoniker Id="f695d98b-1e81-4091-b64d-1e2f4709faec" LastKnownName="Aplikacja internetowa" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="8d2909c7-531d-44ea-9475-ad681f0c916d" name="Użytkownik niezalogowany (gość)" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="059c77e9-382b-4593-aa42-ffb89deb5239" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="8c0b7a3b-0334-4482-8f13-5a562e0395e0" name="Aplikacja internetowa" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="2e00c1f2-62d7-4fcd-af12-20f9350901aa" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="a9d0f500-0240-4af3-814a-1aa9d9814a86" />
+          </association>
+          <association Id="303840b5-ef8b-4af2-9ec0-2f2ebfd35814" isDerived="false" sourceEndRoleName="Użytkownik niezalogowany (gość)" targetEndRoleName="Inne" isLeaf="false" isAbstract="false">
+            <subsystemMoniker Id="bc30c0df-4211-429a-9650-bee9405b02b1" LastKnownName="Inne" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="7c9fa060-2ef1-4aa3-afd4-b7eb32155875" name="Użytkownik niezalogowany (gość)" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="8ae2c8ac-29a0-4923-ab88-7ff7f086445e" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="146fcc74-c8ef-4dcd-8697-8fa904469f51" name="Inne" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="f378ee20-d0ed-4344-9be6-f04fe115382a" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="abc997fd-e0b4-49f6-8f7a-ab2ebc1adb8a" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <subsystem Id="bc30c0df-4211-429a-9650-bee9405b02b1" name="Inne" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="f88abb27-c61d-4352-ab55-9c5567a7151c" />
+      </subsystem>
+    </useCaseModelRootHasTypes>
+    <packageHasNamedElement>
+      <useCase Id="bcf27fcc-b1bf-4930-9c1a-2552364a7488" name="Aktywacja konta" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="e986fe3a-9882-4a99-9b42-4e7634260c11" />
+        <subjects>
+          <subsystemMoniker Id="bc30c0df-4211-429a-9650-bee9405b02b1" LastKnownName="Inne" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="7e00dda3-786e-41d4-b6bd-685d73367c4d" name="Logowanie" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="ca811f15-b800-4392-a539-55b895a459ce" />
+        <subjects>
+          <subsystemMoniker Id="650cdbf9-031e-43e2-a79f-90543a88c06e" LastKnownName="Aplikacja mobilna" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="cb749dd3-000c-4337-9131-40063109e5f2" name="Resetowanie hasła" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="c6132504-fd37-4590-a432-0c8bf2b35b4d" />
+        <subjects>
+          <subsystemMoniker Id="f695d98b-1e81-4091-b64d-1e2f4709faec" LastKnownName="Aplikacja internetowa" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="6ded0038-87b8-4dc6-be45-de32e6614720" name="Kontakt z administratorem" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="021e0e3f-3a0c-4736-876d-2732067e2f52" />
+        <subjects>
+          <subsystemMoniker Id="f695d98b-1e81-4091-b64d-1e2f4709faec" LastKnownName="Aplikacja internetowa" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <useCaseModelRootHasTypes>
+      <subsystem Id="f695d98b-1e81-4091-b64d-1e2f4709faec" name="Aplikacja internetowa" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="74877f63-b669-4215-bc71-50c2484b0719" />
+        <targetEnds>
+          <association Id="067bdf93-4aba-4de3-84db-bfc85b08c1bd" isDerived="false" sourceEndRoleName="Aplikacja internetowa" targetEndRoleName="Aplikacja mobilna" isLeaf="false" isAbstract="false">
+            <subsystemMoniker Id="650cdbf9-031e-43e2-a79f-90543a88c06e" LastKnownName="Aplikacja mobilna" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="57cedc48-6dd0-4b17-83f5-7e394a55792a" name="Aplikacja internetowa" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="e3bf69a9-cab0-4fa5-8778-79d3c2bec2fb" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="c1ee485a-d148-4cfb-8df7-113472d52a67" name="Aplikacja mobilna" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="f89048d7-dcc0-419c-b268-ff3b9e3f081c" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="53cca2c6-aabb-4374-bcc8-80f5a71c608c" />
+          </association>
+        </targetEnds>
+      </subsystem>
+    </useCaseModelRootHasTypes>
+    <packageHasNamedElement>
+      <useCase Id="15c50581-b964-474f-b7ef-0e585ef2aa25" name="Wyświetlenie listy wsp. restauracji" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="12e95b47-c5fd-4067-840d-4bfd64c68132" />
+        <subjects>
+          <subsystemMoniker Id="f695d98b-1e81-4091-b64d-1e2f4709faec" LastKnownName="Aplikacja internetowa" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="2f66a361-638a-4cd4-8cf3-2ecc244a9f91" name="Wybierz miasto" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="800a6750-f22b-4499-9b4c-c52e91b120b2" />
+        <subjects>
+          <subsystemMoniker Id="650cdbf9-031e-43e2-a79f-90543a88c06e" LastKnownName="Aplikacja mobilna" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="3b5fa686-d7ab-4733-a3c3-b51c11dff1da" name="Wybierz ulicę" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="2873e3e0-de9d-4677-8aa6-204b2bbc893f" />
+        <subjects>
+          <subsystemMoniker Id="650cdbf9-031e-43e2-a79f-90543a88c06e" LastKnownName="Aplikacja mobilna" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="6f0d1b1f-47c4-422e-b0d7-fbba15dc1ee8" name="Wybierz numer budynku" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="971f4197-e8f5-49e1-9409-455c5affeac6" />
+        <subjects>
+          <subsystemMoniker Id="650cdbf9-031e-43e2-a79f-90543a88c06e" LastKnownName="Aplikacja mobilna" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="5c3afe6a-fdbc-4b6d-91b1-c18c81038b9e" name="Szukaj restauracji" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="1b6c1773-9a83-4c9a-947e-f728ba2b1d2c" />
+        <subjects>
+          <subsystemMoniker Id="650cdbf9-031e-43e2-a79f-90543a88c06e" LastKnownName="Aplikacja mobilna" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="b0b59946-61bc-4fff-8453-0cd9cf74e7c2" name="Wyświetl menu restauracji" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="2f92ac25-5e64-4ca7-acb5-d6360324f5dc" />
+        <subjects>
+          <subsystemMoniker Id="650cdbf9-031e-43e2-a79f-90543a88c06e" LastKnownName="Aplikacja mobilna" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="14f164a0-b45e-4e0e-9df6-04c2b15a2c67" name="Wyświetl opinie o restauracji" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="24c9396b-be05-4f75-b0eb-3b1be0760030" />
+        <subjects>
+          <subsystemMoniker Id="650cdbf9-031e-43e2-a79f-90543a88c06e" LastKnownName="Aplikacja mobilna" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="76e857b3-4a75-4794-bcef-362b18611757" name="Dodaj danie do koszyka" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="71540acb-ecd0-4dd5-b022-b942ec483fa3" />
+        <subjects>
+          <subsystemMoniker Id="650cdbf9-031e-43e2-a79f-90543a88c06e" LastKnownName="Aplikacja mobilna" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="00f1c1eb-55d7-4a3d-bf13-1c7a95086dee" name="Usuń danie z koszyka" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="971ab83b-00fc-480e-9c79-9774be52dcfd" />
+        <subjects>
+          <subsystemMoniker Id="650cdbf9-031e-43e2-a79f-90543a88c06e" LastKnownName="Aplikacja mobilna" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="dff5d892-0635-41f2-8b3f-537f1672038d" name="Wyświelt koszyk" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="6665d061-8dea-4569-af14-4893e7a233aa" />
+        <subjects>
+          <subsystemMoniker Id="650cdbf9-031e-43e2-a79f-90543a88c06e" LastKnownName="Aplikacja mobilna" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+  </packagedElements>
+  <package Id="c790cfe0-1ca9-4321-8d1c-a3c9357c8e5c" name="FoodSearch.Modeling">
+    <elementDefinition Id="36ea5af6-e5bd-4839-9f43-52f120ba2311" />
+    <profileInstances>
+      <packageHasProfileInstances Id="1c99c7e7-37ae-4904-b690-d43d8a954880">
+        <profileInstance Id="6b44697d-6236-41de-8bf4-ffd998f48d1c" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="a2e113c9-9555-485c-9478-de2710bc60c0">
+        <profileInstance Id="98d2abc3-0a25-405e-ab88-1835eeda9453" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+    </profileInstances>
+  </package>
+</useCaseModelRoot>

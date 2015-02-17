@@ -70,7 +70,7 @@ namespace FoodSearch.Data.Mapping.Repository
             try
             {
                 Delete(value);
-                return false;
+                return true;
             }
             catch (Exception)
             {

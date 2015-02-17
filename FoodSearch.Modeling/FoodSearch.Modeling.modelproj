@@ -22,44 +22,63 @@
   </PropertyGroup>
   <Import Project="$(VSToolsPath)\ArchitectureTools\Microsoft.VisualStudio.TeamArchitect.ModelingProject.targets" Condition="'$(VSToolsPath)' != ''" />
   <ItemGroup>
-    <Content Include="RestaurantAdmin.usecasediagram">
+    <Content Include="ModelDefinition\Package1_1457.uml">
       <SubType>Content</SubType>
     </Content>
-    <Content Include="RestaurantAdmin.usecasediagram.layout">
-      <SubType>Content</SubType>
-      <DependentUpon>RestaurantAdmin.usecasediagram</DependentUpon>
-    </Content>
-    <Content Include="RestaurantEmployee.usecasediagram">
+    <Content Include="ModelDefinition\Package2_1457.uml">
       <SubType>Content</SubType>
     </Content>
-    <Content Include="RestaurantEmployee.usecasediagram.layout">
-      <SubType>Content</SubType>
-      <DependentUpon>RestaurantEmployee.usecasediagram</DependentUpon>
-    </Content>
-    <Content Include="SiteAdmin.usecasediagram">
+    <Content Include="ModelDefinition\Package3_1457.uml">
       <SubType>Content</SubType>
     </Content>
-    <Content Include="SiteAdmin.usecasediagram.layout">
-      <SubType>Content</SubType>
-      <DependentUpon>SiteAdmin.usecasediagram</DependentUpon>
-    </Content>
-    <Content Include="User.usecasediagram">
+    <Content Include="ModelDefinition\Package4_1457.uml">
       <SubType>Content</SubType>
     </Content>
-    <Content Include="User.usecasediagram.layout">
-      <SubType>Content</SubType>
-      <DependentUpon>User.usecasediagram</DependentUpon>
-    </Content>
-    <Content Include="UserGuest.usecasediagram">
+    <Content Include="ModelDefinition\Package5_1457.uml">
       <SubType>Content</SubType>
     </Content>
-    <Content Include="UserGuest.usecasediagram.layout">
+    <Content Include="ModelDefinition\Package_1457.uml">
       <SubType>Content</SubType>
-      <DependentUpon>UserGuest.usecasediagram</DependentUpon>
+    </Content>
+    <Content Include="UseCases\RestaurantAdmin.usecasediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="UseCases\RestaurantAdmin.usecasediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>UseCases\RestaurantAdmin.usecasediagram</DependentUpon>
+    </Content>
+    <Content Include="UseCases\RestaurantEmployee.usecasediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="UseCases\RestaurantEmployee.usecasediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>UseCases\RestaurantEmployee.usecasediagram</DependentUpon>
+    </Content>
+    <Content Include="UseCases\SiteAdmin.usecasediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="UseCases\SiteAdmin.usecasediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>UseCases\SiteAdmin.usecasediagram</DependentUpon>
+    </Content>
+    <Content Include="UseCases\User.usecasediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="UseCases\User.usecasediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>UseCases\User.usecasediagram</DependentUpon>
+    </Content>
+    <Content Include="UseCases\UserGuest.usecasediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="UseCases\UserGuest.usecasediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>UseCases\UserGuest.usecasediagram</DependentUpon>
     </Content>
     <Folder Include="ModelDefinition\" />
     <Content Include="ModelDefinition\FoodSearch.Modeling.uml">
       <SubType>Content</SubType>
     </Content>
+    <Folder Include="UseCases" />
   </ItemGroup>
 </Project>

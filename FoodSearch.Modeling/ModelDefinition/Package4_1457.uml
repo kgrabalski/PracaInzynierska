@@ -1,0 +1,195 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm9="http://schemas.microsoft.com/dsltools/UseCaseModel" xmlns:dm10="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="9db14146-7a3b-4880-b80a-ec29c2b7b14d"
+  name="NHibernate"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="7f7fd7e2-0613-4433-8325-256ef7c88545"
+      handle="viewcode://./CodeSchema_Namespace?Namespace%3DNHibernate"
+      tag="ViewCode" />
+  </referencesInternal>
+  <packagedElements>
+    <packageHasNamedElement>
+      <Interface
+        Id="29711466-b3e9-45a5-8308-b5c7ab36e0a9"
+        name="IQueryOver&lt;T‎, T‎&gt;"
+        isAbstract="false"
+        isLeaf="false">
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="5d29f6d6-d475-4bbc-be9c-14a4fb2ab0f6"
+            name="interface"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="097f4957-034a-4541-94b9-fd6233ca74c4">
+                <propertyInstance
+                  Id="5a05acde-0b32-436d-9344-ac3155a27d38"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="bf3702a2-61e2-4341-90d0-79f5ec06c4f1">
+                <propertyInstance
+                  Id="307acb4e-3fde-452b-856f-1858ea808705"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="4e40b670-6324-4608-835a-c94ddc3ffbe1">
+                <propertyInstance
+                  Id="403ffa27-8b28-4b20-b9a7-351e637c27be"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="527242c7-c7a6-4fb1-bb03-3cc29220254e">
+                <propertyInstance
+                  Id="a5d9cdd1-df3b-4e51-9bfc-71ff20b07775"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <signatures>
+          <templateBinding
+            Id="b5c0bc8f-a00a-4ea0-9109-16e246b947ff">
+            <redefinableTemplateSignatureMoniker
+              Id="824bef5a-d0e5-4c6d-8e07-8660867cee93"
+              LastKnownLocation="Package4_1457.uml" />
+            <relationshipOwnedElementsInternal>
+              <templateBindingHasTemplateParameterSubstitution>
+                <templateParameterSubstitution
+                  Id="70662530-3e38-47e5-b9fa-1dd1a364ccc8">
+                  <actuals>
+                    <classMoniker
+                      Id="2e97dab7-0f60-475c-bfb7-41d39e215b4c"
+                      LastKnownName="T"
+                      LastKnownLocation="Package3_1457.uml" />
+                  </actuals>
+                  <formal>
+                    <classifierTemplateParameterMoniker
+                      Id="b7b99274-0ab3-4120-b6b0-105fc52e6acc"
+                      LastKnownLocation="Package4_1457.uml" />
+                  </formal>
+                </templateParameterSubstitution>
+              </templateBindingHasTemplateParameterSubstitution>
+              <templateBindingHasTemplateParameterSubstitution>
+                <templateParameterSubstitution
+                  Id="826787fc-bb75-4b50-b0bb-facb598676e5">
+                  <actuals>
+                    <classMoniker
+                      Id="2e97dab7-0f60-475c-bfb7-41d39e215b4c"
+                      LastKnownName="T"
+                      LastKnownLocation="Package3_1457.uml" />
+                  </actuals>
+                  <formal>
+                    <classifierTemplateParameterMoniker
+                      Id="b4d2223c-b57b-4fba-82fc-c3317f354bf0"
+                      LastKnownLocation="Package4_1457.uml" />
+                  </formal>
+                </templateParameterSubstitution>
+              </templateBindingHasTemplateParameterSubstitution>
+            </relationshipOwnedElementsInternal>
+          </templateBinding>
+        </signatures>
+      </Interface>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="88e7c795-4f61-4f7f-b5ba-b3f1773fbca6"
+        name="IQueryOver"
+        isAbstract="false"
+        isLeaf="false">
+        <referencesInternal>
+          <reference
+            Id="470fa835-2aa2-4015-84f3-4bb829e46a57"
+            handle="viewcode://./CodeSchema_Interface?Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2Fpackages%2FNHibernate.4.0.1.4000%2Flib%2Fnet40%2FNHibernate.dll Namespace%3DNHibernate Type%3D(Name%3DIQueryOver GenericParameterCount%3D2)"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="a49208b2-f30a-4ee9-b59e-3e41a2f988f9"
+            name="interface"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="c2e433fd-0857-45db-a424-7034546825ee">
+                <propertyInstance
+                  Id="431f310d-7ec7-46ea-a679-c6384b501ba8"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="9999a045-66e9-4d97-9012-a128f468855e">
+                <propertyInstance
+                  Id="f58635e5-21d1-43de-a2e6-c909cd68c10c"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="9397120a-2982-49bc-a0f2-214ab1278c24">
+                <propertyInstance
+                  Id="bc96d7e1-620e-4fd6-b047-f0e8a68c1456"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="987a182b-a714-41d8-a2af-e23d501c0e56">
+                <propertyInstance
+                  Id="93ebbac5-f39d-4b6e-b31b-889aeb1f2ba5"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <ownedRedefinableTemplateSignatureInternal>
+          <redefinableTemplateSignature
+            Id="824bef5a-d0e5-4c6d-8e07-8660867cee93"
+            parameters=""
+            name="RedefinableTemplateSignature1"
+            isLeaf="false">
+            <ownedParameters>
+              <classifierTemplateParameter
+                Id="b7b99274-0ab3-4120-b6b0-105fc52e6acc">
+                <referencesInternal>
+                  <reference
+                    Id="de7f2ead-1cd6-4041-a85b-61db5568967d"
+                    handle="viewcode://./CodeSchema_GenericParameter?Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2Fpackages%2FNHibernate.4.0.1.4000%2Flib%2Fnet40%2FNHibernate.dll Namespace%3DNHibernate Type%3D(Name%3DIQueryOver GenericParameterCount%3D2) ParameterIdentifier%3D0"
+                    tag="ViewCode" />
+                </referencesInternal>
+                <ownedParameterableElement>
+                  <class
+                    Id="75ddb95b-a009-49bd-9aa1-e9db032e7de7"
+                    name="TRoot"
+                    isAbstract="false"
+                    isLeaf="false"
+                    isActiveClass="false" />
+                </ownedParameterableElement>
+              </classifierTemplateParameter>
+              <classifierTemplateParameter
+                Id="b4d2223c-b57b-4fba-82fc-c3317f354bf0">
+                <referencesInternal>
+                  <reference
+                    Id="652a4ac1-8b7e-4692-b3cd-33b78a724028"
+                    handle="viewcode://./CodeSchema_GenericParameter?Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2Fpackages%2FNHibernate.4.0.1.4000%2Flib%2Fnet40%2FNHibernate.dll Namespace%3DNHibernate Type%3D(Name%3DIQueryOver GenericParameterCount%3D2) ParameterIdentifier%3D1"
+                    tag="ViewCode" />
+                </referencesInternal>
+                <ownedParameterableElement>
+                  <class
+                    Id="4bac49eb-314f-42e2-b553-9c1a0c44c9ea"
+                    name="TSubType"
+                    isAbstract="false"
+                    isLeaf="false"
+                    isActiveClass="false" />
+                </ownedParameterableElement>
+              </classifierTemplateParameter>
+            </ownedParameters>
+          </redefinableTemplateSignature>
+        </ownedRedefinableTemplateSignatureInternal>
+      </Interface>
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

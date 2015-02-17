@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<useCaseDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="RestaurantEmployee">
+  <useCaseModelRootMoniker Id="d133f5bf-9cee-420d-8098-7ed5e3d0cb0b" />
+  <nestedChildShapes>
+    <actorShape Id="53df7359-57d1-4871-8e46-9c026472a096" absoluteBounds="0.625, 1, 0.5, 0.5" isReference="false" heightOffset="0">
+      <actorMoniker Id="5d2f929f-b19e-4994-b982-efcfdfb0ca99" LastKnownName="Pracownik restauracji" />
+      <relativeChildShapes />
+    </actorShape>
+    <SubsystemShape Id="89e52dee-e84e-4be7-a2cc-4cb4f81d6bcf" absoluteBounds="1.375, 0.5, 5.375, 1.375" customColor="White">
+      <subsystemMoniker Id="0a4e59c7-91dc-40d0-86ec-a5fb2bd2c99c" LastKnownName="Aplikacja internetowa" />
+      <nestedChildShapes>
+        <useCaseShape Id="be1fb142-920d-49ca-8969-90d1cf3778ca" absoluteBounds="1.625, 1, 1, 0.5" customColor="238, 237, 131" heightOffset="0">
+          <useCaseMoniker Id="46e8d1e7-2942-4360-8756-4dc6c6bb9318" LastKnownName="Wyświetl zamówienia" />
+          <relativeChildShapes />
+        </useCaseShape>
+        <useCaseShape Id="1bac5acb-6384-4f7e-8c6c-3771a450ee27" absoluteBounds="2.875, 1, 1, 0.5" customColor="238, 237, 131" heightOffset="0">
+          <useCaseMoniker Id="e83884bd-25e8-4a8d-864c-699432f7bc60" LastKnownName="Potwierdź zamówienie" />
+          <relativeChildShapes />
+        </useCaseShape>
+        <useCaseShape Id="bdec0169-0049-4cfc-95ad-2e7ddb5d2b30" absoluteBounds="4.125, 1, 1, 0.5" customColor="238, 237, 131" heightOffset="0">
+          <useCaseMoniker Id="6c4e14fa-7bbd-4423-8ffa-d6ad83e0b483" LastKnownName="Anuluj zamówienie" />
+          <relativeChildShapes />
+        </useCaseShape>
+        <useCaseShape Id="daf96855-375c-40c9-a165-086a9b38d1fa" absoluteBounds="5.375, 1, 1, 0.5" customColor="238, 237, 131" heightOffset="0">
+          <useCaseMoniker Id="2a8bf0b2-670b-4a4e-add2-76f36d9d567e" LastKnownName="Zamknij zamówienie" />
+          <relativeChildShapes />
+        </useCaseShape>
+      </nestedChildShapes>
+    </SubsystemShape>
+    <useCaseAssociationConnector edgePoints="[(1.125 : 1.24509803921569); (1.375 : 1.24019607843137)]" fixedFrom="Algorithm" fixedTo="Algorithm" customColor="113, 111, 110" sourceMultiplicity="" targetMultiplicity="">
+      <associationMoniker Id="605b26b1-8b88-4f6a-b771-98b59afd4164" />
+      <relativeChildShapes />
+      <nodes>
+        <actorShapeMoniker Id="53df7359-57d1-4871-8e46-9c026472a096" />
+        <SubsystemShapeMoniker Id="89e52dee-e84e-4be7-a2cc-4cb4f81d6bcf" />
+      </nodes>
+    </useCaseAssociationConnector>
+  </nestedChildShapes>
+</useCaseDiagram>

@@ -29,10 +29,21 @@
     ]);
 
     services.service('DishService', [
-        '$resource', function($resource) {
+        '$resource', '$http', function($resource, $http) {
             var service = $resource('/RestaurantAdmin/api/Dish/:dishId',
-            { dishId: "@Id" });
+            { dishId: "@Id" },
+            { 'update': { method: "PUT" } });
             service.Items = service.query();
+            service.createNew = function(toAdd) {
+                var fd = new FormData();
+                angular.forEach(toAdd, function(v, k) {
+                    fd.append(k, v);
+                });
+                return $http.post("/RestaurantAdmin/api/Dish", fd, {
+                    transformRequest: angular.identity,
+                    headers: { 'Content-Type': undefined }
+                });
+            }
             return service;
         }
     ]);

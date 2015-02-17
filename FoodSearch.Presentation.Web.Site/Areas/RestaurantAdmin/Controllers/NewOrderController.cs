@@ -43,15 +43,12 @@ namespace FoodSearch.Presentation.Web.Site.Areas.RestaurantAdmin.Controllers
         }
 
         [HttpPost]
+        [ValidateModel]
         public HttpResponseMessage ConfirmOrder([FromUri] Guid id, ConfirmOrderModel model)
         {
-            if (ModelState.IsValid)
-            {
-                TimeSpan dt = TimeSpan.ParseExact(model.DeliveryTime, "g", CultureInfo.InvariantCulture);
-                bool result = _domain.Order.ConfirmOrder(id, dt);
-                return Request.CreateResponse(result ? HttpStatusCode.OK : HttpStatusCode.NotFound);
-            }
-            return Request.CreateErrorResponse(HttpStatusCode.BadRequest, ModelState);
+            TimeSpan dt = TimeSpan.ParseExact(model.DeliveryTime, "g", CultureInfo.InvariantCulture);
+            bool result = _domain.Order.ConfirmOrder(id, dt);
+            return Request.CreateResponse(result ? HttpStatusCode.OK : HttpStatusCode.NotFound);
         }
     }
 }

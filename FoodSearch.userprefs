@@ -1,20 +1,21 @@
 ﻿<Properties StartupItem="FoodSearch.Presentation.Mobile.Android\FoodSearch.Presentation.Mobile.Android.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.android_44" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="FoodSearch.Presentation.Mobile.Common\ViewModels\OrderSuccededViewModel.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="FoodSearch.Presentation.Mobile.Common\ViewModels\MainViewModel.cs">
     <Files>
-      <File FileName="FoodSearch.Presentation.Mobile.Common\ViewModels\OrdersHistoryViewModel.cs" Line="9" Column="9" />
-      <File FileName="FoodSearch.Presentation.Mobile.Common\ViewModels\OrderDetailsViewModel.cs" Line="44" Column="44" />
-      <File FileName="FoodSearch.Service.Client\FoodSearchUserServiceClient.cs" Line="50" Column="50" />
-      <File FileName="FoodSearch.Presentation.Mobile.Common\ViewModels\OrderSuccededViewModel.cs" Line="1" Column="1" />
+      <File FileName="FoodSearch.Presentation.Mobile.Common\ViewModels\OrdersHistoryViewModel.cs" Line="1" Column="1" />
+      <File FileName="FoodSearch.Presentation.Mobile.Common\ViewModels\OrderDetailsViewModel.cs" Line="1" Column="1" />
+      <File FileName="FoodSearch.Service.Client\FoodSearchUserServiceClient.cs" Line="1" Column="1" />
+      <File FileName="FoodSearch.Presentation.Mobile.Common\ViewModels\OrderSuccededViewModel.cs" Line="37" Column="37" />
       <File FileName="FoodSearch.Presentation.Mobile.Common\ViewModels\DishListViewModel.cs" Line="1" Column="1" />
-      <File FileName="FoodSearch.Presentation.Mobile.Common\ViewModels\MainViewModel.cs" Line="27" Column="27" />
+      <File FileName="FoodSearch.Presentation.Mobile.Common\ViewModels\MainViewModel.cs" Line="20" Column="20" />
       <File FileName="d:\projekty\PracaInzynierska\FoodSearch\FoodSearch.Presentation.Mobile.Android\MainActivity.cs" Line="1" Column="1" />
       <File FileName="d:\projekty\PracaInzynierska\FoodSearch\FoodSearch.Service.Client\FoodSearchOrderServiceClient.cs" Line="1" Column="1" />
+      <File FileName="FoodSearch.Presentation.Mobile.Common\ViewModels\LoginViewModel.cs" Line="1" Column="1" />
       <File FileName="FoodSearch.Presentation.Mobile.Common\Views\UserPanelView.xaml" Line="1" Column="1" NotebookId="1" />
-      <File FileName="FoodSearch.Presentation.Mobile.Common\ViewModels\OpinionListViewModel.cs" Line="33" Column="33" NotebookId="1" />
-      <File FileName="FoodSearch.Presentation.Mobile.Common\ViewModels\RestaurantListViewModel.cs" Line="27" Column="27" NotebookId="1" />
-      <File FileName="FoodSearch.Presentation.Mobile.Common\Views\OrderDetailsView.xaml" Line="34" Column="34" NotebookId="1" />
-      <File FileName="FoodSearch.Presentation.Mobile.Common\Views\OrderSuccededView.xaml" Line="57" Column="57" NotebookId="1" />
+      <File FileName="FoodSearch.Presentation.Mobile.Common\ViewModels\OpinionListViewModel.cs" Line="1" Column="1" NotebookId="1" />
+      <File FileName="FoodSearch.Presentation.Mobile.Common\ViewModels\RestaurantListViewModel.cs" Line="1" Column="1" NotebookId="1" />
+      <File FileName="FoodSearch.Presentation.Mobile.Common\Views\OrderDetailsView.xaml" Line="1" Column="1" NotebookId="1" />
+      <File FileName="FoodSearch.Presentation.Mobile.Common\Views\OrderSuccededView.xaml" Line="1" Column="1" NotebookId="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
@@ -34,8 +35,6 @@
       <Breakpoint file="D:\projekty\PracaInzynierska\FoodSearch\FoodSearch.Presentation.Mobile.Common\ViewModels\RegisterViewModel.cs" line="251" column="1" />
       <Breakpoint file="D:\projekty\PracaInzynierska\FoodSearch\FoodSearch.Presentation.Mobile.Common\ViewModels\PaymentViewModel.cs" line="25" column="1" />
       <Breakpoint file="D:\projekty\PracaInzynierska\FoodSearch\FoodSearch.Presentation.Mobile.Common\ViewModels\PaymentViewModel.cs" line="69" column="1" />
-      <Breakpoint file="D:\projekty\PracaInzynierska\FoodSearch\FoodSearch.Presentation.Mobile.Common\ViewModels\OrderSuccededViewModel.cs" line="29" column="1" />
-      <Breakpoint file="D:\projekty\PracaInzynierska\FoodSearch\FoodSearch.Presentation.Mobile.Common\ViewModels\OrderSuccededViewModel.cs" line="31" column="1" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />

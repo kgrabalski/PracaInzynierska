@@ -11,5 +11,6 @@ namespace FoodSearch.Data.Mapping.Entities
         public virtual int DishGroupId { get; set; }
         public virtual DishGroup DishGroup { get; set; }
         public virtual decimal Price { get; set; }
+        public virtual int ImageId { get; set; }
     }
 }

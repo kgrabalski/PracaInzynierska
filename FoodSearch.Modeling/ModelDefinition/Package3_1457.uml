@@ -1,0 +1,1060 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm9="http://schemas.microsoft.com/dsltools/UseCaseModel" xmlns:dm10="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="13d1de7d-500c-4adb-86bf-3989c7c38fdb"
+  name="Interface"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="7f323136-82dd-42a5-a751-156bfecd5a55"
+      handle="viewcode://./CodeSchema_Namespace?Namespace%3DFoodSearch.Data.Mapping.Interface"
+      tag="ViewCode" />
+  </referencesInternal>
+  <packagedElements>
+    <packageHasNamedElement>
+      <Interface
+        Id="c8edfc35-ac6b-449e-a0f3-c7c13bab0a96"
+        name="IRepository"
+        isAbstract="false"
+        isLeaf="false">
+        <referencesInternal>
+          <reference
+            Id="ef700a23-673b-44ae-bc8b-df949c11e501"
+            handle="viewcode://./CodeSchema_Interface?Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.Data.Mapping%2Fbin%2FDebug%2FFoodSearch.Data.Mapping.dll Namespace%3DFoodSearch.Data.Mapping.Interface Type%3D(Name%3DIRepository GenericParameterCount%3D1)"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="00575667-ad19-46b7-b38c-9ead2ffd57e3"
+            name="interface"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="74a4f8d8-f198-488b-b4d8-dab9b3db3b95">
+                <propertyInstance
+                  Id="07d4cef1-5a2a-45f1-a64e-a25eca77b021"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="6c861dca-79d9-41b8-a146-ad77d522f474">
+                <propertyInstance
+                  Id="9e518fd8-75d9-4f92-b426-0d8502dcf423"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="ec94c6f2-96c4-4b1f-8354-55b3bb7fe230">
+                <propertyInstance
+                  Id="48b89517-94b3-41ee-a6b7-b8c049d1fd4b"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="44dd9b61-790c-4278-a93c-64dfd222dd5e">
+                <propertyInstance
+                  Id="184aef68-2a45-4b9b-aa24-def666c96718"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <generalsInternal>
+          <generalization
+            Id="49c3c8c3-d59a-438f-a72c-054c4ebf53de"
+            isSubstitutable="false">
+            <interfaceMoniker
+              Id="176358a8-6c0d-43a5-822b-cb409c90acde"
+              LastKnownName="IDisposable"
+              LastKnownLocation="Package5_1457.uml" />
+          </generalization>
+        </generalsInternal>
+        <ownedRedefinableTemplateSignatureInternal>
+          <redefinableTemplateSignature
+            Id="2b9147d5-0db5-47c0-925c-3cb5feb5bb5e"
+            parameters=""
+            name="RedefinableTemplateSignature1"
+            isLeaf="false">
+            <ownedParameters>
+              <classifierTemplateParameter
+                Id="79fa1ae6-f59b-4163-a530-d84ae95549e4">
+                <referencesInternal>
+                  <reference
+                    Id="77f8aa69-28a7-4547-98a9-831f2017b52e"
+                    handle="viewcode://./CodeSchema_GenericParameter?Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.Data.Mapping%2Fbin%2FDebug%2FFoodSearch.Data.Mapping.dll Namespace%3DFoodSearch.Data.Mapping.Interface Type%3D(Name%3DIRepository GenericParameterCount%3D1) ParameterIdentifier%3D0"
+                    tag="ViewCode" />
+                </referencesInternal>
+                <ownedParameterableElement>
+                  <class
+                    Id="2e97dab7-0f60-475c-bfb7-41d39e215b4c"
+                    name="T"
+                    isAbstract="false"
+                    isLeaf="false"
+                    isActiveClass="false" />
+                </ownedParameterableElement>
+              </classifierTemplateParameter>
+            </ownedParameters>
+          </redefinableTemplateSignature>
+        </ownedRedefinableTemplateSignatureInternal>
+        <ownedOperations>
+          <operation
+            Id="5eadd3da-e569-417b-a08c-427e291ae55d"
+            name="Create‎&lt;TId‎&gt;"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="92a8506e-a368-4a64-ad84-aedaaca25dfa"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.Data.Mapping%2Fbin%2FDebug%2FFoodSearch.Data.Mapping.dll Namespace%3DFoodSearch.Data.Mapping.Interface Type%3D(Name%3DIRepository GenericParameterCount%3D1) Member%3D(Name%3DCreate GenericParameterCount%3D1 OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.Data.Mapping%2Fbin%2FDebug%2FFoodSearch.Data.Mapping.dll Namespace%3DFoodSearch.Data.Mapping.Interface Type%3D(Name%3DIRepository GenericParameterCount%3D1) ParameterIdentifier%3D0)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="101c8bfd-7be3-4b93-ad97-913439413fca"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="6f73c8df-e7c7-49fd-a06e-96d55d23d471">
+                    <propertyInstance
+                      Id="a1fa0bdb-2227-4749-927d-5c352a570ccc"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a8e825ad-7478-4021-9ba2-e4477257fe9b">
+                    <propertyInstance
+                      Id="af39f239-8ab1-4dca-a7a8-40ac9512fd70"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="56e62ebe-4476-4a67-a0ef-ffc12ad58622">
+                    <propertyInstance
+                      Id="4844377d-14f9-49bd-99b9-cd0acfa207bc"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="7b477827-0fc2-4dac-9a0d-e61a98e58320">
+                    <propertyInstance
+                      Id="7986e8d8-e00a-4c24-957a-6193a58116b4"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="2d078bdc-84d3-4301-ae82-24979e33eb95">
+                    <propertyInstance
+                      Id="4ddfcf57-1da7-49af-82ab-9ba425153a04"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b7c878d7-5b34-4b70-84f6-d1afadafff56">
+                    <propertyInstance
+                      Id="27dc3192-5912-484e-b6cc-5ba3424c630e"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="a5affa37-9c30-4e60-ad4c-477c6d58827e"
+                  direction="Return">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="e9aff067-e068-4781-bd5a-cddd6411354e"
+                      LastKnownName="TId"
+                      LastKnownLocation="Package3_1457.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="362c989e-addd-4eb2-88c3-95e6758971b1"
+                  name="value"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="179c0fde-849d-49a9-99dc-985ab41fce2e"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.Data.Mapping%2Fbin%2FDebug%2FFoodSearch.Data.Mapping.dll Namespace%3DFoodSearch.Data.Mapping.Interface Type%3D(Name%3DIRepository GenericParameterCount%3D1) Member%3D(Name%3DCreate GenericParameterCount%3D1 OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.Data.Mapping%2Fbin%2FDebug%2FFoodSearch.Data.Mapping.dll Namespace%3DFoodSearch.Data.Mapping.Interface Type%3D(Name%3DIRepository GenericParameterCount%3D1) ParameterIdentifier%3D0)]) ParameterIdentifier%3Dvalue"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="2e97dab7-0f60-475c-bfb7-41d39e215b4c"
+                      LastKnownName="T"
+                      LastKnownLocation="Package3_1457.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="d7518b9e-1845-457f-8a02-35683081fadc"
+            name="Delete‎&lt;TId‎&gt;"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="51d46e2c-577d-4ddf-8b49-d7f937416e6c"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.Data.Mapping%2Fbin%2FDebug%2FFoodSearch.Data.Mapping.dll Namespace%3DFoodSearch.Data.Mapping.Interface Type%3D(Name%3DIRepository GenericParameterCount%3D1) Member%3D(Name%3DDelete GenericParameterCount%3D1 OverloadingParameters%3D[(ParameterIdentifier%3D0)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="d2b0c82c-434b-44df-beac-e91403ad9be4"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="99d2fa65-0153-42cf-8875-a4c16f93601a">
+                    <propertyInstance
+                      Id="4c1e06f4-d1b5-41e9-91a5-6205c7384a18"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="816dfd33-f481-4bf9-9b6a-c7db2b60a102">
+                    <propertyInstance
+                      Id="5a8f0fdc-135f-4f2f-9cff-12abb64d5600"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c9ad4100-3407-4c37-b13f-57876f64b4f1">
+                    <propertyInstance
+                      Id="98364e52-332b-47d8-9260-6ff1a0d47769"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ae85d81c-ef93-434d-b032-c241776f4ed9">
+                    <propertyInstance
+                      Id="d098dab9-79b4-448c-9026-0aaa11116d87"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="94b8aa42-31bc-4367-a9ed-f7ea4b22e7c2">
+                    <propertyInstance
+                      Id="9b62e344-2203-4fa5-b8c8-e74f54ed86a0"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="9a9d2ef0-ff7a-4974-ab0c-ccea69c03102">
+                    <propertyInstance
+                      Id="4b900c1a-9b7b-427e-b6e5-0d7a53ea0ce5"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="86e1967d-c845-4a46-b555-17b9819b63c7"
+                  direction="Return">
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+                      LastKnownName="Boolean"
+                      LastKnownLocation="FoodSearch.Modeling.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="3606502c-3b0f-400c-ba8e-5c3efae0800e"
+                  name="id"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="d94706c3-f7cf-4c8e-9171-3232b4c73ffb"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.Data.Mapping%2Fbin%2FDebug%2FFoodSearch.Data.Mapping.dll Namespace%3DFoodSearch.Data.Mapping.Interface Type%3D(Name%3DIRepository GenericParameterCount%3D1) Member%3D(Name%3DDelete GenericParameterCount%3D1 OverloadingParameters%3D[(ParameterIdentifier%3D0)]) ParameterIdentifier%3Did"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="e9aff067-e068-4781-bd5a-cddd6411354e"
+                      LastKnownName="TId"
+                      LastKnownLocation="Package3_1457.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="da6ea93a-93fb-4c57-a08d-04bc8eab1bec"
+            name="Delete"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="ca62b006-f917-4177-950b-8ff5370b86fa"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.Data.Mapping%2Fbin%2FDebug%2FFoodSearch.Data.Mapping.dll Namespace%3DFoodSearch.Data.Mapping.Interface Type%3D(Name%3DIRepository GenericParameterCount%3D1) Member%3D(Name%3DDelete OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.Data.Mapping%2Fbin%2FDebug%2FFoodSearch.Data.Mapping.dll Namespace%3DFoodSearch.Data.Mapping.Interface Type%3D(Name%3DIRepository GenericParameterCount%3D1) ParameterIdentifier%3D0)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="6e311a6c-8854-4800-ab2f-b8d172aa46f4"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="481d51ea-ecb5-44ee-b179-4bdfc0527ebc">
+                    <propertyInstance
+                      Id="e0e60569-4f41-4022-9b65-13f1e3b191a3"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="974db44a-778c-461d-882b-521fe7b02afa">
+                    <propertyInstance
+                      Id="741ef39e-33b4-42af-955c-59f00ef7776a"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b317019e-0dc7-4886-ad68-3b2c72af63ec">
+                    <propertyInstance
+                      Id="d17b994b-ee1f-4303-b2d4-d663dde571ea"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="6bfc5641-9832-497e-9118-6efe9cb6350f">
+                    <propertyInstance
+                      Id="50342c24-257a-466b-b3a1-7d7abea4bdea"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="3cb6bc25-c626-4c59-864e-5e3f03726e72">
+                    <propertyInstance
+                      Id="af73b5bf-9ee2-4e1d-a1bd-9aaf58a43c65"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="cab9c372-56da-48c1-9c40-2418f65bd854">
+                    <propertyInstance
+                      Id="ca4fea2d-4bb1-44b4-b390-46f51de01265"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="5435637f-5512-4f5b-811b-c7f467d38a38"
+                  name="value"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="18caffbf-6806-4ddc-9efc-776882b5a6f3"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.Data.Mapping%2Fbin%2FDebug%2FFoodSearch.Data.Mapping.dll Namespace%3DFoodSearch.Data.Mapping.Interface Type%3D(Name%3DIRepository GenericParameterCount%3D1) Member%3D(Name%3DDelete OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.Data.Mapping%2Fbin%2FDebug%2FFoodSearch.Data.Mapping.dll Namespace%3DFoodSearch.Data.Mapping.Interface Type%3D(Name%3DIRepository GenericParameterCount%3D1) ParameterIdentifier%3D0)]) ParameterIdentifier%3Dvalue"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="2e97dab7-0f60-475c-bfb7-41d39e215b4c"
+                      LastKnownName="T"
+                      LastKnownLocation="Package3_1457.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="e71dec41-15fa-4ac5-b9bc-d2250e12b55d"
+            name="Evict"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="36bc4b7c-5683-4d34-8fd3-c02738b34810"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.Data.Mapping%2Fbin%2FDebug%2FFoodSearch.Data.Mapping.dll Namespace%3DFoodSearch.Data.Mapping.Interface Type%3D(Name%3DIRepository GenericParameterCount%3D1) Member%3D(Name%3DEvict OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.Data.Mapping%2Fbin%2FDebug%2FFoodSearch.Data.Mapping.dll Namespace%3DFoodSearch.Data.Mapping.Interface Type%3D(Name%3DIRepository GenericParameterCount%3D1) ParameterIdentifier%3D0)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="4226eaf3-c505-495a-9eb3-2545bae20fec"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f60309c0-e5a0-42c6-93c5-9b07f7d562d9">
+                    <propertyInstance
+                      Id="e432aaaa-9819-4e3d-9216-ec1e4c74391b"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="52837fc5-dcdc-4169-a3e8-9c88d8c27aad">
+                    <propertyInstance
+                      Id="0423947e-2a91-482e-bc8a-c5a25b590b1a"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e5655ae4-e2ce-4cd7-98c6-1f3771304220">
+                    <propertyInstance
+                      Id="fb0110cc-f1b0-4f46-91b5-ad035997c9e2"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="26e322ad-b85f-49a1-b809-5848f72e4c5e">
+                    <propertyInstance
+                      Id="4e6d26ec-42d7-47f5-b089-4cca3f000866"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="cecfec4a-f7d7-4ee3-9268-4fe4d76e7788">
+                    <propertyInstance
+                      Id="4de2a6e8-b382-4172-9654-97e253e29029"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d9ac96f5-f26c-4c56-8078-22b082691456">
+                    <propertyInstance
+                      Id="79e90cd4-b2a6-421a-8506-295621241a04"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="f214f598-2124-4b81-a990-ba3473ea2100"
+                  name="entity"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="191af63e-c6f0-4172-b3e6-5b2cd08c7a12"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.Data.Mapping%2Fbin%2FDebug%2FFoodSearch.Data.Mapping.dll Namespace%3DFoodSearch.Data.Mapping.Interface Type%3D(Name%3DIRepository GenericParameterCount%3D1) Member%3D(Name%3DEvict OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.Data.Mapping%2Fbin%2FDebug%2FFoodSearch.Data.Mapping.dll Namespace%3DFoodSearch.Data.Mapping.Interface Type%3D(Name%3DIRepository GenericParameterCount%3D1) ParameterIdentifier%3D0)]) ParameterIdentifier%3Dentity"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="2e97dab7-0f60-475c-bfb7-41d39e215b4c"
+                      LastKnownName="T"
+                      LastKnownLocation="Package3_1457.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="035413ea-1170-4770-b833-40851d11aa10"
+            name="Get‎&lt;TId‎&gt;"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="8ac00c5b-62d5-4e9a-aa4b-673a02e5b037"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.Data.Mapping%2Fbin%2FDebug%2FFoodSearch.Data.Mapping.dll Namespace%3DFoodSearch.Data.Mapping.Interface Type%3D(Name%3DIRepository GenericParameterCount%3D1) Member%3D(Name%3DGet GenericParameterCount%3D1 OverloadingParameters%3D[(ParameterIdentifier%3D0)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="4e864591-055b-41f8-b46b-11add28417c2"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="2f8b56ad-6dc1-4fe2-bffc-7983b14a2398">
+                    <propertyInstance
+                      Id="8d59665e-15dc-42d8-9659-bd87a7f46f3c"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="eddcdaeb-20d1-4660-ae32-e1e797023004">
+                    <propertyInstance
+                      Id="09b9b9be-c1b9-48e2-89b7-e53824fdca00"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="4cd28654-98e5-480a-bb49-6d0b30a0fa7e">
+                    <propertyInstance
+                      Id="ebc83b68-3450-4916-9025-4b1e458c190d"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b703fed6-770b-4861-b389-a5b4044deb7a">
+                    <propertyInstance
+                      Id="5a05ba9e-55ad-4cc7-a059-c8b7ea8b9d6c"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="8d431286-f386-4cac-8227-6b37443b2d8f">
+                    <propertyInstance
+                      Id="2db9c1af-4bf9-43fd-815c-e0fd5108b543"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="6e2066bc-3b5d-4973-90ce-5d227fedd49c">
+                    <propertyInstance
+                      Id="344dfa47-93a1-496f-9a74-5dc8a7d7d9b9"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="96cc251e-fdb4-4ecd-a884-976be98b7b30"
+                  direction="Return">
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="2e97dab7-0f60-475c-bfb7-41d39e215b4c"
+                      LastKnownName="T"
+                      LastKnownLocation="Package3_1457.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="f1e69ab4-5158-4408-876d-ec23b3ba7cf8"
+                  name="id"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="c12c1339-68cf-4e7a-a467-1187e03a8da8"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.Data.Mapping%2Fbin%2FDebug%2FFoodSearch.Data.Mapping.dll Namespace%3DFoodSearch.Data.Mapping.Interface Type%3D(Name%3DIRepository GenericParameterCount%3D1) Member%3D(Name%3DGet GenericParameterCount%3D1 OverloadingParameters%3D[(ParameterIdentifier%3D0)]) ParameterIdentifier%3Did"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="e9aff067-e068-4781-bd5a-cddd6411354e"
+                      LastKnownName="TId"
+                      LastKnownLocation="Package3_1457.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="e86ad145-d27f-4c8f-bb5b-7bc69b907e05"
+            name="TryDelete‎&lt;TId‎&gt;"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="2886d212-7c4c-41a1-9b32-feadd9391afc"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.Data.Mapping%2Fbin%2FDebug%2FFoodSearch.Data.Mapping.dll Namespace%3DFoodSearch.Data.Mapping.Interface Type%3D(Name%3DIRepository GenericParameterCount%3D1) Member%3D(Name%3DTryDelete GenericParameterCount%3D1 OverloadingParameters%3D[(ParameterIdentifier%3D0)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="8df00c70-dadf-47ed-95f2-aa003b038dfa"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a89efec5-fc6a-469d-aff2-d9c0e76c49c5">
+                    <propertyInstance
+                      Id="02209798-d5c6-40ff-81d8-51640f44ae51"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="63e4d7fe-2cd7-4b3d-b11d-505a9ed4b7bf">
+                    <propertyInstance
+                      Id="3833690f-fd13-4bc1-99cd-2d5893b9bb62"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c16e8c02-a8ae-47c4-a507-516d1641cb55">
+                    <propertyInstance
+                      Id="e797c9b9-c297-4775-a493-c94cc067a30c"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="dea1216b-6121-4d4f-8541-683c7f2200e5">
+                    <propertyInstance
+                      Id="cbf33b35-d040-4efb-98fd-4f8952ef800c"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="6befa1ac-cb30-4c40-957a-97be85debfe5">
+                    <propertyInstance
+                      Id="753c06d4-445d-44f2-acd2-0cd8272187f7"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="3f95b7fe-b75b-4eae-9b57-246ad5f46c87">
+                    <propertyInstance
+                      Id="ff85c082-4de0-45dc-9889-33c27cb36319"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="ec562c84-0756-4175-81e0-709dc60016a5"
+                  direction="Return">
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+                      LastKnownName="Boolean"
+                      LastKnownLocation="FoodSearch.Modeling.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="92f72da9-a897-4a69-b08f-589f866519bc"
+                  name="id"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="4035ec20-848a-4dc2-9db9-121071823ccf"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.Data.Mapping%2Fbin%2FDebug%2FFoodSearch.Data.Mapping.dll Namespace%3DFoodSearch.Data.Mapping.Interface Type%3D(Name%3DIRepository GenericParameterCount%3D1) Member%3D(Name%3DTryDelete GenericParameterCount%3D1 OverloadingParameters%3D[(ParameterIdentifier%3D0)]) ParameterIdentifier%3Did"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="e9aff067-e068-4781-bd5a-cddd6411354e"
+                      LastKnownName="TId"
+                      LastKnownLocation="Package3_1457.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="f7ef80ab-d420-4e8a-96fb-f80fc27a433c"
+            name="TryDelete"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="7b59edaf-d5d0-43e3-8515-99267baf3e14"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.Data.Mapping%2Fbin%2FDebug%2FFoodSearch.Data.Mapping.dll Namespace%3DFoodSearch.Data.Mapping.Interface Type%3D(Name%3DIRepository GenericParameterCount%3D1) Member%3D(Name%3DTryDelete OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.Data.Mapping%2Fbin%2FDebug%2FFoodSearch.Data.Mapping.dll Namespace%3DFoodSearch.Data.Mapping.Interface Type%3D(Name%3DIRepository GenericParameterCount%3D1) ParameterIdentifier%3D0)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="38228b21-431a-4c2b-883b-9d65d120e493"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ef9dd01d-1b83-43d2-8e85-7ccc4f377e93">
+                    <propertyInstance
+                      Id="e416060f-f49e-421e-b38b-75b9bc50efff"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="4967ba38-b68f-4277-bfb6-7de30d0ca475">
+                    <propertyInstance
+                      Id="92c9605e-4e58-4668-977f-7191ac324bc7"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="12130f44-2dfb-4364-8ec1-64fa08da6d3b">
+                    <propertyInstance
+                      Id="db687fb1-28e9-4e7b-8d5d-6346be10ae5d"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e81dc231-4a78-4e8e-8881-613f18ee1f02">
+                    <propertyInstance
+                      Id="4c9eb290-f975-4b28-8342-f302ec711c64"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="bb924817-a15d-458e-b846-e62c27d2c0d7">
+                    <propertyInstance
+                      Id="853090fc-eff6-494e-919e-37515faac32e"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c47928b8-0a96-4c86-95ad-4ac32de43469">
+                    <propertyInstance
+                      Id="99d1b0ea-f75f-40ab-8cb8-2e9b9e185efa"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="3abd925f-11c8-4d2d-8971-032dbf66ef15"
+                  direction="Return">
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+                      LastKnownName="Boolean"
+                      LastKnownLocation="FoodSearch.Modeling.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="37006fd9-e23c-4260-8e47-cf3131b11a67"
+                  name="value"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="25232cdd-8e28-46d1-b3a8-666e7a4e779b"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.Data.Mapping%2Fbin%2FDebug%2FFoodSearch.Data.Mapping.dll Namespace%3DFoodSearch.Data.Mapping.Interface Type%3D(Name%3DIRepository GenericParameterCount%3D1) Member%3D(Name%3DTryDelete OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.Data.Mapping%2Fbin%2FDebug%2FFoodSearch.Data.Mapping.dll Namespace%3DFoodSearch.Data.Mapping.Interface Type%3D(Name%3DIRepository GenericParameterCount%3D1) ParameterIdentifier%3D0)]) ParameterIdentifier%3Dvalue"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="2e97dab7-0f60-475c-bfb7-41d39e215b4c"
+                      LastKnownName="T"
+                      LastKnownLocation="Package3_1457.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="2e80a146-bfbd-4775-ad00-5fdb330c6346"
+            name="TryGet‎&lt;TId‎&gt;"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="9020692b-dccd-4bfc-9442-e156d2356d46"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.Data.Mapping%2Fbin%2FDebug%2FFoodSearch.Data.Mapping.dll Namespace%3DFoodSearch.Data.Mapping.Interface Type%3D(Name%3DIRepository GenericParameterCount%3D1) Member%3D(Name%3DTryGet GenericParameterCount%3D1 OverloadingParameters%3D[(ParameterIdentifier%3D0)%2C(Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.Data.Mapping%2Fbin%2FDebug%2FFoodSearch.Data.Mapping.dll Namespace%3DFoodSearch.Data.Mapping.Interface Type%3D(Name%3DIRepository GenericParameterCount%3D1) ParameterIdentifier%3D0 ParamKind%3DRef)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="19aa12d7-150e-4016-ac3f-0c1c35124725"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f2e23238-6dc5-459b-b069-f65e20986227">
+                    <propertyInstance
+                      Id="45ce8383-66d9-4012-8c0e-f46045a41272"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="6ceedfed-64e1-46ce-a02e-2464a01261a5">
+                    <propertyInstance
+                      Id="12b206d0-1e04-44c4-bee9-c15ad79aa0da"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="9186f8fe-277b-4a9b-89a2-8dc96079d7cd">
+                    <propertyInstance
+                      Id="213c4985-c4c5-4bce-8909-2a6c12ebaa1d"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d551d998-e2fc-420e-98b5-0e37464135e8">
+                    <propertyInstance
+                      Id="d9059070-4f0e-4661-ba0d-b6ae7636ab0e"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="326fb0ed-182e-419d-8440-6550a91f86d8">
+                    <propertyInstance
+                      Id="43fcaba9-ce48-46f7-81d3-ffa7d64e3263"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="4b31353d-37ad-4dc8-9abc-a65553376aa0">
+                    <propertyInstance
+                      Id="4c495266-0ed7-4c3a-8726-998046a2d0b3"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="7e9aeeb9-f47a-4191-897c-5b6aef5a6756"
+                  direction="Return">
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+                      LastKnownName="Boolean"
+                      LastKnownLocation="FoodSearch.Modeling.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="08543064-a3ce-4942-9d26-578a48e17ff8"
+                  name="id"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="46209f53-5cb3-4022-b7f7-4799f6df8e69"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.Data.Mapping%2Fbin%2FDebug%2FFoodSearch.Data.Mapping.dll Namespace%3DFoodSearch.Data.Mapping.Interface Type%3D(Name%3DIRepository GenericParameterCount%3D1) Member%3D(Name%3DTryGet GenericParameterCount%3D1 OverloadingParameters%3D[(ParameterIdentifier%3D0)%2C(Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.Data.Mapping%2Fbin%2FDebug%2FFoodSearch.Data.Mapping.dll Namespace%3DFoodSearch.Data.Mapping.Interface Type%3D(Name%3DIRepository GenericParameterCount%3D1) ParameterIdentifier%3D0 ParamKind%3DRef)]) ParameterIdentifier%3Did"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="e9aff067-e068-4781-bd5a-cddd6411354e"
+                      LastKnownName="TId"
+                      LastKnownLocation="Package3_1457.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="040d6cf7-820f-44ff-b703-34700ec159f4"
+                  name="entity"
+                  direction="Out">
+                  <referencesInternal>
+                    <reference
+                      Id="189fdb0a-b222-4083-8d3b-b84a53c3457e"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.Data.Mapping%2Fbin%2FDebug%2FFoodSearch.Data.Mapping.dll Namespace%3DFoodSearch.Data.Mapping.Interface Type%3D(Name%3DIRepository GenericParameterCount%3D1) Member%3D(Name%3DTryGet GenericParameterCount%3D1 OverloadingParameters%3D[(ParameterIdentifier%3D0)%2C(Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.Data.Mapping%2Fbin%2FDebug%2FFoodSearch.Data.Mapping.dll Namespace%3DFoodSearch.Data.Mapping.Interface Type%3D(Name%3DIRepository GenericParameterCount%3D1) ParameterIdentifier%3D0 ParamKind%3DRef)]) ParameterIdentifier%3Dentity"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="2e97dab7-0f60-475c-bfb7-41d39e215b4c"
+                      LastKnownName="T"
+                      LastKnownLocation="Package3_1457.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="8bb9fa61-8d69-43f2-8bc5-98e6af8a1052"
+            name="Update"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="030c6ae4-e38a-40f7-8e4e-5efd4c5301db"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.Data.Mapping%2Fbin%2FDebug%2FFoodSearch.Data.Mapping.dll Namespace%3DFoodSearch.Data.Mapping.Interface Type%3D(Name%3DIRepository GenericParameterCount%3D1) Member%3D(Name%3DUpdate OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.Data.Mapping%2Fbin%2FDebug%2FFoodSearch.Data.Mapping.dll Namespace%3DFoodSearch.Data.Mapping.Interface Type%3D(Name%3DIRepository GenericParameterCount%3D1) ParameterIdentifier%3D0)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="2bfce289-2f19-4b08-80cb-de21eabf7d23"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="7e2707d1-5fc1-40f7-b148-427a79306893">
+                    <propertyInstance
+                      Id="5d207da5-a0b0-48d5-8462-ec553fabbafc"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="2b798be0-4a8c-46bb-8db9-89417dce298a">
+                    <propertyInstance
+                      Id="7464dddb-0c02-4ff1-960c-6ad921f20e92"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="afaec1db-d16e-4c03-ae56-bc5f6f062b27">
+                    <propertyInstance
+                      Id="ee05050b-d37a-4c3c-a06c-ec60dd8fa814"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="544946e9-9a21-4c21-b1f6-b6a8e8080540">
+                    <propertyInstance
+                      Id="4c83d989-5dee-4eba-857d-80d227d7c1e5"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="94d3619e-3db6-48e2-bf7b-da666652391b">
+                    <propertyInstance
+                      Id="b77034df-87cb-4b66-9e6d-9fa759e361a7"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="21d325e0-ff06-4bd4-b179-daa0881c124f">
+                    <propertyInstance
+                      Id="11b57da7-bd2c-46ca-8ae2-1299179f1a71"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="e3d02fcb-3b95-43c9-8a78-8c4f52dbc59b"
+                  name="value"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="fff83de8-00f9-4f04-90fd-b7f878ef5024"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.Data.Mapping%2Fbin%2FDebug%2FFoodSearch.Data.Mapping.dll Namespace%3DFoodSearch.Data.Mapping.Interface Type%3D(Name%3DIRepository GenericParameterCount%3D1) Member%3D(Name%3DUpdate OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.Data.Mapping%2Fbin%2FDebug%2FFoodSearch.Data.Mapping.dll Namespace%3DFoodSearch.Data.Mapping.Interface Type%3D(Name%3DIRepository GenericParameterCount%3D1) ParameterIdentifier%3D0)]) ParameterIdentifier%3Dvalue"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="2e97dab7-0f60-475c-bfb7-41d39e215b4c"
+                      LastKnownName="T"
+                      LastKnownLocation="Package3_1457.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="9d756578-3fb1-43e7-9a43-8eafdca7670d"
+            name="GetAll"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="d41483f5-0b20-416b-b67b-956ed7d164df"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.Data.Mapping%2Fbin%2FDebug%2FFoodSearch.Data.Mapping.dll Namespace%3DFoodSearch.Data.Mapping.Interface Type%3D(Name%3DIRepository GenericParameterCount%3D1) Member%3DGetAll"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="e81f650e-39de-4d47-a691-5dac1e562153"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="213975bd-d4c1-4d79-8fb6-62b143859aac">
+                    <propertyInstance
+                      Id="ad3112df-8560-4b14-a847-bd74e7d76ee3"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e90d22bc-cb46-4db7-8e71-1022af99effd">
+                    <propertyInstance
+                      Id="51be2797-5148-4dce-adf4-5732c2163571"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="24f489a0-a8c3-4b94-803f-65b68d5935b7">
+                    <propertyInstance
+                      Id="6d57ac73-a416-4ab7-9fcb-71fc5cc7fcdf"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="73bff211-2f45-4202-91c5-14e9f12172ef">
+                    <propertyInstance
+                      Id="c6144932-e692-4279-a36b-1fc909bcea68"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="9213bd61-2a26-4e81-9bcb-1064c060e3c5">
+                    <propertyInstance
+                      Id="98329b57-853d-4887-b5ad-35f097a9f5c0"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="2fcbca9b-234f-43c7-a663-0bddd61a240e">
+                    <propertyInstance
+                      Id="a15b3582-e60d-4734-bbfa-84f6eb2bfff6"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="56875fef-6867-4cca-8548-67225f3b3626"
+                  direction="Return">
+                  <type_NamedElement>
+                    <interfaceMoniker
+                      Id="29711466-b3e9-45a5-8308-b5c7ab36e0a9"
+                      LastKnownName="IQueryOver&lt;T‎, T‎&gt;"
+                      LastKnownLocation="Package4_1457.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperations>
+      </Interface>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="e9aff067-e068-4781-bd5a-cddd6411354e"
+        name="TId">
+        <referencesInternal>
+          <reference
+            Id="1181d29e-81b1-4282-bdc2-379cfa7d64b1"
+            handle="viewcode://./CodeSchema_GenericParameter?Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.Data.Mapping%2Fbin%2FDebug%2FFoodSearch.Data.Mapping.dll Namespace%3DFoodSearch.Data.Mapping.Interface Type%3D(Name%3DIRepository GenericParameterCount%3D1) Member%3D(Name%3DTryGet GenericParameterCount%3D1 OverloadingParameters%3D[(ParameterIdentifier%3D0)%2C(Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.Data.Mapping%2Fbin%2FDebug%2FFoodSearch.Data.Mapping.dll Namespace%3DFoodSearch.Data.Mapping.Interface Type%3D(Name%3DIRepository GenericParameterCount%3D1) ParameterIdentifier%3D0 ParamKind%3DRef)]) ParameterIdentifier%3D0"
+            tag="ViewCode" />
+        </referencesInternal>
+      </undefinedType>
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

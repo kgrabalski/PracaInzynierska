@@ -6,7 +6,7 @@ using System.Web.Http;
 
 namespace FoodSearch.Presentation.Web.Site.Areas.RestaurantAdmin.Controllers
 {
-    [AreaAuthorize(Roles = "RestaurantAdmin, RestaurantEmployee")]
+    [AreaAuthorize(Roles = "RestaurantAdmin")]
     public class CuisineController : ApiController
     {
         private readonly IFoodSearchDomain _domain;

@@ -45,26 +45,24 @@ namespace FoodSearch.Presentation.Web.Site.Areas.SiteAdmin.Controllers
                 return Request.CreateResponse(HttpStatusCode.UnsupportedMediaType);
             }
             var httpRequest = HttpContext.Current.Request;
-            if (httpRequest.Files.Count > 0)
-            {
-                var file = httpRequest.Files[0];
-                byte[] logoBytes = new byte[file.ContentLength];
-                await file.InputStream.ReadAsync(logoBytes, 0, file.ContentLength);
+            if (httpRequest.Files.Count == 0) 
+                return Request.CreateResponse(HttpStatusCode.BadRequest);
 
-                var form = httpRequest.Form;
-                string restaurantName = form["Name"];
-                int addressId = int.Parse(form["AddressId"]);
-                string firstName = form["FirstName"];
-                string lastName = form["LastName"];
-                string userPassword = form["UserPassword"];
-                string userEmail = form["UserEmail"];
+            var file = httpRequest.Files[0];
+            byte[] logoBytes = new byte[file.ContentLength];
+            await file.InputStream.ReadAsync(logoBytes, 0, file.ContentLength);
 
-                int logoId = _domain.Core.AddImage(logoBytes, file.ContentType);
-                Guid? restaurantId = _domain.SiteAdmin.CreateRestaurant(restaurantName, addressId, logoId, userPassword, userEmail, firstName, lastName);
-                return Request.CreateResponse(restaurantId.HasValue ? HttpStatusCode.Created : HttpStatusCode.Conflict, new {Id = restaurantId});
-            }
-            
-            return Request.CreateResponse(HttpStatusCode.BadRequest);
+            var form = httpRequest.Form;
+            string restaurantName = form["Name"];
+            int addressId = int.Parse(form["AddressId"]);
+            string firstName = form["FirstName"];
+            string lastName = form["LastName"];
+            string userPassword = form["UserPassword"];
+            string userEmail = form["UserEmail"];
+
+            int logoId = _domain.Core.AddImage(logoBytes, file.ContentType);
+            Guid? restaurantId = _domain.SiteAdmin.CreateRestaurant(restaurantName, addressId, logoId, userPassword, userEmail, firstName, lastName);
+            return Request.CreateResponse(restaurantId.HasValue ? HttpStatusCode.Created : HttpStatusCode.Conflict, new {Id = restaurantId});
         }
 
         [HttpDelete]

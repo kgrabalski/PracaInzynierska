@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using FoodSearch.BusinessLogic.Domain.RestraurantAdmin.Models;
 using System;
+using System.Globalization;
 
 namespace FoodSearch.BusinessLogic.Domain.RestraurantAdmin.Mapping
 {
@@ -19,7 +20,7 @@ namespace FoodSearch.BusinessLogic.Domain.RestraurantAdmin.Mapping
                 .ForMember(x => x.Id, x => x.MapFrom(y => y.DishId))
                 .ForSourceMember(x => x.RestaurantId, x => x.Ignore())
                 .ForSourceMember(x => x.Restaurant, x => x.Ignore())
-                .ForMember(x => x.Price, x => x.ResolveUsing(y => y.Price.ToString("0.00")))
+                .ForMember(x => x.Price, x => x.ResolveUsing(y => y.Price.ToString("0.00", CultureInfo.GetCultureInfo("pl-pl"))))
                 .ForMember(x => x.DishGroup, x => x.ResolveUsing(y => y.DishGroup.Name));
 
             string[] days = { "", "Poniedziałek", "Wtorek", "Środa", "Czwartek", "Piątek", "Sobota", "Niedziela" };

@@ -25,14 +25,11 @@ namespace FoodSearch.Presentation.Web.Site.Areas.RestaurantAdmin.Controllers
         }
 
         [HttpGet]
+        [ValidateModel]
         public HttpResponseMessage GetOpinions([ModelBinder] RestaurantUser ru, [FromUri] OpinionFilterModel filter)
         {
-            if (ModelState.IsValid)
-            {
-                var opinions = _domain.Restaurant.GetOpinions(ru.RestaurantId, filter.Rating, filter.Page);
-                return Request.CreateResponse(HttpStatusCode.OK, opinions);
-            }
-            return Request.CreateErrorResponse(HttpStatusCode.BadRequest, ModelState);
+            var opinions = _domain.Restaurant.GetOpinions(ru.RestaurantId, filter.Rating, filter.Page);
+            return Request.CreateResponse(HttpStatusCode.OK, opinions);
         } 
     }
 }

@@ -48,3 +48,7 @@ table .th175 {
 #pageDishes fieldset {
     margin-top: 25px;
 }
+
+#pageDishes table th:first-of-type {
+    width: 64px;
+}

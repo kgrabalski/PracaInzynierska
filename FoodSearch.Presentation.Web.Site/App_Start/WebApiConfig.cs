@@ -17,6 +17,10 @@ namespace FoodSearch.Presentation.Web.Site.App_Start
             var appXmlType = config.Formatters.XmlFormatter.SupportedMediaTypes.FirstOrDefault(t => t.MediaType == "application/xml");
             config.Formatters.XmlFormatter.SupportedMediaTypes.Remove(appXmlType);
 
+#if DEBUG
+            config.Formatters.JsonFormatter.Indent = true;
+#endif
+
             config.DependencyResolver = new NinjectDependencyResolver(MvcApplication.DependencyResolver);
 
             config.Services.Insert(typeof(ModelBinderProvider), 0, new RestaurantUserModelBinderProvider());

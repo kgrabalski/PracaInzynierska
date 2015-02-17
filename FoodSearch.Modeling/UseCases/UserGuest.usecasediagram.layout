@@ -1,0 +1,128 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<useCaseDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="UserGuest">
+  <useCaseModelRootMoniker Id="31057ef5-d88f-4058-9ab1-05c105dfdfde" />
+  <nestedChildShapes>
+    <actorShape Id="d98472e4-78dd-4211-83fd-ee36df7a6121" absoluteBounds="0.75, 2.875, 0.5, 0.5" isReference="false" heightOffset="0">
+      <actorMoniker Id="0a10d583-e585-40e3-9c3a-713c5721407c" LastKnownName="Użytkownik niezalogowany (gość)" />
+      <relativeChildShapes />
+    </actorShape>
+    <commentShape Id="4e1c78e4-0a6b-4069-a2e3-b9f2b1440cff" absoluteBounds="4.625, 3.75, 2.625, 0.375" customColor="251, 247, 200">
+      <commentMoniker Id="c90d38a5-7742-4c9e-8791-f79b4c41f290" />
+      <relativeChildShapes />
+    </commentShape>
+    <SubsystemShape Id="dea71a91-b4f5-40a9-af83-3a2c74f74fe9" absoluteBounds="1.875, 0.5, 5.375, 3.125" customColor="White">
+      <subsystemMoniker Id="650cdbf9-031e-43e2-a79f-90543a88c06e" LastKnownName="Aplikacja mobilna" />
+      <nestedChildShapes>
+        <useCaseShape Id="d9f1fa24-499a-44ae-a6e6-77dd75b8e4d7" absoluteBounds="2.125, 1, 1, 0.5" customColor="238, 237, 131" heightOffset="0">
+          <useCaseMoniker Id="4cf36683-5a88-4de6-8015-a91484ba5cf2" LastKnownName="Rejestracja" />
+          <relativeChildShapes />
+        </useCaseShape>
+        <useCaseShape Id="e8cb56c5-9888-4f32-b0bb-c904c0931752" absoluteBounds="3.375, 1, 1, 0.5" customColor="238, 237, 131" heightOffset="0">
+          <useCaseMoniker Id="7e00dda3-786e-41d4-b6bd-685d73367c4d" LastKnownName="Logowanie" />
+          <relativeChildShapes />
+        </useCaseShape>
+        <useCaseShape Id="9166f260-eab6-4c3d-9088-8b38b008725b" absoluteBounds="4.625, 1, 1, 0.5" customColor="238, 237, 131" heightOffset="0">
+          <useCaseMoniker Id="2f66a361-638a-4cd4-8cf3-2ecc244a9f91" LastKnownName="Wybierz miasto" />
+          <relativeChildShapes />
+        </useCaseShape>
+        <useCaseShape Id="550839f0-94a1-465f-978e-0decf417b46c" absoluteBounds="5.875, 1, 1, 0.5" customColor="238, 237, 131" heightOffset="0">
+          <useCaseMoniker Id="3b5fa686-d7ab-4733-a3c3-b51c11dff1da" LastKnownName="Wybierz ulicę" />
+          <relativeChildShapes />
+        </useCaseShape>
+        <useCaseShape Id="6d756c96-de14-4b43-a2f5-6c71508ca00a" absoluteBounds="2.125, 1.75, 1.25, 0.5" customColor="238, 237, 131" heightOffset="0">
+          <useCaseMoniker Id="6f0d1b1f-47c4-422e-b0d7-fbba15dc1ee8" LastKnownName="Wybierz numer budynku" />
+          <relativeChildShapes />
+        </useCaseShape>
+        <useCaseShape Id="1dd7ee91-25e2-452e-92f3-7bce69c613e7" absoluteBounds="3.625, 1.75, 1, 0.5" customColor="238, 237, 131" heightOffset="0">
+          <useCaseMoniker Id="5c3afe6a-fdbc-4b6d-91b1-c18c81038b9e" LastKnownName="Szukaj restauracji" />
+          <relativeChildShapes />
+        </useCaseShape>
+        <useCaseShape Id="31eb6dd9-b6c3-4934-a522-304e3941e93f" absoluteBounds="4.875, 1.75, 1.25, 0.5" customColor="238, 237, 131" heightOffset="0">
+          <useCaseMoniker Id="b0b59946-61bc-4fff-8453-0cd9cf74e7c2" LastKnownName="Wyświetl menu restauracji" />
+          <relativeChildShapes />
+        </useCaseShape>
+        <useCaseShape Id="263dd769-46ac-4d51-a62f-69c9c67ec9ff" absoluteBounds="2.125, 2.5, 1.375, 0.5" customColor="238, 237, 131" heightOffset="0">
+          <useCaseMoniker Id="14f164a0-b45e-4e0e-9df6-04c2b15a2c67" LastKnownName="Wyświetl opinie o restauracji" />
+          <relativeChildShapes />
+        </useCaseShape>
+        <useCaseShape Id="2b52af4c-63f1-4c9e-a213-79104e6b2514" absoluteBounds="3.75, 2.5, 1, 0.5" customColor="238, 237, 131" heightOffset="0">
+          <useCaseMoniker Id="76e857b3-4a75-4794-bcef-362b18611757" LastKnownName="Dodaj danie do koszyka" />
+          <relativeChildShapes />
+        </useCaseShape>
+        <useCaseShape Id="c7a4c1ab-7bae-49f8-9fc5-745314afc9cc" absoluteBounds="5, 2.5, 1, 0.5" customColor="238, 237, 131" heightOffset="0">
+          <useCaseMoniker Id="00f1c1eb-55d7-4a3d-bf13-1c7a95086dee" LastKnownName="Usuń danie z koszyka" />
+          <relativeChildShapes />
+        </useCaseShape>
+        <useCaseShape Id="2cb9e295-b7d5-4050-b3b7-a6874e601e98" absoluteBounds="6.125, 2.5, 1, 0.5" customColor="238, 237, 131" heightOffset="0">
+          <useCaseMoniker Id="dff5d892-0635-41f2-8b3f-537f1672038d" LastKnownName="Wyświelt koszyk" />
+          <relativeChildShapes />
+        </useCaseShape>
+      </nestedChildShapes>
+    </SubsystemShape>
+    <useCaseAssociationConnector edgePoints="[(1.25 : 3.05043859649123); (1.875 : 2.8640350877193)]" fixedFrom="NotFixed" fixedTo="NotFixed" customColor="113, 111, 110" sourceMultiplicity="" targetMultiplicity="">
+      <associationMoniker Id="2bde8841-7799-4aa0-b6f0-9f041932e72c" />
+      <relativeChildShapes />
+      <nodes>
+        <actorShapeMoniker Id="d98472e4-78dd-4211-83fd-ee36df7a6121" />
+        <SubsystemShapeMoniker Id="dea71a91-b4f5-40a9-af83-3a2c74f74fe9" />
+      </nodes>
+    </useCaseAssociationConnector>
+    <SubsystemShape Id="8489ceba-6ad0-4b2b-be9c-29069ca80561" absoluteBounds="1.875, 5.625, 5.375, 1.125" customColor="White">
+      <subsystemMoniker Id="bc30c0df-4211-429a-9650-bee9405b02b1" LastKnownName="Inne" />
+      <nestedChildShapes>
+        <useCaseShape Id="177e3638-ae41-45a2-8f81-b53b0597a1de" absoluteBounds="2.125, 6.125, 1, 0.5" customColor="238, 237, 131" heightOffset="0">
+          <useCaseMoniker Id="bcf27fcc-b1bf-4930-9c1a-2552364a7488" LastKnownName="Aktywacja konta" />
+          <relativeChildShapes />
+        </useCaseShape>
+      </nestedChildShapes>
+    </SubsystemShape>
+    <useCaseAssociationConnector edgePoints="[(1.25 : 3.33991228070175); (3.90816326530612 : 5.625)]" fixedFrom="NotFixed" fixedTo="NotFixed" customColor="113, 111, 110" sourceMultiplicity="" targetMultiplicity="">
+      <associationMoniker Id="303840b5-ef8b-4af2-9ec0-2f2ebfd35814" />
+      <relativeChildShapes />
+      <nodes>
+        <actorShapeMoniker Id="d98472e4-78dd-4211-83fd-ee36df7a6121" />
+        <SubsystemShapeMoniker Id="8489ceba-6ad0-4b2b-be9c-29069ca80561" />
+      </nodes>
+    </useCaseAssociationConnector>
+    <SubsystemShape Id="2538b671-0912-4240-9a70-e744abb90804" absoluteBounds="1.875, 4.375, 5.375, 1.125" customColor="White">
+      <subsystemMoniker Id="f695d98b-1e81-4091-b64d-1e2f4709faec" LastKnownName="Aplikacja internetowa" />
+      <nestedChildShapes>
+        <useCaseShape Id="d5ae6af0-c50e-4597-a5fd-83bcdc2562a2" absoluteBounds="2.125, 4.875, 1, 0.5" customColor="238, 237, 131" heightOffset="0">
+          <useCaseMoniker Id="cb749dd3-000c-4337-9131-40063109e5f2" LastKnownName="Resetowanie hasła" />
+          <relativeChildShapes />
+        </useCaseShape>
+        <useCaseShape Id="8bde6a8d-4d70-4c9e-ab1b-7c0ee81611b3" absoluteBounds="3.375, 4.875, 1.25, 0.5" customColor="238, 237, 131" heightOffset="0">
+          <useCaseMoniker Id="6ded0038-87b8-4dc6-be45-de32e6614720" LastKnownName="Kontakt z administratorem" />
+          <relativeChildShapes />
+        </useCaseShape>
+        <useCaseShape Id="cae59c52-fc7a-41b8-9345-77191b1f2f50" absoluteBounds="4.875, 4.875, 1.375, 0.5" customColor="238, 237, 131" heightOffset="0">
+          <useCaseMoniker Id="15c50581-b964-474f-b7ef-0e585ef2aa25" LastKnownName="Wyświetlenie listy wsp. restauracji" />
+          <relativeChildShapes />
+        </useCaseShape>
+      </nestedChildShapes>
+    </SubsystemShape>
+    <useCaseAssociationConnector edgePoints="[(4.5625 : 4.375); (4.5625 : 3.625)]" fixedFrom="NotFixed" fixedTo="NotFixed" customColor="113, 111, 110" sourceMultiplicity="" targetMultiplicity="">
+      <associationMoniker Id="067bdf93-4aba-4de3-84db-bfc85b08c1bd" />
+      <relativeChildShapes />
+      <nodes>
+        <SubsystemShapeMoniker Id="2538b671-0912-4240-9a70-e744abb90804" />
+        <SubsystemShapeMoniker Id="dea71a91-b4f5-40a9-af83-3a2c74f74fe9" />
+      </nodes>
+    </useCaseAssociationConnector>
+    <commentConnector edgePoints="[(5.9375 : 4.125); (5.9375 : 4.375)]" fixedFrom="NotFixed" fixedTo="NotFixed" TargetRelationshipDomainClassId="217d6bd0-42ed-4e7f-ad2b-af3ef5142428" customColor="Black">
+      <relativeChildShapes />
+      <nodes>
+        <commentShapeMoniker Id="4e1c78e4-0a6b-4069-a2e3-b9f2b1440cff" />
+        <SubsystemShapeMoniker Id="2538b671-0912-4240-9a70-e744abb90804" />
+      </nodes>
+    </commentConnector>
+    <useCaseAssociationConnector edgePoints="[(1.25 : 3.25219298245614); (3.45689655172414 : 4.375)]" fixedFrom="NotFixed" fixedTo="NotFixed" customColor="113, 111, 110" sourceMultiplicity="" targetMultiplicity="">
+      <associationMoniker Id="842bae05-415c-47a5-aa8d-e468daeb1f19" />
+      <relativeChildShapes />
+      <nodes>
+        <actorShapeMoniker Id="d98472e4-78dd-4211-83fd-ee36df7a6121" />
+        <SubsystemShapeMoniker Id="2538b671-0912-4240-9a70-e744abb90804" />
+      </nodes>
+    </useCaseAssociationConnector>
+  </nestedChildShapes>
+</useCaseDiagram>

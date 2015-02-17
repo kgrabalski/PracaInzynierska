@@ -9,8 +9,10 @@
     <title>FoodSearch | Dashboard</title>
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name='viewport'>
 
-    @Styles.Render("~/css/admin/common")
-
+    <link rel="stylesheet" href="~/Content/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/Content/Admin/font-awesome.css" />
+    <link rel="stylesheet" href="~/Content/Admin/AdminLTE.css" />
+    <link rel="stylesheet" href="~/Content/Selectize/css/selectize.css" />
     @RenderSection("HeadSection", false)
 </head>
 <body class="skin-blue">
@@ -68,7 +70,15 @@
     </header>
     @RenderBody()
 
-    @Scripts.Render("~/js/admin/common")
+    <script src="~/Scripts/jquery-2.1.3.min.js"></script>
+    <script src="~/Content/Selectize/js/standalone/selectize.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="~/Scripts/angular.min.js"></script>
+    <script src="~/Scripts/angular-route.min.js"></script>
+    <script src="~/Scripts/angular-resource.min.js"></script>
+    <script src="~/Scripts/angular-filter.min.js"></script>
+    <script src="~/Scripts/angular-ui/ui-bootstrap-tpls.min.js"></script>
+    <script src="~/Scripts/app.min.js"></script>
     @RenderSection("ScriptSection", false)
 </body>
 </html>

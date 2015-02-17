@@ -9,6 +9,7 @@ using System.Web.Http.ModelBinding;
 using FoodSearch.BusinessLogic.Domain.FoodSearch.Interface;
 using FoodSearch.BusinessLogic.Domain.RestraurantAdmin.Models;
 using FoodSearch.Presentation.Web.Site.Areas.RestaurantAdmin.Models;
+using FoodSearch.Presentation.Web.Site.Helpers;
 using FoodSearch.Presentation.Web.Site.Models;
 
 namespace FoodSearch.Presentation.Web.Site.Areas.RestaurantAdmin.Controllers
@@ -36,25 +37,19 @@ namespace FoodSearch.Presentation.Web.Site.Areas.RestaurantAdmin.Controllers
         }
 
         [HttpPost]
+        [ValidateModel]
         public HttpResponseMessage AddEmployee([ModelBinder] RestaurantUser ru, AddEmployeeModel model)
         {
-            if (ModelState.IsValid)
-            {
-                var employee = _domain.RestaurantAdmin.AddRestaurantEmployee(ru.RestaurantId, model.FirstName, model.LastName, model.Password);
-                return Request.CreateResponse(HttpStatusCode.Created, employee);
-            }
-            return Request.CreateErrorResponse(HttpStatusCode.BadRequest, ModelState);
+            var employee = _domain.RestaurantAdmin.AddRestaurantEmployee(ru.RestaurantId, model.FirstName, model.LastName, model.Password);
+            return Request.CreateResponse(HttpStatusCode.Created, employee);
         }
 
         [HttpPut]
+        [ValidateModel]
         public HttpResponseMessage ResetPassword([FromUri] Guid id, ResetEmployeePasswordModel model)
         {
-            if (ModelState.IsValid)
-            {
-                _domain.RestaurantAdmin.ResetEmployeePassword(id, model.Password);
-                return Request.CreateResponse(HttpStatusCode.OK);
-            }
-            return Request.CreateErrorResponse(HttpStatusCode.BadRequest, ModelState);
+            _domain.RestaurantAdmin.ResetEmployeePassword(id, model.Password);
+            return Request.CreateResponse(HttpStatusCode.OK);
         }
     }
 }

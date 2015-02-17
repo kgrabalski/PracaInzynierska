@@ -7,11 +7,11 @@
 
 @section ScriptSection
 {
-    @Scripts.Render("~/js/frontend/register")
+    <script src="~/Scripts/Frontend/Register.js"></script>
 }
 
 <div class="container">
-    <div id="signupbox" style="margin-top:50px" class="mainbox col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1">
+    <div id="signupbox" style="margin-top: 50px" class="mainbox col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1">
         <div class="panel panel-info">
             <div class="panel-heading">
                 <div class="panel-title">Rejestracja</div>
@@ -19,18 +19,18 @@
             <div class="panel-body">
                 <form id="signupform" class="form-horizontal" role="form" method="POST" action="@Url.Action("Register")">
 
-                    <div id="signupalert" style="display:none" class="alert alert-danger">
+                    <div id="signupalert" style="display: none" class="alert alert-danger">
                         <p>Error:</p>
                         @Html.ValidationSummary()
                     </div>
-                    
+
                     <div class="form-group has-feedback" id="groupFName">
                         <label for="FirstName" class="col-md-3 control-label">Imię</label>
                         <div class="col-md-9">
                             <input type="text" class="form-control" name="FirstName" placeholder="Imię" value="@Model.FirstName" required>
                         </div>
                     </div>
-                
+
                     <div class="form-group has-feedback" id="groupLName">
                         <label for="LastName" class="col-md-3 control-label">Nazwisko</label>
                         <div class="col-md-9">
@@ -44,28 +44,28 @@
                             <input type="email" id="emailInput" class="form-control" name="Email" placeholder="Adres email" value="@Model.Email" required>
                         </div>
                     </div>
-                    
+
                     <div class="form-group has-feedback">
                         <label for="PhoneNumber" class="col-md-3 control-label">Numer telefonu</label>
                         <div class="col-md-9">
                             <input type="number" class="form-control" name="PhoneNumber" placeholder="Numer telefonu" value="@Model.PhoneNumber" required>
                         </div>
                     </div>
-                    
+
                     <div class="form-group has-feedback">
                         <label for="Password" class="col-md-3 control-label">Hasło</label>
                         <div class="col-md-9">
                             <input type="password" class="form-control" name="Password" placeholder="Hasło" required>
                         </div>
                     </div>
-                    
+
                     <div class="form-group has-feedback">
                         <label for="RepeatPassword" class="col-md-3 control-label">Powtórz hasło</label>
                         <div class="col-md-9">
                             <input type="password" class="form-control" name="RepeatPassword" placeholder="Powtórz hasło" required>
                         </div>
                     </div>
-                    
+
                     <div class="form-group">
                         <label for="selectCity" class="col-md-3 control-label">Miasto</label>
                         <div class="col-md-9">
@@ -84,7 +84,7 @@
                             <select id="selectNumber" name="AddressId" required placeholder="Numer budynku"></select>
                         </div>
                     </div>
-                    
+
                     <div class="form-group">
                         <label for="LastName" class="col-md-3 control-label">Numer mieszkania</label>
                         <div class="col-md-9">
@@ -97,7 +97,7 @@
                             <input type="submit" id="btn-signup" class="btn btn-primary btn-block" value="Zarejestruj się"/>
                         </div>
                     </div>
-                    
+
 
                     <div class="form-group">
                         <div class="col-md-12 control">
@@ -106,15 +106,8 @@
                             </div>
                         </div>
                     </div>
-
-
-
                 </form>
             </div>
         </div>
-
-
-
-
-    </div> 
+    </div>
 </div>

@@ -22,7 +22,9 @@ namespace FoodSearch.BusinessLogic.Domain.RestraurantAdmin.Interface
         bool EditDishGroup(Guid restaurantId, int dishGroupId, string newGroupName);
         bool DeleteDishGroup(Guid restaurantId, int dishGroupId);
         IEnumerable<Dish> GetDishes(Guid restaurantId);
-        Dish CreateDish(Guid restaurantId, string dishName, int dishGroupId, decimal price);
+        Dish CreateDish(Guid restaurantId, string dishName, int dishGroupId, decimal price, int imageId);
+        Dish EditDish(Guid restarantId, int dishId, string dishName, int dishGroupId, decimal price);
+        bool DeleteDish(Guid restaurantId, int dishId);
         Guid GetUserId(string email);
         Guid GetUserRestaurant(Guid userId);
         IEnumerable<OpeningHour> GetOpeningHours(Guid restaurantId);

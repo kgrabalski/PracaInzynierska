@@ -200,7 +200,7 @@ namespace FoodSearch.BusinessLogic.Domain.RestraurantAdmin
             }
         }
 
-        public DishDto CreateDish(Guid restaurantId, string dishName, int dishGroupId, decimal price)
+        public DishDto CreateDish(Guid restaurantId, string dishName, int dishGroupId, decimal price, int imageId)
         {
             using (var rep = _provider.GetRepository<Dish>())
             {
@@ -214,12 +214,46 @@ namespace FoodSearch.BusinessLogic.Domain.RestraurantAdmin
                     RestaurantId = restaurantId,
                     DishName = dishName,
                     DishGroupId = dishGroupId,
-                    Price = price
+                    Price = price,
+                    ImageId = imageId
                 };
                 int dishId = rep.Create<int>(newDish);
 
                 rep.Evict(newDish);
                 return rep.Get(dishId).Map<DishDto>();
+            }
+        }
+
+        public DishDto EditDish(Guid restarantId, int dishId, string dishName, int dishGroupId, decimal price)
+        {
+            using (var rep = _provider.GetRepository<Dish>())
+            {
+                var dish = rep.GetAll()
+                    .Where(x => x.RestaurantId == restarantId && x.DishId == dishId)
+                    .SingleOrDefault();
+                if (dish == null) return null;
+
+                dish.DishName = dishName;
+                dish.DishGroupId = dishGroupId;
+                dish.Price = price;
+                rep.Update(dish);
+                rep.Evict(dish);
+
+                return rep.Get(dishId).Map<DishDto>();
+            }
+        }
+
+        public bool DeleteDish(Guid restaurantId, int dishId)
+        {
+            using (var rep = _provider.GetRepository<Dish>())
+            using (var repSp = _provider.StoredProcedure)
+            {
+                var dish = rep.GetAll()
+                    .Where(x => x.RestaurantId == restaurantId && x.DishId == dishId)
+                    .SingleOrDefault();
+                bool result = rep.TryDelete(dish);
+                repSp.ClearImagesTable();
+                return result;
             }
         }
 

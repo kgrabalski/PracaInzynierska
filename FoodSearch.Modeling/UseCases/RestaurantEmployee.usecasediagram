@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="d133f5bf-9cee-420d-8098-7ed5e3d0cb0b" name="RestaurantEmployee" linkedPackageId="df932861-ddf8-47d6-ad0d-98b31ed25c46" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
+  <profileInstances>
+    <packageHasProfileInstances Id="59e6af23-e6eb-42ef-ab3f-472d46ddc8b9">
+      <profileInstance Id="351dd3a7-d8dd-4e2b-a55d-c4e3864835ab" name="CSharpProfile">
+        <elementDefinition Id="3201879c-1ae7-4ee8-b00b-8b08e4b8449d" />
+      </profileInstance>
+      <elementDefinition Id="de54e42b-dae9-49d1-a758-f6391f1e16d7" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <useCaseModelRootHasTypes>
+      <actor Id="5d2f929f-b19e-4994-b982-efcfdfb0ca99" name="Pracownik restauracji" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="2151ba32-d4dd-41c5-89e8-52b4e9dd1a32" />
+        <targetEnds>
+          <association Id="605b26b1-8b88-4f6a-b771-98b59afd4164" isDerived="false" sourceEndRoleName="Użytkownik niezalogowany (gość)" targetEndRoleName="Aplikacja mobilna" isLeaf="false" isAbstract="false">
+            <subsystemMoniker Id="0a4e59c7-91dc-40d0-86ec-a5fb2bd2c99c" LastKnownName="Aplikacja internetowa" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="c664b471-e411-405a-ab08-983dcd7cf81b" name="Użytkownik niezalogowany (gość)" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="a418f5fb-4634-4d0f-a280-cfb41e14d546" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="62b2fb59-12dc-4957-b8ea-50ef486264e2" name="Aplikacja mobilna" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="a217390b-0061-448d-aaf7-354a95d477b4" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="c82b7db3-ea8b-4b6b-8b74-05296fb41dcc" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <subsystem Id="0a4e59c7-91dc-40d0-86ec-a5fb2bd2c99c" name="Aplikacja internetowa" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="8c90110c-f75d-495c-ab06-422e64a1ff1a" />
+      </subsystem>
+    </useCaseModelRootHasTypes>
+    <packageHasNamedElement>
+      <useCase Id="46e8d1e7-2942-4360-8756-4dc6c6bb9318" name="Wyświetl zamówienia" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="d80aa06a-b43c-4bd7-830d-e51fa4d0b32c" />
+        <subjects>
+          <subsystemMoniker Id="0a4e59c7-91dc-40d0-86ec-a5fb2bd2c99c" LastKnownName="Aplikacja internetowa" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="e83884bd-25e8-4a8d-864c-699432f7bc60" name="Potwierdź zamówienie" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="0e24b045-c51f-4b93-906a-3dbbf1d5d19e" />
+        <subjects>
+          <subsystemMoniker Id="0a4e59c7-91dc-40d0-86ec-a5fb2bd2c99c" LastKnownName="Aplikacja internetowa" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="6c4e14fa-7bbd-4423-8ffa-d6ad83e0b483" name="Anuluj zamówienie" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="8c776ac9-c78a-4d99-9d74-74a4c01c1a6f" />
+        <subjects>
+          <subsystemMoniker Id="0a4e59c7-91dc-40d0-86ec-a5fb2bd2c99c" LastKnownName="Aplikacja internetowa" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="2a8bf0b2-670b-4a4e-add2-76f36d9d567e" name="Zamknij zamówienie" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="499c5f01-f1b6-4684-ba5b-d6456c4ecda0" />
+        <subjects>
+          <subsystemMoniker Id="0a4e59c7-91dc-40d0-86ec-a5fb2bd2c99c" LastKnownName="Aplikacja internetowa" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+  </packagedElements>
+  <package Id="df932861-ddf8-47d6-ad0d-98b31ed25c46" name="FoodSearch.Modeling">
+    <elementDefinition Id="36ea5af6-e5bd-4839-9f43-52f120ba2311" />
+    <profileInstances>
+      <packageHasProfileInstances Id="3b2c6338-dc43-4d11-afa2-419ddeb5178f">
+        <profileInstance Id="524643f5-1764-4b57-9d0e-ad643e1e72b4" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="5579c33c-a467-4af2-8285-2e37900b8a84">
+        <profileInstance Id="98eac696-1ae5-45fc-85f6-b7b609a2c163" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+    </profileInstances>
+  </package>
+</useCaseModelRoot>

@@ -33,14 +33,11 @@ namespace FoodSearch.Presentation.Web.Site.Areas.RestaurantAdmin.Controllers
 
         //add new opening hour
         [HttpPost]
+        [ValidateModel]
         public HttpResponseMessage Create([ModelBinder] RestaurantUser ru, OpeningHourModel oh)
         {
-            if (ModelState.IsValid)
-            {
-                var result = _domain.RestaurantAdmin.CreateOpeningHour(ru.RestaurantId, oh.Day, oh.TimeFrom, oh.TimeTo);
-                return Request.CreateResponse(result != null ? HttpStatusCode.Created : HttpStatusCode.Conflict, result);
-            }
-            return Request.CreateErrorResponse(HttpStatusCode.BadRequest, ModelState);
+            var result = _domain.RestaurantAdmin.CreateOpeningHour(ru.RestaurantId, oh.Day, oh.TimeFrom, oh.TimeTo);
+            return Request.CreateResponse(result != null ? HttpStatusCode.Created : HttpStatusCode.Conflict, result);
         }
 
         //delete opening hour

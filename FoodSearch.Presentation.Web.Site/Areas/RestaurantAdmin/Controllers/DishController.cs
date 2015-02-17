@@ -1,10 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
+using System.Threading.Tasks;
+using System.Web;
 using System.Web.Http;
 using System.Web.Http.ModelBinding;
+using System.Web.Http.Results;
 
 using FoodSearch.BusinessLogic.Domain.FoodSearch.Interface;
 using FoodSearch.BusinessLogic.Domain.RestraurantAdmin.Models;
@@ -14,7 +18,7 @@ using FoodSearch.Presentation.Web.Site.Models;
 
 namespace FoodSearch.Presentation.Web.Site.Areas.RestaurantAdmin.Controllers
 {
-    [AreaAuthorize(Roles = "RestaurantAdmin, RestaurantEmployee")]
+    [AreaAuthorize(Roles = "RestaurantAdmin")]
     public class DishController : ApiController
     {
         private readonly IFoodSearchDomain _domain;
@@ -24,23 +28,55 @@ namespace FoodSearch.Presentation.Web.Site.Areas.RestaurantAdmin.Controllers
             _domain = domain;
         }
 
-        //get list of restaurant dishes
         [HttpGet]
         public IEnumerable<Dish> GetAll([ModelBinder] RestaurantUser ru)
         {
             return _domain.RestaurantAdmin.GetDishes(ru.RestaurantId);
         } 
 
-        //create new dish
         [HttpPost]
-        public HttpResponseMessage Create([ModelBinder] RestaurantUser ru, DishModel dish)
+        public async Task<HttpResponseMessage> CreateDish([ModelBinder] RestaurantUser ru)
         {
-            if (ModelState.IsValid)
+            if (!Request.Content.IsMimeMultipartContent())
             {
-                var result = _domain.RestaurantAdmin.CreateDish(ru.RestaurantId, dish.DishName, dish.DishGroupId, dish.Price);
-                return Request.CreateResponse(result != null ? HttpStatusCode.Created : HttpStatusCode.Conflict, result);
+                return Request.CreateResponse(HttpStatusCode.UnsupportedMediaType);
             }
-            return Request.CreateErrorResponse(HttpStatusCode.BadRequest, ModelState);
+            var request = HttpContext.Current.Request;
+            if (request.Files.Count == 0)
+                return Request.CreateResponse(HttpStatusCode.BadRequest);
+
+            var file = request.Files[0];
+            byte[] imageBytes = new byte[file.ContentLength];
+            await file.InputStream.ReadAsync(imageBytes, 0, file.ContentLength);
+
+            var form = request.Form;
+            string dishName = form["DishName"];
+            int dishGroupId = int.Parse(form["DishGroupId"]);
+            decimal price = decimal.Parse(form["Price"], CultureInfo.InvariantCulture);
+
+            if (string.IsNullOrEmpty(dishName) || dishGroupId <= 0 || price <= 0)
+            {
+                return Request.CreateResponse(HttpStatusCode.BadRequest);
+            }
+
+            int imageId = _domain.Core.AddImage(imageBytes, file.ContentType);
+            var result = _domain.RestaurantAdmin.CreateDish(ru.RestaurantId, dishName, dishGroupId, price, imageId);
+            return Request.CreateResponse(result != null ? HttpStatusCode.Created : HttpStatusCode.Conflict, result);
+        }
+
+        [HttpDelete]
+        public HttpResponseMessage DeleteDish([ModelBinder] RestaurantUser ru, [FromUri] int id)
+        {
+            bool result = _domain.RestaurantAdmin.DeleteDish(ru.RestaurantId, id);
+            return Request.CreateResponse(result ? HttpStatusCode.OK : HttpStatusCode.NotFound);
+        }
+
+        [HttpPut]
+        [ValidateModel]
+        public HttpResponseMessage EditDish([ModelBinder] RestaurantUser ru, [FromUri] int id, DishModel model)
+        {
+            var result = _domain.RestaurantAdmin.EditDish(ru.RestaurantId, id, model.DishName, model.DishGroupId, model.Price);
+            return Request.CreateResponse(result != null ? HttpStatusCode.OK : HttpStatusCode.NotFound);
         }
     }
 }

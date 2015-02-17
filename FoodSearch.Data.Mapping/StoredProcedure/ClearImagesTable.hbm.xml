@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="FoodSearch.Data.Mapping" namespace="FoodSearch.Data.Mapping.StoredProcedure" auto-import="false">
+  <sql-query name="ClearImagesTable" read-only="true">
+    <![CDATA[ 
+    exec dbo.ClearImagesTable
+    ]]>
+  </sql-query>
+</hibernate-mapping>

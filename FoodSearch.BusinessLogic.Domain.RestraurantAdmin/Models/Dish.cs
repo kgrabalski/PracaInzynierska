@@ -8,5 +8,6 @@ namespace FoodSearch.BusinessLogic.Domain.RestraurantAdmin.Models
         public int DishGroupId { get; set; }
         public string DishGroup { get; set; }
         public string Price { get; set; }
+        public int ImageId { get; set; }
     }
 }

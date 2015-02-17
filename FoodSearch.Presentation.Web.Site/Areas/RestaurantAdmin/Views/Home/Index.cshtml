@@ -8,21 +8,41 @@
 
 @section HeadSection
 {
-    @Styles.Render("~/css/restaurantAdmin/panel")
-    <link rel="stylesheet" href="~/Content/bootstrap-notify.css"/>
+    <link rel="stylesheet" href="~/Content/bootstrap-timepicker.min.css" />
+    <link rel="stylesheet" href="~/Areas/RestaurantAdmin/Content/Site.css" />
+    <link rel="stylesheet" href="~/Content/Admin/ionicons.min.css" />
+    <link rel="stylesheet" href="~/Content/bootstrap-notify.min.css"/>
 }
 
 @section ScriptSection
 {
-    @Scripts.Render("~/js/restaurantAdmin/employee")
+    <script src="~/Scripts/bootstrap-notify.min.js"></script>
+    <script src="~/Scripts/Admin/Common/directives.js"></script>
+    <script src="~/Scripts/Admin/Common/services.js"></script>
+    <script src="~/Scripts/Admin/RestaurantAdmin/app.js"></script>
+    <script src="~/Scripts/Admin/RestaurantAdmin/service/services.js"></script>
+    <script src="~/Scripts/Admin/RestaurantAdmin/controller/controllersEmployee.js"></script>
+    <script src="~/Scripts/Admin/RestaurantAdmin/controller/newOrdersController.js"></script>
+    <script src="~/Scripts/Admin/RestaurantAdmin/controller/pendingOrdersController.js"></script>
+    
     <script src="~/Scripts/jquery.signalR-2.1.2.min.js"></script>
     <script src="/signalr/hubs"></script>
     <script src="~/Scripts/Admin/RestaurantAdmin/websocket.js"></script>
+
     @if (User.IsInRole(UserTypes.RestaurantAdmin.ToString()))
     {
         <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false&language=pl"></script>
-        <script src="~/Scripts/maps.google.polygon.constainsLatLng.js"></script>
-        @Scripts.Render("~/js/restaurantAdmin/admin")
+        <script src="~/Scripts/maps.google.polygon.constainsLatLng.min.js"></script>
+        
+        <script src="~/Scripts/Admin/RestaurantAdmin/controller/controllersAdmin.js"></script>
+        <script src="~/Scripts/Admin/RestaurantAdmin/controller/openingHoursController.js"></script>
+        <script src="~/Scripts/Admin/RestaurantAdmin/controller/opinionsController.js"></script>
+        <script src="~/Scripts/Admin/RestaurantAdmin/controller/restaurantController.js"></script>
+        <script src="~/Scripts/Admin/RestaurantAdmin/controller/deliveryRangeController.js"></script>
+        <script src="~/Scripts/Admin/RestaurantAdmin/controller/employeeController.js"></script>
+        <script src="~/Scripts/Admin/RestaurantAdmin/controller/cuisineController.js"></script>
+        <script src="~/Scripts/Admin/RestaurantAdmin/controller/dishGroupController.js"></script>
+        <script src="~/Scripts/Admin/RestaurantAdmin/controller/dishController.js"></script>
     }
 }
 
@@ -55,24 +75,24 @@
                         <i class="fa fa-edit"></i> <span>Zamówienia</span>
                     </a>
                 </li>
-                <li navigation-item>
-                    <a href="/RestaurantAdmin#/dishes">
-                        <i class="fa fa-cutlery"></i> <span>Dania</span>
-                    </a>
-                </li>
-                <li navigation-item>
-                    <a href="/RestaurantAdmin#/dishGroups">
-                        <i class="fa fa-book"></i> <span>Grupy dań</span>
-                    </a>
-                </li>
-                <li navigation-item>
-                    <a href="/RestaurantAdmin#/cuisines">
-                        <i class="fa fa-list"></i> <span>Kuchnie</span>
-                    </a>
-                </li>
                 
                 @if (User.IsInRole(UserTypes.RestaurantAdmin.ToString()))
                 {
+                    <li navigation-item>
+                        <a href="/RestaurantAdmin#/dishes">
+                            <i class="fa fa-cutlery"></i> <span>Dania</span>
+                        </a>
+                    </li>
+                    <li navigation-item>
+                        <a href="/RestaurantAdmin#/dishGroups">
+                            <i class="fa fa-book"></i> <span>Grupy dań</span>
+                        </a>
+                    </li>
+                    <li navigation-item>
+                        <a href="/RestaurantAdmin#/cuisines">
+                            <i class="fa fa-list"></i> <span>Kuchnie</span>
+                        </a>
+                    </li>
                     <li navigation-item>
                         <a href="/RestaurantAdmin#/restaurant">
                             <i class="fa fa-cog"></i> <span>Restauracja</span>
@@ -129,21 +149,20 @@
     @{ Html.RenderPartial("_PendingOrders");}
 </script>
 
-<script type="text/ng-template" id="dishesTemplate">
-    @{ Html.RenderPartial("_Dishes");}
-</script>
-
-<script type="text/ng-template" id="dishGroupsTemplate">
-    @{ Html.RenderPartial("_DishGroups");}
-</script>
-
-<script type="text/ng-template" id="cuisinesTemplate">
-    @{ Html.RenderPartial("_Cuisines");}
-</script>
-
-
 @if (User.IsInRole(UserTypes.RestaurantAdmin.ToString()))
 {
+    <script type="text/ng-template" id="dishesTemplate">
+        @{ Html.RenderPartial("_Dishes");}
+    </script>
+
+    <script type="text/ng-template" id="dishGroupsTemplate">
+        @{ Html.RenderPartial("_DishGroups");}
+    </script>
+
+    <script type="text/ng-template" id="cuisinesTemplate">
+        @{ Html.RenderPartial("_Cuisines");}
+    </script>
+    
     <script type="text/ng-template" id="restaurantTemplate">
         @{ Html.RenderPartial("_Restaurant");}
     </script>
