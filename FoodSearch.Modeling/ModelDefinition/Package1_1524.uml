@@ -1,0 +1,1432 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="a89445bc-76e2-4ad8-9bfc-be4b121e5e2e"
+  name="Results"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="53da16fe-58bb-43ad-acbc-80d1ca554f86"
+      handle="viewcode://./CodeSchema_Namespace?Namespace%3DFoodSearch.Data.Mapping.StoredProcedure.Results"
+      tag="ViewCode" />
+  </referencesInternal>
+  <packagedElements>
+    <packageHasNamedElement>
+      <class
+        Id="6f6c8cc6-25b3-4d08-a439-8e83455e7f41"
+        name="RestaurantInfo"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="eb6a7976-f821-43f4-89af-9ebf005a31a5"
+            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.Data.Mapping%2Fbin%2FDebug%2FFoodSearch.Data.Mapping.dll Namespace%3DFoodSearch.Data.Mapping.StoredProcedure.Results Type%3DRestaurantInfo"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="b9515362-5d30-4e39-a104-6d5f8ef07a4b"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="9ea7db5f-8255-4ae8-9536-a7cc2d7b9111">
+                <propertyInstance
+                  Id="f6d2d73b-96d0-4ec4-80f6-df2d38be3a4e"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="abe3a350-b9b8-4570-a061-1ada69b98ac9">
+                <propertyInstance
+                  Id="af9a9835-40f5-4550-b737-ee06738a8810"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="dd4aa982-5032-4983-8401-070c5ecfdd3e">
+                <propertyInstance
+                  Id="aa4412e3-9464-491c-9e24-7076e996735e"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="21d67974-277c-4aa5-b72d-48a1824f9f10">
+                <propertyInstance
+                  Id="8b95fe2b-81bb-4d97-adb3-0640fe905116"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="6e170365-1020-4672-b0d1-48120a4c8e17">
+                <propertyInstance
+                  Id="8c03d44b-5453-440b-a360-70855b184906"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <targetEnds>
+          <association
+            Id="b5e5124b-e9a3-4754-b179-f8a1b0d1bdac"
+            isDerived="false"
+            sourceEndRoleName="RestaurantInfo"
+            targetEndRoleName="RestaurantId"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="d925213d-8546-4b09-b50a-5057b34fcd8e"
+              LastKnownName="Guid"
+              LastKnownLocation="Package5_1457.uml" />
+            <description>Property RestaurantId references type Guid.</description>
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="78ec5e4c-73a3-4432-8f12-65c134032b36"
+                  name="RestaurantInfo"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="a5607a38-ef9a-4ef3-aacc-c6732513cbef"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="b6f7d4e6-29e8-426e-bfbd-48deeee3cc1b"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="0f23b0f4-efda-4e25-b6dc-ca3aff8215bb"
+                  name="RestaurantId"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="84839037-651a-4d1f-89d4-b058b7743ff3"
+                      name="Lower"
+                      value="1" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="db998b85-bcfd-46b0-a1c4-e3c69ae7afc9"
+                      name="Upper"
+                      value="1" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="b022e6d1-d887-4fa9-a0dd-9ce53a5ddcf7"
+            isDerived="false"
+            sourceEndRoleName="RestaurantInfo"
+            targetEndRoleName="MinimumOrder"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="25108169-29af-4957-a741-ca0dd096a719"
+              LastKnownName="Single"
+              LastKnownLocation="Package5_1457.uml" />
+            <description>Property MinimumOrder references type Single.</description>
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="456490f2-7230-40f4-a530-677aa81b6943"
+                  name="RestaurantInfo"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="444c5525-1413-42e5-8c3e-623290a4e3d4"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="1b8c7941-56ff-4afe-b38e-c3cfa4d0bf52"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="5eb1e428-2a9b-4da3-8056-2677e7f42c17"
+                  name="MinimumOrder"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="8e0d981c-db34-48ae-8778-960647423025"
+                      name="Lower"
+                      value="1" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="3f17eed3-1cfe-4261-805d-d66c896cabfd"
+                      name="Upper"
+                      value="1" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="8f9e7f9f-7732-4604-8b1f-733f790a8277"
+            isDerived="false"
+            sourceEndRoleName="RestaurantInfo"
+            targetEndRoleName="RestaurantRating"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="25108169-29af-4957-a741-ca0dd096a719"
+              LastKnownName="Single"
+              LastKnownLocation="Package5_1457.uml" />
+            <description>Property RestaurantRating references type Single.</description>
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="5f09b9a3-cbbc-4c39-b01d-47ce0d5f9f5e"
+                  name="RestaurantInfo"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="3330d0d5-572e-47c1-bdb5-3bfe21d2741c"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="b844960c-5d7b-418e-90c0-e200f73221c7"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="bdfa2487-8cf4-4678-a99d-933fe9493420"
+                  name="RestaurantRating"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="4052a835-6fbc-4ced-a615-b0d7a1de0785"
+                      name="Lower"
+                      value="1" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="6f9a33ff-e6f4-4447-9adb-9cf717970ace"
+                      name="Upper"
+                      value="1" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property
+            Id="a510ade8-5ca5-4493-84b5-432e21c36e1f"
+            name="RestaurantId"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="54e4a358-ab8e-43e4-b6ad-90933d1b985e"
+                handle="viewcode://./CodeSchema_Property?Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.Data.Mapping%2Fbin%2FDebug%2FFoodSearch.Data.Mapping.dll Namespace%3DFoodSearch.Data.Mapping.StoredProcedure.Results Type%3DRestaurantInfo Member%3DRestaurantId"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="505ecdce-1a4d-43fe-913e-76a554742098"
+                name="property"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="74d57310-21bc-4bb9-96e9-fc1c8cd4c136">
+                    <propertyInstance
+                      Id="b73c303c-af1a-4dce-9953-c5ad5ebdc44b"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ab7de4c8-be7c-44f3-8c32-d38968760cd4">
+                    <propertyInstance
+                      Id="b9132916-e66f-463d-bdb0-03d10f7e3057"
+                      name="Get"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="735c1bde-f5ff-44d6-a271-c4482cfb60d8">
+                    <propertyInstance
+                      Id="a409ce15-e593-4af2-a4a6-df96987cbb3c"
+                      name="HasBody"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a013c587-53ce-49bb-9653-f4ada82490c1">
+                    <propertyInstance
+                      Id="dd6e6d59-6a4b-408d-8772-9bf6a6316b38"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="df4ed0ac-c21f-444d-9ebf-f763ff21f0c3">
+                    <propertyInstance
+                      Id="6f64f37f-b9ea-4aa3-ada8-60551dad4ceb"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="53efc053-f433-4acc-af65-9fad808e2679">
+                    <propertyInstance
+                      Id="481d7e2e-1de5-49fa-ad70-1bce2e002aed"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d1214d81-7896-43e2-9549-d934cc4a2c73">
+                    <propertyInstance
+                      Id="6c3e54b6-b4b1-4129-9db0-8e7a8c754c82"
+                      name="Set"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="d925213d-8546-4b09-b50a-5057b34fcd8e"
+                LastKnownName="Guid"
+                LastKnownLocation="Package5_1457.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="bfa33d4b-4334-4754-9ece-c7b171af0c32"
+            name="RestaurantName"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="5fb1dbb7-d651-4b3c-8354-c91c8d1b6640"
+                handle="viewcode://./CodeSchema_Property?Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.Data.Mapping%2Fbin%2FDebug%2FFoodSearch.Data.Mapping.dll Namespace%3DFoodSearch.Data.Mapping.StoredProcedure.Results Type%3DRestaurantInfo Member%3DRestaurantName"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="08311cf6-c689-442a-a689-c28de3e6e90a"
+                name="property"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="02e65fda-5463-4a1d-afc9-a1e32d835f9c">
+                    <propertyInstance
+                      Id="33efecee-d172-4781-8366-cec9e4b138b2"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f8a054a8-d523-4193-92bc-f1337cc745c8">
+                    <propertyInstance
+                      Id="c1940f12-a15b-45f2-b832-03326416a925"
+                      name="Get"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="eaf0a1d9-da47-412a-abe3-75b8cc95aab9">
+                    <propertyInstance
+                      Id="6842fd2b-0784-4746-94b0-175af1c15385"
+                      name="HasBody"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="83aae10a-0df8-4660-b382-2c1f93932422">
+                    <propertyInstance
+                      Id="76c782f7-b2af-471c-8ec5-dc7a991c6d3f"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="9bf3c333-0008-4886-9134-200cea1bc4a5">
+                    <propertyInstance
+                      Id="00deb0b2-93f6-4323-b20c-90ff03a1f8b7"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="9b4a7895-b4a0-4084-b239-727a81e24aec">
+                    <propertyInstance
+                      Id="1548f084-876a-4d10-9e99-3df05b9237ec"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="730233b6-a85e-4f10-a3c9-880eacc14fd0">
+                    <propertyInstance
+                      Id="eba1ae10-c6f2-404b-a79c-07b1df5ba2e8"
+                      name="Set"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                LastKnownName="String"
+                LastKnownLocation="FoodSearch.Modeling.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="d7f668da-959a-4923-b713-aa0fb29cd8ef"
+            name="LogoId"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="be20b0ab-36aa-4348-9022-7af19840584d"
+                handle="viewcode://./CodeSchema_Property?Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.Data.Mapping%2Fbin%2FDebug%2FFoodSearch.Data.Mapping.dll Namespace%3DFoodSearch.Data.Mapping.StoredProcedure.Results Type%3DRestaurantInfo Member%3DLogoId"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="1481f184-04ad-48d7-b9ad-f8eee926e0f3"
+                name="property"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="5dfb165c-9c9a-45f7-b8cc-d3a335bad1da">
+                    <propertyInstance
+                      Id="65aeef89-e4bc-49ce-badf-3f2c23762361"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a31e1ce2-2a23-4527-9166-3d18db6ea060">
+                    <propertyInstance
+                      Id="015549ee-e84c-43ad-ac06-b51cbabd37b3"
+                      name="Get"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="1dc8eaf3-a770-4a2b-8dff-da537facdcc9">
+                    <propertyInstance
+                      Id="0986e2b5-443f-4018-844e-610e3700e957"
+                      name="HasBody"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="bcf1c712-25c9-4407-b957-e76029d5338b">
+                    <propertyInstance
+                      Id="4cd50483-7636-47b5-b761-bb4a19195caa"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="af60ffee-006b-433e-9b88-30b949f59304">
+                    <propertyInstance
+                      Id="d972cd9a-a1ff-41ae-8663-89accb58bf0d"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="7f1975aa-8cd9-4472-8164-33ebbd0f2589">
+                    <propertyInstance
+                      Id="6d1cb168-da8b-47b7-84f3-f2eb02f86b08"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="24741211-bf5b-4f60-b48f-acd61ef4730f">
+                    <propertyInstance
+                      Id="69efc107-df7a-42a6-9c5c-acd294a1ec27"
+                      name="Set"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                LastKnownName="Integer"
+                LastKnownLocation="FoodSearch.Modeling.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="710be7da-7cbd-47b0-91da-ae60d1621b97"
+            name="Street"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="e9316fc6-5509-42e8-8d3e-c5fded563437"
+                handle="viewcode://./CodeSchema_Property?Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.Data.Mapping%2Fbin%2FDebug%2FFoodSearch.Data.Mapping.dll Namespace%3DFoodSearch.Data.Mapping.StoredProcedure.Results Type%3DRestaurantInfo Member%3DStreet"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="e7b9acb1-72a4-44b4-9235-fefdda0407ae"
+                name="property"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="22cbeb25-a70f-4ae3-97b6-833fa95daf13">
+                    <propertyInstance
+                      Id="55324b94-eade-4f82-a797-2d627a1a54cc"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="0db6894f-9a35-4340-b9ab-08e4743f31aa">
+                    <propertyInstance
+                      Id="e79508f8-69a9-4356-9467-f835d1b1f586"
+                      name="Get"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="26a3e652-7a40-4c6c-9933-9ccea4902764">
+                    <propertyInstance
+                      Id="0dcd4d8a-e711-407f-9d27-b6c774fd6615"
+                      name="HasBody"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="2b39c5a1-958c-4f6b-bc11-f591beba821e">
+                    <propertyInstance
+                      Id="65dbfe02-f78e-4fac-b9f9-36962f792d27"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="1e5f3f57-f7fd-4c9c-9e97-f0b71f2ea7e8">
+                    <propertyInstance
+                      Id="dca12647-f066-428a-a5db-421413950bca"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="cf478098-4306-4285-beed-b0c1142e82b1">
+                    <propertyInstance
+                      Id="ec4c30cd-56e4-4bb2-b73c-c96e97000633"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="7c7b7b92-6530-4126-98b6-a4133dea077c">
+                    <propertyInstance
+                      Id="c9989981-8b98-4e82-bb03-023649a3810a"
+                      name="Set"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                LastKnownName="String"
+                LastKnownLocation="FoodSearch.Modeling.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="bba570a1-dc96-4c7e-90d0-9bee4cae2fdf"
+            name="Number"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="2ed907e1-bd73-4ef7-bcc1-af14a5712349"
+                handle="viewcode://./CodeSchema_Property?Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.Data.Mapping%2Fbin%2FDebug%2FFoodSearch.Data.Mapping.dll Namespace%3DFoodSearch.Data.Mapping.StoredProcedure.Results Type%3DRestaurantInfo Member%3DNumber"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="7711df58-4f38-4481-a4a6-7641f14e80ca"
+                name="property"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="3a0f1edd-66ae-4e1a-b9e4-634cfbc19c3c">
+                    <propertyInstance
+                      Id="3465e53e-05e9-482f-84fb-adf12443960f"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="5fbf0429-5b07-4da3-b4f8-38697d66291c">
+                    <propertyInstance
+                      Id="fa9774cb-5cdd-4523-ad83-521f8f2a9c24"
+                      name="Get"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="14704ac7-bcbf-4678-854a-cdec20aa79ae">
+                    <propertyInstance
+                      Id="173d3021-94a6-45c0-8aa9-ff17afd810a6"
+                      name="HasBody"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c5dc8865-0a57-49d2-b6c7-3d44c03e8688">
+                    <propertyInstance
+                      Id="8e1b0548-a20a-49b9-b8c3-bbe76dc13923"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="49b69abc-932e-4802-9488-02974d7cb22a">
+                    <propertyInstance
+                      Id="ccdae2be-b8da-44b0-8cfb-24d0874753b2"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="58b0aab3-4e42-4e53-b178-6ad8a38099a7">
+                    <propertyInstance
+                      Id="1a79d78a-9107-485e-8e96-2852f0dd0dc9"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="72e3dd65-6289-454d-a1d1-a143e6c0518b">
+                    <propertyInstance
+                      Id="cc15e21d-92de-4d21-857e-1fb1b543f30a"
+                      name="Set"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                LastKnownName="String"
+                LastKnownLocation="FoodSearch.Modeling.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="6c2aa719-7342-4f89-be17-c113e171a1f0"
+            name="MinimumOrder"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="430febf0-8a99-4cd1-972c-a0441646a1db"
+                handle="viewcode://./CodeSchema_Property?Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.Data.Mapping%2Fbin%2FDebug%2FFoodSearch.Data.Mapping.dll Namespace%3DFoodSearch.Data.Mapping.StoredProcedure.Results Type%3DRestaurantInfo Member%3DMinimumOrder"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="d5459d4b-8edf-4df3-87df-9a28590e0b1d"
+                name="property"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="cddf0cb2-115c-4592-8b73-3e36dc8495d9">
+                    <propertyInstance
+                      Id="63e83034-c81c-4974-8fa1-c1583c63f2e2"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="270a14a6-cb77-4430-999a-5a92de47125d">
+                    <propertyInstance
+                      Id="7a35c1ff-d315-4a59-a54b-84366a1a1138"
+                      name="Get"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ed0c037f-d0fe-40e4-9a68-b37acca07243">
+                    <propertyInstance
+                      Id="52c7d6f5-bf39-4488-878c-78cae962defb"
+                      name="HasBody"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="760699bf-d701-4028-b0c6-e4bd3ce8eeca">
+                    <propertyInstance
+                      Id="161ee9ea-45ef-49a8-a326-34717cd66a3a"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="237218d5-0418-4f0d-95ea-24daf73e162e">
+                    <propertyInstance
+                      Id="90c7982a-6089-42d0-82fc-024e742c591a"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="4936cc63-8873-4634-8abf-4ab3e6d28e5d">
+                    <propertyInstance
+                      Id="ee704247-b06a-4226-856b-3721560096c5"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a7bdc0d9-9c49-43ab-afa5-2f3e57a6dbf6">
+                    <propertyInstance
+                      Id="70ecd955-f04c-43a3-aafb-ff42d84e65ef"
+                      name="Set"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="25108169-29af-4957-a741-ca0dd096a719"
+                LastKnownName="Single"
+                LastKnownLocation="Package5_1457.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="c4663fdb-349c-486f-8e9b-64f4c67406e3"
+            name="TimeFrom"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="a2599322-292c-44c8-98c9-2da2e1fe574d"
+                handle="viewcode://./CodeSchema_Property?Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.Data.Mapping%2Fbin%2FDebug%2FFoodSearch.Data.Mapping.dll Namespace%3DFoodSearch.Data.Mapping.StoredProcedure.Results Type%3DRestaurantInfo Member%3DTimeFrom"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="1450785f-2ec1-44d5-a2c0-a2d6da2b75b5"
+                name="property"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="954b4999-03dd-4c08-a31a-7eb1335461de">
+                    <propertyInstance
+                      Id="3da52ed2-72dd-467b-ae3b-69c334fa6202"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ec9e90c5-8289-4722-8fdf-f71201053d4a">
+                    <propertyInstance
+                      Id="a51c4108-11b8-49d2-9a97-85122b4fef09"
+                      name="Get"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="4dc6782d-c3d7-4dcb-84a9-3d677893352d">
+                    <propertyInstance
+                      Id="df04b7fc-bb39-4f67-ac69-05e020e1a34d"
+                      name="HasBody"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b553de2c-bf62-4a6e-9dd1-aef029533b8f">
+                    <propertyInstance
+                      Id="6dc642b9-ef5a-4149-8193-046c59b8e204"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f1feb82e-20c2-41fa-81ce-d35fef3488f8">
+                    <propertyInstance
+                      Id="308dd091-7695-49cc-8e3a-c9351a76af65"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="25a71cb7-6c66-4dda-9494-4f7e6b3c87e1">
+                    <propertyInstance
+                      Id="985ac4e4-4565-43f3-bcf1-72afd657973a"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="771e7080-62ef-4f74-b7cd-219719ffa505">
+                    <propertyInstance
+                      Id="d053d167-023e-42f8-b319-95e925034ffd"
+                      name="Set"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                LastKnownName="String"
+                LastKnownLocation="FoodSearch.Modeling.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="11f60c78-6b1f-44f1-b52a-cb172e6a6a18"
+            name="TimeTo"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="ce58027b-29e7-474b-93ca-786207b10227"
+                handle="viewcode://./CodeSchema_Property?Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.Data.Mapping%2Fbin%2FDebug%2FFoodSearch.Data.Mapping.dll Namespace%3DFoodSearch.Data.Mapping.StoredProcedure.Results Type%3DRestaurantInfo Member%3DTimeTo"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="68fb9418-2dc1-4237-8023-8efb208ceab8"
+                name="property"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="79c7d2ab-419e-4948-8370-b881c5298ae1">
+                    <propertyInstance
+                      Id="fc52eb6b-553b-4599-bc5b-a95ed3c539ad"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="64f01165-737c-4d89-bf7e-04f8e6c2a1bd">
+                    <propertyInstance
+                      Id="a9834999-04df-4f3b-b026-77521b43f1a0"
+                      name="Get"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c268ae49-b151-47c7-a9f3-ea02bf16c37b">
+                    <propertyInstance
+                      Id="fb6b5eec-2731-4194-b2a7-ff096fe0d3f5"
+                      name="HasBody"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="298a42c5-0644-4a02-a283-4898ab0658ad">
+                    <propertyInstance
+                      Id="5a46dedf-7302-41e5-8d52-3dc9d1eba84c"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="32b1f15a-615f-4f02-b339-ba4eafbc519d">
+                    <propertyInstance
+                      Id="8191260b-cca3-48c9-b5e2-98188ad10b7b"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="7c16f08a-c16e-4ad7-a597-c5011f1f9c73">
+                    <propertyInstance
+                      Id="3c527d88-4c48-406f-9216-666d7e8227e7"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="21e4b7d9-b50f-44c7-90c9-f60b57f86d80">
+                    <propertyInstance
+                      Id="b6c6f92d-7c73-4537-a4db-025ec739130e"
+                      name="Set"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                LastKnownName="String"
+                LastKnownLocation="FoodSearch.Modeling.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="18829f74-fca6-4228-9730-0e5e91f70521"
+            name="RestaurantRating"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="f329d366-0328-42d8-9e9e-1d9e1a913cb6"
+                handle="viewcode://./CodeSchema_Property?Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.Data.Mapping%2Fbin%2FDebug%2FFoodSearch.Data.Mapping.dll Namespace%3DFoodSearch.Data.Mapping.StoredProcedure.Results Type%3DRestaurantInfo Member%3DRestaurantRating"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="2fdfdd52-e616-450a-b73d-ece1989d97e8"
+                name="property"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="be871044-7e76-440b-bcec-532bd561cbd9">
+                    <propertyInstance
+                      Id="99c4e2f6-4872-46ab-9d12-b4f40ba16e0a"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="9aea178c-a5f4-454e-992a-f3febb562979">
+                    <propertyInstance
+                      Id="3224f415-b6ff-4721-b4d0-b7f7258fbd97"
+                      name="Get"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="7b7e573e-f36e-47ff-b163-8ce699b86432">
+                    <propertyInstance
+                      Id="e036d153-2400-44c7-8481-5543c43db32c"
+                      name="HasBody"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="7bf9439f-4c58-483a-a83a-f82634a5f307">
+                    <propertyInstance
+                      Id="9803da97-9948-4ace-9b24-cadbd762cfec"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="1a5a4526-0baf-437e-9b82-d1cec211420a">
+                    <propertyInstance
+                      Id="e6685d54-2cc7-4dbc-9d68-8fdd78d9dece"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e9992e0a-d175-4e63-8892-8bffcaeb1226">
+                    <propertyInstance
+                      Id="d4943a5a-47e4-426a-86af-3df509b92780"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="3fe84778-ceb9-4fb6-86d6-9b33c75843e3">
+                    <propertyInstance
+                      Id="da070880-44ef-4249-ab0a-a8e985b3118e"
+                      name="Set"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="25108169-29af-4957-a741-ca0dd096a719"
+                LastKnownName="Single"
+                LastKnownLocation="Package5_1457.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="8eea43c0-9b4f-41ef-9943-6554cacbb6f8"
+            name="UsersVoted"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="a69c5498-8fa6-4e9f-9c9f-db672d69c4b3"
+                handle="viewcode://./CodeSchema_Property?Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.Data.Mapping%2Fbin%2FDebug%2FFoodSearch.Data.Mapping.dll Namespace%3DFoodSearch.Data.Mapping.StoredProcedure.Results Type%3DRestaurantInfo Member%3DUsersVoted"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="17feabd5-2c83-4196-b2fe-fb2bc43da170"
+                name="property"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="40fddef7-56b2-4a79-8555-44fdebe9a636">
+                    <propertyInstance
+                      Id="c465d28c-c257-4b37-9362-9cbfdd77d7b7"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="8578f3eb-af0b-47e9-ba3a-99b6294c71e5">
+                    <propertyInstance
+                      Id="93efca29-8f4b-4c42-a064-83abd12fc20a"
+                      name="Get"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="411d9ef9-f931-4f58-ad20-f78be561fc90">
+                    <propertyInstance
+                      Id="c040b3d0-6bf0-4d01-9246-d0e465cdda0c"
+                      name="HasBody"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d82ab7b3-71c0-4994-90d3-765e79ab6be6">
+                    <propertyInstance
+                      Id="1b1b9ae8-4196-45ee-8442-e0577d1ea00f"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a3b4a03c-ee5b-408a-a126-aa03a72d7f81">
+                    <propertyInstance
+                      Id="95010610-a31c-46c0-874b-8d0103550927"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="688717ce-e1b4-415c-a67e-0d84be7f971a">
+                    <propertyInstance
+                      Id="9df503ae-d6ac-41b5-9a02-3b260f32b1de"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f56b38f5-641b-410c-a093-84d8f37c2790">
+                    <propertyInstance
+                      Id="65fe0eb7-29b2-46c9-a993-f4aaa6b4fc28"
+                      name="Set"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                LastKnownName="Integer"
+                LastKnownLocation="FoodSearch.Modeling.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="bb9f1de1-c2b7-45de-8fac-e10d7773da85"
+            name="RestaurantInfo"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="0312c99b-0504-4fab-b4eb-2dfc3ca34f9a"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.Data.Mapping%2Fbin%2FDebug%2FFoodSearch.Data.Mapping.dll Namespace%3DFoodSearch.Data.Mapping.StoredProcedure.Results Type%3DRestaurantInfo Member%3D.ctor"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="9a9eba47-8119-42db-b39e-5bf5ca0a5870"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ee50771a-201d-4fe9-acc8-50c12a1c879f">
+                    <propertyInstance
+                      Id="099dc8a8-d274-41b8-926c-c5be050c25f9"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a5d0d4d5-9b9a-4ad8-acf0-3a8ee903ea66">
+                    <propertyInstance
+                      Id="ce0a1cd2-0169-4603-8c8a-472810ad49ad"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ba51d6bc-0cde-4701-9404-715aec99beea">
+                    <propertyInstance
+                      Id="aef02a89-3b37-4238-aa3a-9d537edb2810"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="757d7eab-6c5f-4126-8ed5-38ce809da63e">
+                    <propertyInstance
+                      Id="7adc55ba-0da8-4f38-ad67-dcb6c34f1e50"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="2ce600a8-47b0-4f6e-a9e3-bbabc5d19c3b">
+                    <propertyInstance
+                      Id="74c45882-f287-485d-89a4-19b979f6e8ad"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="61c012d5-9ad4-4a19-b7ce-b1da2a4c11bf">
+                    <propertyInstance
+                      Id="a8feca73-eb2a-438f-a24f-cf550fdc0cd7"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="71732e97-cfc4-46b4-b64a-3fe9a0361565"
+        name="StreetResult"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="30d173e6-bf37-4137-b270-6fb1836e1acf"
+            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.Data.Mapping%2Fbin%2FDebug%2FFoodSearch.Data.Mapping.dll Namespace%3DFoodSearch.Data.Mapping.StoredProcedure.Results Type%3DStreetResult"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="3da9cbe9-19a8-48dc-ac39-434f0935b853"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="34f06abe-96fd-42b7-b8fb-01306c42b813">
+                <propertyInstance
+                  Id="62d259bf-ed39-4ce2-8eba-79273cf4ba5f"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="c41433cc-9275-41aa-9fdf-706ecf078fc4">
+                <propertyInstance
+                  Id="cecd8a62-f160-405b-af90-bb3b8372626e"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="3a29804f-8905-4334-bf3d-deae27a58d57">
+                <propertyInstance
+                  Id="feda9660-9872-43b6-ac16-69b0c14351d0"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="536ef875-b86d-40ec-8ad6-baa4902f10e7">
+                <propertyInstance
+                  Id="aa233e7d-0914-42fc-a49c-e85bed6c4ff5"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="0bc6b8bd-aa22-4af4-8a53-a716f9da86c9">
+                <propertyInstance
+                  Id="e7245c5b-53f8-42d0-8745-11f0b6f8c088"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="7fac4bee-f772-4d53-9caf-6e9f76b33a09"
+        name="PartnerRestaurant"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="911ffe2c-239f-4e78-8b20-399f08556a6c"
+            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.Data.Mapping%2Fbin%2FDebug%2FFoodSearch.Data.Mapping.dll Namespace%3DFoodSearch.Data.Mapping.StoredProcedure.Results Type%3DPartnerRestaurant"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="b31d8753-d1f7-4f3f-986d-bdbd3557a4ed"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="2a6f4917-201b-4a52-9cbf-1a2239b7d1a5">
+                <propertyInstance
+                  Id="8353d9b5-0dd5-4c5e-9e2b-b97ef1995c85"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="6dc93ba0-677e-45b7-bc02-dd5f395e0d57">
+                <propertyInstance
+                  Id="49be42d3-5ec2-418f-9157-55aa74c51477"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="615ff71f-6865-4b5f-a015-62f48b2cd561">
+                <propertyInstance
+                  Id="bfc00c8f-be4d-4cc9-ad95-963ed661f346"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="d8ad54e3-66f4-44b8-a12e-46163600e510">
+                <propertyInstance
+                  Id="baa8468e-0592-482d-a8d8-3101f6f91b8b"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="33f2db10-664f-4fa6-8816-ca60a744f93c">
+                <propertyInstance
+                  Id="406df93b-c09c-4efd-9e1a-fb1e479afce4"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="6be2e381-7aad-49d7-b88b-4bf9d7eac61d"
+        name="RestaurantRating"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="6bd3a543-7a9f-4786-ac51-3c6841c492bc"
+            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.Data.Mapping%2Fbin%2FDebug%2FFoodSearch.Data.Mapping.dll Namespace%3DFoodSearch.Data.Mapping.StoredProcedure.Results Type%3DRestaurantRating"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="3d367829-55de-4570-96e5-6c8b6def51ce"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="7f8c4624-b84c-47e2-bab3-cbedff8ea020">
+                <propertyInstance
+                  Id="e7f990c6-000d-4d25-96f1-c275e379db28"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="dc215899-f5da-4eb4-aa2c-92a7b1f0bb29">
+                <propertyInstance
+                  Id="80d41e54-74cd-46ec-84b3-6e308b02d26a"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="83ad4c7c-8e2d-4726-8c2d-3a4d5c573622">
+                <propertyInstance
+                  Id="4c23dc91-87ed-4eda-825c-f4f511055e06"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="f5f0489c-683d-4ba2-8520-2d7d7c7123e4">
+                <propertyInstance
+                  Id="7ee43055-45ce-4280-9292-ca7db0dd56f6"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="439287da-1b44-487b-9b9e-0f17e094fe8d">
+                <propertyInstance
+                  Id="138e87ae-b450-4062-a9c2-095014b0b240"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="14d23403-18a5-480c-b4bb-1de52633a6d6"
+        name="UserOrder"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="2c236380-299e-46b4-8cb2-f140dd75a9b9"
+            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.Data.Mapping%2Fbin%2FDebug%2FFoodSearch.Data.Mapping.dll Namespace%3DFoodSearch.Data.Mapping.StoredProcedure.Results Type%3DUserOrder"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="df79f077-bb37-4292-b426-2012325bd1fe"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="0189e2c5-1ca6-4b0a-b69b-02b59a16d860">
+                <propertyInstance
+                  Id="2c294ec8-5fd7-4576-abd2-f08c3f704e57"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="15016fbf-c4fe-4fa7-8aaa-b29a1234ed70">
+                <propertyInstance
+                  Id="0d1ff917-f46d-46e1-9c3c-0634c7af79a2"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="4268706a-1144-4839-a13c-c122bc021378">
+                <propertyInstance
+                  Id="28faffb5-f45c-412b-81d6-ccb5df21d738"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="e9a9f50d-fbbf-43ce-bf28-d54fb3f9a751">
+                <propertyInstance
+                  Id="8e1ac55a-8d1b-473f-a7e9-cb77b2fc2df9"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="cee2a695-4ba1-41c4-a9a5-70a4dd6a712f">
+                <propertyInstance
+                  Id="f5cdbfc1-41ba-401b-8e82-17d45d65f14d"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="56b0ab2e-a477-4ec9-9f84-300403b157fa"
+        name="RestaurantDeliveryRange"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="c4c4c563-16b3-4db8-9923-76d707e88c69"
+            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.Data.Mapping%2Fbin%2FDebug%2FFoodSearch.Data.Mapping.dll Namespace%3DFoodSearch.Data.Mapping.StoredProcedure.Results Type%3DRestaurantDeliveryRange"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="4f60b8ee-29a4-42fb-810b-1abcc18e66a1"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="74fe9b11-04f3-4085-86c7-e7c2f5738d84">
+                <propertyInstance
+                  Id="355d71bc-37c3-442e-998d-1f7b6a5b2e53"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="4fe5dbd3-633e-4b30-99e0-2ef557b1a8da">
+                <propertyInstance
+                  Id="2e2d1357-d168-4fd6-b169-f94c2de83016"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="0d194737-3d13-4ec5-8d01-f0491196c642">
+                <propertyInstance
+                  Id="23f08322-b8b6-460e-8f7c-57b72b48ccee"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="c3b049fa-ed5e-4c24-ae3a-03ffb76e2e1d">
+                <propertyInstance
+                  Id="a21b336e-b5f9-47ad-8e54-b875cae5dd57"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="1f72bb59-18fb-4c99-b461-457ca2fb8025">
+                <propertyInstance
+                  Id="4c6bcef5-775f-47e7-b8b6-11d75601a136"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+      </class>
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

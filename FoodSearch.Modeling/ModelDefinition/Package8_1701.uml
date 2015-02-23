@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="f61a1ff5-5d51-4285-b9c2-12137f3bea62"
+  name="RestraurantAdmin"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="8ca683a9-4858-4ddc-9b57-3548dcb28ff4"
+      handle="viewcode://./CodeSchema_Namespace?Namespace%3DFoodSearch.BusinessLogic.Domain.RestraurantAdmin"
+      tag="ViewCode" />
+  </referencesInternal>
+  <packagedElements>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="a0ad3e1e-79e6-4266-a2be-ebb51b5069d5"
+        LastKnownName="Interface"
+        LastKnownLocation="Package9_1701.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="81bd43d2-3e9c-400a-b64d-0ee00d348efa"
+        LastKnownName="Models"
+        LastKnownLocation="Package1_1702.uml" />
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

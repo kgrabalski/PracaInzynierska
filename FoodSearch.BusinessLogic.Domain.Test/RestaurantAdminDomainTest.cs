@@ -143,7 +143,7 @@ namespace FoodSearch.BusinessLogic.Domain.Test
         public bool CreateDish(string restaurantIdString, string dishName, int dishGroupId)
         {
             Guid restaurantId = Guid.Parse(restaurantIdString);
-            var newDish = Domain.CreateDish(restaurantId, dishName, dishGroupId, 10m);
+            var newDish = Domain.CreateDish(restaurantId, dishName, dishGroupId, 10m, 1);
             bool result = newDish != null;
 
             if (result)

@@ -1,0 +1,305 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="72a824ff-2019-4d75-bb92-5eafdf7f9dbc"
+  name="Models"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="2c8510f2-9bba-4de0-a33f-142bd9315e22"
+      handle="viewcode://./CodeSchema_Namespace?Namespace%3DFoodSearch.BusinessLogic.Domain.Core.Models"
+      tag="ViewCode" />
+  </referencesInternal>
+  <packagedElements>
+    <packageHasNamedElement>
+      <class
+        Id="40f9aad8-6594-4bc3-8a10-d1f4151a43ea"
+        name="City"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="dc760727-35a1-4f14-9a2c-d26db0f82355"
+            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.BusinessLogic.Domain.Core%2Fbin%2FDebug%2FFoodSearch.BusinessLogic.Domain.Core.dll Namespace%3DFoodSearch.BusinessLogic.Domain.Core.Models Type%3DCity"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="4ceeca6d-f1b2-4f8f-b101-f0328dc66e2a"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="0a5952b7-d5dc-4f01-8894-01bb8f5eaf96">
+                <propertyInstance
+                  Id="149c9e0a-ebb7-40af-bade-445e10026a7b"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="392da692-b764-4bd9-9048-efb32f6cf497">
+                <propertyInstance
+                  Id="135926d5-be20-4060-b231-cce372c0643a"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="8a23bbb1-8987-4d08-ae56-78dcc303adb9">
+                <propertyInstance
+                  Id="3cd721a6-7c67-4dd7-aee5-35caaa328e96"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="297e013a-79db-45a9-ab79-49d1f7b143be">
+                <propertyInstance
+                  Id="2f439286-15fe-4802-b39c-00e275f30fa1"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="f5961e9d-8eb5-4976-9b31-521a8cd9ba92">
+                <propertyInstance
+                  Id="59e4c0bd-bd8e-4ffe-869b-0db6d99dd1ea"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="a49850c0-44f1-41b6-b811-b2c9317eee16"
+        name="District"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="1e0733f0-1ef9-4103-b325-3752983ded97"
+            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.BusinessLogic.Domain.Core%2Fbin%2FDebug%2FFoodSearch.BusinessLogic.Domain.Core.dll Namespace%3DFoodSearch.BusinessLogic.Domain.Core.Models Type%3DDistrict"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="26b24354-bae7-4bc3-ba9a-5e4b77bf736c"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="c871f32f-0ce4-4df6-919f-19f4d9b89d04">
+                <propertyInstance
+                  Id="a7101fb4-6038-49e2-97f6-af84b919f851"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="e72ddfa6-7cb7-404b-9959-eeda81c083a6">
+                <propertyInstance
+                  Id="7e04c9df-3688-4da3-ba7c-cf26b6ad9bd8"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="dc80e634-be18-4074-a89a-7a8409a4a108">
+                <propertyInstance
+                  Id="bfeaa9d2-8a55-495d-b623-0c184498fe4e"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="bc32cde2-da29-4ee4-80e3-f525c6a53d4e">
+                <propertyInstance
+                  Id="0c1bacb7-8ec8-45cf-9712-b333efa75a2a"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="38581e1d-2ba0-4e1a-82a8-d5c525bb15b2">
+                <propertyInstance
+                  Id="fc51784d-f8c7-4407-9961-a0b5a98871a5"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="f861fd79-9639-4c81-bf4d-dc51f69ebbd4"
+        name="Street"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="483d3089-7fa7-49f7-af59-4b003b9252cc"
+            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.BusinessLogic.Domain.Core%2Fbin%2FDebug%2FFoodSearch.BusinessLogic.Domain.Core.dll Namespace%3DFoodSearch.BusinessLogic.Domain.Core.Models Type%3DStreet"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="b51a03b1-f47d-4dcc-8605-17dc557e8935"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="741d8f00-0e43-481b-b9a4-a247e58d0897">
+                <propertyInstance
+                  Id="da7b99f2-9e3f-417e-9bd2-15256abe6a77"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="f685ead8-dc05-49e3-a076-f825a016a6a2">
+                <propertyInstance
+                  Id="9f0fda67-d306-43a3-8e78-ab459bb24e2d"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="7254d39d-c7a7-4634-b2dd-99896e1316b6">
+                <propertyInstance
+                  Id="ab1cdaa5-9f94-4035-9c6c-2313f0ca805e"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="85093051-a11a-419f-af14-6ee336cbe66e">
+                <propertyInstance
+                  Id="3e46265d-a359-4faa-accb-d50aa2c4af98"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="0250fa87-fe8a-48cc-87e5-bf9da7721d5d">
+                <propertyInstance
+                  Id="78c72767-89ee-40b2-a71a-c543d27c7fc3"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="7ac5f959-e440-4aee-b02a-75b220f4a959"
+        name="StreetNumber"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="45319f27-5e9b-4179-9407-e0b49979505e"
+            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.BusinessLogic.Domain.Core%2Fbin%2FDebug%2FFoodSearch.BusinessLogic.Domain.Core.dll Namespace%3DFoodSearch.BusinessLogic.Domain.Core.Models Type%3DStreetNumber"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="4f9217b6-592c-4bb4-917f-6a12428e97e9"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="79dce40c-f357-4051-93b2-7acacd17afa7">
+                <propertyInstance
+                  Id="04783dea-8910-408b-bad0-dba9143e96f3"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="8ceb0a36-539a-4838-936c-35641afc7585">
+                <propertyInstance
+                  Id="331adee7-02ca-45a1-a679-ce46a6b9b455"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="59966138-7ecb-448a-920b-16f8f25c0025">
+                <propertyInstance
+                  Id="2949ee89-ba78-4474-8ef0-7cbdf5ccb074"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="b3f8cc88-6ba2-4565-b949-b0b00726ee86">
+                <propertyInstance
+                  Id="940164e8-2295-4b26-89f8-6fe8057afc9e"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="007d88ca-6b93-4e87-9357-4e525d09cb7b">
+                <propertyInstance
+                  Id="19b7df07-e97f-44b2-a46e-edd29fc655f6"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="4bcb73c2-fda6-45a0-8d0a-b972010bb269"
+        name="Image"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="a68b0f5b-37f7-4365-8a42-f778a66a1856"
+            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.BusinessLogic.Domain.Core%2Fbin%2FDebug%2FFoodSearch.BusinessLogic.Domain.Core.dll Namespace%3DFoodSearch.BusinessLogic.Domain.Core.Models Type%3DImage"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="42fb38c0-f133-4134-ac78-a30959437cdf"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="d80ba631-b898-402c-8cb6-aab05a99849d">
+                <propertyInstance
+                  Id="1417cdc3-e699-4e83-9b78-32d060ddf83d"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="0e4bd07e-df16-4dce-820e-c7c343b267c0">
+                <propertyInstance
+                  Id="23782ede-7e6f-4288-8c77-4bb7f5d30874"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="dcc31ca0-15b8-419b-88b4-200fe19c491b">
+                <propertyInstance
+                  Id="eb5457a3-ca9d-45b4-b4cd-987221eb910d"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="9a984ae2-0f25-4d87-8571-34733268442f">
+                <propertyInstance
+                  Id="0a7c588b-e513-4123-a8d9-5d37893e223c"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="b9fda286-536c-48b7-90bb-20a07c569006">
+                <propertyInstance
+                  Id="733078c1-a3b2-48cf-be9d-ecd673b4f7ca"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+      </class>
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

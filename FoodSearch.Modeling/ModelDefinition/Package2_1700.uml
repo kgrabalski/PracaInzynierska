@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="bed8f202-832b-413e-b6b7-56924ca3b8a7"
+  name="Core"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="ab7d71f8-e20b-4e21-933e-cdf42e7df55f"
+      handle="viewcode://./CodeSchema_Namespace?Namespace%3DFoodSearch.BusinessLogic.Domain.Core"
+      tag="ViewCode" />
+  </referencesInternal>
+  <packagedElements>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="981a99de-1538-46e7-8f86-500a01ecf553"
+        LastKnownName="Interface"
+        LastKnownLocation="Package3_1700.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="72a824ff-2019-4d75-bb92-5eafdf7f9dbc"
+        LastKnownName="Models"
+        LastKnownLocation="Package4_1700.uml" />
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

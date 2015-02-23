@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="2d30c032-3d3e-4cfa-bedc-cb6c7473d5af"
+  name="Domain"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="f549c0d1-ad61-41f8-9dd6-4a81a4982fcf"
+      handle="viewcode://./CodeSchema_Namespace?Namespace%3DFoodSearch.BusinessLogic.Domain"
+      tag="ViewCode" />
+  </referencesInternal>
+  <packagedElements>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="bed8f202-832b-413e-b6b7-56924ca3b8a7"
+        LastKnownName="Core"
+        LastKnownLocation="Package2_1700.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="eba281da-cb0a-4652-9960-590f1d861f7e"
+        LastKnownName="FoodSearch"
+        LastKnownLocation="Package_1701.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="243b6748-2ea7-4f79-9545-40bad7bc002f"
+        LastKnownName="Order"
+        LastKnownLocation="Package2_1701.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="8932ba48-8297-41fe-9752-8de498bec4d8"
+        LastKnownName="User"
+        LastKnownLocation="Package4_1701.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="b3e657f0-ec81-4aa9-8e9e-345a23324eb3"
+        LastKnownName="Restaurant"
+        LastKnownLocation="Package6_1701.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="f61a1ff5-5d51-4285-b9c2-12137f3bea62"
+        LastKnownName="RestraurantAdmin"
+        LastKnownLocation="Package8_1701.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="ac6f613c-a440-4c7f-948d-3c42433fb059"
+        LastKnownName="SiteAdmin"
+        LastKnownLocation="Package10_1701.uml" />
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

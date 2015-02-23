@@ -1,0 +1,945 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="d5c4eaf6-dbba-4715-9a22-68c90a883892"
+  name="Interface"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="65d3f730-2f7c-4073-be3d-a9833eb8fea3"
+      handle="viewcode://./CodeSchema_Namespace?Namespace%3DFoodSearch.BusinessLogic.Domain.FoodSearch.Interface"
+      tag="ViewCode" />
+  </referencesInternal>
+  <packagedElements>
+    <packageHasNamedElement>
+      <Interface
+        Id="64b218df-1b1a-412d-b0ce-de4bc4e4f082"
+        name="IFoodSearchDomain"
+        isAbstract="false"
+        isLeaf="false">
+        <referencesInternal>
+          <reference
+            Id="3181247a-f4b9-48ef-a39c-9a33e9239639"
+            handle="viewcode://./CodeSchema_Interface?Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.BusinessLogic.Domain.FoodSearch%2Fbin%2FDebug%2FFoodSearch.BusinessLogic.Domain.FoodSearch.dll Namespace%3DFoodSearch.BusinessLogic.Domain.FoodSearch.Interface Type%3DIFoodSearchDomain"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="6e3ea0a4-2e60-4439-a231-3ff2d8f31eda"
+            name="interface"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="8f6b9e47-62ed-4c62-95b5-3712a34bb715">
+                <propertyInstance
+                  Id="b90d4bf0-8b48-4330-a8a5-bcd8ea5b942d"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="6f4068b6-93d3-4d7a-a72e-42fb8c878f83">
+                <propertyInstance
+                  Id="d4a08c78-ad3e-494e-94d6-f6915fe04ba5"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="5e9eca73-24db-4f71-84c1-e32cc9597011">
+                <propertyInstance
+                  Id="32d90dac-b157-4009-95e4-f8205de668cc"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="098bcc0f-afc8-43d5-ac62-b80d48f08c85">
+                <propertyInstance
+                  Id="07878041-0db4-4c3a-a0ae-534e80183e54"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <targetEnds>
+          <association
+            Id="e3161101-ac90-4366-8206-2e062c1b9a5b"
+            isDerived="false"
+            sourceEndRoleName="IFoodSearchDomain"
+            targetEndRoleName="Core"
+            isLeaf="false"
+            isAbstract="false">
+            <interfaceMoniker
+              Id="5e01430c-8fc2-400a-ad1e-81161ca6c647"
+              LastKnownName="ICoreDomain"
+              LastKnownLocation="Package3_1700.uml" />
+            <description>Property Core references type ICoreDomain.</description>
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="a1ac6a57-7e78-484b-b10b-df00ea463841"
+                  name="IFoodSearchDomain"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="694c96e3-77a3-47fc-b4c9-4fd10fb4b604"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="508da504-e3db-4633-87d0-db5ad82e4453"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="7efa7877-f118-4884-8f5d-8b08bca96ec9"
+                  name="Core"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="e23839a4-d6b6-4834-af08-3d1914b9d7ad"
+                      name="Lower"
+                      value="1" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="1e37786f-a75d-4cfb-ae18-59fdd2597f6f"
+                      name="Upper"
+                      value="1" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="efbc810e-f1fc-48eb-b167-2f611a797ff7"
+            isDerived="false"
+            sourceEndRoleName="IFoodSearchDomain"
+            targetEndRoleName="Order"
+            isLeaf="false"
+            isAbstract="false">
+            <interfaceMoniker
+              Id="ca862f24-516a-43d0-a470-4a759217540d"
+              LastKnownName="IOrderDomain"
+              LastKnownLocation="Package3_1701.uml" />
+            <description>Property Order references type IOrderDomain.</description>
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="1f4532a0-1f83-450e-a2bc-c194cb29ae2b"
+                  name="IFoodSearchDomain"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="503ed12b-a86a-4199-88b5-fbfe0d9402f0"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="9a46d2bb-2eb1-4857-911b-85ef9b9f5d20"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="82f1d159-2efd-4fe2-ab3b-c94b5610b9ca"
+                  name="Order"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="d54226ad-09a4-4761-8ea6-e9f186fed255"
+                      name="Lower"
+                      value="1" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="086fbca5-d64c-49a5-a709-558271d994ef"
+                      name="Upper"
+                      value="1" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="7c8dd00d-755f-47dc-9559-7fb37511028b"
+            isDerived="false"
+            sourceEndRoleName="IFoodSearchDomain"
+            targetEndRoleName="User"
+            isLeaf="false"
+            isAbstract="false">
+            <interfaceMoniker
+              Id="8c40b209-8860-40f9-a164-87eef27bf9f7"
+              LastKnownName="IUserDomain"
+              LastKnownLocation="Package5_1701.uml" />
+            <description>Property User references type IUserDomain.</description>
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="fffcb072-5a5a-4692-9157-7bf6733859f8"
+                  name="IFoodSearchDomain"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="d2bc0b5d-ac83-4a71-8904-9481c635997e"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="c8cbb535-ad56-4659-8d9f-1232594f0304"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="a46e3abb-1a9c-4ac2-9f5b-10b3915477ac"
+                  name="User"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="d9dd47ec-98b3-4759-ac12-4fde1c1a7123"
+                      name="Lower"
+                      value="1" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="8e887006-cd3b-4563-82dc-137fbfcd967a"
+                      name="Upper"
+                      value="1" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="25bf718c-0a0a-49fe-8dca-6956d3eaeb1d"
+            isDerived="false"
+            sourceEndRoleName="IFoodSearchDomain"
+            targetEndRoleName="Restaurant"
+            isLeaf="false"
+            isAbstract="false">
+            <interfaceMoniker
+              Id="a189b4c7-964b-479d-85b2-18bed7238e24"
+              LastKnownName="IRestaurantDomain"
+              LastKnownLocation="Package7_1701.uml" />
+            <description>Property Restaurant references type IRestaurantDomain.</description>
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="555f21a7-aabc-43c7-8bae-8a10aee48755"
+                  name="IFoodSearchDomain"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="935e5e90-3204-404b-9cbc-009c6528f6b7"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="c461ef2d-c819-4d1d-a3ae-101f98702d78"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="a0840256-4bbb-4188-944c-aa82725975b1"
+                  name="Restaurant"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="483930a3-0b84-4ca8-82b0-c54a02b0fe1c"
+                      name="Lower"
+                      value="1" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="2f18aac5-b310-4fa0-8490-1441805d74a8"
+                      name="Upper"
+                      value="1" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="8e4b1364-0bd3-4883-a42a-a1fa9b7a0903"
+            isDerived="false"
+            sourceEndRoleName="IFoodSearchDomain"
+            targetEndRoleName="RestaurantAdmin"
+            isLeaf="false"
+            isAbstract="false">
+            <interfaceMoniker
+              Id="640f5a41-1e95-47fd-8239-02f8f16b002f"
+              LastKnownName="IRestaurantAdminDomain"
+              LastKnownLocation="Package9_1701.uml" />
+            <description>Property RestaurantAdmin references type IRestaurantAdminDomain.</description>
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="60ef8cff-e9ac-4291-babf-0058303330ee"
+                  name="IFoodSearchDomain"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="23638122-8857-4427-a26b-6df1f944c028"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="af61f896-5cf6-416b-bb23-afeff3152187"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="848650c9-e1f9-4af5-ae41-c01139496170"
+                  name="RestaurantAdmin"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="bfad10aa-a294-43a7-8b87-ee43a08a08a2"
+                      name="Lower"
+                      value="1" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="fcedd760-1d51-4cc3-90bf-0e0dbd37d921"
+                      name="Upper"
+                      value="1" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="99d0bb7d-af67-4329-8acc-a30da5d8bf02"
+            isDerived="false"
+            sourceEndRoleName="IFoodSearchDomain"
+            targetEndRoleName="SiteAdmin"
+            isLeaf="false"
+            isAbstract="false">
+            <interfaceMoniker
+              Id="99c2e980-7b6d-4906-9e21-60eae3ec2c90"
+              LastKnownName="ISiteAdminDomain"
+              LastKnownLocation="Package11_1701.uml" />
+            <description>Property SiteAdmin references type ISiteAdminDomain.</description>
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="7cf18cc7-5fd4-4562-8b40-a4f36efbaf48"
+                  name="IFoodSearchDomain"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="059d1af0-2361-4a73-8d27-14d75a30a062"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="a5bf0af9-524d-405d-99f3-4930bd1b677b"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="81be9b29-7d2c-4494-8d2c-0e51c8598311"
+                  name="SiteAdmin"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="c24ba262-76f8-451c-b09a-e07a0888b410"
+                      name="Lower"
+                      value="1" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="ff9eb8e6-039e-4756-9d64-e4907c1c1673"
+                      name="Upper"
+                      value="1" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <ownedAttributes>
+          <property
+            Id="993e3a73-67ad-4268-bef1-6257d2d43e7a"
+            name="Core"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="true"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="aa4c3db5-320f-414f-98c1-d68c2a12182c"
+                handle="viewcode://./CodeSchema_Property?Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.BusinessLogic.Domain.FoodSearch%2Fbin%2FDebug%2FFoodSearch.BusinessLogic.Domain.FoodSearch.dll Namespace%3DFoodSearch.BusinessLogic.Domain.FoodSearch.Interface Type%3DIFoodSearchDomain Member%3DCore"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="579bc2b2-2fc4-4665-b57c-ec187752941c"
+                name="property"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="bbf1eb45-ec62-4965-87c3-e91f7e8d6b89">
+                    <propertyInstance
+                      Id="1e3586c1-eadb-4b9a-960b-6a88c57c5aa3"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="cd0f4ba3-4d54-4145-81bf-776aa3959a38">
+                    <propertyInstance
+                      Id="8f91d53a-1c53-494f-8954-dbd8a1243751"
+                      name="Get"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="50e797fc-83f9-4eed-ba30-6153e12b6f20">
+                    <propertyInstance
+                      Id="e7160d90-4465-4a71-9f5f-973ea8c30d8f"
+                      name="HasBody"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="070634d5-82c8-46c5-8e31-4d482632d813">
+                    <propertyInstance
+                      Id="bb591281-71f4-45ff-a1ad-51a0d9cc0fda"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="53c55963-fd59-4f03-b645-fc1e4ce3bb96">
+                    <propertyInstance
+                      Id="6b6324d0-89d3-444e-8fd3-5be7e926189e"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="988268a8-7110-4fbe-b284-1924e33a8587">
+                    <propertyInstance
+                      Id="25b6e37c-8f23-44f5-8bbd-985e4b8ebb8a"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="8fb69964-265b-45b2-b92e-b6769a4b16ad">
+                    <propertyInstance
+                      Id="a4c6ff49-2fad-43fc-a022-8e4e6aba6991"
+                      name="Set"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <interfaceMoniker
+                Id="5e01430c-8fc2-400a-ad1e-81161ca6c647"
+                LastKnownName="ICoreDomain"
+                LastKnownLocation="Package3_1700.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="b2969ab7-d09d-4ea7-b775-add01e907433"
+            name="Order"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="true"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="3f0fa631-7b99-4cdf-9500-2564f6342237"
+                handle="viewcode://./CodeSchema_Property?Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.BusinessLogic.Domain.FoodSearch%2Fbin%2FDebug%2FFoodSearch.BusinessLogic.Domain.FoodSearch.dll Namespace%3DFoodSearch.BusinessLogic.Domain.FoodSearch.Interface Type%3DIFoodSearchDomain Member%3DOrder"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="2de69e37-c4db-4cfd-9100-0cbb0481da05"
+                name="property"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="596e9198-900b-4d20-9571-d9f7c5be5eca">
+                    <propertyInstance
+                      Id="ebf4573e-4db0-4a49-aaf7-72ff99cad0f8"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d0b58fa5-4eda-467c-9c25-08f258483749">
+                    <propertyInstance
+                      Id="daf38c4a-7cee-4bfc-a9ff-327e8a5bff25"
+                      name="Get"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f11d6cdd-7aae-46f5-baf7-17a98d72dc56">
+                    <propertyInstance
+                      Id="4dd28ebb-4c7a-4441-980f-17d09da3ec71"
+                      name="HasBody"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e698b404-96df-4bb2-80fb-ea3195e204ea">
+                    <propertyInstance
+                      Id="fa920731-7863-4f04-84b7-52d5a23cee15"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="8c7e9e18-921e-4e3c-b125-bee8935f3134">
+                    <propertyInstance
+                      Id="68940a05-a69c-4849-8448-4a7e1655bb3c"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e76c796a-bd33-4cde-b7bd-733fdb78c562">
+                    <propertyInstance
+                      Id="637f7b16-5afd-4b47-806f-45ca7aa09318"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="51f76bbf-5468-4919-a60b-243f125baf08">
+                    <propertyInstance
+                      Id="185f4bdc-684d-46dc-83d7-09b556cea193"
+                      name="Set"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <interfaceMoniker
+                Id="ca862f24-516a-43d0-a470-4a759217540d"
+                LastKnownName="IOrderDomain"
+                LastKnownLocation="Package3_1701.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="53a1c4fd-942a-455a-8a82-b99bc735139a"
+            name="User"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="true"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="1ef77fd2-ecb2-488e-bdad-3852cf4312a5"
+                handle="viewcode://./CodeSchema_Property?Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.BusinessLogic.Domain.FoodSearch%2Fbin%2FDebug%2FFoodSearch.BusinessLogic.Domain.FoodSearch.dll Namespace%3DFoodSearch.BusinessLogic.Domain.FoodSearch.Interface Type%3DIFoodSearchDomain Member%3DUser"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="6069173a-3ca2-409a-b053-6f23db069e6c"
+                name="property"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="13fa3a3e-7581-4eed-bbfc-240cc264732f">
+                    <propertyInstance
+                      Id="bd54c3f6-6850-462e-9b93-de899502f91e"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="757a9db4-db65-4bff-9c4b-662f82ab8057">
+                    <propertyInstance
+                      Id="8c51f9dc-d4a2-4900-93c8-58270c921f58"
+                      name="Get"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e92f40eb-b6cb-4c31-99c7-d640bda5dbc1">
+                    <propertyInstance
+                      Id="e03f62b4-f36d-4f6e-8933-45ece3bde7cf"
+                      name="HasBody"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="2ed84375-a10d-492f-b4db-5a1560444f47">
+                    <propertyInstance
+                      Id="41ad7717-5018-4ad2-a98f-67aa68390bd1"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="619f94e3-682d-46c8-b888-d8a8b8ca6aed">
+                    <propertyInstance
+                      Id="920d3c0e-81c7-4376-9d57-57bb86a3df7a"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="2492fb68-9db8-4ba3-945f-f62a64a0f760">
+                    <propertyInstance
+                      Id="b4888157-e353-4f88-a99a-b8e443e5b88d"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="9c043167-4803-42c2-b714-5029c6f745ba">
+                    <propertyInstance
+                      Id="0aa1a5bb-a777-40ac-97ef-02fb0f8fb444"
+                      name="Set"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <interfaceMoniker
+                Id="8c40b209-8860-40f9-a164-87eef27bf9f7"
+                LastKnownName="IUserDomain"
+                LastKnownLocation="Package5_1701.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="5dd8d556-77d5-4734-b19d-cdcdbaa07274"
+            name="Restaurant"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="true"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="98788247-a1b0-4342-aae9-6d4f298d8d2a"
+                handle="viewcode://./CodeSchema_Property?Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.BusinessLogic.Domain.FoodSearch%2Fbin%2FDebug%2FFoodSearch.BusinessLogic.Domain.FoodSearch.dll Namespace%3DFoodSearch.BusinessLogic.Domain.FoodSearch.Interface Type%3DIFoodSearchDomain Member%3DRestaurant"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="5d801b5f-7046-4040-9e5b-c1e70fafbec7"
+                name="property"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="1bd2ee19-b691-4ff4-8f04-415827cfca04">
+                    <propertyInstance
+                      Id="e04f0e38-27af-415d-b697-03cd980be9f9"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d6dde3b7-b6e5-411b-abb7-f16640c07771">
+                    <propertyInstance
+                      Id="3744b4e8-06a9-450b-9360-64115b51035e"
+                      name="Get"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ddb16626-cac5-4305-8950-6eca5bf550ee">
+                    <propertyInstance
+                      Id="4cc3d5f4-0965-4949-b842-96ab8bd83e1c"
+                      name="HasBody"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="eab8dadd-5e9a-4131-b21f-0004eb811425">
+                    <propertyInstance
+                      Id="b671bdb6-698a-4f78-aca9-e922d94a9f6f"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="321da7b0-3d6c-46be-a4ed-ee5dff25d8d5">
+                    <propertyInstance
+                      Id="18b09a4e-297b-4526-9b73-4f5f7c86ecb2"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a0403043-296d-4b20-9a80-89fccd431e51">
+                    <propertyInstance
+                      Id="4b9ba9e2-f98f-4dab-82a2-a77c2237f1cf"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a167cb28-a45b-4ee3-98d9-6039aca3f619">
+                    <propertyInstance
+                      Id="351fa5be-d954-4566-bae2-850e8b249c50"
+                      name="Set"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <interfaceMoniker
+                Id="a189b4c7-964b-479d-85b2-18bed7238e24"
+                LastKnownName="IRestaurantDomain"
+                LastKnownLocation="Package7_1701.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="1c74c3f2-2c3c-4f17-9763-ae79e5d08edc"
+            name="RestaurantAdmin"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="true"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="5482c84e-7626-45fe-a022-ebc395f2722a"
+                handle="viewcode://./CodeSchema_Property?Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.BusinessLogic.Domain.FoodSearch%2Fbin%2FDebug%2FFoodSearch.BusinessLogic.Domain.FoodSearch.dll Namespace%3DFoodSearch.BusinessLogic.Domain.FoodSearch.Interface Type%3DIFoodSearchDomain Member%3DRestaurantAdmin"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="4bafbb48-7159-42eb-bfef-477d981a3233"
+                name="property"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="34ff1d3a-4020-4fdb-ba67-8465f43fd875">
+                    <propertyInstance
+                      Id="c364b3f2-cb6c-4387-8d81-a2040e6b172a"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="04e9f06a-162e-41ff-a0a2-2d5bbb18195b">
+                    <propertyInstance
+                      Id="e2b6b6f5-f92e-49ea-99e1-09ce9edd77b6"
+                      name="Get"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="3964a988-6328-4695-8268-c5d179389ad4">
+                    <propertyInstance
+                      Id="6e5f1306-aaf5-4c9c-8a99-ecd0880f6414"
+                      name="HasBody"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f24af5c9-66a1-4c56-b8f2-0689ebf67800">
+                    <propertyInstance
+                      Id="0f6b7e3b-2569-4381-b8a6-98b241faaa77"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="075df2c1-a646-49a4-8a81-7b7efa56476f">
+                    <propertyInstance
+                      Id="5b4d33f2-7446-4097-89f0-c1a60d8eb863"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="57b1310d-7403-475c-a0ce-fda3fa61fcf6">
+                    <propertyInstance
+                      Id="545b1d1a-d6a8-4622-ba4e-54b7610784b6"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="21b8ee25-19b5-45f9-b060-0c182d3fad93">
+                    <propertyInstance
+                      Id="fa6f84e0-71a3-4b4b-b109-5d433833109a"
+                      name="Set"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <interfaceMoniker
+                Id="640f5a41-1e95-47fd-8239-02f8f16b002f"
+                LastKnownName="IRestaurantAdminDomain"
+                LastKnownLocation="Package9_1701.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="88f2e444-0da4-48cf-a577-776eab06cd64"
+            name="SiteAdmin"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="true"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="d5719919-0570-475b-b6d1-934edc6d5b33"
+                handle="viewcode://./CodeSchema_Property?Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.BusinessLogic.Domain.FoodSearch%2Fbin%2FDebug%2FFoodSearch.BusinessLogic.Domain.FoodSearch.dll Namespace%3DFoodSearch.BusinessLogic.Domain.FoodSearch.Interface Type%3DIFoodSearchDomain Member%3DSiteAdmin"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="33539c19-749b-4462-b527-1162245d22ac"
+                name="property"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f2eab986-b385-4aff-abd0-5b8fd7657d9c">
+                    <propertyInstance
+                      Id="30d2a68d-117e-4652-b449-684dc6c5bb6b"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a7de3c97-86a9-476c-b7f7-07742eb40a1b">
+                    <propertyInstance
+                      Id="8ec97f84-ec49-4e8c-a0f7-dc148a610296"
+                      name="Get"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a647f68c-3706-40c3-bbb3-94d8f646edb4">
+                    <propertyInstance
+                      Id="3fbb997f-2c5e-4152-8b1c-e3808be8489c"
+                      name="HasBody"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="1236e519-5109-43d5-bea6-b300469a94c2">
+                    <propertyInstance
+                      Id="4ba7e332-642a-4c75-b19a-0e276595b34d"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="7c18f218-2168-400b-bf59-50a84fcd6e95">
+                    <propertyInstance
+                      Id="1a5a5adf-c954-4b8e-8201-f1eb855a8e57"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ad86ea60-2e3f-454e-bcd6-37efbde83a96">
+                    <propertyInstance
+                      Id="36eae1f8-6b57-4638-b130-94e0a5eb5150"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="5fadd4b6-3025-4e74-ad2f-361e53789e60">
+                    <propertyInstance
+                      Id="d40f0fbc-720f-4eb5-af4f-5d8846f272eb"
+                      name="Set"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <interfaceMoniker
+                Id="99c2e980-7b6d-4906-9e21-60eae3ec2c90"
+                LastKnownName="ISiteAdminDomain"
+                LastKnownLocation="Package11_1701.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributes>
+      </Interface>
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

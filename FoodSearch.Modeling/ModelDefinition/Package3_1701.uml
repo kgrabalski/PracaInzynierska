@@ -1,0 +1,1335 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="cfde2209-65e0-4433-85c2-867555b1a406"
+  name="Interface"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="1f7bb864-58a1-49d3-b3e7-b3a2dc933d62"
+      handle="viewcode://./CodeSchema_Namespace?Namespace%3DFoodSearch.BusinessLogic.Domain.Order.Interface"
+      tag="ViewCode" />
+  </referencesInternal>
+  <packagedElements>
+    <packageHasNamedElement>
+      <Interface
+        Id="ca862f24-516a-43d0-a470-4a759217540d"
+        name="IOrderDomain"
+        isAbstract="false"
+        isLeaf="false">
+        <referencesInternal>
+          <reference
+            Id="81108726-985b-4406-87a5-86960b292984"
+            handle="viewcode://./CodeSchema_Interface?Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.BusinessLogic.Domain.Order%2Fbin%2FDebug%2FFoodSearch.BusinessLogic.Domain.Order.dll Namespace%3DFoodSearch.BusinessLogic.Domain.Order.Interface Type%3DIOrderDomain"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="2fef82aa-dc1c-4875-a0c6-0cb44cfd7d2e"
+            name="interface"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="12a8d96c-ac62-4306-81a3-dab090ed0644">
+                <propertyInstance
+                  Id="e01ea676-e24a-4b73-b856-c311dcc700b4"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="828ce9d2-2051-42a7-9b77-ff1ef85456ad">
+                <propertyInstance
+                  Id="f35fc826-ac60-481a-9ba5-08f0f95a9721"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="c6116194-8c27-4ad4-b0d7-1579feb80304">
+                <propertyInstance
+                  Id="a59e121b-2175-41f9-8810-09ba33dd6ef9"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="1fe044b4-5031-46ff-84e4-a9513c649caa">
+                <propertyInstance
+                  Id="1bda17e5-97e3-4da9-a77f-4e606d1902c0"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <ownedOperations>
+          <operation
+            Id="08df2266-6683-42c1-baeb-3e5d61fc25a4"
+            name="CreateOrder"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="3b3c9f0c-b2bc-4e1d-a9dc-106d2328815a"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.BusinessLogic.Domain.Order%2Fbin%2FDebug%2FFoodSearch.BusinessLogic.Domain.Order.dll Namespace%3DFoodSearch.BusinessLogic.Domain.Order.Interface Type%3DIOrderDomain Member%3D(Name%3DCreateOrder OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DGuid)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DGuid)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem.Collections.Generic Type%3D(Name%3DList GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.BusinessLogic.Domain.Order%2Fbin%2FDebug%2FFoodSearch.BusinessLogic.Domain.Order.dll Namespace%3DFoodSearch.BusinessLogic.Domain.Order.Models Type%3DOrderItem)]))%2C(Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.Data.Mapping%2Fbin%2FDebug%2FFoodSearch.Data.Mapping.dll Namespace%3DFoodSearch.Data.Mapping.Entities Type%3DDeliveryTypes)%2C(Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.Data.Mapping%2Fbin%2FDebug%2FFoodSearch.Data.Mapping.dll Namespace%3DFoodSearch.Data.Mapping.Entities Type%3DPaymentTypes)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3D(Name%3DNullable GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)]))])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="cb76e433-e7f0-4909-b0a1-45ea2f3188de"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c4e6ee39-4f52-4a65-97a1-f5477d4e2321">
+                    <propertyInstance
+                      Id="40fbe2f1-5037-44da-8fe5-421884dd3532"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="bf991e81-aa1b-4ab0-aa02-c1f1c492181a">
+                    <propertyInstance
+                      Id="303018a0-fb69-429d-b619-abd2242c5125"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f1c1a050-c094-426a-bc11-063716042171">
+                    <propertyInstance
+                      Id="0a75f2a1-a23f-42a2-adfa-83daa104335b"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a3662b4f-40a8-4530-9d6e-6ad37d18244c">
+                    <propertyInstance
+                      Id="09d796da-d6f3-449a-a860-12ad29efa3db"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="6bb62b31-5375-4410-8c86-2834f90f0df1">
+                    <propertyInstance
+                      Id="d3c37548-9434-4192-a396-be9900f73158"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="bf4b572a-69a1-4b07-be22-e035c1e27d9b">
+                    <propertyInstance
+                      Id="84a66fda-36e5-4279-87ad-4f9574e6965e"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="836ea07e-fd30-4216-bb35-3fb0032cfaf3"
+                  direction="Return">
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="93784801-401c-4608-ac35-5245551acae6"
+                      LastKnownName="CreateOrderResult"
+                      LastKnownLocation="Package12_1701.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="238e0b15-5880-443a-b418-8c7b5cd010b4"
+                  name="userId"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="1b7b8c2e-8dd5-49a1-b15e-dbff313e3810"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.BusinessLogic.Domain.Order%2Fbin%2FDebug%2FFoodSearch.BusinessLogic.Domain.Order.dll Namespace%3DFoodSearch.BusinessLogic.Domain.Order.Interface Type%3DIOrderDomain Member%3D(Name%3DCreateOrder OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DGuid)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DGuid)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem.Collections.Generic Type%3D(Name%3DList GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.BusinessLogic.Domain.Order%2Fbin%2FDebug%2FFoodSearch.BusinessLogic.Domain.Order.dll Namespace%3DFoodSearch.BusinessLogic.Domain.Order.Models Type%3DOrderItem)]))%2C(Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.Data.Mapping%2Fbin%2FDebug%2FFoodSearch.Data.Mapping.dll Namespace%3DFoodSearch.Data.Mapping.Entities Type%3DDeliveryTypes)%2C(Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.Data.Mapping%2Fbin%2FDebug%2FFoodSearch.Data.Mapping.dll Namespace%3DFoodSearch.Data.Mapping.Entities Type%3DPaymentTypes)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3D(Name%3DNullable GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)]))]) ParameterIdentifier%3DuserId"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="d925213d-8546-4b09-b50a-5057b34fcd8e"
+                      LastKnownName="Guid"
+                      LastKnownLocation="Package5_1457.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="e9fee6ff-fc0a-499b-95fd-6771f2220a29"
+                  name="restaurantId"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="a248866a-dbe0-47d0-8b3a-8f129324e78b"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.BusinessLogic.Domain.Order%2Fbin%2FDebug%2FFoodSearch.BusinessLogic.Domain.Order.dll Namespace%3DFoodSearch.BusinessLogic.Domain.Order.Interface Type%3DIOrderDomain Member%3D(Name%3DCreateOrder OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DGuid)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DGuid)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem.Collections.Generic Type%3D(Name%3DList GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.BusinessLogic.Domain.Order%2Fbin%2FDebug%2FFoodSearch.BusinessLogic.Domain.Order.dll Namespace%3DFoodSearch.BusinessLogic.Domain.Order.Models Type%3DOrderItem)]))%2C(Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.Data.Mapping%2Fbin%2FDebug%2FFoodSearch.Data.Mapping.dll Namespace%3DFoodSearch.Data.Mapping.Entities Type%3DDeliveryTypes)%2C(Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.Data.Mapping%2Fbin%2FDebug%2FFoodSearch.Data.Mapping.dll Namespace%3DFoodSearch.Data.Mapping.Entities Type%3DPaymentTypes)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3D(Name%3DNullable GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)]))]) ParameterIdentifier%3DrestaurantId"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="d925213d-8546-4b09-b50a-5057b34fcd8e"
+                      LastKnownName="Guid"
+                      LastKnownLocation="Package5_1457.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="6edbcd7d-3c04-4c50-b285-14c6ebff419d"
+                  name="orderItems"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="a405ebb6-65c3-4989-8c91-493b52d32837"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.BusinessLogic.Domain.Order%2Fbin%2FDebug%2FFoodSearch.BusinessLogic.Domain.Order.dll Namespace%3DFoodSearch.BusinessLogic.Domain.Order.Interface Type%3DIOrderDomain Member%3D(Name%3DCreateOrder OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DGuid)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DGuid)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem.Collections.Generic Type%3D(Name%3DList GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.BusinessLogic.Domain.Order%2Fbin%2FDebug%2FFoodSearch.BusinessLogic.Domain.Order.dll Namespace%3DFoodSearch.BusinessLogic.Domain.Order.Models Type%3DOrderItem)]))%2C(Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.Data.Mapping%2Fbin%2FDebug%2FFoodSearch.Data.Mapping.dll Namespace%3DFoodSearch.Data.Mapping.Entities Type%3DDeliveryTypes)%2C(Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.Data.Mapping%2Fbin%2FDebug%2FFoodSearch.Data.Mapping.dll Namespace%3DFoodSearch.Data.Mapping.Entities Type%3DPaymentTypes)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3D(Name%3DNullable GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)]))]) ParameterIdentifier%3DorderItems"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="1b54feca-f17f-428c-b73e-f4d8a43347fe"
+                      LastKnownName="List&lt;OrderItem‎&gt;"
+                      LastKnownLocation="Package1_1557.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="f6264c41-f5d1-4f3a-99f7-c0228c45a9ce"
+                  name="deliveryType"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="73d9cfff-a017-426a-be52-e5c8c5176f75"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.BusinessLogic.Domain.Order%2Fbin%2FDebug%2FFoodSearch.BusinessLogic.Domain.Order.dll Namespace%3DFoodSearch.BusinessLogic.Domain.Order.Interface Type%3DIOrderDomain Member%3D(Name%3DCreateOrder OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DGuid)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DGuid)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem.Collections.Generic Type%3D(Name%3DList GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.BusinessLogic.Domain.Order%2Fbin%2FDebug%2FFoodSearch.BusinessLogic.Domain.Order.dll Namespace%3DFoodSearch.BusinessLogic.Domain.Order.Models Type%3DOrderItem)]))%2C(Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.Data.Mapping%2Fbin%2FDebug%2FFoodSearch.Data.Mapping.dll Namespace%3DFoodSearch.Data.Mapping.Entities Type%3DDeliveryTypes)%2C(Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.Data.Mapping%2Fbin%2FDebug%2FFoodSearch.Data.Mapping.dll Namespace%3DFoodSearch.Data.Mapping.Entities Type%3DPaymentTypes)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3D(Name%3DNullable GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)]))]) ParameterIdentifier%3DdeliveryType"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <enumerationMoniker
+                      Id="a43720b3-a7a0-4b57-9d56-fc44e062b4cc"
+                      LastKnownName="DeliveryTypes"
+                      LastKnownLocation="Package_1416.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="505e2b54-3d1e-483c-88c3-61007f37531e"
+                  name="paymentType"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="af69f744-6bf9-4147-9f5a-4de86f8971a9"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.BusinessLogic.Domain.Order%2Fbin%2FDebug%2FFoodSearch.BusinessLogic.Domain.Order.dll Namespace%3DFoodSearch.BusinessLogic.Domain.Order.Interface Type%3DIOrderDomain Member%3D(Name%3DCreateOrder OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DGuid)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DGuid)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem.Collections.Generic Type%3D(Name%3DList GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.BusinessLogic.Domain.Order%2Fbin%2FDebug%2FFoodSearch.BusinessLogic.Domain.Order.dll Namespace%3DFoodSearch.BusinessLogic.Domain.Order.Models Type%3DOrderItem)]))%2C(Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.Data.Mapping%2Fbin%2FDebug%2FFoodSearch.Data.Mapping.dll Namespace%3DFoodSearch.Data.Mapping.Entities Type%3DDeliveryTypes)%2C(Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.Data.Mapping%2Fbin%2FDebug%2FFoodSearch.Data.Mapping.dll Namespace%3DFoodSearch.Data.Mapping.Entities Type%3DPaymentTypes)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3D(Name%3DNullable GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)]))]) ParameterIdentifier%3DpaymentType"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <enumerationMoniker
+                      Id="a46e1837-d888-47c1-8007-9921ed621582"
+                      LastKnownName="PaymentTypes"
+                      LastKnownLocation="Package_1416.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="161717d1-7531-49f9-819f-a62306f106ce"
+                  name="deliveryAddressId"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="77038723-58d4-4c09-8141-3e786341f2a5"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.BusinessLogic.Domain.Order%2Fbin%2FDebug%2FFoodSearch.BusinessLogic.Domain.Order.dll Namespace%3DFoodSearch.BusinessLogic.Domain.Order.Interface Type%3DIOrderDomain Member%3D(Name%3DCreateOrder OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DGuid)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DGuid)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem.Collections.Generic Type%3D(Name%3DList GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.BusinessLogic.Domain.Order%2Fbin%2FDebug%2FFoodSearch.BusinessLogic.Domain.Order.dll Namespace%3DFoodSearch.BusinessLogic.Domain.Order.Models Type%3DOrderItem)]))%2C(Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.Data.Mapping%2Fbin%2FDebug%2FFoodSearch.Data.Mapping.dll Namespace%3DFoodSearch.Data.Mapping.Entities Type%3DDeliveryTypes)%2C(Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.Data.Mapping%2Fbin%2FDebug%2FFoodSearch.Data.Mapping.dll Namespace%3DFoodSearch.Data.Mapping.Entities Type%3DPaymentTypes)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3D(Name%3DNullable GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)]))]) ParameterIdentifier%3DdeliveryAddressId"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="29a7191d-0bb2-4622-b83e-c2b9f68f81f9"
+                      LastKnownName="Nullable&lt;Int32‎&gt;"
+                      LastKnownLocation="Package5_1457.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="6deef220-a981-4a0d-8756-7f80f2c5c3f4"
+            name="CreatePayment"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="952ca110-653b-4d2f-b16f-9804745c6dbb"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.BusinessLogic.Domain.Order%2Fbin%2FDebug%2FFoodSearch.BusinessLogic.Domain.Order.dll Namespace%3DFoodSearch.BusinessLogic.Domain.Order.Interface Type%3DIOrderDomain Member%3D(Name%3DCreatePayment OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DGuid)%2C(Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.Data.Mapping%2Fbin%2FDebug%2FFoodSearch.Data.Mapping.dll Namespace%3DFoodSearch.Data.Mapping.Entities Type%3DPaymentTypes)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDecimal)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="f917f1c0-ac0d-4523-9bb4-b8098cc7305d"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="2eda5be5-97b7-46fe-af9f-e9c11be3f177">
+                    <propertyInstance
+                      Id="8b7fb0c8-f985-4013-a6d2-7cbe1f1de5b7"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b21edd7d-7439-4260-b748-12aa518328a7">
+                    <propertyInstance
+                      Id="a30485a6-de41-4d88-8bc7-2d1b51be2d1f"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="dcec0027-eb91-48e8-af81-c13815b7c1f4">
+                    <propertyInstance
+                      Id="963e7133-fbe5-4163-84ea-a0f7fa99d998"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="95452c33-e078-4775-9737-2d2581151ff7">
+                    <propertyInstance
+                      Id="2bf6624b-4c41-4243-9285-9a537f757f44"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="5da037db-60d4-490f-961e-ea34195f8874">
+                    <propertyInstance
+                      Id="d29c117e-7490-48a4-8398-734ffdb66f5c"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="4aba12d9-d3b2-4954-bb42-926394986bf2">
+                    <propertyInstance
+                      Id="11496944-2bc1-4dce-b7dc-ac932aae3ef4"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="e549f9f2-1ce5-441b-a1f7-ff8d558ee373"
+                  direction="Return">
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="d925213d-8546-4b09-b50a-5057b34fcd8e"
+                      LastKnownName="Guid"
+                      LastKnownLocation="Package5_1457.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="30b818c0-8275-46d0-943e-f3d78255d826"
+                  name="orderId"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="9103d932-e7f3-45fa-ac54-8e359292e449"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.BusinessLogic.Domain.Order%2Fbin%2FDebug%2FFoodSearch.BusinessLogic.Domain.Order.dll Namespace%3DFoodSearch.BusinessLogic.Domain.Order.Interface Type%3DIOrderDomain Member%3D(Name%3DCreatePayment OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DGuid)%2C(Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.Data.Mapping%2Fbin%2FDebug%2FFoodSearch.Data.Mapping.dll Namespace%3DFoodSearch.Data.Mapping.Entities Type%3DPaymentTypes)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDecimal)]) ParameterIdentifier%3DorderId"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="d925213d-8546-4b09-b50a-5057b34fcd8e"
+                      LastKnownName="Guid"
+                      LastKnownLocation="Package5_1457.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="0e12b299-57f8-4fac-89e6-38dada7e3c85"
+                  name="paymentType"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="b45c3e0e-9570-4ba3-a209-9c0efff83e56"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.BusinessLogic.Domain.Order%2Fbin%2FDebug%2FFoodSearch.BusinessLogic.Domain.Order.dll Namespace%3DFoodSearch.BusinessLogic.Domain.Order.Interface Type%3DIOrderDomain Member%3D(Name%3DCreatePayment OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DGuid)%2C(Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.Data.Mapping%2Fbin%2FDebug%2FFoodSearch.Data.Mapping.dll Namespace%3DFoodSearch.Data.Mapping.Entities Type%3DPaymentTypes)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDecimal)]) ParameterIdentifier%3DpaymentType"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <enumerationMoniker
+                      Id="a46e1837-d888-47c1-8007-9921ed621582"
+                      LastKnownName="PaymentTypes"
+                      LastKnownLocation="Package_1416.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="49ea1dd0-83b3-4417-9d15-c852f9ca6978"
+                  name="amount"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="f0ca8f3d-2fc9-4854-ab91-f5790cfc605e"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.BusinessLogic.Domain.Order%2Fbin%2FDebug%2FFoodSearch.BusinessLogic.Domain.Order.dll Namespace%3DFoodSearch.BusinessLogic.Domain.Order.Interface Type%3DIOrderDomain Member%3D(Name%3DCreatePayment OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DGuid)%2C(Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.Data.Mapping%2Fbin%2FDebug%2FFoodSearch.Data.Mapping.dll Namespace%3DFoodSearch.Data.Mapping.Entities Type%3DPaymentTypes)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDecimal)]) ParameterIdentifier%3Damount"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="91a0102d-4c96-490b-a613-d50d40811ac6"
+                      LastKnownName="Decimal"
+                      LastKnownLocation="Package5_1457.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="c7c0ef09-d646-4c00-8916-593b5742c050"
+            name="UpdatePayment"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="6ff86ebf-fd26-47c9-9834-933636ef4aa1"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.BusinessLogic.Domain.Order%2Fbin%2FDebug%2FFoodSearch.BusinessLogic.Domain.Order.dll Namespace%3DFoodSearch.BusinessLogic.Domain.Order.Interface Type%3DIOrderDomain Member%3D(Name%3DUpdatePayment OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DGuid)%2C(Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.Data.Mapping%2Fbin%2FDebug%2FFoodSearch.Data.Mapping.dll Namespace%3DFoodSearch.Data.Mapping.Entities Type%3DPaymentStates)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="a5f0a2df-0109-436f-a911-fbf74379d433"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a28013ef-d021-4379-abe8-34a8acd27c44">
+                    <propertyInstance
+                      Id="d5929231-dff8-408b-8bf8-d46239c4f147"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="62447cc6-654b-4edf-8d96-12ebe4e6fa85">
+                    <propertyInstance
+                      Id="18a7bd73-87f8-491b-bc30-b99667edb14a"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="8daeb3b5-1bde-4fed-bb7d-31b5b738a89d">
+                    <propertyInstance
+                      Id="04cb16a4-9adb-4424-be6e-e381d2734a30"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="2e1d7c4d-22d4-420d-8531-a622d8419b36">
+                    <propertyInstance
+                      Id="c0203034-89f2-4913-9234-d0c792d4b393"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="1f952d11-6f88-45cf-b4b4-993bde863881">
+                    <propertyInstance
+                      Id="0996c424-98de-4007-9786-0576e6316a36"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="2fde42fc-f358-46e5-9278-571dd824ad0e">
+                    <propertyInstance
+                      Id="d31d1b73-01fa-44ef-82ff-384edca414d7"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="b5499026-5290-4a09-af44-54ee458429f3"
+                  direction="Return">
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+                      LastKnownName="Boolean"
+                      LastKnownLocation="FoodSearch.Modeling.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="62bc1ea7-58c5-4fd4-9df8-5aae368f82bd"
+                  name="paymentId"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="e080fd2f-bb8c-4643-9e10-7a2488c75b1f"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.BusinessLogic.Domain.Order%2Fbin%2FDebug%2FFoodSearch.BusinessLogic.Domain.Order.dll Namespace%3DFoodSearch.BusinessLogic.Domain.Order.Interface Type%3DIOrderDomain Member%3D(Name%3DUpdatePayment OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DGuid)%2C(Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.Data.Mapping%2Fbin%2FDebug%2FFoodSearch.Data.Mapping.dll Namespace%3DFoodSearch.Data.Mapping.Entities Type%3DPaymentStates)]) ParameterIdentifier%3DpaymentId"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="d925213d-8546-4b09-b50a-5057b34fcd8e"
+                      LastKnownName="Guid"
+                      LastKnownLocation="Package5_1457.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="9070b74d-9d06-49b7-8517-3c104715a066"
+                  name="paymentState"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="79c86e89-cacf-4595-b17c-e663e45fddb0"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.BusinessLogic.Domain.Order%2Fbin%2FDebug%2FFoodSearch.BusinessLogic.Domain.Order.dll Namespace%3DFoodSearch.BusinessLogic.Domain.Order.Interface Type%3DIOrderDomain Member%3D(Name%3DUpdatePayment OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DGuid)%2C(Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.Data.Mapping%2Fbin%2FDebug%2FFoodSearch.Data.Mapping.dll Namespace%3DFoodSearch.Data.Mapping.Entities Type%3DPaymentStates)]) ParameterIdentifier%3DpaymentState"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <enumerationMoniker
+                      Id="a647690d-8364-4d4b-8261-1e1b829a3165"
+                      LastKnownName="PaymentStates"
+                      LastKnownLocation="Package_1416.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="fa05ee5a-1cf8-4abb-b474-7e936f7b7f3e"
+            name="GetDeliveryPrice"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="a759a2bb-9f67-486c-88de-1f20ac95d65f"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.BusinessLogic.Domain.Order%2Fbin%2FDebug%2FFoodSearch.BusinessLogic.Domain.Order.dll Namespace%3DFoodSearch.BusinessLogic.Domain.Order.Interface Type%3DIOrderDomain Member%3D(Name%3DGetDeliveryPrice OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DGuid)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDecimal)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="c9ca97a7-52f5-4096-a091-40e1ea9143f3"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="668445d4-0221-437b-8c0a-9c5d6a97b243">
+                    <propertyInstance
+                      Id="dd42a383-09d9-4b5c-9058-fa3d41e5b27c"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="7a706899-719f-41eb-ad69-e54816d61754">
+                    <propertyInstance
+                      Id="934519d7-ea03-41aa-9bb0-c6eeae0aae19"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c28fbc03-50ea-4619-840b-2fcbeda62b0d">
+                    <propertyInstance
+                      Id="6b373982-c247-46ab-a1b6-877feef0a0d5"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="410121b4-b98c-4b8c-ac48-e630f8372a3e">
+                    <propertyInstance
+                      Id="74c47953-244e-4cc9-a8e6-4e15dd24e018"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="983e9fb8-7131-4b54-a749-af5e1c64f9ca">
+                    <propertyInstance
+                      Id="9c088e31-c22a-491c-ac6a-efd82c1b4b1b"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="af0a2819-dddc-45dc-91be-2e75fa869d05">
+                    <propertyInstance
+                      Id="e61ae96b-fc96-498e-a3f2-9aa38a3eaf8c"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="770c5497-a8d7-4afb-bbc8-724bf4b5da29"
+                  direction="Return">
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="91a0102d-4c96-490b-a613-d50d40811ac6"
+                      LastKnownName="Decimal"
+                      LastKnownLocation="Package5_1457.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="3fed42a8-8899-4cff-9ff6-a70903114b48"
+                  name="restaurantId"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="01d14596-200b-42d9-b5a2-701754548dd4"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.BusinessLogic.Domain.Order%2Fbin%2FDebug%2FFoodSearch.BusinessLogic.Domain.Order.dll Namespace%3DFoodSearch.BusinessLogic.Domain.Order.Interface Type%3DIOrderDomain Member%3D(Name%3DGetDeliveryPrice OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DGuid)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDecimal)]) ParameterIdentifier%3DrestaurantId"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="d925213d-8546-4b09-b50a-5057b34fcd8e"
+                      LastKnownName="Guid"
+                      LastKnownLocation="Package5_1457.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="420923c3-af16-4d35-a185-510bcd614155"
+                  name="totalPrice"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="e0520d06-2598-4e1a-bb4d-adaa916f2cea"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.BusinessLogic.Domain.Order%2Fbin%2FDebug%2FFoodSearch.BusinessLogic.Domain.Order.dll Namespace%3DFoodSearch.BusinessLogic.Domain.Order.Interface Type%3DIOrderDomain Member%3D(Name%3DGetDeliveryPrice OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DGuid)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDecimal)]) ParameterIdentifier%3DtotalPrice"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="91a0102d-4c96-490b-a613-d50d40811ac6"
+                      LastKnownName="Decimal"
+                      LastKnownLocation="Package5_1457.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="25e96e10-a0fe-46f4-94d8-7aa418d5395e"
+            name="GetPaymentTypes"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="1a631ece-f127-4d38-a051-e6644c121791"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.BusinessLogic.Domain.Order%2Fbin%2FDebug%2FFoodSearch.BusinessLogic.Domain.Order.dll Namespace%3DFoodSearch.BusinessLogic.Domain.Order.Interface Type%3DIOrderDomain Member%3DGetPaymentTypes"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="ed1f3a67-30a6-4c9d-aac0-2fa22a469b2a"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="fd405189-941d-407a-ab02-743cc2e20919">
+                    <propertyInstance
+                      Id="a96007f0-047e-48e9-af53-26b45b918612"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="3bb13729-afc3-4d4d-9ec9-2fb73a7f7c89">
+                    <propertyInstance
+                      Id="887c9997-73ec-43f0-bc95-361ee6ea420d"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="4ece1274-47d4-4a8b-a86f-1e7c8e6367f8">
+                    <propertyInstance
+                      Id="b6dd1f75-16e0-4b3c-aef4-619e64469aa3"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="7dff16a1-469e-4cc4-963d-41214f05562e">
+                    <propertyInstance
+                      Id="358edec6-ec00-48c5-b68c-b020c34b733f"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ef23cdc6-4ba2-4bae-ab43-2bd576bd0e13">
+                    <propertyInstance
+                      Id="8ecfda35-63c8-4426-81e8-9ccda42965dd"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="6a97ab69-54f5-4f6a-85b9-6ae6cbed1c7e">
+                    <propertyInstance
+                      Id="73676b0d-c1e4-4ff5-8494-3b9427a69741"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="0f30bdb9-a6e2-4f65-b787-ee1a22a83040"
+                  direction="Return">
+                  <type_NamedElement>
+                    <interfaceMoniker
+                      Id="a1bc8a84-0299-4f54-8c86-034730fe428d"
+                      LastKnownName="IEnumerable&lt;PaymentType‎&gt;"
+                      LastKnownLocation="Package1_1557.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="6665c6ba-ccad-4fa0-80d0-45f1d63d38d6"
+            name="GetDeliveryTypes"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="c511c432-d703-432b-85dd-7d8b29033232"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.BusinessLogic.Domain.Order%2Fbin%2FDebug%2FFoodSearch.BusinessLogic.Domain.Order.dll Namespace%3DFoodSearch.BusinessLogic.Domain.Order.Interface Type%3DIOrderDomain Member%3DGetDeliveryTypes"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="9a5b3661-9cb3-4dbe-b6d8-ca464d996903"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a1940e65-6bef-4f6b-b653-4915f1eac20d">
+                    <propertyInstance
+                      Id="2588e20a-3ab2-4a75-a58d-ebc9ff796fc9"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="06c10f8c-bc47-4148-9f62-892a9f3ccee2">
+                    <propertyInstance
+                      Id="e5995735-c95c-4a5b-8d5a-3ea6ccddb819"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="33525e42-1e52-482a-bf68-9996f95cd2fe">
+                    <propertyInstance
+                      Id="c2b832cd-e4a4-41f0-a077-36ed7d4ff146"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="34f29064-904c-44d4-9dd4-83e898ade53a">
+                    <propertyInstance
+                      Id="52ccb3f0-4512-4809-be55-8e1d96b7fb98"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="22c21b6d-42a2-4470-9857-f694dec454f3">
+                    <propertyInstance
+                      Id="8ea190c5-c8d3-496f-a4e4-434ced716768"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="95fda683-9cda-4497-a07e-b2921731fb53">
+                    <propertyInstance
+                      Id="b817ae45-c086-498f-97c1-a1532b4e9233"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="2c8a0178-1d39-4ca2-b03e-5332952ba56c"
+                  direction="Return">
+                  <type_NamedElement>
+                    <interfaceMoniker
+                      Id="7458ad71-9c89-4662-b736-d970aa7417b9"
+                      LastKnownName="IEnumerable&lt;DeliveryType‎&gt;"
+                      LastKnownLocation="Package1_1557.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="d99cf6f6-f857-4297-b446-d9b6c8cb80e7"
+            name="GetOrderForPayment"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="958a1e93-bf0e-4f19-aa11-9ff1e36495b4"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.BusinessLogic.Domain.Order%2Fbin%2FDebug%2FFoodSearch.BusinessLogic.Domain.Order.dll Namespace%3DFoodSearch.BusinessLogic.Domain.Order.Interface Type%3DIOrderDomain Member%3D(Name%3DGetOrderForPayment OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DGuid)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="3287e36f-3bde-4a5b-b18e-b8f54d434d75"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d01f6570-b1a9-467a-b7ac-baba273065d7">
+                    <propertyInstance
+                      Id="9a6d1eaa-fcb3-4ff9-883f-43e195035a73"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b33e937b-b897-4f25-8132-d2956858e1ea">
+                    <propertyInstance
+                      Id="db728d9e-5ff6-4fd5-b8a1-eacb708e48bd"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b76cac20-1182-48ce-9208-bd9544a80f3c">
+                    <propertyInstance
+                      Id="8ec17db7-772f-4794-8807-e223819480e5"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a7a2f573-7fe6-4227-8eae-d156428a85fa">
+                    <propertyInstance
+                      Id="7ceb5e2c-31e7-449f-b2d9-ecffa1c6ab42"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="3d946135-7a27-430a-a703-410e316c9c18">
+                    <propertyInstance
+                      Id="a17886d4-cb0d-46c1-845c-c61a19f3b683"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="0b1154d1-8811-4a73-9d6a-fcc8d1def13f">
+                    <propertyInstance
+                      Id="65da54cd-5922-40e1-b544-a50ce6aa7ae0"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="1379c60e-d291-4ec2-a207-c7e0d2edd795"
+                  direction="Return">
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="c83b99ba-f252-4232-a90d-b026269d8af4"
+                      LastKnownName="PaymentsOrder"
+                      LastKnownLocation="Package12_1701.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="d3198b22-85b3-42f7-8497-0dea0b09c2d4"
+                  name="paymentId"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="05027ff2-8eb4-4992-ab32-c25d6294d7c8"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.BusinessLogic.Domain.Order%2Fbin%2FDebug%2FFoodSearch.BusinessLogic.Domain.Order.dll Namespace%3DFoodSearch.BusinessLogic.Domain.Order.Interface Type%3DIOrderDomain Member%3D(Name%3DGetOrderForPayment OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DGuid)]) ParameterIdentifier%3DpaymentId"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="d925213d-8546-4b09-b50a-5057b34fcd8e"
+                      LastKnownName="Guid"
+                      LastKnownLocation="Package5_1457.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="f4ebd128-6492-4010-94f5-ffa9f2781844"
+            name="ChangeOrderState"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="5d8c738e-c750-4125-ad72-3bbfc0bc8d8a"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.BusinessLogic.Domain.Order%2Fbin%2FDebug%2FFoodSearch.BusinessLogic.Domain.Order.dll Namespace%3DFoodSearch.BusinessLogic.Domain.Order.Interface Type%3DIOrderDomain Member%3D(Name%3DChangeOrderState OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DGuid)%2C(Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.Data.Mapping%2Fbin%2FDebug%2FFoodSearch.Data.Mapping.dll Namespace%3DFoodSearch.Data.Mapping.Entities Type%3DOrderStates)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="91c0c638-4eab-4565-9ed9-fca6f4bc1e65"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="7a72f03d-85d4-4c7c-9ff6-5b580e3b0a6b">
+                    <propertyInstance
+                      Id="c9349369-6734-4eae-8110-24408fb50ab4"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d69a339c-801b-4170-b0c6-8955043a43a3">
+                    <propertyInstance
+                      Id="75d46ec5-eb0c-453f-9f09-304b0102bdda"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="9fb10198-1e78-45a2-a85c-636ddd1cf063">
+                    <propertyInstance
+                      Id="816452dc-6ec3-401d-992f-5c202de85885"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="95ed0df3-fb32-4942-b920-9b686d017138">
+                    <propertyInstance
+                      Id="8a5be6c3-8d14-44e4-8a84-27e9e267af22"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a420c7e8-ac51-45a5-a816-5d91d76a9f06">
+                    <propertyInstance
+                      Id="eedc2d6b-ab1e-4588-a314-7d509ca27d09"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="75b9504b-559b-4d2a-9f7c-7e1bba22ecd0">
+                    <propertyInstance
+                      Id="e2cdb960-d12d-4f1b-aaa1-875e131ea382"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="d4b3a651-a1bd-4e23-aea7-93d432f3a676"
+                  direction="Return">
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+                      LastKnownName="Boolean"
+                      LastKnownLocation="FoodSearch.Modeling.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="be425110-3a0e-4cc6-b47a-3dea0725790e"
+                  name="orderId"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="71f36cc7-4323-45ed-99a7-fb204205eb44"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.BusinessLogic.Domain.Order%2Fbin%2FDebug%2FFoodSearch.BusinessLogic.Domain.Order.dll Namespace%3DFoodSearch.BusinessLogic.Domain.Order.Interface Type%3DIOrderDomain Member%3D(Name%3DChangeOrderState OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DGuid)%2C(Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.Data.Mapping%2Fbin%2FDebug%2FFoodSearch.Data.Mapping.dll Namespace%3DFoodSearch.Data.Mapping.Entities Type%3DOrderStates)]) ParameterIdentifier%3DorderId"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="d925213d-8546-4b09-b50a-5057b34fcd8e"
+                      LastKnownName="Guid"
+                      LastKnownLocation="Package5_1457.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="c7ce4d7c-3739-42bd-9f8d-6cc5960a9b66"
+                  name="newOrderState"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="ea80a12a-340b-4667-9658-885b5e32b372"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.BusinessLogic.Domain.Order%2Fbin%2FDebug%2FFoodSearch.BusinessLogic.Domain.Order.dll Namespace%3DFoodSearch.BusinessLogic.Domain.Order.Interface Type%3DIOrderDomain Member%3D(Name%3DChangeOrderState OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DGuid)%2C(Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.Data.Mapping%2Fbin%2FDebug%2FFoodSearch.Data.Mapping.dll Namespace%3DFoodSearch.Data.Mapping.Entities Type%3DOrderStates)]) ParameterIdentifier%3DnewOrderState"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <enumerationMoniker
+                      Id="8c7c307e-9f24-42f0-a453-c30cff4f20ed"
+                      LastKnownName="OrderStates"
+                      LastKnownLocation="Package_1416.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="de4672ce-86aa-4a7d-9f9b-3e817b516572"
+            name="ConfirmOrder"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="b906ad83-00e8-4e43-ad33-0376a19166f7"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.BusinessLogic.Domain.Order%2Fbin%2FDebug%2FFoodSearch.BusinessLogic.Domain.Order.dll Namespace%3DFoodSearch.BusinessLogic.Domain.Order.Interface Type%3DIOrderDomain Member%3D(Name%3DConfirmOrder OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DGuid)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DTimeSpan)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="810bb7ef-06d7-4d9b-9038-72ba0ffdefb3"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="67e98c92-7348-45c4-b220-30c4e9a69952">
+                    <propertyInstance
+                      Id="37698100-0adf-40a6-9698-560b0fa317ec"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="03e5be21-0822-4e26-8b25-c7fcd72e2444">
+                    <propertyInstance
+                      Id="213576fd-6067-4297-a7b1-85ee2082ea3e"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="4c0dd19e-8890-41db-af6d-be8f419cf137">
+                    <propertyInstance
+                      Id="6250d5b2-1615-48e0-b6ce-b8b2daa0bb01"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="336b3a3b-2a4e-44e9-bc27-e4558ccea0f6">
+                    <propertyInstance
+                      Id="c7478454-4019-4822-875c-531d0b925273"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a74bbfb6-e2bf-4da7-9018-1f5ae08bb77f">
+                    <propertyInstance
+                      Id="3787f566-7284-443b-b27a-e750505b5f93"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="12a3fffd-5f18-4760-826a-057c982d6fe8">
+                    <propertyInstance
+                      Id="b34ab5cf-e884-4b5e-95fe-5dbe6e4a3b23"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="32bb6b8b-a7b7-48ce-b1a5-ed6855f3b646"
+                  direction="Return">
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+                      LastKnownName="Boolean"
+                      LastKnownLocation="FoodSearch.Modeling.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="f3239e7e-3670-43d9-906b-6dd35ad11ce0"
+                  name="orderId"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="214b0cba-1e45-4656-b944-ccd0d9c77d28"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.BusinessLogic.Domain.Order%2Fbin%2FDebug%2FFoodSearch.BusinessLogic.Domain.Order.dll Namespace%3DFoodSearch.BusinessLogic.Domain.Order.Interface Type%3DIOrderDomain Member%3D(Name%3DConfirmOrder OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DGuid)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DTimeSpan)]) ParameterIdentifier%3DorderId"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="d925213d-8546-4b09-b50a-5057b34fcd8e"
+                      LastKnownName="Guid"
+                      LastKnownLocation="Package5_1457.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="0689113c-ff92-4f89-b5ce-6fba36269825"
+                  name="deliveryTime"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="6d29a902-75ad-45f2-802e-600a5f71c0d9"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.BusinessLogic.Domain.Order%2Fbin%2FDebug%2FFoodSearch.BusinessLogic.Domain.Order.dll Namespace%3DFoodSearch.BusinessLogic.Domain.Order.Interface Type%3DIOrderDomain Member%3D(Name%3DConfirmOrder OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DGuid)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DTimeSpan)]) ParameterIdentifier%3DdeliveryTime"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="a701ee12-19ae-4db1-a4e8-db13838d05e9"
+                      LastKnownName="TimeSpan"
+                      LastKnownLocation="Package5_1457.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="cd789ab5-7f65-47d6-bbaf-bd9dc3992c6a"
+            name="CancelOrder"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="f734cc9d-863d-48e6-85d1-585d87ee294e"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.BusinessLogic.Domain.Order%2Fbin%2FDebug%2FFoodSearch.BusinessLogic.Domain.Order.dll Namespace%3DFoodSearch.BusinessLogic.Domain.Order.Interface Type%3DIOrderDomain Member%3D(Name%3DCancelOrder OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DGuid)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="b5c86e57-8c22-43fa-90ef-954cafbff15e"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a8f5f3ee-e7ac-46fb-bf2a-9845e91a0d95">
+                    <propertyInstance
+                      Id="fe21496d-1067-497a-b8d1-603d9b28721a"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c466d49d-64fc-4cf8-acab-49d424b13090">
+                    <propertyInstance
+                      Id="ffde93cb-47a9-4a4e-8fa8-ae3673f7ad01"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="06dfbcd8-5d56-4f8f-a5c5-7fada381af20">
+                    <propertyInstance
+                      Id="c9a7e044-a4ab-441b-a0a9-f58dfaafd69f"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="59f9c58d-b04d-41dc-b495-caf0058bf77a">
+                    <propertyInstance
+                      Id="3e63dcba-9eca-4667-a81d-f42ff65f86b9"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="5910b8af-4ee9-4e4b-a059-6166cc5d2ae1">
+                    <propertyInstance
+                      Id="b9c6a67c-a4de-4cf1-9c99-3972260cae00"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="038ccb7f-43cc-4621-a7d6-0c53b6c3ccc0">
+                    <propertyInstance
+                      Id="72306e53-498b-498b-8ec4-5adf130915ba"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="9f53f38d-1f58-4c1f-a8eb-7676b3b2207d"
+                  direction="Return">
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+                      LastKnownName="Boolean"
+                      LastKnownLocation="FoodSearch.Modeling.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="e71f3025-3c0f-49a5-9a76-7f65a2494fe0"
+                  name="orderId"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="3aac050b-3a36-4b34-a2cc-075897649fb9"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.BusinessLogic.Domain.Order%2Fbin%2FDebug%2FFoodSearch.BusinessLogic.Domain.Order.dll Namespace%3DFoodSearch.BusinessLogic.Domain.Order.Interface Type%3DIOrderDomain Member%3D(Name%3DCancelOrder OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DGuid)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)]) ParameterIdentifier%3DorderId"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="d925213d-8546-4b09-b50a-5057b34fcd8e"
+                      LastKnownName="Guid"
+                      LastKnownLocation="Package5_1457.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="5ba17899-f6a7-425e-bd19-6e6a44b5b972"
+                  name="cancellationReason"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="62ea1c6b-28ed-409e-8817-d52f92e3217a"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.BusinessLogic.Domain.Order%2Fbin%2FDebug%2FFoodSearch.BusinessLogic.Domain.Order.dll Namespace%3DFoodSearch.BusinessLogic.Domain.Order.Interface Type%3DIOrderDomain Member%3D(Name%3DCancelOrder OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DGuid)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)]) ParameterIdentifier%3DcancellationReason"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                      LastKnownName="String"
+                      LastKnownLocation="FoodSearch.Modeling.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="ab28bbd5-8e34-4799-b9c7-2e9d606f19c1"
+            name="GetDeliveryStatus"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="98dbf889-9432-49cc-b1b0-b6324e2a96fc"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.BusinessLogic.Domain.Order%2Fbin%2FDebug%2FFoodSearch.BusinessLogic.Domain.Order.dll Namespace%3DFoodSearch.BusinessLogic.Domain.Order.Interface Type%3DIOrderDomain Member%3D(Name%3DGetDeliveryStatus OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DGuid)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="bc92e583-379b-4ec7-a8f0-fa6c4b163ca4"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="63d8e94f-89d0-4f9a-afd8-a76b9f89e6a4">
+                    <propertyInstance
+                      Id="4fd1182a-53a7-4b01-a4db-b28eef60c17d"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="0a4f916f-8528-4942-9414-e7ceb0fd11ce">
+                    <propertyInstance
+                      Id="abfa57b2-6dd3-4c46-8dc6-963d00da216e"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="6653e510-5232-4ef1-b740-a148be47bdc4">
+                    <propertyInstance
+                      Id="7d902e00-e294-4295-9e3e-62057645d05c"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="7ad67219-ecbc-4f3a-a8e7-505258810fe1">
+                    <propertyInstance
+                      Id="355b9a34-4888-49d2-a9a6-2476006cb50a"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="cfbff692-397a-4de5-9f59-b8349971c2f8">
+                    <propertyInstance
+                      Id="475bfc33-5d7b-41c9-a80e-2c7b8b6099b0"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a8880d50-391f-416b-b01f-a289edf7fa28">
+                    <propertyInstance
+                      Id="b943e626-de04-4ec1-892e-f5e438f91c74"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="e6198615-f111-4731-a75a-62d6b855d8c0"
+                  direction="Return">
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="fea256d0-5385-4897-8871-c80f3f22ff4e"
+                      LastKnownName="DeliveryStatus"
+                      LastKnownLocation="Package12_1701.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="79a17346-f94f-4c66-97fe-1c035471737c"
+                  name="orderId"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="47452689-ceb6-403b-bde8-0d2ccb679d09"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.BusinessLogic.Domain.Order%2Fbin%2FDebug%2FFoodSearch.BusinessLogic.Domain.Order.dll Namespace%3DFoodSearch.BusinessLogic.Domain.Order.Interface Type%3DIOrderDomain Member%3D(Name%3DGetDeliveryStatus OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DGuid)]) ParameterIdentifier%3DorderId"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="d925213d-8546-4b09-b50a-5057b34fcd8e"
+                      LastKnownName="Guid"
+                      LastKnownLocation="Package5_1457.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperations>
+      </Interface>
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

@@ -22,22 +22,117 @@
   </PropertyGroup>
   <Import Project="$(VSToolsPath)\ArchitectureTools\Microsoft.VisualStudio.TeamArchitect.ModelingProject.targets" Condition="'$(VSToolsPath)' != ''" />
   <ItemGroup>
+    <Content Include="BLLayer.classdiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="BLLayer.classdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>BLLayer.classdiagram</DependentUpon>
+    </Content>
+    <Content Include="DALLayer.classdiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="DALLayer.classdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>DALLayer.classdiagram</DependentUpon>
+    </Content>
+    <Content Include="ModelDefinition\Package10_1701.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package11_1701.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package12_1701.uml">
+      <SubType>Content</SubType>
+    </Content>
     <Content Include="ModelDefinition\Package1_1457.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package1_1524.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package1_1557.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package1_1700.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package1_1701.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package1_1702.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package1_1703.uml">
       <SubType>Content</SubType>
     </Content>
     <Content Include="ModelDefinition\Package2_1457.uml">
       <SubType>Content</SubType>
     </Content>
+    <Content Include="ModelDefinition\Package2_1700.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package2_1701.uml">
+      <SubType>Content</SubType>
+    </Content>
     <Content Include="ModelDefinition\Package3_1457.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package3_1700.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package3_1701.uml">
       <SubType>Content</SubType>
     </Content>
     <Content Include="ModelDefinition\Package4_1457.uml">
       <SubType>Content</SubType>
     </Content>
+    <Content Include="ModelDefinition\Package4_1700.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package4_1701.uml">
+      <SubType>Content</SubType>
+    </Content>
     <Content Include="ModelDefinition\Package5_1457.uml">
       <SubType>Content</SubType>
     </Content>
+    <Content Include="ModelDefinition\Package5_1701.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package6_1701.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package7_1701.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package8_1701.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package9_1701.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package_1416.uml">
+      <SubType>Content</SubType>
+    </Content>
     <Content Include="ModelDefinition\Package_1457.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package_1524.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package_1557.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package_1700.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package_1701.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package_1702.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package_1703.uml">
       <SubType>Content</SubType>
     </Content>
     <Content Include="UseCases\RestaurantAdmin.usecasediagram">
@@ -80,5 +175,84 @@
       <SubType>Content</SubType>
     </Content>
     <Folder Include="UseCases" />
+  </ItemGroup>
+  <ItemGroup>
+    <Validate Include="ArchitectureProject.layerdiagram">
+      <SubType>Content</SubType>
+    </Validate>
+    <Validate Include="ArchitectureProject.layerdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>ArchitectureProject.layerdiagram</DependentUpon>
+    </Validate>
+    <Validate Include="ArchitectureProject.layerdiagram.suppressions">
+      <SubType>Content</SubType>
+      <DependentUpon>ArchitectureProject.layerdiagram</DependentUpon>
+    </Validate>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\FoodSearch.BusinessLogic.Domain.Core\FoodSearch.BusinessLogic.Domain.Core.csproj">
+      <Name>FoodSearch.BusinessLogic.Domain.Core</Name>
+      <Project>{075008bc-66b0-436e-9bb2-897c2d1fb2d0}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\FoodSearch.BusinessLogic.Domain.FoodSearch\FoodSearch.BusinessLogic.Domain.FoodSearch.csproj">
+      <Name>FoodSearch.BusinessLogic.Domain.FoodSearch</Name>
+      <Project>{489e10b0-1eba-484e-be1e-11c533cb00cf}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\FoodSearch.BusinessLogic.Domain.Order\FoodSearch.BusinessLogic.Domain.Order.csproj">
+      <Name>FoodSearch.BusinessLogic.Domain.Order</Name>
+      <Project>{c0879b51-2af2-4d83-a239-4b7f0bd1d039}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\FoodSearch.BusinessLogic.Domain.Restaurant\FoodSearch.BusinessLogic.Domain.Restaurant.csproj">
+      <Name>FoodSearch.BusinessLogic.Domain.Restaurant</Name>
+      <Project>{c74e76c5-8e76-4b4f-a3ea-e921d912daff}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\FoodSearch.BusinessLogic.Domain.RestraurantAdmin\FoodSearch.BusinessLogic.Domain.RestraurantAdmin.csproj">
+      <Name>FoodSearch.BusinessLogic.Domain.RestraurantAdmin</Name>
+      <Project>{140694a6-e80e-4c42-8e66-f043019608a3}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\FoodSearch.BusinessLogic.Domain.SiteAdmin\FoodSearch.BusinessLogic.Domain.SiteAdmin.csproj">
+      <Name>FoodSearch.BusinessLogic.Domain.SiteAdmin</Name>
+      <Project>{29481033-93db-4905-bbf3-26d69f9071df}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\FoodSearch.BusinessLogic.Domain.Test\FoodSearch.BusinessLogic.Domain.Test.csproj">
+      <Name>FoodSearch.BusinessLogic.Domain.Test</Name>
+      <Project>{2aa2710f-d35f-4a63-96c8-5be02b16ad03}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\FoodSearch.BusinessLogic.Domain.User\FoodSearch.BusinessLogic.Domain.User.csproj">
+      <Name>FoodSearch.BusinessLogic.Domain.User</Name>
+      <Project>{c62d4eaf-4ee1-4f2e-96ea-0c630ffd59eb}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\FoodSearch.BusinessLogic.Helpers\FoodSearch.BusinessLogic.Helpers.csproj">
+      <Name>FoodSearch.BusinessLogic.Helpers</Name>
+      <Project>{21317ce8-3e82-4cde-8c7b-235e077013fc}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\FoodSearch.Data.Mapping\FoodSearch.Data.Mapping.csproj">
+      <Name>FoodSearch.Data.Mapping</Name>
+      <Project>{3c7d76ad-3b68-4eb6-9a15-560d4773fb24}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\FoodSearch.Presentation.Mobile.Android\FoodSearch.Presentation.Mobile.Android.csproj">
+      <Name>FoodSearch.Presentation.Mobile.Android</Name>
+      <Project>{1aa6c8a9-60e3-4ac5-9d25-ba336e0004b5}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\FoodSearch.Presentation.Mobile.Common\FoodSearch.Presentation.Mobile.Common.csproj">
+      <Name>FoodSearch.Presentation.Mobile.Common</Name>
+      <Project>{66161cd7-d1df-4c7d-a374-06e9ad489498}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\FoodSearch.Presentation.Mobile.WindowsPhone\FoodSearch.Presentation.Mobile.WindowsPhone.csproj">
+      <Name>FoodSearch.Presentation.Mobile.WindowsPhone</Name>
+      <Project>{cc3ff47a-d5cd-4d54-9b8a-8d568e23ec54}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\FoodSearch.Presentation.Web.Site\FoodSearch.Presentation.Web.Site.csproj">
+      <Name>FoodSearch.Presentation.Web.Site</Name>
+      <Project>{ebfb7545-e952-4530-a119-9af7e9177bd2}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\FoodSearch.Service.Api\FoodSearch.Service.Api.csproj">
+      <Name>FoodSearch.Service.Api</Name>
+      <Project>{e54c0b09-db27-436c-a4c2-8d0704ee5b8d}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\FoodSearch.Service.Client\FoodSearch.Service.Client.csproj">
+      <Name>FoodSearch.Service.Client</Name>
+      <Project>{89aa305d-ad29-4d2c-955d-15fc41da8238}</Project>
+    </ProjectReference>
   </ItemGroup>
 </Project>

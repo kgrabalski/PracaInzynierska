@@ -26,15 +26,7 @@ namespace FoodSearch.BusinessLogic.Domain.FoodSearch
         public FoodSearchDomain()
         {
             _kernel = new StandardKernel();
-#if DEBUG
-            _kernel.Bind<ISessionSource>().To<SessionSource>()
-                .InSingletonScope()
-                .WithConstructorArgument("db", Databases.FoodSearchTest);
-#else
-            _kernel.Bind<ISessionSource>().To<SessionSource>()
-                .InSingletonScope()
-                .WithConstructorArgument("db", Databases.FoodSearchTest);
-#endif
+            _kernel.Bind<ISessionSource>().To<SessionSource>().InSingletonScope();
             _kernel.Bind<IRepositoryProvider>().To<FoodSearchRepositoryProvider>();
             _kernel.Bind<ICoreDomain>().To<CoreDomain>().InThreadScope();
             _kernel.Bind<IOrderDomain>().To<OrderDomain>().InThreadScope();

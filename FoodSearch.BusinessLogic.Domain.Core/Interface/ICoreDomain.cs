@@ -12,7 +12,6 @@ namespace FoodSearch.BusinessLogic.Domain.Core.Interface
         IEnumerable<City> GetCities();
         IEnumerable<District> GetDistricts(int cityId);
         IEnumerable<Street> GetStreets(int cityId, string query);
-        IEnumerable<Street> GetStreets(int districtId);
         IEnumerable<StreetNumber> GetStreetNumbers(int streetId);
         Image GetImage(int imageId);
         int AddImage(byte[] imageBytes, string contentType);

@@ -1,0 +1,202 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<layerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="11a45d74-a5e7-464c-8e4e-be41834f2757" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/LayerDesigner">
+  <layers>
+    <layer Id="ae7d5bbb-89fc-49de-a0fa-05722d50c538" name="Business Logic Layer">
+      <childLayers>
+        <layer Id="06b71642-bed8-45eb-985d-82cb1967c60d" name="Domain Model">
+          <dependencyToLayers>
+            <dependencyFromLayerToLayer Id="f982f0c7-c2e3-41d7-844f-b3fce2b8c26f" direction="Forward">
+              <layerMoniker Id="90d17663-3b17-4b0c-8fa3-0e028446f255" />
+            </dependencyFromLayerToLayer>
+            <dependencyFromLayerToLayer Id="1c736783-2a4d-4333-a7af-456f79aab30b" direction="Forward">
+              <layerMoniker Id="24fb2d64-46ab-427a-8e06-f07fdb67b939" />
+            </dependencyFromLayerToLayer>
+          </dependencyToLayers>
+          <references>
+            <reference Id="0532851c-ea68-4d2f-8749-55329d5a456b" name="FoodSearch.BusinessLogic.Domain.User">
+              <ArtifactNode Label="FoodSearch.BusinessLogic.Domain.User" Category="CodeSchema_Project" Id="(Assembly=../FoodSearch.BusinessLogic.Domain.User/FoodSearch.BusinessLogic.Domain.User.csproj)" />
+              <ExpandedNode Id="(Assembly=FoodSearch.BusinessLogic.Domain.User)" Label="FoodSearch.BusinessLogic.Domain.User.dll" Category="CodeSchema_Assembly">
+                <Category Ref="FileSystem.Category.FileOfType.dll" />
+                <LinkCategory Ref="Produces" />
+                <LinkCategory Ref="Represents" />
+              </ExpandedNode>
+            </reference>
+            <reference Id="2ded1fc2-14fe-4d88-bf94-dc1234527628" name="FoodSearch.BusinessLogic.Domain.Restaurant">
+              <ArtifactNode Label="FoodSearch.BusinessLogic.Domain.Restaurant" Category="CodeSchema_Project" Id="(Assembly=../FoodSearch.BusinessLogic.Domain.Restaurant/FoodSearch.BusinessLogic.Domain.Restaurant.csproj)" />
+              <ExpandedNode Id="(Assembly=FoodSearch.BusinessLogic.Domain.Restaurant)" Label="FoodSearch.BusinessLogic.Domain.Restaurant.dll" Category="CodeSchema_Assembly">
+                <Category Ref="FileSystem.Category.FileOfType.dll" />
+                <LinkCategory Ref="Produces" />
+                <LinkCategory Ref="Represents" />
+              </ExpandedNode>
+            </reference>
+            <reference Id="ae8913ae-51cd-465a-9c80-ca3f32189e59" name="FoodSearch.BusinessLogic.Domain.Core">
+              <ArtifactNode Label="FoodSearch.BusinessLogic.Domain.Core" Category="CodeSchema_Project" Id="(Assembly=../FoodSearch.BusinessLogic.Domain.Core/FoodSearch.BusinessLogic.Domain.Core.csproj)" />
+              <ExpandedNode Id="(Assembly=FoodSearch.BusinessLogic.Domain.Core)" Label="FoodSearch.BusinessLogic.Domain.Core.dll" Category="CodeSchema_Assembly">
+                <Category Ref="FileSystem.Category.FileOfType.dll" />
+                <LinkCategory Ref="Produces" />
+                <LinkCategory Ref="Represents" />
+              </ExpandedNode>
+            </reference>
+            <reference Id="512d7582-1c1f-4a9c-9761-b2613a79f7ab" name="FoodSearch.BusinessLogic.Domain.SiteAdmin">
+              <ArtifactNode Label="FoodSearch.BusinessLogic.Domain.SiteAdmin" Category="CodeSchema_Project" Id="(Assembly=../FoodSearch.BusinessLogic.Domain.SiteAdmin/FoodSearch.BusinessLogic.Domain.SiteAdmin.csproj)" />
+              <ExpandedNode Id="(Assembly=FoodSearch.BusinessLogic.Domain.SiteAdmin)" Label="FoodSearch.BusinessLogic.Domain.SiteAdmin.dll" Category="CodeSchema_Assembly">
+                <Category Ref="FileSystem.Category.FileOfType.dll" />
+                <LinkCategory Ref="Produces" />
+                <LinkCategory Ref="Represents" />
+              </ExpandedNode>
+            </reference>
+            <reference Id="475c1fe2-aa41-4c9f-9c7c-c5939cdc9726" name="FoodSearch.BusinessLogic.Domain.RestraurantAdmin">
+              <ArtifactNode Label="FoodSearch.BusinessLogic.Domain.RestraurantAdmin" Category="CodeSchema_Project" Id="(Assembly=../FoodSearch.BusinessLogic.Domain.RestraurantAdmin/FoodSearch.BusinessLogic.Domain.RestraurantAdmin.csproj)" />
+              <ExpandedNode Id="(Assembly=FoodSearch.BusinessLogic.Domain.RestraurantAdmin)" Label="FoodSearch.BusinessLogic.Domain.RestraurantAdmin.dll" Category="CodeSchema_Assembly">
+                <Category Ref="FileSystem.Category.FileOfType.dll" />
+                <LinkCategory Ref="Produces" />
+                <LinkCategory Ref="Represents" />
+              </ExpandedNode>
+            </reference>
+            <reference Id="d34eff60-ac8a-463d-a2b9-d47df9cd6475" name="FoodSearch.BusinessLogic.Domain.Order">
+              <ArtifactNode Label="FoodSearch.BusinessLogic.Domain.Order" Category="CodeSchema_Project" Id="(Assembly=../FoodSearch.BusinessLogic.Domain.Order/FoodSearch.BusinessLogic.Domain.Order.csproj)" />
+              <ExpandedNode Id="(Assembly=FoodSearch.BusinessLogic.Domain.Order)" Label="FoodSearch.BusinessLogic.Domain.Order.dll" Category="CodeSchema_Assembly">
+                <Category Ref="FileSystem.Category.FileOfType.dll" />
+                <LinkCategory Ref="Produces" />
+                <LinkCategory Ref="Represents" />
+              </ExpandedNode>
+            </reference>
+          </references>
+        </layer>
+        <layer Id="90d17663-3b17-4b0c-8fa3-0e028446f255" name="Helpers">
+          <references>
+            <reference Id="5335ae69-25b0-4717-bf17-cfd3a720a9c4" name="FoodSearch.BusinessLogic.Helpers">
+              <ArtifactNode Label="FoodSearch.BusinessLogic.Helpers" Category="CodeSchema_Project" Id="(Assembly=../FoodSearch.BusinessLogic.Helpers/FoodSearch.BusinessLogic.Helpers.csproj)" />
+              <ExpandedNode Id="(Assembly=FoodSearch.BusinessLogic.Helpers)" Label="FoodSearch.BusinessLogic.Helpers.dll" Category="CodeSchema_Assembly">
+                <Category Ref="FileSystem.Category.FileOfType.dll" />
+                <LinkCategory Ref="Produces" />
+                <LinkCategory Ref="Represents" />
+              </ExpandedNode>
+            </reference>
+          </references>
+        </layer>
+      </childLayers>
+    </layer>
+    <layer Id="24fb2d64-46ab-427a-8e06-f07fdb67b939" name="Data Access Layer">
+      <references>
+        <reference Id="0f2e822e-0941-498e-8ff3-31f215dd0ee3" name="FoodSearch.Data.Mapping">
+          <ArtifactNode Label="FoodSearch.Data.Mapping" Category="CodeSchema_Project" Id="(Assembly=../FoodSearch.Data.Mapping/FoodSearch.Data.Mapping.csproj)" />
+          <ExpandedNode Id="(Assembly=FoodSearch.Data.Mapping)" Label="FoodSearch.Data.Mapping.dll" Category="CodeSchema_Assembly">
+            <Category Ref="FileSystem.Category.FileOfType.dll" />
+            <LinkCategory Ref="Produces" />
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+        </reference>
+      </references>
+    </layer>
+    <layer Id="6400680e-8648-43fd-abe2-d10d499cd2fd" name="Service Layer">
+      <dependencyToLayers>
+        <dependencyFromLayerToLayer Id="1c091d16-ec05-46c5-b7c7-d1ee240f1e85" direction="Forward">
+          <layerMoniker Id="06b71642-bed8-45eb-985d-82cb1967c60d" />
+        </dependencyFromLayerToLayer>
+      </dependencyToLayers>
+      <childLayers>
+        <layer Id="b9b5d9cf-b0ea-4357-91c0-11e9f3553e9f" name="Mobile Service Client">
+          <references>
+            <reference Id="296cf85c-f368-4200-a574-f7d5a47ba354" name="FoodSearch.Service.Client">
+              <ArtifactNode Label="FoodSearch.Service.Client" Category="CodeSchema_Project" Id="(Assembly=../FoodSearch.Service.Client/FoodSearch.Service.Client.csproj)" />
+              <ExpandedNode Id="(Assembly=FoodSearch.Service.Client)" Label="FoodSearch.Service.Client.dll" Category="CodeSchema_Assembly">
+                <Category Ref="FileSystem.Category.FileOfType.dll" />
+                <LinkCategory Ref="Produces" />
+                <LinkCategory Ref="Represents" />
+              </ExpandedNode>
+            </reference>
+          </references>
+        </layer>
+        <layer Id="f0fbeed6-d9bf-4e69-8b57-009126834d0f" name="Mobile Service">
+          <references>
+            <reference Id="4f92d035-64a3-4a5c-8450-dacc1b3bfca4" name="FoodSearch.Service.Client">
+              <ArtifactNode Label="FoodSearch.Service.Client" Category="CodeSchema_Project" Id="(Assembly=../FoodSearch.Service.Client/FoodSearch.Service.Client.csproj)" />
+              <ExpandedNode Id="(Assembly=FoodSearch.Service.Client)" Label="FoodSearch.Service.Client.dll" Category="CodeSchema_Assembly">
+                <Category Ref="FileSystem.Category.FileOfType.dll" />
+                <LinkCategory Ref="Produces" />
+                <LinkCategory Ref="Represents" />
+              </ExpandedNode>
+            </reference>
+          </references>
+        </layer>
+      </childLayers>
+    </layer>
+    <layer Id="0ec226aa-46f0-464e-a5a4-0d29edfaadbd" name="Presentation">
+      <dependencyToLayers>
+        <dependencyFromLayerToLayer Id="1b27dbf4-5cfc-4642-adf7-85db249f921d" direction="Forward">
+          <layerMoniker Id="ae7d5bbb-89fc-49de-a0fa-05722d50c538" />
+        </dependencyFromLayerToLayer>
+      </dependencyToLayers>
+      <childLayers>
+        <layer Id="1e4cdad9-765f-45d0-9aed-1cba34e5aa8b" name="Web">
+          <references>
+            <reference Id="e52b29eb-3bd0-4be3-bee9-50939a0b87d1" name="FoodSearch.Presentation.Web.Site">
+              <ArtifactNode Label="FoodSearch.Presentation.Web.Site" Category="CodeSchema_Project" Id="(Assembly=../FoodSearch.Presentation.Web.Site/FoodSearch.Presentation.Web.Site.csproj)" />
+              <ExpandedNode Id="(Assembly=FoodSearch.Presentation.Web.Site)" Label="FoodSearch.Presentation.Web.Site.dll" Category="CodeSchema_Assembly">
+                <Category Ref="FileSystem.Category.FileOfType.dll" />
+                <LinkCategory Ref="Produces" />
+                <LinkCategory Ref="Represents" />
+              </ExpandedNode>
+            </reference>
+          </references>
+        </layer>
+        <layer Id="5819f14c-010e-432a-8d94-f86b34e042aa" name="Mobile">
+          <dependencyToLayers>
+            <dependencyFromLayerToLayer Id="d03ab432-7552-473e-b816-0f1147c8801e" direction="Forward">
+              <layerMoniker Id="b9b5d9cf-b0ea-4357-91c0-11e9f3553e9f" />
+            </dependencyFromLayerToLayer>
+          </dependencyToLayers>
+          <childLayers>
+            <layer Id="91e31207-eb54-49fa-969a-174795933121" name="Common Infrastructure">
+              <references>
+                <reference Id="92fc9535-6756-4920-a799-90103ba5842d" name="FoodSearch.Presentation.Mobile.Common">
+                  <ArtifactNode Label="FoodSearch.Presentation.Mobile.Common" Category="CodeSchema_Project" Id="(Assembly=../FoodSearch.Presentation.Mobile.Common/FoodSearch.Presentation.Mobile.Common.csproj)" />
+                  <ExpandedNode Id="(Assembly=FoodSearch.Presentation.Mobile.Common)" Label="FoodSearch.Presentation.Mobile.Common.dll" Category="CodeSchema_Assembly">
+                    <Category Ref="FileSystem.Category.FileOfType.dll" />
+                    <LinkCategory Ref="Produces" />
+                    <LinkCategory Ref="Represents" />
+                  </ExpandedNode>
+                </reference>
+              </references>
+            </layer>
+            <layer Id="05788f5b-6a80-40b1-ab46-a432934237f5" name="Windows Phone 8">
+              <dependencyToLayers>
+                <dependencyFromLayerToLayer Id="6a6e032d-6348-41e7-9818-13514f968994" direction="Forward">
+                  <layerMoniker Id="91e31207-eb54-49fa-969a-174795933121" />
+                </dependencyFromLayerToLayer>
+              </dependencyToLayers>
+              <references>
+                <reference Id="44109f08-f26f-4573-bea2-e28401fb9d78" name="FoodSearch.Presentation.Mobile.WindowsPhone">
+                  <ArtifactNode Label="FoodSearch.Presentation.Mobile.WindowsPhone" Category="CodeSchema_Project" Id="(Assembly=../FoodSearch.Presentation.Mobile.WindowsPhone/FoodSearch.Presentation.Mobile.WindowsPhone.csproj)" />
+                  <ExpandedNode Id="(Assembly=FoodSearch.Presentation.Mobile.WindowsPhone)" Label="FoodSearch.Presentation.Mobile.WindowsPhone.dll" Category="CodeSchema_Assembly">
+                    <Category Ref="FileSystem.Category.FileOfType.dll" />
+                    <LinkCategory Ref="Produces" />
+                    <LinkCategory Ref="Represents" />
+                  </ExpandedNode>
+                </reference>
+              </references>
+            </layer>
+            <layer Id="58ce21df-9b0e-4b1b-9b92-1cebafe5f96c" name="Android">
+              <dependencyToLayers>
+                <dependencyFromLayerToLayer Id="00405666-69f7-4027-a811-1af3c7d003b6" direction="Forward">
+                  <layerMoniker Id="91e31207-eb54-49fa-969a-174795933121" />
+                </dependencyFromLayerToLayer>
+              </dependencyToLayers>
+              <references>
+                <reference Id="87ea82b6-0355-46e5-b060-fce82bd990cb" name="FoodSearch.Presentation.Mobile.Android">
+                  <ArtifactNode Label="FoodSearch.Presentation.Mobile.Android" Category="CodeSchema_Project" Id="(Assembly=../FoodSearch.Presentation.Mobile.Android/FoodSearch.Presentation.Mobile.Android.csproj)" />
+                  <ExpandedNode Id="(Assembly=FoodSearch.Presentation.Mobile.Android)" Label="FoodSearch.Presentation.Mobile.Android.dll" Category="CodeSchema_Assembly">
+                    <Category Ref="FileSystem.Category.FileOfType.dll" />
+                    <LinkCategory Ref="Produces" />
+                    <LinkCategory Ref="Represents" />
+                  </ExpandedNode>
+                </reference>
+              </references>
+            </layer>
+          </childLayers>
+        </layer>
+      </childLayers>
+    </layer>
+  </layers>
+</layerModel>
