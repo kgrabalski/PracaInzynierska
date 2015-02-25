@@ -245,7 +245,8 @@ namespace FoodSearch.BusinessLogic.Domain.User
                     FirstName = user.FirstName,
                     LastName = user.LastName,
                     Email = user.Email,
-                    PhoneNumber = user.PhoneNumber
+                    PhoneNumber = user.PhoneNumber,
+                    CreateDate = user.CreateDate.ToString("dd.MM.yyyy")
                 };
             }
         }

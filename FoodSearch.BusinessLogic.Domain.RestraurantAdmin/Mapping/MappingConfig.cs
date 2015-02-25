@@ -32,6 +32,9 @@ namespace FoodSearch.BusinessLogic.Domain.RestraurantAdmin.Mapping
                 .ForMember(x => x.TimeTo, x => x.ResolveUsing(y => y.TimeTo.ToString(@"hh\:mm")))
                 .ForMember(x => x.DayName, x => x.ResolveUsing(y => days[y.Day]));
 
+            Mapper.CreateMap<Data.Mapping.StoredProcedure.Results.RestaurantDailyFinancialReport, RestaurantDailyFinancialReport>();
+            Mapper.CreateMap<Data.Mapping.StoredProcedure.Results.RestaurantMonthlyFinancialReport, RestaurantMonthlyFinancialReport>();
+
             Mapper.AssertConfigurationIsValid();
         }
 

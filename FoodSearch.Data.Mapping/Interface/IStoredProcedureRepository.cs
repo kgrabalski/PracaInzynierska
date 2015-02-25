@@ -20,5 +20,9 @@ namespace FoodSearch.Data.Mapping.Interface
         RestaurantDeliveryRange GetDeliveryRange(Guid restaurantId);
         bool UpdateDeliveryRange(Guid restaurantId, bool hasDeliveryRadius, decimal deliveryRadius, string polygonGml);
         void ClearImagesTable();
+        IEnumerable<RestaurantDailyFinancialReport> GetRestaurantDailyFinancialReport(Guid? restaurantId, DateTime dateFrom, DateTime dateTo, bool isRestaurant);
+        IEnumerable<RestaurantMonthlyFinancialReport> GetRestaurantMonthlyFinancialReport(Guid? restaurantId, DateTime dateFrom, DateTime dateTo, bool isRestaurant);
+        IEnumerable<SystemDailyFinancialReport> GetSystemDailyFinancialReport(DateTime dateFrom, DateTime dateTo);
+        IEnumerable<SystemMonthlyFinancialReport> GetSystemMonthlyFinancialReport(DateTime dateFrom, DateTime dateTo);
     }
 }

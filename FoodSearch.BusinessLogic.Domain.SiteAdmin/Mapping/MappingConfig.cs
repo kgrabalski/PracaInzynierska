@@ -29,6 +29,9 @@ namespace FoodSearch.BusinessLogic.Domain.SiteAdmin.Mapping
             Mapper.CreateMap<Data.Mapping.Entities.City, City>()
                 .ForMember(x => x.Id, x => x.MapFrom(y => y.CityId));
 
+            Mapper.CreateMap<Data.Mapping.StoredProcedure.Results.SystemDailyFinancialReport, SystemDailyFinancialReport>();
+            Mapper.CreateMap<Data.Mapping.StoredProcedure.Results.SystemMonthlyFinancialReport, SystemMonthlyFinancialReport>();
+
             Mapper.AssertConfigurationIsValid();
         }
 

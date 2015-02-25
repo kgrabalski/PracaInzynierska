@@ -1,0 +1,50 @@
+﻿<form name="formRange">
+    <div class="box-body">
+        <div class="form-group col-md-6">
+            <label class="control-label">Dzień od:</label>
+            <div class="input-group">
+                <input type="text" class="form-control"
+                       datepicker-popup="{{range.dateFormat}}"
+                       ng-model="dateFrom"
+                       is-open="range.dfOpen"
+                       datepicker-options="range.dateOptions"
+                       show-button-bar="false"
+                       placeholder="Dzień od"
+                       init-date="range.initDateFrom"
+                       required />
+                <span class="input-group-btn">
+                    <button type="button" class="btn btn-default" ng-click="range.openDf($event)">
+                        <i class="glyphicon glyphicon-calendar"></i>
+                    </button>
+                </span>
+            </div>
+        </div>
+
+        <div class="form-group col-md-6">
+            <label class="control-label">Dzień do:</label>
+            <div class="input-group">
+                <input type="text" class="form-control"
+                       datepicker-popup="{{range.dateFormat}}"
+                       ng-model="dateTo"
+                       is-open="range.dtOpen"
+                       datepicker-options="range.dateOptions"
+                       show-button-bar="false"
+                       placeholder="Dzień do"
+                       required />
+                <span class="input-group-btn">
+                    <button type="button" class="btn btn-default" ng-click="range.openDt($event)">
+                        <i class="glyphicon glyphicon-calendar"></i>
+                    </button>
+                </span>
+            </div>
+        </div>
+
+        <div class="form-group col-md-12">
+            <button type="button" class="btn btn-primary btn-block"
+                    ng-disabled="!formRange.$valid"
+                    ng-click="showReport()">
+                Wyświetl raport
+            </button>
+        </div>
+    </div>
+</form>

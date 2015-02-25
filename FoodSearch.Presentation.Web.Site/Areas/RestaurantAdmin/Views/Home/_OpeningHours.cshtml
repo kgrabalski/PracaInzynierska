@@ -28,8 +28,8 @@
                                     <th class="actions"></th>
                                 </tr>
                             </thead>
-                            <tbody ng-repeat="oh in openingHours.Items | orderBy:['Day','TimeFrom','TimeTo']">
-                                <tr>
+                            <tbody>
+                                <tr ng-repeat="oh in openingHours.Items | orderBy:['Day','TimeFrom','TimeTo']">
                                     <td>{{oh.DayName}}</td>
                                     <td>{{oh.TimeFrom}}</td>
                                     <td>{{oh.TimeTo}}</td>

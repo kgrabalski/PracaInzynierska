@@ -10,10 +10,6 @@
 
     app.config(function($routeProvider) {
         $routeProvider
-            .when("/dashboard", {
-                controller: 'Dashboard',
-                templateUrl: 'dashboardTemplate'
-            })
             .when("/newOrders", {
                 controller: 'NewOrdersController',
                 templateUrl: 'newOrdersTemplate'
@@ -58,8 +54,16 @@
                 controller: 'EmployeesController',
                 templateUrl: 'employeesTemplate'
             })
+            .when("/repFinancialDaily", {
+                controller: 'DailyFinancialReportController',
+                templateUrl: 'dailyFinancialReportTemplate'
+            })
+            .when("/repFinancialMonthly", {
+                controller: 'MonthlyFinancialReportController',
+                templateUrl: 'monthlyFinancialReportTemplate'
+            })
             .otherwise({
-                redirectTo: "/dashboard"
+                redirectTo: "/newOrders"
             });
     });
 

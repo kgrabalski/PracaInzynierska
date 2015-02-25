@@ -9,10 +9,6 @@
     
     app.config( function ($routeProvider) {
         $routeProvider
-            .when("/dashboard", {
-                controller: 'DashboardController',
-                templateUrl: 'dashboardTemplate'
-            })
             .when("/restaurants", {
                 controller: 'RestaurantsController',
                 templateUrl: 'restaurantsTemplate'
@@ -21,8 +17,16 @@
                 controller: 'UsersController',
                 templateUrl: 'usersTemplate'
             })
+            .when("/repSFinancialDaily", {
+                controller: 'DailySFinancialReportController',
+                templateUrl: 'dailySFinancialReportTemplate'
+            })
+            .when("/repSFinancialMonthly", {
+                controller: 'MonthlySFinancialReportController',
+                templateUrl: 'monthlySFinancialReportTemplate'
+            })
             .otherwise({
-                redirectTo: "/dashboard"
+                redirectTo: "/restaurants"
             });
     });
 })();

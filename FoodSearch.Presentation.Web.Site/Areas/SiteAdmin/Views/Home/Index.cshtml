@@ -3,12 +3,20 @@
     Layout = "~/Areas/SiteAdmin/Views/Shared/_Layout.cshtml";
 }
 
+@section HeadSection
+{
+    <link rel="stylesheet" href="~/Areas/SiteAdmin/Content/Site.css"/>
+}
+
 @section ScriptSection
 {
+    <script src="~/Scripts/i18n/angular-locale_pl.js"></script>
     <script src="~/Scripts/Admin/Common/directives.js"></script>
+    <script src="~/Scripts/Admin/Common/services.js"></script>
     <script src="~/Scripts/Admin/SiteAdmin/app.js"></script>
-    <script src="~/Scripts/Admin/SiteAdmin/controller/controllers.js"></script>
     <script src="~/Scripts/Admin/SiteAdmin/controller/restaurantController.js"></script>
+    <script src="~/Scripts/Admin/SiteAdmin/controller/userController.js"></script>
+    <script src="~/Scripts/Admin/SiteAdmin/controller/reportController.js"></script>
     <script src="~/Scripts/Admin/SiteAdmin/service/service.js"></script>
 }
 
@@ -27,11 +35,6 @@
             
             <ul class="sidebar-menu">
                 <li navigation-item>
-                    <a href="/SiteAdmin#/dashboard">
-                        <i class="fa fa-dashboard"></i> <span>Dashboard</span>
-                    </a>
-                </li>
-                <li navigation-item>
                     <a href="/SiteAdmin#/restaurants">
                         <i class="fa fa-folder"></i> <span>Restauracje</span>
                     </a>
@@ -41,6 +44,24 @@
                         <i class="fa fa-user"></i> <span>Użytkownicy</span>
                     </a>
                 </li>
+                <li class="treeview">
+                    <a href="/SiteAdmin#/repSFinancialDaily">
+                        <i class="fa fa-bar-chart-o"></i> <span>Raporty</span>
+                        <i class="fa pull-right fa-angle-down"></i>
+                    </a>
+                    <ul class="treeview-menu" style="display: block;">
+                        <li navigation-item>
+                            <a href="/SiteAdmin#/repSFinancialDaily" style="margin-left: 10px;">
+                                <i class="fa fa-angle-double-right"></i> Finansowy dzienny
+                            </a>
+                        </li>
+                        <li navigation-item>
+                            <a href="/SiteAdmin#/repSFinancialMonthly" style="margin-left: 10px;">
+                                <i class="fa fa-angle-double-right"></i> Finansowy miesięczny
+                            </a>
+                        </li>
+                    </ul>
+                </li>
             </ul>
         </section>
     </aside>
@@ -48,13 +69,18 @@
     <div ng-view></div>
 </div>
 
-<script type="text/ng-template" id="dashboardTemplate">
-    @{ Html.RenderPartial("_Dashboard"); }
-</script>
 <script type="text/ng-template" id="restaurantsTemplate">
     @{ Html.RenderPartial("_Restaurants"); }
 </script>
 
 <script type="text/ng-template" id="usersTemplate">
     @{ Html.RenderPartial("_Users"); }
+</script>
+
+<script type="text/ng-template" id="dailySFinancialReportTemplate">
+    @{ Html.RenderPartial("_SystemReportFinancialDaily"); }
+</script>
+
+<script type="text/ng-template" id="monthlySFinancialReportTemplate">
+    @{ Html.RenderPartial("_SystemReportFinancialMonthly"); }
 </script>

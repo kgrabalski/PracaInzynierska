@@ -41,4 +41,30 @@
             return service;
         }
     ]);
+
+    services.service('UserService', [
+        '$resource', '$http', function($resource, $http) {
+            var service = $resource('/SiteAdmin/api/User/:userId', { userId: "@Id" });
+            service.Items = service.query();
+            service.changeState = function(userState, callback) {
+                return $http.put("/SiteAdmin/api/User/" + userState.Id + "?isActive=" + userState.IsActive, userState).
+                    success(function(data, status, headers, config) {
+                        callback(data, status);
+                    });
+            }
+            return service;
+        }
+    ]);
+
+    services.service('DailySFinancialReportService', [
+        '$resource', function ($resource) {
+            return $resource('/RestaurantAdmin/api/SystemFinancialReportDaily');
+        }
+    ]);
+
+    services.service('MonthlySFinancialReportService', [
+        '$resource', function ($resource) {
+            return $resource('/RestaurantAdmin/api/SystemFinancialReportMonthly');
+        }
+    ]);
 })();

@@ -6,6 +6,8 @@ using Cuisine = FoodSearch.BusinessLogic.Domain.RestraurantAdmin.Models.Cuisine;
 using Dish = FoodSearch.BusinessLogic.Domain.RestraurantAdmin.Models.Dish;
 using DishGroup = FoodSearch.BusinessLogic.Domain.RestraurantAdmin.Models.DishGroup;
 using OpeningHour = FoodSearch.BusinessLogic.Domain.RestraurantAdmin.Models.OpeningHour;
+using RestaurantDailyFinancialReport = FoodSearch.BusinessLogic.Domain.RestraurantAdmin.Models.RestaurantDailyFinancialReport;
+using RestaurantMonthlyFinancialReport = FoodSearch.BusinessLogic.Domain.RestraurantAdmin.Models.RestaurantMonthlyFinancialReport;
 
 namespace FoodSearch.BusinessLogic.Domain.RestraurantAdmin.Interface
 {
@@ -41,5 +43,7 @@ namespace FoodSearch.BusinessLogic.Domain.RestraurantAdmin.Interface
         RestaurantEmployee AddRestaurantEmployee(Guid restaurantId, string firstName, string lastName, string password);
         bool DeleteRestaurantEmployee(Guid restaurantId, Guid employeeId);
         void ResetEmployeePassword(Guid userId, string newPassword);
+        IEnumerable<RestaurantDailyFinancialReport> GetRestaurantDailyFinancialReport(Guid? restaurantId, DateTime dateFrom, DateTime dateTo, bool isRestaurant);
+        IEnumerable<RestaurantMonthlyFinancialReport> GetRestaurantMonthlyFinancialReports(Guid? restaurantId, DateTime dateFrom, DateTime dateTo, bool isRestaurant);
     }
 }

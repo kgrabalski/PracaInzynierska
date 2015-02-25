@@ -59,6 +59,9 @@
     <Compile Include="Models\Address.cs" />
     <Compile Include="Models\City.cs" />
     <Compile Include="Models\Restaurant.cs" />
+    <Compile Include="Models\SystemDailyFinancialReport.cs" />
+    <Compile Include="Models\SystemMonthlyFinancialReport.cs" />
+    <Compile Include="Models\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SiteAdminDomain.cs" />
   </ItemGroup>

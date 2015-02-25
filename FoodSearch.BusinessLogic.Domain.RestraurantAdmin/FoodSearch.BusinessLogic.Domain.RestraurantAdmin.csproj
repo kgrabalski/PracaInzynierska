@@ -66,8 +66,10 @@
     <Compile Include="Models\OpeningHour.cs" />
     <Compile Include="Models\OrderItem.cs" />
     <Compile Include="Models\OrderUser.cs" />
+    <Compile Include="Models\RestaurantDailyFinancialReport.cs" />
     <Compile Include="Models\RestaurantData.cs" />
     <Compile Include="Models\RestaurantEmployee.cs" />
+    <Compile Include="Models\RestaurantMonthlyFinancialReport.cs" />
     <Compile Include="Models\RestaurantOrder.cs" />
     <Compile Include="Models\RestaurantOrders.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

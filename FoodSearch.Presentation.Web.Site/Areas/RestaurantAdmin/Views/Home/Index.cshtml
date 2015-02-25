@@ -16,12 +16,12 @@
 
 @section ScriptSection
 {
+    <script src="~/Scripts/i18n/angular-locale_pl.js"></script>
     <script src="~/Scripts/bootstrap-notify.min.js"></script>
     <script src="~/Scripts/Admin/Common/directives.js"></script>
     <script src="~/Scripts/Admin/Common/services.js"></script>
     <script src="~/Scripts/Admin/RestaurantAdmin/app.js"></script>
     <script src="~/Scripts/Admin/RestaurantAdmin/service/services.js"></script>
-    <script src="~/Scripts/Admin/RestaurantAdmin/controller/controllersEmployee.js"></script>
     <script src="~/Scripts/Admin/RestaurantAdmin/controller/newOrdersController.js"></script>
     <script src="~/Scripts/Admin/RestaurantAdmin/controller/pendingOrdersController.js"></script>
     
@@ -34,7 +34,6 @@
         <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false&language=pl"></script>
         <script src="~/Scripts/maps.google.polygon.constainsLatLng.min.js"></script>
         
-        <script src="~/Scripts/Admin/RestaurantAdmin/controller/controllersAdmin.js"></script>
         <script src="~/Scripts/Admin/RestaurantAdmin/controller/openingHoursController.js"></script>
         <script src="~/Scripts/Admin/RestaurantAdmin/controller/opinionsController.js"></script>
         <script src="~/Scripts/Admin/RestaurantAdmin/controller/restaurantController.js"></script>
@@ -43,6 +42,7 @@
         <script src="~/Scripts/Admin/RestaurantAdmin/controller/cuisineController.js"></script>
         <script src="~/Scripts/Admin/RestaurantAdmin/controller/dishGroupController.js"></script>
         <script src="~/Scripts/Admin/RestaurantAdmin/controller/dishController.js"></script>
+        <script src="~/Scripts/Admin/RestaurantAdmin/controller/reportController.js"></script>
     }
 }
 
@@ -60,11 +60,6 @@
             </div>
             
             <ul class="sidebar-menu">
-                <li navigation-item>
-                    <a href="/RestaurantAdmin#/dashboard">
-                        <i class=" fa fa-dashboard"></i> <span>Dashboard</span>
-                    </a>
-                </li>
                 <li navigation-item>
                     <a href="/RestaurantAdmin#/newOrders">
                         <i class="fa fa-exclamation"></i> <span>Zamówienia (nowe)</span>
@@ -113,10 +108,23 @@
                             <i class="fa fa-comments"></i> <span>Opinie</span>
                         </a>
                     </li>
-                    <li navigation-item>
-                        <a href="/RestaurantAdmin#/reports">
+                    <li class="treeview">
+                        <a href="/RestaurantAdmin#/repFinancialDaily">
                             <i class="fa fa-bar-chart-o"></i> <span>Raporty</span>
+                            <i class="fa pull-right fa-angle-down"></i>
                         </a>
+                        <ul class="treeview-menu" style="display: block;">
+                            <li navigation-item>
+                                <a href="/RestaurantAdmin#/repFinancialDaily" style="margin-left: 10px;">
+                                    <i class="fa fa-angle-double-right"></i> Finansowy dzienny
+                                </a>
+                            </li>
+                            <li navigation-item>
+                                <a href="/RestaurantAdmin#/repFinancialMonthly" style="margin-left: 10px;">
+                                    <i class="fa fa-angle-double-right"></i> Finansowy miesięczny
+                                </a>
+                            </li>
+                        </ul>
                     </li>
                     <li navigation-item>
                         <a href="/RestaurantAdmin#/employees">
@@ -136,10 +144,6 @@
     </div>
 </div>
 
-
-<script type="text/ng-template" id="dashboardTemplate">
-    @{ Html.RenderPartial("_Dashboard"); }
-</script>
 
 <script type="text/ng-template" id="newOrdersTemplate">
     @{ Html.RenderPartial("_NewOrders");}
@@ -179,8 +183,12 @@
         @{ Html.RenderPartial("_Opinions"); }
     </script>
 
-    <script type="text/ng-template" id="reportsTemplate">
-        @{ Html.RenderPartial("_Reports"); }
+    <script type="text/ng-template" id="dailyFinancialReportTemplate">
+        @{ Html.RenderPartial("_ReportFinancialDaily"); }
+    </script> 
+    
+    <script type="text/ng-template" id="monthlyFinancialReportTemplate">
+        @{ Html.RenderPartial("_ReportFinancialMonthly"); }
     </script>
 
     <script type="text/ng-template" id="employeesTemplate">

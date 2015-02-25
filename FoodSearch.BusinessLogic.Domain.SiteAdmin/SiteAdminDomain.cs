@@ -9,10 +9,16 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
+using FoodSearch.BusinessLogic.Domain.SiteAdmin.Models;
+
+using NHibernate.Criterion;
+
 using Address = FoodSearch.Data.Mapping.Entities.Address;
 using AddressDto = FoodSearch.BusinessLogic.Domain.SiteAdmin.Models.Address;
 using Restaurant = FoodSearch.Data.Mapping.Entities.Restaurant;
 using RestaurantDto = FoodSearch.BusinessLogic.Domain.SiteAdmin.Models.Restaurant;
+using User = FoodSearch.Data.Mapping.Entities.User;
+using UserDto = FoodSearch.BusinessLogic.Domain.SiteAdmin.Models.User;
 
 namespace FoodSearch.BusinessLogic.Domain.SiteAdmin
 {
@@ -68,21 +74,60 @@ namespace FoodSearch.BusinessLogic.Domain.SiteAdmin
             }
         }
 
-        public Guid CreateUser(string email, string userPassword, string firstName, string lastName, UserTypes userType, UserStates userState)
+        public IEnumerable<UserDto> GetUsers(string query, int? page, int? pageSize)
         {
             using (var rep = _provider.GetRepository<User>())
             {
-                var password = (SHA256.Create()).ComputeHash(Encoding.UTF8.GetBytes(userPassword));
-                return rep.Create<Guid>(new User()
-                {
-                    Password = password,
-                    Email = email,
-                    FirstName = firstName,
-                    LastName = lastName,
-                    CreateDate = DateTime.Now,
-                    UserTypeId = (int) userType,
-                    UserStateId = (int) userState
-                });
+                if (!page.HasValue) page = 0;
+                if (!pageSize.HasValue) pageSize = 25;
+                return rep.GetAll()
+                    .Where(Restrictions.Disjunction()
+                        .Add(Restrictions.On<User>(x => x.LastName).IsInsensitiveLike(query, MatchMode.Anywhere))
+                        .Add(Restrictions.On<User>(x => x.Email).IsInsensitiveLike(query, MatchMode.Anywhere)))
+                    .OrderBy(x => x.CreateDate).Desc
+                    .Skip(page.Value * pageSize.Value)
+                    .Take(pageSize.Value)
+                    .List()
+                    .ToList()
+                    .Select(x => new UserDto()
+                    {
+                        Id = x.UserId,
+                        FirstName = x.FirstName,
+                        LastName = x.LastName,
+                        Email = x.Email,
+                        UserActive = x.UserStateId == (int) UserStates.Active
+                    });
+            }
+        }
+
+        public bool ChangeUserState(Guid userId, UserStates userState)
+        {
+            using (var rep = _provider.GetRepository<User>())
+            {
+                User user = null;
+                rep.TryGet(userId, out user);
+                if (user == null) return false;
+
+                user.UserStateId = (int) userState;
+                rep.Update(user);
+
+                return true;
+            }
+        }
+
+        public IEnumerable<SystemDailyFinancialReport> GetSystemDailyFinancialReport(DateTime dateFrom, DateTime dateTo)
+        {
+            using (var rep = _provider.StoredProcedure)
+            {
+                return rep.GetSystemDailyFinancialReport(dateFrom, dateTo).Map<IEnumerable<SystemDailyFinancialReport>>();
+            }
+        }
+
+        public IEnumerable<SystemMonthlyFinancialReport> GetSystemMonthlyFinancialReport(DateTime dateFrom, DateTime dateTo)
+        {
+            using (var rep = _provider.StoredProcedure)
+            {
+                return rep.GetSystemMonthlyFinancialReport(dateFrom, dateTo).Map<IEnumerable<SystemMonthlyFinancialReport>>();
             }
         }
     }

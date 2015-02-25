@@ -123,6 +123,48 @@ namespace FoodSearch.Data.Mapping.Repository
             query.ExecuteUpdate();
         }
 
+        public IEnumerable<RestaurantDailyFinancialReport> GetRestaurantDailyFinancialReport(Guid? restaurantId, DateTime dateFrom, DateTime dateTo, bool isRestaurant)
+        {
+            var query = _session.GetNamedQuery("GetRestaurantDailyFinancialReport");
+            if (restaurantId.HasValue) query.SetGuid("restaurantId", restaurantId.Value);
+            query.SetParameter("restaurantId", null, NHibernateUtil.Guid);
+            query.SetDateTime("dateFrom", dateFrom);
+            query.SetDateTime("dateTo", dateTo);
+            query.SetBoolean("isRestaurant", isRestaurant);
+
+            return query.List<RestaurantDailyFinancialReport>();
+        }
+
+        public IEnumerable<RestaurantMonthlyFinancialReport> GetRestaurantMonthlyFinancialReport(Guid? restaurantId, DateTime dateFrom, DateTime dateTo, bool isRestaurant)
+        {
+            var query = _session.GetNamedQuery("GetRestaurantMonthlyFinancialReport");
+            if (restaurantId.HasValue) query.SetGuid("restaurantId", restaurantId.Value);
+            query.SetParameter("restaurantId", null, NHibernateUtil.Guid);
+            query.SetDateTime("dateFrom", dateFrom);
+            query.SetDateTime("dateTo", dateTo);
+            query.SetBoolean("isRestaurant", isRestaurant);
+
+            return query.List<RestaurantMonthlyFinancialReport>();
+        }
+
+        public IEnumerable<SystemDailyFinancialReport> GetSystemDailyFinancialReport(DateTime dateFrom, DateTime dateTo)
+        {
+            var query = _session.GetNamedQuery("GetSystemDailyFinancialReport");
+            query.SetDateTime("dateFrom", dateFrom);
+            query.SetDateTime("dateTo", dateTo);
+
+            return query.List<SystemDailyFinancialReport>();
+        }
+
+        public IEnumerable<SystemMonthlyFinancialReport> GetSystemMonthlyFinancialReport(DateTime dateFrom, DateTime dateTo)
+        {
+            var query = _session.GetNamedQuery("GetSystemMonthlyFinancialReport");
+            query.SetDateTime("dateFrom", dateFrom);
+            query.SetDateTime("dateTo", dateTo);
+
+            return query.List<SystemMonthlyFinancialReport>();
+        }
+
         public void Dispose()
         {
             _session.Dispose();

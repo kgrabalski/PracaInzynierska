@@ -127,7 +127,7 @@
 
     services.service('EmployeeService', [
         '$resource', function($resource) {
-            return $resource('RestaurantAdmin/api/RestaurantEmployee/:userId',
+            return $resource('/RestaurantAdmin/api/RestaurantEmployee/:userId',
             { userId: "@UserId" },
             {
                 resetPassword: {
@@ -139,7 +139,7 @@
 
     services.service('DeliveryRangeService', [
         '$resource', function($resource) {
-            return $resource('RestaurantAdmin/api/DeliveryRange', {},
+            return $resource('/RestaurantAdmin/api/DeliveryRange', {},
             {
                 getDeliveryRange: {
                     method: 'GET',
@@ -150,6 +150,18 @@
                     isArray: false
                 }
             });
+        }
+    ]);
+
+    services.service('DailyFinancialReportService', [
+        '$resource', function($resource) {
+            return $resource('/RestaurantAdmin/api/FinancialReportDaily');
+        }
+    ]);
+
+    services.service('MonthlyFinancialReportService', [
+        '$resource', function ($resource) {
+            return $resource('/RestaurantAdmin/api/FinancialReportMonthly');
         }
     ]);
 })();

@@ -168,6 +168,8 @@
     <Compile Include="Areas\RestaurantAdmin\Controllers\DeliveryRangeController.cs" />
     <Compile Include="Areas\RestaurantAdmin\Controllers\DishController.cs" />
     <Compile Include="Areas\RestaurantAdmin\Controllers\DishGroupController.cs" />
+    <Compile Include="Areas\RestaurantAdmin\Controllers\FinancialReportDailyController.cs" />
+    <Compile Include="Areas\RestaurantAdmin\Controllers\FinancialReportMonthlyController.cs" />
     <Compile Include="Areas\RestaurantAdmin\Controllers\HomeController.cs" />
     <Compile Include="Areas\RestaurantAdmin\Controllers\NewOrderController.cs" />
     <Compile Include="Areas\RestaurantAdmin\Controllers\OpeningHourController.cs" />
@@ -185,6 +187,9 @@
     <Compile Include="Areas\RestaurantAdmin\Models\DishModel.cs" />
     <Compile Include="Areas\RestaurantAdmin\Models\OpeningHourModel.cs" />
     <Compile Include="Areas\RestaurantAdmin\Models\OpinionFilterModel.cs" />
+    <Compile Include="Areas\SiteAdmin\Controllers\SystemFinancialReportDailyController.cs" />
+    <Compile Include="Areas\SiteAdmin\Controllers\SystemFinancialReportMonthlyController.cs" />
+    <Compile Include="Models\ReportRangeModel.cs" />
     <Compile Include="Areas\RestaurantAdmin\Models\ResetEmployeePasswordModel.cs" />
     <Compile Include="Areas\RestaurantAdmin\Models\UpdateRestaurantDataModel.cs" />
     <Compile Include="Areas\RestaurantAdmin\RestaurantAdminAreaRegistration.cs" />
@@ -195,6 +200,8 @@
     <Compile Include="Areas\SiteAdmin\Controllers\LogoController.cs" />
     <Compile Include="Areas\SiteAdmin\Controllers\RestaurantController.cs" />
     <Compile Include="Areas\SiteAdmin\Controllers\StreetController.cs" />
+    <Compile Include="Areas\SiteAdmin\Controllers\UserController.cs" />
+    <Compile Include="Areas\SiteAdmin\Models\GetUsersModel.cs" />
     <Compile Include="Areas\SiteAdmin\Models\RestaurantModel.cs" />
     <Compile Include="Areas\SiteAdmin\SiteAdminAreaRegistration.cs" />
     <Compile Include="Areas\User\Controllers\HomeController.cs" />
@@ -217,6 +224,7 @@
     <Compile Include="Helpers\CompressAttribute.cs" />
     <Compile Include="Helpers\MyHttpControllerHandler.cs" />
     <Compile Include="Helpers\MyHttpControllerRouteHandler.cs" />
+    <Compile Include="Helpers\NullableIntRangeAttribute.cs" />
     <Compile Include="Helpers\RestaurantUserModelBinderProvider.cs" />
     <Compile Include="Helpers\RestaurantUserModelBinder.cs" />
     <Compile Include="Helpers\RestaurantUserModelBinderWebApi.cs" />
@@ -249,6 +257,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Areas\RestaurantAdmin\Content\Site.css" />
+    <Content Include="Areas\SiteAdmin\Content\Site.css" />
     <Content Include="Content\Admin\AdminLTE.css" />
     <Content Include="Content\Admin\font-awesome.css" />
     <Content Include="Content\Admin\font-awesome.min.css" />
@@ -404,8 +413,6 @@
     <Content Include="Scripts\Admin\Common\directives.js" />
     <Content Include="Scripts\Admin\Common\services.js" />
     <Content Include="Scripts\Admin\RestaurantAdmin\app.js" />
-    <Content Include="Scripts\Admin\RestaurantAdmin\controller\controllersAdmin.js" />
-    <Content Include="Scripts\Admin\RestaurantAdmin\controller\controllersEmployee.js" />
     <Content Include="Scripts\Admin\RestaurantAdmin\controller\cuisineController.js" />
     <Content Include="Scripts\Admin\RestaurantAdmin\controller\deliveryRangeController.js" />
     <Content Include="Scripts\Admin\RestaurantAdmin\controller\dishController.js" />
@@ -415,12 +422,14 @@
     <Content Include="Scripts\Admin\RestaurantAdmin\controller\openingHoursController.js" />
     <Content Include="Scripts\Admin\RestaurantAdmin\controller\opinionsController.js" />
     <Content Include="Scripts\Admin\RestaurantAdmin\controller\pendingOrdersController.js" />
+    <Content Include="Scripts\Admin\RestaurantAdmin\controller\reportController.js" />
     <Content Include="Scripts\Admin\RestaurantAdmin\controller\restaurantController.js" />
     <Content Include="Scripts\Admin\RestaurantAdmin\service\services.js" />
     <Content Include="Scripts\Admin\RestaurantAdmin\websocket.js" />
     <Content Include="Scripts\Admin\SiteAdmin\app.js" />
-    <Content Include="Scripts\Admin\SiteAdmin\controller\controllers.js" />
+    <Content Include="Scripts\Admin\SiteAdmin\controller\reportController.js" />
     <Content Include="Scripts\Admin\SiteAdmin\controller\restaurantController.js" />
+    <Content Include="Scripts\Admin\SiteAdmin\controller\userController.js" />
     <Content Include="Scripts\Admin\SiteAdmin\service\service.js" />
     <Content Include="Scripts\angular-animate.js" />
     <Content Include="Scripts\angular-animate.min.js" />
@@ -1304,6 +1313,10 @@
     <Content Include="Scripts\Frontend\UserPanel.min.js.map">
       <DependentUpon>UserPanel.min.js</DependentUpon>
     </Content>
+    <Content Include="Areas\RestaurantAdmin\Views\Home\_ReportFinancialDaily.cshtml" />
+    <Content Include="Areas\RestaurantAdmin\Views\Home\_ReportFinancialMonthly.cshtml" />
+    <Content Include="Areas\SiteAdmin\Views\Home\_SystemReportFinancialDaily.cshtml" />
+    <Content Include="Areas\SiteAdmin\Views\Home\_SystemReportFinancialMonthly.cshtml" />
     <None Include="Scripts\jquery-2.1.3.intellisense.js" />
     <Content Include="Scripts\jquery-2.1.3.js" />
     <Content Include="Scripts\jquery-2.1.3.min.js" />
@@ -1339,7 +1352,6 @@
     <Content Include="Areas\RestaurantAdmin\Views\Home\Index.cshtml" />
     <Content Include="Areas\SiteAdmin\Views\Home\Index.cshtml" />
     <Content Include="Areas\SiteAdmin\Views\Home\_Restaurants.cshtml" />
-    <Content Include="Areas\SiteAdmin\Views\Home\_Dashboard.cshtml" />
     <Content Include="Areas\SiteAdmin\Views\Home\_Users.cshtml" />
     <Content Include="Fonts\fontawesome-webfont.eot" />
     <Content Include="Fonts\fontawesome-webfont.ttf" />
@@ -1348,14 +1360,12 @@
     <Content Include="Fonts\ionicons.eot" />
     <Content Include="Fonts\ionicons.ttf" />
     <Content Include="Fonts\ionicons.woff" />
-    <Content Include="Areas\RestaurantAdmin\Views\Home\_Dashboard.cshtml" />
     <Content Include="Areas\RestaurantAdmin\Views\Home\_Dishes.cshtml" />
     <Content Include="Areas\RestaurantAdmin\Views\Home\_DishGroups.cshtml" />
     <Content Include="Areas\RestaurantAdmin\Views\Home\_Cuisines.cshtml" />
     <Content Include="Areas\RestaurantAdmin\Views\Home\_Restaurant.cshtml" />
     <Content Include="Areas\RestaurantAdmin\Views\Home\_OpeningHours.cshtml" />
     <Content Include="Areas\RestaurantAdmin\Views\Home\_Opinions.cshtml" />
-    <Content Include="Areas\RestaurantAdmin\Views\Home\_Reports.cshtml" />
     <Content Include="Areas\RestaurantAdmin\Views\Home\_Employees.cshtml" />
     <Content Include="Areas\RestaurantAdmin\Views\Shared\_UserMenu.cshtml" />
     <Content Include="Content\Selectize\less\selectize.less" />
@@ -1434,6 +1444,7 @@
     <Content Include="Scripts\starr.min.js.map">
       <DependentUpon>starr.min.js</DependentUpon>
     </Content>
+    <Content Include="Views\Shared\_DateRange.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\FoodSearch.BusinessLogic.Domain.Core\FoodSearch.BusinessLogic.Domain.Core.csproj">

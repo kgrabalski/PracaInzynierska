@@ -537,5 +537,21 @@ namespace FoodSearch.BusinessLogic.Domain.RestraurantAdmin
                 rep.Update(user);
             }
         }
+
+        public IEnumerable<RestaurantDailyFinancialReport> GetRestaurantDailyFinancialReport(Guid? restaurantId, DateTime dateFrom, DateTime dateTo, bool isRestaurant)
+        {
+            using (var rep = _provider.StoredProcedure)
+            {
+                return rep.GetRestaurantDailyFinancialReport(restaurantId, dateFrom, dateTo, isRestaurant).Map<IEnumerable<RestaurantDailyFinancialReport>>();
+            }
+        }
+
+        public IEnumerable<RestaurantMonthlyFinancialReport> GetRestaurantMonthlyFinancialReports(Guid? restaurantId, DateTime dateFrom, DateTime dateTo, bool isRestaurant)
+        {
+            using (var rep = _provider.StoredProcedure)
+            {
+                return rep.GetRestaurantMonthlyFinancialReport(restaurantId, dateFrom, dateTo, isRestaurant).Map<IEnumerable<RestaurantMonthlyFinancialReport>>();
+            }
+        }
     }
 }
