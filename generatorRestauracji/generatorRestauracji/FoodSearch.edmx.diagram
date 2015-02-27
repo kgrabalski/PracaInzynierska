@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="8483b034f55948a09ab642e6873e8578" Name="Diagram1">
+        <EntityTypeShape EntityType="FoodSearchModel.Address" Width="1.5" PointX="5.25" PointY="14.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="FoodSearchModel.City" Width="1.5" PointX="0.75" PointY="14.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="FoodSearchModel.Cuisine" Width="1.5" PointX="13.5" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="FoodSearchModel.DeliveryAddress" Width="1.5" PointX="7.5" PointY="14.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="FoodSearchModel.DeliveryType" Width="1.5" PointX="10.5" PointY="9.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="FoodSearchModel.Dish" Width="1.5" PointX="12.75" PointY="14.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="FoodSearchModel.DishGroup" Width="1.5" PointX="10.5" PointY="19.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="FoodSearchModel.District" Width="1.5" PointX="3" PointY="14.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="FoodSearchModel.Hash" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="FoodSearchModel.Image" Width="1.5" PointX="8.25" PointY="11.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="FoodSearchModel.OpeningHour" Width="1.5" PointX="12.75" PointY="17.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="FoodSearchModel.Opinion" Width="1.5" PointX="15.75" PointY="14.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="FoodSearchModel.OrderDish" Width="1.5" PointX="15" PointY="8.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="FoodSearchModel.Order" Width="1.5" PointX="12.75" PointY="9.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="FoodSearchModel.OrderState" Width="1.5" PointX="10.5" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="FoodSearchModel.OrderStatesHistory" Width="1.5" PointX="18" PointY="10.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="FoodSearchModel.PasswordResetRequest" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="FoodSearchModel.Payment" Width="1.5" PointX="18" PointY="6" IsExpanded="true" />
+        <EntityTypeShape EntityType="FoodSearchModel.PaymentsHistory" Width="1.5" PointX="20.25" PointY="6.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="FoodSearchModel.PaymentState" Width="1.5" PointX="15.75" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="FoodSearchModel.PaymentType" Width="1.5" PointX="15.75" PointY="3" IsExpanded="true" />
+        <EntityTypeShape EntityType="FoodSearchModel.RegistrationConfirmation" Width="1.5" PointX="7.5" PointY="8.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="FoodSearchModel.Restaurant" Width="1.5" PointX="10.5" PointY="13" IsExpanded="true" />
+        <EntityTypeShape EntityType="FoodSearchModel.RestaurantCuisine" Width="1.5" PointX="15.75" PointY="11.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="FoodSearchModel.RestaurantUser" Width="1.5" PointX="15.75" PointY="17.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="FoodSearchModel.Street" Width="1.5" PointX="0.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="FoodSearchModel.User" Width="1.5" PointX="5.25" PointY="8.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="FoodSearchModel.UserState" Width="1.5" PointX="3" PointY="8.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="FoodSearchModel.UserType" Width="1.5" PointX="3" PointY="10.875" IsExpanded="true" />
+        <AssociationConnector Association="FoodSearchModel.FK_Addresses_Districts" ManuallyRouted="false" />
+        <AssociationConnector Association="FoodSearchModel.FK_DeliveryAddresses_1" ManuallyRouted="false" />
+        <AssociationConnector Association="FoodSearchModel.FK_Restaurant_Addresses" ManuallyRouted="false" />
+        <AssociationConnector Association="FoodSearchModel.FK_District_Cities" ManuallyRouted="false" />
+        <AssociationConnector Association="FoodSearchModel.FK_RestaurantCuisines_Cuisines" ManuallyRouted="false" />
+        <AssociationConnector Association="FoodSearchModel.FK_DeliveryAddresses_0" ManuallyRouted="false" />
+        <AssociationConnector Association="FoodSearchModel.FK_Orders_DeliveryTypes" ManuallyRouted="false" />
+        <AssociationConnector Association="FoodSearchModel.FK_Dishes_DishGroups" ManuallyRouted="false" />
+        <AssociationConnector Association="FoodSearchModel.FK_Dishes_Restaurant" ManuallyRouted="false" />
+        <AssociationConnector Association="FoodSearchModel.FK_Restaurant_Images" ManuallyRouted="false" />
+        <AssociationConnector Association="FoodSearchModel.FK_OpeningHours_Restaurant" ManuallyRouted="false" />
+        <AssociationConnector Association="FoodSearchModel.FK_Opinions_Restaurant" ManuallyRouted="false" />
+        <AssociationConnector Association="FoodSearchModel.FK_Opinions_Users" ManuallyRouted="false" />
+        <AssociationConnector Association="FoodSearchModel.FK_OrderDishes_Orders" ManuallyRouted="false" />
+        <AssociationConnector Association="FoodSearchModel.FK_Orders_0" ManuallyRouted="false" />
+        <AssociationConnector Association="FoodSearchModel.FK_Orders_1" ManuallyRouted="false" />
+        <AssociationConnector Association="FoodSearchModel.FK_Orders_Users" ManuallyRouted="false" />
+        <AssociationConnector Association="FoodSearchModel.FK_OrderStatesHistory_0" ManuallyRouted="false" />
+        <AssociationConnector Association="FoodSearchModel.FK_Payment_Order" ManuallyRouted="false" />
+        <AssociationConnector Association="FoodSearchModel.FK_OrderStatesHistory_1" ManuallyRouted="false" />
+        <AssociationConnector Association="FoodSearchModel.FK_Payments_0" ManuallyRouted="false" />
+        <AssociationConnector Association="FoodSearchModel.FK_Payments_PaymentTypes" ManuallyRouted="false" />
+        <AssociationConnector Association="FoodSearchModel.FK_PaymentsHistory_Payments" ManuallyRouted="false" />
+        <AssociationConnector Association="FoodSearchModel.FK_PaymentsHistory_0" ManuallyRouted="false" />
+        <AssociationConnector Association="FoodSearchModel.FK_RegistrationConfirmations_Users" ManuallyRouted="false" />
+        <AssociationConnector Association="FoodSearchModel.FK_RestaurantCuisines_Restaurant" ManuallyRouted="false" />
+        <AssociationConnector Association="FoodSearchModel.FK_RestaurantUsers_Restaurant" ManuallyRouted="false" />
+        <AssociationConnector Association="FoodSearchModel.FK_RestaurantUsers_0" ManuallyRouted="false" />
+        <AssociationConnector Association="FoodSearchModel.FK_Users_UserStates" ManuallyRouted="false" />
+        <AssociationConnector Association="FoodSearchModel.FK_Users_UserTypes" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

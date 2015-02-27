@@ -1,74 +1,138 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="574dca73-04ad-4691-ab75-7985fceb3109" name="SiteAdmin" linkedPackageId="30a42a1a-39ed-4851-a6e1-e5a0c9ae06dc" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
   <profileInstances>
-    <packageHasProfileInstances Id="95140574-15fb-4bae-851e-affedae36a39">
-      <profileInstance Id="834a595c-5eb7-4e92-b418-968207a38c12" name="StandardProfileL2">
-        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+    <packageHasProfileInstances Id="cd771de8-12b4-4610-9c2a-c6caefae9539">
+      <profileInstance Id="ef28b169-5124-4e15-ab2a-1d83a53f2607" name="CSharpProfile">
+        <elementDefinition Id="3201879c-1ae7-4ee8-b00b-8b08e4b8449d" />
       </profileInstance>
-      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
-    </packageHasProfileInstances>
-    <packageHasProfileInstances Id="e593f03b-e0c7-4bc2-a46d-18a0bc0b90b9">
-      <profileInstance Id="f5df0a90-bcdd-4ef5-8990-5efcafe08181" name="StandardProfileL3">
-        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
-      </profileInstance>
-      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      <elementDefinition Id="de54e42b-dae9-49d1-a758-f6391f1e16d7" />
     </packageHasProfileInstances>
   </profileInstances>
   <packagedElements>
     <useCaseModelRootHasTypes>
-      <actor Id="0bb593ea-5d96-4a7d-8c2a-80b8d063cce4" name="Administrator systemu" isAbstract="false" isLeaf="false">
-        <elementDefinition Id="b38a2f04-04c9-431d-94e9-967947fb59bf" />
+      <actor Id="d2ebc2ca-476e-47d1-b0b5-5018e8679f5f" name="Administrator systemu" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="6f9701ec-c5ec-498c-a8ad-5f1cd8839cd0" />
         <targetEnds>
-          <association Id="053f7658-7824-4664-bfb1-10b356951d78" isDerived="false" sourceEndRoleName="Administrator systemu" targetEndRoleName="Panel administratora" isLeaf="false" isAbstract="false">
-            <subsystemMoniker Id="130a5061-52ec-4d9d-9b18-75c9603cc37e" LastKnownName="Panel administratora" />
+          <association Id="7aebcd75-2d6a-495b-8892-b4fa81583abc" isDerived="false" sourceEndRoleName="Użytkownik niezalogowany (gość)" targetEndRoleName="Aplikacja mobilna" isLeaf="false" isAbstract="false">
+            <subsystemMoniker Id="f036ed51-6d0b-4e23-b158-70b12cf036e3" LastKnownName="Aplikacja internetowa" />
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
-                <memberEnd Id="866a2b7a-b059-4162-9b41-06d22e33604a" name="Administrator systemu" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
-                  <elementDefinition Id="10f80731-fe37-4164-bc04-b5ef122644f4" />
+                <memberEnd Id="c43d99e5-3211-4646-9856-3eefd7de283b" name="Użytkownik niezalogowany (gość)" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="7dea8252-58ff-42aa-bd62-739c435f6706" />
                 </memberEnd>
               </associationHasOwnedEnds>
               <associationHasOwnedEnds>
-                <memberEnd Id="cb6101d0-c4b8-438a-8a24-756fd4dba812" name="Panel administratora" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-                  <elementDefinition Id="82435ac7-808a-4e89-a71c-65484e145348" />
+                <memberEnd Id="2b4381cd-7e16-4815-b106-3402c1f6e853" name="Aplikacja mobilna" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="d2d1d948-8aa7-49d2-b9ea-7b2abebefd41" />
                 </memberEnd>
               </associationHasOwnedEnds>
             </relationshipOwnedElementsInternal>
-            <elementDefinition Id="e67db563-5e1e-4aa3-ada5-0a016d482d83" />
+            <elementDefinition Id="92cc3734-cb48-4582-a7fb-4334d37810a1" />
           </association>
         </targetEnds>
       </actor>
     </useCaseModelRootHasTypes>
     <useCaseModelRootHasTypes>
-      <subsystem Id="130a5061-52ec-4d9d-9b18-75c9603cc37e" name="Panel administratora" isAbstract="false" isLeaf="false" isActiveClass="false">
-        <elementDefinition Id="129122be-184f-4a9a-9b63-6f278515e0e9" />
+      <subsystem Id="f036ed51-6d0b-4e23-b158-70b12cf036e3" name="Aplikacja internetowa" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="3d367613-a391-4f25-9580-9b714ace7073" />
       </subsystem>
     </useCaseModelRootHasTypes>
-    <packageHasNamedElement>
-      <useCase Id="199750c5-a29b-470b-98fa-f661b9d93011" name="Edycja listy restauracji" isAbstract="false" isLeaf="false">
-        <elementDefinition Id="bce66d06-9a39-48f8-a27b-dda3ef8bfb8d" />
+    <useCaseModelRootHasTypes>
+      <useCase Id="c3b2b1ae-2ad1-48c1-9027-ffdc41ccf2c2" name="Raport finansowy dzienny" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="34fd154d-fae9-4005-9a6a-fc5ee141b7da" />
         <subjects>
-          <subsystemMoniker Id="130a5061-52ec-4d9d-9b18-75c9603cc37e" LastKnownName="Panel administratora" />
+          <subsystemMoniker Id="f036ed51-6d0b-4e23-b158-70b12cf036e3" LastKnownName="Aplikacja internetowa" />
+        </subjects>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="bcd05ed1-c33f-4aa1-bf34-38de3dc8d2ec" name="Raport finansowy miesięczny" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="9cda0c4b-c409-4890-aff5-a7df2d843196" />
+        <subjects>
+          <subsystemMoniker Id="f036ed51-6d0b-4e23-b158-70b12cf036e3" LastKnownName="Aplikacja internetowa" />
+        </subjects>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <packageHasNamedElement>
+      <useCase Id="28caf9c5-3a2d-46e6-998d-da0bacd089d2" name="Wyświetl restauracje" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="0b1579af-d26a-43f2-b56a-fa5abb8d20b6" />
+        <subjects>
+          <subsystemMoniker Id="f036ed51-6d0b-4e23-b158-70b12cf036e3" LastKnownName="Aplikacja internetowa" />
         </subjects>
       </useCase>
     </packageHasNamedElement>
     <packageHasNamedElement>
-      <useCase Id="801245fb-0819-4f6c-abd1-a11e50d2c9ae" name="Zarządzanie kontami właściciela restauracji" isAbstract="false" isLeaf="false">
-        <elementDefinition Id="9019add8-7b12-41ee-873e-61109c7d063b" />
+      <useCase Id="9de19f39-d2da-464e-89fd-2876b8f33877" name="Dodaj restaurację" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="719cfada-0642-4488-90ca-8c730e81a63c" />
         <subjects>
-          <subsystemMoniker Id="130a5061-52ec-4d9d-9b18-75c9603cc37e" LastKnownName="Panel administratora" />
+          <subsystemMoniker Id="f036ed51-6d0b-4e23-b158-70b12cf036e3" LastKnownName="Aplikacja internetowa" />
         </subjects>
       </useCase>
     </packageHasNamedElement>
     <packageHasNamedElement>
-      <useCase Id="ddb08c3d-afb9-4780-a84d-f1d398b90b01" name="Przeglądanie raportów" isAbstract="false" isLeaf="false">
-        <elementDefinition Id="743c7990-7c2d-4726-a306-f5e08c1c1b33" />
+      <useCase Id="404d4d07-fd38-4ef5-baa2-ef3c5aaae81b" name="Usuń restaurację" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="d1eb7cae-b321-4c0a-9699-907d70201f8e" />
         <subjects>
-          <subsystemMoniker Id="130a5061-52ec-4d9d-9b18-75c9603cc37e" LastKnownName="Panel administratora" />
+          <subsystemMoniker Id="f036ed51-6d0b-4e23-b158-70b12cf036e3" LastKnownName="Aplikacja internetowa" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="244fef7c-b044-4619-8578-cc129791a213" name="Wyświetl liste użytkowników" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="c02e4912-8c77-44f8-a075-a33e1cf77efd" />
+        <subjects>
+          <subsystemMoniker Id="f036ed51-6d0b-4e23-b158-70b12cf036e3" LastKnownName="Aplikacja internetowa" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="8d80f2a3-be73-4df8-b728-779a081de30d" name="Szukaj użytkownika" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="f667d555-d797-4d6a-bcbd-2d312fdd1eb1" />
+        <subjects>
+          <subsystemMoniker Id="f036ed51-6d0b-4e23-b158-70b12cf036e3" LastKnownName="Aplikacja internetowa" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="419d221d-666f-4404-b3d7-f3478cbcaabf" name="Deazktywuj konto użytkownika" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="c429d971-ea55-4a9f-b601-0fe29c80f01a" />
+        <subjects>
+          <subsystemMoniker Id="f036ed51-6d0b-4e23-b158-70b12cf036e3" LastKnownName="Aplikacja internetowa" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="50e84eb7-12ed-49b2-90c7-c4fdca971a11" name="Aktuwuj konto użytkownika" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="854d9725-dd6c-4934-973c-9e08e7b92897" />
+        <subjects>
+          <subsystemMoniker Id="f036ed51-6d0b-4e23-b158-70b12cf036e3" LastKnownName="Aplikacja internetowa" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="d2fdeb78-8c76-478d-9daa-53e36967b91e" name="Wyświetl dane użytkownika" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="3c83eb44-0d32-4815-996d-99979a42d5af" />
+        <subjects>
+          <subsystemMoniker Id="f036ed51-6d0b-4e23-b158-70b12cf036e3" LastKnownName="Aplikacja internetowa" />
         </subjects>
       </useCase>
     </packageHasNamedElement>
   </packagedElements>
   <package Id="30a42a1a-39ed-4851-a6e1-e5a0c9ae06dc" name="FoodSearch.Modeling">
     <elementDefinition Id="36ea5af6-e5bd-4839-9f43-52f120ba2311" />
+    <profileInstances>
+      <packageHasProfileInstances Id="95140574-15fb-4bae-851e-affedae36a39">
+        <profileInstance Id="834a595c-5eb7-4e92-b418-968207a38c12" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="e593f03b-e0c7-4bc2-a46d-18a0bc0b90b9">
+        <profileInstance Id="f5df0a90-bcdd-4ef5-8990-5efcafe08181" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+    </profileInstances>
   </package>
 </useCaseModelRoot>

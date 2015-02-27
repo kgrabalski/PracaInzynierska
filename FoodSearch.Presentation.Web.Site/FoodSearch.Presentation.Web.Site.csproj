@@ -201,7 +201,7 @@
     <Compile Include="Areas\SiteAdmin\Controllers\RestaurantController.cs" />
     <Compile Include="Areas\SiteAdmin\Controllers\StreetController.cs" />
     <Compile Include="Areas\SiteAdmin\Controllers\UserController.cs" />
-    <Compile Include="Areas\SiteAdmin\Models\GetUsersModel.cs" />
+    <Compile Include="Areas\SiteAdmin\Models\QueryModel.cs" />
     <Compile Include="Areas\SiteAdmin\Models\RestaurantModel.cs" />
     <Compile Include="Areas\SiteAdmin\SiteAdminAreaRegistration.cs" />
     <Compile Include="Areas\User\Controllers\HomeController.cs" />

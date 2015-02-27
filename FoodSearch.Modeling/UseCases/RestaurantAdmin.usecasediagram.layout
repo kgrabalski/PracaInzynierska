@@ -10,7 +10,7 @@
       <commentMoniker Id="614a20bc-9a9c-4c04-a07b-9406d7fe72e9" />
       <relativeChildShapes />
     </commentShape>
-    <SubsystemShape Id="33702e73-8a07-4d99-98bf-7c52ba4cda29" absoluteBounds="1.375, 1.25, 5.75, 4.125" customColor="White">
+    <SubsystemShape Id="33702e73-8a07-4d99-98bf-7c52ba4cda29" absoluteBounds="1.375, 1.25, 5.75, 4.375" customColor="White">
       <subsystemMoniker Id="2b117eb4-c937-400a-8b1d-a7e64ee03d30" LastKnownName="Aplikacja internetowa" />
       <nestedChildShapes>
         <useCaseShape Id="a6b889c4-8be2-47eb-be88-c6e3e4634592" absoluteBounds="1.5, 1.75, 1, 0.5" customColor="238, 237, 131" heightOffset="0">
@@ -73,21 +73,29 @@
           <useCaseMoniker Id="5f6a56f4-cbdd-48b1-a5fb-883b17eb124d" LastKnownName="Wyświetl opinie użytkowników" />
           <relativeChildShapes />
         </useCaseShape>
-        <useCaseShape Id="30fc6d4a-1b46-40ed-945b-88f05013e4fa" absoluteBounds="5.875, 4, 1, 0.5" customColor="238, 237, 131" heightOffset="0">
+        <useCaseShape Id="30fc6d4a-1b46-40ed-945b-88f05013e4fa" absoluteBounds="6, 2.5, 1, 0.5" customColor="238, 237, 131" heightOffset="0">
           <useCaseMoniker Id="42d8f1cb-3d79-415e-8825-bcdca44ec1d9" LastKnownName="Dodaj konto pracownika" />
           <relativeChildShapes />
         </useCaseShape>
-        <useCaseShape Id="d7da2a68-868b-4792-aac1-59dd0fd7651a" absoluteBounds="1.5, 4.75, 1, 0.5" customColor="238, 237, 131" heightOffset="0">
+        <useCaseShape Id="d7da2a68-868b-4792-aac1-59dd0fd7651a" absoluteBounds="5.875, 4, 1, 0.5" customColor="238, 237, 131" heightOffset="0">
           <useCaseMoniker Id="5dd5cdce-ff12-4e47-ae5a-1de8f245c8ec" LastKnownName="Usuń konto pracownika" />
           <relativeChildShapes />
         </useCaseShape>
-        <useCaseShape Id="b2dd7562-a409-4f3b-be1f-af4af65a4c76" absoluteBounds="2.625, 4.75, 1.625, 0.5" customColor="238, 237, 131" heightOffset="0">
+        <useCaseShape Id="b2dd7562-a409-4f3b-be1f-af4af65a4c76" absoluteBounds="1.5, 4.75, 1.625, 0.5" customColor="238, 237, 131" heightOffset="0">
           <useCaseMoniker Id="0c946fd4-c225-4032-be60-3ae53ecc635f" LastKnownName="Resetuj hasło do konta pracownika" />
+          <relativeChildShapes />
+        </useCaseShape>
+        <useCaseShape Id="ab63f945-f52d-40f0-960a-4a4bdf7fb109" absoluteBounds="3.375, 4.75, 1.375, 0.5" customColor="238, 237, 131" heightOffset="0">
+          <useCaseMoniker Id="bfeecb3e-d6bf-4df3-b104-428ec076ef4c" LastKnownName="Raport finansowy dzienny" />
+          <relativeChildShapes />
+        </useCaseShape>
+        <useCaseShape Id="29dcfa55-a6b3-4f5f-ba8e-9baaff890338" absoluteBounds="5, 4.75, 1.375, 0.5" customColor="238, 237, 131" heightOffset="0">
+          <useCaseMoniker Id="533135b6-fd6d-4044-b7f9-8abd98d030c3" LastKnownName="Raport finansowy miesięczny" />
           <relativeChildShapes />
         </useCaseShape>
       </nestedChildShapes>
     </SubsystemShape>
-    <useCaseAssociationConnector edgePoints="[(1.125 : 3.13888888888889); (1.375 : 3.15277777777778)]" fixedFrom="Algorithm" fixedTo="Algorithm" customColor="113, 111, 110" sourceMultiplicity="" targetMultiplicity="">
+    <useCaseAssociationConnector edgePoints="[(1.125 : 3.14814814814815); (1.375 : 3.1712962962963)]" fixedFrom="Algorithm" fixedTo="Algorithm" customColor="113, 111, 110" sourceMultiplicity="" targetMultiplicity="">
       <associationMoniker Id="ad6e7953-3fe3-4dd3-a5bd-52584ebaa3ff" />
       <relativeChildShapes />
       <nodes>

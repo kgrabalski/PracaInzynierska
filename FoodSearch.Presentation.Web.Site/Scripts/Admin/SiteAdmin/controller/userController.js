@@ -39,6 +39,33 @@
                     $scope.users.Items.push.apply($scope.users.Items, result);
                 });
             }
+
+            $scope.showDetails = function(index) {
+                user.get({
+                    Id: $scope.users.Items[index].Id
+                }, function(u) {
+                    var modal = $modal.open({
+                        templateUrl: 'showUserDetailsModal',
+                        controller: 'ShowUserDetailsController',
+                        resolve: {
+                            userData: function() {
+                                return u;
+                            }
+                        }
+                    });
+                });
+            }
+        }
+    ]);
+
+    app.controller('ShowUserDetailsController', [
+        '$scope', '$modalInstance', 'userData',
+        function($scope, $modalInstance, userData) {
+            $scope.user = userData;
+
+            $scope.cancel = function () {
+                $modalInstance.dismiss('cancel');
+            }
         }
     ]);
 })();

@@ -13,7 +13,8 @@ namespace FoodSearch.BusinessLogic.Domain.SiteAdmin.Interface
 {
     public interface ISiteAdminDomain
     {
-        IEnumerable<Restaurant> GetRestaurants(Guid? restaurantId = null);
+        Restaurant GetRestaurant(Guid restaurantId);
+        IEnumerable<Restaurant> GetRestaurants(string query, int? page, int? pageSize);
         Guid? CreateRestaurant(string name, int addressId, int logoId, string userPassword, string userEmail, string userFirstName, string userLastName);
         bool DeleteRestaurant(Guid restaurantId);
         Address GetAddress(int addressId);

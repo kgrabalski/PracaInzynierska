@@ -8,7 +8,7 @@ using FoodSearch.Presentation.Web.Site.Helpers;
 
 namespace FoodSearch.Presentation.Web.Site.Areas.SiteAdmin.Models
 {
-    public class GetUsersModel
+    public class QueryModel
     {
         public string Query { get; set; }
         [NullableIntRange(0, int.MaxValue)]

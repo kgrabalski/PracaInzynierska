@@ -6,6 +6,7 @@ using System.Net.Http;
 using System.Threading.Tasks;
 using System.Web;
 using System.Web.Http;
+using System.Web.Http.ModelBinding;
 
 using FoodSearch.BusinessLogic.Domain.FoodSearch.Interface;
 using FoodSearch.BusinessLogic.Domain.SiteAdmin.Models;
@@ -25,15 +26,16 @@ namespace FoodSearch.Presentation.Web.Site.Areas.SiteAdmin.Controllers
         }
 
         [HttpGet]
-        public IEnumerable<Restaurant> GetAll()
+        [ValidateModel]
+        public IEnumerable<Restaurant> GetAll([ModelBinder] QueryModel model)
         {
-            return _domain.SiteAdmin.GetRestaurants();
+            return _domain.SiteAdmin.GetRestaurants(model.Query, model.Page, model.PageSize);
         }
 
         [HttpGet]
         public HttpResponseMessage GetRestaurant([FromUri] Guid id)
         {
-            var restaurant = _domain.SiteAdmin.GetRestaurants(id).FirstOrDefault();
+            var restaurant = _domain.SiteAdmin.GetRestaurant(id);
             return Request.CreateResponse(restaurant != null ? HttpStatusCode.OK : HttpStatusCode.NotFound, restaurant);
         }
 

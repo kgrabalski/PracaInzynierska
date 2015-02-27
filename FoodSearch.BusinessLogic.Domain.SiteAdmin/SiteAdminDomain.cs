@@ -49,6 +49,40 @@ namespace FoodSearch.BusinessLogic.Domain.SiteAdmin
             }
         }
 
+        public RestaurantDto GetRestaurant(Guid restaurantId)
+        {
+            using (var rep = _provider.GetRepository<Restaurant>())
+            {
+                return rep.Get(restaurantId).Map<RestaurantDto>();
+            }
+        }
+
+        public IEnumerable<RestaurantDto> GetRestaurants(string query, int? page, int? pageSize)
+        {
+            using (var rep = _provider.GetRepository<Restaurant>())
+            {
+                if (!page.HasValue) page = 0;
+                if (!pageSize.HasValue) pageSize = 25;
+
+                Restaurant restaurant = null;
+                Address address = null;
+                Street street = null;
+                return rep.GetAll()
+                    .Inner.JoinAlias(x => x.Address, () => address)
+                    .Inner.JoinAlias(x => x.Address.Street, () => street)
+                    .Where(
+                        Restrictions.On<Restaurant>(x => x.Name).IsInsensitiveLike(query, MatchMode.Anywhere) ||
+                        Restrictions.On(() => street.Name).IsInsensitiveLike(query, MatchMode.Anywhere)
+                    )
+                    .OrderBy(x => x.Name).Asc
+                    .Skip(page.Value * pageSize.Value)
+                    .Take(pageSize.Value)
+                    .List<Restaurant>()
+                    .ToList()
+                    .Map<IEnumerable<RestaurantDto>>();
+            }
+        }
+
         public Guid? CreateRestaurant(string name, int addressId, int logoId, string userPassword, string userEmail, string userFirstName, string userLastName)
         {
             using (var rep = _provider.StoredProcedure)

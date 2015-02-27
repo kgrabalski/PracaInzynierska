@@ -44,6 +44,12 @@
                 Brak restauracji spełniających wybrane kryteria
             </div>
             <div class="list-group" data-bind="template: {name: 'restaurantTemplate', foreach: Restaurants }">
+                @if (!Model.Restaurants.Any())
+                {
+                    <div>
+                        Brak restauracji spełniających wybrane kryteria
+                    </div>
+                }
 
                 @foreach (var ri in Model.Restaurants)
                 {

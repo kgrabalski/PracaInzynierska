@@ -196,7 +196,7 @@
                 };
 
                 deliveryRange.updateDeliveryRange(updateData, function() {
-                    alert("OK");
+                    
                 });
             }
         }

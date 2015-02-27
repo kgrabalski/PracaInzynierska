@@ -1,0 +1,228 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D9E2E6A5-8924-4CDC-B25D-7AD3857CDAE0}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>generatorRestauracji</RootNamespace>
+    <AssemblyName>generatorRestauracji</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.1.1\lib\net40\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.1\lib\net40\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Address.cs">
+      <DependentUpon>FoodSearch.tt</DependentUpon>
+    </Compile>
+    <Compile Include="City.cs">
+      <DependentUpon>FoodSearch.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Cuisine.cs">
+      <DependentUpon>FoodSearch.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DeliveryAddress.cs">
+      <DependentUpon>FoodSearch.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DeliveryType.cs">
+      <DependentUpon>FoodSearch.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Dish.cs">
+      <DependentUpon>FoodSearch.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DishGroup.cs">
+      <DependentUpon>FoodSearch.tt</DependentUpon>
+    </Compile>
+    <Compile Include="District.cs">
+      <DependentUpon>FoodSearch.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FoodSearch.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FoodSearch.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FoodSearch.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FoodSearch.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FoodSearch.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FoodSearch.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="GetDeliveryRange_Result.cs">
+      <DependentUpon>FoodSearch.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetPartnerRestaurants_Result.cs">
+      <DependentUpon>FoodSearch.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetRestaurantDailyFinancialReport_Result.cs">
+      <DependentUpon>FoodSearch.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetRestaurantMonthlyFinancialReport_Result.cs">
+      <DependentUpon>FoodSearch.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetRestaurantRating_Result.cs">
+      <DependentUpon>FoodSearch.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetRestaurants_Result.cs">
+      <DependentUpon>FoodSearch.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetStreets_Result.cs">
+      <DependentUpon>FoodSearch.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetSystemDailyFinancialReport_Result.cs">
+      <DependentUpon>FoodSearch.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetSystemMonthlyFinancialReport_Result.cs">
+      <DependentUpon>FoodSearch.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetUserOrders_Result.cs">
+      <DependentUpon>FoodSearch.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Hash.cs">
+      <DependentUpon>FoodSearch.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Image.cs">
+      <DependentUpon>FoodSearch.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Cuisines.cs" />
+    <Compile Include="Models\DishGroupModel.cs" />
+    <Compile Include="Models\DishModel.cs" />
+    <Compile Include="OpeningHour.cs">
+      <DependentUpon>FoodSearch.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Opinion.cs">
+      <DependentUpon>FoodSearch.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Order.cs">
+      <DependentUpon>FoodSearch.tt</DependentUpon>
+    </Compile>
+    <Compile Include="OrderDish.cs">
+      <DependentUpon>FoodSearch.tt</DependentUpon>
+    </Compile>
+    <Compile Include="OrderState.cs">
+      <DependentUpon>FoodSearch.tt</DependentUpon>
+    </Compile>
+    <Compile Include="OrderStatesHistory.cs">
+      <DependentUpon>FoodSearch.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PasswordResetRequest.cs">
+      <DependentUpon>FoodSearch.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Payment.cs">
+      <DependentUpon>FoodSearch.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PaymentsHistory.cs">
+      <DependentUpon>FoodSearch.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PaymentState.cs">
+      <DependentUpon>FoodSearch.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PaymentType.cs">
+      <DependentUpon>FoodSearch.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RegistrationConfirmation.cs">
+      <DependentUpon>FoodSearch.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Restaurant.cs">
+      <DependentUpon>FoodSearch.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RestaurantCuisine.cs">
+      <DependentUpon>FoodSearch.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RestaurantUser.cs">
+      <DependentUpon>FoodSearch.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Street.cs">
+      <DependentUpon>FoodSearch.tt</DependentUpon>
+    </Compile>
+    <Compile Include="User.cs">
+      <DependentUpon>FoodSearch.tt</DependentUpon>
+    </Compile>
+    <Compile Include="UserState.cs">
+      <DependentUpon>FoodSearch.tt</DependentUpon>
+    </Compile>
+    <Compile Include="UserType.cs">
+      <DependentUpon>FoodSearch.tt</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EntityDeploy Include="FoodSearch.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>FoodSearch.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config" />
+    <None Include="FoodSearch.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>FoodSearch.edmx</DependentUpon>
+      <LastGenOutput>FoodSearch.Context.cs</LastGenOutput>
+    </None>
+    <None Include="FoodSearch.edmx.diagram">
+      <DependentUpon>FoodSearch.edmx</DependentUpon>
+    </None>
+    <None Include="FoodSearch.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>FoodSearch.edmx</DependentUpon>
+      <LastGenOutput>FoodSearch.cs</LastGenOutput>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Images\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

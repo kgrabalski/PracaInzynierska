@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm9="http://schemas.microsoft.com/dsltools/UseCaseModel" xmlns:dm10="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
   dslVersion="1.0.0.0"
   Id="a89445bc-76e2-4ad8-9bfc-be4b121e5e2e"
   name="Results"
@@ -1420,6 +1420,238 @@
                 Id="1f72bb59-18fb-4c99-b461-457ca2fb8025">
                 <propertyInstance
                   Id="4c6bcef5-775f-47e7-b8b6-11d75601a136"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="8174a09b-4fbf-4a1d-b9b0-7e570ea636f6"
+        name="RestaurantDailyFinancialReport"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="6ab01361-97cd-4f07-baee-9ca45f79758d"
+            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.Data.Mapping%2Fbin%2FDebug%2FFoodSearch.Data.Mapping.dll Namespace%3DFoodSearch.Data.Mapping.StoredProcedure.Results Type%3DRestaurantDailyFinancialReport"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="beeda616-b72e-468f-ae59-e3b8f17c1c4e"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="0faeb7f9-ab15-4b23-bbf7-595acb3b2ee0">
+                <propertyInstance
+                  Id="2f4b1e6b-6d9a-430c-ae87-320262854d4a"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="7213d6cf-2243-4578-8dc9-0bb028c7e23c">
+                <propertyInstance
+                  Id="b8f59ff1-d8f7-4f8e-817f-454a29ea0292"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="eafd038e-e5a7-44cb-95b2-022a12062a21">
+                <propertyInstance
+                  Id="5e9567ea-5bb9-4bc8-8fc0-509e2de9ceb9"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="b3c9757c-2935-41ab-9db7-689a5a644e68">
+                <propertyInstance
+                  Id="99ea0a21-90fb-41ad-a1bb-5f88b2e6ddbc"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="51d39775-0cf1-4708-99ab-47bbd59df3c3">
+                <propertyInstance
+                  Id="eab61f0d-45b9-4a39-a2f3-032a9a8230e3"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="8f4112fa-59c9-40c0-b2d3-b14e5d9d03f6"
+        name="RestaurantMonthlyFinancialReport"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="9d7bc271-a9da-4fab-ac07-6c70cac60b10"
+            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.Data.Mapping%2Fbin%2FDebug%2FFoodSearch.Data.Mapping.dll Namespace%3DFoodSearch.Data.Mapping.StoredProcedure.Results Type%3DRestaurantMonthlyFinancialReport"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="d0779182-5b66-4478-b1d2-c7bfbc36da4b"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="b6b87cc7-92e1-4b46-a41e-b3a063baa34e">
+                <propertyInstance
+                  Id="45d4a246-2029-4c73-ada2-5744495a15e2"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="8f55a22e-4093-46e5-a68a-9eeda10eb3ae">
+                <propertyInstance
+                  Id="3c47f059-066c-49ab-823a-18b7ee98fb27"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="0f3c8eb1-954e-4a9a-8512-17c69c50c4a8">
+                <propertyInstance
+                  Id="4279065e-81be-4200-9796-f58844ddc223"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="8b871fa5-1265-4dd0-a128-9fd752cef257">
+                <propertyInstance
+                  Id="2225b30a-5ee3-4ca7-ab1a-a63e8b7c7b04"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="8b84a558-5858-4634-8d71-316847294abe">
+                <propertyInstance
+                  Id="95c8748b-f7d7-4f75-a44e-17ef2562b6c8"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="8616a29b-e68c-41af-bc73-2225946b6d8a"
+        name="SystemDailyFinancialReport"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="8a199cea-0b58-4960-a59a-5f71c5fd2eca"
+            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.Data.Mapping%2Fbin%2FDebug%2FFoodSearch.Data.Mapping.dll Namespace%3DFoodSearch.Data.Mapping.StoredProcedure.Results Type%3DSystemDailyFinancialReport"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="9e6bb1ed-ae92-4d45-b772-a90a10e55279"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="386c6a68-0533-497b-ba5a-7b7a4c6e59a5">
+                <propertyInstance
+                  Id="8e3696f5-7b61-4186-8b56-1ec20d6a4261"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="a41507a2-4ce2-4f45-8bd6-dcde44c367ae">
+                <propertyInstance
+                  Id="e37e7af5-fbc4-4b18-9f49-51eeede9ee76"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="0b6bbcbc-f224-4d83-9c23-ebd01839a569">
+                <propertyInstance
+                  Id="376ba8a5-3119-4b57-9531-3e515bc2e7f8"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="eec470ae-7595-4d3e-9702-af11492fbc3c">
+                <propertyInstance
+                  Id="c7f4802a-8689-4feb-8283-e264b6c8e0aa"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="49de5ca1-8800-4f06-a798-3607294d2529">
+                <propertyInstance
+                  Id="401842bc-ff21-4b14-a802-6907a5e9f5c8"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="052557b5-dddc-49b6-b87d-56dc7ee10e7f"
+        name="SystemMonthlyFinancialReport"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="2de66b04-3de4-42c8-91b5-59c4041f6e5b"
+            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.Data.Mapping%2Fbin%2FDebug%2FFoodSearch.Data.Mapping.dll Namespace%3DFoodSearch.Data.Mapping.StoredProcedure.Results Type%3DSystemMonthlyFinancialReport"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="9110ff85-eadd-4bc4-ba6a-0d2fe23c7005"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="29a83556-f0fb-487d-aa1d-84a6c2a9f4c7">
+                <propertyInstance
+                  Id="cea58afe-1f30-465e-970f-a65a09d916b0"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="de89d2d4-b2f8-440c-8a60-5d9065f2cfef">
+                <propertyInstance
+                  Id="934686d8-8b08-42ff-ab99-ec01adff901e"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="47419586-6a75-43b3-a0b6-5fdf51a0c274">
+                <propertyInstance
+                  Id="9638d1a0-8b94-4013-a6b8-5fd1246f9357"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="4bd1073a-e3ad-4224-b745-5c713074e209">
+                <propertyInstance
+                  Id="de985c8f-f763-4378-a072-46f3d90d2d95"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="3c7417a7-51ce-4f4b-a306-e22d27d28154">
+                <propertyInstance
+                  Id="8b5b089d-1fa9-485c-a429-394680d20854"
                   name="PackageVisibility"
                   value="internal" />
               </stereotypeInstanceHasPropertyInstances>

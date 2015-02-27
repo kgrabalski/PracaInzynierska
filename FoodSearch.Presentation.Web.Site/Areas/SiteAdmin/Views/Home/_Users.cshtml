@@ -56,10 +56,14 @@
                                 <td>{{u.LastName}}</td>
                                 <td>{{u.Email}}</td>
                                 <td>
-                                    <button ng-click="changeState($index)" class="btn btn-block"
+                                    <button ng-click="showDetails($index)" class="btn btn-primary pull-right ">
+                                        Szczegóły
+                                    </button>
+                                    <button ng-click="changeState($index)" class="btn pull-right btn-activate"
                                             ng-class="{'btn-success': !u.UserActive, 'btn-warning': u.UserActive}">
                                         {{u.UserActive ? 'Dezaktywuj' : 'Aktywuj'}}
                                     </button>
+
                                 </td>
                             </tr>
                             </tbody>
@@ -70,3 +74,37 @@
         </div>
     </section>
 </aside>
+
+<script type="text/ng-template" id="showUserDetailsModal">
+    <div class="modal-header">
+        <button type="button" class="close" ng-click="cancel()">&times;</button>
+        <h4 class="modal-title" id="myModalLabel">Dane użytkownika</h4>
+    </div>
+    <div class="modal-body">
+        <table class="table">
+            <tr>
+                <td>Imię:</td>
+                <td>{{user.FirstName}}</td>
+            </tr>
+            <tr>
+                <td>Nazwisko:</td>
+                <td>{{user.LastName}}</td>
+            </tr>
+            <tr>
+                <td>Adres email:</td>
+                <td><a ng-href="mailto:{{user.Email}}">{{user.Email}}</a></td>
+            </tr>
+            <tr>
+                <td>Numer telefonu:</td>
+                <td>{{user.PhoneNumber}}</td>
+            </tr>
+            <tr>
+                <td>Data rejestracji:</td>
+                <td>{{user.CreateDate}}</td>
+            </tr>
+        </table>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-primary" ng-click="cancel()">Zamknij</button>
+    </div>
+</script>

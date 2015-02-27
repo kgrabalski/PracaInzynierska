@@ -30,37 +30,22 @@
             <div class="navbar-right">
                 <ul class="nav navbar-nav">
 
-                    <li class="dropdown user user-menu">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                    <li class="dropdown user user-menu" style="cursor: pointer">
+                        <a  class="dropdown-toggle" data-toggle="dropdown">
                             <i class="glyphicon glyphicon-user"></i>
-                            <span>@User.Identity.Name <i class="caret"></i></span>
+                            <span>Administrator <i class="caret"></i></span>
                         </a>
                         <ul class="dropdown-menu">
-
-                            <li class="user-header bg-light-blue">
-                                <img src="~/Images/Admin/avatar3.png" class="img-circle" alt="User Image" />
-                                <p>
-                                    @User.Identity.Name
-                                    <small>Member since Nov. 2012</small>
-                                </p>
+                            <li>
+                                <a href="@Url.Action("Index", "Home", new {area = ""})">
+                                    <span class="glyphicon glyphicon-home"></span> Przejdź do serwisu
+                                </a>
                             </li>
-
-                            <li class="user-body">
-                                <div class="col-xs-4 text-center">
-                                    <a href="#">Followers</a>
-                                </div>
-                                <div class="col-xs-4 text-center">
-                                    <a href="#">Sales</a>
-                                </div>
-                                <div class="col-xs-4 text-center">
-                                    <a href="#">Friends</a>
-                                </div>
-                            </li>
-
-                            <li class="user-footer">
-                                <div class="pull-right">
-                                    <a href="@Url.Action("Logout", "Account", new {area = "SiteAdmin"})" class="btn btn-default btn-flat">Wyloguj</a>
-                                </div>
+                            <li class="divider"></li>
+                            <li>
+                                <a href="@Url.Action("Logout", "Account", new {area = "SiteAdmin"})">
+                                    <span class="glyphicon glyphicon-log-out"></span> Wyloguj
+                                </a>
                             </li>
                         </ul>
                     </li>

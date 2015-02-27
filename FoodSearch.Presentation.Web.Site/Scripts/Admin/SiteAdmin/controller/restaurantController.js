@@ -6,6 +6,7 @@
         '$scope', 'RestaurantService', '$modal',
         function($scope, restaurant, $modal) {
             $scope.restaurants = restaurant;
+            $scope.page = 0;
 
             $scope.remove = function(index) {
                 alert(index);
@@ -26,6 +27,27 @@
                 });
             }
 
+            $scope.search = function () {
+                $scope.page = 0;
+                $scope.restaurants.Items = restaurant.query({
+                    Query: $scope.query,
+                    Page: $scope.page
+                });
+            }
+
+            $scope.clearSearch = function () {
+                $scope.query = "";
+                $scope.search();
+            }
+
+            $scope.getMore = function () {
+                restaurant.query({
+                    Query: $scope.query,
+                    Page: ++$scope.page
+                }, function (result) {
+                    $scope.restaurants.Items.push.apply($scope.restaurants.Items, result);
+                });
+            }
         }
     ]);
 

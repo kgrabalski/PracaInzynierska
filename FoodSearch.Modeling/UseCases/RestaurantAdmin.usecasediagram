@@ -182,6 +182,22 @@
         </subjects>
       </useCase>
     </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="bfeecb3e-d6bf-4df3-b104-428ec076ef4c" name="Raport finansowy dzienny" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="fc97e46e-0830-4972-8b36-aa224916cb31" />
+        <subjects>
+          <subsystemMoniker Id="2b117eb4-c937-400a-8b1d-a7e64ee03d30" LastKnownName="Aplikacja internetowa" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="533135b6-fd6d-4044-b7f9-8abd98d030c3" name="Raport finansowy miesięczny" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="ebfd27f6-83b3-4535-bb3d-f4f03f6412d4" />
+        <subjects>
+          <subsystemMoniker Id="2b117eb4-c937-400a-8b1d-a7e64ee03d30" LastKnownName="Aplikacja internetowa" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
   </packagedElements>
   <package Id="e262d3aa-a9ff-4b43-800c-3fc0e7559cc4" name="FoodSearch.Modeling">
     <elementDefinition Id="36ea5af6-e5bd-4839-9f43-52f120ba2311" />

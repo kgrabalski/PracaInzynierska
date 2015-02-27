@@ -26,7 +26,7 @@ namespace FoodSearch.Presentation.Web.Site.Areas.SiteAdmin.Controllers
 
         [HttpGet]
         [ValidateModel]
-        public IEnumerable<BusinessLogic.Domain.SiteAdmin.Models.User> GetUsers([ModelBinder] GetUsersModel model)
+        public IEnumerable<BusinessLogic.Domain.SiteAdmin.Models.User> GetUsers([ModelBinder] QueryModel model)
         {
             return _domain.SiteAdmin.GetUsers(model.Query, model.Page, model.PageSize);
         }

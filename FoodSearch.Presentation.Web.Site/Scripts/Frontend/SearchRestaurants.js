@@ -22,7 +22,7 @@
                 r.Street = ko.observable(s);
                 r.Number = ko.observable(no);
                 r.MinimumOrder = ko.observable(mo);
-                r.RestaurantRating = ko.observable(rr);
+                r.RestaurantRating = ko.observable(rr.toFixed(1));
                 r.StarsCountUsersVoted = ko.observable(uv);
                 r.UsersVoted = ko.observable(uv);
 

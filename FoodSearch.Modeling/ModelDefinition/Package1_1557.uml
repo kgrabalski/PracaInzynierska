@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm9="http://schemas.microsoft.com/dsltools/UseCaseModel" xmlns:dm10="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
   dslVersion="1.0.0.0"
   Id="22305bcc-f123-43a3-a4b2-8036c8917ed3"
   name="Generic"
@@ -1708,6 +1708,356 @@
                       Id="5056904f-8279-4193-a410-d8db287921f0"
                       LastKnownName="UserOrderItem"
                       LastKnownLocation="Package1_1703.uml" />
+                  </actuals>
+                  <formal>
+                    <classifierTemplateParameterMoniker
+                      Id="67f9a8c0-88a9-4c1c-8bba-21b6a5b874f2"
+                      LastKnownLocation="Package1_1557.uml" />
+                  </formal>
+                </templateParameterSubstitution>
+              </templateBindingHasTemplateParameterSubstitution>
+            </relationshipOwnedElementsInternal>
+          </templateBinding>
+        </signatures>
+      </Interface>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="c1382f67-abde-4f2c-913f-fabf6216acb2"
+        name="IEnumerable&lt;RestaurantDailyFinancialReport‎&gt;"
+        isAbstract="false"
+        isLeaf="false">
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="fb6a2608-ce3d-4b4c-847c-f9d9d080c9dd"
+            name="interface"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="982b0c18-a813-4cc4-b5ef-9f87613bfe92">
+                <propertyInstance
+                  Id="016f6bae-7ef7-449e-86d9-f5afb9670d69"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="868169e3-39cc-40c4-89d7-ce4712612ceb">
+                <propertyInstance
+                  Id="11fc6870-1eee-4a06-bf94-f4ae8c0c518c"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="2b3f4785-0d81-4bef-ae7a-e9e75e6d2930">
+                <propertyInstance
+                  Id="23c208f1-6590-4d40-ba30-b6506bc34cf4"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="11f146f1-39e1-40ad-a92a-f92543f14c2e">
+                <propertyInstance
+                  Id="3413f138-d88c-4294-89c1-2e5d3b8a02b6"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <signatures>
+          <templateBinding
+            Id="281bba39-1519-4554-bfee-3bf57e8ed911">
+            <redefinableTemplateSignatureMoniker
+              Id="8cd67406-1635-4ee9-9287-2d1df8f60e4b"
+              LastKnownLocation="Package1_1557.uml" />
+            <relationshipOwnedElementsInternal>
+              <templateBindingHasTemplateParameterSubstitution>
+                <templateParameterSubstitution
+                  Id="67334643-e965-47c9-af81-9c82e4ac196d">
+                  <actuals>
+                    <classMoniker
+                      Id="8174a09b-4fbf-4a1d-b9b0-7e570ea636f6"
+                      LastKnownName="RestaurantDailyFinancialReport"
+                      LastKnownLocation="Package1_1524.uml" />
+                  </actuals>
+                  <formal>
+                    <classifierTemplateParameterMoniker
+                      Id="67f9a8c0-88a9-4c1c-8bba-21b6a5b874f2"
+                      LastKnownLocation="Package1_1557.uml" />
+                  </formal>
+                </templateParameterSubstitution>
+              </templateBindingHasTemplateParameterSubstitution>
+            </relationshipOwnedElementsInternal>
+          </templateBinding>
+        </signatures>
+      </Interface>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="fba17d14-7e3b-43a7-81c5-e9e32921be36"
+        name="IEnumerable&lt;RestaurantMonthlyFinancialReport‎&gt;"
+        isAbstract="false"
+        isLeaf="false">
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="508e7772-f280-41da-9653-c1418fafbda3"
+            name="interface"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="2f134c40-50a0-4807-94ec-109f7dde01df">
+                <propertyInstance
+                  Id="d7a2aaab-630a-493a-a048-384754c8330a"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="54eed60f-aabe-4b0d-b938-3a82009a9637">
+                <propertyInstance
+                  Id="dce2a68a-b763-4a41-8b9c-1fd5ed8ed99e"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="d77ff306-4e3c-43df-bdf0-d5afd09d8ac5">
+                <propertyInstance
+                  Id="8f716262-e197-4ec6-849e-ccb154bee965"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="83d2801b-f9d2-42c4-9559-b0a4ce80db16">
+                <propertyInstance
+                  Id="42cf8087-e231-4927-a582-3b7d8014f788"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <signatures>
+          <templateBinding
+            Id="4a7c55b7-f0d7-4fb9-819e-f94a3f71f772">
+            <redefinableTemplateSignatureMoniker
+              Id="8cd67406-1635-4ee9-9287-2d1df8f60e4b"
+              LastKnownLocation="Package1_1557.uml" />
+            <relationshipOwnedElementsInternal>
+              <templateBindingHasTemplateParameterSubstitution>
+                <templateParameterSubstitution
+                  Id="836f13bc-c4b8-4dad-bf70-9d6cbf67d6e9">
+                  <actuals>
+                    <classMoniker
+                      Id="8f4112fa-59c9-40c0-b2d3-b14e5d9d03f6"
+                      LastKnownName="RestaurantMonthlyFinancialReport"
+                      LastKnownLocation="Package1_1524.uml" />
+                  </actuals>
+                  <formal>
+                    <classifierTemplateParameterMoniker
+                      Id="67f9a8c0-88a9-4c1c-8bba-21b6a5b874f2"
+                      LastKnownLocation="Package1_1557.uml" />
+                  </formal>
+                </templateParameterSubstitution>
+              </templateBindingHasTemplateParameterSubstitution>
+            </relationshipOwnedElementsInternal>
+          </templateBinding>
+        </signatures>
+      </Interface>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="df18a858-4a11-4956-a39f-4e0e4958afa2"
+        name="IEnumerable&lt;SystemDailyFinancialReport‎&gt;"
+        isAbstract="false"
+        isLeaf="false">
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="0ca05be5-c42b-451c-922c-2a8b073f835c"
+            name="interface"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="01f79ac8-7287-4f53-a2fc-1ee158b17942">
+                <propertyInstance
+                  Id="0c23bd36-b812-4558-85f4-463f11ac5870"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="a3e32301-ee4e-4b56-8cf6-9a5b9e574a6d">
+                <propertyInstance
+                  Id="c9c1b052-146c-4b98-a654-cf4d201efab5"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="780968c1-9982-427d-8035-13f4bd70b95e">
+                <propertyInstance
+                  Id="d332b844-920c-4930-b94f-deea1207b25d"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="0f458e4b-50ef-4861-b176-f86b226af475">
+                <propertyInstance
+                  Id="7e309afe-8651-4f7b-9e89-3d5770931704"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <signatures>
+          <templateBinding
+            Id="2c7a8115-e806-4b74-b08a-615753647772">
+            <redefinableTemplateSignatureMoniker
+              Id="8cd67406-1635-4ee9-9287-2d1df8f60e4b"
+              LastKnownLocation="Package1_1557.uml" />
+            <relationshipOwnedElementsInternal>
+              <templateBindingHasTemplateParameterSubstitution>
+                <templateParameterSubstitution
+                  Id="e9affae6-da7a-4740-83ed-f89f2d02e434">
+                  <actuals>
+                    <classMoniker
+                      Id="8616a29b-e68c-41af-bc73-2225946b6d8a"
+                      LastKnownName="SystemDailyFinancialReport"
+                      LastKnownLocation="Package1_1524.uml" />
+                  </actuals>
+                  <formal>
+                    <classifierTemplateParameterMoniker
+                      Id="67f9a8c0-88a9-4c1c-8bba-21b6a5b874f2"
+                      LastKnownLocation="Package1_1557.uml" />
+                  </formal>
+                </templateParameterSubstitution>
+              </templateBindingHasTemplateParameterSubstitution>
+            </relationshipOwnedElementsInternal>
+          </templateBinding>
+        </signatures>
+      </Interface>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="ab5a7e37-72ea-4a1e-a7db-2782e24f6f37"
+        name="IEnumerable&lt;SystemMonthlyFinancialReport‎&gt;"
+        isAbstract="false"
+        isLeaf="false">
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="6f777816-0d1b-43f0-b9ab-17b5dba7a1cd"
+            name="interface"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="57a01dc0-af5e-4532-8495-a0c0e768bbd1">
+                <propertyInstance
+                  Id="5940f530-7bdc-4518-bd93-b75d415aa420"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="8157b866-098d-49c1-bb67-46050c7fb267">
+                <propertyInstance
+                  Id="bc13e1be-83dc-4520-bfdc-54c10d72d8a5"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="aaefd1ac-4ce0-4fa4-9a9b-f9fb3e8e7598">
+                <propertyInstance
+                  Id="5f301da7-d6c7-4198-8368-c63adcd6034a"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="956b7ed2-9cd4-4a99-a0e9-a61bd18850cc">
+                <propertyInstance
+                  Id="5f20e95a-55a9-4d55-9f47-3e88ff9319df"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <signatures>
+          <templateBinding
+            Id="8eb44ac7-61fc-4a35-880f-1835caddc1a7">
+            <redefinableTemplateSignatureMoniker
+              Id="8cd67406-1635-4ee9-9287-2d1df8f60e4b"
+              LastKnownLocation="Package1_1557.uml" />
+            <relationshipOwnedElementsInternal>
+              <templateBindingHasTemplateParameterSubstitution>
+                <templateParameterSubstitution
+                  Id="5a1334b1-9760-4b79-83d3-d7a2604beb41">
+                  <actuals>
+                    <classMoniker
+                      Id="052557b5-dddc-49b6-b87d-56dc7ee10e7f"
+                      LastKnownName="SystemMonthlyFinancialReport"
+                      LastKnownLocation="Package1_1524.uml" />
+                  </actuals>
+                  <formal>
+                    <classifierTemplateParameterMoniker
+                      Id="67f9a8c0-88a9-4c1c-8bba-21b6a5b874f2"
+                      LastKnownLocation="Package1_1557.uml" />
+                  </formal>
+                </templateParameterSubstitution>
+              </templateBindingHasTemplateParameterSubstitution>
+            </relationshipOwnedElementsInternal>
+          </templateBinding>
+        </signatures>
+      </Interface>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="327a4e01-dd0c-427f-99e3-67d691b400eb"
+        name="IEnumerable&lt;User‎&gt;"
+        isAbstract="false"
+        isLeaf="false">
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="a05123f3-5cf9-4352-8bbe-923e2efcc194"
+            name="interface"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="24e8a533-58b7-411b-9ef7-145e269814fe">
+                <propertyInstance
+                  Id="dfdbc299-a3d1-4bca-b034-aa8eb38e99ea"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="7e426694-ce4d-4081-8f1f-c8c79ca7e3d9">
+                <propertyInstance
+                  Id="52aaa331-3434-4dcf-8cfd-beaff7578888"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="a099a636-1b58-49e7-a36e-338822bc3c6d">
+                <propertyInstance
+                  Id="46adaf47-ac71-41d1-aa33-4e50b26ffcef"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="70e2914e-3ff7-4ef3-b9ba-f5626ebeacba">
+                <propertyInstance
+                  Id="590d9bd7-9ee5-4aa0-842b-20aa9afe599b"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <signatures>
+          <templateBinding
+            Id="23fb154d-54db-46d4-a4a7-870c6963c4d9">
+            <redefinableTemplateSignatureMoniker
+              Id="8cd67406-1635-4ee9-9287-2d1df8f60e4b"
+              LastKnownLocation="Package1_1557.uml" />
+            <relationshipOwnedElementsInternal>
+              <templateBindingHasTemplateParameterSubstitution>
+                <templateParameterSubstitution
+                  Id="fbb1e6dd-c233-4f28-91d2-f5d693f883ba">
+                  <actuals>
+                    <classMoniker
+                      Id="6cfd6e9f-b42f-4571-925c-9f975d5eb68d"
+                      LastKnownName="User"
+                      LastKnownLocation="Package_1703.uml" />
                   </actuals>
                   <formal>
                     <classifierTemplateParameterMoniker

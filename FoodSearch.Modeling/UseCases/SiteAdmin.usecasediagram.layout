@@ -2,33 +2,61 @@
 <useCaseDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="SiteAdmin">
   <useCaseModelRootMoniker Id="574dca73-04ad-4691-ab75-7985fceb3109" />
   <nestedChildShapes>
-    <actorShape Id="8e8106ae-86d5-43f9-9a72-32d372df4b75" absoluteBounds="1, 1.125, 0.5, 0.5" isReference="false" heightOffset="0">
-      <actorMoniker Id="0bb593ea-5d96-4a7d-8c2a-80b8d063cce4" LastKnownName="Administrator systemu" />
+    <actorShape Id="36799736-4418-4c46-a2c9-99977a636d37" absoluteBounds="0.625, 1.875, 0.5, 0.5" isReference="false" heightOffset="0">
+      <actorMoniker Id="d2ebc2ca-476e-47d1-b0b5-5018e8679f5f" LastKnownName="Administrator systemu" />
       <relativeChildShapes />
     </actorShape>
-    <SubsystemShape Id="2ff9603b-3d11-4f1e-9c9a-4346c8bd218d" absoluteBounds="3, 0.625, 4.875, 1.5" customColor="White">
-      <subsystemMoniker Id="130a5061-52ec-4d9d-9b18-75c9603cc37e" LastKnownName="Panel administratora" />
+    <SubsystemShape Id="69ac6227-4027-410f-a7dc-3a8f54b2cd9d" absoluteBounds="1.375, 0.5, 5.75, 3" customColor="White">
+      <subsystemMoniker Id="f036ed51-6d0b-4e23-b158-70b12cf036e3" LastKnownName="Aplikacja internetowa" />
       <nestedChildShapes>
-        <useCaseShape Id="0df0c79f-c47c-40ec-968a-241eab134a4a" absoluteBounds="3.125, 1.125, 1, 0.5" customColor="238, 237, 131" heightOffset="0">
-          <useCaseMoniker Id="199750c5-a29b-470b-98fa-f661b9d93011" LastKnownName="Edycja listy restauracji" />
+        <useCaseShape Id="55c361fa-9aa4-4ca2-8c75-b02315b9aaaa" absoluteBounds="1.625, 2.75, 1.375, 0.5" customColor="238, 237, 131" heightOffset="0">
+          <useCaseMoniker Id="c3b2b1ae-2ad1-48c1-9027-ffdc41ccf2c2" LastKnownName="Raport finansowy dzienny" />
           <relativeChildShapes />
         </useCaseShape>
-        <useCaseShape Id="f4b17442-fdd3-481d-8358-cb4b2264c37e" absoluteBounds="4.5, 1.125, 1.75, 0.5" customColor="238, 237, 131" heightOffset="0">
-          <useCaseMoniker Id="801245fb-0819-4f6c-abd1-a11e50d2c9ae" LastKnownName="Zarządzanie kontami właściciela restauracji" />
+        <useCaseShape Id="c0eed4a8-cafd-455d-9c65-b7db975d1646" absoluteBounds="3.375, 2.75, 1.375, 0.5" customColor="238, 237, 131" heightOffset="0">
+          <useCaseMoniker Id="bcd05ed1-c33f-4aa1-bf34-38de3dc8d2ec" LastKnownName="Raport finansowy miesięczny" />
           <relativeChildShapes />
         </useCaseShape>
-        <useCaseShape Id="3dc32272-4e5e-4dc8-a5bf-ea0f78351bfe" absoluteBounds="6.625, 1.125, 1, 0.5" customColor="238, 237, 131" heightOffset="0">
-          <useCaseMoniker Id="ddb08c3d-afb9-4780-a84d-f1d398b90b01" LastKnownName="Przeglądanie raportów" />
+        <useCaseShape Id="6e8f41e6-bb87-4fcc-910f-0aa199381638" absoluteBounds="1.625, 1, 1, 0.5" customColor="238, 237, 131" heightOffset="0">
+          <useCaseMoniker Id="28caf9c5-3a2d-46e6-998d-da0bacd089d2" LastKnownName="Wyświetl restauracje" />
+          <relativeChildShapes />
+        </useCaseShape>
+        <useCaseShape Id="a42eb7f5-27c7-4c71-89cd-0fe66d32c405" absoluteBounds="2.875, 1, 1, 0.5" customColor="238, 237, 131" heightOffset="0">
+          <useCaseMoniker Id="9de19f39-d2da-464e-89fd-2876b8f33877" LastKnownName="Dodaj restaurację" />
+          <relativeChildShapes />
+        </useCaseShape>
+        <useCaseShape Id="c2d229e4-e614-4e44-a7f2-0e3eb58886f8" absoluteBounds="4.125, 1, 1, 0.5" customColor="238, 237, 131" heightOffset="0">
+          <useCaseMoniker Id="404d4d07-fd38-4ef5-baa2-ef3c5aaae81b" LastKnownName="Usuń restaurację" />
+          <relativeChildShapes />
+        </useCaseShape>
+        <useCaseShape Id="b3409052-c8a8-422c-b7c1-fbcd1affe1de" absoluteBounds="5.375, 1, 1.25, 0.5" customColor="238, 237, 131" heightOffset="0">
+          <useCaseMoniker Id="244fef7c-b044-4619-8578-cc129791a213" LastKnownName="Wyświetl liste użytkowników" />
+          <relativeChildShapes />
+        </useCaseShape>
+        <useCaseShape Id="28c0722e-df6e-4462-b642-55112b69c797" absoluteBounds="1.625, 1.875, 1, 0.5" customColor="238, 237, 131" heightOffset="0">
+          <useCaseMoniker Id="8d80f2a3-be73-4df8-b728-779a081de30d" LastKnownName="Szukaj użytkownika" />
+          <relativeChildShapes />
+        </useCaseShape>
+        <useCaseShape Id="f9880567-2e7e-41a6-8107-7d87187992cc" absoluteBounds="2.75, 1.875, 1.375, 0.5" customColor="238, 237, 131" heightOffset="0">
+          <useCaseMoniker Id="419d221d-666f-4404-b3d7-f3478cbcaabf" LastKnownName="Deazktywuj konto użytkownika" />
+          <relativeChildShapes />
+        </useCaseShape>
+        <useCaseShape Id="2ffe6716-6126-42b0-bebd-8fa517d914d6" absoluteBounds="4.25, 1.875, 1.25, 0.5" customColor="238, 237, 131" heightOffset="0">
+          <useCaseMoniker Id="50e84eb7-12ed-49b2-90c7-c4fdca971a11" LastKnownName="Aktuwuj konto użytkownika" />
+          <relativeChildShapes />
+        </useCaseShape>
+        <useCaseShape Id="8b2be476-7ae0-4729-9ae1-497dca90e74d" absoluteBounds="5.625, 1.875, 1.25, 0.5" customColor="238, 237, 131" heightOffset="0">
+          <useCaseMoniker Id="d2fdeb78-8c76-478d-9daa-53e36967b91e" LastKnownName="Wyświetl dane użytkownika" />
           <relativeChildShapes />
         </useCaseShape>
       </nestedChildShapes>
     </SubsystemShape>
-    <useCaseAssociationConnector edgePoints="[(1.5 : 1.375); (3 : 1.375)]" fixedFrom="Algorithm" fixedTo="Algorithm" customColor="113, 111, 110" sourceMultiplicity="" targetMultiplicity="">
-      <associationMoniker Id="053f7658-7824-4664-bfb1-10b356951d78" />
+    <useCaseAssociationConnector edgePoints="[(1.125 : 2.11574074074074); (1.375 : 2.10648148148148)]" fixedFrom="Algorithm" fixedTo="Algorithm" customColor="113, 111, 110" sourceMultiplicity="" targetMultiplicity="">
+      <associationMoniker Id="7aebcd75-2d6a-495b-8892-b4fa81583abc" />
       <relativeChildShapes />
       <nodes>
-        <actorShapeMoniker Id="8e8106ae-86d5-43f9-9a72-32d372df4b75" />
-        <SubsystemShapeMoniker Id="2ff9603b-3d11-4f1e-9c9a-4346c8bd218d" />
+        <actorShapeMoniker Id="36799736-4418-4c46-a2c9-99977a636d37" />
+        <SubsystemShapeMoniker Id="69ac6227-4027-410f-a7dc-3a8f54b2cd9d" />
       </nodes>
     </useCaseAssociationConnector>
   </nestedChildShapes>
