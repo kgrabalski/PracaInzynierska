@@ -1,11 +1,5 @@
-﻿using System;
+﻿using FoodSearch.BusinessLogic.Domain.User.Models;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-using FoodSearch.BusinessLogic.Domain.Order.Models;
-using FoodSearch.BusinessLogic.Domain.User.Models;
 
 namespace FoodSearch.Presentation.Web.Site.Areas.User.Models
 {

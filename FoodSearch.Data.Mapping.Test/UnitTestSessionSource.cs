@@ -6,7 +6,6 @@ using FoodSearch.Data.Mapping.Interface;
 using FoodSearch.Data.Mapping.Repository;
 
 using NHibernate;
-using NHibernate.Driver;
 
 namespace FoodSearch.Data.Mapping.Test
 {

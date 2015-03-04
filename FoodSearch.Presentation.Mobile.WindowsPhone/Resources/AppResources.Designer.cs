@@ -10,7 +10,6 @@
 
 namespace FoodSearch.Presentation.Mobile.WindowsPhone.Resources
 {
-    using System;
 
 
     /// <summary>

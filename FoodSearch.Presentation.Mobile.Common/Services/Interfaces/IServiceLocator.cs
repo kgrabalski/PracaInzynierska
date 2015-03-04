@@ -1,7 +1,5 @@
-﻿using System;
-using FoodSearch.Presentation.Mobile.Common.Services.Interfaces;
+﻿using Acr.XamForms.Mobile;
 using Acr.XamForms.UserDialogs;
-using Acr.XamForms.Mobile;
 
 namespace FoodSearch.Presentation.Mobile.Common.Services.Interfaces
 {

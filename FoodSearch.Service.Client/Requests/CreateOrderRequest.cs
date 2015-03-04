@@ -1,5 +1,4 @@
-﻿using System;
-
+﻿
 namespace FoodSearch.Service.Client.Requests
 {
     public class CreateOrderRequest

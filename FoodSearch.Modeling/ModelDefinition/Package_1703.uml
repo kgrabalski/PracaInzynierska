@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm9="http://schemas.microsoft.com/dsltools/UseCaseModel" xmlns:dm10="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
   dslVersion="1.0.0.0"
   Id="ef920f85-0d52-4ca0-8cce-2738865e31b6"
   name="Models"
@@ -21,7 +21,7 @@
         <referencesInternal>
           <reference
             Id="fed1de9d-be6b-455d-8cb3-00a363480aee"
-            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.BusinessLogic.Domain.SiteAdmin%2Fbin%2FDebug%2FFoodSearch.BusinessLogic.Domain.SiteAdmin.dll Namespace%3DFoodSearch.BusinessLogic.Domain.SiteAdmin.Models Type%3DRestaurant"
+            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.BusinessLogic.Domain.SiteAdmin%2Fbin%2FRelease%2FFoodSearch.BusinessLogic.Domain.SiteAdmin.dll Namespace%3DFoodSearch.BusinessLogic.Domain.SiteAdmin.Models Type%3DRestaurant"
             tag="ViewCode" />
         </referencesInternal>
         <appliedStereotypesInternal>
@@ -79,7 +79,7 @@
         <referencesInternal>
           <reference
             Id="b0f35642-b37d-4f5b-b91d-37614031edc1"
-            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.BusinessLogic.Domain.SiteAdmin%2Fbin%2FDebug%2FFoodSearch.BusinessLogic.Domain.SiteAdmin.dll Namespace%3DFoodSearch.BusinessLogic.Domain.SiteAdmin.Models Type%3DAddress"
+            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.BusinessLogic.Domain.SiteAdmin%2Fbin%2FRelease%2FFoodSearch.BusinessLogic.Domain.SiteAdmin.dll Namespace%3DFoodSearch.BusinessLogic.Domain.SiteAdmin.Models Type%3DAddress"
             tag="ViewCode" />
         </referencesInternal>
         <appliedStereotypesInternal>
@@ -137,7 +137,7 @@
         <referencesInternal>
           <reference
             Id="9cd1484b-e243-4ba6-840c-43376c23c0c6"
-            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.BusinessLogic.Domain.SiteAdmin%2Fbin%2FDebug%2FFoodSearch.BusinessLogic.Domain.SiteAdmin.dll Namespace%3DFoodSearch.BusinessLogic.Domain.SiteAdmin.Models Type%3DUser"
+            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.BusinessLogic.Domain.SiteAdmin%2Fbin%2FRelease%2FFoodSearch.BusinessLogic.Domain.SiteAdmin.dll Namespace%3DFoodSearch.BusinessLogic.Domain.SiteAdmin.Models Type%3DUser"
             tag="ViewCode" />
         </referencesInternal>
         <appliedStereotypesInternal>
@@ -195,7 +195,7 @@
         <referencesInternal>
           <reference
             Id="ce80e9f6-af08-47b9-8b6f-e0e3a30a32fd"
-            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.BusinessLogic.Domain.SiteAdmin%2Fbin%2FDebug%2FFoodSearch.BusinessLogic.Domain.SiteAdmin.dll Namespace%3DFoodSearch.BusinessLogic.Domain.SiteAdmin.Models Type%3DSystemDailyFinancialReport"
+            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.BusinessLogic.Domain.SiteAdmin%2Fbin%2FRelease%2FFoodSearch.BusinessLogic.Domain.SiteAdmin.dll Namespace%3DFoodSearch.BusinessLogic.Domain.SiteAdmin.Models Type%3DSystemDailyFinancialReport"
             tag="ViewCode" />
         </referencesInternal>
         <appliedStereotypesInternal>
@@ -253,7 +253,7 @@
         <referencesInternal>
           <reference
             Id="593eecc2-9fe0-43b8-95df-9d2fe7d9757b"
-            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.BusinessLogic.Domain.SiteAdmin%2Fbin%2FDebug%2FFoodSearch.BusinessLogic.Domain.SiteAdmin.dll Namespace%3DFoodSearch.BusinessLogic.Domain.SiteAdmin.Models Type%3DSystemMonthlyFinancialReport"
+            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.BusinessLogic.Domain.SiteAdmin%2Fbin%2FRelease%2FFoodSearch.BusinessLogic.Domain.SiteAdmin.dll Namespace%3DFoodSearch.BusinessLogic.Domain.SiteAdmin.Models Type%3DSystemMonthlyFinancialReport"
             tag="ViewCode" />
         </referencesInternal>
         <appliedStereotypesInternal>

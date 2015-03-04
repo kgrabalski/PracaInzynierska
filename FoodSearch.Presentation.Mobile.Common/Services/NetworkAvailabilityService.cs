@@ -1,10 +1,8 @@
-﻿using System;
-using Acr.XamForms.Mobile.Net;
-using FoodSearch.Presentation.Mobile.Common.Services;
-using Ninject;
+﻿using Acr.XamForms.Mobile.Net;
 using Acr.XamForms.UserDialogs;
-using System.Net;
 using FoodSearch.Presentation.Mobile.Common.Services.Interfaces;
+using System;
+using System.Net;
 
 namespace FoodSearch.Presentation.Mobile.Common.Services
 {

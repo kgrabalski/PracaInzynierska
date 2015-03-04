@@ -1,8 +1,4 @@
-﻿using System.Runtime.InteropServices;
-using System.Security.Cryptography;
-using System.Text;
-
-using FoodSearch.BusinessLogic.Domain.User.Interface;
+﻿using FoodSearch.BusinessLogic.Domain.User.Interface;
 using FoodSearch.BusinessLogic.Domain.User.Mapping;
 using FoodSearch.BusinessLogic.Domain.User.Models;
 using FoodSearch.BusinessLogic.Helpers;
@@ -12,9 +8,10 @@ using FoodSearch.Data.Mapping.Interface;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-
-using DeliveryAddressDto = FoodSearch.BusinessLogic.Domain.User.Models.DeliveryAddress;
+using System.Security.Cryptography;
+using System.Text;
 using DeliveryAddress = FoodSearch.Data.Mapping.Entities.DeliveryAddress;
+using DeliveryAddressDto = FoodSearch.BusinessLogic.Domain.User.Models.DeliveryAddress;
 
 
 namespace FoodSearch.BusinessLogic.Domain.User

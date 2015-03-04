@@ -87,6 +87,7 @@
     </Content>
     <Content Include="FoodSearch_log.ldf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DependentUpon>FoodSearch.mdf</DependentUpon>
     </Content>
   </ItemGroup>
   <Choose>

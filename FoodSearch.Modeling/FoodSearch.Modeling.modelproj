@@ -66,6 +66,9 @@
     <Content Include="ModelDefinition\Package1_1703.uml">
       <SubType>Content</SubType>
     </Content>
+    <Content Include="ModelDefinition\Package1_1705.uml">
+      <SubType>Content</SubType>
+    </Content>
     <Content Include="ModelDefinition\Package2_1457.uml">
       <SubType>Content</SubType>
     </Content>
@@ -73,6 +76,9 @@
       <SubType>Content</SubType>
     </Content>
     <Content Include="ModelDefinition\Package2_1701.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package2_1705.uml">
       <SubType>Content</SubType>
     </Content>
     <Content Include="ModelDefinition\Package3_1457.uml">
@@ -84,6 +90,9 @@
     <Content Include="ModelDefinition\Package3_1701.uml">
       <SubType>Content</SubType>
     </Content>
+    <Content Include="ModelDefinition\Package3_1705.uml">
+      <SubType>Content</SubType>
+    </Content>
     <Content Include="ModelDefinition\Package4_1457.uml">
       <SubType>Content</SubType>
     </Content>
@@ -93,13 +102,22 @@
     <Content Include="ModelDefinition\Package4_1701.uml">
       <SubType>Content</SubType>
     </Content>
+    <Content Include="ModelDefinition\Package4_1705.uml">
+      <SubType>Content</SubType>
+    </Content>
     <Content Include="ModelDefinition\Package5_1457.uml">
       <SubType>Content</SubType>
     </Content>
     <Content Include="ModelDefinition\Package5_1701.uml">
       <SubType>Content</SubType>
     </Content>
+    <Content Include="ModelDefinition\Package5_1705.uml">
+      <SubType>Content</SubType>
+    </Content>
     <Content Include="ModelDefinition\Package6_1701.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package6_1705.uml">
       <SubType>Content</SubType>
     </Content>
     <Content Include="ModelDefinition\Package7_1701.uml">
@@ -134,6 +152,16 @@
     </Content>
     <Content Include="ModelDefinition\Package_1703.uml">
       <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package_1705.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ServiceLayer.classdiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ServiceLayer.classdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>ServiceLayer.classdiagram</DependentUpon>
     </Content>
     <Content Include="UseCases\RestaurantAdmin.usecasediagram">
       <SubType>Content</SubType>

@@ -1,10 +1,9 @@
-﻿using System.IO;
+﻿using FoodSearch.BusinessLogic.Domain.FoodSearch.Interface;
+using System.IO;
 using System.Net;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Web.Http;
-
-using FoodSearch.BusinessLogic.Domain.FoodSearch.Interface;
 
 namespace FoodSearch.Service.Api.Areas.Core.Controllers
 {

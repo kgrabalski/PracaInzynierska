@@ -1,5 +1,4 @@
-﻿using System;
-using Xamarin.Forms;
+﻿using Xamarin.Forms;
 
 namespace FoodSearch.Presentation.Mobile.Common.Services.Interfaces
 {

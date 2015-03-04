@@ -13,7 +13,6 @@
             o.OrderAmount = ko.observable(a);
             o.OrderItems = ko.observableArray();
             o.ShowDetails = ko.observable(false);
-
             o.ToogleShowItems = function() {
                 var state = o.ShowDetails();
                 state = !state;
@@ -22,7 +21,6 @@
                 }
                 o.ShowDetails(state);
             }
-
             o.RestaurantUrl = ko.computed(function() {
                 return "/Restaurants/Page?restaurantId=" + o.RestaurantId();
             });
@@ -57,7 +55,6 @@
             });
         }
         self.getOrders();
-
         self.getOrderItems = function(order) {
             $.ajax({
                 url: "/User/Home/GetUserOrderItems",

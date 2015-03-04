@@ -1,12 +1,10 @@
-﻿using System.Web.SessionState;
-
-using FoodSearch.BusinessLogic.Domain.FoodSearch.Interface;
-using System;
-using System.Web.Mvc;
-
+﻿using FoodSearch.BusinessLogic.Domain.FoodSearch.Interface;
 using FoodSearch.BusinessLogic.Domain.Restaurant.Models;
 using FoodSearch.BusinessLogic.Domain.User.Models;
 using FoodSearch.Presentation.Web.Site.Models;
+using System;
+using System.Web.Mvc;
+using System.Web.SessionState;
 
 namespace FoodSearch.Presentation.Web.Site.Controllers
 {

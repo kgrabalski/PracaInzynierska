@@ -1,32 +1,24 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Net;
-using System.Text;
-
-using Newtonsoft.Json;
-using System.Net.Http;
-using System.Threading.Tasks;
+﻿using FoodSearch.Service.Client.Interfaces;
 using FoodSearch.Service.Client.Response;
+using Newtonsoft.Json;
 using System.Collections.ObjectModel;
-using FoodSearch.Service.Client.Interfaces;
+using System.Net;
+using System.Net.Http;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace FoodSearch.Service.Client
 {
     public abstract class ServiceClientBase
 	{
         protected readonly string _baseAddress = "http://foodsearch.azurewebsites.net/MobileApi/";
-
 		protected abstract string ServiceAddress { get ; }
-
         protected readonly CookieContainer CookieContainer;
-
         public IFoodSearchServiceClient ClientHandler { get; set; }
-
         protected ServiceClientBase(CookieContainer cookieContainer)
         {
             CookieContainer = cookieContainer;
-        }
-        
+        }        
         protected async Task<HttpBodyResponse<string>> Get(string url)
 		{
             using (var handler = new HttpClientHandler() {CookieContainer = CookieContainer})
@@ -43,7 +35,6 @@ namespace FoodSearch.Service.Client
                 return result;
             }
 		}
-
         protected async Task<HttpBodyResponse<string>> Post(string url, object data)
         {
             using (var handler = new HttpClientHandler() {CookieContainer = CookieContainer})
@@ -61,7 +52,6 @@ namespace FoodSearch.Service.Client
                 return result;
             }
         }
-
         protected async Task<HttpBodyResponse<string>> Put(string url, object data)
         {
             using (var handler = new HttpClientHandler() {CookieContainer = CookieContainer})
@@ -89,7 +79,6 @@ namespace FoodSearch.Service.Client
             }
             return new StringContent(jsonString, Encoding.UTF8, "application/json");
         }
-
         protected async Task<HttpResponse> Delete(string url)
         {
             using (var handler = new HttpClientHandler() {CookieContainer = CookieContainer})
@@ -102,12 +91,10 @@ namespace FoodSearch.Service.Client
                 return result;
             }
         }
-
-		protected T Deserialize<T>(string jsonString)
+        protected T Deserialize<T>(string jsonString)
 		{
 			return JsonConvert.DeserializeObject<T> (jsonString);
 		}
-
         protected ObservableCollection<T> DeserializeList<T>(HttpBodyResponse<string> response)
 		{
 			if (response.StatusCode == HttpStatusCode.OK)

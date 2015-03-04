@@ -4,7 +4,6 @@ using FoodSearch.BusinessLogic.Domain.Core.Models;
 using FoodSearch.Data.Mapping.Entities;
 using FoodSearch.Data.Mapping.Interface;
 using NHibernate.Transform;
-using System;
 using System.Collections.Generic;
 
 using City = FoodSearch.Data.Mapping.Entities.City;
@@ -13,7 +12,6 @@ using District = FoodSearch.Data.Mapping.Entities.District;
 using DistrictDto = FoodSearch.BusinessLogic.Domain.Core.Models.District;
 using Image = FoodSearch.Data.Mapping.Entities.Image;
 using ImageDto = FoodSearch.BusinessLogic.Domain.Core.Models.Image;
-using Street = FoodSearch.Data.Mapping.Entities.Street;
 using StreetDto = FoodSearch.BusinessLogic.Domain.Core.Models.Street;
 
 namespace FoodSearch.BusinessLogic.Domain.Core

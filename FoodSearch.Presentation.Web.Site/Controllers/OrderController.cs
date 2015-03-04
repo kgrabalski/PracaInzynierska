@@ -1,14 +1,12 @@
-﻿using System;
-using System.Linq;
-using System.Web.Mvc;
-
-using FoodSearch.BusinessLogic.Domain.FoodSearch.Interface;
+﻿using FoodSearch.BusinessLogic.Domain.FoodSearch.Interface;
 using FoodSearch.BusinessLogic.Domain.Order.Models;
 using FoodSearch.Data.Mapping.Entities;
 using FoodSearch.Presentation.Web.Site.Models;
 using FoodSearch.Presentation.Web.Site.WebSocket;
-
 using Microsoft.AspNet.SignalR;
+using System;
+using System.Linq;
+using System.Web.Mvc;
 
 namespace FoodSearch.Presentation.Web.Site.Controllers
 {

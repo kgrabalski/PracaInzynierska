@@ -1,0 +1,143 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="6fdb26ea-913c-49cc-a0bf-1aa30a4ea0b4"
+  name="Client"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="c3578053-94e6-458c-b929-5ffb2df0eb68"
+      handle="viewcode://./CodeSchema_Namespace?Namespace%3DFoodSearch.Service.Client"
+      tag="ViewCode" />
+  </referencesInternal>
+  <packagedElements>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="d23b83b8-767e-4d67-b778-52ce3f946904"
+        LastKnownName="Interfaces"
+        LastKnownLocation="Package2_1705.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="ed97b760-ce3a-475a-bb4e-cb27cc48de6c"
+        LastKnownName="Contracts"
+        LastKnownLocation="Package5_1705.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="61280aee-3890-4aa5-8db0-8a6f27a069bc"
+        name="BasketItem"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="875d8855-6dc3-46a3-964a-b6f1d62d69c2"
+            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.Service.Client%2Fbin%2FRelease%2FFoodSearch.Service.Client.dll Namespace%3DFoodSearch.Service.Client Type%3DBasketItem"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="6a80e4fc-4e5d-435b-83bc-598d660065bb"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="df07ba30-c6f6-4fdc-91a8-728340a6e79c">
+                <propertyInstance
+                  Id="3444aebf-3808-4a06-9096-c114e33f1328"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="d8208bac-fa3c-4af9-8ff9-5cc2c9a142c8">
+                <propertyInstance
+                  Id="646a5962-d5c1-4899-8b2e-8e5ec5db63a1"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="f7a2ab47-2dec-43df-b8cf-3d431ba5911f">
+                <propertyInstance
+                  Id="7b28b2c8-ede2-485a-a1fe-9c68daa79f43"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="856040c1-6b7f-4e3c-aa65-34b09ba0b597">
+                <propertyInstance
+                  Id="fbe15add-078e-453d-944c-20ff52a4c2a0"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="7a2c5e84-a31f-449f-829c-f314c07589ad">
+                <propertyInstance
+                  Id="d99cc032-8b6c-41e1-8aff-8737bf11f565"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="eb4a10d6-423f-4025-a538-4f3f105e5067"
+        name="DeliveryAddress"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="349cb147-6d01-4fb0-ad9b-9bffe6c837de"
+            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.Service.Client%2Fbin%2FRelease%2FFoodSearch.Service.Client.dll Namespace%3DFoodSearch.Service.Client Type%3DDeliveryAddress"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="d805779e-2f0e-4e7a-bd58-2d4275561fac"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="991df3fe-510d-4d69-860f-1d7ecccd658b">
+                <propertyInstance
+                  Id="bf8f26a2-9fbb-479f-a798-40442165b2d2"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="f21caf2e-ad38-41a8-b94b-cbe3d5d4baf9">
+                <propertyInstance
+                  Id="15c736ba-cc90-4958-928c-c2c05c91d16b"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="0508135e-6c5d-477d-ae85-1da10b687dc4">
+                <propertyInstance
+                  Id="19ffcfb9-be80-454d-9830-8fcbdabd76a8"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="4779f823-fd3b-43b7-b3df-aa215565ce25">
+                <propertyInstance
+                  Id="e527fa7a-7fbd-4aa3-ab06-c180d8f80be7"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="020fe4c9-2d96-4e63-b7f8-2ee196c09f36">
+                <propertyInstance
+                  Id="b3d73b3c-e3fa-4b7c-bc75-7ad4db395252"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+      </class>
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

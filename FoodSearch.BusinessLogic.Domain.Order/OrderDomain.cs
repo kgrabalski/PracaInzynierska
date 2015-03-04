@@ -1,21 +1,18 @@
 ﻿
-using System;
-using System.Collections.Generic;
-using System.Globalization;
-using System.Linq;
-using System.Xml.Linq;
-
 using FoodSearch.BusinessLogic.Domain.Order.Interface;
 using FoodSearch.BusinessLogic.Domain.Order.Mapping;
 using FoodSearch.BusinessLogic.Domain.Order.Models;
 using FoodSearch.Data.Mapping.Entities;
 using FoodSearch.Data.Mapping.Interface;
-
-using DeliveryTypeDto = FoodSearch.BusinessLogic.Domain.Order.Models.DeliveryType;
+using System;
+using System.Collections.Generic;
+using System.Globalization;
+using System.Linq;
+using System.Xml.Linq;
 using DeliveryType = FoodSearch.Data.Mapping.Entities.DeliveryType;
-
-using PaymentTypeDto = FoodSearch.BusinessLogic.Domain.Order.Models.PaymentType;
+using DeliveryTypeDto = FoodSearch.BusinessLogic.Domain.Order.Models.DeliveryType;
 using PaymentType = FoodSearch.Data.Mapping.Entities.PaymentType;
+using PaymentTypeDto = FoodSearch.BusinessLogic.Domain.Order.Models.PaymentType;
 
 namespace FoodSearch.BusinessLogic.Domain.Order
 {
@@ -30,6 +27,8 @@ namespace FoodSearch.BusinessLogic.Domain.Order
 
         public CreateOrderResult CreateOrder(Guid userId, Guid restaurantId, List<OrderItem> orderItems, DeliveryTypes deliveryType, PaymentTypes paymentType, int? deliveryAddressId)
         {
+            if (orderItems.Count == 0) return null;
+
             using (var transaction = _provider.BeginTransaction)
             {
                 try

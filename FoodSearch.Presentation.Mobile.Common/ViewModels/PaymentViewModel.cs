@@ -1,13 +1,9 @@
-﻿using System;
-using FoodSearch.Presentation.Mobile.Common.ViewModels;
-using FoodSearch.Service.Client.Interfaces;
-using FoodSearch.Presentation.Mobile.Common.Services.Interfaces;
-using Acr.XamForms.UserDialogs;
-using FoodSearch.Presentation.Mobile.Common.Services;
+﻿using FoodSearch.Presentation.Mobile.Common.Services.Interfaces;
 using FoodSearch.Service.Client.Contracts;
-using System.Globalization;
-using System.Diagnostics;
+using FoodSearch.Service.Client.Interfaces;
 using Microsoft.AspNet.SignalR.Client;
+using System;
+using System.Globalization;
 using Xamarin.Forms;
 
 namespace FoodSearch.Presentation.Mobile.Common.ViewModels

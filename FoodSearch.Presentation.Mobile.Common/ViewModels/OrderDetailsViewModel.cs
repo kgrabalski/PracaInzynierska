@@ -1,7 +1,6 @@
-﻿using System;
-using FoodSearch.Service.Client.Interfaces;
-using FoodSearch.Presentation.Mobile.Common.Services.Interfaces;
+﻿using FoodSearch.Presentation.Mobile.Common.Services.Interfaces;
 using FoodSearch.Service.Client.Contracts;
+using FoodSearch.Service.Client.Interfaces;
 using System.Collections.ObjectModel;
 
 namespace FoodSearch.Presentation.Mobile.Common.ViewModels

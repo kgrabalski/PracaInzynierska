@@ -1,0 +1,815 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="0429ff5b-b7f6-4ed4-b887-a2a8447c6cf4" name="ServiceLayer" linkedPackageId="198a2b8e-d7ba-497b-bb7a-69cb773d6d51" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <profileInstances>
+    <packageHasProfileInstances Id="6456c698-f1ed-4717-94f5-420913bb1f5a">
+      <profileInstance Id="00afbedb-6d19-4408-ba0f-29865b12761d" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="984e14e9-b9ab-4e80-b1aa-1b8535f2decd">
+      <profileInstance Id="cdd832f3-5fca-45db-b982-4955324e9e69" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="cc26fd66-97ae-4fe8-b330-055df3ee35a7">
+      <profileInstance Id="b406b441-3761-477c-8e0a-9c7839bbc9fe" name="CSharpProfile">
+        <elementDefinition Id="3201879c-1ae7-4ee8-b00b-8b08e4b8449d" />
+      </profileInstance>
+      <elementDefinition Id="de54e42b-dae9-49d1-a758-f6391f1e16d7" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <logicalClassDesignerModelHasTypes>
+      <Interface Id="4aa9cb7a-59dd-4f46-8a42-35588056730f" name="IFoodSearchOrderServiceClient" isAbstract="false" isLeaf="false">
+        <referencesInternal>
+          <reference Id="7bd2efef-da8e-4b3b-be00-8f3dd02c9ff0" handle="viewcode://./CodeSchema_Interface?Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.Service.Client%2Fbin%2FRelease%2FFoodSearch.Service.Client.dll Namespace%3DFoodSearch.Service.Client.Interfaces Type%3DIFoodSearchOrderServiceClient" tag="ViewCode">
+            <elementDefinition Id="d9b3ea10-77e3-4495-bfb1-b7177881f00c" />
+          </reference>
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance Id="bd23a98f-f5c0-4a6d-9ca0-abdedaca32d6" name="interface" profile="CSharpProfile">
+            <elementDefinition Id="a7dc156a-10d6-45bc-a295-383fd9fbb6cf" />
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances Id="5761ca37-715e-46e7-9fb0-ecb19786caa4">
+                <propertyInstance Id="9e8a9e30-18fb-44b4-ab4f-e003238e828d" name="ClrAttributes">
+                  <elementDefinition Id="28b41e33-7c99-4084-be04-b28c17fc5fd7" />
+                </propertyInstance>
+                <elementDefinition Id="d0decc06-cd85-4319-ba16-a63dbbcfda9a" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances Id="e1343667-f7d0-458e-929c-f0e440e3b16c">
+                <propertyInstance Id="60c04c55-5055-423c-b837-fb57286a2fa2" name="IsPartial" value="false">
+                  <elementDefinition Id="5c0f86c6-a073-4e3a-bf50-5d9822d9f330" />
+                </propertyInstance>
+                <elementDefinition Id="e5c023b5-e558-4114-916c-24d97f382b9f" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances Id="bf166149-6de3-48d7-97cc-29fb13531eb8">
+                <propertyInstance Id="cc5c1f05-f177-4be3-a77e-dcca442c480a" name="IsUnsafe" value="false">
+                  <elementDefinition Id="d6048f44-722a-441d-a5db-c6281780c577" />
+                </propertyInstance>
+                <elementDefinition Id="da11d316-7aeb-48e3-85c5-7a7c275fa6a8" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances Id="9f42dc26-fe39-4ac4-8c56-371a60984592">
+                <propertyInstance Id="725ec7c3-0455-4c20-a699-0d595f0df806" name="PackageVisibility" value="internal">
+                  <elementDefinition Id="287a82ce-adcf-4e81-98b4-4dd057322f7d" />
+                </propertyInstance>
+                <elementDefinition Id="46436fa8-36cc-4e51-93e3-24e0a41cdf20" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <elementDefinition Id="fc384d52-40ed-4738-836c-b4c691b4e0ae" />
+        <ownedOperations>
+          <operation Id="8e41f0b6-3f98-4456-89e1-29738878d6b3" name="AddToBasket" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <referencesInternal>
+              <reference Id="f61f7873-c42b-4111-9bd8-480c8465ad10" handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.Service.Client%2Fbin%2FRelease%2FFoodSearch.Service.Client.dll Namespace%3DFoodSearch.Service.Client.Interfaces Type%3DIFoodSearchOrderServiceClient Member%3D(Name%3DAddToBasket OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETPortable%2Fv4.5%2FProfile%2FProfile78%2FSystem.Runtime.dll&quot; Namespace%3DSystem Type%3DInt32)])" tag="ViewCode">
+                <elementDefinition Id="d5fa4d8f-c532-4064-b018-105c4fcd4ce3" />
+              </reference>
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance Id="a03e866c-d2c7-4ce9-8dc7-f275dd3fa44b" name="method" profile="CSharpProfile">
+                <elementDefinition Id="ea86c8c7-6ed6-434c-8689-0c49f537519a" />
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="f68855d6-b591-4516-837f-db6d69a837d4">
+                    <propertyInstance Id="b42bb1b1-1994-4dd1-a31c-92188fc3f924" name="ClrAttributes">
+                      <elementDefinition Id="54ea8f1f-7738-4c2e-a286-e3ee07568d0d" />
+                    </propertyInstance>
+                    <elementDefinition Id="b051dc65-37bd-4095-9f8a-cb6c7aa1346a" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="d44c3c53-41c1-427c-9536-18aa86012fa2">
+                    <propertyInstance Id="4c820a20-0f50-47ed-8fce-9894db73e6c0" name="IsPartial" value="false">
+                      <elementDefinition Id="ccd2f5ef-a8f1-4997-bfc7-461d0ae8def0" />
+                    </propertyInstance>
+                    <elementDefinition Id="945a7bb7-3572-4ea6-b045-4945b801e18c" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="523244fa-a9d7-4154-a5a7-1e6c77a9e721">
+                    <propertyInstance Id="2b1fea0c-977c-4938-954c-c63ff1fa53df" name="IsUnsafe" value="false">
+                      <elementDefinition Id="35ca0797-2576-4a7d-8cfc-e420ec565627" />
+                    </propertyInstance>
+                    <elementDefinition Id="dd526a22-f81f-4c09-8300-f9757e5d98de" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="278ac7c5-fdac-4a10-bef0-7d5928a7ad17">
+                    <propertyInstance Id="5baa1a0e-d9d6-4a47-bd32-964fadf3d6a4" name="Inheritance" value="none">
+                      <elementDefinition Id="fbe06691-9d18-4fe9-aa07-91ed785427c1" />
+                    </propertyInstance>
+                    <elementDefinition Id="a89e6005-ef93-4312-991f-4c33ba9b5e54" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="7404730e-fca0-4da6-8a5e-c080f0ea8cbc">
+                    <propertyInstance Id="f573e0a1-1cc2-4083-ae3e-e0ab3939fc6d" name="PackageVisibility" value="internal">
+                      <elementDefinition Id="ef81cde5-5ec2-4263-9269-3f6c574baf4d" />
+                    </propertyInstance>
+                    <elementDefinition Id="a24a9295-fd58-4be6-bddb-27fdc6198f17" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="8d1bb8d0-0bae-4784-86d3-52147b419749">
+                    <propertyInstance Id="988efaf3-342f-49bf-80cf-9e1b30173ef5" name="params" value="false">
+                      <elementDefinition Id="2cab3968-e906-4292-a192-85f3b2035f3e" />
+                    </propertyInstance>
+                    <elementDefinition Id="a73d9965-bda2-4264-854a-2af8cf0d6c3b" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <elementDefinition Id="c2fa89cc-f1da-472b-b57c-c30f63e82f99" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="2f7e1c76-e2ca-4ed4-854c-6ba3b653b3a3" direction="Return">
+                  <elementDefinition Id="ba5297be-49fd-49b9-866a-c424afaf5fef" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="19565835-2c0f-40df-93c7-ddafcf8d6db6" LastKnownName="Task&lt;Boolean‎&gt;" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="cfc8cb66-f0d7-4733-9022-c43742aa02c5" name="dishId" direction="In">
+                  <referencesInternal>
+                    <reference Id="72de56ee-072c-4164-a641-f93bec2291b8" handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.Service.Client%2Fbin%2FRelease%2FFoodSearch.Service.Client.dll Namespace%3DFoodSearch.Service.Client.Interfaces Type%3DIFoodSearchOrderServiceClient Member%3D(Name%3DAddToBasket OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETPortable%2Fv4.5%2FProfile%2FProfile78%2FSystem.Runtime.dll&quot; Namespace%3DSystem Type%3DInt32)]) ParameterIdentifier%3DdishId" tag="ViewCode">
+                      <elementDefinition Id="8824d149-c780-432b-9c3e-f6df6138797a" />
+                    </reference>
+                  </referencesInternal>
+                  <elementDefinition Id="137ce356-00ea-4e3d-a96f-837b5a0d66c0" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="0e605aac-c888-41f1-9b23-73ad7a806b1b" LastKnownName="Int32" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="1bee5a60-14fa-45ed-a7cf-e21e95cc8103" name="CreateOrder" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <referencesInternal>
+              <reference Id="5db04615-e747-4772-8ed6-4a646c130c21" handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.Service.Client%2Fbin%2FRelease%2FFoodSearch.Service.Client.dll Namespace%3DFoodSearch.Service.Client.Interfaces Type%3DIFoodSearchOrderServiceClient Member%3D(Name%3DCreateOrder OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.Service.Client%2Fbin%2FRelease%2FFoodSearch.Service.Client.dll Namespace%3DFoodSearch.Service.Client.Contracts Type%3DPaymentTypes)%2C(Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.Service.Client%2Fbin%2FRelease%2FFoodSearch.Service.Client.dll Namespace%3DFoodSearch.Service.Client.Contracts Type%3DDeliveryTypes)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETPortable%2Fv4.5%2FProfile%2FProfile78%2FSystem.Runtime.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETPortable%2Fv4.5%2FProfile%2FProfile78%2FSystem.Runtime.dll&quot; Namespace%3DSystem Type%3DString)])" tag="ViewCode">
+                <elementDefinition Id="498fef15-998b-4ccc-9d92-e273240d16bb" />
+              </reference>
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance Id="c32c3931-fd5d-4eb7-891b-72d8e535e852" name="method" profile="CSharpProfile">
+                <elementDefinition Id="adef3704-7073-4313-aad9-8f7067504156" />
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="f5415c39-1882-4a05-98bc-d98904d6e936">
+                    <propertyInstance Id="483425f4-b792-4ee1-894e-cedd7ef58fb4" name="ClrAttributes">
+                      <elementDefinition Id="ed68287e-08f9-4888-a0dc-f1a68f5fd376" />
+                    </propertyInstance>
+                    <elementDefinition Id="d38f6f65-e45d-430f-ba3d-acb61b256b19" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="da0a5f2b-aa73-49cb-a1ad-6490fba938c6">
+                    <propertyInstance Id="31e4c7d6-c06a-4291-889c-25a7071b0763" name="IsPartial" value="false">
+                      <elementDefinition Id="80dc3b03-4a08-4554-b11a-edf159af8256" />
+                    </propertyInstance>
+                    <elementDefinition Id="80c026d2-88f3-4498-9890-567b08aff6f0" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="c8177041-ddd7-4746-9c33-55721676b949">
+                    <propertyInstance Id="143d0202-c7e6-4e48-877f-efdcc93001d3" name="IsUnsafe" value="false">
+                      <elementDefinition Id="5fd23b73-0527-4fdd-87dd-54855a872bba" />
+                    </propertyInstance>
+                    <elementDefinition Id="80c4e216-b115-4cc6-8ad4-5260223e8adb" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="d95aaeb3-0d1f-450c-9727-e8bacddd4dc8">
+                    <propertyInstance Id="bf0daf2d-3eb7-4847-a6f7-c03beae4b8bc" name="Inheritance" value="none">
+                      <elementDefinition Id="0b43d056-8930-44c3-9d7e-2a004727d32a" />
+                    </propertyInstance>
+                    <elementDefinition Id="76b2af31-9307-47c7-8eb2-66450a3ca28f" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="3a934a76-35a9-449a-ba17-af55f07b8ea6">
+                    <propertyInstance Id="f2907265-e2a7-426f-9be9-4ca0ba26d561" name="PackageVisibility" value="internal">
+                      <elementDefinition Id="ca578a32-1d82-42c2-97ce-21e3b7fae60f" />
+                    </propertyInstance>
+                    <elementDefinition Id="af8f3db4-2f15-4e8d-a7bf-c13bed072e8e" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="bb1073e8-4af6-43dd-a21c-0843e57dcdf1">
+                    <propertyInstance Id="c58dd6a4-f746-4a1a-8c26-c8210d55bda6" name="params" value="false">
+                      <elementDefinition Id="55eb6308-559c-499a-910e-d998ac096ed5" />
+                    </propertyInstance>
+                    <elementDefinition Id="28efdd2d-aa05-4b33-bcc1-8728aa83acf6" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <elementDefinition Id="3395fd13-cffc-4522-a4da-b31007ae0453" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="63946fad-2c27-4cf7-b001-05f3c51856a5" direction="Return">
+                  <elementDefinition Id="24a68952-16d5-424a-bb98-6d3b60a9aeda" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="0d05b80a-fbc3-49ac-b1f5-35ce41591d3a" LastKnownName="Task&lt;CreateOrderResult‎&gt;" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="2eb78a82-98f6-4f17-aaef-dd977229362e" name="paymentType" direction="In">
+                  <referencesInternal>
+                    <reference Id="05bd4411-1977-4029-8493-84e6edf4367f" handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.Service.Client%2Fbin%2FRelease%2FFoodSearch.Service.Client.dll Namespace%3DFoodSearch.Service.Client.Interfaces Type%3DIFoodSearchOrderServiceClient Member%3D(Name%3DCreateOrder OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.Service.Client%2Fbin%2FRelease%2FFoodSearch.Service.Client.dll Namespace%3DFoodSearch.Service.Client.Contracts Type%3DPaymentTypes)%2C(Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.Service.Client%2Fbin%2FRelease%2FFoodSearch.Service.Client.dll Namespace%3DFoodSearch.Service.Client.Contracts Type%3DDeliveryTypes)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETPortable%2Fv4.5%2FProfile%2FProfile78%2FSystem.Runtime.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETPortable%2Fv4.5%2FProfile%2FProfile78%2FSystem.Runtime.dll&quot; Namespace%3DSystem Type%3DString)]) ParameterIdentifier%3DpaymentType" tag="ViewCode">
+                      <elementDefinition Id="11b44ca5-e48a-4468-8a36-57db61f01eb6" />
+                    </reference>
+                  </referencesInternal>
+                  <elementDefinition Id="904ed769-40a8-41f4-b1f2-c7caa10ca8aa" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="2804c634-099a-4cd1-a955-08fb604fa478" LastKnownName="PaymentTypes" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="16f69314-25cd-4b98-98dc-e19584b23abb" name="deliveryType" direction="In">
+                  <referencesInternal>
+                    <reference Id="7d21ce59-f3cf-4c3f-b417-f78be43f60b1" handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.Service.Client%2Fbin%2FRelease%2FFoodSearch.Service.Client.dll Namespace%3DFoodSearch.Service.Client.Interfaces Type%3DIFoodSearchOrderServiceClient Member%3D(Name%3DCreateOrder OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.Service.Client%2Fbin%2FRelease%2FFoodSearch.Service.Client.dll Namespace%3DFoodSearch.Service.Client.Contracts Type%3DPaymentTypes)%2C(Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.Service.Client%2Fbin%2FRelease%2FFoodSearch.Service.Client.dll Namespace%3DFoodSearch.Service.Client.Contracts Type%3DDeliveryTypes)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETPortable%2Fv4.5%2FProfile%2FProfile78%2FSystem.Runtime.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETPortable%2Fv4.5%2FProfile%2FProfile78%2FSystem.Runtime.dll&quot; Namespace%3DSystem Type%3DString)]) ParameterIdentifier%3DdeliveryType" tag="ViewCode">
+                      <elementDefinition Id="71c1c08b-ad30-41a1-9d3e-add818d030ac" />
+                    </reference>
+                  </referencesInternal>
+                  <elementDefinition Id="49907298-2131-496f-8004-09fad2bb7bb8" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="575afc3c-1442-4368-90a8-deac6e3f65c8" LastKnownName="DeliveryTypes" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="134e68c9-8bd4-4f42-ba4e-92769e903fd8" name="addressId" direction="In">
+                  <referencesInternal>
+                    <reference Id="8f36744a-843a-45b5-93fe-4343bbdf9760" handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.Service.Client%2Fbin%2FRelease%2FFoodSearch.Service.Client.dll Namespace%3DFoodSearch.Service.Client.Interfaces Type%3DIFoodSearchOrderServiceClient Member%3D(Name%3DCreateOrder OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.Service.Client%2Fbin%2FRelease%2FFoodSearch.Service.Client.dll Namespace%3DFoodSearch.Service.Client.Contracts Type%3DPaymentTypes)%2C(Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.Service.Client%2Fbin%2FRelease%2FFoodSearch.Service.Client.dll Namespace%3DFoodSearch.Service.Client.Contracts Type%3DDeliveryTypes)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETPortable%2Fv4.5%2FProfile%2FProfile78%2FSystem.Runtime.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETPortable%2Fv4.5%2FProfile%2FProfile78%2FSystem.Runtime.dll&quot; Namespace%3DSystem Type%3DString)]) ParameterIdentifier%3DaddressId" tag="ViewCode">
+                      <elementDefinition Id="20c4b861-1d69-405a-af6d-985174c7d5ae" />
+                    </reference>
+                  </referencesInternal>
+                  <elementDefinition Id="1937e3e3-309d-469f-ab3b-ef213ddf7349" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="0e605aac-c888-41f1-9b23-73ad7a806b1b" LastKnownName="Int32" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="47a16721-d9c6-4d2b-a1cc-40462318cc2b" name="flatNumber" direction="In">
+                  <referencesInternal>
+                    <reference Id="528a9bfa-6e38-4f80-99d0-38f78c8ad39d" handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.Service.Client%2Fbin%2FRelease%2FFoodSearch.Service.Client.dll Namespace%3DFoodSearch.Service.Client.Interfaces Type%3DIFoodSearchOrderServiceClient Member%3D(Name%3DCreateOrder OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.Service.Client%2Fbin%2FRelease%2FFoodSearch.Service.Client.dll Namespace%3DFoodSearch.Service.Client.Contracts Type%3DPaymentTypes)%2C(Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.Service.Client%2Fbin%2FRelease%2FFoodSearch.Service.Client.dll Namespace%3DFoodSearch.Service.Client.Contracts Type%3DDeliveryTypes)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETPortable%2Fv4.5%2FProfile%2FProfile78%2FSystem.Runtime.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETPortable%2Fv4.5%2FProfile%2FProfile78%2FSystem.Runtime.dll&quot; Namespace%3DSystem Type%3DString)]) ParameterIdentifier%3DflatNumber" tag="ViewCode">
+                      <elementDefinition Id="d7be693d-5e28-41b8-a0e3-99a3c3d9e9bc" />
+                    </reference>
+                  </referencesInternal>
+                  <elementDefinition Id="16484a8f-f755-4453-b92f-133c7a5d3e68" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="93549c2e-a30b-4399-9f87-0fdc4e6b89f0" LastKnownName="String" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="5bca149e-fde2-4269-bf97-82b785af9299" name="GetDeliveryPrice" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <referencesInternal>
+              <reference Id="1f685ef3-2631-4f85-800c-7e2d4366dbdc" handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.Service.Client%2Fbin%2FRelease%2FFoodSearch.Service.Client.dll Namespace%3DFoodSearch.Service.Client.Interfaces Type%3DIFoodSearchOrderServiceClient Member%3D(Name%3DGetDeliveryPrice OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETPortable%2Fv4.5%2FProfile%2FProfile78%2FSystem.Runtime.dll&quot; Namespace%3DSystem Type%3DGuid)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETPortable%2Fv4.5%2FProfile%2FProfile78%2FSystem.Runtime.dll&quot; Namespace%3DSystem Type%3DDecimal)])" tag="ViewCode">
+                <elementDefinition Id="6e122e47-64d2-4e87-938e-afe7ff0bb402" />
+              </reference>
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance Id="660de184-d541-48d2-b2f5-d399956b288c" name="method" profile="CSharpProfile">
+                <elementDefinition Id="1e056002-2edd-48a1-9c77-7d80b50d1554" />
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="380d1de0-7617-4fdd-ae5d-806fe02e21ee">
+                    <propertyInstance Id="e481c760-7b70-463a-b13e-49a5b08b6aab" name="ClrAttributes">
+                      <elementDefinition Id="8d0f7776-04ad-4b6b-9128-c6c12459744f" />
+                    </propertyInstance>
+                    <elementDefinition Id="b88b4ec7-e30b-4dee-bf6a-cc1c5d2d765f" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="c68cacde-b6b7-4eb4-a048-31bb553ef217">
+                    <propertyInstance Id="bd8926d1-411e-43d9-81c8-5eecfa660b57" name="IsPartial" value="false">
+                      <elementDefinition Id="41a83544-f89a-48ef-8e16-5e30e9c11be8" />
+                    </propertyInstance>
+                    <elementDefinition Id="578e7413-66d4-4586-ad2b-2ffa664dcef3" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="530b0097-41aa-43ec-9a9c-b712d28cc2c0">
+                    <propertyInstance Id="2c899759-2af5-4ac7-a761-c7c3dcb185eb" name="IsUnsafe" value="false">
+                      <elementDefinition Id="f063b81e-6170-4783-8f9f-f8e13b5e067c" />
+                    </propertyInstance>
+                    <elementDefinition Id="aaf271cf-4980-4e0f-99ae-298bce53e95a" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="337ed973-a018-408b-acae-5b1d0399c9da">
+                    <propertyInstance Id="6d6c3577-762e-4181-9007-9bdff1d536e0" name="Inheritance" value="none">
+                      <elementDefinition Id="c0fe00fd-f207-45c9-a7fc-66920a0c5e75" />
+                    </propertyInstance>
+                    <elementDefinition Id="785ae63a-0311-4da5-ac5b-ab1ee9967839" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="030d2b1c-7da5-4e79-b3c2-eddf85402611">
+                    <propertyInstance Id="4546ee9f-e6b7-4c70-b2df-775d8b4c81a3" name="PackageVisibility" value="internal">
+                      <elementDefinition Id="3e1980a7-9e23-430f-a763-366aa110f53d" />
+                    </propertyInstance>
+                    <elementDefinition Id="e1cf6008-54be-41cc-8860-09c6785fe59d" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="d231aa12-9990-4e37-b27c-c672cc589541">
+                    <propertyInstance Id="d259988b-e383-4d88-82f0-f173b32281fa" name="params" value="false">
+                      <elementDefinition Id="c478355a-2cd3-4652-a7ab-81100ca26042" />
+                    </propertyInstance>
+                    <elementDefinition Id="a7de5497-b106-4e2f-a9a3-f1849116175e" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <elementDefinition Id="76e5765d-7836-44ce-a85c-f0e0f3365da2" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="4fbd3bbf-f877-4392-a5b9-68ad89d5fb98" direction="Return">
+                  <elementDefinition Id="10bfa8ed-bbf6-4c92-97bc-4d52c9ea4999" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="4d6c1917-3680-4243-91b6-91dff9ecc09e" LastKnownName="Task&lt;Decimal‎&gt;" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="72324a05-4b9f-4412-baee-eb418fb8fa15" name="restaurantId" direction="In">
+                  <referencesInternal>
+                    <reference Id="b50d22ed-fbcc-4e19-94dd-97f5789b76fc" handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.Service.Client%2Fbin%2FRelease%2FFoodSearch.Service.Client.dll Namespace%3DFoodSearch.Service.Client.Interfaces Type%3DIFoodSearchOrderServiceClient Member%3D(Name%3DGetDeliveryPrice OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETPortable%2Fv4.5%2FProfile%2FProfile78%2FSystem.Runtime.dll&quot; Namespace%3DSystem Type%3DGuid)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETPortable%2Fv4.5%2FProfile%2FProfile78%2FSystem.Runtime.dll&quot; Namespace%3DSystem Type%3DDecimal)]) ParameterIdentifier%3DrestaurantId" tag="ViewCode">
+                      <elementDefinition Id="592cbf28-38e1-4bd9-a88c-bd87d4e96369" />
+                    </reference>
+                  </referencesInternal>
+                  <elementDefinition Id="c4aa0ab3-5c06-407e-b801-767d4e618d8c" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="d89c8897-7425-4773-bf1f-321000f35d02" LastKnownName="Guid" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="2fcea3ae-ba0f-4763-bf15-fe168376ac67" name="totalPrice" direction="In">
+                  <referencesInternal>
+                    <reference Id="d322c502-5608-4a3a-b679-58025a80a35a" handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.Service.Client%2Fbin%2FRelease%2FFoodSearch.Service.Client.dll Namespace%3DFoodSearch.Service.Client.Interfaces Type%3DIFoodSearchOrderServiceClient Member%3D(Name%3DGetDeliveryPrice OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETPortable%2Fv4.5%2FProfile%2FProfile78%2FSystem.Runtime.dll&quot; Namespace%3DSystem Type%3DGuid)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETPortable%2Fv4.5%2FProfile%2FProfile78%2FSystem.Runtime.dll&quot; Namespace%3DSystem Type%3DDecimal)]) ParameterIdentifier%3DtotalPrice" tag="ViewCode">
+                      <elementDefinition Id="22f108e1-eea1-48eb-96be-571d8c390de9" />
+                    </reference>
+                  </referencesInternal>
+                  <elementDefinition Id="3704e6c2-e305-4c6f-b33d-f9142af63e02" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="80966467-482e-4975-99ee-f050fe089b3f" LastKnownName="Decimal" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="0610d97c-a30c-4ff8-9c93-4708d5d1e329" name="GetDeliveryStatus" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <referencesInternal>
+              <reference Id="9d948b66-59e0-4d65-88ae-c5be2517cf61" handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.Service.Client%2Fbin%2FRelease%2FFoodSearch.Service.Client.dll Namespace%3DFoodSearch.Service.Client.Interfaces Type%3DIFoodSearchOrderServiceClient Member%3D(Name%3DGetDeliveryStatus OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETPortable%2Fv4.5%2FProfile%2FProfile78%2FSystem.Runtime.dll&quot; Namespace%3DSystem Type%3DGuid)])" tag="ViewCode">
+                <elementDefinition Id="be70cedf-5939-458a-bc2b-8af50090b455" />
+              </reference>
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance Id="6a7788c2-9629-49a6-b920-25ae39bb13d4" name="method" profile="CSharpProfile">
+                <elementDefinition Id="2a59c19b-aad6-4908-8be1-ee40e6ca0e8a" />
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="221988ca-62b5-411e-b3dd-ce3507dfefb7">
+                    <propertyInstance Id="3226c534-8c0b-4cc2-b03f-69336946c198" name="ClrAttributes">
+                      <elementDefinition Id="3c03826e-ecfe-4e84-a45c-e0bea183ef16" />
+                    </propertyInstance>
+                    <elementDefinition Id="6d8beeaf-84b3-43df-ac4d-f61d18518d27" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="196e9473-36c8-466a-9c67-27fd4c6e3cc4">
+                    <propertyInstance Id="e93c19da-fd4b-4bb0-afbc-12c0e6b0aa98" name="IsPartial" value="false">
+                      <elementDefinition Id="9fcb51b0-278c-4b27-be9e-2e85ed979240" />
+                    </propertyInstance>
+                    <elementDefinition Id="3c135b09-440a-4d17-92c3-5528d8fd7c9c" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="25dea138-8136-42bb-825a-23f8187d83dd">
+                    <propertyInstance Id="1b0850b8-e136-46ef-acec-d81b5753c2ed" name="IsUnsafe" value="false">
+                      <elementDefinition Id="3196f6b7-44c6-4c5f-9ed5-5c2e02d26115" />
+                    </propertyInstance>
+                    <elementDefinition Id="bca21aa9-541b-414c-9e23-5a9a336bc9d5" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="0796b802-ff28-47e3-81bf-ce1be2829185">
+                    <propertyInstance Id="00eb8bbc-350e-49e3-a0ba-feaa2f734c7d" name="Inheritance" value="none">
+                      <elementDefinition Id="107df5ef-f23c-4499-9272-fcae6d9a51e6" />
+                    </propertyInstance>
+                    <elementDefinition Id="01c73079-bc75-4aaa-9e12-09219bde15c8" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="53ddcd23-b64a-4f07-90fd-a327b155726d">
+                    <propertyInstance Id="77c8753d-ff84-4b70-8f69-0c9e797326ef" name="PackageVisibility" value="internal">
+                      <elementDefinition Id="1da993e2-1ba6-4115-8741-0aa322c7e35d" />
+                    </propertyInstance>
+                    <elementDefinition Id="5cdd8bdb-79ba-4f8b-b6a7-a5a33e6ad28b" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="ffc9503f-e396-4cdd-9d15-f0f8bf9c1250">
+                    <propertyInstance Id="cb93a102-f193-4a04-b59f-4bc06325726d" name="params" value="false">
+                      <elementDefinition Id="2f3eb7e0-b977-4824-9817-4915f4157888" />
+                    </propertyInstance>
+                    <elementDefinition Id="50916ff5-d2e1-4fee-9fcb-82e80b35bc03" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <elementDefinition Id="d27d19c1-3f6e-4b75-8f18-beffc699d1b6" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="a3df1722-fe9c-4945-b37c-5fdd6daaf6e5" direction="Return">
+                  <elementDefinition Id="cb7533a7-7b0d-4199-b455-8a4bf9ba16d2" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="92a6dc2c-9023-4d40-a5f2-fceb0208eeeb" LastKnownName="Task&lt;DeliveryStatus‎&gt;" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="9c5bd561-8b69-4ec2-8a50-3dbd69375360" name="orderId" direction="In">
+                  <referencesInternal>
+                    <reference Id="bb386018-7cba-4da0-9c9d-a9ac9b40cc4b" handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.Service.Client%2Fbin%2FRelease%2FFoodSearch.Service.Client.dll Namespace%3DFoodSearch.Service.Client.Interfaces Type%3DIFoodSearchOrderServiceClient Member%3D(Name%3DGetDeliveryStatus OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETPortable%2Fv4.5%2FProfile%2FProfile78%2FSystem.Runtime.dll&quot; Namespace%3DSystem Type%3DGuid)]) ParameterIdentifier%3DorderId" tag="ViewCode">
+                      <elementDefinition Id="e831ed8e-4727-436c-82df-c337a4c6aa21" />
+                    </reference>
+                  </referencesInternal>
+                  <elementDefinition Id="62fcc4d3-7d38-4361-bf20-69ead99e8a70" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="d89c8897-7425-4773-bf1f-321000f35d02" LastKnownName="Guid" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="05f933f4-730b-4295-9f86-a552058146a2" name="RemoveFromBasket" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <referencesInternal>
+              <reference Id="a09270c2-618f-4fe1-9ea9-baca6d66d9ed" handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.Service.Client%2Fbin%2FRelease%2FFoodSearch.Service.Client.dll Namespace%3DFoodSearch.Service.Client.Interfaces Type%3DIFoodSearchOrderServiceClient Member%3D(Name%3DRemoveFromBasket OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETPortable%2Fv4.5%2FProfile%2FProfile78%2FSystem.Runtime.dll&quot; Namespace%3DSystem Type%3DInt32)])" tag="ViewCode">
+                <elementDefinition Id="27ddfd40-ef50-47c1-8567-361978be89e6" />
+              </reference>
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance Id="620fb567-ae31-42eb-ba9f-62b211861419" name="method" profile="CSharpProfile">
+                <elementDefinition Id="67eb3c80-67ae-48eb-9c99-c863b5ae8df8" />
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="d5844332-8fd5-45c2-8f6b-c06550d01fa1">
+                    <propertyInstance Id="6ea3e219-a429-4481-815d-ce1489fbe4b6" name="ClrAttributes">
+                      <elementDefinition Id="7c9af748-8299-4091-9952-753fa5ad653c" />
+                    </propertyInstance>
+                    <elementDefinition Id="01381118-94a1-4268-b74e-256d88c03581" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="d672d62d-8155-49bd-b784-f0055996355e">
+                    <propertyInstance Id="62f872c3-8ea9-41ae-bb46-f21520bb3f6a" name="IsPartial" value="false">
+                      <elementDefinition Id="c6f446f6-4bee-409b-ac4f-17b10be73cfd" />
+                    </propertyInstance>
+                    <elementDefinition Id="d552a13b-d949-4990-a015-58c00f3be1fa" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="9b9c8332-1fe5-4c48-9cf3-59f1e98eba23">
+                    <propertyInstance Id="eb5c6e59-13f5-42df-8750-72bb93467abf" name="IsUnsafe" value="false">
+                      <elementDefinition Id="b80eda1a-6e3d-47da-85e6-f6bc287ae3ac" />
+                    </propertyInstance>
+                    <elementDefinition Id="a6fe7684-0944-427c-9707-5306fef1d5a2" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="d2a43825-a6cb-4f89-950c-84d14a1e5cd3">
+                    <propertyInstance Id="e8918937-ef4a-4ed3-8d7d-ebbf7d5c0ed2" name="Inheritance" value="none">
+                      <elementDefinition Id="8335fc16-3b4f-4521-9119-e17c85b76b51" />
+                    </propertyInstance>
+                    <elementDefinition Id="b78d6869-d8d2-4bbc-ab97-925ffffe7266" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="3981022e-a479-45fa-b7af-2a8adc4a114a">
+                    <propertyInstance Id="30ecba43-1ce1-4847-94e6-99394dc1ab68" name="PackageVisibility" value="internal">
+                      <elementDefinition Id="ef576134-0a94-45d7-a004-b7591c944c6b" />
+                    </propertyInstance>
+                    <elementDefinition Id="3219ac81-5871-44fb-8bd0-0e06a6aaa976" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="bc39ad9b-a887-4b42-8908-b877ea24b6ea">
+                    <propertyInstance Id="d4aefcf1-d21e-48bf-8a65-35794ef4e4ec" name="params" value="false">
+                      <elementDefinition Id="c1d24853-1eca-49d4-93e5-5ff8b59e5aea" />
+                    </propertyInstance>
+                    <elementDefinition Id="e6de695c-0f62-4ce8-af5e-876c19740eae" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <elementDefinition Id="cdb4439f-d3cd-4f55-ba2b-3b4905eb55b6" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="ceeb850e-e906-4cca-9f8a-0425161b828b" direction="Return">
+                  <elementDefinition Id="20279c41-38a3-40de-8e5f-2874eef2b286" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="19565835-2c0f-40df-93c7-ddafcf8d6db6" LastKnownName="Task&lt;Boolean‎&gt;" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="5662c981-ca43-4a74-bf4b-f27a0a0077d4" name="dishId" direction="In">
+                  <referencesInternal>
+                    <reference Id="58703be9-24a6-40ff-9aef-22008f137998" handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.Service.Client%2Fbin%2FRelease%2FFoodSearch.Service.Client.dll Namespace%3DFoodSearch.Service.Client.Interfaces Type%3DIFoodSearchOrderServiceClient Member%3D(Name%3DRemoveFromBasket OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETPortable%2Fv4.5%2FProfile%2FProfile78%2FSystem.Runtime.dll&quot; Namespace%3DSystem Type%3DInt32)]) ParameterIdentifier%3DdishId" tag="ViewCode">
+                      <elementDefinition Id="bb9583c4-2b6a-4559-8e8c-1900c99c14bf" />
+                    </reference>
+                  </referencesInternal>
+                  <elementDefinition Id="4cf00609-6313-485c-b1ea-279e8ada820d" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="0e605aac-c888-41f1-9b23-73ad7a806b1b" LastKnownName="Int32" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="6fb08cf7-2018-456c-ade3-6675e80a628f" name="SetCurrentRestaurant" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <referencesInternal>
+              <reference Id="914d5592-c935-4d70-a572-a73c1b0b65d3" handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.Service.Client%2Fbin%2FRelease%2FFoodSearch.Service.Client.dll Namespace%3DFoodSearch.Service.Client.Interfaces Type%3DIFoodSearchOrderServiceClient Member%3D(Name%3DSetCurrentRestaurant OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETPortable%2Fv4.5%2FProfile%2FProfile78%2FSystem.Runtime.dll&quot; Namespace%3DSystem Type%3DGuid)])" tag="ViewCode">
+                <elementDefinition Id="3b023b46-ee6d-4f11-b1df-7db89e032cd6" />
+              </reference>
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance Id="6ab7bd7b-33e4-475d-a855-df08142b2ce7" name="method" profile="CSharpProfile">
+                <elementDefinition Id="de630eec-3184-48d5-bbcb-bb582bcb65f2" />
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="ccf51b08-9582-49a5-9e43-2011292a1ad5">
+                    <propertyInstance Id="1554324e-0c05-422b-ae81-bc58f6b23e79" name="ClrAttributes">
+                      <elementDefinition Id="aad62dc7-5176-493b-ab1c-aac827b0c6ee" />
+                    </propertyInstance>
+                    <elementDefinition Id="4d35022a-9620-496c-bd31-2319ea187575" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="a5f428be-9834-4d11-a7e0-b5dcefecf2ec">
+                    <propertyInstance Id="b848f58f-3597-481c-b69b-0155fa32e459" name="IsPartial" value="false">
+                      <elementDefinition Id="9c82d0d8-980f-4fd5-a156-e8754e933a27" />
+                    </propertyInstance>
+                    <elementDefinition Id="17a1fcc0-b5e0-4fe4-bb86-12afaa98b830" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="4d81caff-4416-4819-a0f7-b2f4a559a62a">
+                    <propertyInstance Id="9fbdcda9-497b-4ea5-8ec7-6a144eb28597" name="IsUnsafe" value="false">
+                      <elementDefinition Id="d2b1d037-7eab-4718-bdcd-582d217cd126" />
+                    </propertyInstance>
+                    <elementDefinition Id="56f28154-8fc2-4dfc-8b8c-dfa900f401a7" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="f548bfba-6892-4323-b645-6a9b15a6a9cb">
+                    <propertyInstance Id="213cd90e-505d-4fdb-abd1-07aa88d43372" name="Inheritance" value="none">
+                      <elementDefinition Id="6bf24364-33a9-44a9-a47b-4f8efa6aad7a" />
+                    </propertyInstance>
+                    <elementDefinition Id="be77dab0-36cd-475d-a389-27aa0f7d4af3" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="837867e9-3b84-46d3-b991-493ae038a889">
+                    <propertyInstance Id="2d9694e8-67c7-4ce3-9247-d5563c7a7c4a" name="PackageVisibility" value="internal">
+                      <elementDefinition Id="ace4cb58-5a68-459a-ad56-c6f72bb65676" />
+                    </propertyInstance>
+                    <elementDefinition Id="f6c86ff8-ba38-43e5-b90c-87803dfc1051" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="834ef524-554e-49bf-a310-9021af7ec822">
+                    <propertyInstance Id="07d0a2aa-8489-4e37-8436-30e654670c25" name="params" value="false">
+                      <elementDefinition Id="04796528-81a7-4fd7-9bc5-68380cc3fe99" />
+                    </propertyInstance>
+                    <elementDefinition Id="adb40cb4-bdd3-4ee4-bd94-bb04f99a4e17" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <elementDefinition Id="f976b465-4555-4598-97e3-b9dc01495a2b" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="9acbefa7-0a07-4e81-a6a5-a88621a450e1" direction="Return">
+                  <elementDefinition Id="a07e70d3-ec0c-4850-8482-dc5b146813f0" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="beef15ef-19f8-462b-94f6-f0bdacaa2439" LastKnownName="Task" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="4f006b02-6fd0-4cda-a4cc-84b7abd53f93" name="restaurantId" direction="In">
+                  <referencesInternal>
+                    <reference Id="905c1cc3-4998-42b9-9308-78cc0a130027" handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.Service.Client%2Fbin%2FRelease%2FFoodSearch.Service.Client.dll Namespace%3DFoodSearch.Service.Client.Interfaces Type%3DIFoodSearchOrderServiceClient Member%3D(Name%3DSetCurrentRestaurant OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETPortable%2Fv4.5%2FProfile%2FProfile78%2FSystem.Runtime.dll&quot; Namespace%3DSystem Type%3DGuid)]) ParameterIdentifier%3DrestaurantId" tag="ViewCode">
+                      <elementDefinition Id="1dba32d1-c9ce-4c76-9142-66a33c1ca20d" />
+                    </reference>
+                  </referencesInternal>
+                  <elementDefinition Id="51a2a89a-1c08-49b8-beb6-8c80b155fdda" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="d89c8897-7425-4773-bf1f-321000f35d02" LastKnownName="Guid" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="010a2197-e1c2-4674-8b80-2007bcd9ed65" name="ClearBasket" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <referencesInternal>
+              <reference Id="936c4b0f-5835-4c19-a7e2-b6ac10a03b99" handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.Service.Client%2Fbin%2FRelease%2FFoodSearch.Service.Client.dll Namespace%3DFoodSearch.Service.Client.Interfaces Type%3DIFoodSearchOrderServiceClient Member%3DClearBasket" tag="ViewCode">
+                <elementDefinition Id="90379552-f647-4833-8480-2f912cf4bab7" />
+              </reference>
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance Id="ee2f1e3c-effb-4c8f-9d30-b1dcb56f89ec" name="method" profile="CSharpProfile">
+                <elementDefinition Id="5d362bd8-a125-45d7-9914-12c8ba35dc8d" />
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="279aca08-49dc-4063-8955-5ada32c7a2b8">
+                    <propertyInstance Id="e1049149-e3ec-4ad7-9f1e-47bad9fd718b" name="ClrAttributes">
+                      <elementDefinition Id="98d23c64-196c-4612-a8b5-ea49ba81de14" />
+                    </propertyInstance>
+                    <elementDefinition Id="77ac7f18-7b54-481b-b3f2-315f1bb083af" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="1262327c-5b32-43a6-aec2-f4b1d7b2b24f">
+                    <propertyInstance Id="c27b11ee-897e-49e0-ac42-d0df4cf24e44" name="IsPartial" value="false">
+                      <elementDefinition Id="dda5855b-4b95-46e6-b327-97c7ba332cb1" />
+                    </propertyInstance>
+                    <elementDefinition Id="89dd25ea-2fab-45fc-9a6d-4c70535aa21e" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="eb538c9f-6b4a-41fd-b736-51b81bfc77c8">
+                    <propertyInstance Id="41b67399-7ecd-4338-8e12-906892f0b3af" name="IsUnsafe" value="false">
+                      <elementDefinition Id="145f6648-b95c-4bff-9318-e4511a7c0db0" />
+                    </propertyInstance>
+                    <elementDefinition Id="35b30700-b7eb-46b5-a9b2-ec0828df8ed6" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="709f2e27-30ba-4cbd-8c3a-277012ef7df9">
+                    <propertyInstance Id="f8ef2810-4569-4b89-a527-6dca6d52cbbf" name="Inheritance" value="none">
+                      <elementDefinition Id="a27f2f23-6a34-42ad-8b7f-1dd03d26e723" />
+                    </propertyInstance>
+                    <elementDefinition Id="6f4e50d8-4641-4c23-957d-6706ef54e4c9" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="94b811be-f895-4a4c-8f80-661d8412f9d8">
+                    <propertyInstance Id="b0a8ab38-88a0-4f1d-a2b8-7ab7117dd16f" name="PackageVisibility" value="internal">
+                      <elementDefinition Id="4a14a287-cbae-42cf-b7a2-effce72b1a7c" />
+                    </propertyInstance>
+                    <elementDefinition Id="bd3925f4-d085-4acf-8a21-9badfd967d05" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="056531d9-4959-42c8-91d9-4f82b7b9e456">
+                    <propertyInstance Id="a3a27d25-04b2-4c3e-9362-d58d868a5bcc" name="params" value="false">
+                      <elementDefinition Id="6d6ae06e-d6c8-4935-993d-8162f89376f8" />
+                    </propertyInstance>
+                    <elementDefinition Id="e5333bb3-fa77-4a8e-8353-1573436701d0" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <elementDefinition Id="5e4e4740-8f53-41c6-b076-805a8b315ec7" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="f8a82aa1-a926-4e3d-9d7d-57a441604199" direction="Return">
+                  <elementDefinition Id="331a3f69-936d-4291-8aed-f1f55ca1b5ab" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="19565835-2c0f-40df-93c7-ddafcf8d6db6" LastKnownName="Task&lt;Boolean‎&gt;" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="a4a03bb4-9062-4a17-805b-ab39e4c6393a" name="GetBasket" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <referencesInternal>
+              <reference Id="90113547-81a1-4087-93b5-34f5d9b6b41f" handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.Service.Client%2Fbin%2FRelease%2FFoodSearch.Service.Client.dll Namespace%3DFoodSearch.Service.Client.Interfaces Type%3DIFoodSearchOrderServiceClient Member%3DGetBasket" tag="ViewCode">
+                <elementDefinition Id="3680ea61-dcba-4a38-a60c-adec90d45636" />
+              </reference>
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance Id="c02e4b07-a090-4236-a525-51c559e726a6" name="method" profile="CSharpProfile">
+                <elementDefinition Id="6ce2cbb8-972a-467c-92f5-a7f22cde2e04" />
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="a5a71869-8bd9-49ea-8458-aa1345655a41">
+                    <propertyInstance Id="8b02a5f3-45e9-4ada-8c69-29a1fad4aee5" name="ClrAttributes">
+                      <elementDefinition Id="86b9cfb0-8f81-4af9-8988-158b710d6de9" />
+                    </propertyInstance>
+                    <elementDefinition Id="27359b6f-4d63-4b6d-8173-513c1fd2f501" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="5de14bd3-916a-4935-8712-9bb2ab2996f1">
+                    <propertyInstance Id="64f2e1f7-980b-40b5-ac15-d17a9c6bbff4" name="IsPartial" value="false">
+                      <elementDefinition Id="0688b7bc-0992-4566-ac63-81da99792d3b" />
+                    </propertyInstance>
+                    <elementDefinition Id="71e66447-7479-4556-9aec-611a46b3529b" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="4ef22542-f02a-4652-a103-e7a86e84e800">
+                    <propertyInstance Id="b4081a69-4b3d-44b0-b4bd-7d405246cf32" name="IsUnsafe" value="false">
+                      <elementDefinition Id="db0d555e-241b-432a-b3b9-8abfdcb2db12" />
+                    </propertyInstance>
+                    <elementDefinition Id="6d217c40-bfcf-48c7-b906-7a0e9cbe22e2" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="f6ea8bb7-53fe-47b6-9af4-d7e7e4fa91f1">
+                    <propertyInstance Id="c0d24387-8d09-4d53-a268-053326f7d9a6" name="Inheritance" value="none">
+                      <elementDefinition Id="317b162a-768b-41d5-b021-d95a6896bc85" />
+                    </propertyInstance>
+                    <elementDefinition Id="f9c0d3c2-fdb5-410f-8910-99e523c94c6f" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="1ddbd9c2-6077-44ee-9182-1d5889520098">
+                    <propertyInstance Id="ee2dfebd-2b7b-4e82-8408-a77739e3ded4" name="PackageVisibility" value="internal">
+                      <elementDefinition Id="f6fc55f0-27c6-4947-86c1-61a4231a2597" />
+                    </propertyInstance>
+                    <elementDefinition Id="ac393c40-2b17-42fc-95ac-0343e16ef111" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="66ba2c9a-dc8c-4840-ada5-1e50de6df89a">
+                    <propertyInstance Id="e232915a-f3d7-4978-b972-d2b5f53b6f67" name="params" value="false">
+                      <elementDefinition Id="043246fd-9825-48d1-9d16-dc737a38eab5" />
+                    </propertyInstance>
+                    <elementDefinition Id="87b4fc04-ef7a-4b63-9623-57f30dab28f9" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <elementDefinition Id="0af42d2b-1a8c-46b9-b17c-26562e1ae646" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="ce1e2553-5cf4-4460-855d-7deb24e1be7d" direction="Return">
+                  <elementDefinition Id="4a45de78-d6c7-4505-8d23-7faf0ee2c7c1" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="5637c5ee-4370-4c5f-9995-c5c12479f073" LastKnownName="Task&lt;ObservableCollection‎&lt;BasketItem‎&gt;‎&gt;" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="3d33c9b2-6442-4fc1-8f8b-7ef00dd0d12b" name="GetDeliveryAddress" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <referencesInternal>
+              <reference Id="4fbced04-6d31-4af9-997f-bea1ed823a4a" handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.Service.Client%2Fbin%2FRelease%2FFoodSearch.Service.Client.dll Namespace%3DFoodSearch.Service.Client.Interfaces Type%3DIFoodSearchOrderServiceClient Member%3DGetDeliveryAddress" tag="ViewCode">
+                <elementDefinition Id="534cde2f-e6eb-4478-aab7-f737d0423ca8" />
+              </reference>
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance Id="d90af8de-3424-443e-bfd4-bd3a4352e0da" name="method" profile="CSharpProfile">
+                <elementDefinition Id="5f72b747-169b-4e8a-b89d-9bdeadc007ff" />
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="500158f6-9405-4f7a-867a-b7899a94202a">
+                    <propertyInstance Id="02eecaaf-bac0-4165-908f-570c264c8c99" name="ClrAttributes">
+                      <elementDefinition Id="55af8795-e524-4959-bcbb-09ed619879ef" />
+                    </propertyInstance>
+                    <elementDefinition Id="f18926e8-7039-42ea-97ea-b839e910790d" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="5e94893c-c10a-480b-8abc-93e330776040">
+                    <propertyInstance Id="e6a0c1f1-0f40-444a-93b0-2b4274e8172a" name="IsPartial" value="false">
+                      <elementDefinition Id="10b7343b-0ed6-42c8-af4f-eaf06d8ed36a" />
+                    </propertyInstance>
+                    <elementDefinition Id="409064e1-e01e-46ce-8ab7-3764079b3384" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="709cfcf5-3577-4c25-ad3d-c61d561192a9">
+                    <propertyInstance Id="eb66152c-20c2-4656-9bb8-6fbf5c62ccdb" name="IsUnsafe" value="false">
+                      <elementDefinition Id="f039df8f-36ab-46ce-b27e-394fb5c07846" />
+                    </propertyInstance>
+                    <elementDefinition Id="07b52299-1717-4d41-b552-0d25d9344d12" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="31125ebd-c9cf-4076-83dd-b22cae798c35">
+                    <propertyInstance Id="63bc1ea5-89fd-4011-bcd6-11ce0a0710cb" name="Inheritance" value="none">
+                      <elementDefinition Id="0dccb18a-e97a-49a6-87a8-eb8a43bc5a8a" />
+                    </propertyInstance>
+                    <elementDefinition Id="27394222-74b6-4a97-ae4d-2cae26460c02" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="a1f2b461-3f3a-4022-949d-07a3c1e05461">
+                    <propertyInstance Id="4e5aaeb1-e4da-457b-8d41-bd8575f53237" name="PackageVisibility" value="internal">
+                      <elementDefinition Id="5c1a60cc-fd28-4543-8be4-912bf1e2c1c6" />
+                    </propertyInstance>
+                    <elementDefinition Id="946a98da-96c2-4eb5-bf15-26eb786734f0" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="712d84ed-bf43-4ba7-8a6e-159515e3f545">
+                    <propertyInstance Id="28b2badb-f71b-464e-8c07-3d663b8e8e4f" name="params" value="false">
+                      <elementDefinition Id="1f4adec0-b5a1-4246-93e5-5b95f79b9469" />
+                    </propertyInstance>
+                    <elementDefinition Id="363afb78-14b1-406d-b534-3d7468fceb34" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <elementDefinition Id="30d0ce22-664b-48e4-9ea8-a3930cfab289" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="9df1d830-45d9-4cdb-afbe-0330204efc6c" direction="Return">
+                  <elementDefinition Id="8d6c7f5a-e080-407e-9e16-2c17d09033a3" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="c06a3563-437a-4b85-b602-3fd5150ec513" LastKnownName="Task&lt;DeliveryAddress‎&gt;" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperations>
+      </Interface>
+    </logicalClassDesignerModelHasTypes>
+    <packageHasNamedElement>
+      <referencedType Id="19565835-2c0f-40df-93c7-ddafcf8d6db6" name="Task&lt;Boolean‎&gt;" isAbstract="false" isLeaf="false" cachedFullName="FoodSearch.Modeling::System::Threading::Tasks::Task&lt;Boolean‎&gt;">
+        <elementDefinition Id="4b642d68-59d0-4236-9e54-6ae60d2cbf6c" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="0e605aac-c888-41f1-9b23-73ad7a806b1b" name="Int32" isAbstract="false" isLeaf="false" cachedFullName="FoodSearch.Modeling::System::Int32">
+        <elementDefinition Id="694b0bae-f38f-4485-b562-3391434a7885" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="0d05b80a-fbc3-49ac-b1f5-35ce41591d3a" name="Task&lt;CreateOrderResult‎&gt;" isAbstract="false" isLeaf="false" cachedFullName="FoodSearch.Modeling::System::Threading::Tasks::Task&lt;CreateOrderResult‎&gt;">
+        <elementDefinition Id="815fd572-5dfc-417c-a816-4d7b5aa3d7ae" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="2804c634-099a-4cd1-a955-08fb604fa478" name="PaymentTypes" isAbstract="false" isLeaf="false" cachedFullName="FoodSearch.Modeling::FoodSearch::Service::Client::Contracts::PaymentTypes">
+        <elementDefinition Id="5e4e2505-e717-46d6-9d9a-40a730ba82c0" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="575afc3c-1442-4368-90a8-deac6e3f65c8" name="DeliveryTypes" isAbstract="false" isLeaf="false" cachedFullName="FoodSearch.Modeling::FoodSearch::Service::Client::Contracts::DeliveryTypes">
+        <elementDefinition Id="9b78cdb3-74a5-4987-89eb-c99937474dd0" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="93549c2e-a30b-4399-9f87-0fdc4e6b89f0" name="String" isAbstract="false" isLeaf="false" cachedFullName="FoodSearch.Modeling::System::String">
+        <elementDefinition Id="7143adf0-8d0e-4c8e-a5f2-497d74db7428" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="4d6c1917-3680-4243-91b6-91dff9ecc09e" name="Task&lt;Decimal‎&gt;" isAbstract="false" isLeaf="false" cachedFullName="FoodSearch.Modeling::System::Threading::Tasks::Task&lt;Decimal‎&gt;">
+        <elementDefinition Id="a7f8856f-5d77-4bf9-9324-fc44b46dcca8" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="d89c8897-7425-4773-bf1f-321000f35d02" name="Guid" isAbstract="false" isLeaf="false" cachedFullName="FoodSearch.Modeling::System::Guid">
+        <elementDefinition Id="d925213d-8546-4b09-b50a-5057b34fcd8e" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="80966467-482e-4975-99ee-f050fe089b3f" name="Decimal" isAbstract="false" isLeaf="false" cachedFullName="FoodSearch.Modeling::System::Decimal">
+        <elementDefinition Id="91a0102d-4c96-490b-a613-d50d40811ac6" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="92a6dc2c-9023-4d40-a5f2-fceb0208eeeb" name="Task&lt;DeliveryStatus‎&gt;" isAbstract="false" isLeaf="false" cachedFullName="FoodSearch.Modeling::System::Threading::Tasks::Task&lt;DeliveryStatus‎&gt;">
+        <elementDefinition Id="7dec4825-1f25-4620-ba1d-56e64cb1721f" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="beef15ef-19f8-462b-94f6-f0bdacaa2439" name="Task" isAbstract="false" isLeaf="false" cachedFullName="FoodSearch.Modeling::System::Threading::Tasks::Task">
+        <elementDefinition Id="ca7d8eee-dd87-46fe-9dd5-809d49fdd5e1" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="5637c5ee-4370-4c5f-9995-c5c12479f073" name="Task&lt;ObservableCollection‎&lt;BasketItem‎&gt;‎&gt;" isAbstract="false" isLeaf="false" cachedFullName="FoodSearch.Modeling::System::Threading::Tasks::Task&lt;ObservableCollection‎&lt;BasketItem‎&gt;‎&gt;">
+        <elementDefinition Id="0562ab84-6f04-48f4-adc7-82aa7cc649d5" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="c06a3563-437a-4b85-b602-3fd5150ec513" name="Task&lt;DeliveryAddress‎&gt;" isAbstract="false" isLeaf="false" cachedFullName="FoodSearch.Modeling::System::Threading::Tasks::Task&lt;DeliveryAddress‎&gt;">
+        <elementDefinition Id="0d42e562-5be7-4543-b328-c078ff7b2ddc" />
+      </referencedType>
+    </packageHasNamedElement>
+  </packagedElements>
+  <package Id="198a2b8e-d7ba-497b-bb7a-69cb773d6d51" name="FoodSearch.Modeling">
+    <elementDefinition Id="36ea5af6-e5bd-4839-9f43-52f120ba2311" />
+  </package>
+</logicalClassDesignerModel>

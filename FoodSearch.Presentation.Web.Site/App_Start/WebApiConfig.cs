@@ -1,7 +1,6 @@
-﻿using System.Linq;
-
-using FoodSearch.Presentation.Web.Site.Helpers;
+﻿using FoodSearch.Presentation.Web.Site.Helpers;
 using Ninject.Web.WebApi;
+using System.Linq;
 using System.Web.Http;
 using System.Web.Http.ModelBinding;
 

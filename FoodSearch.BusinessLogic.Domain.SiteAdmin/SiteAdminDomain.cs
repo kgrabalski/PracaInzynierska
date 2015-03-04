@@ -1,18 +1,14 @@
-﻿using System.Security.Cryptography;
-using System.Text;
-
-using FoodSearch.BusinessLogic.Domain.SiteAdmin.Interface;
+﻿using FoodSearch.BusinessLogic.Domain.SiteAdmin.Interface;
 using FoodSearch.BusinessLogic.Domain.SiteAdmin.Mapping;
+using FoodSearch.BusinessLogic.Domain.SiteAdmin.Models;
 using FoodSearch.Data.Mapping.Entities;
 using FoodSearch.Data.Mapping.Interface;
+using NHibernate.Criterion;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-
-using FoodSearch.BusinessLogic.Domain.SiteAdmin.Models;
-
-using NHibernate.Criterion;
-
+using System.Security.Cryptography;
+using System.Text;
 using Address = FoodSearch.Data.Mapping.Entities.Address;
 using AddressDto = FoodSearch.BusinessLogic.Domain.SiteAdmin.Models.Address;
 using Restaurant = FoodSearch.Data.Mapping.Entities.Restaurant;

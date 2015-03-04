@@ -1,21 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿using FoodSearch.Presentation.Mobile.Common.Infrastucture;
 using FoodSearch.Presentation.Mobile.Common.Models;
-using FoodSearch.Presentation.Mobile.Common.Services;
-using FoodSearch.Service.Client.Contracts;
-using System.Collections.ObjectModel;
-using FoodSearch.Presentation.Mobile.Common.Infrastucture;
-using Xamarin.Forms;
-using Acr.XamForms.UserDialogs;
-
-using Command = FoodSearch.Presentation.Mobile.Common.Infrastucture.Command;
-using FoodSearch.Service.Client.Interfaces;
 using FoodSearch.Presentation.Mobile.Common.Services.Interfaces;
+using FoodSearch.Service.Client.Contracts;
+using FoodSearch.Service.Client.Interfaces;
+using System.Collections.ObjectModel;
+using System.Linq;
 using System.Windows.Input;
+using Command = FoodSearch.Presentation.Mobile.Common.Infrastucture.Command;
 
 namespace FoodSearch.Presentation.Mobile.Common.ViewModels
 {

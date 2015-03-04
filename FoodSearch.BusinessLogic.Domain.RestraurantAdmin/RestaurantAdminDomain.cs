@@ -1,8 +1,4 @@
-﻿using System.IO;
-using System.Xml;
-using System.Xml.Serialization;
-
-using FoodSearch.BusinessLogic.Domain.RestraurantAdmin.Interface;
+﻿using FoodSearch.BusinessLogic.Domain.RestraurantAdmin.Interface;
 using FoodSearch.BusinessLogic.Domain.RestraurantAdmin.Mapping;
 using FoodSearch.BusinessLogic.Domain.RestraurantAdmin.Models;
 using FoodSearch.Data.Mapping.Entities;
@@ -10,9 +6,11 @@ using FoodSearch.Data.Mapping.Interface;
 using System;
 using System.Collections.Generic;
 using System.Globalization;
+using System.IO;
 using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
+using System.Xml.Serialization;
 using Cuisine = FoodSearch.Data.Mapping.Entities.Cuisine;
 using CuisineDto = FoodSearch.BusinessLogic.Domain.RestraurantAdmin.Models.Cuisine;
 using Dish = FoodSearch.Data.Mapping.Entities.Dish;

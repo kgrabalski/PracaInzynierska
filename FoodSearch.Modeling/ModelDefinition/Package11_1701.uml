@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm9="http://schemas.microsoft.com/dsltools/UseCaseModel" xmlns:dm10="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
   dslVersion="1.0.0.0"
   Id="db57b2c5-1f6c-411a-84f7-24049c645381"
   name="Interface"
@@ -20,7 +20,7 @@
         <referencesInternal>
           <reference
             Id="63490161-ef3b-4573-8762-ccb03fb1bac5"
-            handle="viewcode://./CodeSchema_Interface?Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.BusinessLogic.Domain.SiteAdmin%2Fbin%2FDebug%2FFoodSearch.BusinessLogic.Domain.SiteAdmin.dll Namespace%3DFoodSearch.BusinessLogic.Domain.SiteAdmin.Interface Type%3DISiteAdminDomain"
+            handle="viewcode://./CodeSchema_Interface?Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.BusinessLogic.Domain.SiteAdmin%2Fbin%2FRelease%2FFoodSearch.BusinessLogic.Domain.SiteAdmin.dll Namespace%3DFoodSearch.BusinessLogic.Domain.SiteAdmin.Interface Type%3DISiteAdminDomain"
             tag="ViewCode" />
         </referencesInternal>
         <appliedStereotypesInternal>
@@ -71,7 +71,7 @@
             <referencesInternal>
               <reference
                 Id="f287c919-3f00-4267-a6a3-469fd8bb6a8a"
-                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.BusinessLogic.Domain.SiteAdmin%2Fbin%2FDebug%2FFoodSearch.BusinessLogic.Domain.SiteAdmin.dll Namespace%3DFoodSearch.BusinessLogic.Domain.SiteAdmin.Interface Type%3DISiteAdminDomain Member%3D(Name%3DCreateRestaurant OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)])"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.BusinessLogic.Domain.SiteAdmin%2Fbin%2FRelease%2FFoodSearch.BusinessLogic.Domain.SiteAdmin.dll Namespace%3DFoodSearch.BusinessLogic.Domain.SiteAdmin.Interface Type%3DISiteAdminDomain Member%3D(Name%3DCreateRestaurant OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)])"
                 tag="ViewCode" />
             </referencesInternal>
             <appliedStereotypesInternal>
@@ -145,7 +145,7 @@
                   <referencesInternal>
                     <reference
                       Id="94d612d4-bc5d-41b2-9983-847972a1aed6"
-                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.BusinessLogic.Domain.SiteAdmin%2Fbin%2FDebug%2FFoodSearch.BusinessLogic.Domain.SiteAdmin.dll Namespace%3DFoodSearch.BusinessLogic.Domain.SiteAdmin.Interface Type%3DISiteAdminDomain Member%3D(Name%3DCreateRestaurant OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)]) ParameterIdentifier%3Dname"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.BusinessLogic.Domain.SiteAdmin%2Fbin%2FRelease%2FFoodSearch.BusinessLogic.Domain.SiteAdmin.dll Namespace%3DFoodSearch.BusinessLogic.Domain.SiteAdmin.Interface Type%3DISiteAdminDomain Member%3D(Name%3DCreateRestaurant OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)]) ParameterIdentifier%3Dname"
                       tag="ViewCode" />
                   </referencesInternal>
                   <type_NamedElement>
@@ -164,7 +164,7 @@
                   <referencesInternal>
                     <reference
                       Id="16fd7a00-93ad-4f5e-9721-f1a1d9cfe610"
-                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.BusinessLogic.Domain.SiteAdmin%2Fbin%2FDebug%2FFoodSearch.BusinessLogic.Domain.SiteAdmin.dll Namespace%3DFoodSearch.BusinessLogic.Domain.SiteAdmin.Interface Type%3DISiteAdminDomain Member%3D(Name%3DCreateRestaurant OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)]) ParameterIdentifier%3DaddressId"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.BusinessLogic.Domain.SiteAdmin%2Fbin%2FRelease%2FFoodSearch.BusinessLogic.Domain.SiteAdmin.dll Namespace%3DFoodSearch.BusinessLogic.Domain.SiteAdmin.Interface Type%3DISiteAdminDomain Member%3D(Name%3DCreateRestaurant OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)]) ParameterIdentifier%3DaddressId"
                       tag="ViewCode" />
                   </referencesInternal>
                   <type_NamedElement>
@@ -183,7 +183,7 @@
                   <referencesInternal>
                     <reference
                       Id="435cf159-3df6-4200-9389-e9c555e97aa9"
-                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.BusinessLogic.Domain.SiteAdmin%2Fbin%2FDebug%2FFoodSearch.BusinessLogic.Domain.SiteAdmin.dll Namespace%3DFoodSearch.BusinessLogic.Domain.SiteAdmin.Interface Type%3DISiteAdminDomain Member%3D(Name%3DCreateRestaurant OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)]) ParameterIdentifier%3DlogoId"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.BusinessLogic.Domain.SiteAdmin%2Fbin%2FRelease%2FFoodSearch.BusinessLogic.Domain.SiteAdmin.dll Namespace%3DFoodSearch.BusinessLogic.Domain.SiteAdmin.Interface Type%3DISiteAdminDomain Member%3D(Name%3DCreateRestaurant OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)]) ParameterIdentifier%3DlogoId"
                       tag="ViewCode" />
                   </referencesInternal>
                   <type_NamedElement>
@@ -202,7 +202,7 @@
                   <referencesInternal>
                     <reference
                       Id="ae7d1fa9-5f35-4c36-b136-e23b31629d6b"
-                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.BusinessLogic.Domain.SiteAdmin%2Fbin%2FDebug%2FFoodSearch.BusinessLogic.Domain.SiteAdmin.dll Namespace%3DFoodSearch.BusinessLogic.Domain.SiteAdmin.Interface Type%3DISiteAdminDomain Member%3D(Name%3DCreateRestaurant OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)]) ParameterIdentifier%3DuserPassword"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.BusinessLogic.Domain.SiteAdmin%2Fbin%2FRelease%2FFoodSearch.BusinessLogic.Domain.SiteAdmin.dll Namespace%3DFoodSearch.BusinessLogic.Domain.SiteAdmin.Interface Type%3DISiteAdminDomain Member%3D(Name%3DCreateRestaurant OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)]) ParameterIdentifier%3DuserPassword"
                       tag="ViewCode" />
                   </referencesInternal>
                   <type_NamedElement>
@@ -221,7 +221,7 @@
                   <referencesInternal>
                     <reference
                       Id="ab4e9988-0c55-4750-b0ea-f98e95cf31f8"
-                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.BusinessLogic.Domain.SiteAdmin%2Fbin%2FDebug%2FFoodSearch.BusinessLogic.Domain.SiteAdmin.dll Namespace%3DFoodSearch.BusinessLogic.Domain.SiteAdmin.Interface Type%3DISiteAdminDomain Member%3D(Name%3DCreateRestaurant OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)]) ParameterIdentifier%3DuserEmail"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.BusinessLogic.Domain.SiteAdmin%2Fbin%2FRelease%2FFoodSearch.BusinessLogic.Domain.SiteAdmin.dll Namespace%3DFoodSearch.BusinessLogic.Domain.SiteAdmin.Interface Type%3DISiteAdminDomain Member%3D(Name%3DCreateRestaurant OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)]) ParameterIdentifier%3DuserEmail"
                       tag="ViewCode" />
                   </referencesInternal>
                   <type_NamedElement>
@@ -240,7 +240,7 @@
                   <referencesInternal>
                     <reference
                       Id="9762a294-a7ae-442e-862d-47609f884364"
-                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.BusinessLogic.Domain.SiteAdmin%2Fbin%2FDebug%2FFoodSearch.BusinessLogic.Domain.SiteAdmin.dll Namespace%3DFoodSearch.BusinessLogic.Domain.SiteAdmin.Interface Type%3DISiteAdminDomain Member%3D(Name%3DCreateRestaurant OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)]) ParameterIdentifier%3DuserFirstName"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.BusinessLogic.Domain.SiteAdmin%2Fbin%2FRelease%2FFoodSearch.BusinessLogic.Domain.SiteAdmin.dll Namespace%3DFoodSearch.BusinessLogic.Domain.SiteAdmin.Interface Type%3DISiteAdminDomain Member%3D(Name%3DCreateRestaurant OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)]) ParameterIdentifier%3DuserFirstName"
                       tag="ViewCode" />
                   </referencesInternal>
                   <type_NamedElement>
@@ -259,7 +259,7 @@
                   <referencesInternal>
                     <reference
                       Id="16cd9be3-86d0-4b6a-81be-3f958a745380"
-                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.BusinessLogic.Domain.SiteAdmin%2Fbin%2FDebug%2FFoodSearch.BusinessLogic.Domain.SiteAdmin.dll Namespace%3DFoodSearch.BusinessLogic.Domain.SiteAdmin.Interface Type%3DISiteAdminDomain Member%3D(Name%3DCreateRestaurant OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)]) ParameterIdentifier%3DuserLastName"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.BusinessLogic.Domain.SiteAdmin%2Fbin%2FRelease%2FFoodSearch.BusinessLogic.Domain.SiteAdmin.dll Namespace%3DFoodSearch.BusinessLogic.Domain.SiteAdmin.Interface Type%3DISiteAdminDomain Member%3D(Name%3DCreateRestaurant OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)]) ParameterIdentifier%3DuserLastName"
                       tag="ViewCode" />
                   </referencesInternal>
                   <type_NamedElement>
@@ -283,7 +283,7 @@
             <referencesInternal>
               <reference
                 Id="1b3de9a5-c259-4948-8e73-93bfcee66a05"
-                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.BusinessLogic.Domain.SiteAdmin%2Fbin%2FDebug%2FFoodSearch.BusinessLogic.Domain.SiteAdmin.dll Namespace%3DFoodSearch.BusinessLogic.Domain.SiteAdmin.Interface Type%3DISiteAdminDomain Member%3D(Name%3DDeleteRestaurant OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DGuid)])"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.BusinessLogic.Domain.SiteAdmin%2Fbin%2FRelease%2FFoodSearch.BusinessLogic.Domain.SiteAdmin.dll Namespace%3DFoodSearch.BusinessLogic.Domain.SiteAdmin.Interface Type%3DISiteAdminDomain Member%3D(Name%3DDeleteRestaurant OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DGuid)])"
                 tag="ViewCode" />
             </referencesInternal>
             <appliedStereotypesInternal>
@@ -357,7 +357,7 @@
                   <referencesInternal>
                     <reference
                       Id="4286be15-bf81-41bd-9ec3-54271ead3440"
-                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.BusinessLogic.Domain.SiteAdmin%2Fbin%2FDebug%2FFoodSearch.BusinessLogic.Domain.SiteAdmin.dll Namespace%3DFoodSearch.BusinessLogic.Domain.SiteAdmin.Interface Type%3DISiteAdminDomain Member%3D(Name%3DDeleteRestaurant OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DGuid)]) ParameterIdentifier%3DrestaurantId"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.BusinessLogic.Domain.SiteAdmin%2Fbin%2FRelease%2FFoodSearch.BusinessLogic.Domain.SiteAdmin.dll Namespace%3DFoodSearch.BusinessLogic.Domain.SiteAdmin.Interface Type%3DISiteAdminDomain Member%3D(Name%3DDeleteRestaurant OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DGuid)]) ParameterIdentifier%3DrestaurantId"
                       tag="ViewCode" />
                   </referencesInternal>
                   <type_NamedElement>
@@ -381,7 +381,7 @@
             <referencesInternal>
               <reference
                 Id="d3a32790-c204-484f-a16b-33cbd7db574d"
-                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.BusinessLogic.Domain.SiteAdmin%2Fbin%2FDebug%2FFoodSearch.BusinessLogic.Domain.SiteAdmin.dll Namespace%3DFoodSearch.BusinessLogic.Domain.SiteAdmin.Interface Type%3DISiteAdminDomain Member%3D(Name%3DGetAddress OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)])"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.BusinessLogic.Domain.SiteAdmin%2Fbin%2FRelease%2FFoodSearch.BusinessLogic.Domain.SiteAdmin.dll Namespace%3DFoodSearch.BusinessLogic.Domain.SiteAdmin.Interface Type%3DISiteAdminDomain Member%3D(Name%3DGetAddress OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)])"
                 tag="ViewCode" />
             </referencesInternal>
             <appliedStereotypesInternal>
@@ -455,7 +455,7 @@
                   <referencesInternal>
                     <reference
                       Id="6fa5c790-9966-4dba-bd61-5577ec171b77"
-                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.BusinessLogic.Domain.SiteAdmin%2Fbin%2FDebug%2FFoodSearch.BusinessLogic.Domain.SiteAdmin.dll Namespace%3DFoodSearch.BusinessLogic.Domain.SiteAdmin.Interface Type%3DISiteAdminDomain Member%3D(Name%3DGetAddress OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)]) ParameterIdentifier%3DaddressId"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.BusinessLogic.Domain.SiteAdmin%2Fbin%2FRelease%2FFoodSearch.BusinessLogic.Domain.SiteAdmin.dll Namespace%3DFoodSearch.BusinessLogic.Domain.SiteAdmin.Interface Type%3DISiteAdminDomain Member%3D(Name%3DGetAddress OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)]) ParameterIdentifier%3DaddressId"
                       tag="ViewCode" />
                   </referencesInternal>
                   <type_NamedElement>
@@ -469,251 +469,17 @@
             </ownedParameters>
           </operation>
           <operation
-            Id="1837bfe7-0993-4a02-9130-0106c5a7f422"
-            name="GetRestaurants"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="true"
-            concurrency="Sequential"
-            isQuery="false">
-            <referencesInternal>
-              <reference
-                Id="ed71a4b9-1e79-444e-b4bf-d106b9d4af26"
-                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.BusinessLogic.Domain.SiteAdmin%2Fbin%2FDebug%2FFoodSearch.BusinessLogic.Domain.SiteAdmin.dll Namespace%3DFoodSearch.BusinessLogic.Domain.SiteAdmin.Interface Type%3DISiteAdminDomain Member%3D(Name%3DGetRestaurants OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3D(Name%3DNullable GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DGuid)]))])"
-                tag="ViewCode" />
-            </referencesInternal>
-            <appliedStereotypesInternal>
-              <stereotypeInstance
-                Id="c2fe99d0-f3e0-495d-88eb-238e9daaca7a"
-                name="method"
-                profile="CSharpProfile">
-                <propertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="ebc7aa92-c357-4d4d-a3ea-ccf9083d8c77">
-                    <propertyInstance
-                      Id="66932c6f-6667-4938-b880-33a2c0b5f1ec"
-                      name="ClrAttributes" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="8746cc87-28b5-4282-af87-729ae944a176">
-                    <propertyInstance
-                      Id="57480ddf-3823-40d4-8280-fe8dfc1b93d1"
-                      name="IsPartial"
-                      value="false" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="d7575ff0-00d4-4ebd-886e-92a1be181e9e">
-                    <propertyInstance
-                      Id="98d975c7-c226-41d7-8830-79def8854cfa"
-                      name="IsUnsafe"
-                      value="false" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="069b23d6-c21f-4985-90c7-0e1ba7f41641">
-                    <propertyInstance
-                      Id="cb23abdb-38e8-49d8-a81a-371ddb9c3c9d"
-                      name="Inheritance"
-                      value="none" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="5e9a3756-9197-4fb5-9572-61b558ba7bfc">
-                    <propertyInstance
-                      Id="54e1155d-3d8a-431b-8b16-552076f1b717"
-                      name="PackageVisibility"
-                      value="internal" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="816c5c83-f0b1-4df0-a9c5-9b12cd84a1d6">
-                    <propertyInstance
-                      Id="ce811889-f7ea-4827-8796-d464f1f26037"
-                      name="params"
-                      value="false" />
-                  </stereotypeInstanceHasPropertyInstances>
-                </propertyInstances>
-              </stereotypeInstance>
-            </appliedStereotypesInternal>
-            <ownedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="feacad04-9a41-4589-8c85-c0f25caa8423"
-                  direction="Return">
-                  <type_NamedElement>
-                    <interfaceMoniker
-                      Id="9c03c0f5-a06b-4aa7-a3e6-9f587dc4c00d"
-                      LastKnownName="IEnumerable&lt;Restaurant‎&gt;"
-                      LastKnownLocation="Package1_1557.uml" />
-                  </type_NamedElement>
-                </parameter>
-              </operationHasOwnedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="02afa410-4b59-4eec-8ddb-04345e7bb5c4"
-                  name="restaurantId"
-                  direction="In">
-                  <referencesInternal>
-                    <reference
-                      Id="41fba0f9-f8e1-4ee7-8a89-209e4629a292"
-                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.BusinessLogic.Domain.SiteAdmin%2Fbin%2FDebug%2FFoodSearch.BusinessLogic.Domain.SiteAdmin.dll Namespace%3DFoodSearch.BusinessLogic.Domain.SiteAdmin.Interface Type%3DISiteAdminDomain Member%3D(Name%3DGetRestaurants OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3D(Name%3DNullable GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DGuid)]))]) ParameterIdentifier%3DrestaurantId"
-                      tag="ViewCode" />
-                  </referencesInternal>
-                  <type_NamedElement>
-                    <classMoniker
-                      Id="d0fa2a19-7bad-4513-9fa5-c860b952ae9d"
-                      LastKnownName="Nullable&lt;Guid‎&gt;"
-                      LastKnownLocation="Package5_1457.uml" />
-                  </type_NamedElement>
-                </parameter>
-              </operationHasOwnedParameters>
-            </ownedParameters>
-          </operation>
-          <operation
-            Id="4321176d-72a8-4339-9d90-ac4dad31e5af"
-            name="GetUsers"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="true"
-            concurrency="Sequential"
-            isQuery="false">
-            <referencesInternal>
-              <reference
-                Id="f8dc4b19-7d35-4539-b9d8-53baf2e245eb"
-                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.BusinessLogic.Domain.SiteAdmin%2Fbin%2FDebug%2FFoodSearch.BusinessLogic.Domain.SiteAdmin.dll Namespace%3DFoodSearch.BusinessLogic.Domain.SiteAdmin.Interface Type%3DISiteAdminDomain Member%3D(Name%3DGetUsers OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3D(Name%3DNullable GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)]))%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3D(Name%3DNullable GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)]))])"
-                tag="ViewCode" />
-            </referencesInternal>
-            <appliedStereotypesInternal>
-              <stereotypeInstance
-                Id="0b2a618c-647b-4d00-929e-5c4ccf917966"
-                name="method"
-                profile="CSharpProfile">
-                <propertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="5b749570-c77d-44d3-8bcd-ace120d89e5b">
-                    <propertyInstance
-                      Id="31c98e06-bb95-4878-b425-419daaa901dc"
-                      name="ClrAttributes" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="6ecea3fc-a46b-4b45-a5d8-e9d6e09b796a">
-                    <propertyInstance
-                      Id="e627c753-b4fb-482e-8513-4c6f3798e0b6"
-                      name="IsPartial"
-                      value="false" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="1dd4cc14-b0ff-4467-ba92-5926035ac64f">
-                    <propertyInstance
-                      Id="7b12170e-796d-4677-9424-639b4504155c"
-                      name="IsUnsafe"
-                      value="false" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="41a24075-5083-4525-8715-1f71ed7a0b3a">
-                    <propertyInstance
-                      Id="072117d5-5e39-44eb-8cfa-58d8e6a1b965"
-                      name="Inheritance"
-                      value="none" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="e9e467ba-76ea-4657-b4be-6b5013d6d681">
-                    <propertyInstance
-                      Id="7a1dcc45-d659-4974-8785-ddfdfd8724b2"
-                      name="PackageVisibility"
-                      value="internal" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="bd5d1e03-c771-4b24-a72f-55358cd454fa">
-                    <propertyInstance
-                      Id="83498680-78cd-403d-a9b0-a283a183067c"
-                      name="params"
-                      value="false" />
-                  </stereotypeInstanceHasPropertyInstances>
-                </propertyInstances>
-              </stereotypeInstance>
-            </appliedStereotypesInternal>
-            <ownedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="a29a610a-e2cb-43af-9e48-acb1c7616fd7"
-                  direction="Return">
-                  <type_NamedElement>
-                    <interfaceMoniker
-                      Id="327a4e01-dd0c-427f-99e3-67d691b400eb"
-                      LastKnownName="IEnumerable&lt;User‎&gt;"
-                      LastKnownLocation="Package1_1557.uml" />
-                  </type_NamedElement>
-                </parameter>
-              </operationHasOwnedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="a5fb9d5c-a59d-4000-8e16-2bc434858490"
-                  name="query"
-                  direction="In">
-                  <referencesInternal>
-                    <reference
-                      Id="67cad200-11c6-452e-ae52-a3a583cbd839"
-                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.BusinessLogic.Domain.SiteAdmin%2Fbin%2FDebug%2FFoodSearch.BusinessLogic.Domain.SiteAdmin.dll Namespace%3DFoodSearch.BusinessLogic.Domain.SiteAdmin.Interface Type%3DISiteAdminDomain Member%3D(Name%3DGetUsers OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3D(Name%3DNullable GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)]))%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3D(Name%3DNullable GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)]))]) ParameterIdentifier%3Dquery"
-                      tag="ViewCode" />
-                  </referencesInternal>
-                  <type_NamedElement>
-                    <primitiveTypeMoniker
-                      Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
-                      LastKnownName="String"
-                      LastKnownLocation="FoodSearch.Modeling.uml" />
-                  </type_NamedElement>
-                </parameter>
-              </operationHasOwnedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="ffa9af90-593d-490d-b1bb-e816b0baf1c0"
-                  name="page"
-                  direction="In">
-                  <referencesInternal>
-                    <reference
-                      Id="4b62022c-b369-4893-8b88-16b86d60cbb5"
-                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.BusinessLogic.Domain.SiteAdmin%2Fbin%2FDebug%2FFoodSearch.BusinessLogic.Domain.SiteAdmin.dll Namespace%3DFoodSearch.BusinessLogic.Domain.SiteAdmin.Interface Type%3DISiteAdminDomain Member%3D(Name%3DGetUsers OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3D(Name%3DNullable GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)]))%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3D(Name%3DNullable GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)]))]) ParameterIdentifier%3Dpage"
-                      tag="ViewCode" />
-                  </referencesInternal>
-                  <type_NamedElement>
-                    <classMoniker
-                      Id="29a7191d-0bb2-4622-b83e-c2b9f68f81f9"
-                      LastKnownName="Nullable&lt;Int32‎&gt;"
-                      LastKnownLocation="Package5_1457.uml" />
-                  </type_NamedElement>
-                </parameter>
-              </operationHasOwnedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="73517980-7fef-4766-89f9-49e4ac07a19b"
-                  name="pageSize"
-                  direction="In">
-                  <referencesInternal>
-                    <reference
-                      Id="c7b09a87-b110-440a-9db3-9b7fc9ee1ab4"
-                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.BusinessLogic.Domain.SiteAdmin%2Fbin%2FDebug%2FFoodSearch.BusinessLogic.Domain.SiteAdmin.dll Namespace%3DFoodSearch.BusinessLogic.Domain.SiteAdmin.Interface Type%3DISiteAdminDomain Member%3D(Name%3DGetUsers OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3D(Name%3DNullable GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)]))%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3D(Name%3DNullable GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)]))]) ParameterIdentifier%3DpageSize"
-                      tag="ViewCode" />
-                  </referencesInternal>
-                  <type_NamedElement>
-                    <classMoniker
-                      Id="29a7191d-0bb2-4622-b83e-c2b9f68f81f9"
-                      LastKnownName="Nullable&lt;Int32‎&gt;"
-                      LastKnownLocation="Package5_1457.uml" />
-                  </type_NamedElement>
-                </parameter>
-              </operationHasOwnedParameters>
-            </ownedParameters>
-          </operation>
-          <operation
             Id="759ae6ea-f842-45a9-861d-ae8620b9f802"
             name="ChangeUserState"
             isLeaf="false"
             isStatic="false"
-            isAbstract="true"
+            isAbstract="false"
             concurrency="Sequential"
             isQuery="false">
             <referencesInternal>
               <reference
                 Id="cd246c4e-04b1-4c52-afd0-71f0d0d1e506"
-                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.BusinessLogic.Domain.SiteAdmin%2Fbin%2FDebug%2FFoodSearch.BusinessLogic.Domain.SiteAdmin.dll Namespace%3DFoodSearch.BusinessLogic.Domain.SiteAdmin.Interface Type%3DISiteAdminDomain Member%3D(Name%3DChangeUserState OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DGuid)%2C(Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.Data.Mapping%2Fbin%2FDebug%2FFoodSearch.Data.Mapping.dll Namespace%3DFoodSearch.Data.Mapping.Entities Type%3DUserStates)])"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.BusinessLogic.Domain.SiteAdmin%2Fbin%2FRelease%2FFoodSearch.BusinessLogic.Domain.SiteAdmin.dll Namespace%3DFoodSearch.BusinessLogic.Domain.SiteAdmin.Interface Type%3DISiteAdminDomain Member%3D(Name%3DChangeUserState OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DGuid)%2C(Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.Data.Mapping%2Fbin%2FRelease%2FFoodSearch.Data.Mapping.dll Namespace%3DFoodSearch.Data.Mapping.Entities Type%3DUserStates)])"
                 tag="ViewCode" />
             </referencesInternal>
             <appliedStereotypesInternal>
@@ -787,7 +553,7 @@
                   <referencesInternal>
                     <reference
                       Id="ad409e32-65cc-4184-886c-6806f30796c5"
-                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.BusinessLogic.Domain.SiteAdmin%2Fbin%2FDebug%2FFoodSearch.BusinessLogic.Domain.SiteAdmin.dll Namespace%3DFoodSearch.BusinessLogic.Domain.SiteAdmin.Interface Type%3DISiteAdminDomain Member%3D(Name%3DChangeUserState OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DGuid)%2C(Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.Data.Mapping%2Fbin%2FDebug%2FFoodSearch.Data.Mapping.dll Namespace%3DFoodSearch.Data.Mapping.Entities Type%3DUserStates)]) ParameterIdentifier%3DuserId"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.BusinessLogic.Domain.SiteAdmin%2Fbin%2FRelease%2FFoodSearch.BusinessLogic.Domain.SiteAdmin.dll Namespace%3DFoodSearch.BusinessLogic.Domain.SiteAdmin.Interface Type%3DISiteAdminDomain Member%3D(Name%3DChangeUserState OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DGuid)%2C(Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.Data.Mapping%2Fbin%2FRelease%2FFoodSearch.Data.Mapping.dll Namespace%3DFoodSearch.Data.Mapping.Entities Type%3DUserStates)]) ParameterIdentifier%3DuserId"
                       tag="ViewCode" />
                   </referencesInternal>
                   <type_NamedElement>
@@ -806,7 +572,7 @@
                   <referencesInternal>
                     <reference
                       Id="33534633-ad4a-4bdc-abb1-57bc12212144"
-                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.BusinessLogic.Domain.SiteAdmin%2Fbin%2FDebug%2FFoodSearch.BusinessLogic.Domain.SiteAdmin.dll Namespace%3DFoodSearch.BusinessLogic.Domain.SiteAdmin.Interface Type%3DISiteAdminDomain Member%3D(Name%3DChangeUserState OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DGuid)%2C(Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.Data.Mapping%2Fbin%2FDebug%2FFoodSearch.Data.Mapping.dll Namespace%3DFoodSearch.Data.Mapping.Entities Type%3DUserStates)]) ParameterIdentifier%3DuserState"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.BusinessLogic.Domain.SiteAdmin%2Fbin%2FRelease%2FFoodSearch.BusinessLogic.Domain.SiteAdmin.dll Namespace%3DFoodSearch.BusinessLogic.Domain.SiteAdmin.Interface Type%3DISiteAdminDomain Member%3D(Name%3DChangeUserState OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DGuid)%2C(Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.Data.Mapping%2Fbin%2FRelease%2FFoodSearch.Data.Mapping.dll Namespace%3DFoodSearch.Data.Mapping.Entities Type%3DUserStates)]) ParameterIdentifier%3DuserState"
                       tag="ViewCode" />
                   </referencesInternal>
                   <type_NamedElement>
@@ -824,13 +590,13 @@
             name="GetSystemDailyFinancialReport"
             isLeaf="false"
             isStatic="false"
-            isAbstract="true"
+            isAbstract="false"
             concurrency="Sequential"
             isQuery="false">
             <referencesInternal>
               <reference
                 Id="0f1a561c-66dd-468f-8e82-edcc271c9f53"
-                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.BusinessLogic.Domain.SiteAdmin%2Fbin%2FDebug%2FFoodSearch.BusinessLogic.Domain.SiteAdmin.dll Namespace%3DFoodSearch.BusinessLogic.Domain.SiteAdmin.Interface Type%3DISiteAdminDomain Member%3D(Name%3DGetSystemDailyFinancialReport OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDateTime)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDateTime)])"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.BusinessLogic.Domain.SiteAdmin%2Fbin%2FRelease%2FFoodSearch.BusinessLogic.Domain.SiteAdmin.dll Namespace%3DFoodSearch.BusinessLogic.Domain.SiteAdmin.Interface Type%3DISiteAdminDomain Member%3D(Name%3DGetSystemDailyFinancialReport OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDateTime)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDateTime)])"
                 tag="ViewCode" />
             </referencesInternal>
             <appliedStereotypesInternal>
@@ -904,7 +670,7 @@
                   <referencesInternal>
                     <reference
                       Id="4f6e2da6-619d-4948-a636-4af5595620a9"
-                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.BusinessLogic.Domain.SiteAdmin%2Fbin%2FDebug%2FFoodSearch.BusinessLogic.Domain.SiteAdmin.dll Namespace%3DFoodSearch.BusinessLogic.Domain.SiteAdmin.Interface Type%3DISiteAdminDomain Member%3D(Name%3DGetSystemDailyFinancialReport OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDateTime)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDateTime)]) ParameterIdentifier%3DdateFrom"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.BusinessLogic.Domain.SiteAdmin%2Fbin%2FRelease%2FFoodSearch.BusinessLogic.Domain.SiteAdmin.dll Namespace%3DFoodSearch.BusinessLogic.Domain.SiteAdmin.Interface Type%3DISiteAdminDomain Member%3D(Name%3DGetSystemDailyFinancialReport OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDateTime)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDateTime)]) ParameterIdentifier%3DdateFrom"
                       tag="ViewCode" />
                   </referencesInternal>
                   <type_NamedElement>
@@ -923,7 +689,7 @@
                   <referencesInternal>
                     <reference
                       Id="5f2eb1f3-041b-4990-ad01-6a95780030f2"
-                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.BusinessLogic.Domain.SiteAdmin%2Fbin%2FDebug%2FFoodSearch.BusinessLogic.Domain.SiteAdmin.dll Namespace%3DFoodSearch.BusinessLogic.Domain.SiteAdmin.Interface Type%3DISiteAdminDomain Member%3D(Name%3DGetSystemDailyFinancialReport OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDateTime)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDateTime)]) ParameterIdentifier%3DdateTo"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.BusinessLogic.Domain.SiteAdmin%2Fbin%2FRelease%2FFoodSearch.BusinessLogic.Domain.SiteAdmin.dll Namespace%3DFoodSearch.BusinessLogic.Domain.SiteAdmin.Interface Type%3DISiteAdminDomain Member%3D(Name%3DGetSystemDailyFinancialReport OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDateTime)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDateTime)]) ParameterIdentifier%3DdateTo"
                       tag="ViewCode" />
                   </referencesInternal>
                   <type_NamedElement>
@@ -941,13 +707,13 @@
             name="GetSystemMonthlyFinancialReport"
             isLeaf="false"
             isStatic="false"
-            isAbstract="true"
+            isAbstract="false"
             concurrency="Sequential"
             isQuery="false">
             <referencesInternal>
               <reference
                 Id="2506c1c7-cb3b-479f-9072-12ef415d8c42"
-                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.BusinessLogic.Domain.SiteAdmin%2Fbin%2FDebug%2FFoodSearch.BusinessLogic.Domain.SiteAdmin.dll Namespace%3DFoodSearch.BusinessLogic.Domain.SiteAdmin.Interface Type%3DISiteAdminDomain Member%3D(Name%3DGetSystemMonthlyFinancialReport OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDateTime)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDateTime)])"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.BusinessLogic.Domain.SiteAdmin%2Fbin%2FRelease%2FFoodSearch.BusinessLogic.Domain.SiteAdmin.dll Namespace%3DFoodSearch.BusinessLogic.Domain.SiteAdmin.Interface Type%3DISiteAdminDomain Member%3D(Name%3DGetSystemMonthlyFinancialReport OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDateTime)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDateTime)])"
                 tag="ViewCode" />
             </referencesInternal>
             <appliedStereotypesInternal>
@@ -1021,7 +787,7 @@
                   <referencesInternal>
                     <reference
                       Id="7fb11010-2ee6-486c-ba47-94f81bce3cec"
-                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.BusinessLogic.Domain.SiteAdmin%2Fbin%2FDebug%2FFoodSearch.BusinessLogic.Domain.SiteAdmin.dll Namespace%3DFoodSearch.BusinessLogic.Domain.SiteAdmin.Interface Type%3DISiteAdminDomain Member%3D(Name%3DGetSystemMonthlyFinancialReport OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDateTime)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDateTime)]) ParameterIdentifier%3DdateFrom"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.BusinessLogic.Domain.SiteAdmin%2Fbin%2FRelease%2FFoodSearch.BusinessLogic.Domain.SiteAdmin.dll Namespace%3DFoodSearch.BusinessLogic.Domain.SiteAdmin.Interface Type%3DISiteAdminDomain Member%3D(Name%3DGetSystemMonthlyFinancialReport OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDateTime)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDateTime)]) ParameterIdentifier%3DdateFrom"
                       tag="ViewCode" />
                   </referencesInternal>
                   <type_NamedElement>
@@ -1040,13 +806,383 @@
                   <referencesInternal>
                     <reference
                       Id="1d4744b3-3364-4525-b415-1ca8904a707d"
-                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.BusinessLogic.Domain.SiteAdmin%2Fbin%2FDebug%2FFoodSearch.BusinessLogic.Domain.SiteAdmin.dll Namespace%3DFoodSearch.BusinessLogic.Domain.SiteAdmin.Interface Type%3DISiteAdminDomain Member%3D(Name%3DGetSystemMonthlyFinancialReport OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDateTime)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDateTime)]) ParameterIdentifier%3DdateTo"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.BusinessLogic.Domain.SiteAdmin%2Fbin%2FRelease%2FFoodSearch.BusinessLogic.Domain.SiteAdmin.dll Namespace%3DFoodSearch.BusinessLogic.Domain.SiteAdmin.Interface Type%3DISiteAdminDomain Member%3D(Name%3DGetSystemMonthlyFinancialReport OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDateTime)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDateTime)]) ParameterIdentifier%3DdateTo"
                       tag="ViewCode" />
                   </referencesInternal>
                   <type_NamedElement>
                     <classMoniker
                       Id="62b53758-f607-4e2c-8259-ab3ed8786a6c"
                       LastKnownName="DateTime"
+                      LastKnownLocation="Package5_1457.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="70e9669b-885c-4e56-9cc7-6de60b9d2fa8"
+            name="GetRestaurant"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="2c157320-f098-439a-a771-d71a11d2af97"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.BusinessLogic.Domain.SiteAdmin%2Fbin%2FRelease%2FFoodSearch.BusinessLogic.Domain.SiteAdmin.dll Namespace%3DFoodSearch.BusinessLogic.Domain.SiteAdmin.Interface Type%3DISiteAdminDomain Member%3D(Name%3DGetRestaurant OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DGuid)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="e0f55989-1feb-482f-b78d-8dc5e1e90a7f"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d6898208-b9f5-4520-b0f1-e133f2e5ed96">
+                    <propertyInstance
+                      Id="743f43d4-e871-47c3-af43-773c28c9c537"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="85f689da-105c-4035-8c75-3d8c69bc0c3c">
+                    <propertyInstance
+                      Id="fc73453e-3e91-4f94-8f52-faa5081a792b"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="1b412cda-5701-491b-af3b-b6a0a5308f83">
+                    <propertyInstance
+                      Id="547d1374-d62c-49ab-995f-078fe019e3eb"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b5f6f762-4990-4e37-888e-2e13a1741c67">
+                    <propertyInstance
+                      Id="8aa05a82-e54a-4539-ac80-8d8e663ca139"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="08b0136b-2028-4add-97dd-421714157196">
+                    <propertyInstance
+                      Id="1e5d614e-b97d-4a1e-a33f-df8acaba8151"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f95293de-c156-4a99-8ed6-e472345bea1f">
+                    <propertyInstance
+                      Id="f5c7754e-085f-48f8-bcec-45dad7017d16"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="03ed6ce9-81e5-4e23-b06b-7d87c2a22734"
+                  direction="Return">
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="7dde820c-5a4e-44df-8094-d62e269df589"
+                      LastKnownName="Restaurant"
+                      LastKnownLocation="Package_1703.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="56b811bd-7490-47fa-9c64-a3da2e1a4c71"
+                  name="restaurantId"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="472210a4-0d97-4f45-b782-beb28ff56fda"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.BusinessLogic.Domain.SiteAdmin%2Fbin%2FRelease%2FFoodSearch.BusinessLogic.Domain.SiteAdmin.dll Namespace%3DFoodSearch.BusinessLogic.Domain.SiteAdmin.Interface Type%3DISiteAdminDomain Member%3D(Name%3DGetRestaurant OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DGuid)]) ParameterIdentifier%3DrestaurantId"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="d925213d-8546-4b09-b50a-5057b34fcd8e"
+                      LastKnownName="Guid"
+                      LastKnownLocation="Package5_1457.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="50e23c3a-1e8e-4a38-89b5-89de5eb80fc2"
+            name="GetRestaurants"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="0756e971-95fb-48ea-aa3f-f8ce18096a11"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.BusinessLogic.Domain.SiteAdmin%2Fbin%2FRelease%2FFoodSearch.BusinessLogic.Domain.SiteAdmin.dll Namespace%3DFoodSearch.BusinessLogic.Domain.SiteAdmin.Interface Type%3DISiteAdminDomain Member%3D(Name%3DGetRestaurants OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3D(Name%3DNullable GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)]))%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3D(Name%3DNullable GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)]))])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="76046dd3-d038-4463-93a5-3cbcbc3d7c86"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="8c0187df-3c13-4f7d-8e1a-c36c0ce98a04">
+                    <propertyInstance
+                      Id="4acfe018-c2f3-4928-9842-e1227469ab63"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ecf8188d-2ae9-4472-874a-5c79dda0c9eb">
+                    <propertyInstance
+                      Id="3b108df1-9ae6-42e7-b102-0fc0eac4ce0a"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c884ad01-2bb0-4db4-a461-e2eb0da0372f">
+                    <propertyInstance
+                      Id="6c21195c-b644-4aa4-b37d-ceb279f46ead"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="70f963bc-e23c-4e32-a287-697e54eb1857">
+                    <propertyInstance
+                      Id="fd6c7711-99ba-41bc-96ec-7b31e7219fe3"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="4a71ec97-9552-4b2d-9596-ad4a2b3c3888">
+                    <propertyInstance
+                      Id="2ef2b1ae-2cf7-4086-8c86-36bb5035484e"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="6a0069e2-a046-474d-8834-9d44a8577b00">
+                    <propertyInstance
+                      Id="df91568d-ea1c-491e-9a17-d2568daa9479"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="1b1bea82-39cd-4f39-955a-426c10133e6e"
+                  direction="Return">
+                  <type_NamedElement>
+                    <interfaceMoniker
+                      Id="9c03c0f5-a06b-4aa7-a3e6-9f587dc4c00d"
+                      LastKnownName="IEnumerable&lt;Restaurant‎&gt;"
+                      LastKnownLocation="Package1_1557.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="1a82cca9-809a-4abb-9b94-a715011882fa"
+                  name="query"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="3dc74f63-36e0-4e96-a3e6-15330cf4e8be"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.BusinessLogic.Domain.SiteAdmin%2Fbin%2FRelease%2FFoodSearch.BusinessLogic.Domain.SiteAdmin.dll Namespace%3DFoodSearch.BusinessLogic.Domain.SiteAdmin.Interface Type%3DISiteAdminDomain Member%3D(Name%3DGetRestaurants OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3D(Name%3DNullable GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)]))%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3D(Name%3DNullable GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)]))]) ParameterIdentifier%3Dquery"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                      LastKnownName="String"
+                      LastKnownLocation="FoodSearch.Modeling.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="b83c2d54-145d-4c14-92cd-bfbed7662ba8"
+                  name="page"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="ccc12fb6-e56f-4b9c-aa9b-adfc3bd75fea"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.BusinessLogic.Domain.SiteAdmin%2Fbin%2FRelease%2FFoodSearch.BusinessLogic.Domain.SiteAdmin.dll Namespace%3DFoodSearch.BusinessLogic.Domain.SiteAdmin.Interface Type%3DISiteAdminDomain Member%3D(Name%3DGetRestaurants OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3D(Name%3DNullable GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)]))%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3D(Name%3DNullable GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)]))]) ParameterIdentifier%3Dpage"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="29a7191d-0bb2-4622-b83e-c2b9f68f81f9"
+                      LastKnownName="Nullable&lt;Int32‎&gt;"
+                      LastKnownLocation="Package5_1457.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="9655c190-9ebe-4c64-b162-76f0d17d990f"
+                  name="pageSize"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="16d38f92-a804-4f29-a6c5-09e73985e33a"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.BusinessLogic.Domain.SiteAdmin%2Fbin%2FRelease%2FFoodSearch.BusinessLogic.Domain.SiteAdmin.dll Namespace%3DFoodSearch.BusinessLogic.Domain.SiteAdmin.Interface Type%3DISiteAdminDomain Member%3D(Name%3DGetRestaurants OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3D(Name%3DNullable GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)]))%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3D(Name%3DNullable GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)]))]) ParameterIdentifier%3DpageSize"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="29a7191d-0bb2-4622-b83e-c2b9f68f81f9"
+                      LastKnownName="Nullable&lt;Int32‎&gt;"
+                      LastKnownLocation="Package5_1457.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="f03c5f14-ce98-41c7-81be-370ab0bec23b"
+            name="GetUsers"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="5e8d0542-2e98-420a-a4d2-058f1501651c"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.BusinessLogic.Domain.SiteAdmin%2Fbin%2FRelease%2FFoodSearch.BusinessLogic.Domain.SiteAdmin.dll Namespace%3DFoodSearch.BusinessLogic.Domain.SiteAdmin.Interface Type%3DISiteAdminDomain Member%3D(Name%3DGetUsers OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3D(Name%3DNullable GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)]))%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3D(Name%3DNullable GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)]))])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="ca5b7deb-b0b6-40a5-917a-8fb8881140ef"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="11194e1d-ecbf-4a6e-8af3-34b6ec440d43">
+                    <propertyInstance
+                      Id="af081c69-cbd9-4ec4-b300-b4d314c66c48"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c0445e2c-580a-474b-a09f-bd031b3ae94d">
+                    <propertyInstance
+                      Id="a1717ea8-b8b5-46f5-9966-83cb21341968"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f31e7dbf-5d62-4061-9535-7283257d62ad">
+                    <propertyInstance
+                      Id="501f120d-73eb-43f5-b388-6f92924225bb"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f84da904-441c-4c3d-9481-7aa3c095d36f">
+                    <propertyInstance
+                      Id="b9272d4d-ae75-42b7-8d2a-cb754a452fab"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="96183855-ab51-434d-b3da-f24888009373">
+                    <propertyInstance
+                      Id="76e84746-68b4-469a-b76c-8d426e886b11"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="9751f16d-5fb0-47fd-9d99-6a36038084bf">
+                    <propertyInstance
+                      Id="e3e4b59f-9396-4c9f-a037-0d0505f1aab7"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="dd05902b-7dc2-418e-aa9f-26db6de68953"
+                  direction="Return">
+                  <type_NamedElement>
+                    <interfaceMoniker
+                      Id="327a4e01-dd0c-427f-99e3-67d691b400eb"
+                      LastKnownName="IEnumerable&lt;User‎&gt;"
+                      LastKnownLocation="Package1_1557.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="9d7a6ca8-399d-4bbd-a11f-a8d03dfee500"
+                  name="query"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="6f78a270-5a5d-483a-afc7-e426932dfc25"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.BusinessLogic.Domain.SiteAdmin%2Fbin%2FRelease%2FFoodSearch.BusinessLogic.Domain.SiteAdmin.dll Namespace%3DFoodSearch.BusinessLogic.Domain.SiteAdmin.Interface Type%3DISiteAdminDomain Member%3D(Name%3DGetUsers OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3D(Name%3DNullable GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)]))%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3D(Name%3DNullable GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)]))]) ParameterIdentifier%3Dquery"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                      LastKnownName="String"
+                      LastKnownLocation="FoodSearch.Modeling.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="e2927f3f-71de-4a8c-a007-9263db986af5"
+                  name="page"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="38c69013-6a06-4fd0-8fc2-ae8a01d017d7"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.BusinessLogic.Domain.SiteAdmin%2Fbin%2FRelease%2FFoodSearch.BusinessLogic.Domain.SiteAdmin.dll Namespace%3DFoodSearch.BusinessLogic.Domain.SiteAdmin.Interface Type%3DISiteAdminDomain Member%3D(Name%3DGetUsers OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3D(Name%3DNullable GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)]))%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3D(Name%3DNullable GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)]))]) ParameterIdentifier%3Dpage"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="29a7191d-0bb2-4622-b83e-c2b9f68f81f9"
+                      LastKnownName="Nullable&lt;Int32‎&gt;"
+                      LastKnownLocation="Package5_1457.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="42e12e30-cbcc-4485-ba6d-16e93478d33f"
+                  name="pageSize"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="027f2325-7423-48bc-af93-c4b1bb9c3a65"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.BusinessLogic.Domain.SiteAdmin%2Fbin%2FRelease%2FFoodSearch.BusinessLogic.Domain.SiteAdmin.dll Namespace%3DFoodSearch.BusinessLogic.Domain.SiteAdmin.Interface Type%3DISiteAdminDomain Member%3D(Name%3DGetUsers OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3D(Name%3DNullable GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)]))%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3D(Name%3DNullable GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)]))]) ParameterIdentifier%3DpageSize"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="29a7191d-0bb2-4622-b83e-c2b9f68f81f9"
+                      LastKnownName="Nullable&lt;Int32‎&gt;"
                       LastKnownLocation="Package5_1457.uml" />
                   </type_NamedElement>
                 </parameter>

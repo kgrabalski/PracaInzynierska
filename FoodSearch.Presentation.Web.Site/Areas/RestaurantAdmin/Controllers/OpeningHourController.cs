@@ -1,16 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Net.Http;
-using System.Web.Http;
-using System.Web.Http.ModelBinding;
-
-using FoodSearch.BusinessLogic.Domain.FoodSearch.Interface;
+﻿using FoodSearch.BusinessLogic.Domain.FoodSearch.Interface;
 using FoodSearch.BusinessLogic.Domain.RestraurantAdmin.Models;
 using FoodSearch.Presentation.Web.Site.Areas.RestaurantAdmin.Models;
 using FoodSearch.Presentation.Web.Site.Helpers;
 using FoodSearch.Presentation.Web.Site.Models;
+using System.Collections.Generic;
+using System.Net;
+using System.Net.Http;
+using System.Web.Http;
+using System.Web.Http.ModelBinding;
 
 namespace FoodSearch.Presentation.Web.Site.Areas.RestaurantAdmin.Controllers
 {
@@ -24,14 +21,12 @@ namespace FoodSearch.Presentation.Web.Site.Areas.RestaurantAdmin.Controllers
             _domain = domain;
         }
 
-        //get all opening hours
         [HttpGet]
         public IEnumerable<OpeningHour> GetAll([ModelBinder] RestaurantUser ru)
         {
             return _domain.RestaurantAdmin.GetOpeningHours(ru.RestaurantId);
         }
 
-        //add new opening hour
         [HttpPost]
         [ValidateModel]
         public HttpResponseMessage Create([ModelBinder] RestaurantUser ru, OpeningHourModel oh)
@@ -40,7 +35,6 @@ namespace FoodSearch.Presentation.Web.Site.Areas.RestaurantAdmin.Controllers
             return Request.CreateResponse(result != null ? HttpStatusCode.Created : HttpStatusCode.Conflict, result);
         }
 
-        //delete opening hour
         [HttpDelete]
         public HttpResponseMessage Delete([ModelBinder] RestaurantUser ru, [FromUri] int id)
         {

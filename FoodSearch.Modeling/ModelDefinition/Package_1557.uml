@@ -17,5 +17,11 @@
         LastKnownName="Generic"
         LastKnownLocation="Package1_1557.uml" />
     </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="aecea5f3-dff1-42c9-aa00-4d8da40279c2"
+        LastKnownName="ObjectModel"
+        LastKnownLocation="Package6_1705.uml" />
+    </packageHasNamedElement>
   </packagedElements>
 </package>

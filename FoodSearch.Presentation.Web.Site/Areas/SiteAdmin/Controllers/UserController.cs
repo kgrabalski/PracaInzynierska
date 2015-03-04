@@ -1,16 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Net.Http;
-using System.Web.Http;
-using System.Web.Http.ModelBinding;
-
-using FoodSearch.BusinessLogic.Domain.FoodSearch.Interface;
+﻿using FoodSearch.BusinessLogic.Domain.FoodSearch.Interface;
 using FoodSearch.BusinessLogic.Domain.User.Models;
 using FoodSearch.Data.Mapping.Entities;
 using FoodSearch.Presentation.Web.Site.Areas.SiteAdmin.Models;
 using FoodSearch.Presentation.Web.Site.Helpers;
+using System;
+using System.Collections.Generic;
+using System.Net;
+using System.Net.Http;
+using System.Web.Http;
+using System.Web.Http.ModelBinding;
 
 namespace FoodSearch.Presentation.Web.Site.Areas.SiteAdmin.Controllers
 {

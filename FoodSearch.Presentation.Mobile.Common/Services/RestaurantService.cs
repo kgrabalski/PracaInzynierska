@@ -1,5 +1,5 @@
-﻿using System;
-using FoodSearch.Presentation.Mobile.Common.Services.Interfaces;
+﻿using FoodSearch.Presentation.Mobile.Common.Services.Interfaces;
+using System;
 
 namespace FoodSearch.Presentation.Mobile.Common.Services
 {

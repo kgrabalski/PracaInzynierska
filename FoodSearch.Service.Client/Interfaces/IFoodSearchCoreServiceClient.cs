@@ -1,8 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Threading.Tasks;
-using FoodSearch.Service.Client.Contracts;
+﻿using FoodSearch.Service.Client.Contracts;
+using System;
 using System.Collections.ObjectModel;
+using System.Threading.Tasks;
 
 namespace FoodSearch.Service.Client.Interfaces
 {

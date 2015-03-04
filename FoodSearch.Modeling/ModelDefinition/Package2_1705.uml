@@ -1,0 +1,968 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="d23b83b8-767e-4d67-b778-52ce3f946904"
+  name="Interfaces"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="e0989d8d-5277-4c01-9ee6-27604921c9b9"
+      handle="viewcode://./CodeSchema_Namespace?Namespace%3DFoodSearch.Service.Client.Interfaces"
+      tag="ViewCode" />
+  </referencesInternal>
+  <packagedElements>
+    <packageHasNamedElement>
+      <Interface
+        Id="fc384d52-40ed-4738-836c-b4c691b4e0ae"
+        name="IFoodSearchOrderServiceClient"
+        isAbstract="false"
+        isLeaf="false">
+        <referencesInternal>
+          <reference
+            Id="d9b3ea10-77e3-4495-bfb1-b7177881f00c"
+            handle="viewcode://./CodeSchema_Interface?Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.Service.Client%2Fbin%2FRelease%2FFoodSearch.Service.Client.dll Namespace%3DFoodSearch.Service.Client.Interfaces Type%3DIFoodSearchOrderServiceClient"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="a7dc156a-10d6-45bc-a295-383fd9fbb6cf"
+            name="interface"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="d0decc06-cd85-4319-ba16-a63dbbcfda9a">
+                <propertyInstance
+                  Id="28b41e33-7c99-4084-be04-b28c17fc5fd7"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="e5c023b5-e558-4114-916c-24d97f382b9f">
+                <propertyInstance
+                  Id="5c0f86c6-a073-4e3a-bf50-5d9822d9f330"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="da11d316-7aeb-48e3-85c5-7a7c275fa6a8">
+                <propertyInstance
+                  Id="d6048f44-722a-441d-a5db-c6281780c577"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="46436fa8-36cc-4e51-93e3-24e0a41cdf20">
+                <propertyInstance
+                  Id="287a82ce-adcf-4e81-98b4-4dd057322f7d"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <ownedOperations>
+          <operation
+            Id="c2fa89cc-f1da-472b-b57c-c30f63e82f99"
+            name="AddToBasket"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="d5fa4d8f-c532-4064-b018-105c4fcd4ce3"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.Service.Client%2Fbin%2FRelease%2FFoodSearch.Service.Client.dll Namespace%3DFoodSearch.Service.Client.Interfaces Type%3DIFoodSearchOrderServiceClient Member%3D(Name%3DAddToBasket OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETPortable%2Fv4.5%2FProfile%2FProfile78%2FSystem.Runtime.dll&quot; Namespace%3DSystem Type%3DInt32)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="ea86c8c7-6ed6-434c-8689-0c49f537519a"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b051dc65-37bd-4095-9f8a-cb6c7aa1346a">
+                    <propertyInstance
+                      Id="54ea8f1f-7738-4c2e-a286-e3ee07568d0d"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="945a7bb7-3572-4ea6-b045-4945b801e18c">
+                    <propertyInstance
+                      Id="ccd2f5ef-a8f1-4997-bfc7-461d0ae8def0"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="dd526a22-f81f-4c09-8300-f9757e5d98de">
+                    <propertyInstance
+                      Id="35ca0797-2576-4a7d-8cfc-e420ec565627"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a89e6005-ef93-4312-991f-4c33ba9b5e54">
+                    <propertyInstance
+                      Id="fbe06691-9d18-4fe9-aa07-91ed785427c1"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a24a9295-fd58-4be6-bddb-27fdc6198f17">
+                    <propertyInstance
+                      Id="ef81cde5-5ec2-4263-9269-3f6c574baf4d"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a73d9965-bda2-4264-854a-2af8cf0d6c3b">
+                    <propertyInstance
+                      Id="2cab3968-e906-4292-a192-85f3b2035f3e"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="ba5297be-49fd-49b9-866a-c424afaf5fef"
+                  direction="Return">
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="4b642d68-59d0-4236-9e54-6ae60d2cbf6c"
+                      LastKnownName="Task&lt;Boolean‎&gt;"
+                      LastKnownLocation="Package4_1705.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="137ce356-00ea-4e3d-a96f-837b5a0d66c0"
+                  name="dishId"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="8824d149-c780-432b-9c3e-f6df6138797a"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.Service.Client%2Fbin%2FRelease%2FFoodSearch.Service.Client.dll Namespace%3DFoodSearch.Service.Client.Interfaces Type%3DIFoodSearchOrderServiceClient Member%3D(Name%3DAddToBasket OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETPortable%2Fv4.5%2FProfile%2FProfile78%2FSystem.Runtime.dll&quot; Namespace%3DSystem Type%3DInt32)]) ParameterIdentifier%3DdishId"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="694b0bae-f38f-4485-b562-3391434a7885"
+                      LastKnownName="Int32"
+                      LastKnownLocation="Package5_1457.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="3395fd13-cffc-4522-a4da-b31007ae0453"
+            name="CreateOrder"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="498fef15-998b-4ccc-9d92-e273240d16bb"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.Service.Client%2Fbin%2FRelease%2FFoodSearch.Service.Client.dll Namespace%3DFoodSearch.Service.Client.Interfaces Type%3DIFoodSearchOrderServiceClient Member%3D(Name%3DCreateOrder OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.Service.Client%2Fbin%2FRelease%2FFoodSearch.Service.Client.dll Namespace%3DFoodSearch.Service.Client.Contracts Type%3DPaymentTypes)%2C(Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.Service.Client%2Fbin%2FRelease%2FFoodSearch.Service.Client.dll Namespace%3DFoodSearch.Service.Client.Contracts Type%3DDeliveryTypes)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETPortable%2Fv4.5%2FProfile%2FProfile78%2FSystem.Runtime.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETPortable%2Fv4.5%2FProfile%2FProfile78%2FSystem.Runtime.dll&quot; Namespace%3DSystem Type%3DString)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="adef3704-7073-4313-aad9-8f7067504156"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d38f6f65-e45d-430f-ba3d-acb61b256b19">
+                    <propertyInstance
+                      Id="ed68287e-08f9-4888-a0dc-f1a68f5fd376"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="80c026d2-88f3-4498-9890-567b08aff6f0">
+                    <propertyInstance
+                      Id="80dc3b03-4a08-4554-b11a-edf159af8256"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="80c4e216-b115-4cc6-8ad4-5260223e8adb">
+                    <propertyInstance
+                      Id="5fd23b73-0527-4fdd-87dd-54855a872bba"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="76b2af31-9307-47c7-8eb2-66450a3ca28f">
+                    <propertyInstance
+                      Id="0b43d056-8930-44c3-9d7e-2a004727d32a"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="af8f3db4-2f15-4e8d-a7bf-c13bed072e8e">
+                    <propertyInstance
+                      Id="ca578a32-1d82-42c2-97ce-21e3b7fae60f"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="28efdd2d-aa05-4b33-bcc1-8728aa83acf6">
+                    <propertyInstance
+                      Id="55eb6308-559c-499a-910e-d998ac096ed5"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="24a68952-16d5-424a-bb98-6d3b60a9aeda"
+                  direction="Return">
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="815fd572-5dfc-417c-a816-4d7b5aa3d7ae"
+                      LastKnownName="Task&lt;CreateOrderResult‎&gt;"
+                      LastKnownLocation="Package4_1705.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="904ed769-40a8-41f4-b1f2-c7caa10ca8aa"
+                  name="paymentType"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="11b44ca5-e48a-4468-8a36-57db61f01eb6"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.Service.Client%2Fbin%2FRelease%2FFoodSearch.Service.Client.dll Namespace%3DFoodSearch.Service.Client.Interfaces Type%3DIFoodSearchOrderServiceClient Member%3D(Name%3DCreateOrder OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.Service.Client%2Fbin%2FRelease%2FFoodSearch.Service.Client.dll Namespace%3DFoodSearch.Service.Client.Contracts Type%3DPaymentTypes)%2C(Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.Service.Client%2Fbin%2FRelease%2FFoodSearch.Service.Client.dll Namespace%3DFoodSearch.Service.Client.Contracts Type%3DDeliveryTypes)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETPortable%2Fv4.5%2FProfile%2FProfile78%2FSystem.Runtime.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETPortable%2Fv4.5%2FProfile%2FProfile78%2FSystem.Runtime.dll&quot; Namespace%3DSystem Type%3DString)]) ParameterIdentifier%3DpaymentType"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <enumerationMoniker
+                      Id="5e4e2505-e717-46d6-9d9a-40a730ba82c0"
+                      LastKnownName="PaymentTypes"
+                      LastKnownLocation="Package5_1705.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="49907298-2131-496f-8004-09fad2bb7bb8"
+                  name="deliveryType"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="71c1c08b-ad30-41a1-9d3e-add818d030ac"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.Service.Client%2Fbin%2FRelease%2FFoodSearch.Service.Client.dll Namespace%3DFoodSearch.Service.Client.Interfaces Type%3DIFoodSearchOrderServiceClient Member%3D(Name%3DCreateOrder OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.Service.Client%2Fbin%2FRelease%2FFoodSearch.Service.Client.dll Namespace%3DFoodSearch.Service.Client.Contracts Type%3DPaymentTypes)%2C(Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.Service.Client%2Fbin%2FRelease%2FFoodSearch.Service.Client.dll Namespace%3DFoodSearch.Service.Client.Contracts Type%3DDeliveryTypes)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETPortable%2Fv4.5%2FProfile%2FProfile78%2FSystem.Runtime.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETPortable%2Fv4.5%2FProfile%2FProfile78%2FSystem.Runtime.dll&quot; Namespace%3DSystem Type%3DString)]) ParameterIdentifier%3DdeliveryType"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <enumerationMoniker
+                      Id="9b78cdb3-74a5-4987-89eb-c99937474dd0"
+                      LastKnownName="DeliveryTypes"
+                      LastKnownLocation="Package5_1705.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="1937e3e3-309d-469f-ab3b-ef213ddf7349"
+                  name="addressId"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="20c4b861-1d69-405a-af6d-985174c7d5ae"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.Service.Client%2Fbin%2FRelease%2FFoodSearch.Service.Client.dll Namespace%3DFoodSearch.Service.Client.Interfaces Type%3DIFoodSearchOrderServiceClient Member%3D(Name%3DCreateOrder OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.Service.Client%2Fbin%2FRelease%2FFoodSearch.Service.Client.dll Namespace%3DFoodSearch.Service.Client.Contracts Type%3DPaymentTypes)%2C(Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.Service.Client%2Fbin%2FRelease%2FFoodSearch.Service.Client.dll Namespace%3DFoodSearch.Service.Client.Contracts Type%3DDeliveryTypes)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETPortable%2Fv4.5%2FProfile%2FProfile78%2FSystem.Runtime.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETPortable%2Fv4.5%2FProfile%2FProfile78%2FSystem.Runtime.dll&quot; Namespace%3DSystem Type%3DString)]) ParameterIdentifier%3DaddressId"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="694b0bae-f38f-4485-b562-3391434a7885"
+                      LastKnownName="Int32"
+                      LastKnownLocation="Package5_1457.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="16484a8f-f755-4453-b92f-133c7a5d3e68"
+                  name="flatNumber"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="d7be693d-5e28-41b8-a0e3-99a3c3d9e9bc"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.Service.Client%2Fbin%2FRelease%2FFoodSearch.Service.Client.dll Namespace%3DFoodSearch.Service.Client.Interfaces Type%3DIFoodSearchOrderServiceClient Member%3D(Name%3DCreateOrder OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.Service.Client%2Fbin%2FRelease%2FFoodSearch.Service.Client.dll Namespace%3DFoodSearch.Service.Client.Contracts Type%3DPaymentTypes)%2C(Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.Service.Client%2Fbin%2FRelease%2FFoodSearch.Service.Client.dll Namespace%3DFoodSearch.Service.Client.Contracts Type%3DDeliveryTypes)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETPortable%2Fv4.5%2FProfile%2FProfile78%2FSystem.Runtime.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETPortable%2Fv4.5%2FProfile%2FProfile78%2FSystem.Runtime.dll&quot; Namespace%3DSystem Type%3DString)]) ParameterIdentifier%3DflatNumber"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="7143adf0-8d0e-4c8e-a5f2-497d74db7428"
+                      LastKnownName="String"
+                      LastKnownLocation="Package5_1457.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="76e5765d-7836-44ce-a85c-f0e0f3365da2"
+            name="GetDeliveryPrice"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="6e122e47-64d2-4e87-938e-afe7ff0bb402"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.Service.Client%2Fbin%2FRelease%2FFoodSearch.Service.Client.dll Namespace%3DFoodSearch.Service.Client.Interfaces Type%3DIFoodSearchOrderServiceClient Member%3D(Name%3DGetDeliveryPrice OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETPortable%2Fv4.5%2FProfile%2FProfile78%2FSystem.Runtime.dll&quot; Namespace%3DSystem Type%3DGuid)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETPortable%2Fv4.5%2FProfile%2FProfile78%2FSystem.Runtime.dll&quot; Namespace%3DSystem Type%3DDecimal)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="1e056002-2edd-48a1-9c77-7d80b50d1554"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b88b4ec7-e30b-4dee-bf6a-cc1c5d2d765f">
+                    <propertyInstance
+                      Id="8d0f7776-04ad-4b6b-9128-c6c12459744f"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="578e7413-66d4-4586-ad2b-2ffa664dcef3">
+                    <propertyInstance
+                      Id="41a83544-f89a-48ef-8e16-5e30e9c11be8"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="aaf271cf-4980-4e0f-99ae-298bce53e95a">
+                    <propertyInstance
+                      Id="f063b81e-6170-4783-8f9f-f8e13b5e067c"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="785ae63a-0311-4da5-ac5b-ab1ee9967839">
+                    <propertyInstance
+                      Id="c0fe00fd-f207-45c9-a7fc-66920a0c5e75"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e1cf6008-54be-41cc-8860-09c6785fe59d">
+                    <propertyInstance
+                      Id="3e1980a7-9e23-430f-a763-366aa110f53d"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a7de5497-b106-4e2f-a9a3-f1849116175e">
+                    <propertyInstance
+                      Id="c478355a-2cd3-4652-a7ab-81100ca26042"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="10bfa8ed-bbf6-4c92-97bc-4d52c9ea4999"
+                  direction="Return">
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="a7f8856f-5d77-4bf9-9324-fc44b46dcca8"
+                      LastKnownName="Task&lt;Decimal‎&gt;"
+                      LastKnownLocation="Package4_1705.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="c4aa0ab3-5c06-407e-b801-767d4e618d8c"
+                  name="restaurantId"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="592cbf28-38e1-4bd9-a88c-bd87d4e96369"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.Service.Client%2Fbin%2FRelease%2FFoodSearch.Service.Client.dll Namespace%3DFoodSearch.Service.Client.Interfaces Type%3DIFoodSearchOrderServiceClient Member%3D(Name%3DGetDeliveryPrice OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETPortable%2Fv4.5%2FProfile%2FProfile78%2FSystem.Runtime.dll&quot; Namespace%3DSystem Type%3DGuid)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETPortable%2Fv4.5%2FProfile%2FProfile78%2FSystem.Runtime.dll&quot; Namespace%3DSystem Type%3DDecimal)]) ParameterIdentifier%3DrestaurantId"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="d925213d-8546-4b09-b50a-5057b34fcd8e"
+                      LastKnownName="Guid"
+                      LastKnownLocation="Package5_1457.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="3704e6c2-e305-4c6f-b33d-f9142af63e02"
+                  name="totalPrice"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="22f108e1-eea1-48eb-96be-571d8c390de9"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.Service.Client%2Fbin%2FRelease%2FFoodSearch.Service.Client.dll Namespace%3DFoodSearch.Service.Client.Interfaces Type%3DIFoodSearchOrderServiceClient Member%3D(Name%3DGetDeliveryPrice OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETPortable%2Fv4.5%2FProfile%2FProfile78%2FSystem.Runtime.dll&quot; Namespace%3DSystem Type%3DGuid)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETPortable%2Fv4.5%2FProfile%2FProfile78%2FSystem.Runtime.dll&quot; Namespace%3DSystem Type%3DDecimal)]) ParameterIdentifier%3DtotalPrice"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="91a0102d-4c96-490b-a613-d50d40811ac6"
+                      LastKnownName="Decimal"
+                      LastKnownLocation="Package5_1457.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="d27d19c1-3f6e-4b75-8f18-beffc699d1b6"
+            name="GetDeliveryStatus"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="be70cedf-5939-458a-bc2b-8af50090b455"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.Service.Client%2Fbin%2FRelease%2FFoodSearch.Service.Client.dll Namespace%3DFoodSearch.Service.Client.Interfaces Type%3DIFoodSearchOrderServiceClient Member%3D(Name%3DGetDeliveryStatus OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETPortable%2Fv4.5%2FProfile%2FProfile78%2FSystem.Runtime.dll&quot; Namespace%3DSystem Type%3DGuid)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="2a59c19b-aad6-4908-8be1-ee40e6ca0e8a"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="6d8beeaf-84b3-43df-ac4d-f61d18518d27">
+                    <propertyInstance
+                      Id="3c03826e-ecfe-4e84-a45c-e0bea183ef16"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="3c135b09-440a-4d17-92c3-5528d8fd7c9c">
+                    <propertyInstance
+                      Id="9fcb51b0-278c-4b27-be9e-2e85ed979240"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="bca21aa9-541b-414c-9e23-5a9a336bc9d5">
+                    <propertyInstance
+                      Id="3196f6b7-44c6-4c5f-9ed5-5c2e02d26115"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="01c73079-bc75-4aaa-9e12-09219bde15c8">
+                    <propertyInstance
+                      Id="107df5ef-f23c-4499-9272-fcae6d9a51e6"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="5cdd8bdb-79ba-4f8b-b6a7-a5a33e6ad28b">
+                    <propertyInstance
+                      Id="1da993e2-1ba6-4115-8741-0aa322c7e35d"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="50916ff5-d2e1-4fee-9fcb-82e80b35bc03">
+                    <propertyInstance
+                      Id="2f3eb7e0-b977-4824-9817-4915f4157888"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="cb7533a7-7b0d-4199-b455-8a4bf9ba16d2"
+                  direction="Return">
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="7dec4825-1f25-4620-ba1d-56e64cb1721f"
+                      LastKnownName="Task&lt;DeliveryStatus‎&gt;"
+                      LastKnownLocation="Package4_1705.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="62fcc4d3-7d38-4361-bf20-69ead99e8a70"
+                  name="orderId"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="e831ed8e-4727-436c-82df-c337a4c6aa21"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.Service.Client%2Fbin%2FRelease%2FFoodSearch.Service.Client.dll Namespace%3DFoodSearch.Service.Client.Interfaces Type%3DIFoodSearchOrderServiceClient Member%3D(Name%3DGetDeliveryStatus OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETPortable%2Fv4.5%2FProfile%2FProfile78%2FSystem.Runtime.dll&quot; Namespace%3DSystem Type%3DGuid)]) ParameterIdentifier%3DorderId"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="d925213d-8546-4b09-b50a-5057b34fcd8e"
+                      LastKnownName="Guid"
+                      LastKnownLocation="Package5_1457.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="cdb4439f-d3cd-4f55-ba2b-3b4905eb55b6"
+            name="RemoveFromBasket"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="27ddfd40-ef50-47c1-8567-361978be89e6"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.Service.Client%2Fbin%2FRelease%2FFoodSearch.Service.Client.dll Namespace%3DFoodSearch.Service.Client.Interfaces Type%3DIFoodSearchOrderServiceClient Member%3D(Name%3DRemoveFromBasket OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETPortable%2Fv4.5%2FProfile%2FProfile78%2FSystem.Runtime.dll&quot; Namespace%3DSystem Type%3DInt32)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="67eb3c80-67ae-48eb-9c99-c863b5ae8df8"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="01381118-94a1-4268-b74e-256d88c03581">
+                    <propertyInstance
+                      Id="7c9af748-8299-4091-9952-753fa5ad653c"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d552a13b-d949-4990-a015-58c00f3be1fa">
+                    <propertyInstance
+                      Id="c6f446f6-4bee-409b-ac4f-17b10be73cfd"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a6fe7684-0944-427c-9707-5306fef1d5a2">
+                    <propertyInstance
+                      Id="b80eda1a-6e3d-47da-85e6-f6bc287ae3ac"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b78d6869-d8d2-4bbc-ab97-925ffffe7266">
+                    <propertyInstance
+                      Id="8335fc16-3b4f-4521-9119-e17c85b76b51"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="3219ac81-5871-44fb-8bd0-0e06a6aaa976">
+                    <propertyInstance
+                      Id="ef576134-0a94-45d7-a004-b7591c944c6b"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e6de695c-0f62-4ce8-af5e-876c19740eae">
+                    <propertyInstance
+                      Id="c1d24853-1eca-49d4-93e5-5ff8b59e5aea"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="20279c41-38a3-40de-8e5f-2874eef2b286"
+                  direction="Return">
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="4b642d68-59d0-4236-9e54-6ae60d2cbf6c"
+                      LastKnownName="Task&lt;Boolean‎&gt;"
+                      LastKnownLocation="Package4_1705.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="4cf00609-6313-485c-b1ea-279e8ada820d"
+                  name="dishId"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="bb9583c4-2b6a-4559-8e8c-1900c99c14bf"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.Service.Client%2Fbin%2FRelease%2FFoodSearch.Service.Client.dll Namespace%3DFoodSearch.Service.Client.Interfaces Type%3DIFoodSearchOrderServiceClient Member%3D(Name%3DRemoveFromBasket OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETPortable%2Fv4.5%2FProfile%2FProfile78%2FSystem.Runtime.dll&quot; Namespace%3DSystem Type%3DInt32)]) ParameterIdentifier%3DdishId"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="694b0bae-f38f-4485-b562-3391434a7885"
+                      LastKnownName="Int32"
+                      LastKnownLocation="Package5_1457.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="f976b465-4555-4598-97e3-b9dc01495a2b"
+            name="SetCurrentRestaurant"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="3b023b46-ee6d-4f11-b1df-7db89e032cd6"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.Service.Client%2Fbin%2FRelease%2FFoodSearch.Service.Client.dll Namespace%3DFoodSearch.Service.Client.Interfaces Type%3DIFoodSearchOrderServiceClient Member%3D(Name%3DSetCurrentRestaurant OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETPortable%2Fv4.5%2FProfile%2FProfile78%2FSystem.Runtime.dll&quot; Namespace%3DSystem Type%3DGuid)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="de630eec-3184-48d5-bbcb-bb582bcb65f2"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="4d35022a-9620-496c-bd31-2319ea187575">
+                    <propertyInstance
+                      Id="aad62dc7-5176-493b-ab1c-aac827b0c6ee"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="17a1fcc0-b5e0-4fe4-bb86-12afaa98b830">
+                    <propertyInstance
+                      Id="9c82d0d8-980f-4fd5-a156-e8754e933a27"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="56f28154-8fc2-4dfc-8b8c-dfa900f401a7">
+                    <propertyInstance
+                      Id="d2b1d037-7eab-4718-bdcd-582d217cd126"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="be77dab0-36cd-475d-a389-27aa0f7d4af3">
+                    <propertyInstance
+                      Id="6bf24364-33a9-44a9-a47b-4f8efa6aad7a"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f6c86ff8-ba38-43e5-b90c-87803dfc1051">
+                    <propertyInstance
+                      Id="ace4cb58-5a68-459a-ad56-c6f72bb65676"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="adb40cb4-bdd3-4ee4-bd94-bb04f99a4e17">
+                    <propertyInstance
+                      Id="04796528-81a7-4fd7-9bc5-68380cc3fe99"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="a07e70d3-ec0c-4850-8482-dc5b146813f0"
+                  direction="Return">
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="ca7d8eee-dd87-46fe-9dd5-809d49fdd5e1"
+                      LastKnownName="Task"
+                      LastKnownLocation="Package4_1705.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="51a2a89a-1c08-49b8-beb6-8c80b155fdda"
+                  name="restaurantId"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="1dba32d1-c9ce-4c76-9142-66a33c1ca20d"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.Service.Client%2Fbin%2FRelease%2FFoodSearch.Service.Client.dll Namespace%3DFoodSearch.Service.Client.Interfaces Type%3DIFoodSearchOrderServiceClient Member%3D(Name%3DSetCurrentRestaurant OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETPortable%2Fv4.5%2FProfile%2FProfile78%2FSystem.Runtime.dll&quot; Namespace%3DSystem Type%3DGuid)]) ParameterIdentifier%3DrestaurantId"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="d925213d-8546-4b09-b50a-5057b34fcd8e"
+                      LastKnownName="Guid"
+                      LastKnownLocation="Package5_1457.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="5e4e4740-8f53-41c6-b076-805a8b315ec7"
+            name="ClearBasket"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="90379552-f647-4833-8480-2f912cf4bab7"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.Service.Client%2Fbin%2FRelease%2FFoodSearch.Service.Client.dll Namespace%3DFoodSearch.Service.Client.Interfaces Type%3DIFoodSearchOrderServiceClient Member%3DClearBasket"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="5d362bd8-a125-45d7-9914-12c8ba35dc8d"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="77ac7f18-7b54-481b-b3f2-315f1bb083af">
+                    <propertyInstance
+                      Id="98d23c64-196c-4612-a8b5-ea49ba81de14"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="89dd25ea-2fab-45fc-9a6d-4c70535aa21e">
+                    <propertyInstance
+                      Id="dda5855b-4b95-46e6-b327-97c7ba332cb1"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="35b30700-b7eb-46b5-a9b2-ec0828df8ed6">
+                    <propertyInstance
+                      Id="145f6648-b95c-4bff-9318-e4511a7c0db0"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="6f4e50d8-4641-4c23-957d-6706ef54e4c9">
+                    <propertyInstance
+                      Id="a27f2f23-6a34-42ad-8b7f-1dd03d26e723"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="bd3925f4-d085-4acf-8a21-9badfd967d05">
+                    <propertyInstance
+                      Id="4a14a287-cbae-42cf-b7a2-effce72b1a7c"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e5333bb3-fa77-4a8e-8353-1573436701d0">
+                    <propertyInstance
+                      Id="6d6ae06e-d6c8-4935-993d-8162f89376f8"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="331a3f69-936d-4291-8aed-f1f55ca1b5ab"
+                  direction="Return">
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="4b642d68-59d0-4236-9e54-6ae60d2cbf6c"
+                      LastKnownName="Task&lt;Boolean‎&gt;"
+                      LastKnownLocation="Package4_1705.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="0af42d2b-1a8c-46b9-b17c-26562e1ae646"
+            name="GetBasket"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="3680ea61-dcba-4a38-a60c-adec90d45636"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.Service.Client%2Fbin%2FRelease%2FFoodSearch.Service.Client.dll Namespace%3DFoodSearch.Service.Client.Interfaces Type%3DIFoodSearchOrderServiceClient Member%3DGetBasket"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="6ce2cbb8-972a-467c-92f5-a7f22cde2e04"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="27359b6f-4d63-4b6d-8173-513c1fd2f501">
+                    <propertyInstance
+                      Id="86b9cfb0-8f81-4af9-8988-158b710d6de9"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="71e66447-7479-4556-9aec-611a46b3529b">
+                    <propertyInstance
+                      Id="0688b7bc-0992-4566-ac63-81da99792d3b"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="6d217c40-bfcf-48c7-b906-7a0e9cbe22e2">
+                    <propertyInstance
+                      Id="db0d555e-241b-432a-b3b9-8abfdcb2db12"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f9c0d3c2-fdb5-410f-8910-99e523c94c6f">
+                    <propertyInstance
+                      Id="317b162a-768b-41d5-b021-d95a6896bc85"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ac393c40-2b17-42fc-95ac-0343e16ef111">
+                    <propertyInstance
+                      Id="f6fc55f0-27c6-4947-86c1-61a4231a2597"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="87b4fc04-ef7a-4b63-9623-57f30dab28f9">
+                    <propertyInstance
+                      Id="043246fd-9825-48d1-9d16-dc737a38eab5"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="4a45de78-d6c7-4505-8d23-7faf0ee2c7c1"
+                  direction="Return">
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="0562ab84-6f04-48f4-adc7-82aa7cc649d5"
+                      LastKnownName="Task&lt;ObservableCollection‎&lt;BasketItem‎&gt;‎&gt;"
+                      LastKnownLocation="Package4_1705.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="30d0ce22-664b-48e4-9ea8-a3930cfab289"
+            name="GetDeliveryAddress"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="534cde2f-e6eb-4478-aab7-f737d0423ca8"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.Service.Client%2Fbin%2FRelease%2FFoodSearch.Service.Client.dll Namespace%3DFoodSearch.Service.Client.Interfaces Type%3DIFoodSearchOrderServiceClient Member%3DGetDeliveryAddress"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="5f72b747-169b-4e8a-b89d-9bdeadc007ff"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f18926e8-7039-42ea-97ea-b839e910790d">
+                    <propertyInstance
+                      Id="55af8795-e524-4959-bcbb-09ed619879ef"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="409064e1-e01e-46ce-8ab7-3764079b3384">
+                    <propertyInstance
+                      Id="10b7343b-0ed6-42c8-af4f-eaf06d8ed36a"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="07b52299-1717-4d41-b552-0d25d9344d12">
+                    <propertyInstance
+                      Id="f039df8f-36ab-46ce-b27e-394fb5c07846"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="27394222-74b6-4a97-ae4d-2cae26460c02">
+                    <propertyInstance
+                      Id="0dccb18a-e97a-49a6-87a8-eb8a43bc5a8a"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="946a98da-96c2-4eb5-bf15-26eb786734f0">
+                    <propertyInstance
+                      Id="5c1a60cc-fd28-4543-8be4-912bf1e2c1c6"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="363afb78-14b1-406d-b534-3d7468fceb34">
+                    <propertyInstance
+                      Id="1f4adec0-b5a1-4246-93e5-5b95f79b9469"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="8d6c7f5a-e080-407e-9e16-2c17d09033a3"
+                  direction="Return">
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="0d42e562-5be7-4543-b328-c078ff7b2ddc"
+                      LastKnownName="Task&lt;DeliveryAddress‎&gt;"
+                      LastKnownLocation="Package4_1705.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperations>
+      </Interface>
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

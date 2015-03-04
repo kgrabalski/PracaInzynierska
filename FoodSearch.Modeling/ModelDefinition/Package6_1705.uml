@@ -1,0 +1,179 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="aecea5f3-dff1-42c9-aa00-4d8da40279c2"
+  name="ObjectModel"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="587ff88a-5273-4f35-b0a0-eb55e3a7590a"
+      handle="viewcode://./CodeSchema_Namespace?Namespace%3DSystem.Collections.ObjectModel"
+      tag="ViewCode" />
+  </referencesInternal>
+  <packagedElements>
+    <packageHasNamedElement>
+      <class
+        Id="55b9cc7d-4400-4311-bb93-037abdb8d0c8"
+        name="ObservableCollection&lt;BasketItem‎&gt;"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="5f20438c-62c6-4ed3-bbe0-a73a3ac5ad6c"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="397fc0bc-2a0c-43bf-9548-5e08db20265c">
+                <propertyInstance
+                  Id="e69f3a4e-2167-4e4e-9b7e-af77371aa92e"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="ecf1383c-d729-43b2-8013-ef0921b55932">
+                <propertyInstance
+                  Id="61f20da6-b338-4765-b19d-97e82a8f972d"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="378beca1-24b4-4a4b-b8a3-f1754327aa99">
+                <propertyInstance
+                  Id="ddc3b21d-4320-40bd-99b2-151c6c99f268"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="784f369b-aa57-44d0-964b-62549d9b3795">
+                <propertyInstance
+                  Id="23c51e1e-2285-4730-a824-d3d210d86657"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="43d088ac-25b6-4f27-b05d-72f97edbf401">
+                <propertyInstance
+                  Id="d67f2515-9ad5-40eb-ab26-24cd42ca17d8"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <signatures>
+          <templateBinding
+            Id="4da4caef-3cf7-49de-bba0-df52ea1567b5">
+            <redefinableTemplateSignatureMoniker
+              Id="698223f4-40a7-498a-8e5e-7044ea62247f"
+              LastKnownLocation="Package6_1705.uml" />
+            <relationshipOwnedElementsInternal>
+              <templateBindingHasTemplateParameterSubstitution>
+                <templateParameterSubstitution
+                  Id="5ccdc59b-a048-4bd1-93fc-2e2182b9f150">
+                  <actuals>
+                    <classMoniker
+                      Id="61280aee-3890-4aa5-8db0-8a6f27a069bc"
+                      LastKnownName="BasketItem"
+                      LastKnownLocation="Package1_1705.uml" />
+                  </actuals>
+                  <formal>
+                    <classifierTemplateParameterMoniker
+                      Id="d8d881e7-d5ba-46d7-b550-122deff95b3b"
+                      LastKnownLocation="Package6_1705.uml" />
+                  </formal>
+                </templateParameterSubstitution>
+              </templateBindingHasTemplateParameterSubstitution>
+            </relationshipOwnedElementsInternal>
+          </templateBinding>
+        </signatures>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="8b73f9e6-036f-478e-af6b-9365287e77d4"
+        name="ObservableCollection"
+        visibility="Private"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="f0b25d3a-2c0d-4192-880e-4cbed1697923"
+            handle="viewcode://./CodeSchema_Class?Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETPortable%2Fv4.5%2FProfile%2FProfile78%2FSystem.ObjectModel.dll&quot; Namespace%3DSystem.Collections.ObjectModel Type%3D(Name%3DObservableCollection GenericParameterCount%3D1)"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="e174356e-b72b-4aa4-9d98-2f8215b0058a"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="1d73f722-e36e-4e82-bd34-a6ad568d901f">
+                <propertyInstance
+                  Id="c927cce0-1ef4-4d32-93b2-7f517ad3fc5c"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="1f87ca0d-03fc-46d2-89ad-63c1956d8661">
+                <propertyInstance
+                  Id="36f8c779-bc07-4b16-af95-f11761da98ad"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="2d8a41c1-ef58-45c8-a5f0-e8d55ae3a66a">
+                <propertyInstance
+                  Id="05cdf350-5149-438b-bd94-16f937cc7144"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="883c68cc-3b68-4ea7-8258-6cbe09d557cd">
+                <propertyInstance
+                  Id="3d1d67a7-2ad0-49bb-b3fa-3ebc113a47fa"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="07cb29ae-c4e0-4e61-a4ac-eba81b85bef1">
+                <propertyInstance
+                  Id="a2a52cf3-21b9-4a48-aa34-da28c2da417e"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <ownedRedefinableTemplateSignatureInternal>
+          <redefinableTemplateSignature
+            Id="698223f4-40a7-498a-8e5e-7044ea62247f"
+            parameters=""
+            name="RedefinableTemplateSignature1"
+            isLeaf="false">
+            <ownedParameters>
+              <classifierTemplateParameter
+                Id="d8d881e7-d5ba-46d7-b550-122deff95b3b">
+                <referencesInternal>
+                  <reference
+                    Id="beaa0a4b-ba7d-4007-8ee7-7b4fa1becd6f"
+                    handle="viewcode://./CodeSchema_GenericParameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETPortable%2Fv4.5%2FProfile%2FProfile78%2FSystem.ObjectModel.dll&quot; Namespace%3DSystem.Collections.ObjectModel Type%3D(Name%3DObservableCollection GenericParameterCount%3D1) ParameterIdentifier%3D0"
+                    tag="ViewCode" />
+                </referencesInternal>
+                <ownedParameterableElement>
+                  <class
+                    Id="4d2519d7-0a5e-4a7b-b2ec-edc304529960"
+                    name="T"
+                    isAbstract="false"
+                    isLeaf="false"
+                    isActiveClass="false" />
+                </ownedParameterableElement>
+              </classifierTemplateParameter>
+            </ownedParameters>
+          </redefinableTemplateSignature>
+        </ownedRedefinableTemplateSignatureInternal>
+      </class>
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

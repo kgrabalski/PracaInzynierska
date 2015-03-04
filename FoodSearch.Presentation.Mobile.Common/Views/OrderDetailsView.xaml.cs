@@ -1,10 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-
-using Xamarin.Forms;
-using FoodSearch.Presentation.Mobile.Common.ViewModels;
+﻿
 using FoodSearch.Presentation.Mobile.Common.Services;
+using FoodSearch.Presentation.Mobile.Common.ViewModels;
 using Ninject;
+using Xamarin.Forms;
 
 namespace FoodSearch.Presentation.Mobile.Common.Views
 {

@@ -1,12 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-
-using FoodSearch.BusinessLogic.Domain.SiteAdmin.Models;
+﻿using FoodSearch.BusinessLogic.Domain.SiteAdmin.Models;
 using FoodSearch.Data.Mapping.Entities;
-
+using System;
+using System.Collections.Generic;
 using Address = FoodSearch.BusinessLogic.Domain.SiteAdmin.Models.Address;
-using User = FoodSearch.BusinessLogic.Domain.SiteAdmin.Models.User;
 using Restaurant = FoodSearch.BusinessLogic.Domain.SiteAdmin.Models.Restaurant;
+using User = FoodSearch.BusinessLogic.Domain.SiteAdmin.Models.User;
 
 
 namespace FoodSearch.BusinessLogic.Domain.SiteAdmin.Interface

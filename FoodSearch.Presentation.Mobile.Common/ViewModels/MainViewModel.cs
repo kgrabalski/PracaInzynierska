@@ -1,14 +1,10 @@
-﻿using System;
-
-using FoodSearch.Presentation.Mobile.Common.Infrastucture;
-using FoodSearch.Presentation.Mobile.Common.Services;
-using FoodSearch.Service.Client.Interfaces;
-using FoodSearch.Service.Client;
-using System.Collections.Generic;
-using FoodSearch.Service.Client.Contracts;
-using System.Collections.ObjectModel;
-using FoodSearch.Presentation.Mobile.Common.Services.Interfaces;
+﻿
 using Acr.XamForms.UserDialogs;
+using FoodSearch.Presentation.Mobile.Common.Infrastucture;
+using FoodSearch.Presentation.Mobile.Common.Services.Interfaces;
+using FoodSearch.Service.Client.Contracts;
+using FoodSearch.Service.Client.Interfaces;
+using System.Collections.ObjectModel;
 using System.Windows.Input;
 
 namespace FoodSearch.Presentation.Mobile.Common.ViewModels

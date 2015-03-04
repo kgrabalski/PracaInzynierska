@@ -1,9 +1,8 @@
-﻿using System.Globalization;
-
-using FoodSearch.BusinessLogic.Domain.RestraurantAdmin;
+﻿using FoodSearch.BusinessLogic.Domain.RestraurantAdmin;
 using FoodSearch.Data.Mapping.Entities;
 using NUnit.Framework;
 using System;
+using System.Globalization;
 using System.Linq;
 
 namespace FoodSearch.BusinessLogic.Domain.Test

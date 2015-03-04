@@ -1,8 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using FoodSearch.Service.Client.Interfaces;
+using System;
 using System.Net;
-using System.Threading.Tasks;
-using FoodSearch.Service.Client.Interfaces;
 
 namespace FoodSearch.Service.Client
 {

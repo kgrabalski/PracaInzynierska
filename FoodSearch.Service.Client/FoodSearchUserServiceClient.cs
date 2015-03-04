@@ -1,15 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿using FoodSearch.Service.Client.Contracts;
 using FoodSearch.Service.Client.Interfaces;
 using FoodSearch.Service.Client.Requests;
-using System.ServiceModel.Channels;
-using FoodSearch.Service.Client.Contracts;
+using System;
 using System.Collections.ObjectModel;
+using System.Net;
+using System.Threading.Tasks;
 
 namespace FoodSearch.Service.Client
 {

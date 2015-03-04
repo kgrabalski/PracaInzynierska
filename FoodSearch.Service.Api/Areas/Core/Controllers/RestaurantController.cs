@@ -1,14 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Net.Http;
-using System.Web.Http;
-using System.Web.Http.ModelBinding;
-
-using FoodSearch.BusinessLogic.Domain.FoodSearch.Interface;
+﻿using FoodSearch.BusinessLogic.Domain.FoodSearch.Interface;
 using FoodSearch.BusinessLogic.Domain.Restaurant.Models;
 using FoodSearch.Service.Api.Areas.Order.Models;
+using System;
+using System.Collections.Generic;
+using System.Web.Http;
+using System.Web.Http.ModelBinding;
 
 namespace FoodSearch.Service.Api.Areas.Core.Controllers
 {

@@ -1,8 +1,7 @@
-﻿using System;
+﻿using FoodSearch.BusinessLogic.Domain.Restaurant.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
-
-using FoodSearch.BusinessLogic.Domain.Restaurant.Models;
 
 namespace FoodSearch.Service.Api.Areas.Order.Models
 {

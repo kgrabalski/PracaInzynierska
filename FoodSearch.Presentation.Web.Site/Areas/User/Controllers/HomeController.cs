@@ -1,13 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
-
-using FoodSearch.BusinessLogic.Domain.FoodSearch.Interface;
+﻿using FoodSearch.BusinessLogic.Domain.FoodSearch.Interface;
 using FoodSearch.Presentation.Web.Site.Areas.User.Models;
-using FoodSearch.Presentation.Web.Site.Helpers;
 using FoodSearch.Presentation.Web.Site.Models;
+using System;
+using System.Web.Mvc;
 
 namespace FoodSearch.Presentation.Web.Site.Areas.User.Controllers
 {

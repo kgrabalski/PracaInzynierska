@@ -1,12 +1,11 @@
-﻿using System;
-using Ninject;
-using FoodSearch.Presentation.Mobile.Common.ViewModels;
-using FoodSearch.Service.Client.Interfaces;
-using FoodSearch.Service.Client;
+﻿using Acr.XamForms.Mobile;
+using Acr.XamForms.Mobile.Net;
 using Acr.XamForms.UserDialogs;
 using FoodSearch.Presentation.Mobile.Common.Services.Interfaces;
-using Acr.XamForms.Mobile;
-using Acr.XamForms.Mobile.Net;
+using FoodSearch.Presentation.Mobile.Common.ViewModels;
+using FoodSearch.Service.Client;
+using FoodSearch.Service.Client.Interfaces;
+using Ninject;
 
 namespace FoodSearch.Presentation.Mobile.Common.Services
 {

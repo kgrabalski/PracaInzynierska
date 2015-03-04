@@ -1,9 +1,6 @@
-﻿using System.ServiceModel.Activation;
-using System.Web.Http;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
 using System.Web.Routing;
 
-using FoodSearch.Presentation.Web.Site.Helpers;
 
 
 namespace FoodSearch.Presentation.Web.Site

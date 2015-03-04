@@ -1,6 +1,6 @@
-﻿using System;
+﻿using FoodSearch.Service.Client.Contracts;
+using System;
 using Xamarin.Forms;
-using FoodSearch.Service.Client.Contracts;
 
 namespace FoodSearch.Presentation.Mobile.Common.Converters
 {

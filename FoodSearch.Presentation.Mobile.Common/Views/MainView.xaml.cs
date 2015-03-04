@@ -1,8 +1,8 @@
-﻿using Xamarin.Forms;
-using FoodSearch.Presentation.Mobile.Common.Services;
+﻿using FoodSearch.Presentation.Mobile.Common.Services;
+using FoodSearch.Presentation.Mobile.Common.Services.Interfaces;
 using FoodSearch.Presentation.Mobile.Common.ViewModels;
 using Ninject;
-using FoodSearch.Presentation.Mobile.Common.Services.Interfaces;
+using Xamarin.Forms;
 
 
 namespace FoodSearch.Presentation.Mobile.Common.Views

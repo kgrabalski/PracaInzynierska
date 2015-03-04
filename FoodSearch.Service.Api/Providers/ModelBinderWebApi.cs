@@ -2,7 +2,6 @@
 using System.Web.Http.Controllers;
 using System.Web.Http.ModelBinding;
 
-using FoodSearch.Service.Api.Areas.Order.Models;
 
 namespace FoodSearch.Service.Api.Providers
 {

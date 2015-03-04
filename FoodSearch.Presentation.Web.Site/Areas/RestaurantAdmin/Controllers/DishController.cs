@@ -1,20 +1,16 @@
-﻿using System;
+﻿using FoodSearch.BusinessLogic.Domain.FoodSearch.Interface;
+using FoodSearch.BusinessLogic.Domain.RestraurantAdmin.Models;
+using FoodSearch.Presentation.Web.Site.Areas.RestaurantAdmin.Models;
+using FoodSearch.Presentation.Web.Site.Helpers;
+using FoodSearch.Presentation.Web.Site.Models;
 using System.Collections.Generic;
 using System.Globalization;
-using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Threading.Tasks;
 using System.Web;
 using System.Web.Http;
 using System.Web.Http.ModelBinding;
-using System.Web.Http.Results;
-
-using FoodSearch.BusinessLogic.Domain.FoodSearch.Interface;
-using FoodSearch.BusinessLogic.Domain.RestraurantAdmin.Models;
-using FoodSearch.Presentation.Web.Site.Areas.RestaurantAdmin.Models;
-using FoodSearch.Presentation.Web.Site.Helpers;
-using FoodSearch.Presentation.Web.Site.Models;
 
 namespace FoodSearch.Presentation.Web.Site.Areas.RestaurantAdmin.Controllers
 {

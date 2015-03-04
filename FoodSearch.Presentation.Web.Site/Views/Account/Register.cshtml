@@ -10,104 +10,102 @@
     <script src="~/Scripts/Frontend/Register.js"></script>
 }
 
-<div class="container">
-    <div id="signupbox" style="margin-top: 50px" class="mainbox col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1">
-        <div class="panel panel-info">
-            <div class="panel-heading">
-                <div class="panel-title">Rejestracja</div>
-            </div>
-            <div class="panel-body">
-                <form id="signupform" class="form-horizontal" role="form" method="POST" action="@Url.Action("Register")">
+<div id="signupbox" style="margin-top: 50px" class="mainbox col-md-8 col-md-offset-2 col-sm-12 col-xs-12">
+    <div class="panel panel-info">
+        <div class="panel-heading">
+            <div class="panel-title">Rejestracja</div>
+        </div>
+        <div class="panel-body">
+            <form id="signupform" class="form-horizontal" role="form" method="POST" action="@Url.Action("Register")">
 
-                    <div id="signupalert" style="display: none" class="alert alert-danger">
-                        <p>Error:</p>
-                        @Html.ValidationSummary()
+                <div id="signupalert" style="display: none" class="alert alert-danger">
+                    <p>Error:</p>
+                    @Html.ValidationSummary()
+                </div>
+
+                <div class="form-group has-feedback" id="groupFName">
+                    <label for="FirstName" class="col-md-3 control-label">Imię</label>
+                    <div class="col-md-9">
+                        <input type="text" class="form-control" name="FirstName" placeholder="Imię" value="@Model.FirstName" required>
                     </div>
+                </div>
 
-                    <div class="form-group has-feedback" id="groupFName">
-                        <label for="FirstName" class="col-md-3 control-label">Imię</label>
-                        <div class="col-md-9">
-                            <input type="text" class="form-control" name="FirstName" placeholder="Imię" value="@Model.FirstName" required>
+                <div class="form-group has-feedback" id="groupLName">
+                    <label for="LastName" class="col-md-3 control-label">Nazwisko</label>
+                    <div class="col-md-9">
+                        <input type="text" class="form-control" name="LastName" placeholder="Nazwisko" value="@Model.LastName" required>
+                    </div>
+                </div>
+
+                <div class="form-group has-feedback" id="emailGroup">
+                    <label for="Email" class="col-md-3 control-label">Adres email</label>
+                    <div class="col-md-9">
+                        <input type="email" id="emailInput" class="form-control" name="Email" placeholder="Adres email" value="@Model.Email" required>
+                    </div>
+                </div>
+
+                <div class="form-group has-feedback">
+                    <label for="PhoneNumber" class="col-md-3 control-label">Numer telefonu</label>
+                    <div class="col-md-9">
+                        <input type="number" class="form-control" name="PhoneNumber" placeholder="Numer telefonu" value="@Model.PhoneNumber" required>
+                    </div>
+                </div>
+
+                <div class="form-group has-feedback">
+                    <label for="Password" class="col-md-3 control-label">Hasło</label>
+                    <div class="col-md-9">
+                        <input type="password" class="form-control" name="Password" placeholder="Hasło" required>
+                    </div>
+                </div>
+
+                <div class="form-group has-feedback">
+                    <label for="RepeatPassword" class="col-md-3 control-label">Powtórz hasło</label>
+                    <div class="col-md-9">
+                        <input type="password" class="form-control" name="RepeatPassword" placeholder="Powtórz hasło" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="selectCity" class="col-md-3 control-label">Miasto</label>
+                    <div class="col-md-9">
+                        <select id="selectCity" required placeholder="Miasto"></select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="selectStreet" class="col-md-3 control-label">Ulica</label>
+                    <div class="col-md-9">
+                        <select id="selectStreet" required placeholder="Ulica"></select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="selectNumber" class="col-md-3 control-label">Numer</label>
+                    <div class="col-md-9">
+                        <select id="selectNumber" name="AddressId" required placeholder="Numer budynku"></select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="LastName" class="col-md-3 control-label">Numer mieszkania</label>
+                    <div class="col-md-9">
+                        <input type="text" class="form-control" name="FlatNumber" placeholder="Numer mieszkania" value="@Model.FlatNumber">
+                    </div>
+                </div>
+
+                <div class="form-group" style="margin-top: 10px;">
+                    <div class="col-sm-12">
+                        <input type="submit" id="btn-signup" class="btn btn-primary btn-block" value="Zarejestruj się"/>
+                    </div>
+                </div>
+
+
+                <div class="form-group">
+                    <div class="col-md-12 control">
+                        <div style="border-top: 1px solid #888; padding-top: 15px; font-size: 85%">
+                            Posiadasz już konto? <a href="@Url.Action("Login")"> Zaloguj się tutaj </a>
                         </div>
                     </div>
-
-                    <div class="form-group has-feedback" id="groupLName">
-                        <label for="LastName" class="col-md-3 control-label">Nazwisko</label>
-                        <div class="col-md-9">
-                            <input type="text" class="form-control" name="LastName" placeholder="Nazwisko" value="@Model.LastName" required>
-                        </div>
-                    </div>
-
-                    <div class="form-group has-feedback" id="emailGroup">
-                        <label for="Email" class="col-md-3 control-label">Adres email</label>
-                        <div class="col-md-9">
-                            <input type="email" id="emailInput" class="form-control" name="Email" placeholder="Adres email" value="@Model.Email" required>
-                        </div>
-                    </div>
-
-                    <div class="form-group has-feedback">
-                        <label for="PhoneNumber" class="col-md-3 control-label">Numer telefonu</label>
-                        <div class="col-md-9">
-                            <input type="number" class="form-control" name="PhoneNumber" placeholder="Numer telefonu" value="@Model.PhoneNumber" required>
-                        </div>
-                    </div>
-
-                    <div class="form-group has-feedback">
-                        <label for="Password" class="col-md-3 control-label">Hasło</label>
-                        <div class="col-md-9">
-                            <input type="password" class="form-control" name="Password" placeholder="Hasło" required>
-                        </div>
-                    </div>
-
-                    <div class="form-group has-feedback">
-                        <label for="RepeatPassword" class="col-md-3 control-label">Powtórz hasło</label>
-                        <div class="col-md-9">
-                            <input type="password" class="form-control" name="RepeatPassword" placeholder="Powtórz hasło" required>
-                        </div>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="selectCity" class="col-md-3 control-label">Miasto</label>
-                        <div class="col-md-9">
-                            <select id="selectCity" required placeholder="Miasto"></select>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="selectStreet" class="col-md-3 control-label">Ulica</label>
-                        <div class="col-md-9">
-                            <select id="selectStreet" required placeholder="Ulica"></select>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="selectNumber" class="col-md-3 control-label">Numer</label>
-                        <div class="col-md-9">
-                            <select id="selectNumber" name="AddressId" required placeholder="Numer budynku"></select>
-                        </div>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="LastName" class="col-md-3 control-label">Numer mieszkania</label>
-                        <div class="col-md-9">
-                            <input type="text" class="form-control" name="FlatNumber" placeholder="Numer mieszkania" value="@Model.FlatNumber">
-                        </div>
-                    </div>
-
-                    <div class="form-group" style="margin-top: 10px;">
-                        <div class="col-sm-12">
-                            <input type="submit" id="btn-signup" class="btn btn-primary btn-block" value="Zarejestruj się"/>
-                        </div>
-                    </div>
-
-
-                    <div class="form-group">
-                        <div class="col-md-12 control">
-                            <div style="border-top: 1px solid #888; padding-top: 15px; font-size: 85%">
-                                Posiadasz już konto? <a href="@Url.Action("Login")"> Zaloguj się tutaj </a>
-                            </div>
-                        </div>
-                    </div>
-                </form>
-            </div>
+                </div>
+            </form>
         </div>
     </div>
 </div>

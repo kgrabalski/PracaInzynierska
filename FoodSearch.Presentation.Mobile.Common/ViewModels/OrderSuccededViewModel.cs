@@ -1,9 +1,7 @@
-﻿using System;
-using FoodSearch.Service.Client.Interfaces;
-using FoodSearch.Presentation.Mobile.Common.Services.Interfaces;
-using Acr.XamForms.UserDialogs;
-using Xamarin.Forms;
+﻿using FoodSearch.Presentation.Mobile.Common.Services.Interfaces;
 using FoodSearch.Service.Client.Contracts;
+using FoodSearch.Service.Client.Interfaces;
+using System;
 using System.Threading.Tasks;
 
 namespace FoodSearch.Presentation.Mobile.Common.ViewModels

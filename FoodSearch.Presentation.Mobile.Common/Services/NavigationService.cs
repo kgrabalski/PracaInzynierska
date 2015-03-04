@@ -1,11 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-using Xamarin.Forms;
+﻿
 using FoodSearch.Presentation.Mobile.Common.Services.Interfaces;
+using Xamarin.Forms;
 
 namespace FoodSearch.Presentation.Mobile.Common.Services
 {

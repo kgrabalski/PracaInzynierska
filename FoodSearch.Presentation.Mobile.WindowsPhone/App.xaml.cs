@@ -1,12 +1,11 @@
-﻿using System;
+﻿using FoodSearch.Presentation.Mobile.WindowsPhone.Resources;
+using Microsoft.Phone.Controls;
+using Microsoft.Phone.Shell;
+using System;
 using System.Diagnostics;
-using System.Resources;
 using System.Windows;
 using System.Windows.Markup;
 using System.Windows.Navigation;
-using Microsoft.Phone.Controls;
-using Microsoft.Phone.Shell;
-using FoodSearch.Presentation.Mobile.WindowsPhone.Resources;
 
 namespace FoodSearch.Presentation.Mobile.WindowsPhone
 {

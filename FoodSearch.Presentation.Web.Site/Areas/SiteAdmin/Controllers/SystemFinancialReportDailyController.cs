@@ -1,17 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Globalization;
-using System.Linq;
-using System.Net;
-using System.Net.Http;
-using System.Text;
-using System.Threading.Tasks;
-using System.Web.Http;
-using System.Web.Http.ModelBinding;
-
-using FoodSearch.BusinessLogic.Domain.FoodSearch.Interface;
+﻿using FoodSearch.BusinessLogic.Domain.FoodSearch.Interface;
 using FoodSearch.Presentation.Web.Site.Helpers;
 using FoodSearch.Presentation.Web.Site.Models;
+using System;
+using System.Globalization;
+using System.Net;
+using System.Net.Http;
+using System.Web.Http;
+using System.Web.Http.ModelBinding;
 
 namespace FoodSearch.Presentation.Web.Site.Areas.SiteAdmin.Controllers
 {

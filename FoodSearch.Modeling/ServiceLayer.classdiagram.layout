@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="ServiceLayer">
+  <logicalClassDesignerModelMoniker Id="0429ff5b-b7f6-4ed4-b887-a2a8447c6cf4" />
+  <nestedChildShapes>
+    <interfaceShape Id="cc8734bc-5771-4ee2-b09f-f51d4097a871" absoluteBounds="0.5, 1.5, 7.75, 2.5317533993721009" hideQualifiedName="false" increaseHeight="0.18800345897674564" customColor="207, 223, 191">
+      <interfaceMoniker Id="4aa9cb7a-59dd-4f46-8a42-35588056730f" LastKnownName="IFoodSearchOrderServiceClient" />
+      <nestedChildShapes>
+        <AttributeElementListCompartment Id="1936e2f2-53be-4303-9fc2-fc01f660cbc9" absoluteBounds="0.515, 2.0780034589767458, 7.7200000000000006, 0.2011718675494194" name="AttributesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <OperationElementListCompartment Id="64b2588d-5782-467c-baa9-c650f0a6e40e" absoluteBounds="0.515, 2.289175326526165, 7.7200000000000006, 1.6425780728459358" name="OperationsCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </interfaceShape>
+  </nestedChildShapes>
+</logicalClassDesignerDiagram>

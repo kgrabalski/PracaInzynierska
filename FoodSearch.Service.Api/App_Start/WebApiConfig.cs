@@ -1,17 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using FoodSearch.Service.Api.Areas.Order.Models;
+using FoodSearch.Service.Api.Models;
+using FoodSearch.Service.Api.Providers;
+using Ninject.Web.WebApi;
 using System.Linq;
 using System.Web.Http;
 using System.Web.Http.ModelBinding;
 using System.Web.Mvc;
-using System.Web.Routing;
-
-using FoodSearch.Service.Api.Areas.Order.Models;
-using FoodSearch.Service.Api.Helpers;
-using FoodSearch.Service.Api.Models;
-using FoodSearch.Service.Api.Providers;
-
-using Ninject.Web.WebApi;
 
 namespace FoodSearch.Service.Api
 {

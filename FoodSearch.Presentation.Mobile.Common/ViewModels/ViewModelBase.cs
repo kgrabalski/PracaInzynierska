@@ -1,11 +1,6 @@
-﻿using System;
-using System.ComponentModel;
-using System.Runtime.CompilerServices;
-using FoodSearch.Service.Client.Interfaces;
-using FoodSearch.Service.Client;
+﻿using FoodSearch.Presentation.Mobile.Common.Infrastucture;
 using FoodSearch.Presentation.Mobile.Common.Services.Interfaces;
-using Acr.XamForms.UserDialogs;
-using FoodSearch.Presentation.Mobile.Common.Infrastucture;
+using FoodSearch.Service.Client.Interfaces;
 
 namespace FoodSearch.Presentation.Mobile.Common.ViewModels
 {

@@ -1,15 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Xml.Linq;
-
-using FoodSearch.BusinessLogic.Domain.Restaurant.Interface;
+﻿using FoodSearch.BusinessLogic.Domain.Restaurant.Interface;
 using FoodSearch.BusinessLogic.Domain.Restaurant.Mapping;
 using FoodSearch.BusinessLogic.Domain.Restaurant.Models;
 using FoodSearch.Data.Mapping.Interface;
-
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Xml.Linq;
 using Dish = FoodSearch.Data.Mapping.Entities.Dish;
 using DishDto = FoodSearch.BusinessLogic.Domain.Restaurant.Models.Dish;
 using Opinion = FoodSearch.Data.Mapping.Entities.Opinion;
@@ -96,6 +92,8 @@ namespace FoodSearch.BusinessLogic.Domain.Restaurant
 
         public bool AddOpinion(Guid restaurantId, Guid userId, int rating, string comment)
         {
+            if (rating < 1 || rating > 5) return false;
+
             using (var rep = _provider.GetRepository<Opinion>())
             {
                 bool canCreate = rep.GetAll()

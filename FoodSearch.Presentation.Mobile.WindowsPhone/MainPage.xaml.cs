@@ -1,25 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Navigation;
-
-using Acr.XamForms.Mobile.WindowsPhone;
+﻿
 using Acr.XamForms.Mobile.WindowsPhone.Net;
-using Acr.XamForms.UserDialogs;
 using Acr.XamForms.UserDialogs.WindowsPhone;
 
 using FoodSearch.Presentation.Mobile.Common;
-using FoodSearch.Presentation.Mobile.Common.Views;
 
 using Microsoft.Phone.Controls;
-using Microsoft.Phone.Shell;
-using FoodSearch.Presentation.Mobile.WindowsPhone.Resources;
 
 using Xamarin.Forms;
-using Xamarin.Forms.Platform.WinPhone;
 
 namespace FoodSearch.Presentation.Mobile.WindowsPhone
 {

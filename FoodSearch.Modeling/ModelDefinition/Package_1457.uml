@@ -23,5 +23,11 @@
         LastKnownName="BusinessLogic"
         LastKnownLocation="Package_1700.uml" />
     </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="57d37c76-eda8-4d40-9bb6-89dc1148d1f8"
+        LastKnownName="Service"
+        LastKnownLocation="Package_1705.uml" />
+    </packageHasNamedElement>
   </packagedElements>
 </package>

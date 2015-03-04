@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿
 using FoodSearch.Presentation.Web.Site.Helpers;
 
 namespace FoodSearch.Presentation.Web.Site.Areas.SiteAdmin.Models

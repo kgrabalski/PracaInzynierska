@@ -1,8 +1,7 @@
 ﻿
+using FoodSearch.Service.Api.Helpers;
 using System.Web.Http;
 using System.Web.Mvc;
-
-using FoodSearch.Service.Api.Helpers;
 
 namespace FoodSearch.Service.Api.Areas.User
 {

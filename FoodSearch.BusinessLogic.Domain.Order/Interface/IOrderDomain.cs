@@ -1,12 +1,11 @@
 ﻿
 
-using System;
-using System.Collections.Generic;
-
 using FoodSearch.BusinessLogic.Domain.Order.Models;
 using FoodSearch.Data.Mapping.Entities;
-using PaymentType = FoodSearch.BusinessLogic.Domain.Order.Models.PaymentType;
+using System;
+using System.Collections.Generic;
 using DeliveryType = FoodSearch.BusinessLogic.Domain.Order.Models.DeliveryType;
+using PaymentType = FoodSearch.BusinessLogic.Domain.Order.Models.PaymentType;
 
 
 namespace FoodSearch.BusinessLogic.Domain.Order.Interface

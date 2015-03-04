@@ -1,11 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-
-using FoodSearch.BusinessLogic.Domain.Restaurant.Models;
+﻿using FoodSearch.BusinessLogic.Domain.Restaurant.Models;
 using FoodSearch.BusinessLogic.Domain.RestraurantAdmin.Models;
-
+using System.Collections.Generic;
 using DishGroup = FoodSearch.BusinessLogic.Domain.Restaurant.Models.DishGroup;
 
 namespace FoodSearch.Presentation.Web.Site.Models

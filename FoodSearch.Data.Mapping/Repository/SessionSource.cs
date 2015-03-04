@@ -1,12 +1,9 @@
 ﻿
-using System.Configuration;
-
 using FluentNHibernate.Cfg;
 using FluentNHibernate.Cfg.Db;
-
 using FoodSearch.Data.Mapping.Interface;
-
 using NHibernate;
+using System.Configuration;
 
 namespace FoodSearch.Data.Mapping.Repository
 {

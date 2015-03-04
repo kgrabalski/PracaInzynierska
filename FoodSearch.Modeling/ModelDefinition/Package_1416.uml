@@ -4558,7 +4558,7 @@
         <referencesInternal>
           <reference
             Id="523ce806-a985-43ee-9808-b37d540c4bdb"
-            handle="viewcode://./CodeSchema_Enum?Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.Data.Mapping%2Fbin%2FDebug%2FFoodSearch.Data.Mapping.dll Namespace%3DFoodSearch.Data.Mapping.Entities Type%3DUserStates"
+            handle="viewcode://./CodeSchema_Enum?Assembly%3Dfile:%2F%2F%2FD:%2Fprojekty%2FPracaInzynierska%2FFoodSearch%2FFoodSearch.Data.Mapping%2Fbin%2FRelease%2FFoodSearch.Data.Mapping.dll Namespace%3DFoodSearch.Data.Mapping.Entities Type%3DUserStates"
             tag="ViewCode" />
         </referencesInternal>
         <appliedStereotypesInternal>

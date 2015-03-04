@@ -1,11 +1,9 @@
-﻿using System.Net;
-
-using FoodSearch.BusinessLogic.Domain.FoodSearch.Interface;
+﻿using FoodSearch.BusinessLogic.Domain.FoodSearch.Interface;
+using FoodSearch.Presentation.Web.Site.Models;
 using System;
+using System.Net;
 using System.Web.Mvc;
 using System.Web.Security;
-
-using FoodSearch.Presentation.Web.Site.Models;
 
 namespace FoodSearch.Presentation.Web.Site.Controllers
 {

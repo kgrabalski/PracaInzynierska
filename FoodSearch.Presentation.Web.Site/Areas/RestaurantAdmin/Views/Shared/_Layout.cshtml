@@ -6,8 +6,8 @@
 <html ng-app="FoodSearch.RestaurantAdmin">
 <head>
     <meta charset="UTF-8">
-    <title>FoodSearch | Dashboard</title>
-    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name='viewport'>
+    <title>FoodSearch | Restauracja</title>
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
 
     <link rel="stylesheet" href="~/Content/bootstrap.min.css" />
     <link rel="stylesheet" href="~/Content/Admin/font-awesome.css" />
@@ -29,7 +29,6 @@
             </a>
             <div class="navbar-right">
                 <ul class="nav navbar-nav">
-
                     @Html.Action("UserMenu", "Home", new {area = "RestaurantAdmin"})
                 </ul>
             </div>
@@ -44,7 +43,6 @@
     <script src="~/Scripts/angular-route.min.js"></script>
     <script src="~/Scripts/angular-resource.min.js"></script>
     <script src="~/Scripts/angular-filter.min.js"></script>
-    @*<script src="~/Scripts/angular-ui/ui-bootstrap.min.js"></script>*@
     <script src="~/Scripts/angular-ui/ui-bootstrap-tpls.min.js"></script>
     <script src="~/Scripts/app.min.js"></script>
     @RenderSection("ScriptSection", false)

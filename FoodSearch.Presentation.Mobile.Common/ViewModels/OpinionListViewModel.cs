@@ -1,15 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using FoodSearch.Service.Client.Interfaces;
-using Acr.XamForms.UserDialogs;
+﻿using FoodSearch.Presentation.Mobile.Common.Infrastucture;
+using FoodSearch.Presentation.Mobile.Common.Models;
 using FoodSearch.Presentation.Mobile.Common.Services.Interfaces;
 using FoodSearch.Service.Client.Contracts;
+using FoodSearch.Service.Client.Interfaces;
+using System;
 using System.Collections.ObjectModel;
-using FoodSearch.Presentation.Mobile.Common.Infrastucture;
-using FoodSearch.Presentation.Mobile.Common.Models;
 
 namespace FoodSearch.Presentation.Mobile.Common.ViewModels
 {

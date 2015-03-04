@@ -1,11 +1,10 @@
-﻿using System.Collections.Generic;
+﻿using FoodSearch.BusinessLogic.Domain.FoodSearch.Interface;
+using FoodSearch.Service.Api.Areas.Order.Models;
+using System.Collections.Generic;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
-using System.Web.Mvc;
-
-using FoodSearch.BusinessLogic.Domain.FoodSearch.Interface;
-using FoodSearch.Service.Api.Areas.Order.Models;
+using System.Web.Http.ModelBinding;
 
 namespace FoodSearch.Service.Api.Areas.Order.Controllers
 {
@@ -18,15 +17,14 @@ namespace FoodSearch.Service.Api.Areas.Order.Controllers
             _domain = domain;
         }
 
-        [System.Web.Http.HttpGet]
-        [OutputCache(NoStore = true)]
-        public IEnumerable<BasketItem> GetBasket([System.Web.Http.ModelBinding.ModelBinder] Basket basket)
+        [HttpGet]
+        public IEnumerable<BasketItem> GetBasket([ModelBinder] Basket basket)
         {
             return basket.Items;
         }
         
-        [System.Web.Http.HttpPost]
-        public HttpResponseMessage Add([System.Web.Http.ModelBinding.ModelBinder] Basket basket, [FromUri] int id)
+        [HttpPost]
+        public HttpResponseMessage Add([ModelBinder] Basket basket, [FromUri] int id)
         {
             var dish = _domain.Restaurant.GetDish(id);
             if (dish == null) return Request.CreateResponse(HttpStatusCode.NotFound);
@@ -34,15 +32,15 @@ namespace FoodSearch.Service.Api.Areas.Order.Controllers
             return Request.CreateResponse(HttpStatusCode.Created);
         }
 
-        [System.Web.Http.HttpDelete]
-        public HttpResponseMessage Delete([System.Web.Http.ModelBinding.ModelBinder] Basket basket, [FromUri] int id)
+        [HttpDelete]
+        public HttpResponseMessage Delete([ModelBinder] Basket basket, [FromUri] int id)
         {
             bool removed = basket.RemoveItem(id);
             return Request.CreateResponse(removed ? HttpStatusCode.OK : HttpStatusCode.NotFound);
         }
 
-        [System.Web.Http.HttpDelete]
-        public HttpResponseMessage DeleteAll([System.Web.Http.ModelBinding.ModelBinder] Basket basket)
+        [HttpDelete]
+        public HttpResponseMessage DeleteAll([ModelBinder] Basket basket)
         {
             basket.ClearBasket();
             return Request.CreateResponse(HttpStatusCode.NoContent);

@@ -1,8 +1,7 @@
-﻿using System;
+﻿using FoodSearch.Presentation.Mobile.Common.Infrastucture;
 using FoodSearch.Presentation.Mobile.Common.Services.Interfaces;
-using FoodSearch.Presentation.Mobile.Common.Infrastucture;
-using System.Threading.Tasks;
 using FoodSearch.Service.Client.Interfaces;
+using System.Threading.Tasks;
 
 namespace FoodSearch.Presentation.Mobile.Common.Services
 {

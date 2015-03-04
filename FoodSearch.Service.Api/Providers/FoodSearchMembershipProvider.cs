@@ -1,14 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using FoodSearch.BusinessLogic.Domain.FoodSearch.Interface;
+using Ninject;
+using System;
 using System.Security.Cryptography;
 using System.Text;
-using System.Threading.Tasks;
 using System.Web.Security;
-
-using FoodSearch.BusinessLogic.Domain.FoodSearch.Interface;
-
-using Ninject;
 
 namespace FoodSearch.Service.Api.Providers
 {

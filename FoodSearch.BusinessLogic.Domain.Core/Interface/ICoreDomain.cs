@@ -1,5 +1,4 @@
 ﻿using FoodSearch.BusinessLogic.Domain.Core.Models;
-using System;
 using System.Collections.Generic;
 using District = FoodSearch.BusinessLogic.Domain.Core.Models.District;
 using Image = FoodSearch.BusinessLogic.Domain.Core.Models.Image;

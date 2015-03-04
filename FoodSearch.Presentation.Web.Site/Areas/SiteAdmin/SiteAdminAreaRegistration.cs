@@ -1,7 +1,6 @@
-﻿using System.Web.Http;
+﻿using FoodSearch.Presentation.Web.Site.Helpers;
+using System.Web.Http;
 using System.Web.Mvc;
-
-using FoodSearch.Presentation.Web.Site.Helpers;
 
 namespace FoodSearch.Presentation.Web.Site.Areas.SiteAdmin
 {

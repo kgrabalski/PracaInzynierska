@@ -1,6 +1,5 @@
-﻿using System.Web.Mvc;
-
-using FoodSearch.Presentation.Web.Site.Helpers;
+﻿using FoodSearch.Presentation.Web.Site.Helpers;
+using System.Web.Mvc;
 
 namespace FoodSearch.Service.Api
 {
