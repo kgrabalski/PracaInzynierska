@@ -11,7 +11,7 @@ namespace FoodSearch.Service.Client
 {
     public abstract class ServiceClientBase
 	{
-        protected readonly string _baseAddress = "http://foodsearch.azurewebsites.net/MobileApi/";
+        protected readonly string BaseAddress = "http://foodsearch.azurewebsites.net/MobileApi/";
 		protected abstract string ServiceAddress { get ; }
         protected readonly CookieContainer CookieContainer;
         public IFoodSearchServiceClient ClientHandler { get; set; }

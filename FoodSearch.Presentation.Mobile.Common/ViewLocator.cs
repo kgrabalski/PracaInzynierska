@@ -7,12 +7,12 @@ namespace FoodSearch.Presentation.Mobile.Common
 {
 	public static class ViewLocator
 	{
-		private static Dictionary<Type, Page> _viewCache;
+		private static readonly Dictionary<Type, Page> ViewCache;
 		private static NavigationPage _startScreen;
 
 	    static ViewLocator ()
 		{
-			_viewCache = new Dictionary<Type, Page> ();
+			ViewCache = new Dictionary<Type, Page> ();
 		}
 
 		private static Page GetView<T> (bool newInstance = false) where T : Page, new()
@@ -21,11 +21,11 @@ namespace FoodSearch.Presentation.Mobile.Common
                 return new T();
 
 			Type viewType = typeof(T);
-			if (!_viewCache.ContainsKey(viewType))
+			if (!ViewCache.ContainsKey(viewType))
 			{
-				_viewCache.Add (viewType, new T ());
+				ViewCache.Add (viewType, new T ());
 			} 
-            return _viewCache[viewType];
+            return ViewCache[viewType];
 		}
 
 		public static Page Main { get { return GetView<MainView>(); } }

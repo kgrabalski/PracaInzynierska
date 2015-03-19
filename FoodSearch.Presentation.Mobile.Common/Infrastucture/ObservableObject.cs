@@ -3,7 +3,7 @@ using System.Runtime.CompilerServices;
 
 namespace FoodSearch.Presentation.Mobile.Common.Infrastucture
 {
-    public class ObservableObject : INotifyPropertyChanged
+    public abstract class ObservableObject : INotifyPropertyChanged
     {
         public event PropertyChangedEventHandler PropertyChanged;
 
@@ -15,7 +15,7 @@ namespace FoodSearch.Presentation.Mobile.Common.Infrastucture
             var handler = PropertyChanged;
             if (handler != null) 
             {
-                PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+                handler(this, new PropertyChangedEventArgs(propertyName));
             }
             return true;
         }

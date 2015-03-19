@@ -5,6 +5,7 @@ namespace FoodSearch.BusinessLogic.Domain.Order.Models
     {
         NotConfirmed,
         Confirmed,
-        Cancelled
+        Cancelled,
+        Completed
     }
 }

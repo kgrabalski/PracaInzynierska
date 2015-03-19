@@ -17,7 +17,7 @@ namespace FoodSearch.Service.Client
 
         protected override string ServiceAddress
         {
-            get { return _baseAddress + "Order/"; }
+            get { return BaseAddress + "Order/"; }
         }
 
         public async Task<ObservableCollection<BasketItem>> GetBasket()

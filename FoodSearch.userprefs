@@ -1,13 +1,13 @@
 ﻿<Properties StartupItem="FoodSearch.Presentation.Mobile.Android\FoodSearch.Presentation.Mobile.Android.csproj">
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.9f5cf426" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="FoodSearch.Presentation.Mobile.Common\ViewModels\MainViewModel.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.android_44" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="d:\projekty\PracaInzynierska\FoodSearch\FoodSearch.Presentation.Mobile.Android\MainActivity.cs">
     <Files>
       <File FileName="FoodSearch.Presentation.Mobile.Common\ViewModels\OrdersHistoryViewModel.cs" Line="1" Column="1" />
       <File FileName="FoodSearch.Presentation.Mobile.Common\ViewModels\OrderDetailsViewModel.cs" Line="1" Column="1" />
       <File FileName="FoodSearch.Service.Client\FoodSearchUserServiceClient.cs" Line="1" Column="1" />
       <File FileName="FoodSearch.Presentation.Mobile.Common\ViewModels\OrderSuccededViewModel.cs" Line="1" Column="1" />
       <File FileName="FoodSearch.Presentation.Mobile.Common\ViewModels\DishListViewModel.cs" Line="1" Column="1" />
-      <File FileName="FoodSearch.Presentation.Mobile.Common\ViewModels\MainViewModel.cs" Line="20" Column="20" />
+      <File FileName="FoodSearch.Presentation.Mobile.Common\ViewModels\MainViewModel.cs" Line="1" Column="1" />
       <File FileName="d:\projekty\PracaInzynierska\FoodSearch\FoodSearch.Presentation.Mobile.Android\MainActivity.cs" Line="1" Column="1" />
       <File FileName="d:\projekty\PracaInzynierska\FoodSearch\FoodSearch.Service.Client\FoodSearchOrderServiceClient.cs" Line="1" Column="1" />
       <File FileName="FoodSearch.Presentation.Mobile.Common\ViewModels\LoginViewModel.cs" Line="1" Column="1" />

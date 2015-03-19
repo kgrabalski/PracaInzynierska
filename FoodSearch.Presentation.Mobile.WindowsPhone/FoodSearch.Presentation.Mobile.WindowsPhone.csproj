@@ -143,6 +143,9 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Images\ic_action_accept.png" />
+    <Content Include="Images\ic_action_account_box.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Images\ic_action_discard.png" />
     <Content Include="Images\ic_action_dish.png" />
     <Content Include="Images\ic_action_new.png" />

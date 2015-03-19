@@ -270,9 +270,9 @@ namespace FoodSearch.BusinessLogic.Domain.Order
         {
             switch ((OrderStates) orderState)
             {
-                case OrderStates.Paid: return ConfirmationStatus.NotConfirmed;
                 case OrderStates.Confirmed: return ConfirmationStatus.Confirmed;
                 case OrderStates.Cancelled: return ConfirmationStatus.Cancelled;
+                case OrderStates.Completed: return ConfirmationStatus.Completed;
                 default: return ConfirmationStatus.NotConfirmed;
             }
         }

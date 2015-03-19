@@ -45,7 +45,7 @@
     <Compile Include="ViewModels\ViewModelBase.cs" />
     <Compile Include="ViewModels\MainViewModel.cs" />
     <Compile Include="ViewLocator.cs" />
-    <Compile Include="Infrastucture\ObservableExtension.cs" />
+    <Compile Include="Helpers\ObservableExtension.cs" />
     <Compile Include="Views\MainView.xaml.cs">
       <DependentUpon>MainView.xaml</DependentUpon>
     </Compile>

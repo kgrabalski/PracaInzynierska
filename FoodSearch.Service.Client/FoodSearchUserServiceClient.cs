@@ -16,7 +16,7 @@ namespace FoodSearch.Service.Client
 
         protected override string ServiceAddress
         {
-            get { return _baseAddress + "User/"; }
+            get { return BaseAddress + "User/"; }
         }
 
         public async Task<bool> Login(string email, string password)

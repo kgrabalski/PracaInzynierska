@@ -6,7 +6,8 @@ using FoodSearch.Service.Client.Interfaces;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Windows.Input;
-using Command = FoodSearch.Presentation.Mobile.Common.Infrastucture.Command;
+
+using FoodSearch.Presentation.Mobile.Common.Helpers;
 
 namespace FoodSearch.Presentation.Mobile.Common.ViewModels
 {

@@ -68,10 +68,15 @@ namespace FoodSearch.BusinessLogic.Domain.Test
             Assert.IsTrue(opinions.Any());
         }
 
-        [TestCase("E808EC47-6FD4-42E8-BFFA-113AE459387B", 1, false, TestName = "Add opinion from user who has already added opinion")]
-        [TestCase("00000000-0000-0000-0000-000000000000", 1, false, TestName = "Add opinion from non existing user", ExpectedException = typeof(GenericADOException))]
-        [TestCase("A08A5489-36B5-48CB-9F6A-91886578E688", 5, true, TestName = "Add opinion from user who has not already added opinion")]
-        [TestCase("B60C6C65-AD42-475C-A0EB-9E8CE72D9A45", 50, false, TestName = "Add opinion with non valid rating")]
+        [TestCase("E808EC47-6FD4-42E8-BFFA-113AE459387B", 1, false, 
+            TestName = "Add opinion from user who has already added opinion")]
+        [TestCase("00000000-0000-0000-0000-000000000000", 1, false, 
+            TestName = "Add opinion from non existing user", 
+            ExpectedException = typeof(GenericADOException))]
+        [TestCase("A08A5489-36B5-48CB-9F6A-91886578E688", 5, true, 
+            TestName = "Add opinion from user who has not already added opinion")]
+        [TestCase("B60C6C65-AD42-475C-A0EB-9E8CE72D9A45", 50, false, 
+            TestName = "Add opinion with non valid rating")]
         public void AddRestaurantOpinion(string userIdString, int rating, bool shouldSucceedd)
         {
             Guid restaurantId = Guid.Parse("B219B818-2B58-4295-8871-FBBA6D4EE686");

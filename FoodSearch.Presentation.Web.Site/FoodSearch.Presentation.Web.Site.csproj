@@ -140,6 +140,7 @@
     </Reference>
     <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
       <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="WebGrease">
       <HintPath>..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
@@ -1317,6 +1318,7 @@
     <Content Include="Areas\RestaurantAdmin\Views\Home\_ReportFinancialMonthly.cshtml" />
     <Content Include="Areas\SiteAdmin\Views\Home\_SystemReportFinancialDaily.cshtml" />
     <Content Include="Areas\SiteAdmin\Views\Home\_SystemReportFinancialMonthly.cshtml" />
+    <None Include="Properties\PublishProfiles\wirtualka.pubxml" />
     <None Include="Scripts\jquery-2.1.3.intellisense.js" />
     <Content Include="Scripts\jquery-2.1.3.js" />
     <Content Include="Scripts\jquery-2.1.3.min.js" />
