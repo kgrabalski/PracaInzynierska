@@ -19,6 +19,7 @@ namespace FoodSearch.Service.Client
         {
             CookieContainer = cookieContainer;
         }        
+
         protected async Task<HttpBodyResponse<string>> Get(string url)
 		{
             using (var handler = new HttpClientHandler() {CookieContainer = CookieContainer})
@@ -69,7 +70,6 @@ namespace FoodSearch.Service.Client
                 return result;
             }
         }
-
         private HttpContent prepareRequestContent(object data)
         {
             string jsonString = string.Empty;
