@@ -1,5 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<parameters>
-  <setParameter name="IIS Web Application Name" value="Default Web Site/FoodSearch.Service.Api_deploy" />
-  <setParameter name="FoodSearch.Data.Mapping.DALSetting.ConnectionString-Web.config Connection String" value="Server=tcp:dycfyhr4vj.database.windows.net,1433;Database=FoodSearchTest;User ID=FoodSearch@dycfyhr4vj;Password=P@ssw0rd;" />
-</parameters>

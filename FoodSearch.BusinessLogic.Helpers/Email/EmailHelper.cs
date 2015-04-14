@@ -7,8 +7,9 @@ namespace FoodSearch.BusinessLogic.Helpers.Email
 {
     public class EmailHelper
     {
-        private static readonly string EmailAddress = "kgfoodsearch@gmail.com";
-        private static readonly string EmailPassword = "fsP@ssw0rd";
+        private static readonly string EmailAddress = "emailPlaceholder";
+        private static readonly string EmailPassword = "passwordPlaceholder";
+        private static readonly string EmailSmtp = "smtpPlaceholder";
 
         public static void Send(MailHelperSendFrom from, IList<string> to, string subject, EmailBody body)
         {
@@ -27,7 +28,7 @@ namespace FoodSearch.BusinessLogic.Helpers.Email
             message.Body = body.PlainText;
             message.BodyEncoding = Encoding.GetEncoding("windows-1250");
 
-            SmtpClient smtpClient = new SmtpClient("smtp.googlemail.com", 587);
+            SmtpClient smtpClient = new SmtpClient(EmailSmtp, 587);
             smtpClient.Credentials = new NetworkCredential(EmailAddress, EmailPassword);
             smtpClient.EnableSsl = true;
             smtpClient.Send(message);
@@ -46,7 +47,7 @@ namespace FoodSearch.BusinessLogic.Helpers.Email
             message.Priority = MailPriority.Normal;
             message.Body = body;
 
-            SmtpClient smtpClient = new SmtpClient("smtp.googlemail.com", 587);
+            SmtpClient smtpClient = new SmtpClient(EmailSmtp, 587);
             smtpClient.Credentials = new NetworkCredential(EmailAddress, EmailPassword);
             smtpClient.EnableSsl = true;
             smtpClient.Send(message);

@@ -157,8 +157,6 @@
     <Content Include="Areas\Core\Views\web.config" />
     <Content Include="Areas\Order\Views\web.config" />
     <Content Include="Areas\User\Views\web.config" />
-    <None Include="Properties\PublishProfiles\foodsearch.pubxml" />
-    <None Include="Properties\PublishProfiles\wirtualka.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -173,6 +171,7 @@
     <Folder Include="Areas\Order\Views\Shared\" />
     <Folder Include="Areas\User\Views\Shared\" />
     <Folder Include="Controllers\" />
+    <Folder Include="Properties\PublishProfiles\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\FoodSearch.BusinessLogic.Domain.Core\FoodSearch.BusinessLogic.Domain.Core.csproj">
